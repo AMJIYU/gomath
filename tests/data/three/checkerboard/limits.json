@@ -1,0 +1,15 @@
+{
+  "scope": "API and numerical/resource limits for wave7, not a previous integration checkpoint",
+  "api": "CheckerboardSurface(uMin,uMax,vMin,vMax float64,uSteps,vSteps int,sample func(float64,float64)(geom.Vec3,error)) ([2]*Mesh,error)",
+  "max_steps_per_axis": 256,
+  "max_callback_invocations": 66049,
+  "max_triangles_combined": 131072,
+  "max_used_vertices_combined": 132094,
+  "max_allocated_vertex_capacity_combined": 132098,
+  "max_output_slice_payload_bytes_64bit": 11600000,
+  "max_temporary_slice_payload_bytes_64bit": 4231248,
+  "input_domains": "strictly increasing finite endpoints/span and representably distinct axis nodes",
+  "sampled_positions": "finite components within +/-1e12; degenerate triangle and zero/canceled global normal sums rejected",
+  "grouping": "(uCell+vCell)%2; group1 nil only at1x1; all failures return two nil pointers",
+  "normal_uv_policy": "Full-grid area weighted smooth normals before copying; global UV=(i/uSteps,1-j/vSteps); no periodic seam weld or analytic derivative sampling."
+}

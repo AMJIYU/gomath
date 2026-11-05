@@ -1,0 +1,36 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkNewPrimitives/Cylinder-8     	    1966	    116262 ns/op	  262240 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Cylinder-8     	    2031	    117469 ns/op	  262243 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Cylinder-8     	    2007	    115182 ns/op	  262240 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Cone-8         	    2176	    112034 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Cone-8         	    2157	    110702 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Cone-8         	    2162	    112172 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Torus-8        	    2214	    109398 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Torus-8        	    2196	    110332 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkNewPrimitives/Torus-8        	    2233	    109941 ns/op	  254048 B/op	       5 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/checker-8         	      56	   3904056 ns/op	 4053520 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/checker-8         	      62	   4414405 ns/op	 4053603 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/checker-8         	      54	   5030130 ns/op	 4053520 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/mixed-8           	      24	  10072248 ns/op	 4606966 B/op	      22 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/mixed-8           	      21	  10153802 ns/op	 4606970 B/op	      22 allocs/op
+BenchmarkRenderTexturedPrimitives/cylinder/mixed-8           	      25	   9931645 ns/op	 4606961 B/op	      22 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/checker-8             	      57	   6207146 ns/op	 4047382 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/checker-8             	      68	   3473039 ns/op	 4047376 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/checker-8             	      70	   3420202 ns/op	 4047373 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/mixed-8               	      31	   7379171 ns/op	 4398075 B/op	      20 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/mixed-8               	      32	   7381599 ns/op	 4398078 B/op	      20 allocs/op
+BenchmarkRenderTexturedPrimitives/cone/mixed-8               	      32	   7362781 ns/op	 4398068 B/op	      20 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/checker-8            	      43	   5682398 ns/op	 4170257 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/checker-8            	      40	   5761240 ns/op	 4170278 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/checker-8            	      40	   5857021 ns/op	 4170256 B/op	      11 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/mixed-8              	      18	  12980118 ns/op	 4840427 B/op	      22 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/mixed-8              	      18	  12872012 ns/op	 4840441 B/op	      22 allocs/op
+BenchmarkRenderTexturedPrimitives/torus/mixed-8              	      18	  12959556 ns/op	 4840429 B/op	      22 allocs/op
+BenchmarkRenderSphere-8                                      	      91	   2462522 ns/op	  852426 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                                      	     100	   2400554 ns/op	  852436 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                                      	     100	   2422615 ns/op	  852435 B/op	       9 allocs/op
+PASS
+ok  	gomath/three	7.706s

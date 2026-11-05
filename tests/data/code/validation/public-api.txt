@@ -1,0 +1,184 @@
+package code // import "gomath/code/_staging"
+
+Package code builds bounded, syntax-colored Go listings from real font outlines.
+It never executes source or invokes an external highlighter.
+
+CONSTANTS
+
+const (
+	MaxSourceBytes   = 256 << 10
+	MaxRunes         = 32768
+	MaxLines         = 2048
+	MaxColumns       = 4096
+	MaxTokens        = 16384
+	MaxDepth         = 64
+	MaxGlyphs        = 16384
+	MaxCurves        = 1 << 20
+	DefaultMaxCurves = 1 << 18
+	MaxCoordinate    = 1e6
+)
+
+VARIABLES
+
+var (
+	ErrSource    = errors.New("invalid code source")
+	ErrLanguage  = errors.New("unsupported code language")
+	ErrOptions   = errors.New("invalid code options")
+	ErrLimit     = errors.New("code limit exceeded")
+	ErrFont      = errors.New("code font error")
+	ErrSelection = errors.New("invalid code selection")
+	ErrObject    = errors.New("invalid code object")
+)
+
+FUNCTIONS
+
+func DefaultFont() (*text.Font, error)
+    DefaultFont returns the shared immutable parsed Go Mono regular face.
+
+
+TYPES
+
+type Category string
+    Category is lexical, not semantic: builtins, types, functions, true and nil
+    are identifiers. Whitespace has cells but no token or painted outline.
+
+const (
+	Keyword     Category = "keyword"
+	Identifier  Category = "identifier"
+	Number      Category = "number"
+	String      Category = "string"
+	Comment     Category = "comment"
+	Operator    Category = "operator"
+	Punctuation Category = "punctuation"
+)
+type Code struct {
+	Object *gomath.Object
+
+	// Has unexported fields.
+}
+    Code owns an editable vector tree. Authoring is single-threaded; freeze with
+    Snapshot or a Scene before concurrent sampling. Lines/tokens retain stable
+    child references through affine transforms, color edits and compatible
+    gomath.Transform operations. Do not replace Object or change child topology.
+
+func New(source string, opt Options) (*Code, error)
+    New validates source, options, lexical limits, exact used-glyph advances
+    and combined source/line-number glyph and curve budgets before publishing
+    a tree. Lexically valid fragments are accepted; parsing, type checking and
+    execution are deliberately outside this display API.
+
+func (c *Code) Background() *gomath.Object
+    Background returns the live rectangle or nil when it was disabled.
+
+func (c *Code) Copy() (*Code, error)
+    Copy validates authored geometry and deep-copies paths, selection metadata
+    and the object tree with fresh identities. No mutable path or slice is
+    shared.
+
+func (c *Code) Glyphs() []Glyph
+    Glyphs copies the selection slice, retaining live authoring glyph pointers.
+
+func (c *Code) Line(index int) (*gomath.Object, error)
+
+func (c *Code) LineNumber(index int) (*gomath.Object, error)
+
+func (c *Code) Lines() []Line
+
+func (c *Code) Metrics() Metrics
+
+func (c *Code) Snapshot() (*Snapshot, error)
+
+func (c *Code) Text() string
+
+func (c *Code) Token(index int) ([]*gomath.Object, error)
+    Token returns a fresh slice of live ink glyph references in source order.
+    Multiline tokens may refer to several line groups. Do not reparent these
+    glyphs into the same scene; animate them directly, or use TokenCopy.
+
+func (c *Code) TokenCopy(index int) (*gomath.Object, error)
+
+func (c *Code) Tokens() []Token
+
+type Glyph struct {
+	Rune                        rune
+	Offset, Line, Column, Token int
+	Object                      *gomath.Object
+}
+    Glyph is an ink-bearing cell. Offset is an original source byte offset;
+    columns count runes and expanded tabs, not bytes or terminal display widths.
+    Line-number glyphs are selected through LineNumber, not Glyphs.
+
+type Limits struct{ SourceBytes, Runes, Lines, Columns, Tokens, Depth, Glyphs, Curves int }
+    Limits may only lower hard limits. Zero uses the hard limit, except Curves
+    which uses DefaultMaxCurves. Depth bounds lexical delimiter nesting,
+    even though the scanner and layout do not recurse over the source.
+
+type Line struct{ Index, Start, End, Columns, Number int }
+    Line describes an original byte span excluding its LF or CRLF terminator.
+    Indices and columns are zero based; Number is the displayed decimal label.
+    Columns includes leading/trailing spaces and expanded tabs. A trailing
+    newline creates a final empty line; empty source has one empty line.
+
+type Metrics struct {
+	CellWidth, LineAdvance, Ascent, Descent, ContentWidth float64
+	Left, Right, Top, Bottom                              float64
+	Lines, Columns, Glyphs, Curves                        int
+}
+    Metrics describes the initial local grid, independent of later Object edits.
+    First source baseline is (0,0); subsequent baselines descend by LineAdvance.
+    ContentWidth retains whitespace. Left/Right/Top/Bottom include the number
+    gutter (digits plus two cells) and Padding, even with Background disabled.
+
+type Options struct {
+	Language        string  // "" or "go"; no guessing, aliases, or other languages.
+	Size            float64 // em size, [1e-6,1e3]; use DefaultOptions.
+	LineHeight      float64 // baseline advance in em, [1,64].
+	TabWidth        int     // tabs advance to the next multiple of this many cells, [1,64].
+	LineNumbers     bool
+	FirstLineNumber int        // zero defaults to 1; otherwise [1,1e9].
+	Background      bool       // a plain, filled rectangle behind all line boxes.
+	Padding         float64    // world units, [0,1e4].
+	Font            *text.Font // nil uses licensed embedded Go Mono; used runes must have the space advance.
+	Palette         *Palette   // nil uses DefaultPalette; all channels must be valid.
+	Limits          Limits
+}
+
+func DefaultOptions() Options
+
+type Palette struct {
+	Keyword, Identifier, Number, String, Comment, Operator, Punctuation gomath.Color
+	LineNumber, Background                                              gomath.Color
+}
+    Palette is explicit sRGB. New copies its value; later caller edits are safe.
+
+func DefaultPalette() Palette
+
+type Snapshot struct {
+	// Has unexported fields.
+}
+    Snapshot has no exported mutable state. Copy is safe for concurrent calls
+    after Snapshot returns, including while the original Code is being edited.
+
+func (s *Snapshot) Copy() (*Code, error)
+
+type SourceError struct {
+	Offset, Line, Column int
+	Message              string
+}
+    SourceError reports a lexical error at an original byte offset. Line/Column
+    are zero-based physical rune-cell coordinates (tabs expanded).
+
+func (e *SourceError) Error() string
+
+func (e *SourceError) Unwrap() error
+
+type Token struct {
+	Index, Start, End, Line, Column int
+	Category                        Category
+	Text                            string
+}
+    Token spans original UTF-8 bytes, including CR in multiline raw literals
+    or comments. Text is verbatim source. Line/Column are physical glyph-grid
+    coordinates, unaffected by //line directives. Inserted semicolons are
+    omitted.
+

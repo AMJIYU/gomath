@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><style>.tile {fill:url(#base);fill-opacity:.7}</style><defs>
+ <linearGradient id="base" x1="0" x2="1"><stop stop-color="#ee3020"/><stop offset="1" stop-color="#2040ee"/></linearGradient>
+ <linearGradient id="copy" href="#base" gradientTransform="rotate(10 .5 .5)"/>
+ <clipPath id="outer"><path d="M4 4H122V90H4Z M54 34V62H74V34Z"/></clipPath>
+ <clipPath id="inner"><rect x="0" y="0" width="49" height="64"/></clipPath>
+ <rect id="tile" class="tile" x="-2" y="-2" width="56" height="72"/>
+ <image id="im" x="-16" y="-12" width="160" height="120" preserveAspectRatio="none" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFklEQVR4nGN0eJCwhQEPYMInOXwUAABJFgJEBRlS0QAAAABJRU5ErkJggg=="/>
+ </defs><g clip-path="url(#outer)"><rect x="8" y="5" width="110" height="5" fill="url(#copy)"/>
+ <g transform="translate(9 14)" clip-path="url(#inner)"><use href="#tile"/></g>
+ <g transform="translate(70 18)" clip-path="url(#inner)"><use href="#tile"/></g>
+ <g opacity=".35"><use href="#im"/></g></g></svg>

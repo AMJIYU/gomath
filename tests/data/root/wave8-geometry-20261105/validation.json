@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-05",
+  "scope": "Parent ArcBrace and checked pointwise/complex authoring maps. Existing source-pinned fixtures unchanged. Staged full root0.109/0.146s and race2.071/2.384s passed before promotion; these fresh central commands use promoted source. Not whole-repository wave8 acceptance.",
+  "checks": [
+    {
+      "name": "root",
+      "environment": {
+        "CGO_ENABLED": "0"
+      },
+      "command": [
+        "go",
+        "run",
+        "./tests/cmd/run",
+        "-pkg=root",
+        "-count=1",
+        "-vet=all"
+      ],
+      "returncode": 0,
+      "log": "tests/data/root/wave8-geometry-20261105/root.txt",
+      "log_sha256": "2179eb5df3c7d49b31c6cb1ca6f556d1730bc9c633febc8f545ac734bf02cd5a"
+    },
+    {
+      "name": "race",
+      "environment": {
+        "CGO_ENABLED": "1"
+      },
+      "command": [
+        "go",
+        "run",
+        "./tests/cmd/run",
+        "-pkg=root",
+        "-race",
+        "-count=1"
+      ],
+      "returncode": 0,
+      "log": "tests/data/root/wave8-geometry-20261105/race.txt",
+      "log_sha256": "4d28528799cd059c69b7f4ee6a6e3c1258960dcab40e4258eb179e0f53da5533"
+    },
+    {
+      "name": "vet",
+      "environment": {
+        "CGO_ENABLED": "0"
+      },
+      "command": [
+        "go",
+        "vet",
+        "-tags",
+        "noasm",
+        "."
+      ],
+      "returncode": 0,
+      "log": "tests/data/root/wave8-geometry-20261105/vet.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "passed": true,
+  "source_sha256": {
+    "arc_brace.go": "4b448f992a6aab19bb62206c2ccf854a6c8d18f8c9d4b0ae1ec8614b77333fe4",
+    "nonlinear.go": "7a8aa4914edc0762c4591c94c22e21d0f76788e77ced44a7e480eeeebbf3d0ab",
+    "tests/_cases/root/arc_brace_test.go": "ff0268d478c168ff7ec6b2b9ae6798b24fef60ed06af5e4d6ec88dbc442ff537",
+    "tests/_cases/root/pointwise_test.go": "9fdc3fade0b653007db4e8ca6075f26128c883b05a48964096a0b32546637269",
+    "tests/reference/arc_braces.py": "19d15d8447cd1b90f290e77e33030b01c08115e10a3c2bb1fcec974c319b1ba0",
+    "tests/reference/pointwise.py": "24e8997249a3f897899ae3344d73d01a492f41964dcecd2eacf6a462aad74392",
+    "tests/data/root/arc-braces/manim-planar-0.22.1.json": "32861fe16ce2a171478761f0d2bd2906b3d35a0184f215c767dd84f1036b80ca",
+    "tests/data/root/pointwise/manim-0.22.1.json": "5ac35b8e607ac4cab735ce373b29f2f032bf46e8e93fd6633a844342bd3b6e13",
+    "docs/ARC_BRACES.md": "24d3453ad7101a433d85e34e8633e8607d0a527c3af1d55eaa84b4a43f3b85a6",
+    "docs/POINTWISE.md": "0dbb7c6eb13cbb6abd87bc2ecbd890c92d433325e8f42b717f9323ee1a56a76c"
+  },
+  "independent_reference": {
+    "arc_brace_constructs": 36,
+    "arc_brace_transform_states": 252,
+    "pointwise_constructs": 24,
+    "pointwise_transform_states": 168,
+    "control_absolute_tolerance": 2e-11,
+    "limitations": "Explicit circle center; source nonzero-Z get_arc_center fallback diagnostic retained separately. Cubic point mapping with handle policy; no adaptive nonlinear image, paints/clip/image deformation or general updater compatibility."
+  }
+}

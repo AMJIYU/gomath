@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180" viewBox="0 0 240 180">
+<style>path,polyline,rect,circle{fill:none;stroke-width:4}.round{stroke-linecap:round;stroke-linejoin:round}.square{stroke-linecap:square;stroke-linejoin:bevel}</style>
+<path d="M12 16H224" stroke="#ed2030" stroke-dasharray="13 7"/>
+<path d="M12 36H224" stroke="#20b040" stroke-dasharray="9,5,3" stroke-dashoffset="-4" class="round"/>
+<path d="M12 56H224" stroke="#2040ed" stroke-dasharray="0 12" class="round"/>
+<polyline points="12,84 64,84 64,116 104,116" stroke="#d09010" stroke-dasharray="40 9" stroke-dashoffset="4" class="square"/>
+<path d="M120 82H224M120 98H224" stroke="#c020b0" stroke-dasharray="13 6" stroke-dashoffset="3"/>
+<rect x="12" y="136" width="72" height="28" stroke="#10a0b0" stroke-dasharray="27 11" stroke-dashoffset="5" class="round"/>
+<path d="M104 158C110 105 160 116 160 158S206 173 224 128" stroke="#7540e0" stroke-dasharray="9 5" stroke-dashoffset="2" class="round"/>
+</svg>

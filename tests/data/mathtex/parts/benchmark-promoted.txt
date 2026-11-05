@@ -1,0 +1,9 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/mathtex
+cpu: Apple M2
+BenchmarkPartsLayout-8   	   10000	    295596 ns/op	  122373 B/op	     414 allocs/op
+BenchmarkPartsLayout-8   	    4350	    301105 ns/op	  122324 B/op	     414 allocs/op
+BenchmarkPartsLayout-8   	    3772	    276315 ns/op	  122346 B/op	     414 allocs/op
+PASS
+ok  	gomath/mathtex	5.328s

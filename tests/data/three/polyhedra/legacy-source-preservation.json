@@ -1,0 +1,14 @@
+{
+  "three/light.go": {
+    "sha256": "2dbf66e3dc7b103911586f24ce484d962e9b2b0db73e477a323546c0fb21e2ef",
+    "matches_wave4": true
+  },
+  "three/renderer.go": {
+    "sha256": "1008ed65370f61fc6e2b8f8eab48e070e2a2807e6672541f59c1cafd99924cc0",
+    "matches_wave4": true
+  },
+  "three/world_renderer.go": {
+    "sha256": "d2d6724cc59ce8f8b24ff0d3be3e8a9ec29800d863b366eb79f7bddb730b74d5",
+    "matches_wave4": true
+  }
+}

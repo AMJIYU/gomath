@@ -1,0 +1,42 @@
+[
+  {
+    "name": "bench-path",
+    "command": [
+      "go",
+      "run",
+      "./tests/cmd/run",
+      "-pkg=path",
+      "-p=1",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkDirectionReversed$",
+      "-benchmem",
+      "-benchtime=300ms",
+      "-count=3"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 7.469166165974457,
+    "log": "bench-path.txt"
+  },
+  {
+    "name": "bench-root",
+    "command": [
+      "go",
+      "run",
+      "./tests/cmd/run",
+      "-pkg=root",
+      "-p=1",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkObjectDirectionFamily$",
+      "-benchmem",
+      "-benchtime=300ms",
+      "-count=3"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.789913874992635,
+    "log": "bench-root.txt"
+  }
+]

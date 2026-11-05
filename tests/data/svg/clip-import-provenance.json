@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-04",
+  "versions": {
+    "Python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4",
+    "Pillow": "11.2.1"
+  },
+  "generator": "tests/reference/svg_clipping.py",
+  "generator_sha256": "a448280ab9adf08aad91b8424e9feb97763f0113de8fbf3b1413ad60fdf0225b",
+  "files_sha256": {
+    "clip-import-transform.svg": "c7b946742710ff619ef1df84490787f483f0fb3aace58784584e0e4896224659",
+    "clip-import-transform.png": "6a91c9b9e5ee0ce8ff3bcb73e7427961232218e3543941bb6704d31f3e7d6d1f",
+    "clip-import-nested.svg": "8a2014d4d72b01a0e5756b3aed0dedd4aa16ffe4efdb75449d0a7bb044e40cb3",
+    "clip-import-nested.png": "07e895461263de15e9d337c26394ac198ec64555b137f2480da82e47ab86ce09",
+    "clip-import-bitmap.svg": "cc63955ff2a2bf29a02674e92571228efbf9afb444bce5677b6c804933d660c0",
+    "clip-import-bitmap.png": "465403c561ae8f3a40d1d8f6b10a40534c3104b91ea7d1ab72d495b9c5a44000",
+    "clip-import-use-positions.svg": "aa3cee79ebe3e9c72516d43983bbc2c529483ee0ac14f4d36e85b83a2c0d2ece",
+    "clip-import-use-positions.png": "9759d541617b6c62e863cb0728ab617067eedfbf22d5a775d54ed62022f8ae3d",
+    "clip-import-use.svg": "1ec2aa43575a5701923168a5b44816e0adec634728f6e85432899a0dbd773011",
+    "clip-import-use.png": "5d7d018163f28212afbbc038b3a856f66ed2275f565915845b757592f6ced00e"
+  },
+  "scope": [
+    "Five transparent 128x96 independent CairoSVG PNGs; canonical SVG source authored in this script, no Go-exported oracle.",
+    "Transformed compound nonzero clip with a hole, affine/reflected transforms tested analytically in Go as well.",
+    "Nested graphics clips, constant semitransparent embedded PNG under affine use, CSS plus clipPath/use and clipped use host.",
+    "Bitmap image edges lie outside the clip: isolates clip/image alpha from differing source-edge extension filters.",
+    "CairoSVG 2.7.1 ignores opacity on leaf use/image and mutates clipPath use x/y after first draw. Bitmap alpha is set on its parent g; repeated clipPath use uses an equivalent translate, and a separate single-use fixture tests x/y. Analytical Go tests cover native instance independence and opacity directly.",
+    "CairoSVG nested clipPath-on-clipPath semantics are not used as an oracle; native intersections are checked analytically instead.",
+    "No SVG-wide, Pango, Manim animation or full browser compatibility claim."
+  ],
+  "comparison": "All pixels, premultiplied RGBA channel units 0..255. MAE <= .35, max <= 45, fraction with any channel delta>8 <= .02. Bounds/holes/source placement additionally checked analytically.",
+  "runtime": "Pure Go. Python/CairoSVG/Cairo/Pillow only regenerate fixed development references; Go tests read files.",
+  "api": {
+    "entrypoint": "svg.Read(io.Reader, Options); Options unchanged",
+    "output": "Existing immutable gomath.Clip on imported Objects; additional groups express intersections; fresh IDs and independent instance transforms",
+    "root_api_extension_required": false
+  },
+  "supported": [
+    "userSpaceOnUse (also default)",
+    "One basic/path graphical child, or use directly referencing one basic/path shape; href and xlink:href",
+    "Compound nonzero path holes and implicit closure of open contours",
+    "Affine clipPath/graphic/use/target transforms, including reflection/shear/nonuniform scale; absolute/user-unit geometry",
+    "Definition light-tree CSS matching/inheritance; internal use shadow boundary; clip-path non-inherited except explicit inherit; initial/unset/none",
+    "Silhouettes ignore fill/stroke/opacity; child display/visibility affect clipping, with target visibility override",
+    "Clips on vectors/groups/text/tspan/bitmap/use/symbol; parent-child and clip-on-clip intersection; world normalization, ApplyMatrix and camera",
+    "Every clipPath compiled including unused; unknown/wrong-type references checked including overridden/unmatched CSS; errors abort Read without partial objects"
+  ],
+  "unsupported": [
+    "objectBoundingBox",
+    "More than one graphical child (union), including hidden/disjoint cases",
+    "Actual evenodd clipping",
+    "g/text/image/symbol silhouettes or internal use chains/non-basic targets",
+    "Clone-local clipPath definitions referenced from within a use clone; shared definitions outside cloned subtree supported",
+    "Percentage clip geometry/internal use positions, CSS basic-shape/geometry-box/fallback/escapes, URI percent encoding/external resources",
+    "xml:base in documents containing clipPath, unsupported attributes/namespaces",
+    "No new root/symbol overflow viewport clipping, image slice, mask/filter, group opacity isolation or browser/Manim-wide parity"
+  ],
+  "limits_per_read": {
+    "clip_definitions": 1024,
+    "clip_graphic_attribute_bytes": 1048576,
+    "native_contours_per_path": 4096,
+    "native_curves_per_path": 65536,
+    "source_plan_instance_path_materializations": 8192,
+    "cumulative_materialized_curves": 1048576,
+    "cumulative_materialized_contours_including_zero_curve_contours": 65536,
+    "clip_reference_depth": 64,
+    "clip_plan_intersections": 64,
+    "output_clip_ancestors": 64,
+    "existing": "32MiB XML input; 128 XML/use depth; 100000 expanded objects including extra intersection groups; existing CSS/text/image budgets",
+    "counting": "Materialization budgets include source outlines, plan transforms and output instances. Final normalization is a fixed extra step. Stage limits, not a process peak-heap guarantee; rasterizer has separate limits."
+  },
+  "measured_raster": {
+    "clip-import-transform": {
+      "width": 128,
+      "height": 96,
+      "mae_0_255": 0.126322428,
+      "max_channel_delta": 18,
+      "fraction_pixels_any_delta_gt_8": 0.00992838542
+    },
+    "clip-import-nested": {
+      "width": 128,
+      "height": 96,
+      "mae_0_255": 0.0684000651,
+      "max_channel_delta": 1,
+      "fraction_pixels_any_delta_gt_8": 0
+    },
+    "clip-import-bitmap": {
+      "width": 128,
+      "height": 96,
+      "mae_0_255": 0.102050781,
+      "max_channel_delta": 6,
+      "fraction_pixels_any_delta_gt_8": 0
+    },
+    "clip-import-use": {
+      "width": 128,
+      "height": 96,
+      "mae_0_255": 0.00152587891,
+      "max_channel_delta": 1,
+      "fraction_pixels_any_delta_gt_8": 0
+    },
+    "clip-import-use-positions": {
+      "width": 128,
+      "height": 96,
+      "mae_0_255": 0.0341796875,
+      "max_channel_delta": 16,
+      "fraction_pixels_any_delta_gt_8": 0.00236002604
+    }
+  },
+  "validation": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -pkg=text -pkg=render -pkg=export -count=1 -vet=all",
+      "result": "PASS: svg 0.610s; text 0.014s; render 0.133s; export 0.166s"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -race -count=1",
+      "result": "PASS svg 9.437s; Go race requires cgo in development test build. Product builds separately checked with CGO_ENABLED=0/noasm."
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS: 41 non-standard packages, no native inputs or runtime process launch imports"
+    },
+    {
+      "command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib PYTHONDONTWRITEBYTECODE=1 /usr/local/bin/python3.11 tests/reference/svg_clipping.py tests/data/svg --verify",
+      "result": "PASS: independently regenerated 10 SVG/PNG files and matched all recorded SHA256 hashes"
+    }
+  ],
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -p=1 -run=^$ -bench=^BenchmarkReadClipInstances$ -benchtime=300ms -count=3",
+    "environment": "Go go1.27.3 darwin/arm64, Apple M2, CGO_ENABLED=0, noasm",
+    "workload": "Full Read of 256x256 viewport with 256 use instances of a 16x16 rect, each clipped by a two-contour (hole) 8-cubic path. Input 8,888 bytes. 256 output vector drawables. 0 rendered frames.",
+    "excluded": "Rasterization, PNG encoding, file I/O, reference generation, animations, cold global initialization; no speedup claim",
+    "samples": [
+      {
+        "iterations": 200,
+        "ns_per_op": 1592042,
+        "bytes_per_op": 2295672,
+        "allocs_per_op": 13721
+      },
+      {
+        "iterations": 238,
+        "ns_per_op": 1505291,
+        "bytes_per_op": 2295676,
+        "allocs_per_op": 13721
+      },
+      {
+        "iterations": 237,
+        "ns_per_op": 1507070,
+        "bytes_per_op": 2295675,
+        "allocs_per_op": 13721
+      }
+    ]
+  },
+  "modified_files": [
+    "svg/clip.go",
+    "svg/document.go",
+    "svg/css.go",
+    "svg/instance.go",
+    "svg/style.go",
+    "svg/svg.go",
+    "svg/text.go",
+    "svg/README.md",
+    "tests/_cases/svg/clip_test.go",
+    "tests/_cases/svg/clip_limits_test.go",
+    "tests/_cases/svg/clip_reference_test.go",
+    "tests/reference/svg_clipping.py",
+    "tests/data/svg/clip-import-bitmap.png",
+    "tests/data/svg/clip-import-bitmap.svg",
+    "tests/data/svg/clip-import-nested.png",
+    "tests/data/svg/clip-import-nested.svg",
+    "tests/data/svg/clip-import-transform.png",
+    "tests/data/svg/clip-import-transform.svg",
+    "tests/data/svg/clip-import-use-positions.png",
+    "tests/data/svg/clip-import-use-positions.svg",
+    "tests/data/svg/clip-import-use.png",
+    "tests/data/svg/clip-import-use.svg",
+    "tests/data/svg/clip-import-provenance.json"
+  ]
+}

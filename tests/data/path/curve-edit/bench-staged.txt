@@ -1,0 +1,33 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/path
+cpu: Apple M2
+BenchmarkCurveEdit/Insert_64_to_129-8         	   16767	     13230 ns/op	   13568 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_64_to_129-8         	   23692	     17347 ns/op	   13568 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_64_to_129-8         	   32420	      7961 ns/op	   13568 B/op	       1 allocs/op
+BenchmarkCurveEdit/SmoothOpen_64-8            	   51255	      4223 ns/op	    6656 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_64-8            	   66735	      5106 ns/op	    6656 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_64-8            	   51940	      4252 ns/op	    6656 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothClosed_65-8          	   51657	      5903 ns/op	    7616 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_65-8          	   64219	      8145 ns/op	    7616 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_65-8          	   22452	     16103 ns/op	    7616 B/op	       3 allocs/op
+BenchmarkCurveEdit/Insert_1024_to_2049-8      	     920	    394210 ns/op	  204801 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_1024_to_2049-8      	    1122	    265148 ns/op	  204803 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_1024_to_2049-8      	    1216	    296758 ns/op	  204803 B/op	       1 allocs/op
+BenchmarkCurveEdit/SmoothOpen_1024-8          	    1462	    306956 ns/op	  106497 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_1024-8          	     850	    254046 ns/op	  106499 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_1024-8          	    1492	    259230 ns/op	  106498 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothClosed_1025-8        	    1186	    177527 ns/op	  124161 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_1025-8        	     477	    437725 ns/op	  124163 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_1025-8        	    2230	    196194 ns/op	  124162 B/op	       3 allocs/op
+BenchmarkCurveEdit/Insert_16384_to_32769-8    	     100	   3402675 ns/op	 3153934 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_16384_to_32769-8    	      27	   9688034 ns/op	 3153953 B/op	       1 allocs/op
+BenchmarkCurveEdit/Insert_16384_to_32769-8    	      86	   3569692 ns/op	 3153931 B/op	       1 allocs/op
+BenchmarkCurveEdit/SmoothOpen_16384-8         	     127	   2336984 ns/op	 1703966 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_16384-8         	     100	   2277047 ns/op	 1703953 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothOpen_16384-8         	     140	   1799397 ns/op	 1703952 B/op	       2 allocs/op
+BenchmarkCurveEdit/SmoothClosed_16385-8       	     122	   2010395 ns/op	 1851404 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_16385-8       	     100	   2381414 ns/op	 1851434 B/op	       3 allocs/op
+BenchmarkCurveEdit/SmoothClosed_16385-8       	     100	   2798746 ns/op	 1851418 B/op	       3 allocs/op
+PASS
+ok  	gomath/path	8.435s

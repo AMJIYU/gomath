@@ -1,0 +1,7 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/internal/h264
+cpu: Apple M2
+BenchmarkInterResidual/static/searchfalse/intertrue         	      13	 173564962 ns/op	   2892748 ns/frame	  286082 B/op	      71 allocs/op
+PASS
+ok  	gomath/internal/h264	2.601s

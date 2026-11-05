@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <g id="tile" transform="translate(2,3)">
+      <rect width="8" height="6"/>
+      <path d="M1 1L7 1L4 5Z" fill="white"/>
+    </g>
+    <use id="alias" xlink:href="#tile" x="3" y="4" transform="scale(2)"/>
+  </defs>
+  <g transform="translate(5,7)">
+    <use href="#alias" x="10" y="20" fill="red"/>
+    <use xlink:href="#tile" x="40" y="10" fill="blue" transform="rotate(90 50 20)"/>
+  </g>
+</svg>

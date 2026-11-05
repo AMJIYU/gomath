@@ -1,0 +1,2 @@
+ok  	gomath/mathtex	2.887s
+ok  	gomath/text	0.537s

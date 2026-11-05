@@ -1,0 +1,452 @@
+=== RUN   TestBooleanRoundingRejectsThinLoopOrientationReversal
+--- PASS: TestBooleanRoundingRejectsThinLoopOrientationReversal (0.00s)
+=== RUN   TestLookupBudgetAndIntervalOwnership
+--- PASS: TestLookupBudgetAndIntervalOwnership (0.04s)
+=== RUN   TestLookupAnalyticStationaryCubicAndContourJumps
+--- PASS: TestLookupAnalyticStationaryCubicAndContourJumps (0.00s)
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/contours
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/segments
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/pairs
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/vertices
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/edges
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/cuts
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/work
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/rational_precision
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/allocation
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/negative
+=== RUN   TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/hard_ceiling
+--- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/contours (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/segments (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/pairs (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/vertices (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/edges (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/cuts (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/work (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/rational_precision (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/allocation (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/negative (0.00s)
+    --- PASS: TestBooleanLimitsAndInvalidOptionsReturnNoPartialResult/hard_ceiling (0.00s)
+=== RUN   TestBooleanExactDyadicExtremesAndImplicitClosure
+--- PASS: TestBooleanExactDyadicExtremesAndImplicitClosure (0.00s)
+=== RUN   TestBooleanRejectsUnrepresentableRoundedTopology
+--- PASS: TestBooleanRejectsUnrepresentableRoundedTopology (0.00s)
+=== RUN   TestBooleanIndependentSkiaPathopsReference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/hole-overlap/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/hole-overlap/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/hole-overlap/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/hole-overlap/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/crossing-triangles/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/crossing-triangles/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/crossing-triangles/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/crossing-triangles/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/collinear-contact/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/collinear-contact/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/collinear-contact/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/collinear-contact/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/edge-contact/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/edge-contact/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/edge-contact/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/edge-contact/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/point-contact/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/point-contact/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/point-contact/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/point-contact/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/self-crossing/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/self-crossing/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/self-crossing/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/self-crossing/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/winding-cancellation/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/winding-cancellation/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/winding-cancellation/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/winding-cancellation/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/double-evenodd/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/double-evenodd/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/double-evenodd/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/double-evenodd/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/identical-reversed/union
+=== RUN   TestBooleanIndependentSkiaPathopsReference/identical-reversed/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/identical-reversed/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/identical-reversed/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/empty/intersection
+=== RUN   TestBooleanIndependentSkiaPathopsReference/empty/difference
+=== RUN   TestBooleanIndependentSkiaPathopsReference/empty/xor
+=== RUN   TestBooleanIndependentSkiaPathopsReference/empty/union
+--- PASS: TestBooleanIndependentSkiaPathopsReference (0.02s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/hole-overlap/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/hole-overlap/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/hole-overlap/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/hole-overlap/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/crossing-triangles/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/crossing-triangles/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/crossing-triangles/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/crossing-triangles/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/collinear-contact/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/collinear-contact/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/collinear-contact/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/collinear-contact/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/edge-contact/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/edge-contact/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/edge-contact/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/edge-contact/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/point-contact/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/point-contact/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/point-contact/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/point-contact/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/same-direction-nesting/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/evenodd-nesting/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/self-crossing/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/self-crossing/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/self-crossing/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/self-crossing/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/winding-cancellation/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/winding-cancellation/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/winding-cancellation/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/winding-cancellation/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/double-evenodd/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/double-evenodd/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/double-evenodd/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/double-evenodd/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/identical-reversed/union (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/identical-reversed/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/identical-reversed/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/identical-reversed/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/empty/intersection (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/empty/difference (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/empty/xor (0.00s)
+    --- PASS: TestBooleanIndependentSkiaPathopsReference/empty/union (0.00s)
+=== RUN   TestBooleanIndependentCairoRasterReference
+=== RUN   TestBooleanIndependentCairoRasterReference/union
+    boolean_reference_test.go:147: Skia/Cairo 128x128: premultiplied RGBA MAE=0.0186767578 max=11 fraction>8=0.000305175781
+=== RUN   TestBooleanIndependentCairoRasterReference/intersection
+    boolean_reference_test.go:147: Skia/Cairo 128x128: premultiplied RGBA MAE=0.019241333 max=11 fraction>8=0.000305175781
+=== RUN   TestBooleanIndependentCairoRasterReference/difference
+    boolean_reference_test.go:147: Skia/Cairo 128x128: premultiplied RGBA MAE=0.018157959 max=11 fraction>8=0.000305175781
+=== RUN   TestBooleanIndependentCairoRasterReference/xor
+    boolean_reference_test.go:147: Skia/Cairo 128x128: premultiplied RGBA MAE=0.0398712158 max=15 fraction>8=0.0009765625
+--- PASS: TestBooleanIndependentCairoRasterReference (0.01s)
+    --- PASS: TestBooleanIndependentCairoRasterReference/union (0.00s)
+    --- PASS: TestBooleanIndependentCairoRasterReference/intersection (0.00s)
+    --- PASS: TestBooleanIndependentCairoRasterReference/difference (0.00s)
+    --- PASS: TestBooleanIndependentCairoRasterReference/xor (0.00s)
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/overlap0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/overlap1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/overlap2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/overlap3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/identical0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/identical1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/identical2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/identical3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/contained0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/contained1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/contained2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/contained3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/hole0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/hole1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/hole2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/hole3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right3
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty0
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty1
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty2
+=== RUN   TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty3
+--- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty (0.01s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/overlap0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/overlap1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/overlap2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/overlap3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/disjoint3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/identical0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/identical1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/identical2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/identical3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/opposite_orientation3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/edge_contact3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/point_contact3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/contained0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/contained1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/contained2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/contained3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/partial_collinear3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/hole0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/hole1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/hole2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/hole3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_left3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/empty_right3 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty0 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty1 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty2 (0.00s)
+    --- PASS: TestBooleanAreaContactsCollinearHolesAndEmpty/both_empty3 (0.00s)
+=== RUN   TestBooleanFillRulesSelfCrossingAndCancellation
+--- PASS: TestBooleanFillRulesSelfCrossingAndCancellation (0.01s)
+=== RUN   TestBooleanDeterminismIndependentOwnershipAndConcurrentReads
+--- PASS: TestBooleanDeterminismIndependentOwnershipAndConcurrentReads (0.00s)
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/open
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/move_only
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/disconnected
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/zero_edge
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/curved
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/nonplane
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/nan
+=== RUN   TestBooleanRejectsInvalidGeometryAndCubic/collinear
+--- PASS: TestBooleanRejectsInvalidGeometryAndCubic (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/open (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/move_only (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/disconnected (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/zero_edge (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/curved (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/nonplane (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/nan (0.00s)
+    --- PASS: TestBooleanRejectsInvalidGeometryAndCubic/collinear (0.00s)
+=== RUN   TestBooleanRandomRectangleTruthTables
+--- PASS: TestBooleanRandomRectangleTruthTables (0.16s)
+=== RUN   TestBooleanRandomNonAxisAlignedPolygons
+--- PASS: TestBooleanRandomNonAxisAlignedPolygons (0.04s)
+=== RUN   TestBooleanRandomSelfCrossingPolygons
+--- PASS: TestBooleanRandomSelfCrossingPolygons (0.35s)
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/single_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/single_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/two_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/two_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/open_two_curves_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/open_two_curves_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/open_3d_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/open_3d_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_two_curves_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_two_curves_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_triangle_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_triangle_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_square_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_square_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/repeated_interior_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/repeated_interior_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/constant_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/constant_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/near_closed_origin_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/near_closed_origin_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/relative_closed_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/relative_closed_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/outside_closure_jagged
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/anchors/outside_closure_smooth
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_1
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_2
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_3
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_7
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_31
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_2
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_3
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_5
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_8
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_3
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_4
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_5
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_8
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_10
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/ten_to_fifteen
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/closed_to_nine
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/constant_to_seven
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/insert/point_to_five
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/transform/unequal_two_five
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/transform/unequal_three_eight
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/transform/one_to_closed
+=== RUN   TestCurveEditPinnedManimAndInteriorTransform/transform/smooth_to_jagged
+--- PASS: TestCurveEditPinnedManimAndInteriorTransform (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/single_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/single_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/two_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/two_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/open_two_curves_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/open_two_curves_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/open_3d_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/open_3d_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_two_curves_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_two_curves_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_triangle_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_triangle_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_square_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/closed_square_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/repeated_interior_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/repeated_interior_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/constant_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/constant_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/near_closed_origin_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/near_closed_origin_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/relative_closed_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/relative_closed_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/outside_closure_jagged (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/anchors/outside_closure_smooth (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_1 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_2 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_3 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_7 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_1_to_31 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_2 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_3 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_5 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_2_to_8 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_3 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_4 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_5 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_8 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/curves_3_to_10 (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/ten_to_fifteen (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/closed_to_nine (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/constant_to_seven (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/insert/point_to_five (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/transform/unequal_two_five (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/transform/unequal_three_eight (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/transform/one_to_closed (0.00s)
+    --- PASS: TestCurveEditPinnedManimAndInteriorTransform/transform/smooth_to_jagged (0.00s)
+=== RUN   TestCurveEditEqualParameterShapeAllocationAndDeterminism
+--- PASS: TestCurveEditEqualParameterShapeAllocationAndDeterminism (0.01s)
+=== RUN   TestCurveEditSmoothDerivativeConditionsAndAnchors
+--- PASS: TestCurveEditSmoothDerivativeConditionsAndAnchors (0.00s)
+=== RUN   TestCurveEditInvalidInputsAndAtomicity
+--- PASS: TestCurveEditInvalidInputsAndAtomicity (0.00s)
+=== RUN   TestCurveEditResourceBoundaries
+--- PASS: TestCurveEditResourceBoundaries (0.01s)
+=== RUN   TestCurveEditNoAliasingContoursPointsAndConcurrentCalls
+--- PASS: TestCurveEditNoAliasingContoursPointsAndConcurrentCalls (0.00s)
+=== RUN   TestDirectionPinnedManimAndTransformControls
+=== RUN   TestDirectionPinnedManimAndTransformControls/empty
+=== RUN   TestDirectionPinnedManimAndTransformControls/point_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/open_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/closed_curved_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/constant
+=== RUN   TestDirectionPinnedManimAndTransformControls/near_closed_open
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_open_closed
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_unequal
+--- PASS: TestDirectionPinnedManimAndTransformControls (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/empty (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/point_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/open_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/closed_curved_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/constant (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/near_closed_open (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_open_closed (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_unequal (0.00s)
+=== RUN   TestDirectionExactReversalShapeEndpointsAndMetadata
+--- PASS: TestDirectionExactReversalShapeEndpointsAndMetadata (0.00s)
+=== RUN   TestDirectionStrictInputsAndImplicitClosureAtomicity
+--- PASS: TestDirectionStrictInputsAndImplicitClosureAtomicity (0.00s)
+=== RUN   TestDirectionSharedBudgetsAndEarlyRejection
+--- PASS: TestDirectionSharedBudgetsAndEarlyRejection (0.00s)
+=== RUN   TestDirectionIndependentAliasedContoursAndConcurrentCalls
+--- PASS: TestDirectionIndependentAliasedContoursAndConcurrentCalls (0.00s)
+=== RUN   TestDirectionRandomCurves
+--- PASS: TestDirectionRandomCurves (0.00s)
+=== RUN   TestCubicLengthStraightDegenerateReversed
+--- PASS: TestCubicLengthStraightDegenerateReversed (0.00s)
+=== RUN   TestCubicInverseNonuniformParameterAndEndpointTangents
+--- PASS: TestCubicInverseNonuniformParameterAndEndpointTangents (0.00s)
+=== RUN   TestCubicLengthDoubleBackAndStationaryInterior
+--- PASS: TestCubicLengthDoubleBackAndStationaryInterior (0.00s)
+=== RUN   TestCubicLengthAgainstIndependentIntegral
+--- PASS: TestCubicLengthAgainstIndependentIntegral (0.05s)
+=== RUN   TestCircleCubicLength
+--- PASS: TestCircleCubicLength (0.00s)
+=== RUN   TestUniformLengthSamplingUnequalSegmentsAndContourBoundaries
+--- PASS: TestUniformLengthSamplingUnequalSegmentsAndContourBoundaries (0.00s)
+=== RUN   TestLengthClosedImplicitEdgeAndStationaryContours
+--- PASS: TestLengthClosedImplicitEdgeAndStationaryContours (0.00s)
+=== RUN   TestMeasuredPathSnapshotAndConcurrentQueries
+--- PASS: TestMeasuredPathSnapshotAndConcurrentQueries (0.00s)
+=== RUN   TestLengthRejectsInvalidAndUnachievableInputs
+--- PASS: TestLengthRejectsInvalidAndUnachievableInputs (0.00s)
+=== RUN   TestParameterTrimExactCubicsAndPenUpGaps
+--- PASS: TestParameterTrimExactCubicsAndPenUpGaps (0.00s)
+=== RUN   TestSubdivisionPreservesCurve
+--- PASS: TestSubdivisionPreservesCurve (0.00s)
+=== RUN   TestAlignAndEndpoints
+--- PASS: TestAlignAndEndpoints (0.00s)
+=== RUN   TestExactBounds
+--- PASS: TestExactBounds (0.00s)
+=== RUN   TestFlattenDoubleBackAndPartial
+--- PASS: TestFlattenDoubleBackAndPartial (0.00s)
+=== RUN   TestTrimByLengthAcrossSegmentsAndContours
+--- PASS: TestTrimByLengthAcrossSegmentsAndContours (0.00s)
+=== RUN   TestTrimByLengthPreservesCurvedGeometry
+--- PASS: TestTrimByLengthPreservesCurvedGeometry (0.00s)
+=== RUN   TestPartialByLengthClosureAndEndpoints
+--- PASS: TestPartialByLengthClosureAndEndpoints (0.00s)
+=== RUN   TestLengthScaleAndSnapshotQueryAllocations
+--- PASS: TestLengthScaleAndSnapshotQueryAllocations (0.00s)
+=== RUN   FuzzCurveEditSubdivision
+=== RUN   FuzzCurveEditSubdivision/seed#0
+=== RUN   FuzzCurveEditSubdivision/seed#1
+--- PASS: FuzzCurveEditSubdivision (0.00s)
+    --- PASS: FuzzCurveEditSubdivision/seed#0 (0.00s)
+    --- PASS: FuzzCurveEditSubdivision/seed#1 (0.00s)
+=== RUN   FuzzSubdivision
+=== RUN   FuzzSubdivision/seed#0
+--- PASS: FuzzSubdivision (0.00s)
+    --- PASS: FuzzSubdivision/seed#0 (0.00s)
+PASS
+ok  	gomath/path	0.727s

@@ -1,0 +1,45 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkRenderPointLight/flat/ssaa1-8         	      40	   5537996 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027287 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa1-8         	      44	   5604134 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027153 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa1-8         	      40	   5487534 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027151 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8         	      15	  14940794 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099226 B/op	      15 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8         	      15	  14992292 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099227 B/op	      15 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8         	      15	  15015356 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099225 B/op	      15 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8       	      43	   5544024 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076315 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8       	      43	   5553935 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076302 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8       	      43	   5537453 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076305 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8       	      15	  15130478 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148371 B/op	      16 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8       	      15	  15022922 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148365 B/op	      16 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8       	      15	  15077350 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148395 B/op	      16 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8      	      27	   8795525 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574632 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8      	      27	   8778863 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574648 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8      	      26	   8832760 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574636 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8      	       8	  27813760 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121290 B/op	      41 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8      	       8	  27796604 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121276 B/op	      41 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8      	       8	  27821979 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121264 B/op	      41 allocs/op
+BenchmarkRenderSphere-8                        	      80	   3470911 ns/op	  852435 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                        	      84	   3441756 ns/op	  852433 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                        	      85	   3442592 ns/op	  852435 B/op	       9 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8   	     240	    998039 ns/op	  908525 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8   	     238	   1004438 ns/op	  908533 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8   	     238	    999676 ns/op	  908529 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8   	      51	   4816770 ns/op	 3505455 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8   	      50	   4866729 ns/op	 3505457 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8   	      51	   4891498 ns/op	 3505464 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8   	      13	  17251077 ns/op	13270371 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8   	      13	  17241378 ns/op	13270337 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8   	      13	  17324099 ns/op	13270345 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8   	     204	   1162348 ns/op	  908528 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8   	     206	   1161082 ns/op	  908525 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8   	     201	   1165840 ns/op	  908530 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8   	      44	   5483591 ns/op	 3702064 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8   	      42	   5514613 ns/op	 3702062 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8   	      43	   5556931 ns/op	 3702067 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8   	      12	  19975021 ns/op	13761868 B/op	      40 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8   	      10	  20026004 ns/op	13761862 B/op	      40 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8   	      10	  20011050 ns/op	13761884 B/op	      40 allocs/op
+PASS
+ok  	gomath/three	10.449s

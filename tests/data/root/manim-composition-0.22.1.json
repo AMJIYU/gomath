@@ -1,0 +1,406 @@
+{
+  "source": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "generator_sha256": "6dd702f26c87dddcf6103dc53fa13d3cf980b08e3147d08bcabed32dcacdeb99"
+  },
+  "cases": [
+    {
+      "kind": "parallel",
+      "alpha": 0.0,
+      "values": [
+        -2.0,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.03125,
+      "values": [
+        -1.875,
+        1.375,
+        3.25
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.125,
+      "values": [
+        -1.5,
+        2.5,
+        1.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.25,
+      "values": [
+        -1.0,
+        4.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.375,
+      "values": [
+        -0.5,
+        5.5,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.5,
+      "values": [
+        0.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.625,
+      "values": [
+        0.5,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.75,
+      "values": [
+        1.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.875,
+      "values": [
+        1.5,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 0.96875,
+      "values": [
+        1.875,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "parallel",
+      "alpha": 1.0,
+      "values": [
+        2.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.0,
+      "values": [
+        -2.0,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.03125,
+      "values": [
+        -1.875,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.125,
+      "values": [
+        -1.5,
+        2.5,
+        3.5500000000000003
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.25,
+      "values": [
+        -1.0,
+        7.0,
+        -0.19999999999999973
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.375,
+      "values": [
+        -0.5,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.5,
+      "values": [
+        0.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.625,
+      "values": [
+        0.5,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.75,
+      "values": [
+        1.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.875,
+      "values": [
+        1.5,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 0.96875,
+      "values": [
+        1.875,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "long_first",
+      "alpha": 1.0,
+      "values": [
+        2.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.0,
+      "values": [
+        -2.0,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.03125,
+      "values": [
+        -1.9999546304559757,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.125,
+      "values": [
+        -1.999672519973283,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.25,
+      "values": [
+        -1.9981046877429263,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.375,
+      "values": [
+        -1.9822637325008667,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.5,
+      "values": [
+        0.0,
+        7.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.625,
+      "values": [
+        1.9822637325008672,
+        7.0,
+        0.6272551083731033
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.75,
+      "values": [
+        1.9981046877429263,
+        7.0,
+        -1.1587554014587034
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.875,
+      "values": [
+        1.9996725199732825,
+        7.0,
+        -1.801934526800364
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 0.96875,
+      "values": [
+        1.9999546304559752,
+        7.0,
+        -1.9704104860091256
+      ]
+    },
+    {
+      "kind": "nested",
+      "alpha": 1.0,
+      "values": [
+        2.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.0,
+      "values": [
+        -2.0,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.03125,
+      "values": [
+        -1.9464867279495017,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.125,
+      "values": [
+        -1.3550458077850052,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.25,
+      "values": [
+        2.0,
+        3.55,
+        1.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.375,
+      "values": [
+        2.0,
+        6.516284355838755,
+        -2.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.5,
+      "values": [
+        2.0,
+        7.0,
+        -2.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.625,
+      "values": [
+        2.0,
+        6.516284355838755,
+        -2.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.75,
+      "values": [
+        2.0,
+        3.55,
+        1.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.875,
+      "values": [
+        -1.3550458077850052,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 0.96875,
+      "values": [
+        -1.9464867279495017,
+        1.0,
+        4.0
+      ]
+    },
+    {
+      "kind": "returning",
+      "alpha": 1.0,
+      "values": [
+        2.0,
+        7.0,
+        -2.0
+      ]
+    }
+  ],
+  "limits": "Distinct scalar tracker transforms, unequal durations, recursive group clocks and finish. No shared-object Succession, cleanup/introducer timing or arbitrary composition parity."
+}

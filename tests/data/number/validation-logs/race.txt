@@ -1,0 +1,1 @@
+ok  	gomath/number	6.484s

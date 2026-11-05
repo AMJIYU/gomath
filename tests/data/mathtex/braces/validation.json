@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-05",
+  "workdir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+  "scope": "Horizontal mathtex braces only; shared workspace, no repository-wide acceptance claim",
+  "commands": [
+    {
+      "name": "reference",
+      "command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib python3 tests/reference/mathtex_braces.py --gofont-dir /Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont --manim-dir ../manim",
+      "exit_code": 0,
+      "log": "reference-generation.log"
+    },
+    {
+      "name": "focused",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -run '^TestBrace' -count=1 -v",
+      "exit_code": 0,
+      "log": "focused.log",
+      "top_level_passes": 10,
+      "failures": [],
+      "race_warnings": false
+    },
+    {
+      "name": "focused-race",
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=mathtex -tags noasm -race -run '^TestBrace' -count=1 -v",
+      "exit_code": 0,
+      "log": "focused-race.log",
+      "top_level_passes": 10,
+      "failures": [],
+      "race_warnings": false
+    },
+    {
+      "name": "mathtex",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -count=1 -v",
+      "exit_code": 1,
+      "log": "mathtex-cgo0-noasm.log",
+      "top_level_passes": 122,
+      "failures": [
+        "TestAccentMalformedArgumentsAndInputBudgets"
+      ],
+      "race_warnings": false
+    },
+    {
+      "name": "mathtex-race",
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=mathtex -tags noasm -race -count=1 -v",
+      "exit_code": 1,
+      "log": "mathtex-race-noasm.log",
+      "top_level_passes": 122,
+      "failures": [
+        "TestAccentMalformedArgumentsAndInputBudgets"
+      ],
+      "race_warnings": false
+    },
+    {
+      "name": "vet-production",
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./mathtex",
+      "exit_code": 0,
+      "log": "vet-production.log"
+    },
+    {
+      "name": "vet-central",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -vet=all -run '^$'",
+      "exit_code": 0,
+      "log": "vet-central.log"
+    },
+    {
+      "name": "purecheck",
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "exit_code": 0,
+      "log": "purecheck.log"
+    },
+    {
+      "name": "benchmark",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -run '^$' -bench BenchmarkBraceLayout -benchmem -benchtime=150ms -p=1 -cpu=1 -count=3",
+      "exit_code": 0,
+      "log": "benchmark.log"
+    }
+  ],
+  "known_blocker": {
+    "file": "tests/_cases/mathtex/accents_test.go",
+    "line": 220,
+    "test": "TestAccentMalformedArgumentsAndInputBudgets",
+    "reason": "Old unsupported-command table still includes overbrace/underbrace. User write scope excludes this file; preserved unchanged; no skip or temporary overlay used.",
+    "integration_action": "Remove only overbrace{x} and underbrace{x} entries from the unsupported-command table."
+  },
+  "environment": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "os": "macOS 15.7.1 (24G231)",
+    "architecture": "arm64",
+    "hardware": "Apple M2",
+    "shared_host": true
+  },
+  "independent_reference": {
+    "oracle": "original Go TTF outlines + fontTools + manual finite layout + CairoSVG/Cairo; no gomath outputs consumed",
+    "manim_version": "0.22.1",
+    "manim_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "manim_executed": false,
+    "width": 768,
+    "height": 768,
+    "ppem": 128,
+    "static_cases": 8,
+    "interior_transform_times": [
+      0.35,
+      0.7
+    ],
+    "write_times": [
+      0,
+      0.35,
+      0.7,
+      1
+    ],
+    "thresholds": {
+      "mae": 0.08,
+      "rms": 1,
+      "maximum": 64,
+      "iou": 0.97
+    },
+    "results": [
+      {
+        "name": "labels-style-0",
+        "mae": 0.00761978715,
+        "rms": 0.282159786,
+        "maximum": 28,
+        "iou": 0.995865071
+      },
+      {
+        "name": "labels-style-1",
+        "mae": 0.00607469347,
+        "rms": 0.218233983,
+        "maximum": 28,
+        "iou": 0.997583976
+      },
+      {
+        "name": "labels-style-2",
+        "mae": 0.00977297182,
+        "rms": 0.306880352,
+        "maximum": 29,
+        "iou": 0.994844253
+      },
+      {
+        "name": "labels-style-3",
+        "mae": 0.00751862703,
+        "rms": 0.240550866,
+        "maximum": 26,
+        "iou": 0.998134183
+      },
+      {
+        "name": "nested",
+        "mae": 0.00282005027,
+        "rms": 0.140753542,
+        "maximum": 24,
+        "iou": 0.996147607
+      },
+      {
+        "name": "zero",
+        "mae": 0.00656071416,
+        "rms": 0.282642075,
+        "maximum": 39,
+        "iou": 0.992194674
+      },
+      {
+        "name": "phantom",
+        "mae": 0.000844884802,
+        "rms": 0.0725397937,
+        "maximum": 18,
+        "iou": 0.998435055
+      },
+      {
+        "name": "script-brace",
+        "mae": 0.0164681894,
+        "rms": 0.540624415,
+        "maximum": 43,
+        "iou": 0.991572173
+      },
+      {
+        "name": "transform-035",
+        "mae": 0.00612216526,
+        "rms": 0.216437168,
+        "maximum": 25,
+        "iou": 0.997318136
+      },
+      {
+        "name": "transform-070",
+        "mae": 0.00773111979,
+        "rms": 0.289913662,
+        "maximum": 30,
+        "iou": 0.997392747
+      }
+    ]
+  },
+  "benchmarks": {
+    "cpu": 1,
+    "p": 1,
+    "benchtime": "150ms",
+    "count": 3,
+    "image_size": null,
+    "layout_frames": 0,
+    "includes": [
+      "parsing",
+      "glyph outlines",
+      "brace/structural paths",
+      "operand audits",
+      "objects"
+    ],
+    "excludes": [
+      "oracle generation",
+      "rasterization",
+      "disk IO"
+    ],
+    "workloads": {
+      "short": "\\overbrace{x+y}^{n}",
+      "nested": "\\overbrace{\\frac{x_i^2}{\\underbrace{\\sqrt[3]{g}}_{k}}}^{\\substack{n=1\\\\m}}_{\\phantom{W}}"
+    },
+    "samples": [
+      {
+        "case": "short",
+        "iterations": 4772,
+        "ns_per_op": 33150,
+        "bytes_per_op": 65840,
+        "allocs_per_op": 195
+      },
+      {
+        "case": "short",
+        "iterations": 5590,
+        "ns_per_op": 33098,
+        "bytes_per_op": 65840,
+        "allocs_per_op": 195
+      },
+      {
+        "case": "short",
+        "iterations": 5797,
+        "ns_per_op": 32463,
+        "bytes_per_op": 65840,
+        "allocs_per_op": 195
+      },
+      {
+        "case": "nested",
+        "iterations": 1088,
+        "ns_per_op": 162689,
+        "bytes_per_op": 299776,
+        "allocs_per_op": 730
+      },
+      {
+        "case": "nested",
+        "iterations": 1155,
+        "ns_per_op": 159407,
+        "bytes_per_op": 299777,
+        "allocs_per_op": 730
+      },
+      {
+        "case": "nested",
+        "iterations": 1152,
+        "ns_per_op": 161175,
+        "bytes_per_op": 299777,
+        "allocs_per_op": 730
+      }
+    ]
+  },
+  "constraints": {
+    "cgo0_noasm_runtime": true,
+    "no_runtime_subprocess": true,
+    "no_dependency_change": true,
+    "no_git_commit": true,
+    "manim_clean": true,
+    "full_repo_race_run": false,
+    "full_repo_tests_rerun": false
+  },
+  "changed_files": [
+    "mathtex/mathtex.go",
+    "mathtex/braces.go",
+    "tests/_cases/mathtex/braces_test.go",
+    "tests/_cases/mathtex/braces_reference_test.go",
+    "tests/reference/mathtex_braces.py",
+    "tests/data/mathtex/braces/*",
+    "docs/MATH_BRACES.md"
+  ],
+  "source_note": "Final production change after validation was only line wrapping of the MaxLayoutCurves comment."
+}

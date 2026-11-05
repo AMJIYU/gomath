@@ -1,0 +1,26 @@
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-00.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-00.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-01.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-01.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-02.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/math-braces-wave10-svg-20261105/frame-02.svg
+[
+  {
+    "time": 0.5,
+    "RGBA_MAE": 0.07156684027777778,
+    "maximum_channel_delta": 18,
+    "fraction_pixels_any_channel_over_8": 0.0028732638888888887
+  },
+  {
+    "time": 1.7,
+    "RGBA_MAE": 0.08577582465277778,
+    "maximum_channel_delta": 20,
+    "fraction_pixels_any_channel_over_8": 0.0033203125
+  },
+  {
+    "time": 3.3,
+    "RGBA_MAE": 0.08440755208333334,
+    "maximum_channel_delta": 18,
+    "fraction_pixels_any_channel_over_8": 0.003285590277777778
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "Provenance": "Pre-wave6 library compatibility capture; not independent TeX/font layout evidence.",
+  "SourceSHA256": "be54d382050f64f8a4746a227e2e1615f3026d560ea40932a15655ab25764262",
+  "Records": [
+    {
+      "Source": "\\sqrt{g}",
+      "GeometrySHA256": "5a02444f3dd34a549ac1d69d4d03134c70b1958fb425b3a80c64f005f9cca774",
+      "PixelSHA256": "e8c0251b948969ab21a28146a7297aa4dcd852bc6b55b70baa52200bd7e382f5"
+    },
+    {
+      "Source": "\\sqrt{\\frac{n}{g}}_i^n",
+      "GeometrySHA256": "1f2a28dd447605fb31bce5fa4861fdabec388a0b4e316917ec1c0e26b72c0559",
+      "PixelSHA256": "399a5b76985de8714110c689c97600a187368f6cbe89fb0a1c95ce9bf20bd2b1"
+    },
+    {
+      "Source": "\\color{red}\\sqrt{\\mathit{g}+\\mathbf{n}}",
+      "GeometrySHA256": "9340c9f9ae1a55f0aa8e7d43c904a73483fbdd6930d57638e5568876cd7e435d",
+      "PixelSHA256": "50b65f59086c395fdc6abac2b42cfa03b8e23e527a49a6ef4a76186895fd033b"
+    },
+    {
+      "Source": "\\left[\\frac{\\sqrt{g}}{\\sqrt{\\mathbb{R}}}\\right]",
+      "GeometrySHA256": "a155223802b8ead498267a52a3f77b956174bee9519a064d578a54f971ca1215",
+      "PixelSHA256": "cdb9553b03667a0ec3265f665a9092c22dd37b4db4ec1b81770825e4c93f56db"
+    },
+    {
+      "Source": "\\begin{matrix}\\sqrt{g}\u0026\\hat{n}\\\\\\sqrt{\\sqrt{g}}\u0026\\displaystyle\\sum_i^n\\end{matrix}",
+      "GeometrySHA256": "a5d126a11a0315c471d4a88b53a3e4ba7441da81c633248ff2fe713949f711dd",
+      "PixelSHA256": "947ab6c02c78f513e19c50d6590f0116e5fcadb4c6a0e218bd5cf16b8e217b7b"
+    }
+  ]
+}

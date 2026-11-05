@@ -1,0 +1,16 @@
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkSharedSequenceSampling/explicit-plays         	   28912	     12258 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays         	   14649	     20932 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays         	   28261	     12379 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays         	   29793	     12086 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays         	   26448	     12806 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession             	   28860	     13021 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession             	   27817	     12747 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession             	   29626	     12080 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession             	   26835	     13093 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession             	   29376	     12481 ns/op	   37968 B/op	     171 allocs/op
+PASS
+ok  	gomath	3.529s

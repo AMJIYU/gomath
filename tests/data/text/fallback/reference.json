@@ -1,0 +1,546 @@
+{
+  "provenance": "Independent fontTools table/outline analysis and manually specified ordered font policy; no Go output consumed.",
+  "sources": {
+    "Go-Regular.ttf": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+    "Go-Bold.ttf": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40"
+  },
+  "fixtures": [
+    {
+      "file": "primary.ttf",
+      "sha256": "5ef2785c0d15488681ee77598939d3aaaa41268530c42e714c07fd6529c68ade",
+      "source": "Go-Regular.ttf",
+      "characters": " AVx",
+      "kern_design_units": [
+        [
+          "A",
+          "V",
+          -160
+        ],
+        [
+          "V",
+          "A",
+          -120
+        ]
+      ],
+      "upem": 2048,
+      "ascent": 1935,
+      "descent": 432,
+      "modifications": "Subset cmap/name; explicit fixture-only kern table; secondary hhea ascent/descent. Original glyf/hmtx preserved."
+    },
+    {
+      "file": "secondary.ttf",
+      "sha256": "a5bb499bd3027823412d2901132a9ffe3f8347bf3275e3b1db5c15f2da300155",
+      "source": "Go-Bold.ttf",
+      "characters": " AV\u03b2g",
+      "kern_design_units": [
+        [
+          "A",
+          "V",
+          -64
+        ],
+        [
+          "\u03b2",
+          "g",
+          -96
+        ],
+        [
+          "A",
+          "\u03b2",
+          -128
+        ],
+        [
+          "\u03b2",
+          "A",
+          -80
+        ]
+      ],
+      "upem": 2048,
+      "ascent": 2300,
+      "descent": 700,
+      "modifications": "Subset cmap/name; explicit fixture-only kern table; secondary hhea ascent/descent. Original glyf/hmtx preserved."
+    }
+  ],
+  "records": [
+    {
+      "name": "ordered",
+      "text": "AV \u03b2gA\n\tVx ",
+      "order": [
+        0,
+        1
+      ],
+      "allow_missing": false,
+      "metrics": {
+        "width": 3.375,
+        "height": 2.76484375,
+        "ascent": 1.123046875,
+        "descent": 0.341796875,
+        "lines": 2
+      },
+      "glyphs": [
+        {
+          "rune": 65,
+          "font": 0,
+          "glyph": "A",
+          "x": 0.0,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 86,
+          "font": 0,
+          "glyph": "V",
+          "x": 0.5888671875,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": -0.078125,
+          "bbox": [
+            0.6064453125,
+            0.0,
+            1.25048828125,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 0,
+          "glyph": "space",
+          "x": 1.255859375,
+          "baseline": 0.0,
+          "advance": 0.27783203125,
+          "kern": 0.0,
+          "bbox": null
+        },
+        {
+          "rune": 946,
+          "font": 1,
+          "glyph": "beta",
+          "x": 1.53369140625,
+          "baseline": 0.0,
+          "advance": 0.6103515625,
+          "kern": 0,
+          "bbox": [
+            1.60595703125,
+            -0.19287109375,
+            2.10107421875,
+            0.783203125
+          ]
+        },
+        {
+          "rune": 103,
+          "font": 1,
+          "glyph": "g",
+          "x": 2.09716796875,
+          "baseline": 0.0,
+          "advance": 0.61083984375,
+          "kern": -0.046875,
+          "bbox": [
+            2.13623046875,
+            -0.205078125,
+            2.6357421875,
+            0.54833984375
+          ]
+        },
+        {
+          "rune": 65,
+          "font": 0,
+          "glyph": "A",
+          "x": 2.7080078125,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": 0,
+          "bbox": [
+            2.71728515625,
+            0.0,
+            3.36328125,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 0,
+          "glyph": "space",
+          "x": 0.0,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0,
+          "bbox": null
+        },
+        {
+          "rune": 86,
+          "font": 0,
+          "glyph": "V",
+          "x": 0.27783203125,
+          "baseline": -1.3,
+          "advance": 0.6669921875,
+          "kern": 0.0,
+          "bbox": [
+            0.29541015625,
+            -1.3,
+            0.939453125,
+            -0.57734375
+          ]
+        },
+        {
+          "rune": 120,
+          "font": 0,
+          "glyph": "x",
+          "x": 0.94482421875,
+          "baseline": -1.3,
+          "advance": 0.5,
+          "kern": 0.0,
+          "bbox": [
+            0.95849609375,
+            -1.3,
+            1.4296875,
+            -0.7697265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 0,
+          "glyph": "space",
+          "x": 1.44482421875,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0.0,
+          "bbox": null
+        }
+      ],
+      "svg_sha256": "8c31af9460d068b0994b374dcb8a521a68f6c2b224d699e6fdd0ccd4ece3c2bf",
+      "png_sha256": "9135748ff5208f2ce9f1b9b66f3226657e14dd88f633e7cd0c8f4e2f283173b5"
+    },
+    {
+      "name": "reversed",
+      "text": "AV \u03b2gA\n\tVx ",
+      "order": [
+        1,
+        0
+      ],
+      "allow_missing": false,
+      "metrics": {
+        "width": 3.5322265625,
+        "height": 2.76484375,
+        "ascent": 1.123046875,
+        "descent": 0.341796875,
+        "lines": 2
+      },
+      "glyphs": [
+        {
+          "rune": 65,
+          "font": 1,
+          "glyph": "A",
+          "x": 0.0,
+          "baseline": 0.0,
+          "advance": 0.72216796875,
+          "kern": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 86,
+          "font": 1,
+          "glyph": "V",
+          "x": 0.69091796875,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": -0.03125,
+          "bbox": [
+            0.703125,
+            0.0,
+            1.34619140625,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 1,
+          "glyph": "space",
+          "x": 1.35791015625,
+          "baseline": 0.0,
+          "advance": 0.27783203125,
+          "kern": 0.0,
+          "bbox": null
+        },
+        {
+          "rune": 946,
+          "font": 1,
+          "glyph": "beta",
+          "x": 1.6357421875,
+          "baseline": 0.0,
+          "advance": 0.6103515625,
+          "kern": 0.0,
+          "bbox": [
+            1.7080078125,
+            -0.19287109375,
+            2.203125,
+            0.783203125
+          ]
+        },
+        {
+          "rune": 103,
+          "font": 1,
+          "glyph": "g",
+          "x": 2.19921875,
+          "baseline": 0.0,
+          "advance": 0.61083984375,
+          "kern": -0.046875,
+          "bbox": [
+            2.23828125,
+            -0.205078125,
+            2.73779296875,
+            0.54833984375
+          ]
+        },
+        {
+          "rune": 65,
+          "font": 1,
+          "glyph": "A",
+          "x": 2.81005859375,
+          "baseline": 0.0,
+          "advance": 0.72216796875,
+          "kern": 0.0,
+          "bbox": [
+            2.81591796875,
+            0.0,
+            3.52587890625,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 1,
+          "glyph": "space",
+          "x": 0.0,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0,
+          "bbox": null
+        },
+        {
+          "rune": 86,
+          "font": 1,
+          "glyph": "V",
+          "x": 0.27783203125,
+          "baseline": -1.3,
+          "advance": 0.6669921875,
+          "kern": 0.0,
+          "bbox": [
+            0.2900390625,
+            -1.3,
+            0.93310546875,
+            -0.57734375
+          ]
+        },
+        {
+          "rune": 120,
+          "font": 0,
+          "glyph": "x",
+          "x": 0.94482421875,
+          "baseline": -1.3,
+          "advance": 0.5,
+          "kern": 0,
+          "bbox": [
+            0.95849609375,
+            -1.3,
+            1.4296875,
+            -0.7697265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 1,
+          "glyph": "space",
+          "x": 1.44482421875,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0,
+          "bbox": null
+        }
+      ],
+      "svg_sha256": "c7803931502368a101b1ee2dffa7964e420cc30d468f1a42f4c45b31b2ca9b9a",
+      "png_sha256": "b531c4926cea2a40dbc8e9db4226e217bca7542f1d10912a1428c2db26dfd54a"
+    },
+    {
+      "name": "primary-ink",
+      "text": "AV\n x ",
+      "order": [
+        0,
+        1
+      ],
+      "allow_missing": false,
+      "metrics": {
+        "width": 1.255859375,
+        "height": 2.76484375,
+        "ascent": 1.123046875,
+        "descent": 0.341796875,
+        "lines": 2
+      },
+      "glyphs": [
+        {
+          "rune": 65,
+          "font": 0,
+          "glyph": "A",
+          "x": 0.0,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 86,
+          "font": 0,
+          "glyph": "V",
+          "x": 0.5888671875,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": -0.078125,
+          "bbox": [
+            0.6064453125,
+            0.0,
+            1.25048828125,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 0,
+          "glyph": "space",
+          "x": 0.0,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0,
+          "bbox": null
+        },
+        {
+          "rune": 120,
+          "font": 0,
+          "glyph": "x",
+          "x": 0.27783203125,
+          "baseline": -1.3,
+          "advance": 0.5,
+          "kern": 0.0,
+          "bbox": [
+            0.29150390625,
+            -1.3,
+            0.7626953125,
+            -0.7697265625
+          ]
+        },
+        {
+          "rune": 32,
+          "font": 0,
+          "glyph": "space",
+          "x": 0.77783203125,
+          "baseline": -1.3,
+          "advance": 0.27783203125,
+          "kern": 0.0,
+          "bbox": null
+        }
+      ],
+      "svg_sha256": "9e3d452f1e93ad0691065c9a5507b568ad82bedb34f5637b5dc5a4a6b1502600",
+      "png_sha256": "2e1ed4890cb76b692466ee2ffb0bb7be1c5ea05f261db9847ffa94916d053207"
+    },
+    {
+      "name": "missing",
+      "text": "A\udbff\udfffV",
+      "order": [
+        0,
+        1
+      ],
+      "allow_missing": true,
+      "metrics": {
+        "width": 2.083984375,
+        "height": 1.46484375,
+        "ascent": 1.123046875,
+        "descent": 0.341796875,
+        "lines": 1
+      },
+      "glyphs": [
+        {
+          "rune": 65,
+          "font": 0,
+          "glyph": "A",
+          "x": 0.0,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "rune": 1114111,
+          "font": 0,
+          "glyph": ".notdef",
+          "x": 0.6669921875,
+          "baseline": 0.0,
+          "advance": 0.75,
+          "kern": 0.0,
+          "bbox": [
+            0.7919921875,
+            0.0,
+            1.2919921875,
+            0.625
+          ]
+        },
+        {
+          "rune": 86,
+          "font": 0,
+          "glyph": "V",
+          "x": 1.4169921875,
+          "baseline": 0.0,
+          "advance": 0.6669921875,
+          "kern": 0.0,
+          "bbox": [
+            1.4345703125,
+            0.0,
+            2.07861328125,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "0f50879165987246d353787381c6b759f0582f51d8e4a7351f871b3ddf1fe4e5",
+      "png_sha256": "47739e9d3b594d962f2885ee25957888838a0da9045acadef8f0717b435b09ad"
+    }
+  ],
+  "broken": {
+    "file": "broken.ttf",
+    "sha256": "44a694d91cf5258fa4e3c7f63c588857b6615e33c43004e65833cc29e9c5da0b",
+    "modification": "Primary fixture: A numberOfContours corrupted to 32767; intentionally malformed lazy outline."
+  },
+  "generator_sha256": "aca7c2f6f781d1c8b105f2a9776f8a7ce7841a23f1e42440a0fc66fae8c865e6",
+  "versions": {
+    "Python": "3.11.5",
+    "fontTools": "4.45.1",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4"
+  },
+  "raster": {
+    "width": 768,
+    "height": 512,
+    "scale": 128,
+    "origin": [
+      64,
+      192
+    ]
+  }
+}

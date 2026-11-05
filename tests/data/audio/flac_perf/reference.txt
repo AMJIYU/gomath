@@ -1,0 +1,1 @@
+PASS 306 complete streams; 519805 scalars; libFLAC + strict FFmpeg + before/after Go tests

@@ -1,0 +1,327 @@
+=== RUN   TestSegmentArtifacts
+    segment_artifacts_test.go:63: /Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/three/segments/segments.png
+--- PASS: TestSegmentArtifacts (0.26s)
+=== RUN   TestSegmentIndependentRays
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s1/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s2/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p0/s4/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s1/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s2/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape0/p1/s4/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s1/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s2/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p0/s4/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s1/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s2/f2/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f0/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f0/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f0/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f1/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f1/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f1/uv-lights
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f2/opaque
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f2/alpha
+=== RUN   TestSegmentIndependentRays/shape1/p1/s4/f2/uv-lights
+--- PASS: TestSegmentIndependentRays (0.77s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s1/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s2/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f0/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f0/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f0/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f1/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f1/alpha (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f1/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f2/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f2/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape0/p0/s4/f2/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s1/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s2/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f0/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f0/alpha (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f0/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f1/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f1/alpha (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f1/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f2/opaque (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f2/alpha (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape0/p1/s4/f2/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s1/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s2/f2/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f0/opaque (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f0/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f0/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f1/opaque (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f1/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f1/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f2/opaque (0.03s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f2/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p0/s4/f2/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s1/f2/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f0/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f0/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f0/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f1/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f1/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f1/uv-lights (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f2/opaque (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f2/alpha (0.00s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s2/f2/uv-lights (0.01s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f0/opaque (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f0/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f0/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f1/opaque (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f1/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f1/uv-lights (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f2/opaque (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f2/alpha (0.02s)
+    --- PASS: TestSegmentIndependentRays/shape1/p1/s4/f2/uv-lights (0.02s)
+=== RUN   TestSegmentConcurrentOrderAndRendererBudgets
+--- PASS: TestSegmentConcurrentOrderAndRendererBudgets (0.03s)
+=== RUN   TestSegmentAnalyticGeometry
+=== RUN   TestSegmentAnalyticGeometry/d0/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d0/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d0/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d0/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d0/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d0/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d1/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d1/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d1/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d1/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d1/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d1/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d2/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d2/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d2/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d2/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d2/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d2/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d3/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d3/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d3/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d3/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d3/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d3/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d4/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d4/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d4/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d4/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d4/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d4/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d5/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d5/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d5/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d5/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d5/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d5/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d6/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d6/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d6/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d6/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d6/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d6/size1e+10/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d7/size1e-05/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d7/size1e-05/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d7/size1/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d7/size1/arrowtrue
+=== RUN   TestSegmentAnalyticGeometry/d7/size1e+10/arrowfalse
+=== RUN   TestSegmentAnalyticGeometry/d7/size1e+10/arrowtrue
+--- PASS: TestSegmentAnalyticGeometry (0.01s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d0/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d1/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d2/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d3/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d4/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d5/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d6/size1e+10/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1e-05/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1e-05/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1/arrowtrue (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1e+10/arrowfalse (0.00s)
+    --- PASS: TestSegmentAnalyticGeometry/d7/size1e+10/arrowtrue (0.00s)
+=== RUN   TestSegmentBoundsAndBudgets
+--- PASS: TestSegmentBoundsAndBudgets (0.01s)
+=== RUN   TestSegmentSeamsAndOwnership
+--- PASS: TestSegmentSeamsAndOwnership (0.00s)
+PASS
+ok  	gomath/three	1.080s

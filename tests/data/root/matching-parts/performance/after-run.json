@@ -1,0 +1,36 @@
+{
+  "command": [
+    "go",
+    "run",
+    "./tests/cmd/run",
+    "-pkg=root",
+    "-run=^$",
+    "-bench=^BenchmarkMatchingFrame$",
+    "-benchmem",
+    "-benchtime=200ms",
+    "-count=3"
+  ],
+  "environment": {
+    "CGO_ENABLED": "0",
+    "GOMAXPROCS": "8",
+    "tags": "central runner adds noasm"
+  },
+  "go": "go version go1.27.3 darwin/arm64",
+  "host": "macOS-15.7.1-arm64-arm-64bit",
+  "hardware": "Apple M2",
+  "wall_seconds": 3.042087249981705,
+  "returncode": 0,
+  "sources_before": {
+    "matching.go": "44d56da4b2458c6f1457423fda7b339dffedaac80040f7f66ebb231311a55adf",
+    "animation.go": "1279e97cc661ae69194737b91fd2c72d9dd334fa348f4dbdcbaf61b94867f1e4",
+    "scene.go": "7acb836a2e4e4a66502149a7cf25fe8d77a20df80d3feae3a2d933031b1d80a0",
+    "tests/_cases/root/matching_test.go": "c498052ffed3d789e2b5df5117091259d2b34718244ff14cdb3b6f7415fac2fc"
+  },
+  "sources_after": {
+    "matching.go": "44d56da4b2458c6f1457423fda7b339dffedaac80040f7f66ebb231311a55adf",
+    "animation.go": "1279e97cc661ae69194737b91fd2c72d9dd334fa348f4dbdcbaf61b94867f1e4",
+    "scene.go": "7acb836a2e4e4a66502149a7cf25fe8d77a20df80d3feae3a2d933031b1d80a0",
+    "tests/_cases/root/matching_test.go": "c498052ffed3d789e2b5df5117091259d2b34718244ff14cdb3b6f7415fac2fc"
+  },
+  "scope": "32 unique exact keys, one Sample(.5) per op after authoring; no render, image, encoding, Python or I/O. Shared host with other workers; noninterleaved phases, descriptive only."
+}

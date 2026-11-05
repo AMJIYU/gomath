@@ -1,0 +1,252 @@
+{
+  "provenance": "Development-only fontTools/manual finite brace layout + Cairo reference.\n\nReads original Go fonts and pinned Manim source, never gomath output. This is\nan independent implementation of the documented em policy, not TeX/Manim\nlayout parity. Original fonts retain LICENSES/go-fonts.txt. Manim CE's MIT\nlicense is retained in the reference manifest; no Manim geometry is copied.\n",
+  "generator_sha256": "da9fcbcc86adeda8bbb75d9fd6882045720f93537d0d48cc3fc8943daee15cbf",
+  "manim": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "clean": true,
+    "files_sha256": {
+      "manim/mobject/text/tex_mobject.py": "4065d0d4c2ce4d69074bf8dd1642eb38c24aece8b2e05aca99a1918f8369d8f6",
+      "manim/utils/tex_file_writing.py": "57d2179de2e7f099ecf6cbaf9e3dd407667f51549a8b89cbf763bdfacd5a6853",
+      "manim/animation/transform.py": "54f719428e4fb306c5b6252bca035d2197ab4e6a617223f5399849db92ea95bf",
+      "LICENSE": "c6a922fc1cfaed7ac0f87aa1dc77ebf5a3c8d1ccc5ab01da33153f0d013bf019"
+    },
+    "license": "MIT License\n\nCopyright (c) 2018 3Blue1Brown LLC\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "executed": false,
+    "note": "Source-pinned API/TeX pipeline inspection only; no TeX/Manim pixel parity claim."
+  },
+  "fonts": [
+    {
+      "file": "Go-Regular.ttf",
+      "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold.ttf",
+      "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Italic.ttf",
+      "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold-Italic.ttf",
+      "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+      "units_per_em": 2048
+    }
+  ],
+  "versions": {
+    "Python": "3.11.5",
+    "fontTools": "4.45.1",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4"
+  },
+  "coordinates": {
+    "width": 768,
+    "height": 768,
+    "ppem": 128,
+    "origin": [
+      64,
+      384
+    ]
+  },
+  "policy": {
+    "minimum_width": 0.6,
+    "height": 0.28,
+    "thickness": 0.045,
+    "bold_thickness": 0.06,
+    "body_gap": 0.1,
+    "label_gap": 0.12,
+    "label_scale": 0.65
+  },
+  "records": [
+    {
+      "name": "labels-style-0",
+      "style": 0,
+      "source": "\\color{green}\\overbrace{\\textcolor[HTML]{ff0000}{n}\\textcolor[HTML]{00ff00}{+}\\textcolor[HTML]{0000ff}{g}}^{\\textcolor[HTML]{ffff00}{W}}_{\\textcolor[HTML]{ff00ff}{i}}",
+      "width": 1.7762890625,
+      "height": 1.51171875,
+      "depth": 0.80115234375,
+      "bbox": [
+        0.0,
+        -0.80115234375,
+        1.7762890625,
+        1.51171875
+      ],
+      "mark_bbox": [
+        0.0,
+        0.6419921875,
+        1.7762890625,
+        0.9219921875
+      ]
+    },
+    {
+      "name": "labels-style-1",
+      "style": 1,
+      "source": "\\color{green}\\overbrace{\\textcolor[HTML]{ff0000}{n}\\textcolor[HTML]{00ff00}{+}\\textcolor[HTML]{0000ff}{g}}^{\\textcolor[HTML]{ffff00}{W}}_{\\textcolor[HTML]{ff00ff}{i}}",
+      "width": 1.8856640625,
+      "height": 1.51806640625,
+      "depth": 0.8262255859375001,
+      "bbox": [
+        0.0,
+        -0.8262255859375001,
+        1.8856640625,
+        1.51806640625
+      ],
+      "mark_bbox": [
+        0.0,
+        0.64833984375,
+        1.8856640625,
+        0.92833984375
+      ]
+    },
+    {
+      "name": "labels-style-2",
+      "style": 2,
+      "source": "\\color{green}\\overbrace{\\textcolor[HTML]{ff0000}{n}\\textcolor[HTML]{00ff00}{+}\\textcolor[HTML]{0000ff}{g}}^{\\textcolor[HTML]{ffff00}{W}}_{\\textcolor[HTML]{ff00ff}{i}}",
+      "width": 1.8522783627717392,
+      "height": 1.51171875,
+      "depth": 0.80115234375,
+      "bbox": [
+        0.0,
+        -0.80115234375,
+        1.8522783627717392,
+        1.51171875
+      ],
+      "mark_bbox": [
+        0.0,
+        0.6419921875,
+        1.8522783627717392,
+        0.9219921875
+      ]
+    },
+    {
+      "name": "labels-style-3",
+      "style": 3,
+      "source": "\\color{green}\\overbrace{\\textcolor[HTML]{ff0000}{n}\\textcolor[HTML]{00ff00}{+}\\textcolor[HTML]{0000ff}{g}}^{\\textcolor[HTML]{ffff00}{W}}_{\\textcolor[HTML]{ff00ff}{i}}",
+      "width": 1.952039794921875,
+      "height": 1.51806640625,
+      "depth": 0.8262255859375001,
+      "bbox": [
+        0.0,
+        -0.8262255859375001,
+        1.952039794921875,
+        1.51806640625
+      ],
+      "mark_bbox": [
+        0.0,
+        0.64833984375,
+        1.952039794921875,
+        0.92833984375
+      ]
+    },
+    {
+      "name": "nested",
+      "style": 0,
+      "source": "\\color{green}\\overbrace{\\underbrace{\\textcolor[HTML]{ff0000}{g}}_{\\textcolor[HTML]{0000ff}{n}}}^{\\textcolor[HTML]{ffff00}{i}}",
+      "width": 0.6000000000000001,
+      "height": 1.51806640625,
+      "depth": 1.057373046875,
+      "bbox": [
+        0.0,
+        -1.057373046875,
+        0.6000000000000001,
+        1.51806640625
+      ],
+      "mark_bbox": [
+        0.0,
+        0.6419921875,
+        0.6000000000000001,
+        0.9219921875
+      ]
+    },
+    {
+      "name": "zero",
+      "style": 0,
+      "source": "\\color{green}\\overbrace{}^{\\textcolor[HTML]{ffffff}{W}}",
+      "width": 0.6135009765625,
+      "height": 0.9697265625,
+      "depth": 0,
+      "bbox": [
+        0.006750488281250022,
+        0.1,
+        0.60675048828125,
+        0.9697265625
+      ],
+      "mark_bbox": [
+        0.006750488281250022,
+        0.1,
+        0.60675048828125,
+        0.38
+      ]
+    },
+    {
+      "name": "phantom",
+      "style": 0,
+      "source": "\\color{green}\\underbrace{\\phantom{g}}_{\\textcolor[HTML]{ff0000}{n}}",
+      "width": 0.6000000000000001,
+      "height": 0.5419921875,
+      "depth": 1.057373046875,
+      "bbox": [
+        0.0,
+        -1.057373046875,
+        0.6000000000000001,
+        -0.305078125
+      ],
+      "mark_bbox": [
+        0.0,
+        -0.585078125,
+        0.6000000000000001,
+        -0.305078125
+      ]
+    },
+    {
+      "name": "script-brace",
+      "style": 0,
+      "source": "\\color{green}\\overbrace{\\textcolor[HTML]{ffffff}{W}}^{\\underbrace{\\textcolor[HTML]{ff0000}{g}}_{\\textcolor[HTML]{0000ff}{n}}}",
+      "width": 0.94384765625,
+      "height": 2.26224365234375,
+      "depth": 0,
+      "bbox": [
+        0.0,
+        0.0,
+        0.94384765625,
+        2.26224365234375
+      ],
+      "mark_bbox": [
+        0.0,
+        0.82265625,
+        0.94384765625,
+        1.10265625
+      ]
+    }
+  ],
+  "transform_times": [
+    0.35,
+    0.7
+  ],
+  "files_sha256": {
+    "labels-style-0.png": "40a7dab6c0d46446aa7138c0f23e124d8883c8307a29d2c58a45609960b11088",
+    "labels-style-0.svg": "493881014b74a2d12c7f5b21a9cb616127c7a7a64adaa628efa9b91ecee611d4",
+    "labels-style-1.png": "d2151abdb886c559c5ea07c2d49ae78fc9474b3b772e6dd08f965331399d4bb5",
+    "labels-style-1.svg": "5c7ef319f322976de451e67829f9773ec473b66fb031f71828431e2168d43a6a",
+    "labels-style-2.png": "b8f8fea0d8d7517886f4e62a81eabf8126579af6328c9294215379c98736776d",
+    "labels-style-2.svg": "a896c89c40728e974e14ce2a1a46410e1fffc0310e2aa6c19cdde491cbacc78a",
+    "labels-style-3.png": "42481d47a891d51bcddb6eb46f450fcf90ae9935f00f01842c6556bc70f13b2e",
+    "labels-style-3.svg": "3a3fa8132cd26336b000864e58e4215135544bbccd2d1f4a60eff33ca1c7f04e",
+    "nested.png": "1d7366385745b84312920008c2a771e01cc957d41fcc7ba18606567eea739422",
+    "nested.svg": "53133b1f7cf6db44508db032e5f687388e973b42813e4130f2a4fe78314e8c05",
+    "phantom.png": "ce92904411b9cbd8e04bb8f9efaf67342df40145bc6da098e944d1026b9ad4b6",
+    "phantom.svg": "f13902a517134be0f6be92862528026f8d6f208af90673b53882fcfe0188fc4b",
+    "script-brace.png": "5f2613c0054e8ec96a914436c9ce7843233b40aff4427b5cfbdcaabb46a3b844",
+    "script-brace.svg": "be036f24dae8c28f5a5fdc4a4166cf9f509600b0496e9c111478162a5c70249e",
+    "transform-035.png": "371fc80381de6a3f663db841120cbee097e80f4903fda480d9898946bcd2473e",
+    "transform-035.svg": "bc72acb644ebb01a8fb929c40feda16208fe3c84f60c4cc7d17444ef4982dcff",
+    "transform-070.png": "f20146d7ebfbcf6f3490b8d876334c4b53324ebeb622c01b6b15d8565f52597e",
+    "transform-070.svg": "fb9f5f925bc90ffe8cbef03fb9882425817df8a988cfb011801fe999befaf085",
+    "zero.png": "c8ca7ba6ed40238b54cecee0c18f4e9d7f0e6c0570e7210040d1f009695beb23",
+    "zero.svg": "25e0cdd1962e3696f6f499b3ae962d9b611b09edb442b05aaf788d2b85f941a6"
+  }
+}

@@ -1,0 +1,2459 @@
+{
+  "date": "2026-11-05",
+  "flac": "flac 1.5.0",
+  "ffmpeg": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "cases": [
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm16_1ch_silence_n1_l0.flac",
+      "encoded_sha256": "e2640fd42728346e266004e43f9a97c6ca277505bcc081bd7f2fedcfb28afb93",
+      "pcm_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "frames": 1,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm16_1ch_sine_n257_l0.flac",
+      "encoded_sha256": "ed35e674e637488814ab3965e58de90bc3dcbaabdc7bd3e5c619178cc831e778",
+      "pcm_sha256": "7723b683f5b80f1d125a2ce52e3bfb1cc932358c21974d349614c190eaa38834",
+      "frames": 257,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm16_2ch_extremes_n15_l5.flac",
+      "encoded_sha256": "9f8315ed03e350dd3d7d674c3d66d68c6c0bd91644009f1baa79b71863374ef0",
+      "pcm_sha256": "d1e359980414a48e0c9fd81009bdea83e052979861cb88c00767ccce22dbf070",
+      "frames": 15,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm16_2ch_correlated_n8193_l8.flac",
+      "encoded_sha256": "a9456d2c1eb823594d58cd5c0fde1d9b78371a661c77ffbff7837b0ad683665b",
+      "pcm_sha256": "c0c3128a9592175c8976bf422529c33095146c977bf147a142ce78b6db6445bb",
+      "frames": 8193,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm24_1ch_wasted_n17_l0.flac",
+      "encoded_sha256": "68061d6b68ee7ab600b55ddcce5c8fae74c19d464c47f0552eb2b5eeac42e1ab",
+      "pcm_sha256": "6124735e85bcb47860748f144483c010c9df153674f2cf157f4d3f114fd4623c",
+      "frames": 17,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm24_1ch_ramp_n8193_l8.flac",
+      "encoded_sha256": "fa9691e88dff73cec2d56cae236e5f5b1bdf1855f7cdc4bd9f0b8e375e89ff1c",
+      "pcm_sha256": "fdbbed70541e70f51a0618ca470341518cd49996e8ab69bc31680ee22e043419",
+      "frames": 8193,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm24_2ch_random_n16_l8.flac",
+      "encoded_sha256": "1b49e1077afa26c14d54c20f338772ac568099a7b8d9aa79a4493f79c94e1f75",
+      "pcm_sha256": "53093d747f7211ea1ab7171bdbda744db3f606d5519c8ea01ec0322160eff885",
+      "frames": 16,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_decode/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac",
+      "encoded_sha256": "ffceeeb421a0d91ed79b000452bcfedc451c42e158884f2bc2633dfc1397a0e5",
+      "pcm_sha256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+      "frames": 8193,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_constant_n1_b16.flac",
+      "encoded_sha256": "f1a8bb5948ee8e5e42f0a914ced35def8bc2d0d745000a18406574e9622ac324",
+      "pcm_sha256": "591b7cc95037822dec5a4d593a2e2e8b19c07ddd2570e5699003d17f14c440a6",
+      "frames": 1,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_extremes_n17_b16.flac",
+      "encoded_sha256": "cd5b824b8cc17c08874bbdd0f6836fefbf22ff0440cf36ee60b6a80227c07e27",
+      "pcm_sha256": "95eaf10a1107d82fccaf5ad6a87aa31b5ba0be24e6d5ee8ae48e466c67c21f81",
+      "frames": 17,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_random_n255_b256.flac",
+      "encoded_sha256": "f9dddf5d5a1d43421f4ba4952ec6e0bf6d2fbdcf522cb2c460560c50a4906d19",
+      "pcm_sha256": "c875adfa3972a12e3f26e268423ab642aec185e0a726d895331ed2e572b82c3a",
+      "frames": 255,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_wasted_n257_b256.flac",
+      "encoded_sha256": "7d5613744ee4e98afe0e9932aca471ef173784c2f55ee4a2bee326d6d0c5024a",
+      "pcm_sha256": "22cb12dbf740851eb07f358894d304274387ec947e4d3a00281e0fca4339db1f",
+      "frames": 257,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_sine_n1025_b256.flac",
+      "encoded_sha256": "d52d48f1c12a8a6093b5d085edb0064c6a4269f7219fac5f392c11f3f3b4b430",
+      "pcm_sha256": "75528d6611b6f57adf86ef7dbc4e92ffd7fe540e190dcec806740d8b599fcdbc",
+      "frames": 1025,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_1ch_ramp_n513_b256.flac",
+      "encoded_sha256": "4d4a6bce9a6ba5b460f468d958f7f6c0e5318353ff0e2ea95735e09f2fa5c105",
+      "pcm_sha256": "3afdea0419fea8ed851841b6c9eb96379d610bf9723f66a1975174e15036fa50",
+      "frames": 513,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_constant_n1_b16.flac",
+      "encoded_sha256": "b8c3fd8f2c1cdcbc2b63f6818c3fb2fe538f6008a96853432180cac311408d7a",
+      "pcm_sha256": "64acb77ed4ace36fc5b55c0dea2686af8dfbacee0b170cd02125e61f457619e1",
+      "frames": 1,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_extremes_n17_b16.flac",
+      "encoded_sha256": "6a68a5740eff1e45594f0c922a4d69b0a644c9badc3c2a5eb7b6add4f177d3bb",
+      "pcm_sha256": "f84bf554f3a9d419a69cb21d3c3c2966f460776835074de919f356e37cf040b5",
+      "frames": 17,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_random_n255_b256.flac",
+      "encoded_sha256": "db15f358e1f6ace3b43cde62175acd02ee91f988e8db9a5356cf39cba6b86968",
+      "pcm_sha256": "fb3bbf96c4cb56553ed4f18f27529a1e6420b81f703e6604a3f70070ed2038b8",
+      "frames": 255,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_wasted_n257_b256.flac",
+      "encoded_sha256": "1013d1e14771c99e788f1022cacb9f52424d4bd8e9910190be004c365757bdde",
+      "pcm_sha256": "31810517256b24a6993e45120aa84ad6b60cf4f3925a08d51890e7456fb7fdca",
+      "frames": 257,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_sine_n1025_b256.flac",
+      "encoded_sha256": "873d90d980a40b5149c0483d81f089daac1df04b1bdc9d55c45232ddab1adc13",
+      "pcm_sha256": "52b3085b68a0cc4470fa7e914d8d864659e763e1c508e2050d760ff67dc05115",
+      "frames": 1025,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_2ch_ramp_n513_b256.flac",
+      "encoded_sha256": "e001c50749f7fdb63a92c713a748bf772a5ab3e55dd9cb55bd3a0a0b38e28098",
+      "pcm_sha256": "1e44ea0ec92f2d99e3f87d734dbd127a2e51ab880d98e0b80be01ccbe2cc99b2",
+      "frames": 513,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_constant_n1_b16.flac",
+      "encoded_sha256": "141c89ebc8e510a56835aeebd6bd990c66776dd4cbffff2df8eabed55bf61784",
+      "pcm_sha256": "b58ea6d31995a4d8ce092eb718ddfa58b6cef2288b41faf1dcd52ff3d6d8fa01",
+      "frames": 1,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_extremes_n17_b16.flac",
+      "encoded_sha256": "4f87f6f18a920b87da5c618ac3693b7fe648838510c964b7946c21ef8c5809db",
+      "pcm_sha256": "3e707610577547dc8a09c4459941564850a653988caf782e6c36e2511c24a413",
+      "frames": 17,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_random_n255_b256.flac",
+      "encoded_sha256": "a7d681c538a53e898d04bfb71cb47f3781c427a768b382d9f54982824ab64a4b",
+      "pcm_sha256": "2a7d6c83ac61bdead39753334532bfc7bcbc15f870cf4d8e287773539ba34880",
+      "frames": 255,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_wasted_n257_b256.flac",
+      "encoded_sha256": "fd76b6058d23033a20f91a13932fb4f368b424512b8c9526f37297c42498a7c8",
+      "pcm_sha256": "1830b70dda935e9543fc41a4ce5b637fcb8eed44687378d3f903487f8a269155",
+      "frames": 257,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_sine_n1025_b256.flac",
+      "encoded_sha256": "37a8a3dacb1f7676370b1a1bba286309040abf0b560bdbc8ee1ed7e212d010eb",
+      "pcm_sha256": "dba066d8f84e475f21def83c4f98cf9b6dee7b15c4c207fc3421cc900b6adb6d",
+      "frames": 1025,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_3ch_ramp_n513_b256.flac",
+      "encoded_sha256": "6e2c004dc583d9cdb1af2b1707e2aced73433912d8df152043fce2f1dfc54aca",
+      "pcm_sha256": "7f0c0c3163b67c844d16793665986073a99fc3702ae20b24d582f3d7022e6215",
+      "frames": 513,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_constant_n1_b16.flac",
+      "encoded_sha256": "dfd881decf6ab05233eebab4c6ef1e5b9e9c75b9cf2da8b18ba826e114e01742",
+      "pcm_sha256": "264ba3dcc1be3adbe97af174ddaa0b08861db06fb3efc12b7f88ebabad3ccb2d",
+      "frames": 1,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_extremes_n17_b16.flac",
+      "encoded_sha256": "d60d14570cb3a1f9e3606fb3a23b3bf90a123825464f362a1c2413284751abef",
+      "pcm_sha256": "7b326932e866c59439895a8711edac9329e2925093d863befff6ec951f57f5d1",
+      "frames": 17,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_random_n255_b256.flac",
+      "encoded_sha256": "1413b48ce06ffe973fabf1446f1d58e4a7f95c3047d6b4dcadd50e154657fe69",
+      "pcm_sha256": "7d898da71c001f3f12745422933b60d961f9a3b385e6aa62b977a5ac66b81b91",
+      "frames": 255,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_wasted_n257_b256.flac",
+      "encoded_sha256": "e48e1ca0840b9991f22df6c561898ceb4c98a275be8fe8129908aeb25b683b12",
+      "pcm_sha256": "a0b99df1be7b58e8cd30935391aa0cf0cb511cdfda0ba78d44d1957b79e7a106",
+      "frames": 257,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_sine_n1025_b256.flac",
+      "encoded_sha256": "1ec98bf2fef6379357c90ae30658436d54fcc3416b67d0209ea1e5558db723ef",
+      "pcm_sha256": "fd9ec41f833132a7f6e82385fe5dd01ac5d933a526c4508c70e064248f4546b4",
+      "frames": 1025,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_4ch_ramp_n513_b256.flac",
+      "encoded_sha256": "d0d58fc18b6d2104247e761d6eda5f4ffbf56b23a209aada4a4ea6a52994b8ff",
+      "pcm_sha256": "75e222548c79d412bcfc108a4daa4ee8216ce5e071eb148d8773daba81996b62",
+      "frames": 513,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_constant_n1_b16.flac",
+      "encoded_sha256": "cd47b53002371811e1cfec72ce91534bbfbd75676b9d95fb9792a21183f7dec8",
+      "pcm_sha256": "08822c8c6ba47cabc7d3590d6c302443fa805b55fc3efceb8b963da8339f071c",
+      "frames": 1,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_extremes_n17_b16.flac",
+      "encoded_sha256": "514b985b72e18701d491dcc9000b9b7f8d4e31239c9bb665769bb702fb8a22fa",
+      "pcm_sha256": "cd98d48da30d686267f04bcf342e79835d4e6f913cc4ae5a9fa0c29d635d3873",
+      "frames": 17,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_random_n255_b256.flac",
+      "encoded_sha256": "35f1a3314498bea9ce432ae9c211158df33f20fb29ae550c81279b45fff46389",
+      "pcm_sha256": "e37ebd4f595b742435125340996d8fb3cbada2dc0c3e9ddbe020241b382a0a31",
+      "frames": 255,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_wasted_n257_b256.flac",
+      "encoded_sha256": "0f67dc911f4da3fa4554e5fb1cc613c7db210cdf912d1e33de5849a7b8fd1752",
+      "pcm_sha256": "64bcfced75b71b8d5a219f505ff57fa63f46b2ea30d56ceac50e11c08086ed63",
+      "frames": 257,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_sine_n1025_b256.flac",
+      "encoded_sha256": "21a46f251da52ce5d78035bc0c74cce85d38dd1817e686ca462204f65f473a67",
+      "pcm_sha256": "c3e4ddc50f71971ae7eab89dcb335324956241ca5ed49f14faef86767a57440b",
+      "frames": 1025,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_5ch_ramp_n513_b256.flac",
+      "encoded_sha256": "ab10b97c6374dc924516ab786021cb5ea2aa1c7ebb47689a3ac5561a60cd2325",
+      "pcm_sha256": "af8e5ee92e9a7c360f4445c7a1a27cc555e64ca33daba64cd07368e9ab7cf255",
+      "frames": 513,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_constant_n1_b16.flac",
+      "encoded_sha256": "15b857170dab0c9c92803a9ceb3f39ea18f172dbda08d6c681d877887c6bd01a",
+      "pcm_sha256": "89c182cda02a45a7ac2e0bd72ef064b2c971ff1cf1c32341d77e86a5e951ba8e",
+      "frames": 1,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_extremes_n17_b16.flac",
+      "encoded_sha256": "31596bbb8baa382dd4a3482e349ddd3bda276c290a57d1e3cc2660fb015accc7",
+      "pcm_sha256": "b35cee50011d53bf70e55b895e06f89ec07c63d1b3031744aa27405bce9bee05",
+      "frames": 17,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_random_n255_b256.flac",
+      "encoded_sha256": "54e55e43b11c55266ab328d83c78da1beea9cb408f1b9d6a7a4b0ccfbe99958d",
+      "pcm_sha256": "3caaf66999cf00e71b7f95844746b097a3f060943cda8efef6eb8cd6850ecc60",
+      "frames": 255,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_wasted_n257_b256.flac",
+      "encoded_sha256": "fe9921f80e295342f5436d97d7b792088f38d1e770db751f83d108014ab0f032",
+      "pcm_sha256": "b6e6786a9c512a66753659df52a57262d8c13eac4b903bcc1fbc9e8253062744",
+      "frames": 257,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_sine_n1025_b256.flac",
+      "encoded_sha256": "ceab428a9103949b5572ca8a8993df6db03d9aff99925aabeb0d369c534b0f8e",
+      "pcm_sha256": "a276a204769dee11d08da189890cba7a35d0427e933f1064a31f7be335f6507b",
+      "frames": 1025,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_6ch_ramp_n513_b256.flac",
+      "encoded_sha256": "a318faa4085c0c84e621aea7048c8592647e7bb34fddf0879ed8fb1554cd6041",
+      "pcm_sha256": "c589c5d8794c3164dd472c214dbe6610b94f004b8ed8f84202243e3a50649525",
+      "frames": 513,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_constant_n1_b16.flac",
+      "encoded_sha256": "ad7efe28b7d428d2e8f1f97a8f3f2272f69220771ecb2d963ca56a29e3f419a1",
+      "pcm_sha256": "0344f7776dc1925486517bd252bb7a6f476925ff4090408b096c9232bebe0546",
+      "frames": 1,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_extremes_n17_b16.flac",
+      "encoded_sha256": "a61028bbe240b6b7a61ab6bb5daa7d5edede09e89b33d5bb9644531c4fb402f6",
+      "pcm_sha256": "b1d1df8e4be1255d3a3c3d7e848a85e8c59a88ab237f4a66a838d6a9fa132dd3",
+      "frames": 17,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_random_n255_b256.flac",
+      "encoded_sha256": "b09c4009fc72bad43f71352699f4b31479aefae4f4a436bade83eec07c9bddd3",
+      "pcm_sha256": "f716d70fc12a59667669b1574d207e30bb5bd49123bceaf25337aa5dd0085580",
+      "frames": 255,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_wasted_n257_b256.flac",
+      "encoded_sha256": "aff8274c294414e495ae6ef06952b87ece4a7ce9026174adb957dbf1f204ee27",
+      "pcm_sha256": "b468bb75fe60b0c5a0d1b3ccd13c6b391da724f54d6f7a539c46276503a5f2ed",
+      "frames": 257,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_sine_n1025_b256.flac",
+      "encoded_sha256": "59d614b9b80ba0f9666b00df77bf7ce91b3f58c7dc319a230bdac542be88f76a",
+      "pcm_sha256": "e438607365a5a4379048e712c39e43ea34791caf8c759da49d653863f0309312",
+      "frames": 1025,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_7ch_ramp_n513_b256.flac",
+      "encoded_sha256": "b1d484876cc90e59d11606e2547aa6cb171bb967a20e1891a114c30e88df2b55",
+      "pcm_sha256": "89062c2d2c14776f4a884473096de21ff942b6da8d26d211844036c7436bc411",
+      "frames": 513,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_constant_n1_b16.flac",
+      "encoded_sha256": "044ca68e6f3df64b3cc446231a04fc1dc548dd84f0cfa417a6a54007ed9bc22a",
+      "pcm_sha256": "10f7977e3dd19cf27b71f14b1e64bdb8d743a0265a1448ac204836a3ddba27c0",
+      "frames": 1,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_extremes_n17_b16.flac",
+      "encoded_sha256": "6fe1b2ae67d2fb56260fd038a61c12a105feae2f30b1ccac50e602addcda584c",
+      "pcm_sha256": "eb8e5bf96f9fb46cb913082a58036ca8e4317f44ebd41a2151433ea3f131b8e9",
+      "frames": 17,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_random_n255_b256.flac",
+      "encoded_sha256": "06bf34dcd36d72f29204a22a846fbe15e11225558beb77664bc189961d5c7076",
+      "pcm_sha256": "39548f8132c768b6435ea8e1671dbbbc45b5a64e8edbf3b4e379a6704a9e1e38",
+      "frames": 255,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_wasted_n257_b256.flac",
+      "encoded_sha256": "88a30e33e841b5dccfa8191d443af50ce0500a3d3e5f23f6afbeb2cad6ad0e81",
+      "pcm_sha256": "2ac89700dee3e9137bf0f934d8938f6147631d1db2a7cb3a8e2483ef2b11771c",
+      "frames": 257,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_sine_n1025_b256.flac",
+      "encoded_sha256": "de7cf5ac6ed37ed4798e86d6ca05592d940b8c0b3edbeb903a4336012fd9d8bb",
+      "pcm_sha256": "058f7af0ed23f90ef8c61834d0ed51c3066b6f83f5c2b7197cab61f2be82e541",
+      "frames": 1025,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm8_8ch_ramp_n513_b256.flac",
+      "encoded_sha256": "fcbe3892787aeaff129e77674d77fcc52fc3e6a8f87b358a8b5d344886f19bc2",
+      "pcm_sha256": "b40d8a067eecf4286dd757c7489a21bd225c65e7e422e60160755b81b6a9ad71",
+      "frames": 513,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_constant_n1_b16.flac",
+      "encoded_sha256": "7796d54b275f446be79eb74c52268eb371fc67c1a4fb8c0b55d209f4340dfd5a",
+      "pcm_sha256": "3be90d393f91241448d7dceadad32d91c1c94f307805937b46ed01ea669c17c3",
+      "frames": 1,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_extremes_n17_b16.flac",
+      "encoded_sha256": "37e847bdb3d9dda2835d5c2f4f120ff2c8dab245b46740e994ae38cb087853a2",
+      "pcm_sha256": "d36da7bdb16604a8b1f653a2a458786d4ea8a3848fc97064b79f9f540ddc056e",
+      "frames": 17,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_random_n255_b256.flac",
+      "encoded_sha256": "ef1d3997119aa831de7123d29f272e790388803b1dd6448cce73889777811506",
+      "pcm_sha256": "50c2a22c62c2d71fd741f4e290270eb2e435ab6f31916170b1564f8c6d404c72",
+      "frames": 255,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_wasted_n257_b256.flac",
+      "encoded_sha256": "f8375d62153a6da301b685437c403fd807d7e6401f9c3466a075ac01eab76062",
+      "pcm_sha256": "bfcf6359d4b68150e7018a76df7d72c9c98f68e6f6f984970e2150a9aa2e1734",
+      "frames": 257,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_sine_n1025_b256.flac",
+      "encoded_sha256": "0820f6c1dc36c4541153bfc17404b8d2cf2c11a5f96fe4b226862d6c57376c2a",
+      "pcm_sha256": "e64a5a62edca28ec6c3e8af7dcdc3c0ff0f7fcc691a3ce9eff9735c8858cb7ae",
+      "frames": 1025,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_1ch_ramp_n513_b256.flac",
+      "encoded_sha256": "3f9567af3446f1422e99d86956c0070227359e9bfbf1b8427b1d77b469407cf6",
+      "pcm_sha256": "f577d009b689cc899f59aa8c819e9898f96d602ce71b3921c9ccfc78237e9ff2",
+      "frames": 513,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_constant_n1_b16.flac",
+      "encoded_sha256": "d16d250d0c1d6134054babdf2f35a817662fa9747d981481749a311627dae03c",
+      "pcm_sha256": "d97eeb0b9d62e3fe4b9205f0f345e0aac6f9bf557c23b3d540515d8204411de3",
+      "frames": 1,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_extremes_n17_b16.flac",
+      "encoded_sha256": "c7d91f768f96cbc42d43a5ced647cb37794aff6eeafdb437a6cc6c43f4501f30",
+      "pcm_sha256": "329578ee2a809329f5ed88b8e000a18c18fda513ca8c00bc5ea6b97eb553d719",
+      "frames": 17,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_random_n255_b256.flac",
+      "encoded_sha256": "d6d16a7b95273e3cb4c4d75c82417012b96d9770a0f1fcc6bf1141d0fbc06e92",
+      "pcm_sha256": "73eb8806fa6eb2c3337710bfca6eeb551319eccd70328753197175b7f5b0278e",
+      "frames": 255,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_wasted_n257_b256.flac",
+      "encoded_sha256": "25afda76babff7b78d62bac4a7fda5e995509e7ca5f03cbb63830a429fdfed9b",
+      "pcm_sha256": "4ffc0b74d044cf1dcddd4a35a548f337ca3b1d1b3c0ec56b4d4b38310778e75a",
+      "frames": 257,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_sine_n1025_b256.flac",
+      "encoded_sha256": "ea237fd7cf1d8c29e5131bd14e1a8baade8f3f07818dc68c340bae22f654b516",
+      "pcm_sha256": "6e6b213329bfc93293377674ace576c8b1a6f6b8ba08b4f03f1c0c109603d62c",
+      "frames": 1025,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_2ch_ramp_n513_b256.flac",
+      "encoded_sha256": "dacb2f33ccf74e11064eac01fabfc3b77e2288a53320f5e932fbe59a000b24dd",
+      "pcm_sha256": "ed7e754edaea56015a4a3c687b47a0dc57bed629c54dae9bfca3840fda22ea48",
+      "frames": 513,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_constant_n1_b16.flac",
+      "encoded_sha256": "01c2d302718ef360440518b7ee838c7377425b1516246263dae0989f26bd6408",
+      "pcm_sha256": "0fcda7a0292cb021d9c14cd02c2b0c159472d09288ad461849e706bb01127b69",
+      "frames": 1,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_extremes_n17_b16.flac",
+      "encoded_sha256": "96e5acd53a131c826f9735f1e7d1b79884ea8ec2bb3795b88202d417e95c3d10",
+      "pcm_sha256": "81c106ac3b75416377a181a1da1774b09b2424ddadc2494c32aaa9cad79444a6",
+      "frames": 17,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_random_n255_b256.flac",
+      "encoded_sha256": "9f8059dd23ba1301a7fee4665c9c48afd84a26d2d589272ef62ec14d7d8a81c8",
+      "pcm_sha256": "f95fb50d04bf72aa97d9fb727665b1824f04c9724e1fbb03349bf3a9906b8084",
+      "frames": 255,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_wasted_n257_b256.flac",
+      "encoded_sha256": "0b66816b5dd842fa9bbb2554d2bbf2b8fb03d83f22ebbb3f5c9fc7979bca73e5",
+      "pcm_sha256": "6160ebe70da99f613c73af186417108f8fe507c7f15c272b06f2c630c8d5e612",
+      "frames": 257,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_sine_n1025_b256.flac",
+      "encoded_sha256": "1200456637182a3aa4cc7a472ba4dfca8e7c423f5ff50a9776b99b1afbdd676b",
+      "pcm_sha256": "cf7e089a97e8a4d66795883cc1a08cf5a76c7d78f47d370c9c089ba24a8fd862",
+      "frames": 1025,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_3ch_ramp_n513_b256.flac",
+      "encoded_sha256": "059f826210642caeb8fc87a61f5b1d3f0f27cacb9daffe99b853afffdd521049",
+      "pcm_sha256": "8b7aa0112f975058fa9224a182f6c0fbc7b063d976ecefffaae428f8da7aef20",
+      "frames": 513,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_constant_n1_b16.flac",
+      "encoded_sha256": "01a5cbd53a127fe79fc8960eb3b4dbfc0baa01b9082ea1a078a433eac156693c",
+      "pcm_sha256": "89fcfd06edf7d17dcc64a5d21d4819da3efaa320eb0bc8014c2ce7bac8178c32",
+      "frames": 1,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_extremes_n17_b16.flac",
+      "encoded_sha256": "f13188cea5887c861f76d25550c3f4e47f3984f817773f4d20d4d9790cf5fd0c",
+      "pcm_sha256": "57804e4eafa02280d6d18286ac57ebee41e6f1628bebe74133e318ed4ef8d8d3",
+      "frames": 17,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_random_n255_b256.flac",
+      "encoded_sha256": "423a3df6740974858bc72c85d72e6799341e028a35ed3cb605bb78b450e047c5",
+      "pcm_sha256": "7bd7ce9e7f7a51e5220d639a428826ef10d231bfa819d540b8277e51bfdf7002",
+      "frames": 255,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_wasted_n257_b256.flac",
+      "encoded_sha256": "aa41b1ef7047c57130e3014b1a465e970e9cdcc70b86ab2fc1ee1d8f6e65e64d",
+      "pcm_sha256": "84cbdda51ebaf7d878cca441de61a3c417f0e296e40876406ab7d33cf6fd1519",
+      "frames": 257,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_sine_n1025_b256.flac",
+      "encoded_sha256": "81bd609e883021335ffd90d4872922bef070883faf1f70d812213e0a21878d90",
+      "pcm_sha256": "426d872213a5ca9241cea43b07444d91633ce28679d03f3720629c3d89749592",
+      "frames": 1025,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_4ch_ramp_n513_b256.flac",
+      "encoded_sha256": "4ba45b8f28c44a431f606812830bb2e1123155a807343849126eeaea38fec409",
+      "pcm_sha256": "4f7517046fd9669ced996b4268b6c1e6492698432bab9453f50a93b8d96a69b3",
+      "frames": 513,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_constant_n1_b16.flac",
+      "encoded_sha256": "bb2c2d90b70ccab46e61ec9cfb46e2636a8fadc0e704c496008ba4331db207a5",
+      "pcm_sha256": "41a31f553f762ae6bfdd121453b5a1fc013dea610b8b0196fb91123ab2de9f09",
+      "frames": 1,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_extremes_n17_b16.flac",
+      "encoded_sha256": "1a712167efce8d3917200b102d1a652a7b8e91e13b6ad3cb4975cafbc00bfa32",
+      "pcm_sha256": "3cde3ac9c1c3d76a361eeb04b5b3dbb18125c87f4242630d72f1bc2128340677",
+      "frames": 17,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_random_n255_b256.flac",
+      "encoded_sha256": "877ec1aecf7a94ce9f4706d869c43c9a2654aaebcd8ef83b91867a99c81720ef",
+      "pcm_sha256": "4b86032d4f3e922bd239487f55d43e88b9cfb6abb929f8514e8f5a9390cc1a34",
+      "frames": 255,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_wasted_n257_b256.flac",
+      "encoded_sha256": "5194a4490b59b7a9e997006b9bc1819f659834df157aecfb05ecd3d72940d823",
+      "pcm_sha256": "e6de5fcccc9a29876851baa033c7655d641d2e0d3140f10871c44d281bf7336f",
+      "frames": 257,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_sine_n1025_b256.flac",
+      "encoded_sha256": "facb45dae911043916bad102c1729abfda7e984c124036d748dfefbaf4d04b57",
+      "pcm_sha256": "7a3f5c0acd1c6c56a5a7a23b8dca6ee714302449c43745bb5c57bda8d64f14f8",
+      "frames": 1025,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_5ch_ramp_n513_b256.flac",
+      "encoded_sha256": "0b5fdc2da8466760a6c8b447eb6aafba0d1190058f97cd2cc106c775f052852c",
+      "pcm_sha256": "1e9973f14a37eeb204093593b8e5f6c059a90883496acd465cc4833703325e50",
+      "frames": 513,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_constant_n1_b16.flac",
+      "encoded_sha256": "9e24d240006a5d35dd3a8a49340aa9bba3a57f701c9b10bfaa1ce3377af9f5eb",
+      "pcm_sha256": "4824e4562488f737ffefce4a1f970dbc98e8400487f46249407c1a22db532429",
+      "frames": 1,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_extremes_n17_b16.flac",
+      "encoded_sha256": "c0b6d7112590a3085fae02be1275b13fcd7367c464c3d729a00dcdebbd9fe504",
+      "pcm_sha256": "1ef6da09b008408223202cbcee70b253ea004491d002e32cbce80b759a0ea392",
+      "frames": 17,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_random_n255_b256.flac",
+      "encoded_sha256": "c2c81b58bd4bef0f2e469dd92df410448533f77a68037a9771cab1adea5dc0a4",
+      "pcm_sha256": "ccb853797ef3e0eb3852284f249ab94e29df624f3d0e36ccfa1cef1c4ef8f5b2",
+      "frames": 255,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_wasted_n257_b256.flac",
+      "encoded_sha256": "38d23c393f57568102fdae5a2672d1ef2513211fb824f384ff432dd2d9d7de80",
+      "pcm_sha256": "28adae20027970b86efaa7c834afefc686a0814ff80fd326e32e104ae52c3fce",
+      "frames": 257,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_sine_n1025_b256.flac",
+      "encoded_sha256": "552c8e3fc335c6ecb2e21f4c988e98724d555e037c5e2fa5b745b91cec9e126e",
+      "pcm_sha256": "1891249a258a21aeef915929ba736699137124d3e0c520032eba85ad2016bad2",
+      "frames": 1025,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_6ch_ramp_n513_b256.flac",
+      "encoded_sha256": "0e1951022d3059e4e4bbc0833a7a74ce8ed89924f6e98e825cb83306125b86e2",
+      "pcm_sha256": "004e1f3d7b22d233db81e7328b3758057ce0268acc720877722282926b6c088f",
+      "frames": 513,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_constant_n1_b16.flac",
+      "encoded_sha256": "b75d66ca230a9337cc917aab1af0c30ff246f1b7ec42b52349ed682e9289d94f",
+      "pcm_sha256": "30002c544866872de2837a5f6f264b0b0677d941e7663961ed6c7a280c29b8af",
+      "frames": 1,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_extremes_n17_b16.flac",
+      "encoded_sha256": "e5239e1646e630257529064f04752d3b879b51c68699102890f8f7369d877abb",
+      "pcm_sha256": "9ddde404c083f4d5e3ddfa74bae2801e63ca63d4089931ff297f63ed4106298a",
+      "frames": 17,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_random_n255_b256.flac",
+      "encoded_sha256": "237a2af3f09cdb702d59b67e5e8c75272fe61c9c858e1042617873e6ee611df8",
+      "pcm_sha256": "ed217585a9fa0fb91ba497fe63f737db48be98b39f2c67a833151e9b29ff2170",
+      "frames": 255,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_wasted_n257_b256.flac",
+      "encoded_sha256": "d417f8a7711a2bd34a61c3fd43b2b4f30bbd11a9a3fce9a5b593c1da83e4b17d",
+      "pcm_sha256": "93ba039b07eac05a981aff9e3d1d0756169c29605a9311fb15301e0eaae42ce5",
+      "frames": 257,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_sine_n1025_b256.flac",
+      "encoded_sha256": "139a52094cb290a64d96fd51f9d7a7ce45914ad0cc182a457d7ab10caee2d41b",
+      "pcm_sha256": "b221b070ad94c99018bde0c72f24933d2a6217cc7f9384e4a684219dbd9072eb",
+      "frames": 1025,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_7ch_ramp_n513_b256.flac",
+      "encoded_sha256": "cb00671203b08427f47b743930b77bef580cab69ba917c0046353a104ddd881c",
+      "pcm_sha256": "ebd33847a7d800be5da8fc6ada9bdc9781497ef1b2e5374436614415100dc082",
+      "frames": 513,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_constant_n1_b16.flac",
+      "encoded_sha256": "9d71ae814fc2f89c4a4e2e2b5f3f2e91e43167a6091620e486243c11f801f474",
+      "pcm_sha256": "e5c7998c781e1b4c8231f00c827d11367cc20fc0653d177cb8332df0d0844f2b",
+      "frames": 1,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_extremes_n17_b16.flac",
+      "encoded_sha256": "1ccdcfc5e722bad2c28efda774e5251e6eb621fd7e1d52e43c11b51b2edc2859",
+      "pcm_sha256": "976d2dee9dcb5680ef9245c7f33e860dbdcb86f2b2302548b876eaecc58d780b",
+      "frames": 17,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_random_n255_b256.flac",
+      "encoded_sha256": "bde408fa0b42534380b58035da6c1fae039c93c22370f09b81f7f7764a887f77",
+      "pcm_sha256": "6a6902a908ed28e9c0724e421d833832779a43797bb42c96fcb0e5d4d3f17fdc",
+      "frames": 255,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_wasted_n257_b256.flac",
+      "encoded_sha256": "26a3ddb124475c667b062718fa11414f9f74b1938e737d68480f01dd4bee18df",
+      "pcm_sha256": "69b7658d4be61ddd20e7ee11af0b1facd9ed2a31d0342e32de1b1e4a46136d23",
+      "frames": 257,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_sine_n1025_b256.flac",
+      "encoded_sha256": "917584c78c5566fb1016f89e58db6778c943adc5a834a8181e5e59d2ff79693f",
+      "pcm_sha256": "bcac26f989a9c7126cfef90329bea2c9de7db10ec32504da6336ff4b82344189",
+      "frames": 1025,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm16_8ch_ramp_n513_b256.flac",
+      "encoded_sha256": "43e9c21946f9c5ace8904e7c7fe253f880f2d169777bb04c4db4576c1f06b14b",
+      "pcm_sha256": "af2c094c1a7652a6f3a42443e63b984dc7493bebdd23e0d8231b125eb56e6507",
+      "frames": 513,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_constant_n1_b16.flac",
+      "encoded_sha256": "56a58dd87bec3b410074ecc2739849ef5d15fb7fb3521a2beb47916cc2f93506",
+      "pcm_sha256": "0ca4bf0538dc6e2d92d01ec782e4eaca605d0206ecdc1ee8845aab03a27aa623",
+      "frames": 1,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_extremes_n17_b16.flac",
+      "encoded_sha256": "5c0177b22164c7f33616410e62ee74900b3bae1163d330c0b9a05aacf96d8d02",
+      "pcm_sha256": "2434f780172b6a7a93a415b4c55092a6c11c47b6983e19469d1480fac6583538",
+      "frames": 17,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_random_n255_b256.flac",
+      "encoded_sha256": "5a5306acd7d7458df1356ffb3f3a4a9fba40b02ace01ff297435067536f5c9eb",
+      "pcm_sha256": "80598d7f4d8394948ca409d7c592ecb851723acef839f5b06c6df601e54648ed",
+      "frames": 255,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_wasted_n257_b256.flac",
+      "encoded_sha256": "074219bbb4eea9e1077c1d8b9cef3c7064ee227b703c3c5d0b213d3def8c88b7",
+      "pcm_sha256": "96838abd92df064683761a426c8b7d553620ec52285e5ac2baf2af19b7583df2",
+      "frames": 257,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_sine_n1025_b256.flac",
+      "encoded_sha256": "725b907ba252a33001c27c89600b595a59179891cbedfb8748fb4cfcce5bd4c1",
+      "pcm_sha256": "e718251d7b0f6614ea888a34d595e2d613298b5103b81eb43bcfc99c32726b91",
+      "frames": 1025,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_1ch_ramp_n513_b256.flac",
+      "encoded_sha256": "88a0905dcecf686b5c913f13f4a62900b4bc0195d568cac5f6125f5167bd2473",
+      "pcm_sha256": "0c8213f85e16b30c5a4599291a218ecd897a13724e01bfc9d4346c9ecfbd711b",
+      "frames": 513,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_constant_n1_b16.flac",
+      "encoded_sha256": "6d00e7e609a6f97c12239c6dd9cb91517ebfad223234067acbebace1d36bd35a",
+      "pcm_sha256": "15765d850158a07db21f1e026f8d7811b90f109b6e370fdb89b5683e3cb7f9bb",
+      "frames": 1,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_extremes_n17_b16.flac",
+      "encoded_sha256": "99f34f4b4bdee3985c6360de55315a86ab1fc07cc74988c0711e327cc384c13a",
+      "pcm_sha256": "f19c103f79424b355b216941ed678b91b721ed6193c9e52d350eb30538efa4ab",
+      "frames": 17,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_random_n255_b256.flac",
+      "encoded_sha256": "c471f9726d90ce4d03fddae19065b1c6b1579e631e44bd5e7bc6dec56bc09440",
+      "pcm_sha256": "1a730558b815c4f3b1b88412d951053817b63dd7a0302c540a099bb2cb8fc763",
+      "frames": 255,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_wasted_n257_b256.flac",
+      "encoded_sha256": "970e6c8cb98f6929ae12e7a58ccfaab5f0df53fb65cf5676cb545fdf1593e692",
+      "pcm_sha256": "7a8f51001a3270a7a1b1b8f8521091fe2b02c82e13634987774dedaa05a5e127",
+      "frames": 257,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_sine_n1025_b256.flac",
+      "encoded_sha256": "36be79d6f124da7831dcf5d3966c9ae9b5ffcdc71401d9799738daf6c25da02e",
+      "pcm_sha256": "6bcc2cd4e5c7e90cc02be0637345644d374252f663af66f9535bcf0ebb651424",
+      "frames": 1025,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_2ch_ramp_n513_b256.flac",
+      "encoded_sha256": "36437bf31af0c726e2f41ee4ff871921aaa80b9023855852ce66f7134ddf94a0",
+      "pcm_sha256": "d21c4fe7e933c1e8fc6e78f8a904528ebfd419d183ba2955e28218b1dc95df98",
+      "frames": 513,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_constant_n1_b16.flac",
+      "encoded_sha256": "87dce49981a4ae70bedad6907aea888fd434109e52715f9b546c3ed3d395f429",
+      "pcm_sha256": "768038302b71ae29800a27c9926380f4dfdacfdf34fc6bbb078070f2d123e291",
+      "frames": 1,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_extremes_n17_b16.flac",
+      "encoded_sha256": "2a7dfd6e47023bb743ac84a30a0d92592fae096c2783f8d85e428eb8a5b77d99",
+      "pcm_sha256": "93a8dedca5e846e966f01088cce4a119dcab0cf43c346a37a8c453bd43fdddc1",
+      "frames": 17,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_random_n255_b256.flac",
+      "encoded_sha256": "127e36bcfecc0bdb3c30682e644ebed58dd554478bb579849e431d9a7dbd7aa3",
+      "pcm_sha256": "b56dd0613c5e419302a0685c255e186b858df2eda97f8bc5ca4fef254d71022f",
+      "frames": 255,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_wasted_n257_b256.flac",
+      "encoded_sha256": "871199508b5d7c62ebb07def358046f6e3e2398849c69a897a3462357f27a5cd",
+      "pcm_sha256": "ccec1f1b00f4a308523cfdffed5f9dcedbb96b50a6ef80e7bc7c17ecfff6695e",
+      "frames": 257,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_sine_n1025_b256.flac",
+      "encoded_sha256": "9bcaa7b5015f238374639de89dd990e71c883ea157973d2e016493c8be4a8b33",
+      "pcm_sha256": "65d376e5990b5d1c95ae4b7d99e0444cb874d0ba033f5fc02de25dd603d85cc2",
+      "frames": 1025,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_3ch_ramp_n513_b256.flac",
+      "encoded_sha256": "b0e5fe0b612300ae232d4abd41f45323bfb3cc60cdad57f1632a3086439a9385",
+      "pcm_sha256": "be82791fff15c4c13ba33b015428ddb436cafb671d61a771c7289da47a1b6761",
+      "frames": 513,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_constant_n1_b16.flac",
+      "encoded_sha256": "1b82e8def935dd3c1972e24d6d084c684936fc76b24542dc55586d1df2616ae5",
+      "pcm_sha256": "49beae98ab1be724fadbad628626a863718364c5a4f4f0e8e5f273e46280d599",
+      "frames": 1,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_extremes_n17_b16.flac",
+      "encoded_sha256": "0c23723cae3e466cd18340af98be3951f4e5dd917cb68efbba0dd9a5304e5b8e",
+      "pcm_sha256": "56efbc5ba0d6f44608b2950890830c993fa1ab62b896132d52b74b39d3cb38bd",
+      "frames": 17,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_random_n255_b256.flac",
+      "encoded_sha256": "77965ab03169fb422a3b241be12373102a90534651933ebbe1501d0123e86cc6",
+      "pcm_sha256": "ed3513202eaf64af9d7002015365d45c218aab943f648f8117c64555fee0e810",
+      "frames": 255,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_wasted_n257_b256.flac",
+      "encoded_sha256": "25156e132d8346ceed8f687d9fb79fc4a0eebaa1458710f3c933f58b5bab9ff2",
+      "pcm_sha256": "1135400cd218c0e68c1824766f48977679a040898bb9cce7f475c9c34a0a6016",
+      "frames": 257,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_sine_n1025_b256.flac",
+      "encoded_sha256": "24fdeac5ae3190cb2995b11ba03c0bd6cc79212c3c74e01da5a553410719da94",
+      "pcm_sha256": "c8bc65052c941135c3a8bcc9b416ab44c68b3a4e7957c3310984c8a82db7bf89",
+      "frames": 1025,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_4ch_ramp_n513_b256.flac",
+      "encoded_sha256": "48b8c35aa4e781b5ff4e26bf4d2060d9987ee4e1c518b62d2c6339716e1f2d8d",
+      "pcm_sha256": "078ca9c907546989f6a8027672a96d7e49fe9b1d9a5df5d79978e14e7792fd0d",
+      "frames": 513,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_constant_n1_b16.flac",
+      "encoded_sha256": "753fb2af49755f1472193a18162e1a1d3e7a35256c56783b92f8a0252e9d3704",
+      "pcm_sha256": "6810d552018ad7325e46e742bb4ece2c6ae4470dcae54baab235b02ccdbd581b",
+      "frames": 1,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_extremes_n17_b16.flac",
+      "encoded_sha256": "9de9fa82203feec2f8e721030c50069e47f5d810656ef68432f82cc5f3f93814",
+      "pcm_sha256": "ef4aa3e19128b1d0c5a75e2f3fb717535399add14766611550b2ee9fc8166e77",
+      "frames": 17,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_random_n255_b256.flac",
+      "encoded_sha256": "a7fbd5e79766376e72c418497690a0d7284a67f21b98f2eec4f05daf77b74b37",
+      "pcm_sha256": "dd55ae8ee337dd29571b52c96789bd4a7dec62bacb0df480a6de63b74ca4831b",
+      "frames": 255,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_wasted_n257_b256.flac",
+      "encoded_sha256": "e420609edcd0f4280ab868167a59e33bd5f0894f0ffca639f28e48541822b6df",
+      "pcm_sha256": "54da6485335a06bc9580e816ce5341cec62eae33173981bcd21eaf4323db00f5",
+      "frames": 257,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_sine_n1025_b256.flac",
+      "encoded_sha256": "b62a9729bcf8bc3cfbaac3b9861a5e7e4ccdc0033699fdf145aed6ddf6dc6283",
+      "pcm_sha256": "55ea73a3881743b8be5761582be09a88cdf55bbb46e58ff05f8c7a9d21eeb327",
+      "frames": 1025,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_5ch_ramp_n513_b256.flac",
+      "encoded_sha256": "5114fb93f23515d57721696e5b1a50f505a62f3a3da32e2b6e4759c37a54bcb2",
+      "pcm_sha256": "c7baeb7419ae54150f47e30ffcef5303f1164a0666f400f38e9df2409eeea72a",
+      "frames": 513,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_constant_n1_b16.flac",
+      "encoded_sha256": "658b0270c110f3b98bc668047f646e67d72345342ff98376ac0325b2c8d2ff07",
+      "pcm_sha256": "7b4c73d7c8b98d0c464257b3e01955e5eeb9af141be301fe6d98ba09ee87ef6b",
+      "frames": 1,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_extremes_n17_b16.flac",
+      "encoded_sha256": "ad210f072ee3c1953a0be09c1ada7a08eff8d3d6dfa70a7550ad78cc86ec923a",
+      "pcm_sha256": "e97485c4f13be103c5175f87e347fc707fe7de4d38e61f3998a69b97ea31e75d",
+      "frames": 17,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_random_n255_b256.flac",
+      "encoded_sha256": "d4fba37bb06d2b6c2976bebf68b2e6cb4de5c3b561319d5d8dc255ad77f3d84e",
+      "pcm_sha256": "c319bfcae2f3162e011a939383a4e05ca3795d39ad7b573ab364fbe7fae34923",
+      "frames": 255,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_wasted_n257_b256.flac",
+      "encoded_sha256": "af19ccafd175a3262e25b766f0b9aad74d3578415212cfe769c16aba03bc1d34",
+      "pcm_sha256": "e6eed2890053cb9a396a78649fe85ad178b913d904d4d367b6889a5e90b42288",
+      "frames": 257,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_sine_n1025_b256.flac",
+      "encoded_sha256": "f0059b0b791323b79c4642bf9dd42afd404cbc5899d79bc68de68df32df3ab01",
+      "pcm_sha256": "1fdebb75381adbb4d0634b1ce7702082be7a36d74485ead044da40868d5b0159",
+      "frames": 1025,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_6ch_ramp_n513_b256.flac",
+      "encoded_sha256": "9495421b9861d9d04729478948087e8ccd418fa7b4026f7a1c723bd181b23cc3",
+      "pcm_sha256": "56eefa98a3665bf7fa8d9a77cd036efc86df97ca2b19a7d39859fe5d53c81b82",
+      "frames": 513,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_constant_n1_b16.flac",
+      "encoded_sha256": "41f3f50bfbaaab401ef3882b6c55d02385e62168160f34ddbff9a775b6a02479",
+      "pcm_sha256": "68420fda31f3e941d766ef2c8a7da0d2e0ac8dff5019071cf4f82aaaae293182",
+      "frames": 1,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_extremes_n17_b16.flac",
+      "encoded_sha256": "637a90cd5431eccbae6f0184d61e647d93cb58e92203fc441c629be673466d4b",
+      "pcm_sha256": "4bbeaa3341a7832b250431fbf74124078c4da3754c5f12ae96e7f42a282c1d6b",
+      "frames": 17,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_random_n255_b256.flac",
+      "encoded_sha256": "183301e1bc588f91e93777b061370c5674889cdac1447f28e952b6e839477439",
+      "pcm_sha256": "9fcfd4ab8e1b7c9582260c76586b9bb8f2eada296781a3e3c9559d1bf430eba4",
+      "frames": 255,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_wasted_n257_b256.flac",
+      "encoded_sha256": "2f63d60fccbdff88ba2a761972bf3619d303ef2e0271d693b2794f2a4c393149",
+      "pcm_sha256": "99353dc12e64cd93ee411e740ff17d28893c6ca65cc98b6556c08bec7687b7be",
+      "frames": 257,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_sine_n1025_b256.flac",
+      "encoded_sha256": "b9a17ac89771d1dad03e7348c64f07eedf392a3ea12bed8d7c78c176f67e4bd3",
+      "pcm_sha256": "a106285e83ffc3c339b1553fe7df3445c06abc73ebabaeb091a48d93f76a7040",
+      "frames": 1025,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_7ch_ramp_n513_b256.flac",
+      "encoded_sha256": "a06d458b4e37e9da6dd24259eff44317c2590dfc9d854b7b63e4c7048aa7f1a7",
+      "pcm_sha256": "d0d531a4d06ac1391b3d77410223293455b7ea5ee2d991b662d1053d28cd69ef",
+      "frames": 513,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_constant_n1_b16.flac",
+      "encoded_sha256": "c8a55e71f77e0359e098d842fe491cda75fbf9da3b1a10454ef6023a0382a954",
+      "pcm_sha256": "510fcc2ec790a54e4ad90ad3f497913d7022eca51008132a82b2e59fd731d280",
+      "frames": 1,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_extremes_n17_b16.flac",
+      "encoded_sha256": "9fb92139114b47aae6098431c5b25e61f2ff4c357cd331b780576df75c94f01f",
+      "pcm_sha256": "a28e92d79f8ab0149b56705c276d000b4a41fd51751dbd9b5e90b1dc8b33fc39",
+      "frames": 17,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_random_n255_b256.flac",
+      "encoded_sha256": "f59d3b48fa4ce2098834b9fee59d005674a53e6300be5c17eb61d29eeda7de72",
+      "pcm_sha256": "32e7917d88bea1b1a66a42638fdad187ccf8033ff5d0d10a905a24fa9cc61a02",
+      "frames": 255,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_wasted_n257_b256.flac",
+      "encoded_sha256": "541cf485c150d02ae55942b538180c646e8dc023cadc3d8306fa4f6a2c37fe14",
+      "pcm_sha256": "64f600955c44a869cbb2ff5100d3eb5e190585258b53e67abc0dd2262efa15ab",
+      "frames": 257,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_sine_n1025_b256.flac",
+      "encoded_sha256": "3b6ee02611ed9a56fe198eee2cc316a786aa2b17de38ef4e0d69dd69d4ebb5fa",
+      "pcm_sha256": "9b6404b689c3bccdfd13dc2c0355885e5a74b6ad0586a29be9fd826db4640cdc",
+      "frames": 1025,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm24_8ch_ramp_n513_b256.flac",
+      "encoded_sha256": "bda3271aaa73f6ef535c6787e045bb2d4398c21f5e6822285f6472bfaff9f49a",
+      "pcm_sha256": "9090228c23cbeb30a0f0fa6784e4c14229c314a56c6de03d68c7abd96936873b",
+      "frames": 513,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_constant_n1_b16.flac",
+      "encoded_sha256": "56a6eba52725f1246c70292bf69e208f0ad1bbed36869ebd4216ab40540e6472",
+      "pcm_sha256": "1f38e773e3b24875f3f5549c2a70dfd8d71019c46bc44ffb0e7fa38600020503",
+      "frames": 1,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_extremes_n17_b16.flac",
+      "encoded_sha256": "14ee699e082eeaaaa1a89ecf6f0f1645f6f4d8956a0f0b9e45cf99de3908380c",
+      "pcm_sha256": "4579257073353b91454e4c39ab015eb41cc8e8b518aecdc4bba63a1d0d26d7de",
+      "frames": 17,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_random_n255_b256.flac",
+      "encoded_sha256": "5fba3676a4443f9a6ec40c40b7cd0f34ac3bded46f1a052c7049393b893e981a",
+      "pcm_sha256": "4bd1adf7c205932b858073230d40135b2c6674153c05ac778f741b7978713921",
+      "frames": 255,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_wasted_n257_b256.flac",
+      "encoded_sha256": "9704b670f2ebc5ba4f7cccb62a302ac34f7cb7d19c528949c4358a666f23f6e5",
+      "pcm_sha256": "33d9c3cf8a771421ff659239d4f841fe09fabcab4cf67177c16448b5d873087a",
+      "frames": 257,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_sine_n1025_b256.flac",
+      "encoded_sha256": "c55611e88b8002a87251a829ede495eaa056a5d1c1cc01aea99bdfca58ca263f",
+      "pcm_sha256": "2d5f850f4cb9f577c7b8171b9b3ab9e5ce3a0f2ed0b0204299aa679a270fa711",
+      "frames": 1025,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_1ch_ramp_n513_b256.flac",
+      "encoded_sha256": "8cba1237123cb47084b494b3e69f9f487c2a747141dde22370d199f23ac47c6c",
+      "pcm_sha256": "e9fadd9fd24c915d5a828731c4a6e13fd64a565bad24570ff756ef1195b4a569",
+      "frames": 513,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_constant_n1_b16.flac",
+      "encoded_sha256": "7ca00449c1bbf03f4231d5fbeb83899f0eaf11cf088f017f75d226deef65d413",
+      "pcm_sha256": "63a2b14915d42cddc6b8c7700934f033b94bca614bf7bd40302ec829f2b0c52d",
+      "frames": 1,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_extremes_n17_b16.flac",
+      "encoded_sha256": "cd15d788c7a309bbc616ad008f4eee72bebe6633bf223fcf6444d3cec1d03024",
+      "pcm_sha256": "c43b35670fedbb12ee5ab9c1eb2b4a1bbe54ff5ff21d5d96db466a37ea630dbf",
+      "frames": 17,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_random_n255_b256.flac",
+      "encoded_sha256": "73980f7a38d71a61a312dd6ffe78880d7f3b758fa43d6803b4c3f57386ff18a2",
+      "pcm_sha256": "214e249618bfafceb52cc83715b3581ae19c373aae2dbbff25427cfcbf24a82d",
+      "frames": 255,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_wasted_n257_b256.flac",
+      "encoded_sha256": "51bbbc830aeb5912c0b56e1f0322157958fa0d17752a8de6e9ce73bc76226847",
+      "pcm_sha256": "1b036458bbfd85060f751142b0e9077c036a63b008c9ed57497750d794655fe3",
+      "frames": 257,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_sine_n1025_b256.flac",
+      "encoded_sha256": "1e58ac41472c781694a2b96c1ef4d283aadc863168b988fb2d19727df6ba71b7",
+      "pcm_sha256": "73d8caf1cfa158964772dd2ebf23b4f8ad0cd9c38f2292389cb6131db9536d69",
+      "frames": 1025,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_ramp_n513_b256.flac",
+      "encoded_sha256": "eafd0e72164f537a8895de53ef5c8ac77a42afaeba25588a22aacfe6eee9c9a4",
+      "pcm_sha256": "29610409c90b8ff81108a30dff6d8f9bb040ee8b3258ecfb591a0a76af9a0047",
+      "frames": 513,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_constant_n1_b16.flac",
+      "encoded_sha256": "802e32b8bcda17dee8ff24396ce52fe9f7e813e85e9e546a8fbaa31da369bcb7",
+      "pcm_sha256": "fa5a845ee03e81bd8167a1154a036268ad7954a04b0da7153bae9d5c1ccf8fbb",
+      "frames": 1,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_extremes_n17_b16.flac",
+      "encoded_sha256": "65a068812bb2771b507fd2848959b2972e10602c35b8a10377d6cbdee85418db",
+      "pcm_sha256": "4a099327b298adcbe1037790e77e5bb09ef62163c63c829490f84f8872e04719",
+      "frames": 17,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_random_n255_b256.flac",
+      "encoded_sha256": "18f2677421855bceaee4e167463b02906d185ef4130929ce3c5f6998ed510d68",
+      "pcm_sha256": "7b0b9d6f72fb3e4b7c174dc9db5b71344d478737f9b9b0b2170becda34346e04",
+      "frames": 255,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_wasted_n257_b256.flac",
+      "encoded_sha256": "f7416f8648f1d9c90c7c71e910d6d7e71769053d5cd262f1f0d62d9d5e74c080",
+      "pcm_sha256": "c85d2d94a65ca2f3d346c4d7c4eff10d1d6e5abb7d706e50b49f4ecbf1e8e2cd",
+      "frames": 257,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_sine_n1025_b256.flac",
+      "encoded_sha256": "fc43ced662d828e2a296eb47e9f3de99aba1b3ab82add88f7fa4915a5601df29",
+      "pcm_sha256": "357511fd5a1f9ad9922ee843bdacc25588cf153b931801156853ab01e873f73c",
+      "frames": 1025,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_3ch_ramp_n513_b256.flac",
+      "encoded_sha256": "05727c16200e14a2cf0afd2c21faef83243e76c9ba4f86a4e7002a6d984b7314",
+      "pcm_sha256": "1be4a01cdeb4c3b7364d7aed24dbb36bac6bc22cf31549a46af3293954998b6f",
+      "frames": 513,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_constant_n1_b16.flac",
+      "encoded_sha256": "33a1348740057d8e15c0dcda4658052e7b4286aafdda012a3d84e1bb14b629e9",
+      "pcm_sha256": "f38b8f12107465a2a851ff2679c707528e651facd7759871ea549d90ecd16f0f",
+      "frames": 1,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_extremes_n17_b16.flac",
+      "encoded_sha256": "a388ca1f7dbd62be43b588471994e5d21e5116e39e75d9be3ecd9bac75510594",
+      "pcm_sha256": "f5754264f66c03242875570b1221b80ac1810b355ce30b2f844109eb314571aa",
+      "frames": 17,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_random_n255_b256.flac",
+      "encoded_sha256": "1d5e7f2df7af273e497eeafdaeea7f90174a454a3bad02531f7cd1aabcf717e1",
+      "pcm_sha256": "c9b0c07aa5a5bc0060aa637a6e08223acaff23c662870d36be403ba1329598ee",
+      "frames": 255,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_wasted_n257_b256.flac",
+      "encoded_sha256": "e0b0854a7432c7565b166c039d142638eb3cac960458e158ad9ef4d82b1c66ba",
+      "pcm_sha256": "5a0a1206a6fefb519c4986e9a72c350a3f2ed61da3bf849adb88d20b378f1d2d",
+      "frames": 257,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_sine_n1025_b256.flac",
+      "encoded_sha256": "5999a763ea9373e10a6c83aed9b3f8274152a4ca1caef531ec7f05159fd8da9d",
+      "pcm_sha256": "0e7b41b0cbee662b54d4b247272f79c8507ec7a31bb8e8bcc1fc7f21d72453d2",
+      "frames": 1025,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_4ch_ramp_n513_b256.flac",
+      "encoded_sha256": "5120d1f9716cd6151f7a894f604522a92fed23ff13e8b26b43e97587f54a118b",
+      "pcm_sha256": "d8ae6b281dfb10863ec12f073f97c7deba12789cd9c1fb002d2cdf181fd1bfa6",
+      "frames": 513,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_constant_n1_b16.flac",
+      "encoded_sha256": "a910f47844918213478f2dbcafac98825251479cb7c406445937ec874a093d8b",
+      "pcm_sha256": "3b2c3e3d00752a50b79284150efeaeda0dbaab72fb935cabfa708970be4b7a29",
+      "frames": 1,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_extremes_n17_b16.flac",
+      "encoded_sha256": "7b88b72f4f1d1be054102ec56d110f2cd22ea8637e1088fa531feb30089b1701",
+      "pcm_sha256": "6f8069ac51aa9e3a7ef54ba843c1bdf2c0078245380a474bb769875a21a615b5",
+      "frames": 17,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_random_n255_b256.flac",
+      "encoded_sha256": "cb5398b652876cca8b5625207ccf2b8b82b30d34dcbf530e5ffd90fd1e286656",
+      "pcm_sha256": "c8e6c33a9375090125d00c354365b35998c6c2bf16558197b43f5f6363042f5a",
+      "frames": 255,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_wasted_n257_b256.flac",
+      "encoded_sha256": "2f1093eae6151aadc22275c0ef6cf43d6986cb27d894692dc752e5fa2aea2b7b",
+      "pcm_sha256": "e6c951ffa854524ef8aabc5c7f9df63fccd1038e2fbdd18824e6dbc27e19002b",
+      "frames": 257,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_sine_n1025_b256.flac",
+      "encoded_sha256": "15e5eb87bb017f86ada0993d6c00c0e5e635a145207aa673dad2bf3a49273d61",
+      "pcm_sha256": "0b04925d9798b87c81218cc0746dfe304b8c46c0a06f7d80fcebdc782599e308",
+      "frames": 1025,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_5ch_ramp_n513_b256.flac",
+      "encoded_sha256": "f312a1e3532109c1510d71ee4d6af2b4bfe3975ea04d881e5562fba5f33c10e8",
+      "pcm_sha256": "4a727898bbe2aa3b1760a703cd24965a9d3d6dab985a4be7e02d79dc04f748b5",
+      "frames": 513,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_constant_n1_b16.flac",
+      "encoded_sha256": "422390b3e7318d52bbf18cec9a530bffb8b9c592631b68b71d501e712a31203c",
+      "pcm_sha256": "469247ae7964eeb9a29b02d3cfceba1290343de28a7f31c463b5d8bd20cc4ff2",
+      "frames": 1,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_extremes_n17_b16.flac",
+      "encoded_sha256": "86fb0618cd24f3d4055285d807ddd81cfc75fc725a3a4a232078d3d1c21d9f9d",
+      "pcm_sha256": "b752d0491fe56d94c1e66585267921e35ee3269574b52aaa8d142b7666aaa2bf",
+      "frames": 17,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_random_n255_b256.flac",
+      "encoded_sha256": "b21ec46bdcb3fbd52855e19fddcd4afe681cb0bc5914deca83394aff4f8c3903",
+      "pcm_sha256": "3e2a4745f4733bc3592f1c68562f803780ff455bf1aa20c35ef328e5f04429e7",
+      "frames": 255,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_wasted_n257_b256.flac",
+      "encoded_sha256": "e4314bb0d194853a1e28b6bd15fa72d542e5b2b771fc347f5c189a97b40759b2",
+      "pcm_sha256": "642e32e5550e853f323351ceef5c4fb5c8acecdb4d00a1880e314f3964f30fe7",
+      "frames": 257,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_sine_n1025_b256.flac",
+      "encoded_sha256": "e905032d1e1d0c51b4027bbab6b2b3d407631dca1b8e8b7961a394df8456231a",
+      "pcm_sha256": "ce2264e1b1d24375f0a833e254d67bca2d5e202799e51c3416174f9da768599b",
+      "frames": 1025,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_6ch_ramp_n513_b256.flac",
+      "encoded_sha256": "fd86548b7517e6fea20b701d07cde1593ff7d1b2a12441e3b7befed9534b3831",
+      "pcm_sha256": "b2168e2804b0ba08e9bede5bb71b5ee7df41dcbdca9e0fbe694c9a1aa136d624",
+      "frames": 513,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_constant_n1_b16.flac",
+      "encoded_sha256": "9767f1d131044098bb0f790f73933f0a39eaa270dc9504e29fa5297fc5303063",
+      "pcm_sha256": "9631872951c4ab43f6c8db633d5feeb7eeeaad96ea8ba3943ffbd38708959f48",
+      "frames": 1,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_extremes_n17_b16.flac",
+      "encoded_sha256": "33057d3609e058d649f225fd7a615920a0a37d38eb2a34db11befa7dd93fd052",
+      "pcm_sha256": "d2a90b2eea3275201866a5f63d9f32ecb808158780723131195fbc10a22ed447",
+      "frames": 17,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_random_n255_b256.flac",
+      "encoded_sha256": "2d44af5db95df276895c4ba1e596a333621bfbdc86fb73329a69d5949b7bc9c7",
+      "pcm_sha256": "1ba70b4671cc60558374b09c0e28544c9b1beb1c18f4cffb649fb02415dc690c",
+      "frames": 255,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_wasted_n257_b256.flac",
+      "encoded_sha256": "4f5895236e5cc40f738d273dc8396e35bb946c037ce2db68ff336ad5e2e07cd6",
+      "pcm_sha256": "36012d3d9a1400490d575c55a42f7c8547966647639d8d3e7de03b68852152b8",
+      "frames": 257,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_sine_n1025_b256.flac",
+      "encoded_sha256": "b5efe989f664255499c393a6957cfb8fd63f45c7e24f0a8d750d33e2f190e85c",
+      "pcm_sha256": "2ce93e697f0853563f486cb0ccf10466e0e3b58dfcbb2452da858f200baed701",
+      "frames": 1025,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_7ch_ramp_n513_b256.flac",
+      "encoded_sha256": "9a64a829be08242d5409fac0213e760f06e8f9d6c0c0b8e15e05e581230615d0",
+      "pcm_sha256": "8bc004cc66bf3c051e7dc1de20d72f1581772d0a474dc5532dd57b60accbcb67",
+      "frames": 513,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_constant_n1_b16.flac",
+      "encoded_sha256": "4e69d369a2e3d9edde303d98903edc522b827ca69360642757a65951e176b110",
+      "pcm_sha256": "515d63062cc0f1dbb3aca38d47eb096d9426110745e0cd1cf3b643005d6a8a8f",
+      "frames": 1,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_extremes_n17_b16.flac",
+      "encoded_sha256": "0c3be4f706787f0441713fe9bf761751c4b2dbec5195d5e22db6ed719b6b860e",
+      "pcm_sha256": "4b48f095dd7aca9a50cb4effde774029a41a5220e1aea6dd85882ec42ac1246a",
+      "frames": 17,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_random_n255_b256.flac",
+      "encoded_sha256": "c4fcb495a7c7753d384cdbd25a2a2b897a750ad84cbb9416b9a9644df925e436",
+      "pcm_sha256": "586c8b4225b9adc5e9d463fe6e7395edf8e0bf54ed8ead21cb9787d576fe8e92",
+      "frames": 255,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_wasted_n257_b256.flac",
+      "encoded_sha256": "8d620cc662b34a9187f1384b597a7ad32fe241683f9748708faa3abc26884515",
+      "pcm_sha256": "fa7167184ab9bccb4e10ab2109d1d1c330de337d31f6e6fb3c394d3da75b6fb3",
+      "frames": 257,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_sine_n1025_b256.flac",
+      "encoded_sha256": "6a9618a7eaafdff2c1f93d69f1dc5706499bed0cb9601ab4ec2cd72bfece7144",
+      "pcm_sha256": "50618dc7ac0032ecd1b747e758d84950649978ee36381b30aa7f39f99321246d",
+      "frames": 1025,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_ramp_n513_b256.flac",
+      "encoded_sha256": "87f01cdda08d1059fb5b8e636aab87e74d8dab885a83e24dd95c16e8365578a0",
+      "pcm_sha256": "75c84c1db511a3ebd56f46817ee1a825a243304e15d4fe390cf0ce5118c1fbf5",
+      "frames": 513,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_8ch_sine_n4097_b4096.flac",
+      "encoded_sha256": "585923d5958cc92c9c738e3a1ae167295c643b1a2daa860bed58ec76a34f53f6",
+      "pcm_sha256": "7c23c0d8b5e34f8faa584ac3d25dd23b78e6dd7056e8a34df69b9113961d3091",
+      "frames": 4097,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/pcm32_2ch_wasted_n65535_b65535.flac",
+      "encoded_sha256": "16e0aa5706a9d4311cfce4f09da15854c08e52bab8b18a9da2596d06b4912da6",
+      "pcm_sha256": "c50e919483d4fa704c7b0b0f5ea203bd263cbc9bbdb8333fec9af04cb48a7872",
+      "frames": 65535,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_1ch.flac",
+      "encoded_sha256": "04c1d2f60a8a671dee3a3c6777fb39971bad33c60f8c3a7dc85b7ec099a1b364",
+      "pcm_sha256": "242a4e5543c7e6da400ce94e55c861467c810faeafad6845e639e09cdcd5ecf4",
+      "frames": 17,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_1ch_explicit.flac",
+      "encoded_sha256": "cc6f9a2907c02c59f10f215d806caaef2c02449a2ce849c6b8a8229041e865d1",
+      "pcm_sha256": "242a4e5543c7e6da400ce94e55c861467c810faeafad6845e639e09cdcd5ecf4",
+      "frames": 17,
+      "channels": 1,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_2ch.flac",
+      "encoded_sha256": "63e4c8a6d90281e64d7d6e1fa72687571c4b91cf0fc7416ab8ecc597f18bfed4",
+      "pcm_sha256": "4ffacfd2c82e91a9042d2ea9a5e66f2768ef0ba5cc59b93490258442101dbc4e",
+      "frames": 17,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_2ch_explicit.flac",
+      "encoded_sha256": "558a6b5d08366cb9cbfb3701af4840f65bd29ca79d26ddd9a955e3e184688c19",
+      "pcm_sha256": "4ffacfd2c82e91a9042d2ea9a5e66f2768ef0ba5cc59b93490258442101dbc4e",
+      "frames": 17,
+      "channels": 2,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_3ch.flac",
+      "encoded_sha256": "db918966c02578c77599a4f0c4fd8c8f8351549b9249ce58db16ec429ab0ef03",
+      "pcm_sha256": "0f71fea55bbb68ab18cb204b15b54d262e2de7b22d39a498fdc230d2eb851ebb",
+      "frames": 17,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_3ch_explicit.flac",
+      "encoded_sha256": "9d7019537f792429231af17938c274a0794b4125065b1360d5961b6370d77317",
+      "pcm_sha256": "0f71fea55bbb68ab18cb204b15b54d262e2de7b22d39a498fdc230d2eb851ebb",
+      "frames": 17,
+      "channels": 3,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_4ch.flac",
+      "encoded_sha256": "3c28bda1e9033975ab91d21d3f77069a521874cea252e49a367d3304e069e867",
+      "pcm_sha256": "2d49727d88671dfe495eaf5a222f3d77f5eedb62d49e4e7339f050ca141329d2",
+      "frames": 17,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_4ch_explicit.flac",
+      "encoded_sha256": "7b7d326ed0e7cfe70e44a5cedb6f7aa602b467afee071c5703d647d4a50a51da",
+      "pcm_sha256": "2d49727d88671dfe495eaf5a222f3d77f5eedb62d49e4e7339f050ca141329d2",
+      "frames": 17,
+      "channels": 4,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_5ch.flac",
+      "encoded_sha256": "44666fa010a4c35f29a5c38a2b4db2606e8df8b436b9f21b4f423d6445b61db8",
+      "pcm_sha256": "f0b804bf26dcd8f4a53df3c46b6d32d70c8059ec996c6a97ce33ff4409754bdb",
+      "frames": 17,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_5ch_explicit.flac",
+      "encoded_sha256": "60d50d3b7565fe176cfc4ffa0f7e0ce2c56f0a09985b2ba45336bf18892a2a58",
+      "pcm_sha256": "f0b804bf26dcd8f4a53df3c46b6d32d70c8059ec996c6a97ce33ff4409754bdb",
+      "frames": 17,
+      "channels": 5,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_6ch.flac",
+      "encoded_sha256": "d8b930ddad89b81ea50266848754af026bf62ccb2b5e4f3ede20a75123a35191",
+      "pcm_sha256": "c4d3c364f7623eb0f4b1d15e6a9b0d5564228fe9ae43b9a6a46176af4628c3e8",
+      "frames": 17,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_6ch_explicit.flac",
+      "encoded_sha256": "72082d3944153a77a3d32aa34faa582a929c6a0e51c40b854e3c1c0faeace03b",
+      "pcm_sha256": "c4d3c364f7623eb0f4b1d15e6a9b0d5564228fe9ae43b9a6a46176af4628c3e8",
+      "frames": 17,
+      "channels": 6,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_7ch.flac",
+      "encoded_sha256": "5f3b4d4fe6c067b16c1ab5699372357ba2ee2812d558ed7c08e6db43a4ab7ce3",
+      "pcm_sha256": "31dae60618eed096f0c7d859d9676c48c991d71931eaf98510f6adad5dd5adc6",
+      "frames": 17,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_7ch_explicit.flac",
+      "encoded_sha256": "0dbab2c02097ac93e58a1c9a6a7e3381ee5e7d16b096f46152e0e9af94d28621",
+      "pcm_sha256": "31dae60618eed096f0c7d859d9676c48c991d71931eaf98510f6adad5dd5adc6",
+      "frames": 17,
+      "channels": 7,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_8ch.flac",
+      "encoded_sha256": "2d7a657905b94db7d492d298760d91856018323d32f5ceeafba2b971791ae036",
+      "pcm_sha256": "8dbeb97d387add702264da0568feb096f08358af8e9da18f05d75272ca8290ff",
+      "frames": 17,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim8_8ch_explicit.flac",
+      "encoded_sha256": "b25055df1cf0dcb98370669a74de2c7baf3a74e83ee9a42db4be84d0195e3a00",
+      "pcm_sha256": "8dbeb97d387add702264da0568feb096f08358af8e9da18f05d75272ca8290ff",
+      "frames": 17,
+      "channels": 8,
+      "depth": 8
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_1ch.flac",
+      "encoded_sha256": "9ddb6a3ece82e031f565aaa86a7466cd14b94b3904913383b33ef77b70bbec2b",
+      "pcm_sha256": "d7f7df34cc4cca51c5f0d028e3f933b856eb063c8b06ccac25ba484973252de9",
+      "frames": 17,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_1ch_explicit.flac",
+      "encoded_sha256": "39345e26b394dc454f662b5f70f6f2711545d3292ae6702c69d37c65878e434c",
+      "pcm_sha256": "d7f7df34cc4cca51c5f0d028e3f933b856eb063c8b06ccac25ba484973252de9",
+      "frames": 17,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_2ch.flac",
+      "encoded_sha256": "b7ba8143751362a57244e89cd2712c9ad3de5d3a4644d158f7f01c0e5478bba8",
+      "pcm_sha256": "55977cc5266bf9b8f2e882eeb7c9e7e718ab1a689f5bae18dc9dcd212f8e9905",
+      "frames": 17,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_2ch_explicit.flac",
+      "encoded_sha256": "3d564cb759b0d78138b0deb259903a162d4a582d9d183865904c3e40b2c8f1e9",
+      "pcm_sha256": "55977cc5266bf9b8f2e882eeb7c9e7e718ab1a689f5bae18dc9dcd212f8e9905",
+      "frames": 17,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_3ch.flac",
+      "encoded_sha256": "fcc487e4545f9470d8c8af461b2ef431a1eeb5c5a244be4718bdc627c54e44e4",
+      "pcm_sha256": "a3677fa51b7cd1ee7a078ba30d6bac7efa900d2272f16c73e8949c5a5bd3819a",
+      "frames": 17,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_3ch_explicit.flac",
+      "encoded_sha256": "05b67b71080869d12e7d8a4c43d31dd05f09f5274e5d9f401c25b43726df342a",
+      "pcm_sha256": "a3677fa51b7cd1ee7a078ba30d6bac7efa900d2272f16c73e8949c5a5bd3819a",
+      "frames": 17,
+      "channels": 3,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_4ch.flac",
+      "encoded_sha256": "c65d079490d84d8fc3566e1dfbff8120052d5f4c8b0172432c7f657eab10e191",
+      "pcm_sha256": "bd0e62cc28a479b8d6e887d67b8e82077fa3c91bdf569828db20588f3b6f8903",
+      "frames": 17,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_4ch_explicit.flac",
+      "encoded_sha256": "0c67bccbc73372daa9fa9856cb3b4710a9fea3560fad4a023c2d048d004210ef",
+      "pcm_sha256": "bd0e62cc28a479b8d6e887d67b8e82077fa3c91bdf569828db20588f3b6f8903",
+      "frames": 17,
+      "channels": 4,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_5ch.flac",
+      "encoded_sha256": "dca9d5273c984660d8110938db68881cb46be4fdfa150b697b1fe228336462f1",
+      "pcm_sha256": "dffb3a89c328ce8a91519b9e7643180b728a4a19157fbdaa4b78cffc9adb865b",
+      "frames": 17,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_5ch_explicit.flac",
+      "encoded_sha256": "3686b5bdf48e840d257056db6a309a3d90f5a35563d1c6dc387cd65723b0714d",
+      "pcm_sha256": "dffb3a89c328ce8a91519b9e7643180b728a4a19157fbdaa4b78cffc9adb865b",
+      "frames": 17,
+      "channels": 5,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_6ch.flac",
+      "encoded_sha256": "2973b25eaf6f5abb488fcf9d91ac38b38bfde657dced8d6b383dda9a1c8cf90c",
+      "pcm_sha256": "8216080927c4126c5fc77871a22a124ea5e5608b057dee9105d0a445206a830f",
+      "frames": 17,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_6ch_explicit.flac",
+      "encoded_sha256": "ccab183917f71e6db64c99c3dcbc28569a16f7be7ab0cde06a67d94dbf7a044f",
+      "pcm_sha256": "8216080927c4126c5fc77871a22a124ea5e5608b057dee9105d0a445206a830f",
+      "frames": 17,
+      "channels": 6,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_7ch.flac",
+      "encoded_sha256": "a6ed681a43ce4064dcffbd0c319e998af76e76d298c7b9d89d48418e8b911aef",
+      "pcm_sha256": "096d950b0702aa0d26bf1059631c55884334639e99b3ac3ccc2447c4ed1c8187",
+      "frames": 17,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_7ch_explicit.flac",
+      "encoded_sha256": "4ffa48e75bff64d374cb1fa8bbc035dd473defa2a36d132933667eec5756e5a7",
+      "pcm_sha256": "096d950b0702aa0d26bf1059631c55884334639e99b3ac3ccc2447c4ed1c8187",
+      "frames": 17,
+      "channels": 7,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_8ch.flac",
+      "encoded_sha256": "b834411c4ebb1b6c3da2dea5df81b08e3887b06ae45a5e1f01d5e973e9c8cb94",
+      "pcm_sha256": "8a6b8206eff0c1c70b0f2c9d2116a3251df2c890c54ba58911a4eb4354b1e51d",
+      "frames": 17,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim16_8ch_explicit.flac",
+      "encoded_sha256": "1f272dc0cbe349dc1597e7efd8f222ceeb27b4b9c6b97dbaa2a3887eaabd3151",
+      "pcm_sha256": "8a6b8206eff0c1c70b0f2c9d2116a3251df2c890c54ba58911a4eb4354b1e51d",
+      "frames": 17,
+      "channels": 8,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_1ch.flac",
+      "encoded_sha256": "d43b094c118ad186e9c8675fa6d0d732d28e03f1293d70b161149ccab9f5c800",
+      "pcm_sha256": "d29854511dc6eca6035328e41bd29421a01756b4425e23892404ee16fe64590f",
+      "frames": 17,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_1ch_explicit.flac",
+      "encoded_sha256": "d7587e7eeb08406bde87972b9de2ef583271cd42e974d2e9b096178af1294d77",
+      "pcm_sha256": "d29854511dc6eca6035328e41bd29421a01756b4425e23892404ee16fe64590f",
+      "frames": 17,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_2ch.flac",
+      "encoded_sha256": "5af290c72a91b8e19f91ef1de31a24138fbea14fade7f250c16bbbbbac616580",
+      "pcm_sha256": "c7a9550c592e92f11a9709f910b00b2107dc9f1bb54b97238c6ea8d7e4f1540b",
+      "frames": 17,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_2ch_explicit.flac",
+      "encoded_sha256": "d448771d52c184456860bfde603e55b39dcafe899e83a16de84e0d7e74d757e4",
+      "pcm_sha256": "c7a9550c592e92f11a9709f910b00b2107dc9f1bb54b97238c6ea8d7e4f1540b",
+      "frames": 17,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_3ch.flac",
+      "encoded_sha256": "b9179be06f3136034870b2e74933ea55b8763a2484a844d151b7885f7cb53b37",
+      "pcm_sha256": "e2ca958fb5db235c8e8e980edec8cd3dee78b325d622fdf1f99293bb5fc5a94e",
+      "frames": 17,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_3ch_explicit.flac",
+      "encoded_sha256": "6c702249acac90fe94c3cc7aa132fbb0b646cd8bd27b981741928c2ca8ed586c",
+      "pcm_sha256": "e2ca958fb5db235c8e8e980edec8cd3dee78b325d622fdf1f99293bb5fc5a94e",
+      "frames": 17,
+      "channels": 3,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_4ch.flac",
+      "encoded_sha256": "48be196e4edf3dce31acda415394d75181ce50ca00ecd79ca66a08f140db0aed",
+      "pcm_sha256": "4ca6675ef785fb86d5bf9d73ddfae0be5f45bdab7b0bf2aafe7013dc21bda88f",
+      "frames": 17,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_4ch_explicit.flac",
+      "encoded_sha256": "141812f4296db62601d95484c5139755a93a22f3e58ef9eaaac6c8756d742056",
+      "pcm_sha256": "4ca6675ef785fb86d5bf9d73ddfae0be5f45bdab7b0bf2aafe7013dc21bda88f",
+      "frames": 17,
+      "channels": 4,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_5ch.flac",
+      "encoded_sha256": "ae0623feacbb64dcc6c9d8b8648e4572b5a638bf1f39fae85a4f4efbe2f2edaf",
+      "pcm_sha256": "f51003f3bea09e59a7bd9e7f5fde3e72a15f2e83c4feee47a13903b5cd599674",
+      "frames": 17,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_5ch_explicit.flac",
+      "encoded_sha256": "4517774c2bfeabf8b1c4deacb4c45f6860103becc51ee3dd3eed2957f27a91b7",
+      "pcm_sha256": "f51003f3bea09e59a7bd9e7f5fde3e72a15f2e83c4feee47a13903b5cd599674",
+      "frames": 17,
+      "channels": 5,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_6ch.flac",
+      "encoded_sha256": "a17f38945324af50eed1d387e1ba52dce886429fa3e7d8a3516df7287320e465",
+      "pcm_sha256": "db955b04d5a05f3015f6cc5f446bd8fac358778c464eb66ce01cb4646a0bb220",
+      "frames": 17,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_6ch_explicit.flac",
+      "encoded_sha256": "270cc7a011fff5ea7b7e5ede2d2b6f02f9bd59f26f6e86c7708ad1995b414e39",
+      "pcm_sha256": "db955b04d5a05f3015f6cc5f446bd8fac358778c464eb66ce01cb4646a0bb220",
+      "frames": 17,
+      "channels": 6,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_7ch.flac",
+      "encoded_sha256": "f055b83f4a77f081179466f9d33b8aab736cf085c690bebd2c38c5e3783e43a8",
+      "pcm_sha256": "31962e8b221a986237c6a1c9f7965f08e209e77ca8104a79081e1ae684747e79",
+      "frames": 17,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_7ch_explicit.flac",
+      "encoded_sha256": "89843fe2a2995be7962c86c5c7e4f1ad3b48934ab1420f71bad249b5c88d4208",
+      "pcm_sha256": "31962e8b221a986237c6a1c9f7965f08e209e77ca8104a79081e1ae684747e79",
+      "frames": 17,
+      "channels": 7,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_8ch.flac",
+      "encoded_sha256": "5d86a4421db72032f03306c685ac58a4490fd8a9ec88ab29c6a8d96e1b3545ad",
+      "pcm_sha256": "0548a63b5654846019411635351e494a73aa5b9e9e0ba9545c048d21dbe199e5",
+      "frames": 17,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim24_8ch_explicit.flac",
+      "encoded_sha256": "b1ba1caf64d98cb9113f8b972442bd5684a97bc9e300f4fb449b4dedf0e2f535",
+      "pcm_sha256": "0548a63b5654846019411635351e494a73aa5b9e9e0ba9545c048d21dbe199e5",
+      "frames": 17,
+      "channels": 8,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_1ch.flac",
+      "encoded_sha256": "3fd5c2552674248a6241e3e80e5b79367c17d75bee6954cc52eafdb132e12b01",
+      "pcm_sha256": "eeeea685b172fb46612ec2141363825652781f2aacf2526df24d5b8b477ecff3",
+      "frames": 17,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_1ch_explicit.flac",
+      "encoded_sha256": "93eb022f43aedd0018667e62510ad485311e5199ac73e77017bee703d9008215",
+      "pcm_sha256": "eeeea685b172fb46612ec2141363825652781f2aacf2526df24d5b8b477ecff3",
+      "frames": 17,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_2ch.flac",
+      "encoded_sha256": "6ee6d5a74c04ec1e841ba4f57fdaa769a08f8da50aac9ca845c3d05da42b09fb",
+      "pcm_sha256": "69d96aaf94b81dd9052159f17c644f50a789190f4f7849388ede1e0848586a85",
+      "frames": 17,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_2ch_explicit.flac",
+      "encoded_sha256": "d97cb8947980f0217abf071dd0305b77341f950378fbf649c006ff623a5c587b",
+      "pcm_sha256": "69d96aaf94b81dd9052159f17c644f50a789190f4f7849388ede1e0848586a85",
+      "frames": 17,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_3ch.flac",
+      "encoded_sha256": "7720377648b3a412dc0eafcca8a8b6f3e9bcc67bb9aaca5420da05e279eab8c2",
+      "pcm_sha256": "e4b5eff49d6df5c8693793c43939385eae876b741b174a4d782e1054dc9610dc",
+      "frames": 17,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_3ch_explicit.flac",
+      "encoded_sha256": "29fec31d1da71e7f33f6eaa2d2b4a017f1828977f9f824671c160d7f51acf983",
+      "pcm_sha256": "e4b5eff49d6df5c8693793c43939385eae876b741b174a4d782e1054dc9610dc",
+      "frames": 17,
+      "channels": 3,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_4ch.flac",
+      "encoded_sha256": "9f81d56be40808d6725d4175d73bd85fb8900e45dc4fbac279c52a449cde5a02",
+      "pcm_sha256": "1982ac7f2ce7c18b0d83d03ddf765aa9c7c99bf3af808f9f9fe2de009c605c00",
+      "frames": 17,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_4ch_explicit.flac",
+      "encoded_sha256": "504e1ace1e45557a7f0fa5afa9b2e621b37177916d7941ccb8fab5d0c054cb39",
+      "pcm_sha256": "1982ac7f2ce7c18b0d83d03ddf765aa9c7c99bf3af808f9f9fe2de009c605c00",
+      "frames": 17,
+      "channels": 4,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_5ch.flac",
+      "encoded_sha256": "c6e1fd11a8864cfc4c3e213d441190ecd974c777d86d50cd65cad77dd26a49a8",
+      "pcm_sha256": "d37380643a611292e103c4f34a0669f8e43feb1211ce9a8417d702935a5cf546",
+      "frames": 17,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_5ch_explicit.flac",
+      "encoded_sha256": "cb21c2b315e43cddd2ad43d08c6ab832a5eae06ca98f1a674c7775b074ce6da9",
+      "pcm_sha256": "d37380643a611292e103c4f34a0669f8e43feb1211ce9a8417d702935a5cf546",
+      "frames": 17,
+      "channels": 5,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_6ch.flac",
+      "encoded_sha256": "b3f7d195774fa058f3d44dcb8eb7af6bfe922f0ca09a4ace0465286f8f992db5",
+      "pcm_sha256": "3630c96d1d8a1d168dabdab86254e3b77b4dff032c8fa4c32362fec7421a3af0",
+      "frames": 17,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_6ch_explicit.flac",
+      "encoded_sha256": "2584cd20ed2aca748bd1758fc85f8c991b55a4be825ee49fd4025145decdc774",
+      "pcm_sha256": "3630c96d1d8a1d168dabdab86254e3b77b4dff032c8fa4c32362fec7421a3af0",
+      "frames": 17,
+      "channels": 6,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_7ch.flac",
+      "encoded_sha256": "eda4221b7b23cae81cd69cf145278ff530fa5169cc8162bbdd4431f32927c025",
+      "pcm_sha256": "792d0066256493a198d69088c20b963b45e44f292f43ad0bcf8bbf06cce6d54e",
+      "frames": 17,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_7ch_explicit.flac",
+      "encoded_sha256": "a016588bcffa56b0431ec1de65063dea04d95da7072236b1cc97f03947c35b82",
+      "pcm_sha256": "792d0066256493a198d69088c20b963b45e44f292f43ad0bcf8bbf06cce6d54e",
+      "frames": 17,
+      "channels": 7,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_8ch.flac",
+      "encoded_sha256": "cb83fb334bc022c2b40a0e3a295d581caa31d9bee98065591f423d2fd33e18bc",
+      "pcm_sha256": "512ccd00f51b62938ae450d406a642a86c20a93d86a7769388154daad46890de",
+      "frames": 17,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/verbatim32_8ch_explicit.flac",
+      "encoded_sha256": "1c20c69422759729ceeb0b43dc3eb580e793f1e27a52122779ed50ccd9a745b5",
+      "pcm_sha256": "512ccd00f51b62938ae450d406a642a86c20a93d86a7769388154daad46890de",
+      "frames": 17,
+      "channels": 8,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment8.flac",
+      "encoded_sha256": "d3af0f148401e602fb15b40bd971ed1de56bc09d8701de325179572f1cf94af1",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment8_explicit.flac",
+      "encoded_sha256": "8ba18c07d5ad1dc2572762d9e19eb30856edf3f02d7d9c7964627811bc493827",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment9.flac",
+      "encoded_sha256": "795f321a916d575e27de4342d9411d86cb6d3840609ee8b06f408fa89b6a7b0f",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment9_explicit.flac",
+      "encoded_sha256": "9560608cd1877c4c6b38a3fb533033b0da55cf372527d6c75f2010fe336758a2",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment10.flac",
+      "encoded_sha256": "e676ed9c350c1e5bcb49a06c72a712db71f08b8883806425515477268588aa85",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_assignment10_explicit.flac",
+      "encoded_sha256": "5141fdb315ffa005103140ac4e098f03d166368ae31085a5c586bd22f73980f9",
+      "pcm_sha256": "637db626e7dc0b843a3c5c1360eabcf5e0d89229e3cf68d28e46f6d2fb341696",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted1.flac",
+      "encoded_sha256": "7cc2e9bb51bf58ee0e289312fc7219284ada9d186e1668b93f276c3f3ed3a309",
+      "pcm_sha256": "7c23e33a415c7f3ddc3409ab6c947957201da325e20191eeda824bec6cff65b7",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted1_explicit.flac",
+      "encoded_sha256": "c7b8da38c91c8ce0961b4d5b8fc0c761e28dcda5ca5b0f36662f6a0a3e0b2238",
+      "pcm_sha256": "7c23e33a415c7f3ddc3409ab6c947957201da325e20191eeda824bec6cff65b7",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted16.flac",
+      "encoded_sha256": "674b0e089ed0a4d4ba1d3ab21663a363bff799a516ee4ffbccd1a2bc77072bfb",
+      "pcm_sha256": "1254b87e68d84757d92530eb60397a2808cba24b3132a397715d3572bd608155",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted16_explicit.flac",
+      "encoded_sha256": "10702209730fc95bb175b590d60a2d0a978fc3fa994c5fb4f2cf822267011bf7",
+      "pcm_sha256": "1254b87e68d84757d92530eb60397a2808cba24b3132a397715d3572bd608155",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted31.flac",
+      "encoded_sha256": "97ac7452e616ce613c3268e95160519b8ef31e4dd0870c2e8f35e755e95a5967",
+      "pcm_sha256": "ff6a523b9c4270d92f81ce63618c1bddf2827b9b483a8541fb67cddabec798b6",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted31_explicit.flac",
+      "encoded_sha256": "648b60f15ed993faa1dc8d6fbcb7fe3b2d4cd2da39ea936551ed458ce9464c45",
+      "pcm_sha256": "ff6a523b9c4270d92f81ce63618c1bddf2827b9b483a8541fb67cddabec798b6",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted32.flac",
+      "encoded_sha256": "76500a797de2d79dc4d1eed51a2ba971322512ed45237e5fdff2665414c8288c",
+      "pcm_sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_wasted32_explicit.flac",
+      "encoded_sha256": "fdbe2cc799d53269ca3ed314dea5eba41a685ee89d0d33c19cf8626c846efd12",
+      "pcm_sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+      "frames": 16,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed1.flac",
+      "encoded_sha256": "d40d0438f716a248dfddf7c102965b2e4845827adfb7448fc7ed7b093ee31661",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed1_explicit.flac",
+      "encoded_sha256": "dd01413aef5e3db8ad6e182fd53e8926b07f80c6a59175caf5e62879f1e25e1c",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed2.flac",
+      "encoded_sha256": "eea300cc8b630bea3acf994113739dbd87ced81b8856265862913c28c14b73a7",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed2_explicit.flac",
+      "encoded_sha256": "7930831c7adadcdf08f9456aa743b087517aaf155cb20cfb78ed2428f2c65336",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed3.flac",
+      "encoded_sha256": "4c7c1dbb4d1b39119b6e6778c7d78fc4a1cb8b0b53ae77354004382a91cdb590",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed3_explicit.flac",
+      "encoded_sha256": "a98dec52df640bc2098fb2cd3a9ceb4b9bd7192d0b0faab80dd141f7e1ccf835",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed4.flac",
+      "encoded_sha256": "06aebefb3da699cae419a3d1a416a354c64d2c88d0d6477c03ccdf99ca0c50f0",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_fixed4_explicit.flac",
+      "encoded_sha256": "35939963ce2430a98d1904646a15f8760f922b962405d7dc6d8d2bd82b554f97",
+      "pcm_sha256": "573e7ec02943126bb9c77cdaa2b658abc0012b2fdfb86fbfbeb14675f3f9c21e",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC2_shift15.flac",
+      "encoded_sha256": "b3ca4749ee88be94136b4565fba901b131f014d797b327e9b49f64e750fc8d4c",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC2_shift15_explicit.flac",
+      "encoded_sha256": "8db517310891a116723922afdab1565a5d5b8bb69ebe6106915cecdf3c0278ba",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC12_shift15.flac",
+      "encoded_sha256": "68c9b8ccdfdeaf80e9bb01ec977d8673366c6c781b351ad9e0210dc65ff7e32d",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC12_shift15_explicit.flac",
+      "encoded_sha256": "1fd2e6e0f2e22cc8574ea5bcdc706d7b94ad034bf6646ffc52d6291367c82f06",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC32_shift15.flac",
+      "encoded_sha256": "7b4094c277a703fa5e79cc2176200460869adafb28e444a7487be6e0fad21da0",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC32_shift15_explicit.flac",
+      "encoded_sha256": "f4aad2305bcdc15b8abe47ac027c4b0be4494c41011c0955235f4ed31a33daa5",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC1_shift0.flac",
+      "encoded_sha256": "fb9a5b41c5af9c5449022924f24478aaf7abcb3f8ec67a005e9a277c4e76b551",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/side33_LPC1_shift0_explicit.flac",
+      "encoded_sha256": "ad59be748be77ab813abc97bb027ac8327e9dcabc773ef4303e18a9c54aab234",
+      "pcm_sha256": "d7a217e398b32be0bb5f816b919269da5926166b045b4ba5fb7a99b35bfa62dc",
+      "frames": 64,
+      "channels": 2,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/residual32_escapefalse.flac",
+      "encoded_sha256": "dec633772148e6d2b6113b7d59003a40cb30e3abe1b251c7efc84c66fa55e9cf",
+      "pcm_sha256": "9d68de9bf7e945519f55967ee3b32c7510911be46daba89292417ab0a66363d0",
+      "frames": 16,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/residual32_escapefalse_explicit.flac",
+      "encoded_sha256": "97453992e8811844e4a97ca8d65a3f44ee535602df2bfcbcb7f6a2582c528ec9",
+      "pcm_sha256": "9d68de9bf7e945519f55967ee3b32c7510911be46daba89292417ab0a66363d0",
+      "frames": 16,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/residual32_escapetrue.flac",
+      "encoded_sha256": "731111384900973386791b8fa98140f838ba8ed21d8b9f59e2290b1df90b9734",
+      "pcm_sha256": "1c0e9090056254ec315b37e461ec62597f8feb9a3712b442d8c265153f4e8cc5",
+      "frames": 16,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac_input/hand/residual32_escapetrue_explicit.flac",
+      "encoded_sha256": "c6eaf64ecfd7640915d2f30cdb49ccae04b356f88ab0d305cb93eaef8e86e4d8",
+      "pcm_sha256": "1c0e9090056254ec315b37e461ec62597f8feb9a3712b442d8c265153f4e8cc5",
+      "frames": 16,
+      "channels": 1,
+      "depth": 32
+    },
+    {
+      "file": "tests/data/audio/flac/pcm16_1ch_silence_n1_b16.flac",
+      "encoded_sha256": "224888100eb2a0277279b87745dce473f18826ee7b8afde96eab1ff3d630beae",
+      "pcm_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "frames": 1,
+      "channels": 1,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac/pcm16_2ch_extremes_n255_b257.flac",
+      "encoded_sha256": "b0c4d93b77a9f5ce994d07f041f39480e1f823e8790aa36e4689b7ce841c2370",
+      "pcm_sha256": "4db3b01c1b21e70ce2014b8757091cc94340c9baac2f15ee4c679ac769ff870d",
+      "frames": 255,
+      "channels": 2,
+      "depth": 16
+    },
+    {
+      "file": "tests/data/audio/flac/pcm24_1ch_predictor4_n160_b4096.flac",
+      "encoded_sha256": "e52d8a7a0249354660289c75f9cdc54c103be00211c6ae5e080f4b67450e94b4",
+      "pcm_sha256": "6f0e000673ea19ed77df427e62da003385d2296eaa341684998336e8078745f0",
+      "frames": 160,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac/pcm24_1ch_escape1_n512_b4096.flac",
+      "encoded_sha256": "f9309f6e7760e0f08ae87a77d74eaf17c0396488f8821fda5167b8111c262062",
+      "pcm_sha256": "30d3e88c732b5e3597a284c520ec907de8e4667b048d2d3aab18c6c1382e2496",
+      "frames": 512,
+      "channels": 1,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac/pcm24_2ch_random_n16_b4096.flac",
+      "encoded_sha256": "c451deabdc903cadec94bde36761b16bd72854f3700d22fd814e2948e0eec1a1",
+      "pcm_sha256": "062dbd9c6c9e6d691358b29b89a3f42141c72d9425a2c795cca39aeea6dbd409",
+      "frames": 16,
+      "channels": 2,
+      "depth": 24
+    },
+    {
+      "file": "tests/data/audio/flac/pcm24_2ch_silence_n4097_b4096.flac",
+      "encoded_sha256": "678780e23f1e4894abcd9394d9d1e9e304904dac3acd0e4b076a5d8145db0a2a",
+      "pcm_sha256": "c8a38c869f76072a5e7684651b8ba443301303f8178dc6515d6985e12484df09",
+      "frames": 4097,
+      "channels": 2,
+      "depth": 24
+    }
+  ],
+  "comparison": "full frame/channel counts and signed PCM bytes, no trim/channel conversion; original PCM hashes",
+  "total_streams": 306,
+  "total_scalar_samples": 519805,
+  "go_variants": "pinned before and candidate/current: full ReadFLAC test set passed, including original per-sample/hash oracles, exact hand bytes, invalidity and budgets"
+}

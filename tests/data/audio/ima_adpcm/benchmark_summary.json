@@ -1,0 +1,74 @@
+{
+  "go": "go1.27.3 darwin/arm64",
+  "hardware": "Apple M2",
+  "os": "macOS15.7.1",
+  "CGO_ENABLED": 0,
+  "tags": [
+    "noasm"
+  ],
+  "GOMAXPROCS": 1,
+  "samples": 5,
+  "benchtime": "300ms",
+  "p": 1,
+  "workload": "48000Hz,48000 frames, fixed-seed nibble bytes and varying legal initial step indices; mono/stereo; full last-block decode then fact trim",
+  "includes": "RIFF validation, PCM allocation, scratch allocation, full decoding, fact validation",
+  "excludes": "input construction, disk, startup, independent codecs",
+  "cases": {
+    "ch1_block256": {
+      "ns/op": [
+        195799,
+        201052,
+        197349,
+        195518,
+        210567
+      ],
+      "B/op": 393704,
+      "allocs/op": 14,
+      "median_ns/op": 197349,
+      "min_ns/op": 195518,
+      "max_ns/op": 210567
+    },
+    "ch1_block1024": {
+      "ns/op": [
+        202115,
+        234514,
+        212783,
+        198075,
+        197991
+      ],
+      "B/op": 394472,
+      "allocs/op": 14,
+      "median_ns/op": 202115,
+      "min_ns/op": 197991,
+      "max_ns/op": 234514
+    },
+    "ch2_block256": {
+      "ns/op": [
+        339100,
+        338466,
+        341153,
+        338595,
+        343309
+      ],
+      "B/op": 770536,
+      "allocs/op": 14,
+      "median_ns/op": 339100,
+      "min_ns/op": 338466,
+      "max_ns/op": 343309
+    },
+    "ch2_block1024": {
+      "ns/op": [
+        349445,
+        430001,
+        351618,
+        349173,
+        350784
+      ],
+      "B/op": 787688,
+      "allocs/op": 14,
+      "median_ns/op": 350784,
+      "min_ns/op": 349173,
+      "max_ns/op": 430001
+    }
+  }
+}

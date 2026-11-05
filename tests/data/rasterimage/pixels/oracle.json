@@ -1,0 +1,419 @@
+{
+  "cases": [
+    {
+      "name": "original",
+      "png": "original.png",
+      "rgba": "original.rgba",
+      "steps": []
+    },
+    {
+      "name": "invert",
+      "png": "invert.png",
+      "rgba": "invert.rgba",
+      "steps": [
+        {
+          "op": "invert"
+        }
+      ]
+    },
+    {
+      "name": "invert_twice",
+      "png": "invert_twice.png",
+      "rgba": "invert_twice.rgba",
+      "steps": [
+        {
+          "op": "invert"
+        },
+        {
+          "op": "invert"
+        }
+      ]
+    },
+    {
+      "name": "opacity_subbyte",
+      "png": "opacity_subbyte.png",
+      "rgba": "opacity_subbyte.rgba",
+      "steps": [
+        {
+          "factor": 0.001953125,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "opacity",
+      "png": "opacity.png",
+      "rgba": "opacity.rgba",
+      "steps": [
+        {
+          "factor": 0.37,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "opacity_restore",
+      "png": "opacity_restore.png",
+      "rgba": "opacity_restore.rgba",
+      "steps": [
+        {
+          "factor": 0,
+          "op": "opacity"
+        },
+        {
+          "factor": 1,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "opacity_absolute",
+      "png": "opacity_absolute.png",
+      "rgba": "opacity_absolute.rgba",
+      "steps": [
+        {
+          "factor": 0.25,
+          "op": "opacity"
+        },
+        {
+          "factor": 0.75,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "replace",
+      "png": "replace.png",
+      "rgba": "replace.rgba",
+      "steps": [
+        {
+          "op": "color",
+          "rgb": [
+            0.1,
+            0.501,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace_alpha",
+      "png": "replace_alpha.png",
+      "rgba": "replace_alpha.rgba",
+      "steps": [
+        {
+          "alpha": 0.5,
+          "op": "color",
+          "rgb": [
+            0.1,
+            0.501,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace_restore",
+      "png": "replace_restore.png",
+      "rgba": "replace_restore.rgba",
+      "steps": [
+        {
+          "alpha": 0.5,
+          "op": "color",
+          "rgb": [
+            0.1,
+            0.501,
+            1.0
+          ]
+        },
+        {
+          "factor": 0.75,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "tint",
+      "png": "tint.png",
+      "rgba": "tint.rgba",
+      "steps": [
+        {
+          "op": "tint",
+          "rgb": [
+            0.37,
+            0.8,
+            0.125
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zero_invert_restore",
+      "png": "zero_invert_restore.png",
+      "rgba": "zero_invert_restore.rgba",
+      "steps": [
+        {
+          "factor": 0,
+          "op": "opacity"
+        },
+        {
+          "op": "invert"
+        },
+        {
+          "factor": 1,
+          "op": "opacity"
+        }
+      ]
+    },
+    {
+      "name": "chain",
+      "png": "chain.png",
+      "rgba": "chain.rgba",
+      "steps": [
+        {
+          "op": "invert"
+        },
+        {
+          "op": "tint",
+          "rgb": [
+            0.37,
+            0.8,
+            0.125
+          ]
+        },
+        {
+          "factor": 0.37,
+          "op": "opacity"
+        }
+      ]
+    }
+  ],
+  "files_sha256": {
+    "chain.png": "a7974d051fecb763b17e7d30f95d4a9e9e5baa2dafba3eeb3d0c4153f5a55131",
+    "chain.rgba": "da4dce47d791f4829a2de879b7d599c152340073906bf420b90499bc8882fdaa",
+    "frame_0.25.png": "02caef5080b062c7a0a70f87b6d07311101c505a309dc6a231fc8d795e79d6f2",
+    "frame_0.5.png": "899e06b63bf6e1b7a8613c2d851b183d79c3943efa5d5b27d446ca6b5ecc1430",
+    "frame_0.75.png": "026105dc21284675e42cc7c34234d45a433a075a4384b83c193ae9f720e17176",
+    "frame_0.png": "e0a600268e4e838cbb2d645ad9b64530a4ccac386ae25907aad6d9f68271b733",
+    "frame_1.5.png": "5b99c9192c107ec817661eda9b9fac762533742e47a3135e7ce9f6a4198c25c3",
+    "frame_1.png": "6aa454045200c7ed9b32a9d31b6dc8ac81b99f24a4b1630a9654ccc52529349d",
+    "frame_2.5.png": "65d19a5ed18d9afcdba03dddf27e9d89f94aa485321d86cbe2eda58d5402e206",
+    "frame_2.png": "7469a62eb66b952f1a77fafc27ca3cf55b4d2dcc561960d9db727fb250baa659",
+    "frame_3.png": "e0a600268e4e838cbb2d645ad9b64530a4ccac386ae25907aad6d9f68271b733",
+    "input.nrgba": "56b364402210cb771f60fa06c7d135431d5e954dda5fe21ac2cc519e18ee5ff0",
+    "input.png": "c1e1b2fe8f1b8a4f84b85a044ddab9301f3c5336412cbe395a4cb8c84688df83",
+    "invert.png": "144dcd9293f593a8181ee4234966ec986fdc829190e325b2105403be258c108e",
+    "invert.rgba": "5c0ef3616f9a37351af1d7744feecb768324a31886f039877b388a0be0074647",
+    "invert_twice.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "invert_twice.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "opacity.png": "d1d42eaa3125dfbbf58d57abed41388abdc26fc709d8a00d3691875348ad8acd",
+    "opacity.rgba": "c4cd265745161ac5c123a0c5b3ebd10ab04c914a7af3dfc7f496c3fa373cd9cb",
+    "opacity_absolute.png": "6a3e50a03828b403362a3e4b1d6a8a2b8bd7ef8320b29a4b98738b283a1fb535",
+    "opacity_absolute.rgba": "6bd39057df5cb216d195549ea6cb05d5a7e4c5510c52ac4d21fa8c1fd40c34fb",
+    "opacity_restore.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "opacity_restore.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "opacity_subbyte.png": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f",
+    "opacity_subbyte.rgba": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+    "original.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "original.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "replace.png": "84cfd645b1895a214769ecedad5716a5117817beacd748c30d627cb3323c215c",
+    "replace.rgba": "ad9820e450a477dc75cea5ca224e4cbb59bcde33363eec0bfb7932aeb6beb368",
+    "replace_alpha.png": "7bfaf84d27a3355cd5d8b958d5424f2813b33f128ca2dcb0b1fd3347320916a3",
+    "replace_alpha.rgba": "9b697655eab23440b703fac999f4eed37687bec85ad83915ccf36d8f472b83ad",
+    "replace_restore.png": "f7e234bcc15f741841b982239d1ac815e516d1f14567260b987fed0f75a37cc1",
+    "replace_restore.rgba": "335e3440cc6b5f848a22f5d5959e5c7831fc852ccaf8fa3b16eff7297203002d",
+    "scene_input.nrgba": "e9471368207ac7e5ed17e57eb06e43e32f8d0738fc334234d686deefa43bca88",
+    "subbyte16.rgba": "f0bec2f52cdccac7183bbca3014cf4ccb3dfdc3afd25bc28d4a9a2600cf76953",
+    "tint.png": "8238d81e50f4b3b291def3d60454e3ee0daae5abb41d22b6ba536d4d98ad538d",
+    "tint.rgba": "189e70b6c016e73f7735993968d5e4786bf3cd74f05442418890028aa1bc27e8",
+    "zero_invert_restore.png": "144dcd9293f593a8181ee4234966ec986fdc829190e325b2105403be258c108e",
+    "zero_invert_restore.rgba": "5c0ef3616f9a37351af1d7744feecb768324a31886f039877b388a0be0074647"
+  },
+  "height": 256,
+  "input": "input.nrgba",
+  "limits": {
+    "max_pixels": 7456540,
+    "max_retained_bytes": 67108864
+  },
+  "scene": {
+    "height": 16,
+    "input": "scene_input.nrgba",
+    "states": [
+      {
+        "opacity": 0.0,
+        "png": "frame_0.png",
+        "shift": [
+          0.0,
+          -0.0
+        ],
+        "time": 0.0
+      },
+      {
+        "opacity": 0.25,
+        "png": "frame_0.25.png",
+        "shift": [
+          0.0,
+          -0.0
+        ],
+        "time": 0.25
+      },
+      {
+        "opacity": 0.5,
+        "png": "frame_0.5.png",
+        "shift": [
+          0.0,
+          -0.0
+        ],
+        "time": 0.5
+      },
+      {
+        "opacity": 0.75,
+        "png": "frame_0.75.png",
+        "shift": [
+          0.0,
+          -0.0
+        ],
+        "time": 0.75
+      },
+      {
+        "opacity": 1.0,
+        "png": "frame_1.png",
+        "shift": [
+          0.0,
+          -0.0
+        ],
+        "time": 1.0
+      },
+      {
+        "opacity": 1.0,
+        "png": "frame_1.5.png",
+        "shift": [
+          2.0,
+          -1.0
+        ],
+        "time": 1.5
+      },
+      {
+        "opacity": 1.0,
+        "png": "frame_2.png",
+        "shift": [
+          4.0,
+          -2.0
+        ],
+        "time": 2.0
+      },
+      {
+        "opacity": 0.5,
+        "png": "frame_2.5.png",
+        "shift": [
+          4.0,
+          -2.0
+        ],
+        "time": 2.5
+      },
+      {
+        "opacity": 0.0,
+        "png": "frame_3.png",
+        "shift": [
+          4.0,
+          -2.0
+        ],
+        "time": 3.0
+      }
+    ],
+    "steps": [
+      {
+        "op": "invert"
+      },
+      {
+        "op": "tint",
+        "rgb": [
+          0.5,
+          1.0,
+          0.25
+        ]
+      },
+      {
+        "factor": 0.37,
+        "op": "opacity"
+      }
+    ],
+    "width": 16
+  },
+  "scope": "uint8 pixel byte rules and independent pixel-aligned opaque-background animation frames; tint is a specified extension; hidden alpha0 RGB canonicalized at import; no full Manim camera/resampling or cross-asset morph parity",
+  "source": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "execution": "AST-extracted original ImageMobject set_color/set_opacity, constructor inversion and saved-alpha, color_to_int_rgb/to_int_rgb; minimal state and color constructor",
+    "files_sha256": {
+      "manim/mobject/types/image_mobject.py": "dc4c34e421250985a6b0af7ac130137983dfab10d82523f923a9f65bdb9d556f",
+      "manim/utils/color/core.py": "0453d2b2a9969ff3e0ea0fc2bddf90699dd7457da07c93043ba71e007eed063d",
+      "manim/utils/images.py": "e62383cccbe9bf6444081a59b1aa8946d98e74c4af2fc9f17dc4e58d58fba99e"
+    },
+    "generator_sha256": "4bdf9083ee829d86f1471c9bebac7efa162a71fb865ce3ba12aa899cc4fd4650",
+    "numpy": "2.3.5",
+    "pillow": "11.2.1"
+  },
+  "subbyte16": [
+    [
+      65535,
+      1025,
+      32769,
+      0
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      1
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      127
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      255
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      256
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      257
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      511
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      512
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      32767
+    ],
+    [
+      65535,
+      1025,
+      32769,
+      65535
+    ]
+  ],
+  "width": 256
+}

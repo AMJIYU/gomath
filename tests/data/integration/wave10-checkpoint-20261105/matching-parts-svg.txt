@@ -1,0 +1,26 @@
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-00.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-00.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-01.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-01.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-02.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/matching-parts-wave10-svg-20261105/frame-02.svg
+[
+  {
+    "time": 0.5,
+    "RGBA_MAE": 0.05956380208333333,
+    "maximum_channel_delta": 18,
+    "fraction_pixels_any_channel_over_8": 0.002183159722222222
+  },
+  {
+    "time": 1.7,
+    "RGBA_MAE": 0.060455729166666666,
+    "maximum_channel_delta": 38,
+    "fraction_pixels_any_channel_over_8": 0.002230902777777778
+  },
+  {
+    "time": 3.3,
+    "RGBA_MAE": 0.06180555555555556,
+    "maximum_channel_delta": 18,
+    "fraction_pixels_any_channel_over_8": 0.002243923611111111
+  }
+]

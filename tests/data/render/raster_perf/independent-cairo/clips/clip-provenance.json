@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-04",
+  "versions": {
+    "Python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4",
+    "Pillow": "11.2.1"
+  },
+  "generator_sha256": "997da5e0ce1d70d365eae210f477f968a6fe2aa508a50d2cc45bcb589ff989f0",
+  "files": {
+    "clip-nested": {
+      "svg_sha256": "be9d9bc06a6fe9a0503236a2f013bd1145f37af955e632291a09204919845afc",
+      "png_sha256": "1962867182d8633a418bda9fb06c2f5d3e5e0836a79cc6c4bec5eebdbf0c2e2a"
+    },
+    "clip-bitmap": {
+      "svg_sha256": "2621b2531d8a7857c2a762d64ada8867bf80c06f4e9a09a8410fd5b01f8b6fd2",
+      "png_sha256": "b42a35e3196e5a2d75c280c97b44ec43ce2fc27f40119badc38436d25f01bc13"
+    }
+  },
+  "scope": "Two independent 192x144 opaque-background scenes: nonzero ring/convex nested clip intersection on a vector fill; circular clip on the interior of a constant semitransparent 16x16 bitmap. Canonical geometry and colors defined in this script, no Go-exported oracle. Go test additionally applies/inverts a camera transform. Bitmap boundaries lie outside the clip, excluding the renderers' differing source-edge extension filters.",
+  "comparison": "Premultiplied RGBA, all pixels. MAE <= .35/255, max channel delta <= 40, fraction pixels with channel delta > 8 <= .015. These thresholds bound rasterizer edge differences; not pixel identity or full SVG/Manim compatibility.",
+  "runtime": "Pure Go; Python, CairoSVG and Cairo are used only to generate independent development references."
+}

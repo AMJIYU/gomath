@@ -1,0 +1,14 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     762	    459407 ns/op	  33.10 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     634	    567563 ns/op	  52.77 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1828	    200486 ns/op	  10.43 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    7015	     51012 ns/op	 121.99 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	    1210	    298755 ns/op	  48.87 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      82	   4387721 ns/op	  20.32 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   74876	      4870 ns/op	  77.41 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	     100	   3062963 ns/op	 2879783 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	     151	   2374597 ns/op	 2887975 B/op	      19 allocs/op
+PASS

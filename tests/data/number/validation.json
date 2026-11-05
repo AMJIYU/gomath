@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "wave": 7,
+  "date": "2026-11-05",
+  "status": "frozen focused number checkpoint; not whole-repository validation; independent of wave6",
+  "api": [
+    "DefaultOptions / DefaultIntegerOptions",
+    "New(float64,Options) / NewInteger(int64,Options)",
+    "Object; SetValue; Value; Text; AnchorPoint; Source",
+    "DecimalSource.At(float64) / IntegerSource.At(int64)"
+  ],
+  "checks": [
+    {
+      "name": "number",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=number -count=1 -v",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/number.txt",
+      "log_sha256": "4ae34afb482bc7e68dc8f97d5d3441533cd9d86b0a08c54fbdb286be1b17f375"
+    },
+    {
+      "name": "race",
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=number -tags noasm -race -count=1",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/race.txt",
+      "log_sha256": "47790691771d83038ad65b7e8e05ea500447c1061d5755e42b78dd322ad6d698"
+    },
+    {
+      "name": "legacy",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=text -pkg=mathtex -tags noasm -count=1",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/legacy.txt",
+      "log_sha256": "8d9f43dd591f7edb1e22d0baffbbc3894d846be296391e30d25222ecd6c04228"
+    },
+    {
+      "name": "vet",
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./number",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/vet.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "purecheck",
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/purecheck.txt",
+      "log_sha256": "4c21477f037834f65316da5e6fd91f134eae3034dc132ac87c0db8c9d54a146d"
+    },
+    {
+      "name": "noasm",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=number -tags noasm -count=1",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/noasm.txt",
+      "log_sha256": "87842eb1a8fe856edd9831de0da8397c87faf1d44adb03110810240d3717bcab"
+    },
+    {
+      "name": "benchmark",
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=number -run '^$' -bench '^BenchmarkNumber$' -benchmem -benchtime=300ms -count=3 -p 1",
+      "exit_code": 0,
+      "log": "tests/data/number/validation-logs/benchmark.txt",
+      "log_sha256": "ea6ff6e5effbcde6b8e9641eedd5e7f274556df0c0bfe4468c012c3f7f0256df"
+    }
+  ],
+  "environment": {
+    "go": "go1.27.3",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "cpu": "Apple M2",
+    "logical_cpus": 8,
+    "GOMAXPROCS": 8,
+    "shared_host": true
+  },
+  "runtime": "Pure Go/no new dependencies/no native or runtime process fallback. Race command cgo is developer Go race instrumentation only.",
+  "bounds": {
+    "precision": [
+      0,
+      18
+    ],
+    "unit_runes": 64,
+    "unit_bytes": 256,
+    "glyph_slots_default_and_hard": 512,
+    "curves_default": 65536,
+    "curves_hard": 1048576,
+    "text_temporary_glyph_segments": 1048576,
+    "font_bytes": 67108864,
+    "size": [
+      1e-12,
+      1000000
+    ],
+    "local_coordinate_abs": 1000000,
+    "world_coordinate_abs": 1000000000000,
+    "source_basis_area_over_distance_squared_min": 1e-12,
+    "affine_axis_norm_min": 1e-12,
+    "normalized_cross_min": 1e-10,
+    "affine_consistency": "128 machine epsilons times coordinate/basis multiply-add scale; tiny boundary ULP allowance"
+  },
+  "contracts": {
+    "format": "Finite represented binary64 fixed format, ties to even; normalize minus only on displayed zero; preserve original Value bits. Integer exact int64 with DecimalPlaces0.",
+    "font": "One real immutable embedded style face or exact custom Font with StyleRegular; missing glyphs always error. Literal single-line units only, no TeX/markup/shaping/bidi/fallback.",
+    "anchor": "Complete advance baseline including unit/spaces, right/left/center; actual Bounds only ink, no hidden frame.",
+    "identity": "Root stable. Surviving right-counted rune slots preserve pointer/ID/style; growth adds left slots; shrink detaches without clearing or reuse. Public child slice isolated from identity ledger.",
+    "atomicity": "Validate old tree/affine, prepare all new geometry and budget checks before author mutation; failures retain Object/Text/Value. Temporary global IDs may advance.",
+    "source": "Independent immutable options/font/affine/appearance snapshots; At yields independent geometry/fresh IDs and concurrent-safe calls. Authoring not synchronized.",
+    "animation": "No automatic updater; Source works with existing ValueTracker/DynamicRedraw via sampled frame.Value. Dynamic preorder child-ID semantics differ from right-counted authoring slots. Generic morph renders but may invalidate later SetValue."
+  },
+  "reference": {
+    "script": "tests/reference/number.py",
+    "manim_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "numbers_py_sha256": "d2d0b1bf1505a14129fec5b72b5612818a9c1d3c6ce3b21fe2f9f1a16452deaa",
+    "float_cases": 1376,
+    "int64_cases": 48,
+    "documented_pinned_differences": 4,
+    "difference": "Pinned numpy.round removes sign near -0.005 precision2 although fixed magnitude formats nonzero. This implementation retains that minus; difference explicitly tested.",
+    "source_font_layouts": 20,
+    "faces": 4,
+    "raster": [
+      960,
+      384
+    ],
+    "pixel_mask_threshold": 128,
+    "min_mask_iou_observed": 0.983016,
+    "max_rgb_byte_mae_observed": 0.02423,
+    "min_mask_iou_required": 0.95,
+    "max_rgb_byte_mae_required": 1,
+    "geometry_tolerance": "2 source design units/2048 * Size",
+    "oracle_boundary": "Exact-bit Python fixed formats and pinned method AST extraction; separately specified source-font hmtx/glyf/kern advance layouts and Cairo. Not complete Manim/TeX/Pango layout parity.",
+    "development_only_command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:/opt/homebrew/opt/cairo/lib PYTHONDONTWRITEBYTECODE=1 python3 tests/reference/number.py --manim ../manim --fonts /Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs",
+    "format_tool_versions": {
+      "Python": "3.11.5",
+      "numpy": "2.3.5"
+    },
+    "layout_tool_versions": {
+      "Python": "3.11.5",
+      "fontTools": "4.45.1",
+      "CairoSVG": "2.7.1",
+      "Cairo": "1.18.4"
+    },
+    "fonts": [
+      {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3"
+      },
+      {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40"
+      },
+      {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57"
+      },
+      {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90"
+      }
+    ],
+    "fixture_fonts": [
+      {
+        "file": "restricted.ttf",
+        "sha256": "869ed31faf03827d1b5b22fbc3422a86f804bbb46481d74ce6c3e05fb9cbcb09",
+        "source": "Go-Regular.ttf",
+        "characters": "012+,. AV",
+        "modifications": "cmap/name subset and explicit AV=-160 design unit fixture-only kern. Original glyph outlines/hmtx preserved."
+      }
+    ]
+  },
+  "preview": {
+    "directory": "tests/data/number/preview",
+    "raster": [
+      800,
+      320
+    ],
+    "times": [
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "names": [
+      "write-half",
+      "write-complete",
+      "transform-half",
+      "transform-complete"
+    ],
+    "formats": [
+      "PNG",
+      "SVG"
+    ],
+    "oracle": false,
+    "viewed": [
+      "transform-half.png",
+      "transform-complete.png"
+    ],
+    "generation_note": "Central noasm suite with GOMATH_NUMBER_PREVIEW_DIR. A relative output resolved under package cwd; eight artifacts relocated into central tests/data/number/preview and temporary number/tests directories removed."
+  },
+  "benchmarks": {
+    "benchtime": "300ms",
+    "samples": 3,
+    "package_parallelism": 1,
+    "excludes": [
+      "rasterization",
+      "reference generation",
+      "separate font parsing",
+      "frame throughput"
+    ],
+    "claim": "Shared-host bounded observation, no whole-library speedup or isolated regression claim.",
+    "cases": [
+      {
+        "name": "New",
+        "workload": "grouped -12,345.50; cached embedded font",
+        "ns_op": [
+          54676,
+          53655,
+          46189
+        ],
+        "bytes_op": [
+          124987,
+          124985,
+          124985
+        ],
+        "allocs_op": [
+          251,
+          251,
+          251
+        ]
+      },
+      {
+        "name": "SetValue",
+        "workload": "999 + float64(i%200)/100",
+        "ns_op": [
+          65953,
+          67584,
+          65796
+        ],
+        "bytes_op": [
+          86188,
+          86188,
+          86202
+        ],
+        "allocs_op": [
+          209,
+          209,
+          209
+        ]
+      },
+      {
+        "name": "SourceAt",
+        "workload": "float64(i%2000)/100",
+        "ns_op": [
+          24135,
+          21239,
+          32409
+        ],
+        "bytes_op": [
+          55566,
+          55468,
+          55722
+        ],
+        "allocs_op": [
+          118,
+          118,
+          119
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Real finite fixed decimal/int64 only; no full Manim DecimalNumber/TeX/locale/complex/shaping parity.",
+    "Canonical em layout plus affine arithmetic does not promise arbitrary-size byte identity against a separate text.Layout call. Existing text/mathtex untouched.",
+    "Path/topology/identity edits, bitmaps/clips, singular/ill-conditioned frames reject on later update/source. Extreme cancellation can cause explicit frame recovery rejection.",
+    "Number MaxCurves checked after existing text engine's bounded temporary segment work.",
+    "Only current slots allocated. Right-counted rune references are not semantic decimal-power slots.",
+    "Authoring unsynchronized; use immutable Source and sampled state for concurrent redraw."
+  ],
+  "source_sha256": {
+    "docs/NUMBERS.md": "8bf21ddd7db81e9bb2a71abe2c79e9fbbcbec23fed3211be92a13e016968a944",
+    "number/layout.go": "86c8782c78222e6e568a410abb3fed89402c17a1e2c7daabee98cbf650d969f3",
+    "number/number.go": "65edd520136fdd34dcc9293a4b6e9d3630cc08581e4fe20d8bf6e1a6663db7d8",
+    "tests/_cases/number/number_test.go": "cc60dfe6f3d2002711fe41fb0a04deae2e088cf31a626ee4aacd17130d35159f",
+    "tests/_cases/number/reference_test.go": "5121deb776ffd1d5500f971b0a4cae134070589fda4b1f18d61491c125024c61",
+    "tests/_cases/number/scene_test.go": "e522556cfabe7bca64fae0fe09b4baff0f621613d0a0ea6093b3d453d49153d1",
+    "tests/reference/number.py": "2e869df8a9ff4e145f4cd03dead3174b55d24faf64302821c019b22792d51d55"
+  },
+  "test_count": 15,
+  "artifact_sha256": {
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/LICENSE.txt": "dc588a7ba9130043b67c2380cc03cc6644ed3557f6d5e8589b96acba1c64e343",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/README.md": "34cc5e1490fd4ca3ccda59b06b56ba3f5879997e97bf6f34c2c7c72004f36f72",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-0.png": "c7092bbb3bc25a40b10d2cffedf7542259fa31ef05846a94e8eecef9d547b08e",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-0.svg": "b1e8b7bd32cbe54ef58baafc541e637be3e8b5a29d1e40070faff55c48f1f2d1",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-1.png": "4ffa3c09691d81f4cf5b56e64646bde2b374fa71380c297e51c8095d9e579117",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-1.svg": "98c2d2e611379eb7622437836b9b787e70f9cfed1f0de5e937db9d5667b73443",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-2.png": "ea61800fe933513348f2798a7b9d3e51723694398ca41fcbbd79b4ee2928c697",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-2.svg": "5057ac8f860faeb5c1c12c9b8752c1bf749ca9dcdeba20152fc8cb0cf0ca620c",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-3.png": "eeef09da1f64e910e0b3e53efc8b815f033944a3e13487cdcec9e4f1ac171afd",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/affine-3.svg": "d9ff5937bfae755b4580f79b74dad2ae287bbf220aec798f5877cc3ef0219302",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-0.png": "50d9f1f3042a7aa678166753bcdc0de1bcdfb0b0b2de562425678febdd954929",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-0.svg": "b39a62744a159eee5a58f38c4db11b00a7f1e6bc7e2a2b3b46aed384e1c20d09",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-1.png": "3e6b4d074247c959dff73a7aefd15e79173872673691c4d457aa3601f6ae125b",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-1.svg": "158c59a0368fe60dc1f5b7d561cc6fa10072ac0ec7c2b3171146550839e51f5c",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-2.png": "ba9e2ed9669b5564b09558e9b7189192cd6cc4359c6b0b3c8aea20b1c8947140",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-2.svg": "a1d2914536662b802a03f75319b21ec86b0dc6b90e11707af0d9c88bfa4abd3f",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-3.png": "3a30e84f38a33c22018301c8d6a791566dba8b2a3d8f3fdd15be5b4dbe04d33d",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/center-signed-3.svg": "c2467cb2e3b759a376fef2f84f8e44bf73d4ca37967cfda322e29372662f611b",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/formats.json": "fb60169f72644b791942c64d70eaa834be2a046666694927ee3df7bff6ff5929",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/layout.json": "6eb894dfc27618bd41a3a46db8b63c6f5a13efcde31d3a6f47584b11db891907",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-0.png": "aecb424e0c73e9e8a8b948579c071767f38d2e3a9a4c3b73726c48dd0913e037",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-0.svg": "b0f48bc1a76327625ab4bb3eb3bc821790cf6c1c6545fa2ffb2c6d4b964ad00d",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-1.png": "6daeec29130376c23a6f479d29fdfa065807f6ef5f53118316450ffe89bc7086",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-1.svg": "e8ac7103f451bf329aecef97895a4ec97ed43658304421aa5a59a6547e95c9c9",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-2.png": "3e88f23ac943a9ee396d2190877d3debc2f8c8d378256bbce9916dbd79e93c7c",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-2.svg": "a7ea3b9ccca60991a1f190915f0d13339bb68fae8c51fee866efc1a8c0b26a2f",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-3.png": "b85b3abf6a433c844f07bc4760d53073bf430f76ede5ee3bd85fd7601fe2bc73",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/left-unit-3.svg": "fd562812ef9e195b1e54354e70eeaeb69cfd5da218d7c4fc4edc2818ad33eaf4",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/transform-complete.png": "3a0ce620ecd844e42b0583070a7337dcfca25501f31460ba34f09067574b8f24",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/transform-complete.svg": "84f4d02489b8dad7fedf926e8056d1128388fa30291a29187270db0603e329e9",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/transform-half.png": "c44464dddd51a290afb89d662091291b947c581297c4527b6f9c977bd3521304",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/transform-half.svg": "5ac30dbabb92ce49efe1fedc39bf8f88c17ab257948830be3f4434746ed1cc76",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/write-complete.png": "1a1fa7cd8033ba4435d69d0e954c57fb346b34ef984d64cf0561eae0e8a97eaf",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/write-complete.svg": "627e69e7a370abecce865c719bbbaa5b3d4fc7d1d3bf3cfeeba9e000aab2f52f",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/write-half.png": "3fbdabaaf6146cb8ccbc4c7a4f8323480ceb2071421d373379525973091d222a",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/preview/write-half.svg": "0a37137abe0ba7b1df4b275b0335e13aecd0e5df85642656ce2b2ca58d7b62f6",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/restricted.ttf": "869ed31faf03827d1b5b22fbc3422a86f804bbb46481d74ce6c3e05fb9cbcb09",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-0.png": "170be5885db2b6f1a03c39d8cec98307e503d0ab87e659c2c269fe3b9eadac43",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-0.svg": "ac9f6eb96fd025177f1c50306678e08d876bd2465bbbc789b6f9449b3ef6754a",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-1.png": "25d754336bbe3fbebe5c544a10324dcc8d9f805bcd3973e7c8302d676e7f2359",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-1.svg": "e1dcc26e34e38b82f00ccb52d5924956741033b40a10a2c1521c6574b66afc56",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-2.png": "3baaee695e6ab421193901f3ed2146d8b22c560b9626342ba4771ff26097d74b",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-2.svg": "6d679e60b96c10bd42d829561384fd52caeaf7df34943a5be94a6e1555bc5ade",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-3.png": "a1f85a0d3d90c3100f09872ef7b5ea901e94196cd93e53f88ec23f90c1dc091c",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-decimal-3.svg": "577bcad40c4f35ca60d9dd27e14a5265dd7efe2739321fee22b20a6e8c49cb37",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-0.png": "27af1bd9721b8de1c1966a3e634e1c2ec1f082a88e055a58c185909b288f11ec",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-0.svg": "d71cc3cb76bfe5eb7ad96d297de378a04101efabd2d82096d9c0264f5a2834bb",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-1.png": "edbc90bd789f6b72e0dc6317adbf3d53fed1f8c4bb6b995820e6c240f32428d6",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-1.svg": "f83dac01c2353d1bbecac499edd68c85412617aceedd52b3e01264e1552a3a91",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-2.png": "c8adb3fd06a2cbfa2ca9c407c4939ce60279a488ca38cd7e007b3fc2c24cc462",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-2.svg": "feb55f3ab4b97001aeab5245b4626baf47ab785df0456b98e22be83f31e3d6eb",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-3.png": "6e2751bcbc4913a4965c265eb941106a69173e33f45e2a3e1b847ce9fb6cc901",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/right-int64-3.svg": "310b79bbd5625ecd7943c0885d630fb5bff304ee296aad4460c68366cd9b209e",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/benchmark.txt": "ea6ff6e5effbcde6b8e9641eedd5e7f274556df0c0bfe4468c012c3f7f0256df",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/legacy.txt": "8d9f43dd591f7edb1e22d0baffbbc3894d846be296391e30d25222ecd6c04228",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/noasm.txt": "87842eb1a8fe856edd9831de0da8397c87faf1d44adb03110810240d3717bcab",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/number.txt": "4ae34afb482bc7e68dc8f97d5d3441533cd9d86b0a08c54fbdb286be1b17f375",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/purecheck.txt": "4c21477f037834f65316da5e6fd91f134eae3034dc132ac87c0db8c9d54a146d",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/race.txt": "47790691771d83038ad65b7e8e05ea500447c1061d5755e42b78dd322ad6d698",
+    "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/number/validation-logs/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

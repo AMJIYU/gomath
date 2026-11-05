@@ -1,0 +1,10 @@
+File: after.test
+Type: alloc_space
+Time: 2026-11-05 09:25:34 CST
+Showing nodes accounting for 5.28GB, 99.66% of 5.30GB total
+Dropped 27 nodes (cum <= 0.03GB)
+      flat  flat%   sum%        cum   cum%
+    5.28GB 99.66% 99.66%     5.29GB 99.86%  gomath/audio.ReadFLAC
+         0     0% 99.66%     5.29GB 99.86%  gomath/audio.BenchmarkReadFLAC48kStereo.func1
+         0     0% 99.66%     5.29GB 99.78%  testing.(*B).launch
+         0     0% 99.66%     5.30GB   100%  testing.(*B).runN

@@ -1,0 +1,24 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/path
+cpu: Apple M2
+BenchmarkDirectionReversed/Curves64_Contours1-8         	  256119	      1278 ns/op	9703.02 MB/s	    6208 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves64_Contours1-8         	  285864	      1291 ns/op	9603.95 MB/s	    6208 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves64_Contours1-8         	  283022	      1278 ns/op	9701.59 MB/s	    6208 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves64_Contours16-8        	  205092	      1914 ns/op	7356.51 MB/s	    7168 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves64_Contours16-8        	  188967	      1820 ns/op	7736.03 MB/s	    7168 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves64_Contours16-8        	  194131	      1921 ns/op	7328.44 MB/s	    7168 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours1-8       	   17862	     20462 ns/op	9614.02 MB/s	   98368 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours1-8       	   18444	     19530 ns/op	10072.86 MB/s	   98368 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours1-8       	   18471	     19589 ns/op	10042.48 MB/s	   98368 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours16-8      	   17236	     22388 ns/op	8861.96 MB/s	   99328 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours16-8      	   15343	     22743 ns/op	8723.57 MB/s	   99328 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves1024_Contours16-8      	   17185	     20901 ns/op	9492.50 MB/s	   99328 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours1-8      	    1246	    277663 ns/op	11329.70 MB/s	 1572928 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours1-8      	    1282	    278166 ns/op	11309.23 MB/s	 1572928 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours1-8      	    1292	    279735 ns/op	11245.77 MB/s	 1572929 B/op	       2 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours16-8     	    1190	    304156 ns/op	10348.37 MB/s	 1573891 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours16-8     	    1170	    515440 ns/op	6106.47 MB/s	 1573893 B/op	      17 allocs/op
+BenchmarkDirectionReversed/Curves16384_Contours16-8     	    1141	    322671 ns/op	9754.57 MB/s	 1573891 B/op	      17 allocs/op
+PASS
+ok  	gomath/path	6.758s

@@ -1,0 +1,33 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkMeshTimeline/GeometryOpaque/ssaa1-8         	      51	   4851816 ns/op	 1478126 B/op	      29 allocs/op
+BenchmarkMeshTimeline/GeometryOpaque/ssaa1-8         	      54	   4991857 ns/op	 1477924 B/op	      29 allocs/op
+BenchmarkMeshTimeline/GeometryOpaque/ssaa1-8         	      51	   4863742 ns/op	 1477918 B/op	      29 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa1-8              	      43	   6040725 ns/op	 1685820 B/op	      30 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa1-8              	      43	   6002762 ns/op	 1685821 B/op	      30 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa1-8              	      43	   6018113 ns/op	 1685822 B/op	      30 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa1-8       	      42	   6066621 ns/op	 1777124 B/op	      35 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa1-8       	      43	   6086140 ns/op	 1777163 B/op	      34 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa1-8       	      43	   6094724 ns/op	 1777176 B/op	      35 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa1-8            	      43	   6019750 ns/op	 1391485 B/op	      21 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa1-8            	      43	   6110345 ns/op	 1391488 B/op	      21 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa1-8            	      43	   6186501 ns/op	 1391490 B/op	      21 allocs/op
+BenchmarkMeshTimeline/GeometryOpaque/ssaa2-8         	      21	  12559224 ns/op	 4549997 B/op	      31 allocs/op
+BenchmarkMeshTimeline/GeometryOpaque/ssaa2-8         	      20	  12585440 ns/op	 4550009 B/op	      31 allocs/op
+BenchmarkMeshTimeline/GeometryOpaque/ssaa2-8         	      20	  14745915 ns/op	 4550254 B/op	      31 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa2-8              	      14	  17765006 ns/op	 5473618 B/op	      40 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa2-8              	      15	  17524600 ns/op	 5486246 B/op	      40 allocs/op
+BenchmarkMeshTimeline/ColorOnly/ssaa2-8              	      14	  18097494 ns/op	 5473614 B/op	      40 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa2-8       	      14	  18018021 ns/op	 5539641 B/op	      44 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa2-8       	      14	  17517952 ns/op	 5539641 B/op	      44 allocs/op
+BenchmarkMeshTimeline/GeometryAndColor/ssaa2-8       	      14	  17350940 ns/op	 5539641 B/op	      44 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa2-8            	      15	  17494800 ns/op	 5173635 B/op	      30 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa2-8            	      15	  17514217 ns/op	 5173635 B/op	      30 allocs/op
+BenchmarkMeshTimeline/DirectThree/ssaa2-8            	      14	  17376613 ns/op	 5153965 B/op	      30 allocs/op
+BenchmarkMeshTimeline/Snapshot-8                     	    1266	    189295 ns/op	  361507 B/op	      39 allocs/op
+BenchmarkMeshTimeline/Snapshot-8                     	    1299	    187486 ns/op	  361506 B/op	      39 allocs/op
+BenchmarkMeshTimeline/Snapshot-8                     	    1220	    188441 ns/op	  361507 B/op	      39 allocs/op
+PASS
+ok  	gomath/scene3d	7.246s

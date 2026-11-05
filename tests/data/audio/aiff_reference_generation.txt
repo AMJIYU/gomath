@@ -1,0 +1,3 @@
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/reference/audio_aiff.py:14: DeprecationWarning: 'aifc' is deprecated and slated for removal in Python 3.13
+  import aifc  # development-only CPython oracle, removed in Python 3.13
+{"streams": 77, "scalar_samples": 493662, "retained_streams": 62}

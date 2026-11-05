@@ -1,0 +1,5 @@
+=== RUN   TestOrientedCameraContactSheet
+    oriented_camera_workload_test.go:50: 320x240 SSAA2 [0 .5 1 1.5 2], quaternion eye camera with roll/yaw/pitch, 2400 points/4140 triangles, animated geometry/normals/UV/color/alpha/object orientations; sphere removed at 2
+--- PASS: TestOrientedCameraContactSheet (0.23s)
+PASS
+ok  	gomath/scene3d	0.235s

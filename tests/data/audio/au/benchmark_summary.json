@@ -1,0 +1,433 @@
+{
+  "Date": "2026-11-04",
+  "Go": "go1.27.3",
+  "OSArch": "darwin/arm64",
+  "CPU": "Apple M2",
+  "CGO_ENABLED": "0",
+  "Tags": "noasm",
+  "GOMAXPROCS": 1,
+  "Command": "CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=audio -run='^$' -bench='^BenchmarkReadAU$' -benchmem -benchtime=300ms -count=5 -p 1",
+  "Workload": "48000 Hz, 48000 stereo frames, prebuilt endpoint sequence for PCM or all-code cycle for G711, six encodings with known/unknown size. Includes parsing, complete decoding, allocation/growth, and EOF probe for unknown. Excludes fixture disk I/O, setup, independent encoders/decoders, Go startup. No video/image workload.",
+  "Cases": [
+    {
+      "Name": "tag1_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 66038,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 68710,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 68750,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 68909,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 69525,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 68750,
+      "MinNS": 66038,
+      "MaxNS": 69525,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag1_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 140788,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 149736,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 147699,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 146297,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 141864,
+          "B/op": 1871992,
+          "allocs/op": 8
+        }
+      ],
+      "MedianNS": 146297,
+      "MinNS": 140788,
+      "MaxNS": 149736,
+      "MedianBytes": 1871992,
+      "MedianAllocs": 8
+    },
+    {
+      "Name": "tag2_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 123550,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 126411,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 125787,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 126039,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 129932,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 126039,
+      "MinNS": 123550,
+      "MaxNS": 129932,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag2_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 236220,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 217583,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 200668,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 201711,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 201115,
+          "B/op": 1871992,
+          "allocs/op": 8
+        }
+      ],
+      "MedianNS": 201711,
+      "MinNS": 200668,
+      "MaxNS": 236220,
+      "MedianBytes": 1871992,
+      "MedianAllocs": 8
+    },
+    {
+      "Name": "tag3_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 141725,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 140313,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 141997,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 142068,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 142590,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 141997,
+      "MinNS": 140313,
+      "MaxNS": 142590,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag3_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 222433,
+          "B/op": 2003064,
+          "allocs/op": 9
+        },
+        {
+          "ns/op": 222608,
+          "B/op": 2003064,
+          "allocs/op": 9
+        },
+        {
+          "ns/op": 212639,
+          "B/op": 2003064,
+          "allocs/op": 9
+        },
+        {
+          "ns/op": 218450,
+          "B/op": 2003064,
+          "allocs/op": 9
+        },
+        {
+          "ns/op": 223822,
+          "B/op": 2003064,
+          "allocs/op": 9
+        }
+      ],
+      "MedianNS": 222433,
+      "MinNS": 212639,
+      "MaxNS": 223822,
+      "MedianBytes": 2003064,
+      "MedianAllocs": 9
+    },
+    {
+      "Name": "tag4_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 154521,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 159195,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 168261,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 168829,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 167874,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 167874,
+      "MinNS": 154521,
+      "MaxNS": 168829,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag4_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 278029,
+          "B/op": 2764920,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 281199,
+          "B/op": 2764920,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 289071,
+          "B/op": 2764920,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 283765,
+          "B/op": 2764920,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 271661,
+          "B/op": 2764920,
+          "allocs/op": 10
+        }
+      ],
+      "MedianNS": 281199,
+      "MinNS": 271661,
+      "MaxNS": 289071,
+      "MedianBytes": 2764920,
+      "MedianAllocs": 10
+    },
+    {
+      "Name": "tag5_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 132738,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 130580,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 128995,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 130529,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 129995,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 130529,
+      "MinNS": 128995,
+      "MaxNS": 132738,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag5_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 246380,
+          "B/op": 2068600,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 244299,
+          "B/op": 2068600,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 245087,
+          "B/op": 2068600,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 244106,
+          "B/op": 2068600,
+          "allocs/op": 10
+        },
+        {
+          "ns/op": 244328,
+          "B/op": 2068600,
+          "allocs/op": 10
+        }
+      ],
+      "MedianNS": 244328,
+      "MinNS": 244106,
+      "MaxNS": 246380,
+      "MedianBytes": 2068600,
+      "MedianAllocs": 10
+    },
+    {
+      "Name": "tag27_unknownfalse",
+      "Samples": [
+        {
+          "ns/op": 67623,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 67538,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 67457,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 67564,
+          "B/op": 807032,
+          "allocs/op": 6
+        },
+        {
+          "ns/op": 67966,
+          "B/op": 807032,
+          "allocs/op": 6
+        }
+      ],
+      "MedianNS": 67564,
+      "MinNS": 67457,
+      "MaxNS": 67966,
+      "MedianBytes": 807032,
+      "MedianAllocs": 6
+    },
+    {
+      "Name": "tag27_unknowntrue",
+      "Samples": [
+        {
+          "ns/op": 142963,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 142553,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 143283,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 144377,
+          "B/op": 1871992,
+          "allocs/op": 8
+        },
+        {
+          "ns/op": 145487,
+          "B/op": 1871992,
+          "allocs/op": 8
+        }
+      ],
+      "MedianNS": 143283,
+      "MinNS": 142553,
+      "MaxNS": 145487,
+      "MedianBytes": 1871992,
+      "MedianAllocs": 8
+    }
+  ]
+}

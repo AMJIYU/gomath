@@ -1,0 +1,18 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/rasterimage
+cpu: Apple M2
+BenchmarkPixelOperations/invert         	     586	    428581 ns/op	 611.66 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/invert         	     546	    392119 ns/op	 668.53 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/invert         	     589	    398789 ns/op	 657.35 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/opacity        	     735	    387997 ns/op	 675.63 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/opacity        	     571	    533120 ns/op	 491.72 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/opacity        	     597	   1061808 ns/op	 246.88 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/color          	     723	    314560 ns/op	 833.37 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/color          	     802	    307422 ns/op	 852.72 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/color          	     805	    299552 ns/op	 875.12 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/tint           	     655	    373597 ns/op	 701.68 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/tint           	     620	    376745 ns/op	 695.81 MB/s	  524472 B/op	       6 allocs/op
+BenchmarkPixelOperations/tint           	     639	    372241 ns/op	 704.23 MB/s	  524472 B/op	       6 allocs/op
+PASS
+ok  	gomath/rasterimage	4.775s

@@ -1,0 +1,84 @@
+[
+  {
+    "name": "root-focused",
+    "command": [
+      "go",
+      "run",
+      "./tests/cmd/run",
+      "-pkg=root",
+      "-p=1",
+      "-run",
+      "^(TestObjectDirection|TestPinnedManimObjectCurveEdits|TestObjectCurveEdits)",
+      "-count=1",
+      "-v"
+    ],
+    "CGO_ENABLED": "0",
+    "exit_code": 0,
+    "elapsed_seconds": 1.1905415409710258,
+    "log": "root-focused.txt"
+  },
+  {
+    "name": "race",
+    "command": [
+      "go",
+      "run",
+      "./tests/cmd/run",
+      "-pkg=path",
+      "-pkg=root",
+      "-p=1",
+      "-run",
+      "^(TestDirection|TestObjectDirection)",
+      "-race",
+      "-count=1",
+      "-v"
+    ],
+    "CGO_ENABLED": "1",
+    "exit_code": 0,
+    "elapsed_seconds": 6.670935750007629,
+    "log": "race.txt"
+  },
+  {
+    "name": "build-noasm",
+    "command": [
+      "go",
+      "test",
+      "-tags",
+      "noasm",
+      "./...",
+      "-run",
+      "^$"
+    ],
+    "CGO_ENABLED": "0",
+    "exit_code": 0,
+    "elapsed_seconds": 0.4468689589994028,
+    "log": "build-noasm.txt"
+  },
+  {
+    "name": "vet",
+    "command": [
+      "go",
+      "vet",
+      "-tags",
+      "noasm",
+      "./..."
+    ],
+    "CGO_ENABLED": "0",
+    "exit_code": 0,
+    "elapsed_seconds": 0.3170314999879338,
+    "log": "vet.txt"
+  },
+  {
+    "name": "purecheck",
+    "command": [
+      "go",
+      "run",
+      "-tags",
+      "noasm",
+      "./cmd/purecheck"
+    ],
+    "CGO_ENABLED": "0",
+    "exit_code": 0,
+    "elapsed_seconds": 0.20288754103239626,
+    "log": "purecheck.txt"
+  }
+]

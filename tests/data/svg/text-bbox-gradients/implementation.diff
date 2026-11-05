@@ -1,0 +1,1150 @@
+--- a/svg/gradient.go
++++ b/svg/gradient.go
+@@ -489,15 +489,25 @@
+ 			}
+ 		}
+ 	}
+-	if ctx.inText && (plan.attrs["gradientUnits"] == "" || plan.attrs["gradientUnits"] == "objectBoundingBox") {
+-		return fmt.Errorf("SVG objectBoundingBox gradients on text are not supported; use userSpaceOnUse")
+-	}
++
+ 	b := &s.document.gradientBudget
+ 	if b.instances >= maxGradientInstances || len(plan.stops) > maxGradientInstanceStops-b.stops {
+ 		return fmt.Errorf("SVG gradient instance budget exceeds %d paints or %d stops", maxGradientInstances, maxGradientInstanceStops)
+ 	}
+ 	b.instances++
+ 	b.stops += len(plan.stops)
++	if ctx.inText && (plan.attrs["gradientUnits"] == "" || plan.attrs["gradientUnits"] == "objectBoundingBox") {
++		if ctx.textPaint == nil {
++			return fmt.Errorf("SVG text gradient #%s has no glyph-cell scope", id)
++		}
++		// Budget before appending. Layout must complete every anchored chunk
++		// before the entire text bbox is available, even for a tspan fill.
++		ctx.textPaint.paints = append(ctx.textPaint.paints, textGradientPaint{
++			object: object, target: target, plan: plan,
++			viewport: ctx.viewport, matrix: ctx.matrix, opacity: ctx.style.fillOpacity,
++		})
++		return nil
++	}
+ 	g, color, err := plan.paint(target.name.Local, p.Bounds(), ctx.viewport, ctx.matrix, ctx.style.fillOpacity)
+ 	if err != nil {
+ 		return fmt.Errorf("SVG gradient #%s: %w", id, err)
+--- a/svg/instance.go
++++ b/svg/instance.go
+@@ -23,8 +23,9 @@
+ 	clips       []viewportClip
+ 	cssChain    []*element // ancestors in this light/shadow tree, never through use
+ 	inText      bool
+-	shadowRoots []*element  // clone-local clip definitions currently require explicit rejection
+-	bboxes      []bboxScope // active target-local geometry ledgers
++	textPaint   *textGradientScope // entire text glyph-cell bbox and deferred paints
++	shadowRoots []*element         // clone-local clip definitions currently require explicit rejection
++	bboxes      []bboxScope        // active target-local geometry ledgers
+ }
+ 
+ func (c expansionContext) transformed(local geom.Mat4) expansionContext {
+--- a/svg/svg.go
++++ b/svg/svg.go
+@@ -122,7 +122,8 @@
+ // pad extension, encoded sRGB interpolation, stop-color/currentColor/stop-opacity,
+ // same-type href templates, userSpaceOnUse and affine objectBoundingBox mapping.
+ // Stop alpha includes fill-opacity; graphics opacity remains on the object tree.
+-// Text requires userSpaceOnUse. Stroke paintservers, off-center focus/nonzero fr,
++// Text/tspan objectBoundingBox fills use the entire text glyph-cell bbox after
++// layout/anchoring, also in supported use instances. Stroke paintservers, off-center focus/nonzero fr,
+ // repeat/reflect, linearRGB, external/fallback references and clone-local gradient
+ // definitions return errors. See svg/README.md for template CSS and exact limits.
+ //
+--- a/svg/text.go
++++ b/svg/text.go
+@@ -401,7 +401,14 @@
+ 	for len(chars) > 0 && chars[len(chars)-1].r == ' ' && !chars[len(chars)-1].node.ctx.style.preserveSpace {
+ 		chars = chars[:len(chars)-1]
+ 	}
++	paint, err := s.textGradientTarget(chars, ctx)
++	if err != nil {
++		return nil, err
++	}
+ 	if err := s.layoutText(chars); err != nil {
++		return nil, err
++	}
++	if err := paint.finish(); err != nil {
+ 		return nil, err
+ 	}
+ 	for _, finish := range finishClips {
+--- a/svg/text_gradient.go
++++ b/svg/text_gradient.go
+@@ -0,0 +1,91 @@
++package svg
++
++import (
++	"fmt"
++	"gomath"
++	"gomath/geom"
++)
++
++// SVG paint servers on a tspan use the entire enclosing text's bbox, not
++// the span's clip bbox or each glyph's ink. The bbox stays in text user space;
++// its own transform (including use placement) is applied only when painting.
++type textGradientScope struct {
++	bounds *geom.Bounds
++	paints []textGradientPaint
++}
++
++type textGradientPaint struct {
++	object   *gomath.Object
++	target   *element
++	plan     *gradientPlan
++	viewport [2]float64
++	matrix   geom.Mat4
++	opacity  float64
++}
++
++// Create one extra geometry ledger only when an effective character fill
++// needs it. Every laid-out character contributes, including spaces, hidden
++// glyphs, solid/none overrides and zero opacity. display:none characters were
++// removed by collect; tspan transforms remain explicitly unsupported.
++func (s *expansion) textGradientTarget(chars []textCharacter, ctx expansionContext) (*textGradientScope, error) {
++	needed := false
++	for _, c := range chars {
++		id := c.node.ctx.style.fillServer
++		if id == "" {
++			continue
++		}
++		target, err := s.document.gradientTarget(id)
++		if err != nil {
++			return nil, err
++		}
++		plan := s.document.gradients[target]
++		if plan == nil {
++			return nil, fmt.Errorf("SVG gradient #%s has no validated plan", id)
++		}
++		units := plan.attrs["gradientUnits"]
++		needed = needed || units == "" || units == "objectBoundingBox"
++	}
++	if !needed {
++		return nil, nil
++	}
++	scoped, box, err := ctx.bboxTarget(s)
++	if err != nil {
++		return nil, err
++	}
++	paint := &textGradientScope{bounds: box}
++	scope := scoped.bboxes[len(scoped.bboxes)-1]
++	for _, c := range chars {
++		node := c.node
++		if node.ctx.textPaint == paint {
++			continue
++		}
++		// Parent text segments may resume after a nested span. Never append
++		// into a sibling's inherited backing slice or duplicate a scope.
++		scopes := make([]bboxScope, len(node.ctx.bboxes), len(node.ctx.bboxes)+1)
++		copy(scopes, node.ctx.bboxes)
++		node.ctx.bboxes = append(scopes, scope)
++		node.ctx.textPaint = paint
++	}
++	return paint, nil
++}
++
++func (scope *textGradientScope) finish() error {
++	if scope == nil {
++		return nil
++	}
++	for _, paint := range scope.paints {
++		gradient, color, err := paint.plan.paint(paint.target.name.Local, *scope.bounds, paint.viewport, paint.matrix, paint.opacity)
++		if err != nil {
++			return fmt.Errorf("SVG text gradient #%s: %w", paint.target.attrs["id"], err)
++		}
++		if gradient == nil {
++			paint.object.SetFill(color)
++		} else {
++			paint.object.SetFillGradient(gradient)
++		}
++		if err := paint.object.ValidateVisual(); err != nil {
++			return fmt.Errorf("invalid SVG text gradient: %w", err)
++		}
++	}
++	return nil
++}
+--- a/svg/README.md
++++ b/svg/README.md
+@@ -42,9 +42,13 @@
+ - group/use 上继承的是填充引用，直到实际 drawable 才求值。定义自身
+   不绘制，模板和重复 use 都不会共享可变对象 ID、几何或 gradient frame。
+   bitmap 继续忽略向量 fill；资产、实际图片和 opacity 语义不变。
+-- text/tspan 使用现有真实 glyph outlines，支持跨 glyph 一致的
+-  `userSpaceOnUse` 填充；**text 的 objectBoundingBox 明确拒绝**，不误用
+-  每 glyph 的独立 bbox。原有文字定位/字符/字体边界不变。
++- text/tspan 使用现有真实 glyph outlines，支持 `userSpaceOnUse` 及有界
++  `objectBoundingBox` 填充。后者使用整个 enclosing text 的完整 glyph cells
++  （advance + ascent/descent，含空格），所有 chunk 完成定位/anchor 后才绘制；
++  tspan fill 也共享整个 text 的 bbox，单独的 tspan clip bbox 仍按既有规则。
++  已支持的 use 链按各实例继承字体/paint 并独立测量；自身/祖先变换只在
++  bbox 后应用。原有文字定位/字符/字体及嵌套 viewport/container-symbol
++  bbox 拒绝边界不变。见 `docs/SVG_TEXT_GRADIENTS.md`。
+ 
+ stop、CSS、模板与透明度：
+ 
+--- a/tests/_cases/svg/gradient_test.go
++++ b/tests/_cases/svg/gradient_test.go
+@@ -231,7 +231,6 @@
+ 		{"wrong child", `<linearGradient><rect/></linearGradient>`, "child"},
+ 		{"stop child", `<linearGradient><stop><rect/></stop></linearGradient>`, "empty"},
+ 		{"orphan stop", `<stop/>`, "direct"},
+-		{"text bbox", defs + `<text fill="url(#g)">Go</text>`, "on text"},
+ 		{"clone local", `<g id="tile"><defs>` + defs + `</defs><rect width="2" height="2" fill="url(#g)"/></g><use href="#tile"/>`, "clone-local"},
+ 		{"xml base", defs + `<g xml:base="file:///"/>`, "xml:base"},
+ 	} {
+--- /dev/null
++++ b/tests/_cases/svg/text_bbox_gradients_test.go
+@@ -0,0 +1,380 @@
++package svg_test
++
++import (
++	"bytes"
++	"encoding/json"
++	"fmt"
++	"gomath"
++	"gomath/geom"
++	"gomath/render"
++	"gomath/svg"
++	"gomath/text"
++	"image"
++	"image/color"
++	"image/png"
++	"math"
++	"os"
++	"reflect"
++	"strings"
++	"testing"
++)
++
++const textBBoxGradientData = "../tests/data/svg/text-bbox-gradients/"
++
++func textBBoxGradientFile(t testing.TB, name string) []byte {
++	t.Helper()
++	data, err := os.ReadFile(textBBoxGradientData + name)
++	if err != nil {
++		t.Fatal(err)
++	}
++	return data
++}
++
++func textBBoxGradientRead(t testing.TB, source []byte, width float64, font string) *gomath.Object {
++	t.Helper()
++	opt := svg.Options{Width: width}
++	if font == "kern" || font == "zero" {
++		name := "../tests/data/svg/text-kern.ttf"
++		if font == "zero" {
++			name = textBBoxGradientData + "zero-advance.ttf"
++		}
++		data, err := os.ReadFile(name)
++		if err != nil {
++			t.Fatal(err)
++		}
++		f, err := text.Parse(data)
++		if err != nil {
++			t.Fatal(err)
++		}
++		opt.FontResolver = func(string, text.FontStyle) (*text.Font, error) { return f, nil }
++	}
++	object, err := svg.Read(bytes.NewReader(source), opt)
++	if err != nil {
++		t.Fatal(err)
++	}
++	if err := object.Validate(); err != nil {
++		t.Fatal(err)
++	}
++	return object
++}
++
++func TestSVGTextBBoxGradientsFontToolsOracle(t *testing.T) {
++	var oracle struct {
++		Cases []struct {
++			Name, Font string
++			Glyphs     []struct {
++				Rune, Kind string
++				Matrix     [6]float64
++				StopAlpha  float64 `json:"stop_alpha"`
++				Colors     [2][3]float64
++				Solid      []float64
++			}
++		}
++	}
++	if err := json.Unmarshal(textBBoxGradientFile(t, "oracle.json"), &oracle); err != nil {
++		t.Fatal(err)
++	}
++	for _, tc := range oracle.Cases {
++		t.Run(tc.Name, func(t *testing.T) {
++			root := textBBoxGradientRead(t, textBBoxGradientFile(t, tc.Name+".svg"), 128, tc.Font)
++			glyphs := instanceShapes(root)
++			if len(glyphs) != len(tc.Glyphs) {
++				t.Fatalf("glyph count %d want %d", len(glyphs), len(tc.Glyphs))
++			}
++			for i, want := range tc.Glyphs {
++				glyph := glyphs[i]
++				if glyph.Name != want.Rune {
++					t.Fatalf("glyph %d %q want %q", i, glyph.Name, want.Rune)
++				}
++				gradient := glyph.Style.FillGradient
++				if want.Kind == "" {
++					if gradient != nil {
++						t.Fatal("solid/none/zero-width fill acquired gradient", i)
++					}
++					expected := gomath.Transparent
++					if len(want.Solid) == 3 {
++						expected = gomath.RGB(want.Solid[0], want.Solid[1], want.Solid[2])
++					}
++					if glyph.Style.Fill != expected {
++						t.Fatal("solid/currentColor override", i, glyph.Style.Fill, expected)
++					}
++					continue
++				}
++				if gradient == nil {
++					t.Fatal("missing gradient", i)
++				}
++				if (gradient.Kind() == gomath.RadialGradient) != (want.Kind == "radial") {
++					t.Fatal("gradient kind", i)
++				}
++				matrix := gradient.Matrix()
++				for j, v := range matrix {
++					if math.Abs(v-want.Matrix[j]) > 1e-8 {
++						t.Fatalf("glyph %d matrix %v fontTools oracle %v", i, matrix, want.Matrix)
++					}
++				}
++				for j, stop := range gradient.Stops() {
++					c := want.Colors[j]
++					expected := gomath.Color{R: c[0], G: c[1], B: c[2], A: want.StopAlpha}
++					if stop.Color != expected {
++						t.Fatalf("glyph %d stop %d %v want %v", i, j, stop.Color, expected)
++					}
++				}
++			}
++		})
++	}
++}
++
++func textBBoxGradientCompare(t *testing.T, actual *image.RGBA, filename string) {
++	t.Helper()
++	reference, err := png.Decode(bytes.NewReader(textBBoxGradientFile(t, filename)))
++	if err != nil {
++		t.Fatal(err)
++	}
++	if actual.Bounds() != reference.Bounds() {
++		t.Fatal("raster size mismatch")
++	}
++	var total, maximum, over, covered int
++	for y := range 96 {
++		for x := range 128 {
++			a, b := actual.RGBAAt(x, y), color.RGBAModel.Convert(reference.At(x, y)).(color.RGBA)
++			covered += int(b.A)
++			pixelMax := 0
++			for _, d := range []int{int(a.R) - int(b.R), int(a.G) - int(b.G), int(a.B) - int(b.B), int(a.A) - int(b.A)} {
++				d = int(math.Abs(float64(d)))
++				total += d
++				maximum = max(maximum, d)
++				pixelMax = max(pixelMax, d)
++			}
++			if pixelMax > 8 {
++				over++
++			}
++		}
++	}
++	mean, fraction := float64(total)/(128*96*4), float64(over)/(128*96)
++	t.Logf("fontTools+Cairo %s MAE=%.9g max=%d fraction>8=%.9g", filename, mean, maximum, fraction)
++	// Existing fixture tests/thresholds are unchanged. These independent text
++	// paths constrain both color and original glyph coverage at SS1 and SS4.
++	limit := 24
++	if strings.Contains(filename, "ss1") {
++		limit = 40
++	}
++	if mean > .12 || maximum > limit || fraction > .005 || covered < 1000 {
++		t.Fatal("independent text bbox gradient reference mismatch")
++	}
++}
++
++func TestSVGTextBBoxGradientsIndependentCairoCamera(t *testing.T) {
++	for _, name := range []string{"cells-middle", "tspan-whole-kern", "relative-kern", "chunks-fonts", "visibility-overrides", "affine-local", "radial-reflection", "use-chain", "nested-clips", "template-alpha", "zero-width"} {
++		for _, ss := range []int{1, 4} {
++			t.Run(fmt.Sprintf("%s/ss%d", name, ss), func(t *testing.T) {
++				font := "regular"
++				if name == "tspan-whole-kern" || name == "relative-kern" {
++					font = "kern"
++				}
++				if name == "zero-width" {
++					font = "zero"
++				}
++				root := textBBoxGradientRead(t, textBBoxGradientFile(t, name+".svg"), 8, font)
++				got := renderBBoxFrame(t, root, ss, nil)
++				textBBoxGradientCompare(t, got, fmt.Sprintf("%s-cairo-ss%d.png", name, ss))
++				before := root.Copy()
++				root.ApplyMatrix(geom.Translation(geom.V(10, 20)).Mul(geom.RotationZ(.3)))
++				camera := gomath.Camera2D{Center: geom.V(10, 20), Rotation: .3, FrameWidth: 8}
++				moved := renderBBoxFrame(t, root, ss, &camera)
++				for i, v := range got.Pix {
++					if d := int(v) - int(moved.Pix[i]); d < -1 || d > 1 {
++						t.Fatalf("camera delta %d at %d", d, i)
++					}
++				}
++				if !bytes.Equal(got.Pix, renderBBoxFrame(t, before, ss, nil).Pix) {
++					t.Fatal("transform changed saved import")
++				}
++			})
++		}
++	}
++}
++
++func TestSVGTextBBoxGradientsAnimationInteriorsOwnership(t *testing.T) {
++	source := textBBoxGradientFile(t, "affine-local.svg")
++	root := textBBoxGradientRead(t, source, 8, "regular")
++	before := root.Copy()
++	children := instanceShapes(root)
++	target := root.Copy()
++	normalize := geom.Translation(geom.V(-4, 3)).Mul(geom.Scaling(1.0/16, -1.0/16, 1))
++	inverse := geom.Scaling(16, -16, 1).Mul(geom.Translation(geom.V(4, -3)))
++	affine := geom.Identity()
++	affine[0], affine[1], affine[3] = .82, -.12, 10
++	affine[4], affine[5], affine[7] = .10, 1.05, -3
++	target.ApplyMatrix(normalize.Mul(affine).Mul(inverse))
++	scene := gomath.NewScene()
++	scene.Add(root)
++	if err := scene.Play(1, gomath.Transform(root, target).WithRate(gomath.Linear)); err != nil {
++		t.Fatal(err)
++	}
++	for i, child := range instanceShapes(root) {
++		if child != children[i] {
++			t.Fatal("animation replaced child identity")
++		}
++	}
++	for _, tick := range []int{0, 20, 50, 80, 100} {
++		t.Run(fmt.Sprint(tick), func(t *testing.T) {
++			t.Parallel()
++			frame, err := scene.Sample(float64(tick) / 100)
++			if err != nil {
++				t.Fatal(err)
++			}
++			object := frame.Find(root.ID)
++			for _, ss := range []int{1, 4} {
++				textBBoxGradientCompare(t, renderBBoxFrame(t, object, ss, nil), fmt.Sprintf("animated-%03d-cairo-ss%d.png", tick, ss))
++			}
++			saved := instanceShapes(object)[0]
++			old := saved.Style.FillGradient.Matrix()
++			saved.Shift(geom.V(1, 2))
++			next, err := scene.Sample(float64(tick) / 100)
++			if err != nil {
++				t.Fatal(err)
++			}
++			if instanceShapes(next.Find(root.ID))[0].Style.FillGradient.Matrix() != old {
++				t.Fatal("sample snapshot mutated another sample")
++			}
++		})
++	}
++	fresh := textBBoxGradientRead(t, source, 8, "regular")
++	a, b := instanceShapes(before), instanceShapes(fresh)
++	for i := range a {
++		if !reflect.DeepEqual(a[i].Path, b[i].Path) || a[i].Style.FillGradient.Matrix() != b[i].Style.FillGradient.Matrix() {
++			t.Fatal("authored transform changed original import")
++		}
++	}
++}
++
++func TestSVGTextBBoxGradientsConcurrentImportsUseOwnership(t *testing.T) {
++	source := textBBoxGradientFile(t, "use-chain.svg")
++	for n := range 12 {
++		t.Run(fmt.Sprint(n), func(t *testing.T) {
++			t.Parallel()
++			root := textBBoxGradientRead(t, source, 128, "regular")
++			glyphs := instanceShapes(root)
++			// Each clone owns glyph paths and paints in its own font/placement scope.
++			if glyphs[0].ID == glyphs[3].ID || glyphs[0] == glyphs[3] || glyphs[0].Style.FillGradient == glyphs[3].Style.FillGradient {
++				t.Fatal("use clones share mutable geometry/paint frame")
++			}
++			other := glyphs[3].Copy()
++			glyphs[0].Shift(geom.V(20, 30))
++			if !reflect.DeepEqual(glyphs[3].Path, other.Path) || glyphs[3].Style.FillGradient.Matrix() != other.Style.FillGradient.Matrix() {
++				t.Fatal("use scope leaked")
++			}
++			stops := glyphs[3].Style.FillGradient.Stops()
++			stops[0].Color = gomath.White
++			if glyphs[3].Style.FillGradient.Stops()[0].Color == gomath.White {
++				t.Fatal("gradient exposes stop ownership")
++			}
++		})
++	}
++}
++
++func TestSVGTextBBoxGradientsUnsupportedAtomic(t *testing.T) {
++	defs := `<defs><linearGradient id="g"><stop stop-color="red"/><stop offset="1" stop-color="blue"/></linearGradient><clipPath id="c" clipPathUnits="objectBoundingBox"><rect width="1" height="1"/></clipPath></defs>`
++	for _, body := range []string{
++		`<text fill="url(#g)">A<tspan transform="scale(2)">V</tspan></text>`,
++		`<g clip-path="url(#c)"><svg><text fill="url(#g)">AV</text></svg></g>`,
++		`<defs><symbol id="s" overflow="visible"><text fill="url(#g)">AV</text></symbol></defs><use href="#s" clip-path="url(#c)"/>`,
++		`<defs><symbol id="s" overflow="visible"><text>AV</text></symbol><g id="tile"><use href="#s"/></g></defs><use href="#tile" fill="url(#g)" clip-path="url(#c)"/>`,
++		`<defs><g id="tile"><linearGradient id="local"><stop/><stop offset="1"/></linearGradient><text fill="url(#local)">A</text></g></defs><use href="#tile"/>`,
++		`<text fill="url(#missing)">AV</text>`,
++		`<text transform="scale(0 1)" fill="url(#g)">AV</text>`,
++		`<text x="1e10" fill="url(#g)">AV</text>`,
++		`<text font-family="Missing" fill="url(#g)">AV</text>`,
++		`<text fill="url(#g)" stroke="url(#g)">AV</text>`,
++	} {
++		object, err := svg.Read(strings.NewReader(`<svg viewBox="0 0 128 96">`+defs+`<rect width="10" height="10"/>`+body+`</svg>`), svg.Options{Width: 128})
++		if err == nil || object != nil {
++			t.Fatalf("unsupported branch produced partial output: %s: %v", body, err)
++		}
++	}
++	for _, value := range []string{"", "   "} {
++		root := textBBoxGradientRead(t, []byte(`<svg viewBox="0 0 128 96">`+defs+`<text xml:space="preserve" fill="url(#g)">`+value+`</text></svg>`), 128, "regular")
++		if len(instanceShapes(root)) != 0 {
++			t.Fatal("empty/whitespace text invented painted geometry")
++		}
++	}
++}
++
++func BenchmarkSVGTextBBoxGradientsImportRender(b *testing.B) {
++	for _, name := range []string{"cells-middle", "nested-clips", "use-chain"} {
++		source := textBBoxGradientFile(b, name+".svg")
++		for _, ss := range []int{1, 4} {
++			b.Run(fmt.Sprintf("%s_128x96_SS%d", name, ss), func(b *testing.B) {
++				config := render.DefaultConfig()
++				config.Width, config.Height, config.FrameWidth, config.Workers, config.Supersampling = 128, 96, 8, 1, ss
++				raster, err := render.NewRasterizer(config)
++				if err != nil {
++					b.Fatal(err)
++				}
++				b.ReportAllocs()
++				b.SetBytes(int64(len(source)))
++				b.ResetTimer()
++				for range b.N {
++					root, err := svg.Read(bytes.NewReader(source), svg.Options{Width: 8})
++					if err != nil {
++						b.Fatal(err)
++					}
++					if _, err := raster.Render(&gomath.Frame{Objects: []*gomath.Object{root}}); err != nil {
++						b.Fatal(err)
++					}
++				}
++			})
++		}
++	}
++}
++
++func TestSVGTextBBoxGradientsInheritedFillKeywordsAndUserSpace(t *testing.T) {
++	source := `<svg viewBox="0 0 100 100"><defs><linearGradient id="g"><stop stop-color="red"/><stop offset="1" stop-color="blue"/></linearGradient><linearGradient id="u" gradientUnits="userSpaceOnUse" x2="100"><stop stop-color="red"/><stop offset="1" stop-color="blue"/></linearGradient></defs><g fill="url(#g)" color="red"><text x="10" y="50" font-size="20" fill="inherit">A<tspan fill="initial">V</tspan><tspan fill="unset">g</tspan><tspan fill="none">j</tspan><tspan fill="url(#u)">A</tspan></text><text x="10" y="75" fill="currentColor" color="blue">AV</text></g></svg>`
++	root := readInstances(t, source)
++	glyphs := instanceShapes(root)
++	if len(glyphs) != 7 {
++		t.Fatal("missing mixed-paint glyphs")
++	}
++	if glyphs[0].Style.FillGradient == nil || glyphs[2].Style.FillGradient == nil || glyphs[0].Style.FillGradient.Matrix() != glyphs[2].Style.FillGradient.Matrix() {
++		t.Fatal("inherited/unset fills lost shared text frame")
++	}
++	if glyphs[1].Style.FillGradient != nil || glyphs[1].Style.Fill != gomath.Black || glyphs[3].Style.FillGradient != nil || glyphs[3].Style.Fill != gomath.Transparent {
++		t.Fatal("initial/none failed to clear paintserver")
++	}
++	// The user-space span keeps viewport units; the enclosing bbox paint still
++	// includes this span's cells and each solid/none override.
++	gradientAt(t, glyphs[4], 25, 50, gomath.RGB(.75, 0, .25))
++	for _, g := range glyphs[5:] {
++		if g.Style.FillGradient != nil || g.Style.Fill != gomath.RGB(0, 0, 1) {
++			t.Fatal("inherited currentColor was frozen before descendant color")
++		}
++	}
++	_, metrics := textRun(t, "AVgjA", text.Regular, 20)
++	matrix := glyphs[0].Style.FillGradient.Matrix()
++	if math.Abs(matrix[0]-metrics.Width) > 1e-8 || math.Abs(matrix[4]-(-40)) > 1e-8 {
++		t.Fatal("paint overrides changed text bbox", matrix, metrics)
++	}
++}
++
++func TestSVGTextBBoxGradientsUseGroupAndExistingSymbolMapping(t *testing.T) {
++	defs := `<defs><linearGradient id="g"><stop stop-color="red"/><stop offset="1" stop-color="blue"/></linearGradient><g id="tile"><text x="4" y="30">AV</text><text x="54" y="60">AV</text></g><symbol id="symbol" viewBox="0 0 100 50" overflow="visible"><text x="10" y="30">AV</text></symbol></defs>`
++	source := func(body string) []byte { return []byte(`<svg viewBox="0 0 128 96">` + defs + body + `</svg>`) }
++	root := textBBoxGradientRead(t, source(`<use href="#tile" x="6" y="8" font-size="20" fill="url(#g)"/>`), 128, "regular")
++	glyphs := instanceShapes(root)
++	if len(glyphs) != 4 {
++		t.Fatal("use group text glyphs missing")
++	}
++	a, b := glyphs[0].Style.FillGradient.Matrix(), glyphs[2].Style.FillGradient.Matrix()
++	if math.Abs(a[0]-b[0]) > 1e-8 || math.Abs(b[4]-a[4]-50) > 1e-8 || math.Abs(b[5]-a[5]+30) > 1e-8 {
++		t.Fatal("use fill became an aggregate group bbox", a, b)
++	}
++	symbol := textBBoxGradientRead(t, source(`<use href="#symbol" x="6" y="8" width="80" height="40" font-size="20" fill="url(#g)"/>`), 128, "regular")
++	explicit := textBBoxGradientRead(t, source(`<g transform="translate(6 8) scale(.8)" font-size="20" fill="url(#g)"><text x="10" y="30">AV</text></g>`), 128, "regular")
++	aa, bb := instanceShapes(symbol), instanceShapes(explicit)
++	for i := range aa {
++		compareBBoxPaths(t, aa[i].Path, bb[i].Path)
++		if aa[i].Style.FillGradient.Matrix() != bb[i].Style.FillGradient.Matrix() {
++			t.Fatal("existing symbol viewport mapping changed text's local bbox")
++		}
++	}
++}
+--- /dev/null
++++ b/tests/_cases/svg/text_bbox_gradients_limits_test.go
+@@ -0,0 +1,191 @@
++package svg
++
++import (
++	"gomath"
++	"gomath/geom"
++	"gomath/path"
++	"gomath/text"
++	"strings"
++	"testing"
++)
++
++func textGradientExpansion(t *testing.T) (*expansion, expansionContext) {
++	t.Helper()
++	doc, err := readDocument(strings.NewReader(`<svg><defs><linearGradient id="g"><stop stop-color="red"/><stop offset="1" stop-color="blue"/></linearGradient></defs></svg>`))
++	if err != nil {
++		t.Fatal(err)
++	}
++	if err := doc.prepareCSS(); err != nil {
++		t.Fatal(err)
++	}
++	if err := doc.prepareGradients(); err != nil {
++		t.Fatal(err)
++	}
++	style := initialSVGStyle()
++	style.fillServer = "g"
++	return &expansion{document: doc}, expansionContext{style: style, matrix: geom.Identity(), inText: true, viewport: [2]float64{300, 150}}
++}
++
++func TestSVGTextBBoxGradientSharedScopeAndOwnedSlices(t *testing.T) {
++	s, ctx := textGradientExpansion(t)
++	var outer, span geom.Bounds
++	backing := make([]bboxScope, 1, 4)
++	backing[0] = bboxScope{&outer, geom.Identity()}
++	parent := &textNode{ctx: ctx}
++	parent.ctx.bboxes = backing
++	child := &textNode{ctx: ctx}
++	child.ctx.bboxes = append(backing[:1:1], bboxScope{&span, geom.Identity()})
++	solid := &textNode{ctx: ctx}
++	solid.ctx.style.fillServer = ""
++	chars := []textCharacter{{r: 'A', node: parent}, {r: 'V', node: child}, {r: ' ', node: solid}, {r: 'g', node: parent}}
++	scope, err := s.textGradientTarget(chars, ctx)
++	if err != nil {
++		t.Fatal(err)
++	}
++	if scope == nil || len(parent.ctx.bboxes) != 2 || len(child.ctx.bboxes) != 3 || len(solid.ctx.bboxes) != 1 || len(scope.paints) != 0 {
++		t.Fatal("wrong scope ownership")
++	}
++	if backing[:2][1].box != nil {
++		t.Fatal("inherited backing storage was mutated")
++	}
++	if parent.ctx.bboxes[1].box != scope.bounds || child.ctx.bboxes[2].box != scope.bounds || solid.ctx.bboxes[0].box != scope.bounds {
++		t.Fatal("not one full text ledger")
++	}
++	if s.document.clipBudget.paths != 1 {
++		t.Fatal("scope not charged exactly once")
++	}
++	font := text.DefaultFont()
++	cells, err := s.bboxTextCells(chars, font, 24, 10, 50)
++	if err != nil {
++		t.Fatal(err)
++	}
++	for _, cell := range cells {
++		if err := s.collectBBox(cell.p, cell.character.node.ctx); err != nil {
++			t.Fatal(err)
++		}
++	}
++	if !scope.bounds.Valid || scope.bounds.Size().X == 0 || scope.bounds.Size().Y == 0 {
++		t.Fatal("glyph cells not measured")
++	}
++}
++
++func TestSVGTextBBoxGradientScopeAndMetricsBudgets(t *testing.T) {
++	for _, kind := range []string{"scope", "layouts", "glyphs", "segments", "expanded", "metric-paths"} {
++		t.Run(kind, func(t *testing.T) {
++			s, ctx := textGradientExpansion(t)
++			switch kind {
++			case "scope":
++				s.document.clipBudget.paths = maxClipPaths
++			case "layouts":
++				s.text.layouts = maxTextLayouts
++			case "glyphs":
++				s.text.glyphs = maxTextGlyphs
++			case "segments":
++				s.text.segments = maxTextSegments
++			case "expanded":
++				s.count = maxSVGElements
++			case "metric-paths":
++				s.document.clipBudget.paths = maxClipPaths - 1
++			}
++			node := &textNode{ctx: ctx}
++			chars := []textCharacter{{r: 'A', node: node}}
++			scope, err := s.textGradientTarget(chars, ctx)
++			if kind == "scope" {
++				if err == nil || scope != nil {
++					t.Fatal("scope budget bypass")
++				}
++				return
++			}
++			if err != nil {
++				t.Fatal(err)
++			}
++			if _, err := s.bboxTextCells(chars, text.DefaultFont(), 24, 0, 0); err == nil {
++				t.Fatal("metric work budget bypass", kind)
++			}
++		})
++	}
++}
++
++func TestSVGTextBBoxGradientQueueBudgetsAndError(t *testing.T) {
++	for _, kind := range []string{"instances", "stops", "missing-scope"} {
++		t.Run(kind, func(t *testing.T) {
++			s, ctx := textGradientExpansion(t)
++			ctx.textPaint = &textGradientScope{bounds: &geom.Bounds{Valid: true, Max: geom.V(10, 20)}}
++			switch kind {
++			case "instances":
++				s.document.gradientBudget.instances = maxGradientInstances
++			case "stops":
++				s.document.gradientBudget.stops = maxGradientInstanceStops - 1
++			case "missing-scope":
++				ctx.textPaint = nil
++			}
++			object := gomath.NewObject(path.Path{})
++			if err := s.applyGradient(object, path.Path{}, ctx); err == nil {
++				t.Fatal("queue/error budget bypass", kind)
++			}
++			if ctx.textPaint != nil && len(ctx.textPaint.paints) != 0 {
++				t.Fatal("rejected paint retained")
++			}
++		})
++	}
++	s, ctx := textGradientExpansion(t)
++	ctx.textPaint = &textGradientScope{bounds: &geom.Bounds{Valid: true, Max: geom.V(10, 20)}}
++	s.document.gradientBudget = gradientBudget{instances: maxGradientInstances - 1, stops: maxGradientInstanceStops - 2}
++	object := gomath.NewObject(path.Path{})
++	if err := s.applyGradient(object, path.Path{}, ctx); err != nil {
++		t.Fatal("last available paint rejected", err)
++	}
++	if len(ctx.textPaint.paints) != 1 || s.document.gradientBudget.instances != maxGradientInstances || s.document.gradientBudget.stops != maxGradientInstanceStops {
++		t.Fatal("paint not charged before queue")
++	}
++	if err := ctx.textPaint.finish(); err != nil || object.Style.FillGradient == nil {
++		t.Fatal("boundary paint not resolved", err)
++	}
++	ctx.textPaint.paints[0].matrix = geom.Scaling(0, 1, 1)
++	if err := ctx.textPaint.finish(); err == nil {
++		t.Fatal("deferred frame failure discarded")
++	}
++}
++
++func TestSVGTextBBoxGradientNoExtraScopeForUserSpaceOrSolids(t *testing.T) {
++	for _, kind := range []string{"solid", "user-space", "empty"} {
++		s, ctx := textGradientExpansion(t)
++		s.document.clipBudget.paths = maxClipPaths
++		if kind == "solid" {
++			ctx.style.fillServer = ""
++		}
++		if kind == "user-space" {
++			s.document.gradients[s.document.ids["g"]].attrs["gradientUnits"] = "userSpaceOnUse"
++		}
++		chars := []textCharacter{{r: 'A', node: &textNode{ctx: ctx}}}
++		if kind == "empty" {
++			chars = nil
++		}
++		scope, err := s.textGradientTarget(chars, ctx)
++		if err != nil || scope != nil {
++			t.Fatal("unneeded geometry scope", kind, err)
++		}
++	}
++}
++
++func TestSVGTextBBoxGradientZeroBoundsTransparentAndAtomicBudget(t *testing.T) {
++	for _, box := range []geom.Bounds{{}, {Valid: true, Min: geom.V(5, 6), Max: geom.V(5, 20)}, {Valid: true, Max: geom.V(20, 0)}} {
++		s, ctx := textGradientExpansion(t)
++		ctx.textPaint = &textGradientScope{bounds: &box}
++		object := gomath.NewObject(path.Path{}).SetStroke(gomath.Black, 2)
++		if err := s.applyGradient(object, path.Path{}, ctx); err != nil {
++			t.Fatal(err)
++		}
++		if err := ctx.textPaint.finish(); err != nil {
++			t.Fatal(err)
++		}
++		if object.Style.FillGradient != nil || object.Style.Fill != gomath.Transparent || object.Style.Stroke != gomath.Black || object.Style.StrokeWidth != 2 {
++			t.Fatal("zero bbox affected stroke or acquired fill")
++		}
++	}
++	defs := `<defs><linearGradient id="g"><stop/><stop offset="1"/></linearGradient></defs>`
++	object, err := Read(strings.NewReader(`<svg>`+defs+`<text fill="url(#g)">`+strings.Repeat("A", maxGradientInstances+1)+`</text></svg>`), DefaultOptions())
++	if object != nil || err == nil || !strings.Contains(err.Error(), "gradient instance budget") {
++		t.Fatal("unbounded deferred glyph paints", err)
++	}
++}
+--- /dev/null
++++ b/tests/reference/svg_text_bbox_gradients.py
+@@ -0,0 +1,269 @@
++#!/usr/bin/env python3
++"""Development-only fontTools + direct Cairo text gradient oracle.
++
++DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib PYTHONDONTWRITEBYTECODE=1 \
++/usr/local/bin/python3 tests/reference/svg_text_bbox_gradients.py \
++  --fonts /Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs
++Append --verify to regenerate in memory and compare all fixture hashes.
++No Go source, Go exports, Go geometry or Go pixels are consumed.
++"""
++import argparse
++import hashlib
++import io
++import json
++import math
++from pathlib import Path
++import platform
++
++import cairocffi as cairo
++import fontTools
++from fontTools.pens.basePen import BasePen
++from fontTools.ttLib import TTFont
++from PIL import Image, __version__ as pillow_version
++
++ROOT = Path(__file__).resolve().parents[2]
++OUT = ROOT / 'tests/data/svg/text-bbox-gradients'
++IDENTITY = [1, 0, 0, 1, 0, 0]
++NORMALIZE = [1, 0, 0, -1, -64, 48]
++RED, BLUE, GREEN = [1, 0, 0], [0, 0, 1], [32/255, 160/255, 96/255]
++STOPS = '<stop stop-color="red"/><stop offset="1" stop-color="blue"/>'
++DEFS = '<linearGradient id="g">'+STOPS+'</linearGradient><radialGradient id="r">'+STOPS+'</radialGradient>'
++
++
++def sha(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def mul(a, b):
++    return [a[0]*b[0]+a[2]*b[1], a[1]*b[0]+a[3]*b[1],
++            a[0]*b[2]+a[2]*b[3], a[1]*b[2]+a[3]*b[3],
++            a[0]*b[4]+a[2]*b[5]+a[4], a[1]*b[4]+a[3]*b[5]+a[5]]
++
++
++def union(cells):
++    x, y = min(c[0] for c in cells), min(c[1] for c in cells)
++    return [x, y, max(c[0]+c[2] for c in cells)-x, max(c[1]+c[3] for c in cells)-y]
++
++
++class CairoPen(BasePen):
++    def __init__(self, glyphset, ctx):
++        super().__init__(glyphset)
++        self.ctx = ctx
++
++    def _moveTo(self, p): self.ctx.move_to(*p)
++    def _lineTo(self, p): self.ctx.line_to(*p)
++    def _curveToOne(self, a, b, c): self.ctx.curve_to(*a, *b, *c)
++    def _qCurveToOne(self, a, b):
++        p = self._getCurrentPoint()
++        self.ctx.curve_to(p[0]+2*(a[0]-p[0])/3, p[1]+2*(a[1]-p[1])/3,
++                          b[0]+2*(a[0]-b[0])/3, b[1]+2*(a[1]-b[1])/3, *b)
++    def _closePath(self): self.ctx.close_path()
++    def _endPath(self): pass
++
++
++def main():
++    ap = argparse.ArgumentParser(description=__doc__)
++    ap.add_argument('--fonts', type=Path, required=True)
++    ap.add_argument('--verify', action='store_true')
++    args = ap.parse_args()
++    regular_path = args.fonts / 'Go-Regular.ttf'
++    regular_bytes = regular_path.read_bytes()
++    assert sha(regular_bytes) == '197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3'
++    kern_bytes = (ROOT / 'tests/data/svg/text-kern.ttf').read_bytes()
++    fonts = {'regular': TTFont(io.BytesIO(regular_bytes)), 'kern': TTFont(io.BytesIO(kern_bytes))}
++    # Preserve original outlines/metrics except the A advance; this produces
++    # actual ink with an exactly zero-width glyph-cell bbox.
++    zero = TTFont(io.BytesIO(regular_bytes), recalcTimestamp=False)
++    aname = zero.getBestCmap()[ord('A')]
++    zero['hmtx'].metrics[aname] = (0, zero['hmtx'].metrics[aname][1])
++    buffer = io.BytesIO()
++    zero.save(buffer)
++    zero_bytes = buffer.getvalue()
++    fonts['zero'] = TTFont(io.BytesIO(zero_bytes))
++    files = {'zero-advance.ttf': zero_bytes}
++
++    def run(value, x, y, size, anchor='start', font='regular'):
++        f = fonts[font]
++        cmap, scale = f.getBestCmap(), size/f['head'].unitsPerEm
++        ascent, descent = f['hhea'].ascent*scale, -f['hhea'].descent*scale
++        glyphs, cursor, previous = [], 0., None
++        for c in value:
++            name = cmap[ord(c)]
++            if previous and 'kern' in f:
++                cursor += f['kern'].kernTables[0].kernTable.get((previous, name), 0)*scale
++            width = f['hmtx'][name][0]*scale
++            glyphs.append(dict(rune=c, x=cursor, y=y, size=size, font=font, width=width,
++                               ascent=ascent, descent=descent, fill='g', alpha=1.))
++            cursor += width
++            previous = name
++        offset = {'start': 0, 'middle': -cursor/2, 'end': -cursor}[anchor]
++        for g in glyphs:
++            g['x'] += x+offset
++            g['cell'] = [g['x'], y-ascent, g['width'], ascent+descent]
++        return glyphs
++
++    def group(glyphs, matrix=None, gradients=None):
++        return dict(glyphs=glyphs, matrix=matrix or IDENTITY,
++                    bbox=union([g['cell'] for g in glyphs]),
++                    gradients=gradients or {'g': dict(kind='linear'), 'r': dict(kind='radial')})
++
++    def case(name, body, groups, defs=DEFS):
++        return dict(name=name, source='<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs>'+defs+'</defs>'+body+'</svg>\n', groups=groups)
++
++    cases = []
++    cases.append(case('cells-middle', '<text x="64" y="54" font-size="22" text-anchor="middle" xml:space="preserve" fill="url(#g)">  jAVg  </text>', [group(run('  jAVg  ', 64, 54, 22, 'middle'))]))
++    gs = run('AV A', 12, 58, 28, font='kern')
++    gs[0]['fill'], gs[3]['fill'] = GREEN, GREEN
++    cases.append(case('tspan-whole-kern', '<text x="12" y="58" font-size="28" fill="currentColor" color="#20a060">A<tspan fill="url(#g)">V </tspan>A</text>', [group(gs)]))
++    gs = run('AVg ', 110, 60, 28, 'end', font='kern')
++    # One relative move retains the boundary A/V kern and shifts the full
++    # anchored chunk. Nested paint changes do not split a glyph metrics run.
++    gs[0]['x'] -= 3
++    gs[0]['cell'][0] -= 3
++    for g in gs[1:]:
++        g['y'] -= 4
++        g['cell'][1] -= 4
++    for g in gs[2:]: g['fill'] = 'r'
++    cases.append(case('relative-kern', '<text x="110" y="60" font-size="28" text-anchor="end" xml:space="preserve" fill="url(#g)">A<tspan dx="3" dy="-4">V<tspan fill="url(#r)">g </tspan></tspan></text>', [group(gs)]))
++    a = run('AV', 12, 32, 22)
++    b = run('g  ', 112, 72, 28, 'end')
++    for g in b: g['fill'] = 'r'
++    cases.append(case('chunks-fonts', '<text x="12" y="32" font-size="22" xml:space="preserve" fill="url(#g)">AV<tspan x="112" y="72" font-size="28" text-anchor="end" fill="url(#r)">g  </tspan></text>', [group(a+b)]))
++    gs = run('AVWgj ', 10, 54, 24)
++    gs[1]['fill'], gs[2]['alpha'], gs[3]['alpha'], gs[4]['fill'] = None, 0., 0., GREEN
++    cases.append(case('visibility-overrides', '<text x="10" y="54" font-size="24" xml:space="preserve" fill="url(#g)">A<tspan fill="none">V</tspan><tspan visibility="hidden">W</tspan><tspan opacity="0">g</tspan><tspan display="none" x="900">WWWW</tspan><tspan color="#20a060" fill="currentColor">j</tspan> </text>', [group(gs)]))
++    gt = [1, .18, -.15, .8, .08, .08]
++    matrix = mul([1, .06, .12, 1, 0, 0], [1, .12, .28, .9, 2, 2])
++    cases.append(case('affine-local', '<g transform="matrix(1 .06 .12 1 0 0)"><text x="10" y="52" font-size="24" xml:space="preserve" transform="matrix(1 .12 .28 .9 2 2)" fill="url(#g)">j AV </text></g>', [group(run('j AV ', 10, 52, 24), matrix, {'g': dict(kind='linear', transform=gt)})], '<linearGradient id="g" gradientTransform="matrix(1 .18 -.15 .8 .08 .08)">'+STOPS+'</linearGradient>'))
++    gs = run('AVg', 14, 50, 28)
++    for g in gs: g['fill'] = 'r'
++    cases.append(case('radial-reflection', '<text x="14" y="50" font-size="28" transform="matrix(-.9 .04 .16 1 118 0)" fill="url(#r)">AVg</text>', [group(gs, [-.9, .04, .16, 1, 118, 0])]))
++    defs = DEFS+'<style>.host .label .accent{fill:none}.label > .accent{fill:inherit}</style><g transform="translate(900 900)" display="none"><text id="label" class="label" x="4" y="30" xml:space="preserve">AV<tspan class="accent">g </tspan></text><use id="link" href="#label" x="3" y="5" transform="scale(1.1 .9)"/></g>'
++    b = run('AVg ', 4, 30, 16)
++    for g in b: g['fill'] = 'r'
++    cases.append(case('use-chain', '<g class="host"><use id="first" href="#link" x="6" y="8" font-size="22" fill="url(#g)"/><use id="second" href="#link" x="62" y="45" font-size="16" fill="url(#r)"/></g>', [group(run('AVg ', 4, 30, 22), [1.1, 0, 0, .9, 9.3, 12.5]), group(b, [1.1, 0, 0, .9, 65.3, 49.5])], defs))
++    gs = run('AVg ', 12, 58, 28)
++    spanbox = union([g['cell'] for g in gs[1:3]])
++    for g in gs:
++        g['clip'] = group(gs)['bbox']
++    for g in gs[1:3]: g['clip'] = [spanbox[0], spanbox[1], spanbox[2]*.65, spanbox[3]]
++    clips = '<clipPath id="full" clipPathUnits="objectBoundingBox"><rect width="1" height="1"/></clipPath><clipPath id="span" clipPathUnits="objectBoundingBox"><rect width=".65" height="1"/></clipPath>'
++    cases.append(case('nested-clips', '<text x="12" y="58" font-size="28" xml:space="preserve" fill="url(#g)" clip-path="url(#full)">A<tspan clip-path="url(#span)">Vg</tspan> </text>', [group(gs)], DEFS+clips))
++    gs = run('AVg', 16, 58, 30)
++    for i, g in enumerate(gs): g['alpha'] = .6*.8*(.3 if i == 1 else .65)*.7
++    cases.append(case('template-alpha', '<g opacity=".6"><text x="16" y="58" font-size="30" opacity=".8" fill-opacity=".65" fill="url(#g)">A<tspan fill-opacity=".3">V</tspan>g</text></g>', [group(gs, gradients={'g': dict(kind='linear', colors=[[1, .25, 0], BLUE])})], '<linearGradient id="base" color="green"><stop stop-color="currentColor" stop-opacity=".7"/><stop offset="1" stop-color="blue" stop-opacity=".7"/></linearGradient><linearGradient id="g" href="#base" color="rgb(100%,25%,0%)"/>'))
++    gs = run('A', 20, 55, 30, font='zero')
++    gs[0]['stroke'] = True
++    cases.append(case('zero-width', '<text x="20" y="55" font-size="30" fill="url(#g)" stroke="black" stroke-width="1">A</text>', [group(gs)]))
++
++    oracle = []
++    for c in cases:
++        files[c['name']+'.svg'] = c['source'].encode()
++        expected = []
++        for gr in c['groups']:
++            box = gr['bbox']
++            bm = [box[2], 0, 0, box[3], box[0], box[1]]
++            for g in gr['glyphs']:
++                # Whitespace has metric geometry but no rendered glyph object.
++                if g['rune'] == ' ': continue
++                record = dict(rune=g['rune'], bbox=box, cell=g['cell'], alpha=g['alpha'])
++                fill = g['fill']
++                if isinstance(fill, str) and box[2] and box[3]:
++                    spec = gr['gradients'][fill]
++                    primitive = IDENTITY if spec['kind'] == 'linear' else [.5, 0, 0, .5, .5, .5]
++                    frame = mul(gr['matrix'], mul(bm, mul(spec.get('transform', IDENTITY), primitive)))
++                    record.update(kind=spec['kind'], matrix=mul(NORMALIZE, frame))
++                    # template alpha includes graphics opacity only in raster;
++                    # native stop alpha excludes parent and text opacity.
++                    record['stop_alpha'] = (.3 if g['rune']=='V' else .65)*.7 if c['name']=='template-alpha' else 1.
++                    record['colors'] = spec.get('colors', [RED, BLUE])
++                else:
++                    record['solid'] = fill if isinstance(fill, list) else [0, 0, 0, 0]
++                expected.append(record)
++        oracle.append(dict(name=c['name'], font='kern' if c['name'] in ['tspan-whole-kern', 'relative-kern'] else 'zero' if c['name']=='zero-width' else 'regular', glyphs=expected))
++
++    def render(c, ss, motion=None):
++        surf = cairo.ImageSurface(cairo.FORMAT_ARGB32, 128*ss, 96*ss)
++        ctx = cairo.Context(surf)
++        ctx.scale(ss, ss)
++        if motion: ctx.transform(cairo.Matrix(*motion))
++        for gr in c['groups']:
++            ctx.save()
++            ctx.transform(cairo.Matrix(*gr['matrix']))
++            x, y, w, h = gr['bbox']
++            for g in gr['glyphs']:
++                if g['rune']==' ': continue
++                ctx.save()
++                if 'clip' in g:
++                    ctx.rectangle(*g['clip'])
++                    ctx.clip()
++                f = fonts[g['font']]
++                glyphset, name = f.getGlyphSet(), f.getBestCmap()[ord(g['rune'])]
++                ctx.save()
++                ctx.translate(g['x'], g['y'])
++                scale = g['size']/f['head'].unitsPerEm
++                ctx.scale(scale, -scale)
++                glyphset[name].draw(CairoPen(glyphset, ctx))
++                ctx.restore()
++                fill = g['fill']
++                if isinstance(fill, str) and w and h:
++                    spec = gr['gradients'][fill]
++                    pattern = cairo.LinearGradient(0, 0, 1, 0) if spec['kind']=='linear' else cairo.RadialGradient(.5, .5, 0, .5, .5, .5)
++                    frame = mul([w, 0, 0, h, x, y], spec.get('transform', IDENTITY))
++                    inv = cairo.Matrix(*frame)
++                    inv.invert()
++                    pattern.set_matrix(inv)
++                    pattern.set_extend(cairo.EXTEND_PAD)
++                    colors = spec.get('colors', [RED, BLUE])
++                    for offset, color in zip([0, 1], colors): pattern.add_color_stop_rgba(offset, *color, g['alpha'])
++                    ctx.set_source(pattern)
++                elif isinstance(fill, list): ctx.set_source_rgba(*fill, g['alpha'])
++                else: ctx.set_source_rgba(0, 0, 0, 0)
++                if g.get('stroke'):
++                    ctx.fill_preserve()
++                    ctx.set_source_rgb(0, 0, 0)
++                    ctx.set_line_width(1)
++                    ctx.stroke()
++                else: ctx.fill()
++                ctx.restore()
++            ctx.restore()
++        buffer = io.BytesIO()
++        surf.write_to_png(buffer)
++        im = Image.open(io.BytesIO(buffer.getvalue())).convert('RGBA')
++        if ss > 1: im = im.convert('RGBa').resize((128, 96), Image.Resampling.BOX).convert('RGBA')
++        result = io.BytesIO()
++        im.save(result, format='PNG')
++        return result.getvalue()
++
++    for c in cases:
++        for ss in [1, 4]: files[f'{c["name"]}-cairo-ss{ss}.png'] = render(c, ss)
++    for tick in [0, 20, 50, 80, 100]:
++        t = tick/100
++        motion = [1-.18*t, .10*t, -.12*t, 1+.05*t, 10*t, -3*t]
++        for ss in [1, 4]: files[f'animated-{tick:03d}-cairo-ss{ss}.png'] = render(next(c for c in cases if c['name']=='affine-local'), ss, motion)
++    files['oracle.json'] = (json.dumps(dict(cases=oracle), indent=2)+'\n').encode()
++    records = {name:sha(data) for name,data in sorted(files.items())}
++    provenance = dict(generator='tests/reference/svg_text_bbox_gradients.py', generator_sha256=sha(Path(__file__).read_bytes()),
++        versions=dict(Python=platform.python_version(), Cairo=cairo.cairo_version_string(), fontTools=fontTools.__version__, Pillow=pillow_version),
++        font_sha256={'Go-Regular.ttf':sha(regular_bytes), 'text-kern.ttf':sha(kern_bytes), 'zero-advance.ttf':sha(zero_bytes)},
++        pinned_manim=dict(version='0.22.1', commit='16ea443e2a5f1d79db0a721161411ce916d6e733', claim='source context only; independent SVG evidence, no new Manim parity claim'),
++        primary_spec=['https://www.w3.org/TR/SVG11/text.html#ObjectBoundingBoxUnitsTextObjects', 'https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes', 'https://www.w3.org/TR/SVG2/pservers.html#LinearGradientElementGradientUnitsAttribute'],
++        oracle='Original fontTools hmtx/kern/hhea + original glyph outline CairoPen; manually authored scope/affine/paint state, direct Cairo patterns. No SVG text parser, Go values, exports or pixels consumed.',
++        text_policy='Entire enclosing text full glyph-cell bbox even for tspan fills. Paint/visibility/opacity do not shrink geometry; display:none excluded. Separate existing tspan clip geometry retained.',
++        animation='Affine-local source, linearly interpolated affine geometry and gradient frame at 0,.2,.5,.8,1. Go scene sampling is checked independently, including interiors and camera inversion.',
++        limitations='Bounded horizontal text; original native limits unchanged. No nested viewport/container symbol bbox claim. Font shaping/bidi not added. Direct Cairo avoids CairoSVG text-bbox/parser behavior.',
++        files_sha256=records)
++    if args.verify:
++        for name,data in files.items(): assert (OUT/name).read_bytes()==data, name
++        saved = json.loads((OUT/'provenance.json').read_text())
++        assert saved==provenance, 'provenance changed'
++        print(f'PASS: {len(files)} independent files byte-identical; generator and provenance hashes match')
++    else:
++        OUT.mkdir(parents=True,exist_ok=True)
++        for name,data in files.items():
++            with (OUT/name).open('xb') as stream: stream.write(data)
++        with (OUT/'provenance.json').open('x') as stream: stream.write(json.dumps(provenance,indent=2)+'\n')
++        print(f'Wrote {len(files)} independent files and provenance')
++
++
++if __name__ == '__main__': main()
+--- /dev/null
++++ b/docs/SVG_TEXT_GRADIENTS.md
+@@ -0,0 +1,101 @@
++# SVG text objectBoundingBox gradient fills
++
++`svg.Read` now supports bounded linear and concentric radial objectBoundingBox
++fills on real `text`/`tspan` outlines, including existing local `use` expansion.
++The public API and dependencies are unchanged. Product rendering remains pure
++Go; Python, fontTools, and Cairo are independent development reference tools.
++
++```xml
++<svg viewBox="0 0 128 96">
++  <defs>
++    <linearGradient id="g">
++      <stop stop-color="red"/>
++      <stop offset="1" stop-color="blue"/>
++    </linearGradient>
++  </defs>
++  <text x="12" y="58" font-family="Go" font-size="28">
++    A<tspan fill="url(#g)">V</tspan>g
++  </text>
++</svg>
++```
++
++The V uses the bbox of the entire text, including the A and g. A gradient does
++not restart at each glyph, tspan, positioned chunk, font run, or fill override.
++This follows SVG 1.1 Text's ObjectBoundingBoxUnitsTextObjects rule. SVG 2
++BoundingBoxes supplies the full glyph-cell geometry: each advance spans the
++font ascent and descent, including preserved spaces and bearings. Original
++font outlines supply the visible ink; their ink bounds are not the paint bbox.
++
++The existing `container_bbox.go` glyph metrics cache and transformed scope
++ledger supply this geometry. Positioning, whitespace processing, kerning,
++font changes, and start/middle/end anchoring finish before paint resolution.
++Every laid-out character contributes, including `fill:none`, visibility:hidden,
++zero opacity, and solid/currentColor overrides. `display:none` characters are
++excluded from layout and bbox geometry. A tspan's existing bbox clip scope
++remains separate from its enclosing text's gradient scope.
++
++Bbox measurement stays in text user coordinates. Paint frame order is:
++
++```
++normalization × ancestors/use placement × text transform × local glyph-cell bbox
++              × gradientTransform × gradient primitive frame
++```
++
++Rotation, reflection, nonuniform scale, and shear therefore preserve the local
++paint frame. Each use clone resolves inherited font size, anchor, fill URL,
++fill-opacity, and descendant styles in its own shadow tree. Source ancestors
++are excluded, and selectors cannot cross the use shadow boundary. Inherited
++fill is a paint reference; it is not an aggregate bbox for a group or use.
++Gradient stop currentColor continues to resolve in the definition/template
++style environment, while solid fill currentColor resolves per text descendant.
++
++A zero-width/height or invalid-empty geometry bbox yields transparent fill and
++preserves stroke. Empty text and text with only non-outlined whitespace create
++no visible glyph objects. A fontTools-derived zero-advance font demonstrates
++actual glyph ink with zero cell width and unchanged stroke. Singular,
++ill-conditioned, or excessive nondegenerate paint frames still return errors.
++Errors never return a partial imported root.
++
++Resource accounting uses the existing per-import ledgers. One additional
++bbox scope is created only when an effective laid-out fill needs bbox units.
++Every scoped cell charges geometry scan and transformed path work; metrics
++misses charge layout, glyph, segment, expanded-element and geometry budgets.
++Queued glyph paints charge the 8,192 instance / 1,048,576 copied-stop limits
++before allocation; deferred resolution spends no second paint allowance.
++Scopes, queues, caches and object paths are import-local. Gradient assets are
++immutable, and copies, use clones and concurrent samples preserve ownership.
++Solids and userSpaceOnUse text do not allocate an extra bbox scope.
++
++Validation is in `tests/_cases/svg/text_bbox_gradients*_test.go` and
++`tests/data/svg/text-bbox-gradients/`. The independent generator
++`tests/reference/svg_text_bbox_gradients.py` reads original pinned Go font
++hmtx/kern/hhea tables and outlines with fontTools and paints direct Cairo
++patterns. It consumes no Go values, exports, source code, or raster output.
++`oracle.json` records expected affine paint matrices and stop colors; 11 SVG
++cases have Cairo references at SS1 and SS4. Affine animation is checked at
++0, .2, .5, .8 and 1, including concurrent sampling and camera inversion.
++`--verify` regenerates 45 files in memory and checks exact bytes and hashes.
++`provenance.json` pins fonts, tools, generator and spec references.
++
++New raster limits are MAE <= .12, SS1 max <= 40 / SS4 max <= 24, and at most
++.005 of pixels with any channel delta > 8, in premultiplied RGBA 0..255.
++Existing fixture data, fixture tests and their thresholds are unchanged. The
++single obsolete general rejection of text bbox fills was removed from
++`gradient_test.go`; unsupported transformed tspans remain covered explicitly.
++Resource boundaries, zero bbox, inherited paint overrides, malformed frames,
++clone-local definitions, partial-output errors and identity are checked.
++
++Existing limits remain: horizontal unshaped Latin/Greek/Cyrillic/Common text,
++scalar absolute x/y/dx/dy, exact immutable font resolution, no textPath,
++textLength, per-character positioning, bidi/shaping or tspan transforms.
++Gradient stroke servers, nonconcentric focus, nonzero fr, repeat/reflect,
++linearRGB, external/fallback URLs and clone-local definitions remain rejected.
++Nested SVG viewports and container bbox scopes crossing symbol viewports keep
++their existing explicit rejections. This adds no viewport-clipping solution or
++isolated group compositing.
++
++The source context remains Manim 0.22.1 at
++`16ea443e2a5f1d79db0a721161411ce916d6e733`. These are independent SVG/font/Cairo
++checks, not a new claim of Pango/browser/Manim text or full SVG parity. Shared
++parity documentation, examples and root updater lifecycle work belong to the
++parent integration and are not changed by this scope.

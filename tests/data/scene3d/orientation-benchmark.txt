@@ -1,0 +1,24 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkRotationTimeline/Sample/ssaa1-8         	      33	   9262367 ns/op	 2401059 B/op	      46 allocs/op
+BenchmarkRotationTimeline/Sample/ssaa1-8         	      28	   8115129 ns/op	 2399363 B/op	      46 allocs/op
+BenchmarkRotationTimeline/Sample/ssaa1-8         	      36	   8157167 ns/op	 2402482 B/op	      46 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa1-8    	      36	   8015272 ns/op	 1825220 B/op	      25 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa1-8    	      34	   7912338 ns/op	 1826024 B/op	      25 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa1-8    	      36	   7862790 ns/op	 1825224 B/op	      25 allocs/op
+BenchmarkRotationTimeline/Sample/ssaa2-8         	      12	  23952875 ns/op	 7066541 B/op	      64 allocs/op
+BenchmarkRotationTimeline/Sample/ssaa2-8         	      12	  25701486 ns/op	 7066512 B/op	      64 allocs/op
+BenchmarkRotationTimeline/Sample/ssaa2-8         	      12	  24136469 ns/op	 7066512 B/op	      64 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa2-8    	      12	  24053031 ns/op	 6489278 B/op	      43 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa2-8    	      12	  23614951 ns/op	 6489260 B/op	      43 allocs/op
+BenchmarkRotationTimeline/DirectThree/ssaa2-8    	      12	  23855653 ns/op	 6489260 B/op	      43 allocs/op
+BenchmarkRotationTimeline/RotationAt-8           	 1511965	       158.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRotationTimeline/RotationAt-8           	 1460799	       158.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRotationTimeline/RotationAt-8           	 1505832	       161.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRotationTimeline/Snapshot-8             	    1101	    217268 ns/op	  553778 B/op	      51 allocs/op
+BenchmarkRotationTimeline/Snapshot-8             	    1118	    213192 ns/op	  553777 B/op	      51 allocs/op
+BenchmarkRotationTimeline/Snapshot-8             	    1101	    215761 ns/op	  553778 B/op	      51 allocs/op
+PASS
+ok  	gomath/scene3d	5.735s

@@ -1,0 +1,5 @@
+=== RUN   TestCheckerboardArtifacts
+    checkerboard_artifacts_test.go:60: /Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/three/checkerboard/checkerboard-surfaces.png
+--- PASS: TestCheckerboardArtifacts (0.24s)
+PASS
+ok  	gomath/three	0.242s

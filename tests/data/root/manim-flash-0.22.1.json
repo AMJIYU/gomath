@@ -1,0 +1,416 @@
+{
+  "source": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "generator_sha256": "ad183543d7e594e015eaf8083bba86980e7dcfeac853f844a8aead0b76988058"
+  },
+  "cases": [
+    {
+      "kind": "flash",
+      "alpha": 0.0,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": false
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.02,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.9666316075203,
+        -1.0000000000000002,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.1,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.7435966183331728,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.25,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -0.42967674938957756,
+        -1.0000000000000002,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.5,
+      "start": [
+        2.0,
+        -0.6000000000000005,
+        0.0
+      ],
+      "end": [
+        -1.1999999999999993,
+        1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.75,
+      "start": [
+        -2.0,
+        -0.21483837469478836,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.9,
+      "start": [
+        -2.0,
+        -0.8717983091665849,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 0.98,
+      "start": [
+        -2.0,
+        -0.9833158037601502,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash",
+      "alpha": 1.0,
+      "start": [
+        -2.0,
+        -0.9999999999999991,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": false
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.0,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": false
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.02,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.616,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.1,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -0.08000000000000007,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.25,
+      "start": [
+        -0.40000000000000036,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        2.0,
+        -0.6000000000000001,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.5,
+      "start": [
+        2.0,
+        0.19999999999999968,
+        0.0
+      ],
+      "end": [
+        0.40000000000000036,
+        1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.75,
+      "start": [
+        -1.1999999999999993,
+        1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -0.19999999999999932,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.9,
+      "start": [
+        -2.0,
+        -0.040000000000000924,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 0.98,
+      "start": [
+        -2.0,
+        -0.8079999999999998,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "flash_linear",
+      "alpha": 1.0,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": false
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.0,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.02,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -0.9880827169715358,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.1,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -0.9084273636904188,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.25,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.9999999999999998,
+        -0.4391702676391356,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.5,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        2.0,
+        1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.75,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -0.8783405352782695,
+        -0.9999999999999999,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.9,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.8168547273808373,
+        -0.9999999999999999,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 0.98,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -1.9761654339430712,
+        -1.0,
+        0.0
+      ],
+      "active": true
+    },
+    {
+      "kind": "uncreate",
+      "alpha": 1.0,
+      "start": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "end": [
+        -2.0,
+        -1.0,
+        0.0
+      ],
+      "active": false
+    }
+  ],
+  "fade_cleanup_opacity": 0.4,
+  "limits": "27 equal-topology rectangle path endpoint states and one FadeOut cleanup opacity. Not full partial-path control-point, family lag, uncreate author-object representation, fill raster or shared-target composition parity."
+}

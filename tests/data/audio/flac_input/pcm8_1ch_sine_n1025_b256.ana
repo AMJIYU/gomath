@@ -1,0 +1,22 @@
+frame=0	offset=86	bits=576	blocksize=256	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=2	residual_type=RICE	partition_order=0
+		warmup[0]=0
+		warmup[1]=2
+		parameter[0]=0
+frame=1	offset=158	bits=584	blocksize=256	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=2	residual_type=RICE	partition_order=0
+		warmup[0]=82
+		warmup[1]=82
+		parameter[0]=0
+frame=2	offset=231	bits=568	blocksize=256	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=2	residual_type=RICE	partition_order=0
+		warmup[0]=-13
+		warmup[1]=-15
+		parameter[0]=0
+frame=3	offset=302	bits=576	blocksize=256	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=2	residual_type=RICE	partition_order=0
+		warmup[0]=-80
+		warmup[1]=-79
+		parameter[0]=0
+frame=4	offset=374	bits=88	blocksize=1	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=1	type=VERBATIM

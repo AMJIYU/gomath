@@ -1,0 +1,1250 @@
+{
+  "date": "2026-11-04",
+  "libFLAC": "flac 1.5.0",
+  "ffmpeg": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "cases": 132,
+  "scalar_samples": 1220112,
+  "comparison": "integer input == complete FFmpeg decode == complete pure-Go decode (all bytes)",
+  "analysis_features": [
+    "channel_assignment=INDEPENDENT",
+    "channel_assignment=LEFT_SIDE",
+    "channel_assignment=MID_SIDE",
+    "channel_assignment=RIGHT_SIDE",
+    "order=0",
+    "order=1",
+    "order=10",
+    "order=11",
+    "order=12",
+    "order=2",
+    "order=3",
+    "order=4",
+    "order=5",
+    "order=6",
+    "order=7",
+    "order=8",
+    "order=9",
+    "partition_order=0",
+    "partition_order=1",
+    "partition_order=2",
+    "partition_order=3",
+    "partition_order=4",
+    "partition_order=5",
+    "type=CONSTANT",
+    "type=FIXED",
+    "type=LPC",
+    "type=RICE",
+    "type=RICE2",
+    "type=VERBATIM",
+    "wasted_bits=0",
+    "wasted_bits=1",
+    "wasted_bits=2",
+    "wasted_bits=3",
+    "wasted_bits=4",
+    "wasted_bits=6",
+    "wasted_bits=7",
+    "wasted_bits=8",
+    "wasted_bits=9"
+  ],
+  "lpc_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "verified": [
+    {
+      "File": "libflac_pcm16_1ch_silence_n1_l0.flac",
+      "SHA256": "e2640fd42728346e266004e43f9a97c6ca277505bcc081bd7f2fedcfb28afb93",
+      "PCMSHA256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 1
+    },
+    {
+      "File": "libflac_pcm16_1ch_extremes_n15_l5.flac",
+      "SHA256": "980b39a6187efd606ed98906f5c791d853fac380cec399adec8c08a786a55f31",
+      "PCMSHA256": "995a91a9ed669df3063f858ac7b05554921301d18cb5bcee0f0ea86e218f426c",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 15
+    },
+    {
+      "File": "libflac_pcm16_1ch_random_n16_l8.flac",
+      "SHA256": "77822cb08f4b62856ef7da524af42b1ca1b59a2f4094089065e9d922b05b49ca",
+      "PCMSHA256": "8228ea3f8237bb9a82027fea1262911cedfddb1ddb982a03cf7679e54aac63c6",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 16
+    },
+    {
+      "File": "libflac_pcm16_1ch_wasted_n17_l0.flac",
+      "SHA256": "8ca8bcab33ee5906b57275baae3943cc48ffca413b0aaad1b4d5fb5d26b3dda5",
+      "PCMSHA256": "f2b48010a6199f3ffcd2ebfb96a8cc2c95886b53c079bb853a2672a838c81252",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 17
+    },
+    {
+      "File": "libflac_pcm16_1ch_ramp_n255_l5.flac",
+      "SHA256": "4e31119e95405f8f4c459db6e2cf3355be582f1831b5050decd4d5138866e428",
+      "PCMSHA256": "b5f101c1bffccd8f67792070509f720ec4f28dd799e5298ba7f10c3db0cf89a3",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 255
+    },
+    {
+      "File": "libflac_pcm16_1ch_correlated_n256_l8.flac",
+      "SHA256": "225be747adbadc2ad0e2c3f92d7a6848f6ef805f700b561454d264ae3bf6ab42",
+      "PCMSHA256": "e38d8d42fda4208cdbc8b0e9ef3b09372794525c5a20c40986a2bc34237d3b52",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 256
+    },
+    {
+      "File": "libflac_pcm16_1ch_sine_n257_l0.flac",
+      "SHA256": "ed35e674e637488814ab3965e58de90bc3dcbaabdc7bd3e5c619178cc831e778",
+      "PCMSHA256": "7723b683f5b80f1d125a2ce52e3bfb1cc932358c21974d349614c190eaa38834",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 257
+    },
+    {
+      "File": "libflac_pcm16_1ch_silence_n4095_l5.flac",
+      "SHA256": "2d4e3db0b7d6915cc14b7859e7e49267380ea86b960da9faf780ff90b115e8a1",
+      "PCMSHA256": "56a0eb2668dbacb079c42f5780da609b26b53d79a432d5b293802a1f65ce9796",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 4095
+    },
+    {
+      "File": "libflac_pcm16_1ch_extremes_n4096_l8.flac",
+      "SHA256": "ba68b65fbacac50c34509025edebc6c3420fb7d172be7da331e0602aeb1acf80",
+      "PCMSHA256": "2d2503d9209a003e4c9500856b3ea33ac7963dea691babc57ff8ce292cf49c6a",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 4096
+    },
+    {
+      "File": "libflac_pcm16_1ch_random_n4097_l0.flac",
+      "SHA256": "40c5c5c6d70cb7816b92c95a7bc4f214b34c4cff8d6b44f280d31789252cf258",
+      "PCMSHA256": "572bcedff4f73b160c5eb4ae585a9ce51afc61056850515cf9d7e4304b86c5da",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 4097
+    },
+    {
+      "File": "libflac_pcm16_1ch_wasted_n10001_l5.flac",
+      "SHA256": "fb37e2100b6ef1ebce5b2bb2df11988d23aa50599f7d382bbb4560caf17ac3f1",
+      "PCMSHA256": "53513708f5895b4679634166e7a9adfb7717017192bb06e04c591aff03840b56",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 10001
+    },
+    {
+      "File": "libflac_pcm16_1ch_silence_n8193_l0.flac",
+      "SHA256": "5112e1a78e7533dbc52f4fa5b0bbef8ec45079a6f5932721e49ff883a6faefb9",
+      "PCMSHA256": "976b921d02c38a2738eccec2a697db41ee033595427bd39ff8f4b605fb4eaeb8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_extremes_n8193_l0.flac",
+      "SHA256": "6c8dfae6a7613e9d8e6c36d99b56378d6d9acc7c1db6dcd9b67220a5e2cc14c9",
+      "PCMSHA256": "279f2c80dda547755872803e55f1f35bacfffa2f6a207c8bbee8024708ea87f3",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_random_n8193_l0.flac",
+      "SHA256": "87eeb5bcce217dfefba08be0095f83d4522197c4c44c837b34c82087ed9a031e",
+      "PCMSHA256": "b243bfbfd956a4b01e721c010a6e0ec3c9b6664c032f2045db4ec7543d627c1d",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_wasted_n8193_l0.flac",
+      "SHA256": "da84fb2838a9b5c4d28b04d9a5b7804f6f0cffc72af502bee2ebaf437e360386",
+      "PCMSHA256": "9ea7cfc01a57f5745dae106c2bd1cb1c30e3beaad392134a4a7a24d0b80fb663",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_ramp_n8193_l0.flac",
+      "SHA256": "19b462058ac8a267343882fcc2bd4ffefa62240d7623aaa7e9cb857917738284",
+      "PCMSHA256": "24d3216e4e7d30363ca6deac0a0406f39ee16488cec871836905b4746dc6cde8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_correlated_n8193_l0.flac",
+      "SHA256": "6b29409bca428a6f4501169ef39f3df298e9aec2ba6c12719a052d9bf8564e9f",
+      "PCMSHA256": "940f40a36cf25f20283f31b43f4cdf58749cb834c5d523a5fe07d15c7360dccd",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_sine_n8193_l0.flac",
+      "SHA256": "8b35a248003f6f468ec678706a2cb3ec7bc7fe20ad96b7f16b37da4710bfa3ca",
+      "PCMSHA256": "7ea0e2f06f8a5a687a3ffb97950dffc0c910457d5b5dbc2ab76be4a20551f712",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_silence_n8193_l5.flac",
+      "SHA256": "5112e1a78e7533dbc52f4fa5b0bbef8ec45079a6f5932721e49ff883a6faefb9",
+      "PCMSHA256": "976b921d02c38a2738eccec2a697db41ee033595427bd39ff8f4b605fb4eaeb8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_extremes_n8193_l5.flac",
+      "SHA256": "55b7f17202f21216bf83bf43d3ad3638056fcdb156fe9a59e951085762f5db08",
+      "PCMSHA256": "279f2c80dda547755872803e55f1f35bacfffa2f6a207c8bbee8024708ea87f3",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_random_n8193_l5.flac",
+      "SHA256": "87eeb5bcce217dfefba08be0095f83d4522197c4c44c837b34c82087ed9a031e",
+      "PCMSHA256": "b243bfbfd956a4b01e721c010a6e0ec3c9b6664c032f2045db4ec7543d627c1d",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_wasted_n8193_l5.flac",
+      "SHA256": "da84fb2838a9b5c4d28b04d9a5b7804f6f0cffc72af502bee2ebaf437e360386",
+      "PCMSHA256": "9ea7cfc01a57f5745dae106c2bd1cb1c30e3beaad392134a4a7a24d0b80fb663",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_ramp_n8193_l5.flac",
+      "SHA256": "c69e59b3adf773d4a883accb712135a1e9525f2f16013b34408e97093c9b5d6b",
+      "PCMSHA256": "24d3216e4e7d30363ca6deac0a0406f39ee16488cec871836905b4746dc6cde8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_correlated_n8193_l5.flac",
+      "SHA256": "6b29409bca428a6f4501169ef39f3df298e9aec2ba6c12719a052d9bf8564e9f",
+      "PCMSHA256": "940f40a36cf25f20283f31b43f4cdf58749cb834c5d523a5fe07d15c7360dccd",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_sine_n8193_l5.flac",
+      "SHA256": "5761c56f6a0cc46c28988d09a9275d0494760d342e1c94b8e897035536585d6f",
+      "PCMSHA256": "7ea0e2f06f8a5a687a3ffb97950dffc0c910457d5b5dbc2ab76be4a20551f712",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_silence_n8193_l8.flac",
+      "SHA256": "5112e1a78e7533dbc52f4fa5b0bbef8ec45079a6f5932721e49ff883a6faefb9",
+      "PCMSHA256": "976b921d02c38a2738eccec2a697db41ee033595427bd39ff8f4b605fb4eaeb8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_extremes_n8193_l8.flac",
+      "SHA256": "3802d83a12454b651ab65d601e00b11d9f4463a474c23c891c55591d321c248b",
+      "PCMSHA256": "279f2c80dda547755872803e55f1f35bacfffa2f6a207c8bbee8024708ea87f3",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_random_n8193_l8.flac",
+      "SHA256": "87eeb5bcce217dfefba08be0095f83d4522197c4c44c837b34c82087ed9a031e",
+      "PCMSHA256": "b243bfbfd956a4b01e721c010a6e0ec3c9b6664c032f2045db4ec7543d627c1d",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_wasted_n8193_l8.flac",
+      "SHA256": "da84fb2838a9b5c4d28b04d9a5b7804f6f0cffc72af502bee2ebaf437e360386",
+      "PCMSHA256": "9ea7cfc01a57f5745dae106c2bd1cb1c30e3beaad392134a4a7a24d0b80fb663",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_ramp_n8193_l8.flac",
+      "SHA256": "3812c08340089d1a549f2369b577bc71560ab4b864ce3139bce159296e609a72",
+      "PCMSHA256": "24d3216e4e7d30363ca6deac0a0406f39ee16488cec871836905b4746dc6cde8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_correlated_n8193_l8.flac",
+      "SHA256": "6b29409bca428a6f4501169ef39f3df298e9aec2ba6c12719a052d9bf8564e9f",
+      "PCMSHA256": "940f40a36cf25f20283f31b43f4cdf58749cb834c5d523a5fe07d15c7360dccd",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_sine_n8193_l8.flac",
+      "SHA256": "8b35a248003f6f468ec678706a2cb3ec7bc7fe20ad96b7f16b37da4710bfa3ca",
+      "PCMSHA256": "7ea0e2f06f8a5a687a3ffb97950dffc0c910457d5b5dbc2ab76be4a20551f712",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_1ch_sine_n8193_l8_lpc32.flac",
+      "SHA256": "e2f79cd8d6782ecd14ae0c3c7ba5edcc29d0852e1bc2ad7f3c5cc24591e8e7d2",
+      "PCMSHA256": "7ea0e2f06f8a5a687a3ffb97950dffc0c910457d5b5dbc2ab76be4a20551f712",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_silence_n1_l0.flac",
+      "SHA256": "d382a905450b1d55f5ea4df46adeb1c4ac176bdcdd0f58c657cd10254c62d5e7",
+      "PCMSHA256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 1
+    },
+    {
+      "File": "libflac_pcm16_2ch_extremes_n15_l5.flac",
+      "SHA256": "9f8315ed03e350dd3d7d674c3d66d68c6c0bd91644009f1baa79b71863374ef0",
+      "PCMSHA256": "d1e359980414a48e0c9fd81009bdea83e052979861cb88c00767ccce22dbf070",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 15
+    },
+    {
+      "File": "libflac_pcm16_2ch_random_n16_l8.flac",
+      "SHA256": "0be6fcdab0db2e5d59550d1c7a17b21b8ed96b49e7f93e9736b15982905afaa6",
+      "PCMSHA256": "8cb37fe1bca99d5b13b2473291cc18b2a548d5acf7b059e33c4f01e76a99fe12",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 16
+    },
+    {
+      "File": "libflac_pcm16_2ch_wasted_n17_l0.flac",
+      "SHA256": "e367c51419b7e7fb4752f2eacc81f44c226f033254ebf79d39f455252ebdbb07",
+      "PCMSHA256": "7e0a42b244658367fa715c8291a772e8bbeb63524aadb9db22cace787ea11650",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 17
+    },
+    {
+      "File": "libflac_pcm16_2ch_ramp_n255_l5.flac",
+      "SHA256": "c8c2de48bc2a565a3b0feffe4aca5ddbb82e6433d9ccccc2c6e7d2dfc28a2cce",
+      "PCMSHA256": "d854e8ca2852ce5a457b12fa6d592809eb99826ad664bb5a3c7bf461b52642af",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 255
+    },
+    {
+      "File": "libflac_pcm16_2ch_correlated_n256_l8.flac",
+      "SHA256": "807232b2daae8ed4a1bc648e7756a50e6f2faf1b6cec08d0b4aef67a93ec789b",
+      "PCMSHA256": "5da46e898e6630f0386ed1b3b72a40930724ed71a7385c4399e8fead90b37092",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 256
+    },
+    {
+      "File": "libflac_pcm16_2ch_sine_n257_l0.flac",
+      "SHA256": "f92568505f30e1d67bfaa1da79c931776b784518c6dba77e9257b13298f4ab80",
+      "PCMSHA256": "e4e5ce9ab79e4107b5419969416c5fc8d56f360b15b70cc34511fee6415665b8",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 257
+    },
+    {
+      "File": "libflac_pcm16_2ch_silence_n4095_l5.flac",
+      "SHA256": "74805e46f53d5fbe96fee51d91a8587d8368fd9e9c1b06457a610870bd54c8e5",
+      "PCMSHA256": "cf2df94f095fd49f5c54c6563355315bd732a26a4fc610ddd6b4809984e542db",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 4095
+    },
+    {
+      "File": "libflac_pcm16_2ch_extremes_n4096_l8.flac",
+      "SHA256": "706cbb7cdd3f79c568f83b6d73a566c1ff46f754e21006d62b550db1d55ce8ca",
+      "PCMSHA256": "2c29bf263327fa4e1958431c81d2a3c2c55169d45437a543761f1a9b55efc019",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 4096
+    },
+    {
+      "File": "libflac_pcm16_2ch_random_n4097_l0.flac",
+      "SHA256": "97a40a62b9e93d3958ad6392d651bd7276e7b8ccd7da8f968728c28db4eea2f3",
+      "PCMSHA256": "229c5a9e4ed77f23c21677377ee88c8052ec5f09f3a195c6999565cf30cbb5df",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 4097
+    },
+    {
+      "File": "libflac_pcm16_2ch_wasted_n10001_l5.flac",
+      "SHA256": "1b0161371a1b2687e3b7679f4bf20324f25c1463c65aef9124a8e16bf90c6c06",
+      "PCMSHA256": "3bd6149cfa6ff2a69cc5df32df8401d716b5810afbc4c58f1cd174255fd2dddc",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 10001
+    },
+    {
+      "File": "libflac_pcm16_2ch_silence_n8193_l0.flac",
+      "SHA256": "6de84a84b561d1e345bf0eac9b6ff856a1ddca236de9d7df7599e2a6308ae53d",
+      "PCMSHA256": "9f8b34eddcde2b303a153d07a8e9fe6ebe1dd360b7218d2b94f551b80140b504",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_extremes_n8193_l0.flac",
+      "SHA256": "e793f59b64ba552270cec13ab1eea018de1e61850597d914e3c83db2553b317e",
+      "PCMSHA256": "24a0103943bfba510cf7ae4cc068bac46bc03265cc49041c03049778a7668841",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_random_n8193_l0.flac",
+      "SHA256": "21f648a44dfd67c95fa39ca6de72708ab4626cf41ece6325688be00a0967e8a9",
+      "PCMSHA256": "b6ba993ee893f9ecac53ea80f9682f048754a02e9313da61bfad3e6e508c1583",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_wasted_n8193_l0.flac",
+      "SHA256": "00428599feae93f0a1668c29574b07b1d64e92defc84c19624073c1da231ce38",
+      "PCMSHA256": "96b02fa11737c5e751f933239ac18e93977ae759e1268b37fa4bbd3aacfdb81e",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_ramp_n8193_l0.flac",
+      "SHA256": "4384114084f2f68e44f2ea89c46736d40c25b7bf49c36e7297e1b916a707f3b8",
+      "PCMSHA256": "54d0347bdfbbeb71945ba1a13873e82f897039f7052b40fefe531f4766584034",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_correlated_n8193_l0.flac",
+      "SHA256": "bc5a70545bcaf08e3eda69a5e9618f86a6eee5f9e4d7c58897e3c65a051d8e8b",
+      "PCMSHA256": "c0c3128a9592175c8976bf422529c33095146c977bf147a142ce78b6db6445bb",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_sine_n8193_l0.flac",
+      "SHA256": "fdaf56bad270ba729e110fe8a44d86038af2291faaa94138f2fab988391b0d7e",
+      "PCMSHA256": "d0a3111835e58eef76d2579224bc234ffec587b5b573190d71c32b3fd92ad960",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_silence_n8193_l5.flac",
+      "SHA256": "6de84a84b561d1e345bf0eac9b6ff856a1ddca236de9d7df7599e2a6308ae53d",
+      "PCMSHA256": "9f8b34eddcde2b303a153d07a8e9fe6ebe1dd360b7218d2b94f551b80140b504",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_extremes_n8193_l5.flac",
+      "SHA256": "a0e52717f63f9701e83e6066992449bb63e3e52bc5d1008d6bc4cb71cf9221c6",
+      "PCMSHA256": "24a0103943bfba510cf7ae4cc068bac46bc03265cc49041c03049778a7668841",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_random_n8193_l5.flac",
+      "SHA256": "21f648a44dfd67c95fa39ca6de72708ab4626cf41ece6325688be00a0967e8a9",
+      "PCMSHA256": "b6ba993ee893f9ecac53ea80f9682f048754a02e9313da61bfad3e6e508c1583",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_wasted_n8193_l5.flac",
+      "SHA256": "7f842707be09db9a7afeb838764055295cad5db113ba3a3afded4dd89bca77b0",
+      "PCMSHA256": "96b02fa11737c5e751f933239ac18e93977ae759e1268b37fa4bbd3aacfdb81e",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_ramp_n8193_l5.flac",
+      "SHA256": "30aaa035f623cc57ed6d2c4fa733f3b68600c041b1bdbf097b0e9b9acd2f9181",
+      "PCMSHA256": "54d0347bdfbbeb71945ba1a13873e82f897039f7052b40fefe531f4766584034",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_correlated_n8193_l5.flac",
+      "SHA256": "fd24db586e046660f035b917c7e83c9870ecc5efc2d32964ff845ee3b3b00a33",
+      "PCMSHA256": "c0c3128a9592175c8976bf422529c33095146c977bf147a142ce78b6db6445bb",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_sine_n8193_l5.flac",
+      "SHA256": "b65fb5ba378a0b3b033637e02fd49ce68fe373b6c0154e8742a7176b18a3f94f",
+      "PCMSHA256": "d0a3111835e58eef76d2579224bc234ffec587b5b573190d71c32b3fd92ad960",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_silence_n8193_l8.flac",
+      "SHA256": "6de84a84b561d1e345bf0eac9b6ff856a1ddca236de9d7df7599e2a6308ae53d",
+      "PCMSHA256": "9f8b34eddcde2b303a153d07a8e9fe6ebe1dd360b7218d2b94f551b80140b504",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_extremes_n8193_l8.flac",
+      "SHA256": "1ac6d8644b22a448cb10508e24e646f5a40e6da412e8b5d00990f372f02a8505",
+      "PCMSHA256": "24a0103943bfba510cf7ae4cc068bac46bc03265cc49041c03049778a7668841",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_random_n8193_l8.flac",
+      "SHA256": "21f648a44dfd67c95fa39ca6de72708ab4626cf41ece6325688be00a0967e8a9",
+      "PCMSHA256": "b6ba993ee893f9ecac53ea80f9682f048754a02e9313da61bfad3e6e508c1583",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_wasted_n8193_l8.flac",
+      "SHA256": "7f842707be09db9a7afeb838764055295cad5db113ba3a3afded4dd89bca77b0",
+      "PCMSHA256": "96b02fa11737c5e751f933239ac18e93977ae759e1268b37fa4bbd3aacfdb81e",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_ramp_n8193_l8.flac",
+      "SHA256": "2bb9e66f9b31d837d660a9ed91a545bf210eabbd2560e6ea5254a83aff71b9da",
+      "PCMSHA256": "54d0347bdfbbeb71945ba1a13873e82f897039f7052b40fefe531f4766584034",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_correlated_n8193_l8.flac",
+      "SHA256": "a9456d2c1eb823594d58cd5c0fde1d9b78371a661c77ffbff7837b0ad683665b",
+      "PCMSHA256": "c0c3128a9592175c8976bf422529c33095146c977bf147a142ce78b6db6445bb",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_sine_n8193_l8.flac",
+      "SHA256": "0b35176bea2fdda3a27ff4ca8709866e446bbb776b15c43d665ee00b7a5a78ef",
+      "PCMSHA256": "d0a3111835e58eef76d2579224bc234ffec587b5b573190d71c32b3fd92ad960",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm16_2ch_sine_n8193_l8_lpc32.flac",
+      "SHA256": "b017ef813a94057b8383677f5dd714a23cba809a11604f608de347d17c6a3a95",
+      "PCMSHA256": "d0a3111835e58eef76d2579224bc234ffec587b5b573190d71c32b3fd92ad960",
+      "Rate": 48000,
+      "Depth": 16,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_silence_n1_l0.flac",
+      "SHA256": "59c6dca88272383a27331bf2276cf54b0e532d60197ca5b49544a787efd5cb60",
+      "PCMSHA256": "709e80c88487a2411e1ee4dfb9f22a861492d20c4765150c0c794abd70f8147c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 1
+    },
+    {
+      "File": "libflac_pcm24_1ch_extremes_n15_l5.flac",
+      "SHA256": "f87600d751c221358227288df2f44f93badfb18ed80d6c8f9295aa7ad1a42371",
+      "PCMSHA256": "405fd826f897b5fee12e45975e634e0ad95d3c5028cfdb37d7a8df2358c91abd",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 15
+    },
+    {
+      "File": "libflac_pcm24_1ch_random_n16_l8.flac",
+      "SHA256": "092a9632ff78dfb06d2aeb98681f17d6cefb1fcfd584c8042b7357ad61deed53",
+      "PCMSHA256": "b6b2cc1fe9e297e83536d713cae042cbf5f1f6f972790968545415ad13d4ba6e",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 16
+    },
+    {
+      "File": "libflac_pcm24_1ch_wasted_n17_l0.flac",
+      "SHA256": "68061d6b68ee7ab600b55ddcce5c8fae74c19d464c47f0552eb2b5eeac42e1ab",
+      "PCMSHA256": "6124735e85bcb47860748f144483c010c9df153674f2cf157f4d3f114fd4623c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 17
+    },
+    {
+      "File": "libflac_pcm24_1ch_ramp_n255_l5.flac",
+      "SHA256": "62b9f25166f9955b2ae2c247d94135de32a793d950769c10491b6162eb6b8c8b",
+      "PCMSHA256": "9a251860d011fcff1046833c77a5cc33c1a94668ffbc1f431274fdc6bf67e47e",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 255
+    },
+    {
+      "File": "libflac_pcm24_1ch_correlated_n256_l8.flac",
+      "SHA256": "5d242729df735f50293195a25309a50ce54358ae3b30ac852a3557b7cd3eebb6",
+      "PCMSHA256": "8662d16ec000ca68c984f612b924c59f981eca9bed95ca476df4f7cab84d0322",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 256
+    },
+    {
+      "File": "libflac_pcm24_1ch_sine_n257_l0.flac",
+      "SHA256": "cf5c2ca34feb14a23287a4a75ad1123666ec67f02068f7cc250f2c7a41625a05",
+      "PCMSHA256": "1afbeae3523ca0933465b15d9dedbee7bde5a37fa29f1128eee49d851d4c4d10",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 257
+    },
+    {
+      "File": "libflac_pcm24_1ch_silence_n4095_l5.flac",
+      "SHA256": "fe714c56107a0140eecc95031b917f6a6353743e9885a31a727d3ea41538a633",
+      "PCMSHA256": "0680d0f1107c730d5f181be807078c467d92f7d57c5d5f0cc0e7438e1ff14654",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 4095
+    },
+    {
+      "File": "libflac_pcm24_1ch_extremes_n4096_l8.flac",
+      "SHA256": "e192a7abc16fecfc396a484e14265d01cec41af0d592c6be86999aff90caf19c",
+      "PCMSHA256": "deb7b630559067eb9467fc9ae0ac4a1992d7c9b6cf0b901f4b09ca16c32d57d1",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 4096
+    },
+    {
+      "File": "libflac_pcm24_1ch_random_n4097_l0.flac",
+      "SHA256": "f859e39686bb02d779f19bc6b542f20e0046da0ff76b8c4cf70610352d116002",
+      "PCMSHA256": "98fd2e16966ff83a752c91c1e9cd69acf6672e8c35ce0aadf5d2d1605336a735",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 4097
+    },
+    {
+      "File": "libflac_pcm24_1ch_wasted_n10001_l5.flac",
+      "SHA256": "413e45c510133a87bd287f1ca739e86372f36b26e12fdf7c8611f5014ae3f002",
+      "PCMSHA256": "2ad5473e903267a382c32734c2628235138daa0c1c5d7afea6bf4754ac45bc98",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 10001
+    },
+    {
+      "File": "libflac_pcm24_1ch_silence_n8193_l0.flac",
+      "SHA256": "4908a20f8c43f5b9afcf8707812326f9bfbc67d758f7b044a7f209d8c2076560",
+      "PCMSHA256": "30de334ffef35f1202186292f6f70d7bc4d93c882efe50252932774ea1b843c8",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_extremes_n8193_l0.flac",
+      "SHA256": "e6abb4eb85c0e4d2c2093143a0a90834868ea89eb4e648d1eeee630a8a04e066",
+      "PCMSHA256": "56369df7f96644c37057268a0c424697b5b1c121a89401b3502b47cd3116c296",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_random_n8193_l0.flac",
+      "SHA256": "753002ae019846050a63b8c583ab6a022a34d7eff46111414717dbd8b62631ad",
+      "PCMSHA256": "0746063435869f0280fc7853ceacd401dcee444086f462e111da58379299ce4c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_wasted_n8193_l0.flac",
+      "SHA256": "59d9eb0fd0b4d9c09554616bc15f161d9f17fa563285c55b8403f43a73355c8a",
+      "PCMSHA256": "6815a3177cbc354d84cfd7ffdeb910160bb4bb38a2c9a53064a66bc31bf220f0",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_ramp_n8193_l0.flac",
+      "SHA256": "93afa097d63a56a5e5dc606480e9db89bd1168cad223028792b52f158d2f8aa2",
+      "PCMSHA256": "fdbbed70541e70f51a0618ca470341518cd49996e8ab69bc31680ee22e043419",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_correlated_n8193_l0.flac",
+      "SHA256": "b96c6166152e85d42919872499cb5c2c74b08679ae940041393c059e2b1d8a18",
+      "PCMSHA256": "52dd352e3c030d2c22e402dbdb363ea5ac1c2763d2f42cc292b7a9437c2e1e23",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_sine_n8193_l0.flac",
+      "SHA256": "d2518ca83708e28ea39869fcc669e8920a19b96d3081fb4dc3ec9c3e3edff547",
+      "PCMSHA256": "1d38a2a6de5c78cd3a25bd6acdf21e8cd97b1448e11fa9eb2502a0c727b72cf3",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_silence_n8193_l5.flac",
+      "SHA256": "4908a20f8c43f5b9afcf8707812326f9bfbc67d758f7b044a7f209d8c2076560",
+      "PCMSHA256": "30de334ffef35f1202186292f6f70d7bc4d93c882efe50252932774ea1b843c8",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_extremes_n8193_l5.flac",
+      "SHA256": "f8f02fa84bae35e4d1c00a8e12676bf77e975ca26ee3cef33a102213d1c8aec5",
+      "PCMSHA256": "56369df7f96644c37057268a0c424697b5b1c121a89401b3502b47cd3116c296",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_random_n8193_l5.flac",
+      "SHA256": "753002ae019846050a63b8c583ab6a022a34d7eff46111414717dbd8b62631ad",
+      "PCMSHA256": "0746063435869f0280fc7853ceacd401dcee444086f462e111da58379299ce4c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_wasted_n8193_l5.flac",
+      "SHA256": "59d9eb0fd0b4d9c09554616bc15f161d9f17fa563285c55b8403f43a73355c8a",
+      "PCMSHA256": "6815a3177cbc354d84cfd7ffdeb910160bb4bb38a2c9a53064a66bc31bf220f0",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_ramp_n8193_l5.flac",
+      "SHA256": "fa9691e88dff73cec2d56cae236e5f5b1bdf1855f7cdc4bd9f0b8e375e89ff1c",
+      "PCMSHA256": "fdbbed70541e70f51a0618ca470341518cd49996e8ab69bc31680ee22e043419",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_correlated_n8193_l5.flac",
+      "SHA256": "b96c6166152e85d42919872499cb5c2c74b08679ae940041393c059e2b1d8a18",
+      "PCMSHA256": "52dd352e3c030d2c22e402dbdb363ea5ac1c2763d2f42cc292b7a9437c2e1e23",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_sine_n8193_l5.flac",
+      "SHA256": "15726bd3f7a0f9a5e48112f76190b85abd5c388c354c6a16466d63674aaf89f4",
+      "PCMSHA256": "1d38a2a6de5c78cd3a25bd6acdf21e8cd97b1448e11fa9eb2502a0c727b72cf3",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_silence_n8193_l8.flac",
+      "SHA256": "4908a20f8c43f5b9afcf8707812326f9bfbc67d758f7b044a7f209d8c2076560",
+      "PCMSHA256": "30de334ffef35f1202186292f6f70d7bc4d93c882efe50252932774ea1b843c8",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_extremes_n8193_l8.flac",
+      "SHA256": "3217d1ebd0409c7266ca087372814dc3d8c5f5cbdfac7dc67957bb704ca83d03",
+      "PCMSHA256": "56369df7f96644c37057268a0c424697b5b1c121a89401b3502b47cd3116c296",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_random_n8193_l8.flac",
+      "SHA256": "753002ae019846050a63b8c583ab6a022a34d7eff46111414717dbd8b62631ad",
+      "PCMSHA256": "0746063435869f0280fc7853ceacd401dcee444086f462e111da58379299ce4c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_wasted_n8193_l8.flac",
+      "SHA256": "26730a4933e578f59f23bc08ffdca0a3b18d7d26590e7f6d8d3cdae2ea8c2c52",
+      "PCMSHA256": "6815a3177cbc354d84cfd7ffdeb910160bb4bb38a2c9a53064a66bc31bf220f0",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_ramp_n8193_l8.flac",
+      "SHA256": "fa9691e88dff73cec2d56cae236e5f5b1bdf1855f7cdc4bd9f0b8e375e89ff1c",
+      "PCMSHA256": "fdbbed70541e70f51a0618ca470341518cd49996e8ab69bc31680ee22e043419",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_correlated_n8193_l8.flac",
+      "SHA256": "b96c6166152e85d42919872499cb5c2c74b08679ae940041393c059e2b1d8a18",
+      "PCMSHA256": "52dd352e3c030d2c22e402dbdb363ea5ac1c2763d2f42cc292b7a9437c2e1e23",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_sine_n8193_l8.flac",
+      "SHA256": "983b88fc5340895640775f7ffbfd7ad896969057bf39c692840e3e13d833576a",
+      "PCMSHA256": "1d38a2a6de5c78cd3a25bd6acdf21e8cd97b1448e11fa9eb2502a0c727b72cf3",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_1ch_sine_n8193_l8_lpc32.flac",
+      "SHA256": "517072796690e3fba05695f61c8bb2ec09e19bfcb6808463998811ca439e6012",
+      "PCMSHA256": "1d38a2a6de5c78cd3a25bd6acdf21e8cd97b1448e11fa9eb2502a0c727b72cf3",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 1,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_silence_n1_l0.flac",
+      "SHA256": "4623a68aaa296af7bbdb3a99fe02f1d1600f16602c6b22e4811de5d50c73c37b",
+      "PCMSHA256": "b0f66adc83641586656866813fd9dd0b8ebb63796075661ba45d1aa8089e1d44",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 1
+    },
+    {
+      "File": "libflac_pcm24_2ch_extremes_n15_l5.flac",
+      "SHA256": "552487a1e93f0c340fc6ebc7ddb0b300ac10fc0d0165f253bdd1759b606ad701",
+      "PCMSHA256": "9ebdd9077e69667ac8bb9409cabcd81d9cb8cca0d9811431cd69b348d92bf81c",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 15
+    },
+    {
+      "File": "libflac_pcm24_2ch_random_n16_l8.flac",
+      "SHA256": "1b49e1077afa26c14d54c20f338772ac568099a7b8d9aa79a4493f79c94e1f75",
+      "PCMSHA256": "53093d747f7211ea1ab7171bdbda744db3f606d5519c8ea01ec0322160eff885",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 16
+    },
+    {
+      "File": "libflac_pcm24_2ch_wasted_n17_l0.flac",
+      "SHA256": "c0bcce92790f00a7c27446763e2d637e9c4d59034f564d2db38ec4d45f6a3fc2",
+      "PCMSHA256": "9eeaa50337ef6816e55347a794374062637b4d0d87e0af150e116e76d5dfa6c5",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 17
+    },
+    {
+      "File": "libflac_pcm24_2ch_ramp_n255_l5.flac",
+      "SHA256": "f5d80b5d652f06beecb7c9bb5c9f08a3e8deb7adc2986237d5ce38e38ff94d73",
+      "PCMSHA256": "91c4172584423853cb86be53331468911c4961b03428854b4bdcb9a80f77ade1",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 255
+    },
+    {
+      "File": "libflac_pcm24_2ch_correlated_n256_l8.flac",
+      "SHA256": "73eac3ffb39bb962ef76fe1bcd4026510144e63cd076ab8c7eeb73ff40f1b579",
+      "PCMSHA256": "fa250a14b8ea120a66190d0ff5247d746f9cd211f755c769f2b25682129012d4",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 256
+    },
+    {
+      "File": "libflac_pcm24_2ch_sine_n257_l0.flac",
+      "SHA256": "43efa44fbe70f1093a707d3752000817f303a3f4252e66f9c55005c9d115e6ae",
+      "PCMSHA256": "036a7cc853f28865d9769f0cbc35480a46fbb69abd26d1afd05d3093a74e29b7",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 257
+    },
+    {
+      "File": "libflac_pcm24_2ch_silence_n4095_l5.flac",
+      "SHA256": "284b8774cc6c0db04edb0fd550a1b9dcf11ddc5471ca21dda86690bb032fff63",
+      "PCMSHA256": "d60b817952b857aea92ddfa35e21dfbd445882b3054bfe03136bf0583fe95a59",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 4095
+    },
+    {
+      "File": "libflac_pcm24_2ch_extremes_n4096_l8.flac",
+      "SHA256": "3200ddf1907843cb2a309b646d7addf2f9e30cf66591904f91e861c137c12b0a",
+      "PCMSHA256": "18aecfea644511348ef61298d1fbfa7bf30b53240914e6681116571c96d860e6",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 4096
+    },
+    {
+      "File": "libflac_pcm24_2ch_random_n4097_l0.flac",
+      "SHA256": "0ef43a022a83a8c3086763e5b078e5d600b16fed919d9a184a76005ff5b3c8c3",
+      "PCMSHA256": "930b39e1855d225804c8cd3bbdc8745aaa8483ac61d7e0123366128618cbb50d",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 4097
+    },
+    {
+      "File": "libflac_pcm24_2ch_wasted_n10001_l5.flac",
+      "SHA256": "4cbbd3d7e77b3a76b28d495c33111de7d9d8cd5d9df10f26413776c9498b2c9c",
+      "PCMSHA256": "ad5bb6ae5cfb82a420f185692d53ec49c72ef096d0e56fa5133cd15828fcedb2",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 10001
+    },
+    {
+      "File": "libflac_pcm24_2ch_silence_n8193_l0.flac",
+      "SHA256": "558c11653921d6840bf511f96848a0fe016bbfb4943daa1aae3cfb0759d294f6",
+      "PCMSHA256": "1ea0acee880c9edac2a1aa0515ba9d743dfbaa0e8de4fd157a3d11fec697b490",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_extremes_n8193_l0.flac",
+      "SHA256": "26f4616fb9d259709f3f8f2d3e1e726c30cdf1cd75341edd9aea7d0f91f325a7",
+      "PCMSHA256": "70e03948a22710834a06ded933fc9874dfc7d05014741fda771cb9219c75a6fd",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_random_n8193_l0.flac",
+      "SHA256": "f330b3b18e565db040b5a666a91f958c0426dd1a22acd44fec5e19ee7a03efe3",
+      "PCMSHA256": "d714969b097775879ff4ff0166666bdcf4fff527c6f1d54e263ebb11c312b470",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_wasted_n8193_l0.flac",
+      "SHA256": "3f3bba02a277e412d43989e491625a6a147caae7dba6e5b813b42f80e316b032",
+      "PCMSHA256": "e596b6ff9c2a109cb4351b8c50a142175f43d7887411e08df0911bd52a75c132",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_ramp_n8193_l0.flac",
+      "SHA256": "e1bbefd35801df2adbdfe3014a48e4e3a30aa57590fae2bd1fe9f10f6b527943",
+      "PCMSHA256": "ef4a701a200db676cb6d53d0fdb1109cdf08fbf1ea34b203fbf842cadb6f6d15",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_correlated_n8193_l0.flac",
+      "SHA256": "923d07e89b47a757f2f860a45658832b75569e251a7a2886af395d82b38b6e1a",
+      "PCMSHA256": "dce5aff2b88407d0e29bba91bad55fa17c5e93bd11cbf0a347c81b054a85b1ac",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_sine_n8193_l0.flac",
+      "SHA256": "2f39f1ea23f70a46fbfaac446ba823ba87a04a9a36b9dbf0ac5b29d67c464435",
+      "PCMSHA256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_silence_n8193_l5.flac",
+      "SHA256": "558c11653921d6840bf511f96848a0fe016bbfb4943daa1aae3cfb0759d294f6",
+      "PCMSHA256": "1ea0acee880c9edac2a1aa0515ba9d743dfbaa0e8de4fd157a3d11fec697b490",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_extremes_n8193_l5.flac",
+      "SHA256": "4210cbaab5681200b32b35251897f2fc43e4b946a576e41bbe092a612526497c",
+      "PCMSHA256": "70e03948a22710834a06ded933fc9874dfc7d05014741fda771cb9219c75a6fd",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_random_n8193_l5.flac",
+      "SHA256": "f330b3b18e565db040b5a666a91f958c0426dd1a22acd44fec5e19ee7a03efe3",
+      "PCMSHA256": "d714969b097775879ff4ff0166666bdcf4fff527c6f1d54e263ebb11c312b470",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_wasted_n8193_l5.flac",
+      "SHA256": "bff3f9f37534ebfcf73c7712ef3e8407fc5dcbf8b31fa176a95a2998a9549706",
+      "PCMSHA256": "e596b6ff9c2a109cb4351b8c50a142175f43d7887411e08df0911bd52a75c132",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_ramp_n8193_l5.flac",
+      "SHA256": "551ef2692f9495887bf922f47f55d248dd5aa9db31d704202f105c7083cd242b",
+      "PCMSHA256": "ef4a701a200db676cb6d53d0fdb1109cdf08fbf1ea34b203fbf842cadb6f6d15",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_correlated_n8193_l5.flac",
+      "SHA256": "6439253dd64aaa92d4cc991b542d8d9002186e9c0631d29cd41596f6f93a7830",
+      "PCMSHA256": "dce5aff2b88407d0e29bba91bad55fa17c5e93bd11cbf0a347c81b054a85b1ac",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_sine_n8193_l5.flac",
+      "SHA256": "aa852db971e7ba099323d773606de12a542d64718123961d67d32bd9d7e6775e",
+      "PCMSHA256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_silence_n8193_l8.flac",
+      "SHA256": "558c11653921d6840bf511f96848a0fe016bbfb4943daa1aae3cfb0759d294f6",
+      "PCMSHA256": "1ea0acee880c9edac2a1aa0515ba9d743dfbaa0e8de4fd157a3d11fec697b490",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_extremes_n8193_l8.flac",
+      "SHA256": "6c06ae0f750a95472b8f134a9e6d1c5b3fb9a27f29da1e2868b3875df128ca44",
+      "PCMSHA256": "70e03948a22710834a06ded933fc9874dfc7d05014741fda771cb9219c75a6fd",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_random_n8193_l8.flac",
+      "SHA256": "f330b3b18e565db040b5a666a91f958c0426dd1a22acd44fec5e19ee7a03efe3",
+      "PCMSHA256": "d714969b097775879ff4ff0166666bdcf4fff527c6f1d54e263ebb11c312b470",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_wasted_n8193_l8.flac",
+      "SHA256": "90f99c8b128479100d5f486d06fa72b9dd2a95dc42536979c36bb17557c6e65e",
+      "PCMSHA256": "e596b6ff9c2a109cb4351b8c50a142175f43d7887411e08df0911bd52a75c132",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_ramp_n8193_l8.flac",
+      "SHA256": "e5eda142f854c2356d587ca59c9106965ddcb04745c905411f9b67ab024f17a3",
+      "PCMSHA256": "ef4a701a200db676cb6d53d0fdb1109cdf08fbf1ea34b203fbf842cadb6f6d15",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_correlated_n8193_l8.flac",
+      "SHA256": "6439253dd64aaa92d4cc991b542d8d9002186e9c0631d29cd41596f6f93a7830",
+      "PCMSHA256": "dce5aff2b88407d0e29bba91bad55fa17c5e93bd11cbf0a347c81b054a85b1ac",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_sine_n8193_l8.flac",
+      "SHA256": "2fca2dc101ff0e20a418c36910326e4e8771a561616fbc56b0342109cdf65254",
+      "PCMSHA256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    },
+    {
+      "File": "libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac",
+      "SHA256": "ffceeeb421a0d91ed79b000452bcfedc451c42e158884f2bc2633dfc1397a0e5",
+      "PCMSHA256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+      "Rate": 48000,
+      "Depth": 24,
+      "Channels": 2,
+      "Frames": 8193
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+=== RUN   TestDirectionalLightLegacyHashes
+=== RUN   TestDirectionalLightLegacyHashes/opaque1
+    point_light_legacy_test.go:74: opaque1 70a14229520bce0fe10916d6f68bea2f7eec141fddad961da6e649ebb529be92
+=== RUN   TestDirectionalLightLegacyHashes/opaque2
+    point_light_legacy_test.go:74: opaque2 8c13e4f09ff39a2e5387167e303a557616a754e64a886b4dddc4a0333029620e
+=== RUN   TestDirectionalLightLegacyHashes/opaque4
+    point_light_legacy_test.go:74: opaque4 ce055db57e80561a9c14aea68c79bb92f3353756e82258c9c6a72281010b3c8b
+=== RUN   TestDirectionalLightLegacyHashes/alphaUV
+    point_light_legacy_test.go:74: alphaUV 51498b78018cae9371d24d35f913c2066a8be56c7b03a8b7a1af0f6c86ce73cd
+=== RUN   TestDirectionalLightLegacyHashes/shadow
+    point_light_legacy_test.go:74: shadow 575e239a4d2ad1ca71a4b64dcc386fa90fff2f8ff7bba1535875c4ec1cf2e183
+=== RUN   TestDirectionalLightLegacyHashes/points
+    point_light_legacy_test.go:74: points a9688887e7ff534b93271942dffea6c9262a67e656e286ee897a866e75b2fe58
+--- PASS: TestDirectionalLightLegacyHashes (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque1 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque2 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque4 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/alphaUV (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/shadow (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/points (0.00s)
+PASS
+ok  	gomath/three	0.007s

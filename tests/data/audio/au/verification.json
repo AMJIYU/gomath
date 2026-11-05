@@ -1,0 +1,93 @@
+{
+  "Date": "2026-11-04",
+  "FrozenAPI": "ReadAU(io.Reader, AUReadOptions) (*PCM,error)",
+  "Options": {
+    "Limits": "Limits",
+    "DiscardMetadata": "bool, default false; annotation absent/all-zero unless opt-in",
+    "AllowUnknownSize": "bool, default false; when true consumes unknown-sized audio to clean EOF"
+  },
+  "Checks": {
+    "FullAudioCGO0Noasm": {
+      "Passed": true,
+      "Seconds": 2.767,
+      "CoveragePercent": 96.4,
+      "NewDecoderCoveragePercent": 100,
+      "FixtureOverride": "GOMATH_AU_REFERENCE_DIR unset",
+      "Log": "audio_tests.txt"
+    },
+    "FullAudioRace": {
+      "Passed": true,
+      "Seconds": 38.539,
+      "CGO_ENABLED": 1,
+      "GOMAXPROCS": 8,
+      "Note": "cgo only for Go race instrumentation",
+      "Log": "race.txt"
+    },
+    "FuzzReadAU": {
+      "Passed": true,
+      "Seconds": 20,
+      "Executions": 884138,
+      "CGO_ENABLED": 0,
+      "GOMAXPROCS": 1,
+      "Parallel": 1,
+      "Log": "fuzz.txt"
+    },
+    "Vet": {
+      "Passed": true,
+      "Command": "CGO_ENABLED=0 go vet -tags noasm ./audio",
+      "Log": "vet.txt"
+    },
+    "Linux386": {
+      "ProductionBuildPassed": true,
+      "CentralOverlayTestsCompiled": true,
+      "Executed": false,
+      "Proof": "linux386_tests.json"
+    },
+    "ExplicitFixtureDirectory": {
+      "Passed": true,
+      "Log": "explicit_fixture_dir.txt"
+    },
+    "RuntimeDependencies": {
+      "Packages": 90,
+      "NonStdlib": [],
+      "Cgo": [],
+      "Prohibited": [],
+      "AudioAssembly": []
+    }
+  },
+  "Reference": {
+    "Cases": 106,
+    "ScalarSamples": 1478712,
+    "FFmpegCompleteExact": 100,
+    "LibsndfileCompleteExact": 106,
+    "RejectedCases": 10,
+    "Manifest": "manifest.json",
+    "NoExternalOutputTrimming": true,
+    "FFmpegRejectedOnlySixEmptyStreams": true,
+    "IndependentEncoder": "libsndfile1.2.2,12 streams",
+    "G711TableSHA256": "8cd07cb31ac66dcadd5e94e23cebda4b7f50afe5365ca1a314ff401b1d4e1b75"
+  },
+  "Benchmarks": "benchmark_summary.json",
+  "ExistingFilesChanged": [
+    "audio/README.md"
+  ],
+  "ExistingAudioGoAndTestFilesUnchanged": true,
+  "ExistingTestSourceCount": 17,
+  "GoModUnchanged": true,
+  "Files": {
+    "audio/au_read.go": "e914562667fbeda7e9ec21c65d9e5095a20c3ba476d2318d012fcef0d20842ca",
+    "audio/README.md": "eecfd193072f67379093c92f756eafbf320a0a6bba37ef132beb53efb1771b39",
+    "tests/_cases/audio/au_read_test.go": "8f8e6b72479139e8065299a1d7aa97be289de3abfd8053eb9500f09116052565",
+    "tests/reference/audio_au.py": "460ce8a0bef63cba73646b48d1689ce9bcaab2b41fe619447e9a7baa516c07c9"
+  },
+  "Bounds": [
+    ".snd big-endian PCM8/16/24/32, G711 mu-law1 / A-law27 only",
+    "integer1..768000Hz, indexed1..64channels, ChannelMask0",
+    "offset24 or>=28; no inferred alignment; annotation zero by default or explicit binary/text discard",
+    "known size must be frame-aligned; truncated object errors; following stream remains unread",
+    "unknown size opt-in, complete-frame clean EOF, one consumed probe byte on limit failure",
+    "known full count checked before annotation/allocation; unknown decoded capacity bounded before growth; old/new arrays may coexist",
+    "unsupported float/ADPCM/DSP/fragmented/little/host-endian variants, no runtime subprocess/native or external dependency"
+  ],
+  "Integration": "Parent can use .snd signature and default options to reject unknown size. For single-file CLI semantics independently require EOF after known-size ReadAU. This reader does not publish partial PCM."
+}

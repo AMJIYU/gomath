@@ -1,0 +1,12 @@
+{
+  "GOOS": "linux",
+  "GOARCH": "386",
+  "CGO_ENABLED": "0",
+  "Tags": "noasm",
+  "CentralOverlayTestsCompiled": true,
+  "Execution": "not executed on darwin/arm64",
+  "ELFClass": 1,
+  "ELFMachine": 3,
+  "SHA256": "0117c811dbcd3e8ad2b9a7be8553a285ea5dead162cbb8f81220d392de7cf293",
+  "Command": "CGO_ENABLED=0 GOOS=linux GOARCH=386 tests/reference/_au_tools/central-run -pkg=audio -c -o tests/reference/_au_tools/audio386.test"
+}

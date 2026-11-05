@@ -1,0 +1,10 @@
+{
+  "packages": 63,
+  "standard_library_dependencies": 62,
+  "forbidden": [],
+  "CGO_ENABLED": "0",
+  "tags": [
+    "noasm"
+  ],
+  "targeted_vet": "passed"
+}

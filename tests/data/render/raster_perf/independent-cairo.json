@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-05",
+  "Cairo": "1.18.4",
+  "CairoSVG": "2.7.1",
+  "python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "generator_sha256": "9c285ccda40717ec59340b70b13576f453365f45e1e8d43f0ef5762239d7bc6f",
+  "scope": "fresh complete independent vector/bitmap clip and gradient rasters; old fixtures untouched",
+  "limitation": "Cairo comparison uses the existing documented edge tolerances in Go tests; this is not Go/Cairo byte identity",
+  "records": [
+    {
+      "name": "clip-nested",
+      "old_svg_sha256": "be9d9bc06a6fe9a0503236a2f013bd1145f37af955e632291a09204919845afc",
+      "old_png_sha256": "1962867182d8633a418bda9fb06c2f5d3e5e0836a79cc6c4bec5eebdbf0c2e2a",
+      "fresh_svg_sha256": "be9d9bc06a6fe9a0503236a2f013bd1145f37af955e632291a09204919845afc",
+      "fresh_png_sha256": "1962867182d8633a418bda9fb06c2f5d3e5e0836a79cc6c4bec5eebdbf0c2e2a",
+      "pixels": 27648,
+      "complete_RGBA_equal": true
+    },
+    {
+      "name": "clip-bitmap",
+      "old_svg_sha256": "2621b2531d8a7857c2a762d64ada8867bf80c06f4e9a09a8410fd5b01f8b6fd2",
+      "old_png_sha256": "b42a35e3196e5a2d75c280c97b44ec43ce2fc27f40119badc38436d25f01bc13",
+      "fresh_svg_sha256": "2621b2531d8a7857c2a762d64ada8867bf80c06f4e9a09a8410fd5b01f8b6fd2",
+      "fresh_png_sha256": "b42a35e3196e5a2d75c280c97b44ec43ce2fc27f40119badc38436d25f01bc13",
+      "pixels": 27648,
+      "complete_RGBA_equal": true
+    },
+    {
+      "name": "linear-hard-hole",
+      "old_svg_sha256": "a2173ab26378072c465219c1e542737fe47d638a40d2d961db3b6359802fb5f7",
+      "old_png_sha256": "fe4c5905c7b73b7754b81d0c63be113b6f66eda03723a7fd8c6e0161dbc594af",
+      "fresh_svg_sha256": "a2173ab26378072c465219c1e542737fe47d638a40d2d961db3b6359802fb5f7",
+      "fresh_png_sha256": "fe4c5905c7b73b7754b81d0c63be113b6f66eda03723a7fd8c6e0161dbc594af",
+      "pixels": 19200,
+      "complete_RGBA_equal": true
+    },
+    {
+      "name": "linear-alpha",
+      "old_svg_sha256": "2dd23a84506898d451a329fc8aa16cdcabb0a30fb6d3e0bbf0b667b65e21ce84",
+      "old_png_sha256": "51006d2276db90cdf05d47eaa5306a66a618630a444c54e29b9b2b9aa14f2af9",
+      "fresh_svg_sha256": "2dd23a84506898d451a329fc8aa16cdcabb0a30fb6d3e0bbf0b667b65e21ce84",
+      "fresh_png_sha256": "51006d2276db90cdf05d47eaa5306a66a618630a444c54e29b9b2b9aa14f2af9",
+      "pixels": 19200,
+      "complete_RGBA_equal": true
+    },
+    {
+      "name": "radial-affine-clip",
+      "old_svg_sha256": "5d7b44d7f6b0ae9fc882880e3b90b5c0ef71eb1916f165fa3bba367f34e992da",
+      "old_png_sha256": "97d84715047efb37ef6ed9391dc406d0251b865044832b467b84e05b41724a0b",
+      "fresh_svg_sha256": "5d7b44d7f6b0ae9fc882880e3b90b5c0ef71eb1916f165fa3bba367f34e992da",
+      "fresh_png_sha256": "97d84715047efb37ef6ed9391dc406d0251b865044832b467b84e05b41724a0b",
+      "pixels": 19200,
+      "complete_RGBA_equal": true
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-04",
+  "scope": "Wave 5 bounded SVG objectBoundingBox clip importer only; production root/render/export unchanged",
+  "api": "No new public API. svg.Read accepts objectBoundingBox on basic/path/image and direct-use targets; immutable native Clips materialized at import.",
+  "reference_source_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733 (read-only sibling; this feature uses SVG2 spec/direct Cairo, not a new Manim parity claim)",
+  "platform": {
+    "go": "go1.27.3",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "cpu": "Apple M2"
+  },
+  "validation": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -count=1",
+      "result": "PASS",
+      "package_seconds": 1.067
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -race -count=1",
+      "result": "PASS",
+      "package_seconds": 13.343
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -vet=all -run '^$'",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS: 42 non-standard packages; no native inputs or runtime process launch imports"
+    }
+  ],
+  "references": {
+    "oracle": "Direct Cairo1.18.4 independently authored geometry, matrices and explicit fill rules; see provenance.json for hashes, versions, primary spec, CairoSVG secondary probes/limitations.",
+    "dimensions": [
+      128,
+      96
+    ],
+    "thresholds": {
+      "mae": 0.35,
+      "max_channel": 45,
+      "fraction_pixels_over_8": 0.02
+    },
+    "metrics": {
+      "affine": {
+        "ss1": {
+          "mae": 0.0874023438,
+          "maximum": 17
+        },
+        "ss4": {
+          "mae": 0.0653686523,
+          "maximum": 7
+        }
+      },
+      "use": {
+        "ss1": {
+          "mae": 0.0708007812,
+          "maximum": 45
+        },
+        "ss4": {
+          "mae": 0.0402832031,
+          "maximum": 7
+        }
+      },
+      "nested": {
+        "ss1": {
+          "mae": 0.099222819,
+          "maximum": 11
+        },
+        "ss4": {
+          "mae": 0.0887247721,
+          "maximum": 9
+        }
+      },
+      "gradient": {
+        "ss1": {
+          "mae": 0.13852946,
+          "maximum": 12
+        },
+        "ss4": {
+          "mae": 0.132568359,
+          "maximum": 12
+        }
+      },
+      "bitmap-meet": {
+        "ss1": {
+          "mae": 0.0396931966,
+          "maximum": 3
+        },
+        "ss4": {
+          "mae": 0.0383300781,
+          "maximum": 3
+        }
+      },
+      "evenodd": {
+        "ss1": {
+          "mae": 0.177734375,
+          "maximum": 1
+        },
+        "ss4": {
+          "mae": 0.182291667,
+          "maximum": 1
+        }
+      },
+      "degenerate": {
+        "ss1": {
+          "mae": 0,
+          "maximum": 0
+        },
+        "ss4": {
+          "mae": 0,
+          "maximum": 0
+        }
+      }
+    },
+    "old_pixel_references_and_thresholds": "unchanged"
+  },
+  "numerical": "Scale-normalized float64 cubic extrema at source coordinates 1e-100..1e100 with inverse target scales; exact geometry bbox before target affine; finite/overflow rejection. Existing SVG arc-to-cubic approximation retained. Camera inverse-transform pixel delta <=1; actual SVG exported clip rule/units/outline bounds checked with 1e-7 world-unit bound.",
+  "ownership": "Independent imported IDs/clip geometry, immutable snapshots and sibling copies, parallel imports passed package race tests.",
+  "budgets": {
+    "definitions": 1024,
+    "clipping_attribute_bytes": 1048576,
+    "paths_or_extra_bbox_scans": 8192,
+    "total_curves": 1048576,
+    "total_contours": 65536,
+    "native_clip_curves": 65536,
+    "native_clip_contours": 4096,
+    "clip_depth": 64,
+    "policy": "shared source/plan/instance/bbox charges; degenerate basic/path targets still charged; full acceptance/rejection boundary tests return nil on failure"
+  },
+  "benchmarks": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -run '^$' -bench BenchmarkSVGBBoxClipImportRender -benchmem -p=1 -cpu=1 -count=3",
+    "workload": "Complete import and one128x96 rendered frame with64 direct-use bbox clip instances; rasterizer construction outside timer; no PNG encoding, file IO or reference generation",
+    "ss1": {
+      "ns_per_op": [
+        894602,
+        840197,
+        788406
+      ],
+      "bytes_per_op": [
+        828824,
+        828825,
+        828825
+      ],
+      "allocs_per_op": 5309
+    },
+    "ss4": {
+      "ns_per_op": [
+        2288717,
+        2194596,
+        2206675
+      ],
+      "bytes_per_op": 2037786,
+      "allocs_per_op": 5311
+    }
+  },
+  "unsupported": [
+    "BBox clip geometry percentages/absolute units",
+    "Container/text/tspan/svg/symbol bbox targets",
+    "Use-host bbox over group/text/symbol/use-chain targets",
+    "BBox clip nested on clipPath container or clipping-use host",
+    "Multi-shape clip union, clone-local definitions, filters, masks, image slice"
+  ],
+  "modified_files": [
+    "svg/clip.go",
+    "svg/clip_bbox.go",
+    "svg/image.go",
+    "svg/instance.go",
+    "svg/text.go",
+    "svg/svg.go",
+    "svg/README.md",
+    "docs/SVG_BBOX_CLIPS.md",
+    "tests/_cases/svg/clip_bbox_test.go",
+    "tests/_cases/svg/clip_bbox_limits_test.go",
+    "tests/_cases/svg/clip_test.go",
+    "tests/_cases/svg/clip_rule_test.go",
+    "tests/_cases/svg/fill_rule_test.go",
+    "tests/reference/svg_bbox_clips.py",
+    "tests/data/svg/bbox-clips/ (7SVG,14PNG,provenance.json,validation.json)"
+  ],
+  "files_sha256": {
+    "svg/clip.go": "3576a5431ee3547ae2b808fc6bbc5c99b1439710e8f53a3a5015669bbe5bdf9a",
+    "svg/clip_bbox.go": "bf36b65ee7572653bfcee80af1110924387bcd0965a4987029f90d11af7635a7",
+    "svg/image.go": "a2fa8c37e5bebfb6364bdbd960309480a3df026bddebafe929b1d19721ab2b47",
+    "svg/instance.go": "8e3b0fb255eece14a97db3de8c38598314f80348559dc0bd0059480ae22253a4",
+    "svg/text.go": "f55cce5dc474d6dcdf883d17b4a9c7733747d73ec7830aed151f2a12c8db16c5",
+    "svg/svg.go": "d9b0b1a756cbbe81a6a1f2f6b09a10b140be3e0119c15342f3df66b04bbcae20",
+    "svg/README.md": "59e7060d4e772297afe5aaf38e29c339af67ba7be16154c97ae363e7f6ffbdcb",
+    "docs/SVG_BBOX_CLIPS.md": "d05e88501cd9d6bb1469a75dd1b530b9f7415a93d2c6747f86b87bc62d4670ae",
+    "tests/_cases/svg/clip_bbox_test.go": "d256f6511bc3b583f5325f937676d9a1fff20deea992df3acd6300f70b0597e6",
+    "tests/_cases/svg/clip_bbox_limits_test.go": "749647c0a6a416a8f031aaa3393495506aef34b9555007d826a1e44c32f0f2df",
+    "tests/_cases/svg/clip_test.go": "94b0747f194224ef13b11d7e34ae69515d8e81627d93a87797eceeb909f33aa8",
+    "tests/_cases/svg/clip_rule_test.go": "77173200858525da7e1ad15e9cded4fa2eae5484315961f2fef72cb2b770b6fd",
+    "tests/_cases/svg/fill_rule_test.go": "cd5cdb6b157d92de7ef929ad1ce0190a5a772e7dceb2c803b542525a0107cd26",
+    "tests/reference/svg_bbox_clips.py": "820ef26cf1df6f164b76ba4be61d5d0072e6006d67222ade13b19c067395a7c5"
+  }
+}

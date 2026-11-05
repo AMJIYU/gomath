@@ -1,0 +1,40 @@
+=== RUN   TestMatchingReviewParallelNestedBuckets
+--- PASS: TestMatchingReviewParallelNestedBuckets (0.00s)
+=== RUN   TestMatchingReviewSuccessionReintroducesSource
+--- PASS: TestMatchingReviewSuccessionReintroducesSource (0.00s)
+=== RUN   TestMatchingReviewManagedBucketReplay
+=== RUN   TestMatchingReviewManagedBucketReplay/suspended
+=== RUN   TestMatchingReviewManagedBucketReplay/active
+--- PASS: TestMatchingReviewManagedBucketReplay (0.00s)
+    --- PASS: TestMatchingReviewManagedBucketReplay/suspended (0.00s)
+    --- PASS: TestMatchingReviewManagedBucketReplay/active (0.00s)
+=== RUN   TestMatchingReviewPaintOrder
+--- PASS: TestMatchingReviewPaintOrder (0.00s)
+=== RUN   TestMatchingReviewFailureAtomicity
+=== RUN   TestMatchingReviewFailureAtomicity/window
+=== RUN   TestMatchingReviewFailureAtomicity/arc
+=== RUN   TestMatchingReviewFailureAtomicity/rate
+=== RUN   TestMatchingReviewFailureAtomicity/late-sequence-rate
+--- PASS: TestMatchingReviewFailureAtomicity (0.00s)
+    --- PASS: TestMatchingReviewFailureAtomicity/window (0.00s)
+    --- PASS: TestMatchingReviewFailureAtomicity/arc (0.00s)
+    --- PASS: TestMatchingReviewFailureAtomicity/rate (0.00s)
+    --- PASS: TestMatchingReviewFailureAtomicity/late-sequence-rate (0.00s)
+=== RUN   TestMatchingReviewInteriorRateFailureIsIsolated
+--- PASS: TestMatchingReviewInteriorRateFailureIsIsolated (0.00s)
+=== RUN   TestMatchingReviewRepeatDistribution
+--- PASS: TestMatchingReviewRepeatDistribution (0.00s)
+=== RUN   TestMatchingReviewRepeatedCurveBudget
+--- PASS: TestMatchingReviewRepeatedCurveBudget (0.00s)
+=== RUN   TestMatchingPartsOwnershipTimingAtomicity
+--- PASS: TestMatchingPartsOwnershipTimingAtomicity (0.00s)
+=== RUN   TestMatchingPartsStrictErrorsAndIndependentModes
+--- PASS: TestMatchingPartsStrictErrorsAndIndependentModes (0.00s)
+=== RUN   TestMatchingPartsBudgetsAndSuspension
+--- PASS: TestMatchingPartsBudgetsAndSuspension (0.00s)
+PASS
+ok  	gomath	0.012s
+=== RUN   TestMatchingExplicitMathParts
+--- PASS: TestMatchingExplicitMathParts (0.00s)
+PASS
+ok  	gomath/mathtex	0.006s

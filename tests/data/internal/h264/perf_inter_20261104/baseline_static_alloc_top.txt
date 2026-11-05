@@ -1,0 +1,22 @@
+File: baseline_static.test
+Type: alloc_space
+Time: 2026-11-04 11:39:49 CST
+Showing nodes accounting for 223.32MB, 98.81% of 226.01MB total
+Dropped 17 nodes (cum <= 1.13MB)
+Showing top 15 nodes out of 22
+      flat  flat%   sum%        cum   cum%
+  163.43MB 72.31% 72.31%   163.43MB 72.31%  gomath/internal/h264.newPicture420 (inline)
+   32.75MB 14.49% 86.80%   192.55MB 85.20%  gomath/internal/h264.(*PredictiveEncoder).encodePResidual
+   24.96MB 11.04% 97.84%    24.96MB 11.04%  image.NewRGBA
+    1.16MB  0.51% 98.35%     1.16MB  0.51%  runtime/pprof.StartCPUProfile
+    1.03MB  0.46% 98.81%     5.17MB  2.29%  gomath/internal/h264.(*IntraEncoder).encodeIDR
+         0     0% 98.81%   197.72MB 87.48%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0% 98.81%   192.55MB 85.20%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0% 98.81%   222.68MB 98.53%  gomath/internal/h264.BenchmarkInterResidual.func1
+         0     0% 98.81%    24.96MB 11.04%  gomath/internal/h264.interImage
+         0     0% 98.81%    24.96MB 11.04%  gomath/internal/h264.intraImage
+         0     0% 98.81%    86.51MB 38.28%  gomath/internal/h264.makePicture420
+         0     0% 98.81%    24.96MB 11.04%  gomath/internal/h264.predictiveImage
+         0     0% 98.81%     1.66MB  0.73%  main.main
+         0     0% 98.81%     1.66MB  0.73%  runtime.main
+         0     0% 98.81%     1.67MB  0.74%  runtime/pprof.(*profileBuilder).build

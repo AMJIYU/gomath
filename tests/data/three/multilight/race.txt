@@ -1,0 +1,2 @@
+ok  	gomath/scene3d	29.916s
+ok  	gomath/three	19.571s

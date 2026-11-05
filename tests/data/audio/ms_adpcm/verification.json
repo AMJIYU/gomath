@@ -1,0 +1,87 @@
+{
+  "Date": "2026-11-04",
+  "FrozenAPI": "ReadWAV(io.Reader, WAVReadOptions) (*PCM,error), direct format tag2; no public API or option changes",
+  "Checks": {
+    "PureGoAudio": {
+      "Passed": true,
+      "Seconds": 2.153,
+      "CoveragePercent": 96.1,
+      "NewDecoderCoveragePercent": 100,
+      "FixtureEnvironmentOverrides": "unset",
+      "Command": "CGO_ENABLED=0 GOMAXPROCS=1 env -u GOMATH_MS_ADPCM_REFERENCE_DIR -u GOMATH_AIFF_REFERENCE_DIR go run ./tests/cmd/run -pkg=audio -count=1 -coverprofile=tests/data/audio/ms_adpcm/coverage.out -p 1",
+      "Log": "audio_tests.txt"
+    },
+    "FullAudioRace": {
+      "Passed": true,
+      "Seconds": 18.4,
+      "CGO_ENABLED": 1,
+      "GOMAXPROCS": 8,
+      "Log": "race.txt",
+      "Note": "cgo only for Go race instrumentation"
+    },
+    "Fuzz": {
+      "Passed": true,
+      "Seconds": 20,
+      "Executions": 925796,
+      "CGO_ENABLED": 0,
+      "GOMAXPROCS": 1,
+      "Parallel": 1,
+      "Log": "fuzz.txt"
+    },
+    "Vet": {
+      "Passed": true,
+      "Command": "CGO_ENABLED=0 go vet -tags noasm ./audio",
+      "Log": "vet.txt"
+    },
+    "Linux386": {
+      "ProductionBuildPassed": true,
+      "OverlayTestCompilePassed": true,
+      "Executed": false,
+      "Proof": "linux386_tests.json"
+    },
+    "RuntimeDependencies": {
+      "Packages": 90,
+      "NonStdlib": [],
+      "Cgo": [],
+      "ProhibitedImports": [],
+      "AudioAssembly": []
+    },
+    "PriorPCMFloatIndependent": {
+      "CompleteExactStreams": 15,
+      "Log": "_pcm_float_regression/verification.json"
+    }
+  },
+  "Reference": {
+    "Cases": 50,
+    "ScalarSamples": 312468,
+    "FFmpegExactFact": 31,
+    "LibsndfileExactFact": 3,
+    "FFmpegCompleteCapacityExact": 46,
+    "LibsndfileCompleteCapacityFloorSigned16Exact": 41,
+    "NoExternalOutputTrimming": true,
+    "Manifest": "manifest.json"
+  },
+  "Benchmarks": "benchmark_summary.json",
+  "ExistingFilesChanged": [
+    "audio/wav.go",
+    "audio/README.md"
+  ],
+  "Files": {
+    "audio/wav.go": "4d025c9da3596dd1fec69fb3718a1549cb819fcd05a616099bbbfa740d92940b",
+    "audio/wav_ms_adpcm.go": "259625898046ef8ae857f5b49e1a3541c911aa034691f5167786e47c2105e12f",
+    "audio/README.md": "54d35bd115a96c9b366510b476f25c2aa1cddeaccc3b4b64492f6a87ca14620b",
+    "tests/_cases/audio/wav_ms_adpcm_test.go": "646514ed0249ade884e54a5516d30667f9adc1a2749a6a96e958d6a8da9f4b55",
+    "tests/reference/audio_ms_adpcm.py": "54c7e2f340798b89422b5e085cefd681562f11a6f83cb42b363b8d71ee2c0ff8"
+  },
+  "OtherExistingAudioSourcesAndOldWAVTestsUnchanged": true,
+  "RuntimeScope": "audio only, no cgo/native/subprocess, no new module dependencies",
+  "Limitations": [
+    "4bit indexed mono/stereo, direct tag2 only",
+    "coefficient table7..256 with mandatory first7 pairs",
+    "full physical blocks only, fact trims only final block",
+    "initial delta0..32767, adaptive delta<=MaxInt64/768 checked after every nibble",
+    "zero RIFF pads, existing explicit metadata discard whitelist",
+    "ReadWAV consumes exactly one RIFF and preserves following bytes; callers requiring EOF must check it",
+    "linux/386 tests crosscompiled, not executed on current host"
+  ]
+}

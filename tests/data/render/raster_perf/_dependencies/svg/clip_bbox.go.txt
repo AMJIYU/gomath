@@ -1,0 +1,210 @@
+package svg
+
+import (
+	"fmt"
+	"gomath/geom"
+	"gomath/path"
+	"math"
+	"strconv"
+	"strings"
+)
+
+func bboxClip(e *element) bool {
+	return e != nil && trimCSS(e.attrs["clipPathUnits"]) == "objectBoundingBox"
+}
+
+// clipPlacement inserts the supplemental coordinate system BEFORE the clip's
+// own transform. Bounds belong to the target's untransformed user space, not
+// its painted/world AABB. A degenerate geometry ignores this effect (SVG 2
+// Coordinates, Object bounding box units); it is not an empty clipping path.
+func clipPlacement(e *element, matrix geom.Mat4, bounds *geom.Bounds) (geom.Mat4, bool, error) {
+	if !bboxClip(e) {
+		return matrix, false, nil
+	}
+	if bounds == nil {
+		return matrix, false, fmt.Errorf("SVG objectBoundingBox clip requires a basic/path/image target or direct use thereof; container/text targets are unsupported")
+	}
+	if !bounds.Valid {
+		return matrix, true, nil
+	}
+	w, h := bounds.Size().X, bounds.Size().Y
+	if !valid(bounds.Min.X) || !valid(bounds.Min.Y) || !valid(bounds.Max.X) || !valid(bounds.Max.Y) || !valid(w) || !valid(h) || w < 0 || h < 0 {
+		return matrix, false, fmt.Errorf("SVG objectBoundingBox clip has nonfinite/invalid local geometry bounds")
+	}
+	if w == 0 || h == 0 {
+		return matrix, true, nil
+	}
+	matrix = matrix.Mul(geom.Translation(bounds.Min)).Mul(geom.Scaling(w, h, 1))
+	if !finiteMatrix(matrix) {
+		return matrix, false, fmt.Errorf("SVG objectBoundingBox clip mapping exceeds finite coordinate range")
+	}
+	return matrix, false, nil
+}
+
+// Keep bbox clipping geometry deliberately unitless. Percentages are SVG
+// lengths with viewport rules, not universally interchangeable with fractions.
+// Validate before consulting source caches, including direct use targets.
+func validateBBoxClipLengths(e *element) error {
+	for key, value := range e.attrs {
+		if !clipShapeAttribute(e.name.Local, key) || key == "d" || key == "points" || key == "href" {
+			continue
+		}
+		v, err := strconv.ParseFloat(strings.TrimSpace(value), 64)
+		if err != nil || !valid(v) {
+			return fmt.Errorf("SVG objectBoundingBox clipping geometry requires finite unitless lengths; %s=%q (percentages/units unsupported)", key, value)
+		}
+	}
+	return nil
+}
+
+// Account for additional local geometry scans/materializations in the SAME
+// per-import clip budget. This also bounds repeated use-host bbox evaluation.
+func (b *clipBudget) geometry(p path.Path) error {
+	curves := 0
+	for _, c := range p.Contours {
+		curves += len(c.Curves)
+	}
+	return b.add(curves, len(p.Contours))
+}
+
+// SVG bbox evaluation is opt-in and scale independent. Path.Bounds preserves
+// its historical fixed root epsilon; using it on tiny local cubics subsequently
+// magnified by a target transform can falsely classify their bbox as degenerate.
+// Normalize derivative differences per axis and use stable quadratic roots.
+// This remains float64 geometry of the importer's existing cubic outlines.
+func bboxGeometryBounds(p path.Path) (geom.Bounds, error) {
+	var box geom.Bounds
+	for _, contour := range p.Contours {
+		box.Include(contour.Start)
+		for _, c := range contour.Curves {
+			box.Include(c.P0)
+			box.Include(c.P3)
+			// Builder line controls use Vec3.Lerp and can differ by one ULP
+			// on a constant axis. Preserve the exact segment's endpoint bbox;
+			// never turn a horizontal/vertical SVG line into finite area.
+			if c == path.Line(c.P0, c.P3) {
+				continue
+			}
+			for axis := range 2 {
+				v := [4]float64{c.P0.X, c.P1.X, c.P2.X, c.P3.X}
+				if axis == 1 {
+					v = [4]float64{c.P0.Y, c.P1.Y, c.P2.Y, c.P3.Y}
+				}
+				d0, d1, d2 := v[1]-v[0], v[2]-v[1], v[3]-v[2]
+				scale := math.Max(math.Abs(d0), math.Max(math.Abs(d1), math.Abs(d2)))
+				if !valid(scale) {
+					return box, fmt.Errorf("SVG bbox derivative exceeds finite coordinate range")
+				}
+				if scale == 0 {
+					continue
+				}
+				d0, d1, d2 = d0/scale, d1/scale, d2/scale
+				a, b, d := d0-2*d1+d2, 2*(d1-d0), d0
+				roots, n := [2]float64{}, 0
+				if a == 0 {
+					if b != 0 {
+						roots[0], n = -d/b, 1
+					}
+				} else if discriminant := math.FMA(-4*a, d, b*b); discriminant >= 0 {
+					q := -.5 * (b + math.Copysign(math.Sqrt(discriminant), b))
+					if q == 0 {
+						roots[0], n = -b/(2*a), 1
+					} else {
+						roots[0], roots[1], n = q/a, d/q, 2
+					}
+				}
+				for _, t := range roots[:n] {
+					if t <= 0 || t >= 1 {
+						continue
+					}
+					// A convex de Casteljau evaluation avoids subtracting nearly
+					// opposite large coordinates merely to interpolate a scalar.
+					u := 1 - t
+					x, y, z := u*v[0]+t*v[1], u*v[1]+t*v[2], u*v[2]+t*v[3]
+					value := u*(u*x+t*y) + t*(u*y+t*z)
+					if !valid(value) {
+						return box, fmt.Errorf("SVG bbox extrema exceed finite coordinate range")
+					}
+					if axis == 0 {
+						box.Min.X, box.Max.X = math.Min(box.Min.X, value), math.Max(box.Max.X, value)
+					} else {
+						box.Min.Y, box.Max.Y = math.Min(box.Min.Y, value), math.Max(box.Max.Y, value)
+					}
+				}
+			}
+		}
+	}
+	return box, nil
+}
+
+// A use host has its own user coordinate system (before x/y). Only direct
+// shape/image targets are supported here. Transform the actual outline before
+// measuring; transforming a previously measured AABB is wrong for curves and
+// rotated/sheared source geometry. Source ancestors and source clipping never
+// enter the geometry bbox.
+func (s *expansion) clipUseBounds(e *element, xy geom.Mat4, viewport [2]float64) (*geom.Bounds, error) {
+	target := e.target
+	if target == nil {
+		return nil, fmt.Errorf("SVG objectBoundingBox use has no target")
+	}
+	var p path.Path
+	if target.name.Local == "image" {
+		box, err := imageViewport(target, viewport)
+		if err != nil {
+			return nil, err
+		}
+		var b path.Builder
+		b.MoveTo(box.Min)
+		b.LineTo(geom.V(box.Max.X, box.Min.Y))
+		b.LineTo(box.Max)
+		b.LineTo(geom.V(box.Min.X, box.Max.Y))
+		b.Close()
+		p = b.Path()
+	} else {
+		switch target.name.Local {
+		case "path", "rect", "circle", "ellipse", "line", "polygon", "polyline":
+		default:
+			return nil, fmt.Errorf("SVG objectBoundingBox clip on use requires a direct basic/path/image target, got <%s>", target.name.Local)
+		}
+		for _, value := range target.attrs {
+			if len(value) > maxClipShapeBytes {
+				return nil, fmt.Errorf("SVG bbox target geometry attribute exceeds %d bytes", maxClipShapeBytes)
+			}
+		}
+		var err error
+		p, err = shape(target.name.Local, target.attrs)
+		if err != nil {
+			return nil, err
+		}
+	}
+	if err := s.document.clipBudget.geometry(p); err != nil {
+		return nil, err
+	}
+	local, err := transform(target.attrs["transform"])
+	if err != nil {
+		return nil, err
+	}
+	matrix := xy.Mul(local)
+	if !finiteMatrix(matrix) {
+		return nil, fmt.Errorf("SVG bbox use transform exceeds finite coordinate range")
+	}
+	if err := s.document.clipBudget.geometry(p); err != nil {
+		return nil, err
+	}
+	original := p
+	p = p.Transform(matrix)
+	for i, contour := range original.Contours {
+		for j, curve := range contour.Curves {
+			if curve == path.Line(curve.P0, curve.P3) {
+				// Preserve straight-segment provenance through the temporary
+				// bbox-only affine transform, independently of rounded controls.
+				p.Contours[i].Curves[j] = path.Line(matrix.Apply(curve.P0), matrix.Apply(curve.P3))
+			}
+		}
+	}
+	if err := p.Validate(); err != nil {
+		return nil, fmt.Errorf("SVG bbox use geometry: %w", err)
+	}
+	box, err := bboxGeometryBounds(p)
+	return &box, err
+}

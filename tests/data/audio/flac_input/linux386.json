@@ -1,0 +1,10 @@
+{
+  "GOOS": "linux",
+  "GOARCH": "386",
+  "CGO_ENABLED": "0",
+  "tags": "noasm",
+  "mode": "native-built central runner executes go test -c crosscompile; not executed on ARM host",
+  "test_binary_sha256": "735ecbb9bf15699cbe4b905eb016c08ce5cb198f6f89070b9d3dc42deb65bcb6",
+  "bytes": 7694603,
+  "final_test_source_sha256": "7dd218ea862b37aa01bad4384541f8e4c165e187bd5d17f679c6556af2ff1b7c"
+}

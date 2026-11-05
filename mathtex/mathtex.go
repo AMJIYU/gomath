@@ -1,0 +1,571 @@
+// Package mathtex lays out a bounded TeX math subset in pure Go. Unsupported
+// commands return errors. It is not a general TeX engine or Manim MathTex parity.
+package mathtex
+
+import (
+	"fmt"
+	"gomath"
+	"gomath/geom"
+	"gomath/text"
+	"math"
+	"strings"
+	"unicode"
+	"unicode/utf8"
+)
+
+const (
+	MaxSourceRunes        = 16384
+	MaxNesting            = 128
+	MaxEnvironmentRows    = 64
+	MaxEnvironmentColumns = 64
+	// MaxEnvironmentCells is shared by environment cells and substack rows.
+	MaxEnvironmentCells = 4096
+	// MaxLayoutCurves bounds glyph, supplemental-symbol/alphabet and accent curves across
+	// the formula. Arrays, indexed radicals, boxes, horizontal braces and discarded
+	// phantom operands also charge legacy structural paths. Other legacy paths
+	// retain source/depth/cell bounds.
+	MaxLayoutCurves = 1 << 20
+)
+
+type Options struct {
+	Size  float64
+	Color gomath.Color
+	Font  *text.Font
+	// Style selects real glyph outlines; supplemental set symbols use upright
+	// regular/bold mathematical faces. The default remains regular for API
+	// compatibility. Nil variants use embedded Go fonts when Font is DefaultFont.
+	// A custom regular font requires its own variants for styled commands.
+	// Explicit mathbb/mathcal/mathfrak select their own mathematical alphabet;
+	// custom fonts must contain the corresponding Unicode glyphs themselves.
+	Style                                text.FontStyle
+	BoldFont, ItalicFont, BoldItalicFont *text.Font
+}
+
+func DefaultOptions() Options {
+	return Options{Size: .55, Color: gomath.White, Font: text.DefaultFont()}
+}
+
+type box struct {
+	object               *gomath.Object
+	width, height, depth float64
+	content              bool
+	operator             operatorKind
+	brace                bool // only a directly parsed horizontal brace owns stacked labels
+}
+type parser struct {
+	source                 []rune
+	position, depth, cells int
+	curves                 int
+	// Enabled for array/radical/box operands; never refund discarded ink.
+	charged  map[*gomath.Object]struct{}
+	options  Options
+	style    text.FontStyle
+	alphabet mathAlphabet
+	display  bool
+	// Explicit declarations restore nominal em for the new fraction family only.
+	// Existing glyph sizing and legacy frac geometry stay unchanged.
+	fractionEm float64
+	context    rowContext
+}
+
+type rowContext uint8
+
+const (
+	topRow rowContext = iota
+	groupRow
+	delimiterRow
+	cellRow
+	substackRow
+	rootIndexRow
+)
+
+type rowStop uint8
+
+const (
+	sourceEnd rowStop = iota
+	groupEnd
+	rightEnd
+	columnEnd
+	matrixRowEnd
+	environmentEnd
+	rootIndexEnd
+)
+
+func New(source string, opt Options) (*gomath.Object, error) {
+	b, err := layout(source, opt)
+	if err != nil {
+		return nil, err
+	}
+	b.object.Name = source
+	return b.object, nil
+}
+
+func layout(source string, opt Options) (box, error) {
+	if !utf8.ValidString(source) {
+		return box{}, fmt.Errorf("math source is not valid UTF-8")
+	}
+	if len(source) > 4*MaxSourceRunes || utf8.RuneCountInString(source) > MaxSourceRunes {
+		return box{}, fmt.Errorf("math source exceeds %d runes", MaxSourceRunes)
+	}
+	if opt.Size <= 0 || opt.Size > 1e6 || !finite(opt.Size) {
+		return box{}, fmt.Errorf("math font size must be finite and in (0,1e6]")
+	}
+	if err := opt.Font.Validate(); err != nil {
+		return box{}, fmt.Errorf("math font: %w", err)
+	}
+	if opt.Style > text.BoldItalic {
+		return box{}, fmt.Errorf("unsupported math font style %d", opt.Style)
+	}
+	for _, f := range []*text.Font{opt.BoldFont, opt.ItalicFont, opt.BoldItalicFont} {
+		if f != nil {
+			if err := f.Validate(); err != nil {
+				return box{}, err
+			}
+		}
+	}
+	if err := (gomath.Style{Fill: opt.Color}).Validate(); err != nil {
+		return box{}, fmt.Errorf("math color: %w", err)
+	}
+	p := parser{source: []rune(source), options: opt, style: opt.Style}
+	// Even an empty expression must reject an unavailable requested style.
+	if _, err := p.font(); err != nil {
+		return box{}, err
+	}
+	b, _, err := p.row(topRow, opt.Size)
+	if err != nil {
+		return box{}, err
+	}
+	if err := b.object.Validate(); err != nil {
+		return box{}, fmt.Errorf("math layout: %w", err)
+	}
+	if !finite(b.width) || !finite(b.height) || !finite(b.depth) {
+		return box{}, fmt.Errorf("math layout dimensions overflow")
+	}
+	return b, nil
+}
+func finite(x float64) bool { return !math.IsNaN(x) && !math.IsInf(x, 0) }
+func (p *parser) skipSpace() {
+	for p.position < len(p.source) && unicode.IsSpace(p.source[p.position]) {
+		p.position++
+	}
+}
+func (p *parser) error(message string) error {
+	return fmt.Errorf("math at rune %d: %s", p.position, message)
+}
+
+// commandAt reads a control word or one escaped rune, without changing state.
+func (p *parser) commandAt() (string, int) {
+	if p.position >= len(p.source) || p.source[p.position] != '\\' {
+		return "", p.position
+	}
+	i := p.position + 1
+	start := i
+	for i < len(p.source) && unicode.IsLetter(p.source[i]) {
+		i++
+	}
+	if i == start && i < len(p.source) {
+		i++
+	}
+	return string(p.source[start:i]), i
+}
+func (p *parser) row(context rowContext, size float64) (box, rowStop, error) {
+	oldContext := p.context
+	p.context = context
+	defer func() { p.context = oldContext }()
+	oldDisplay := p.display
+	oldFractionEm := p.fractionEm
+	oldColor := p.options.Color
+	defer func() { p.display, p.fractionEm, p.options.Color = oldDisplay, oldFractionEm, oldColor }()
+	p.depth++
+	defer func() { p.depth-- }()
+	if p.depth > MaxNesting {
+		return box{}, sourceEnd, p.error("math nesting exceeds 128")
+	}
+	var items []*gomath.Object
+	var x, height, depth float64
+	finish := func(stop rowStop) (box, rowStop, error) {
+		o := gomath.Group(items...)
+		o.Name = "MathRow"
+		return box{object: o, width: x, height: height, depth: depth, content: len(items) > 0}, stop, nil
+	}
+	for {
+		p.skipSpace()
+		if p.position == len(p.source) {
+			if context != topRow {
+				return box{}, sourceEnd, p.error("unclosed group, delimiter or environment")
+			}
+			return finish(sourceEnd)
+		}
+		r := p.source[p.position]
+		if context == rootIndexRow {
+			if r == ']' {
+				return finish(rootIndexEnd)
+			}
+			if r == '[' {
+				return box{}, sourceEnd, p.error("bracket in root index requires a group or matched delimiter")
+			}
+		}
+		if r == '}' {
+			if context == groupRow || context == substackRow {
+				return finish(groupEnd)
+			}
+			return box{}, sourceEnd, p.error("unexpected closing brace")
+		}
+		if r == '&' {
+			if context == cellRow {
+				return finish(columnEnd)
+			}
+			return box{}, sourceEnd, p.error("alignment & outside an environment cell")
+		}
+		command, end := p.commandAt()
+		if command == "color" {
+			p.position = end
+			color, err := p.colorSpec()
+			if err != nil {
+				return box{}, sourceEnd, err
+			}
+			p.options.Color = color
+			continue
+		}
+		if command == "displaystyle" || command == "textstyle" {
+			p.display = command == "displaystyle"
+			p.fractionEm = p.options.Size
+			p.position = end
+			continue
+		}
+		if command == "right" {
+			if context == delimiterRow {
+				return finish(rightEnd)
+			}
+			return box{}, sourceEnd, p.error("unmatched \\right")
+		}
+		if command == "end" {
+			if context == cellRow {
+				return finish(environmentEnd)
+			}
+			return box{}, sourceEnd, p.error("unmatched \\end")
+		}
+		if command == "\\" {
+			if context == cellRow || context == substackRow {
+				return finish(matrixRowEnd)
+			}
+			return box{}, sourceEnd, p.error("row separator outside an environment")
+		}
+		b, err := p.atom(size)
+		if err != nil {
+			return box{}, sourceEnd, err
+		}
+		if b.brace {
+			b, err = p.braceScripts(b, size)
+		} else {
+			b, err = p.scripts(b, size)
+		}
+		if err != nil {
+			return box{}, sourceEnd, err
+		}
+		if len(items) > 0 {
+			x += size * .04
+		}
+		b.object.Shift(geom.V(x, 0))
+		items = append(items, b.object)
+		x += b.width
+		height = math.Max(height, b.height)
+		depth = math.Max(depth, b.depth)
+	}
+}
+func (p *parser) atom(size float64) (box, error) {
+	p.skipSpace()
+	if !finite(size) || size <= 0 {
+		return box{}, p.error("math size underflows")
+	}
+	if p.position >= len(p.source) {
+		return box{}, p.error("expected math atom")
+	}
+	r := p.source[p.position]
+	if p.context == rootIndexRow && (r == '[' || r == ']') {
+		return box{}, p.error("bracket in root index requires a group or matched delimiter")
+	}
+	if r == '{' {
+		return p.requiredGroup(size)
+	}
+	if r == '}' || r == '^' || r == '_' || r == '&' {
+		return box{}, p.error("expected atom before closing brace, alignment or script")
+	}
+	p.position++
+	if r != '\\' {
+		if _, ok := supplementalSetOutlines[r]; ok {
+			return p.setSymbol(r, size)
+		}
+		return p.mathGlyph(string(r), size)
+	}
+	p.position--
+	command, end := p.commandAt()
+	p.position = end
+	switch command {
+	case "textcolor":
+		return p.coloredGroup(size)
+	case "color":
+		return box{}, p.error("color declaration requires a math row; brace this argument")
+	case "mathbb", "mathcal", "mathfrak":
+		return p.alphabetGroup(command, size)
+	case "operatorname":
+		return p.namedOperator(size)
+	case "overset", "underset", "stackrel":
+		return p.explicitStack(command, size)
+	case "sum", "prod", "lim", "int":
+		return p.operatorAtom(command, size)
+	case "limits", "nolimits":
+		return box{}, p.error("\\" + command + " requires a directly preceding supported operator")
+	case "displaystyle", "textstyle":
+		return box{}, p.error("style declaration requires a math row; brace this argument")
+	case "overline", "underline", "hat", "widehat", "bar", "vec", "dot", "ddot":
+		return p.accent(command, size)
+	case "overbrace", "underbrace":
+		return p.horizontalBrace(command, size)
+	case "dfrac", "tfrac", "binom", "dbinom", "tbinom":
+		return p.generalFraction(command, size)
+	case "substack":
+		return p.substack(size)
+	case "frac":
+		num, err := p.textStyleGroup(size * .8)
+		if err != nil {
+			return box{}, err
+		}
+		den, err := p.textStyleGroup(size * .8)
+		if err != nil {
+			return box{}, err
+		}
+		width := math.Max(num.width, den.width) + size*.25
+		lineY := size * .16
+		ny := lineY + size*.16 + num.depth
+		dy := lineY - size*.16 - den.height
+		num.object.Shift(geom.V((width-num.width)/2, ny))
+		den.object.Shift(geom.V((width-den.width)/2, dy))
+		line := gomath.Line(geom.V(0, lineY), geom.V(width, lineY)).SetStroke(p.options.Color, size*.045)
+		line.Name = "FractionRule"
+		o := gomath.Group(num.object, den.object, line)
+		o.Name = "Fraction"
+		return box{object: o, width: width, height: math.Max(ny+num.height, lineY+size*.0225), depth: math.Max(-dy+den.depth, 0), content: true}, nil
+	case "boxed", "phantom", "hphantom", "vphantom":
+		return p.radicalBoxCommand(command, size)
+	case "sqrt":
+		p.skipSpace()
+		if p.position < len(p.source) && p.source[p.position] == '[' {
+			return p.indexedRadical(size)
+		}
+		rad, err := p.requiredGroup(size)
+		if err != nil {
+			return box{}, err
+		}
+		left := size * .48
+		top := math.Max(size*.4, rad.height+size*.1)
+		rad.object.Shift(geom.V(left, 0))
+		outline := gomath.Polyline(geom.V(0, size*.12), geom.V(size*.12, size*.18), geom.V(size*.24, -rad.depth-size*.06), geom.V(size*.43, top), geom.V(left+rad.width+size*.05, top)).SetStroke(p.options.Color, size*.045)
+		outline.Name = "RadicalRule"
+		return box{object: gomath.Group(outline, rad.object), width: left + rad.width + size*.05, height: top + size*.0225, depth: rad.depth + size*.0825, content: true}, nil
+	case "left":
+		left, err := p.delimiter()
+		if err != nil {
+			return box{}, err
+		}
+		inner, _, err := p.row(delimiterRow, size)
+		if err != nil {
+			return box{}, err
+		}
+		_, p.position = p.commandAt() // consume the matching right at this nesting level
+		right, err := p.delimiter()
+		if err != nil {
+			return box{}, err
+		}
+		return p.enclose(inner, left, right, size), nil
+	case "begin":
+		name, err := p.environmentName()
+		if err != nil {
+			return box{}, err
+		}
+		return p.environment(name, size)
+	case "right", "end", "\\":
+		return box{}, p.error("unmatched structural command \\" + command)
+	case "mathbf", "boldsymbol", "mathit", "mathrm":
+		old := p.style
+		oldAlphabet := p.alphabet
+		p.alphabet = ordinaryAlphabet
+		switch command {
+		case "mathbf", "boldsymbol":
+			p.style |= text.Bold
+		case "mathit":
+			p.style |= text.Italic
+		case "mathrm":
+			p.style = text.Regular
+		}
+		defer func() { p.style, p.alphabet = old, oldAlphabet }()
+		if _, err := p.font(); err != nil {
+			return box{}, err
+		}
+		return p.requiredGroup(size)
+	case "text", "textbf", "textit":
+		value, err := p.literalText()
+		if err != nil {
+			return box{}, err
+		}
+		old := p.style
+		p.style = text.Regular
+		if command == "textbf" {
+			p.style = text.Bold
+		}
+		if command == "textit" {
+			p.style = text.Italic
+		}
+		defer func() { p.style = old }()
+		return p.glyph(value, size)
+	case ",", ";", "quad", "qquad", " ":
+		space := size * .2
+		if command == ";" {
+			space = size * .3
+		}
+		if command == "quad" {
+			space = size
+		}
+		if command == "qquad" {
+			space = 2 * size
+		}
+		return box{object: gomath.Group(), width: space, content: true}, nil
+	case "sin", "cos", "tan", "log", "ln", "exp", "max", "min":
+		old := p.style
+		p.style &= text.Bold
+		defer func() { p.style = old }()
+		return p.glyph(command, size)
+	default:
+		if symbol, ok := setSymbolCommands[command]; ok {
+			return p.setSymbol(symbol, size)
+		}
+		if symbol, ok := symbols[command]; ok {
+			return p.mathGlyph(symbol, size)
+		}
+		return box{}, p.error("unsupported command \\" + command)
+	}
+}
+func (p *parser) requiredGroup(size float64) (box, error) {
+	p.skipSpace()
+	if p.position >= len(p.source) || p.source[p.position] != '{' {
+		return box{}, p.error("command requires a braced group")
+	}
+	p.position++
+	b, _, err := p.row(groupRow, size)
+	if err != nil {
+		return box{}, err
+	}
+	p.position++
+	return b, nil
+}
+func (p *parser) literalText() (string, error) {
+	p.skipSpace()
+	if p.position >= len(p.source) || p.source[p.position] != '{' {
+		return "", p.error("text requires a braced group")
+	}
+	p.position++
+	depth := 1
+	if p.depth+depth > MaxNesting {
+		return "", p.error("text nesting exceeds 128")
+	}
+	var out strings.Builder
+	for p.position < len(p.source) {
+		r := p.source[p.position]
+		p.position++
+		switch r {
+		case '{':
+			depth++
+			if p.depth+depth > MaxNesting {
+				return "", p.error("text nesting exceeds 128")
+			}
+		case '}':
+			depth--
+			if depth == 0 {
+				return out.String(), nil
+			}
+		case '\\':
+			p.position--
+			cmd, end := p.commandAt()
+			p.position = end
+			switch cmd {
+			case "{", "}", "%", "&", "_", "$", "#", "^", "~", " ":
+				out.WriteString(cmd)
+			case "backslash":
+				out.WriteRune('\\')
+			default:
+				return "", p.error("unsupported text command \\" + cmd)
+			}
+		default:
+			out.WriteRune(r)
+		}
+	}
+	return "", p.error("unclosed text group")
+}
+func (p *parser) font() (*text.Font, error) {
+	if p.style == text.Regular {
+		return p.options.Font, nil
+	}
+	var f *text.Font
+	switch p.style {
+	case text.Bold:
+		f = p.options.BoldFont
+	case text.Italic:
+		f = p.options.ItalicFont
+	case text.BoldItalic:
+		f = p.options.BoldItalicFont
+	}
+	if f != nil {
+		return f, nil
+	}
+	if p.options.Font == text.DefaultFont() {
+		return text.DefaultFontForStyle(p.style)
+	}
+	return nil, p.error("custom math font needs an explicit variant for styled text")
+}
+func (p *parser) glyph(value string, size float64) (box, error) {
+	f, err := p.font()
+	if err != nil {
+		return box{}, err
+	}
+	opt := text.DefaultOptions()
+	opt.Size, opt.Color = size, p.options.Color
+	o, metrics, err := text.Layout(value, f, opt)
+	if err != nil {
+		return box{}, p.error(err.Error())
+	}
+	o.Walk(func(node *gomath.Object) {
+		p.recordCharged(node)
+		for _, contour := range node.Path.Contours {
+			p.curves += len(contour.Curves)
+		}
+	})
+	if p.curves > MaxLayoutCurves {
+		return box{}, p.error("math exceeds 1048576 glyph curves")
+	}
+	b := o.Bounds()
+	left := 0.0
+	if b.Valid {
+		left = math.Max(0, -b.Min.X)
+	}
+	if left > 0 {
+		o.Shift(geom.V(left, 0))
+	}
+	width := metrics.Width + left
+	height, depth := 0.0, 0.0
+	if b.Valid {
+		width = math.Max(width, b.Max.X+left)
+		height = math.Max(0, b.Max.Y)
+		depth = math.Max(0, -b.Min.Y)
+	}
+	return box{object: gomath.Group(o), width: width, height: height, depth: depth, content: true}, nil
+}
+
+var symbols = map[string]string{
+	"alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "epsilon": "ε", "zeta": "ζ", "eta": "η", "theta": "θ", "iota": "ι", "kappa": "κ", "lambda": "λ", "mu": "μ", "nu": "ν", "xi": "ξ", "pi": "π", "rho": "ρ", "sigma": "σ", "tau": "τ", "upsilon": "υ", "phi": "φ", "chi": "χ", "psi": "ψ", "omega": "ω",
+	"Delta": "Δ", "Gamma": "Γ", "Theta": "Θ", "Lambda": "Λ", "Xi": "Ξ", "Pi": "Π", "Sigma": "Σ", "Upsilon": "Υ", "Phi": "Φ", "Psi": "Ψ", "Omega": "Ω",
+	"times": "×", "cdot": "·", "pm": "±", "le": "≤", "leq": "≤", "ge": "≥", "geq": "≥", "ne": "≠", "neq": "≠", "infty": "∞", "rightarrow": "→", "leftarrow": "←",
+	// Operator commands are handled before this symbol table. Keep the symbols
+	// here for the supported-glyph inventory; display-size glyphs are not used.
+	"int": "∫", "sum": "∑", "prod": "∏",
+	"{": "{", "}": "}", "%": "%", "&": "&", "_": "_", "$": "$", "#": "#",
+}

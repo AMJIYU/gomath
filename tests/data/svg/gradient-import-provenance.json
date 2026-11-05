@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-04",
+  "generator": "tests/reference/svg_gradients.py",
+  "generator_sha256": "e54d75b8e785001813a15ee1fbbf262b3490cdfa65e9831ed017180166fe50cf",
+  "versions": {
+    "Python": "3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4",
+    "Pillow": "11.2.1"
+  },
+  "files_sha256": {
+    "gradient-import-linear.svg": "c075bedb067a56d1ed2acaa3985032add05d03b58c9f1ba9a16141f49ceb410f",
+    "gradient-import-linear.png": "909c46e9a8fe751428b8866cbedf32d6cfce3f5b6673ec0d82e88d1209899f7f",
+    "gradient-import-bbox-affine.svg": "77de91060b4389a4134a2084c3167aeb0432fb67a589a83d0cee4960834717bc",
+    "gradient-import-bbox-affine.png": "84ad62cd6b49dfbe75e0d3e1c21b0d09004688fc40652774663da9b98b9abe6d",
+    "gradient-import-radial.svg": "ffdd6547c07660956e5f95c4f09a1eb163c7736eb403eae20bd88139d1490e0f",
+    "gradient-import-radial.png": "10091c3cf16612ece7ad81d67112ba47875341e344379ab7503ff5f66e5c6ad9",
+    "gradient-import-alpha.svg": "3be7a98e5d38c84fc9842a6bc0f20b9090f9478ed6b292991c58aacaea83c505",
+    "gradient-import-alpha.png": "6a7991f6115c0097cbf3812605e636366e30318be6dfa5cd8cde05b563a99671",
+    "gradient-import-use-clip-bitmap.svg": "4726a7e07a445a7b78f87eafcba63aedc163f426f5a088a8948efd481d8602a7",
+    "gradient-import-use-clip-bitmap.png": "376ac6da1bebd72829fe64a101fa9221ec627a132696894d17686ccb635802f1"
+  },
+  "scope": [
+    "Five hand-authored, independent transparent 128x96 SVG/PNG pairs; CairoSVG/Cairo rasterizes the source directly. No Go-generated oracle.",
+    "Pad linear gradients, normalized viewport percentages, duplicate hard stops, endpoint padding and nonzero compound hole.",
+    "Nonuniform objectBoundingBox affine/skew gradients (linear and radial), transformed graphics, userSpace concentric radial.",
+    "Definition-tree CSS/currentColor, straight encoded-sRGB/alpha interpolation, stop-opacity * fill-opacity * parent opacity.",
+    "Same-type href template reuse, defs/use CSS, nested clipping with hole and semitransparent immutable embedded PNG.",
+    "CairoSVG 2.7.1 mutates href-derived gradients when the same template paint is drawn repeatedly: the second tile disappears. This reference draws the inherited gradient once on a separate strip, and uses the base gradient for repeated tile instances; repeated template use is checked analytically in Go. Bitmap edges extend outside all clips to isolate gradient/alpha/clipping from source-edge filtering.",
+    "CairoSVG 2.7.1 template inheritance/CSS behavior is not a complete SVG2 shadow-tree oracle; template currentColor and selector-boundary behavior are tested separately with explicit computed-stop assertions.",
+    "Text gradients use real existing outlines and are verified analytically; this set does not claim new independent font shaping validation.",
+    "CairoSVG gradient rendering does not imply SVG-wide/browser/Pango/Manim equivalence; no full gradient-stroke, focus, spread or linear-light support."
+  ],
+  "comparison": "Every premultiplied RGBA channel in 0..255 units, with analytical geometry/color checks as well. Thresholds: MAE<=.45, max<=50, fraction pixels with any channel delta>8<=.025.",
+  "runtime": "Pure Go. The Python/CairoSVG/Cairo/Pillow generator is development-only; Go tests decode checked-in fixtures.",
+  "API": {
+    "entry": "svg.Read(io.Reader, svg.Options); public API unchanged",
+    "native": "NewLinearGradient/NewRadialGradient/Gradient.Transform/Object.SetFillGradient; no core/root/render/export changes",
+    "output": "immutable native fill gradients on vector drawables; text userSpaceOnUse; bitmap fill untinted"
+  },
+  "limits": {
+    "definitions": 1024,
+    "gradient_and_stop_source_attribute_bytes_each": 4096,
+    "template_depth": 64,
+    "source_stops": 8192,
+    "normalized_stops_per_definition": 256,
+    "resolved_plan_stops": 65536,
+    "paint_instances_including_empty_and_degenerate": 8192,
+    "materialized_instance_stops": 1048576,
+    "coordinate_and_native_matrix_inverse_abs_limit": 1000000000,
+    "existing_XML_CSS_input_text_clip_image_budgets": "unchanged"
+  },
+  "pixel_measurements": {
+    "dimensions": [
+      128,
+      96
+    ],
+    "frames_per_scene": 1,
+    "workers": 1,
+    "full_frame_premultiplied_RGBA_0_to_255": {
+      "linear": {
+        "MAE": 0.0288085938,
+        "maximum_channel_delta": 1,
+        "fraction_pixels_any_delta_over_8": 0
+      },
+      "bbox-affine": {
+        "MAE": 0.133687337,
+        "maximum_channel_delta": 14,
+        "fraction_pixels_any_delta_over_8": 0.00699869792
+      },
+      "radial": {
+        "MAE": 0.00533040365,
+        "maximum_channel_delta": 1,
+        "fraction_pixels_any_delta_over_8": 0
+      },
+      "alpha": {
+        "MAE": 0.227864583,
+        "maximum_channel_delta": 1,
+        "fraction_pixels_any_delta_over_8": 0
+      },
+      "use-clip-bitmap": {
+        "MAE": 0.146179199,
+        "maximum_channel_delta": 1,
+        "fraction_pixels_any_delta_over_8": 0
+      }
+    },
+    "camera_round_trip_max_channel_delta": 1,
+    "snapshot_sibling_rerender": "byte identical",
+    "real_text_outline_analytical_ramp": {
+      "painted_pixels": 954,
+      "maximum_channel_rounding_delta": 1,
+      "maximum_alpha_delta_vs_solid_coverage": 1,
+      "method": "render matched white outlines for coverage, compute authored SVG ramp at pixel centers without imported Gradient.ColorAt; native solid and gradient opacity quantize at different stages"
+    }
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -run '^$' -bench 'BenchmarkRead(Gradient|Local|CSS)Instances$' -benchmem -benchtime=300ms -count=3 -p=1",
+    "environment": {
+      "Go": "go1.27.3",
+      "OS_arch": "darwin/arm64",
+      "CPU": "Apple M2",
+      "GOMAXPROCS_reported": 8,
+      "parallelism": "one package (-p=1), normal single goroutine benchmarks; shared development host, not an isolated performance lab"
+    },
+    "workload": "256 use instances, 256x256 SVG viewport; gradient case one 12x8 rectangle and a 2-stop bbox radial paint per use. Local/CSS controls use two shapes per use. Import only; no raster image size, zero rendered frames; excludes file I/O, renderer, Python/reference generation and tool compilation.",
+    "samples": {
+      "GradientInstances": {
+        "ns_per_op": [
+          1557662,
+          1552413,
+          1678398
+        ],
+        "bytes_per_op": [
+          1867150,
+          1867149,
+          1867148
+        ],
+        "allocs_per_op": [
+          13237,
+          13237,
+          13237
+        ]
+      },
+      "LocalInstances": {
+        "ns_per_op": [
+          4045424,
+          2397119,
+          2403789
+        ],
+        "bytes_per_op": [
+          3288776,
+          3288765,
+          3288761
+        ],
+        "allocs_per_op": [
+          19817,
+          19817,
+          19817
+        ]
+      },
+      "CSSInstances": {
+        "ns_per_op": [
+          4144543,
+          2948726,
+          3014531
+        ],
+        "bytes_per_op": [
+          4186632,
+          4186628,
+          4186635
+        ],
+        "allocs_per_op": [
+          23734,
+          23734,
+          23734
+        ]
+      }
+    },
+    "claim": "No before/after speedup claim; workloads differ and host runs parallel development."
+  },
+  "modified_files": [
+    "svg/gradient.go",
+    "svg/css.go",
+    "svg/document.go",
+    "svg/instance.go",
+    "svg/style.go",
+    "svg/svg.go",
+    "svg/text.go",
+    "svg/README.md",
+    "tests/_cases/svg/gradient_test.go",
+    "tests/_cases/svg/gradient_limits_test.go",
+    "tests/_cases/svg/gradient_reference_test.go",
+    "tests/reference/svg_gradients.py",
+    "tests/data/svg/gradient-import-alpha.png",
+    "tests/data/svg/gradient-import-alpha.svg",
+    "tests/data/svg/gradient-import-bbox-affine.png",
+    "tests/data/svg/gradient-import-bbox-affine.svg",
+    "tests/data/svg/gradient-import-linear.png",
+    "tests/data/svg/gradient-import-linear.svg",
+    "tests/data/svg/gradient-import-radial.png",
+    "tests/data/svg/gradient-import-radial.svg",
+    "tests/data/svg/gradient-import-use-clip-bitmap.png",
+    "tests/data/svg/gradient-import-use-clip-bitmap.svg",
+    "tests/data/svg/gradient-import-provenance.json"
+  ],
+  "validation": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -pkg=text -pkg=render -pkg=export -count=1 -vet=all",
+      "result": "PASS",
+      "package_seconds": {
+        "svg": 0.962,
+        "text": 0.011,
+        "render": 0.104,
+        "export": 0.333
+      }
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -pkg=text -pkg=render -pkg=export -tags=noasm -count=1 -vet=all",
+      "result": "PASS",
+      "package_seconds": {
+        "svg": 0.84,
+        "text": 0.023,
+        "render": 0.145,
+        "export": 0.358
+      }
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -race -count=1",
+      "result": "PASS",
+      "package_seconds": {
+        "svg": 10.586
+      },
+      "note": "Race instrumentation uses the development C toolchain required by Go; production/import/render checks above all run CGO_ENABLED=0."
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS: 41 non-standard packages; no native inputs or runtime process-launch imports"
+    },
+    {
+      "command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib PYTHONDONTWRITEBYTECODE=1 /usr/local/bin/python3.11 tests/reference/svg_gradients.py tests/data/svg --verify",
+      "result": "PASS: 10 independent regenerated SVG/PNG files and all recorded SHA256 hashes"
+    }
+  ]
+}

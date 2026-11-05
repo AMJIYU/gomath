@@ -1,0 +1,29 @@
+{
+  "config": "CGO0/noasm native before/after/profile, host central runner; CGO0/noasm linux386 audio production and all central tests compiled only",
+  "binaries": {
+    "audio-linux386.test": {
+      "sha256": "f73651d7270e537543ee1ea98a9c3f7d83f01ec339cdb6382f9c362904ae5b02",
+      "bytes": 7692664
+    },
+    "runner": {
+      "sha256": "86678b080f838b6872d23f8cdbad264ab006bfd4c2459542e01d4e3156b1e7b3",
+      "bytes": 4123874
+    },
+    "profile.test": {
+      "sha256": "2882b185fd65ebdc0d9f99afac8ce2fcb454a512a03a48ac42bf3549eb88b840",
+      "bytes": 7569506
+    },
+    "before.test": {
+      "sha256": "e96cd0169817f3f3efe976c1e2bed72309a92b66260b9589c5c205f307597d8e",
+      "bytes": 7570226
+    },
+    "after.test": {
+      "sha256": "40cac23c2ae8e3d951f4cfa1b18d4f11c001cbbe0b982d5b7d14cc808d5849c3",
+      "bytes": 7570274
+    },
+    "candidate.test": {
+      "sha256": "40cac23c2ae8e3d951f4cfa1b18d4f11c001cbbe0b982d5b7d14cc808d5849c3",
+      "bytes": 7570274
+    }
+  }
+}

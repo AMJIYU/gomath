@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-05",
+  "scope": "Exact-key direct-child bucket matching;9 independent Manim polygon cases/63 complete in-flight control/color/opacity states,9 independent cleanup cases; no automatic whole-MathTex/unequal-glyph-topology/general shape matching or global speed proof.",
+  "source": "Manim CE0.22.1 commit16ea443e2a5f1d79db0a721161411ce916d6e733;9 files installed/local/blob verified by generator",
+  "evidence": {
+    "focused-final": "focused-optimized.txt",
+    "root-full": "root-full.txt",
+    "example-smoke": "examples-wave10-final.txt",
+    "review": "review/REPORT.md",
+    "performance": "performance/summary.json",
+    "full_repo_acceptance": "tests/data/integration/wave10-checkpoint-20261105/checkpoint.json"
+  },
+  "history": {
+    "focused-initial.txt": "Failed due to reference collector omitting introducer FadeIn branches; faulty fixture/generator retained as incomplete-capture history.",
+    "examples-wave10.txt": "Demo authored unsupported cdots expression rejected. Demo changed to explicitly supported x_1+x_2+x_3; product rejection unchanged."
+  },
+  "files": {
+    "matching.go": {
+      "sha256": "44d56da4b2458c6f1457423fda7b339dffedaac80040f7f66ebb231311a55adf",
+      "bytes": 8678
+    },
+    "animation.go": {
+      "sha256": "1279e97cc661ae69194737b91fd2c72d9dd334fa348f4dbdcbaf61b94867f1e4",
+      "bytes": 15205
+    },
+    "scene.go": {
+      "sha256": "7acb836a2e4e4a66502149a7cf25fe8d77a20df80d3feae3a2d933031b1d80a0",
+      "bytes": 9009
+    },
+    "mathtex/matching.go": {
+      "sha256": "b8e5d8152f3de34da9db2d391783797e25a32e330e71f7bf9ace4e0dc5e146ff",
+      "bytes": 683
+    },
+    "docs/MATCHING_PARTS.md": {
+      "sha256": "70ee0e7660e62dffadd0ba0dbba9f4e0f1c3aacbb960b09f776b4a16d07968eb",
+      "bytes": 7690
+    },
+    "examples/scenes/matching_parts.go": {
+      "sha256": "0632555d5631325c733a28265ad3ad76d9dd77ddf851be1228c87b2c93214264",
+      "bytes": 1803
+    },
+    "tests/_cases/root/matching_test.go": {
+      "sha256": "c498052ffed3d789e2b5df5117091259d2b34718244ff14cdb3b6f7415fac2fc",
+      "bytes": 12195
+    },
+    "tests/_cases/root/matching_review_test.go": {
+      "sha256": "369866b2dce5c7d0ba2f17e1072b266906515d34e3e1b7ab5098e2d46da7c461",
+      "bytes": 14923
+    },
+    "tests/_cases/mathtex/matching_test.go": {
+      "sha256": "1bd66e666f10ca3d30b6ee2f10610b227edeaff826c96382683399c6b06b2c0e",
+      "bytes": 1296
+    },
+    "tests/reference/matching_parts.py": {
+      "sha256": "3819537e1cf37b9d3618bd47b851f3534fdb1af653ac936c1e036f15548b6a05",
+      "bytes": 4358
+    },
+    "tests/data/root/matching-parts/example-smoke.txt": {
+      "sha256": "5348227992d37a72d25be6dc0924ea0ee2ac1d829f508377a3c7c9e0231a3953",
+      "bytes": 35
+    },
+    "tests/data/root/matching-parts/examples-wave10-final.txt": {
+      "sha256": "86a96637b97ca844fea5d78f9ca144766500894576255bff66ebd5a689c8932d",
+      "bytes": 35
+    },
+    "tests/data/root/matching-parts/examples-wave10.txt": {
+      "sha256": "b0f9a778973e344a1c754b8edaab525d5067ee1016be732f371d7aeb550e7098",
+      "bytes": 236
+    },
+    "tests/data/root/matching-parts/focused-final.txt": {
+      "sha256": "b773dbb986883f038d7ce0c5dc55c9a72275c0d8ddfa93fe548d152d24fcfc09",
+      "bytes": 46
+    },
+    "tests/data/root/matching-parts/focused-initial.txt": {
+      "sha256": "e1e1f5bf806c2b135c7b2b311d6277c20220d5bb2fa155748eaa2e87ab715b5f",
+      "bytes": 510
+    },
+    "tests/data/root/matching-parts/focused-optimized.txt": {
+      "sha256": "4ed20e5a662eb2abf0d5474bf8e0dfb331611e85ffdf07956ee884ce3165f1ff",
+      "bytes": 46
+    },
+    "tests/data/root/matching-parts/focused-v2.txt": {
+      "sha256": "62a10d89796d6d5f0279e209893a12f776b5188da15baf8fae971975216d51ad",
+      "bytes": 46
+    },
+    "tests/data/root/matching-parts/generator-incomplete-capture.py.txt": {
+      "sha256": "affd77b1aacc4769e536e8fd31be631ae69518c2bbceb251cb9a66b36c78e1a0",
+      "bytes": 4126
+    },
+    "tests/data/root/matching-parts/generator-straight.py.txt": {
+      "sha256": "1384f9b7f01eab99427058d192e02a2019a90379568becf7a6fc5019d3420fc8",
+      "bytes": 4167
+    },
+    "tests/data/root/matching-parts/manim-0.22.1-incomplete-capture.json": {
+      "sha256": "816a2ebf4a716df294a6c62649269e6efdd5ea28ae300658e39bb671f4698002",
+      "bytes": 407103
+    },
+    "tests/data/root/matching-parts/manim-0.22.1-straight.json": {
+      "sha256": "72603b35000c41565e8d7b7aea255a6aa81cde6561c2ba55085ffab224d66370",
+      "bytes": 499459
+    },
+    "tests/data/root/matching-parts/manim-0.22.1.json": {
+      "sha256": "39efe0ac97f1ac096a949188bce271ab15303ef43459248926a02184e4cae9e4",
+      "bytes": 676643
+    },
+    "tests/data/root/matching-parts/performance/after-run.json": {
+      "sha256": "1b4d4d6c44fdd423a95559c39b7cc212cb3d997d2e41173bce0b500a64f5658e",
+      "bytes": 1453
+    },
+    "tests/data/root/matching-parts/performance/after.txt": {
+      "sha256": "ebae50588728d8936377c8349060a7aed5e2f89bc98daeffb0e511e28022f5c6",
+      "bytes": 338
+    },
+    "tests/data/root/matching-parts/performance/before-animation.go.txt": {
+      "sha256": "f25419d21e9a38104aee738d27226a6fd9ed233ff73733d90fe69631baa21310",
+      "bytes": 14903
+    },
+    "tests/data/root/matching-parts/performance/before-matching.go.txt": {
+      "sha256": "44d56da4b2458c6f1457423fda7b339dffedaac80040f7f66ebb231311a55adf",
+      "bytes": 8678
+    },
+    "tests/data/root/matching-parts/performance/before-run.json": {
+      "sha256": "5f5f99ff98953995dd900fefa2e42e9c57082b4e09e006bbcc9330981f1d60ab",
+      "bytes": 1453
+    },
+    "tests/data/root/matching-parts/performance/before-scene.go.txt": {
+      "sha256": "7acb836a2e4e4a66502149a7cf25fe8d77a20df80d3feae3a2d933031b1d80a0",
+      "bytes": 9009
+    },
+    "tests/data/root/matching-parts/performance/before-tests__cases_root_matching_test.go.txt": {
+      "sha256": "c498052ffed3d789e2b5df5117091259d2b34718244ff14cdb3b6f7415fac2fc",
+      "bytes": 12195
+    },
+    "tests/data/root/matching-parts/performance/before.txt": {
+      "sha256": "2faafae255e931858df0c7229c3bcc040774dd333353c646532638a129e533fb",
+      "bytes": 338
+    },
+    "tests/data/root/matching-parts/performance/summary.json": {
+      "sha256": "74b8b21ea32bbafa2f4870bc4e85b6735d09d37ea31f8dcc21e631b2bdeed349",
+      "bytes": 3208
+    },
+    "tests/data/root/matching-parts/review/REPORT.md": {
+      "sha256": "6670314574267b2cb41adf1186d512b80da188c16bd7f2d3ca764c51fe2a04e5",
+      "bytes": 4696
+    },
+    "tests/data/root/matching-parts/review/focused-tests.txt": {
+      "sha256": "377612a7c821c88f0ff18635707126306419127da4a103ce4dcb6fd237594257",
+      "bytes": 2062
+    },
+    "tests/data/root/matching-parts/root-full.txt": {
+      "sha256": "56d13c9940f28ea7b78c12c55384deaaa69971b82a83791837e18c5a1082cdb6",
+      "bytes": 19
+    }
+  }
+}

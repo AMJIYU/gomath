@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "batch": 9,
+  "collection_date": "2026-11-05",
+  "purpose": "Audit existing ObjectUpdaterFrame evidence; no benchmark rerun.",
+  "comparison": {
+    "before": "This batch's naive Go implementation: repeated full-frame target lookup/validation for each managed callback.",
+    "after": "This batch's batch Go implementation: shared per-frame index/suspension state and boundary validation, retaining per-target checks.",
+    "manim_performance_comparison": false,
+    "scope": "Only the two Go implementations and this workload. Behavioral reference fixtures are not performance measurements.",
+    "implementation_evidence": [
+      "tests/data/root/updater-lifecycle/performance/before-updater_lifecycle.go.txt",
+      "updater_lifecycle.go",
+      "scene.go"
+    ]
+  },
+  "workload": {
+    "benchmark": "BenchmarkObjectUpdaterFrame",
+    "benchmark_source": "tests/_cases/root/updater_lifecycle_benchmark_test.go",
+    "objects_with_updaters": [
+      1,
+      32,
+      128
+    ],
+    "topology": "One Group root containing N Square(.08) children; N managed updaters, one per child; N+1 scene-tree objects including the root.",
+    "initial_positions": "x=i*0.1, y=0",
+    "callback": "MoveTo(geom.V(x, t)); default updater options",
+    "scene_duration_seconds": 2,
+    "scene_sample_time_seconds": 0.75,
+    "frame_samples_per_benchmark_operation": 1,
+    "timed_loop": "One serial scene.Sample(.75) call per iteration, including snapshot creation, normal frame/camera sampling and managed updater evaluation/validation.",
+    "parallel_benchmark": false,
+    "excluded": [
+      "Scene/geometry construction",
+      "Updater registration",
+      "Wait(2) authoring",
+      "Raster rendering",
+      "File/network I/O",
+      "Video/image encoding",
+      "Replay compilation/integration"
+    ],
+    "image_dimensions": "not applicable: no image rendering",
+    "rendered_frames": 0,
+    "fps": "not applicable: isolated sample, no playback/export"
+  },
+  "protocol": {
+    "samples_per_object_count_per_phase": 3,
+    "sample_count_evidence": "Three matching benchmark rows per object count in each selected log.",
+    "benchtime_target": "200ms",
+    "benchtime_evidence": "Task-specified protocol; the logs do not record -benchtime, so the historical flag is not independently verified.",
+    "duration_note": "200ms is the requested Go benchmark target per repetition, not a fixed measured wall time or a frame duration.",
+    "aggregation": "Unweighted median of the three reported values, computed independently for ns/op, B/op and allocs/op; no iteration weighting or pooling of logs.",
+    "speedup_formula": "before median ns/op / after median ns/op",
+    "change_percent_formula": "100 * (after median / before median - 1); positive means an increase.",
+    "derived_value_decimal_places": 6,
+    "sample_range": "min/max are ranges of the three reported repetition means, not per-frame latency percentiles.",
+    "execution_order": "Non-interleaved before and after phases on a shared host.",
+    "execution_order_evidence": "Task-provided context; separate logs do not establish exact scheduling.",
+    "historical_command": "unknown",
+    "historical_run_timestamps": "unknown",
+    "historical_count_flag": "unknown; three rows per case are directly observed",
+    "suggested_reproduction_command": "CGO_ENABLED=0 GOMAXPROCS=8 go run -tags noasm ./tests/cmd/run -pkg=root -run='^$' -bench='^BenchmarkObjectUpdaterFrame$' -benchmem -benchtime=200ms -count=3",
+    "reproduction_command_status": "Suggested from current harness and specified protocol; not recovered from logs and not executed for this summary. Current harness always passes -tags noasm to go test.",
+    "log_row_regex": "BenchmarkObjectUpdaterFrame/(1|32|128)-(?P<procs>\\d+)\\s+(\\d+)\\s+(\\d+) ns/op\\s+(\\d+) B/op\\s+(\\d+) allocs/op"
+  },
+  "environment": {
+    "from_both_logs": {
+      "goos": "darwin",
+      "goarch": "arm64",
+      "cpu": "Apple M2",
+      "package": "gomath",
+      "benchmark_gomaxprocs_suffix": 8
+    },
+    "concurrency_note": "The -8 suffix is the benchmark GOMAXPROCS setting, not evidence of eight workers or eight physical cores; the source uses no RunParallel.",
+    "historical_toolchain": "unknown",
+    "historical_cgo_enabled": "unknown",
+    "historical_build_tags": "unknown",
+    "historical_go_flags": "unknown",
+    "historical_os_version": "unknown",
+    "historical_memory_bytes": "unknown",
+    "historical_physical_cpu_count": "unknown",
+    "historical_host_load_power_thermal_state": "unknown",
+    "current_toolchain_observation": {
+      "command": "go version",
+      "stdout": "go version go1.27.3 darwin/arm64",
+      "date": "2026-11-05",
+      "relation_to_historical_runs": "Observed during summary collection only; does not establish the benchmark toolchain."
+    },
+    "current_go_mod_language_version": "1.26.0",
+    "go_mod_note": "Language version declared by current go.mod; not the measured historical compiler version."
+  },
+  "runs": {
+    "before": {
+      "log": "tests/data/root/updater-lifecycle/performance/before.txt",
+      "samples_by_object_count": {
+        "1": [
+          {
+            "log_line": 5,
+            "iterations": 122535,
+            "ns_per_op": 2262,
+            "bytes_per_op": 1488,
+            "allocs_per_op": 10
+          },
+          {
+            "log_line": 6,
+            "iterations": 167306,
+            "ns_per_op": 2820,
+            "bytes_per_op": 1488,
+            "allocs_per_op": 10
+          },
+          {
+            "log_line": 7,
+            "iterations": 195913,
+            "ns_per_op": 1582,
+            "bytes_per_op": 1488,
+            "allocs_per_op": 10
+          }
+        ],
+        "32": [
+          {
+            "log_line": 8,
+            "iterations": 670,
+            "ns_per_op": 340718,
+            "bytes_per_op": 375410,
+            "allocs_per_op": 1419
+          },
+          {
+            "log_line": 9,
+            "iterations": 712,
+            "ns_per_op": 350245,
+            "bytes_per_op": 375410,
+            "allocs_per_op": 1419
+          },
+          {
+            "log_line": 10,
+            "iterations": 717,
+            "ns_per_op": 333093,
+            "bytes_per_op": 375409,
+            "allocs_per_op": 1419
+          }
+        ],
+        "128": [
+          {
+            "log_line": 11,
+            "iterations": 45,
+            "ns_per_op": 5047866,
+            "bytes_per_op": 6089306,
+            "allocs_per_op": 8207
+          },
+          {
+            "log_line": 12,
+            "iterations": 49,
+            "ns_per_op": 5078235,
+            "bytes_per_op": 6089300,
+            "allocs_per_op": 8207
+          },
+          {
+            "log_line": 13,
+            "iterations": 45,
+            "ns_per_op": 5035342,
+            "bytes_per_op": 6089281,
+            "allocs_per_op": 8207
+          }
+        ]
+      },
+      "statistics_by_object_count": {
+        "1": {
+          "ns_per_op": {
+            "median": 2262,
+            "min": 1582,
+            "max": 2820
+          },
+          "bytes_per_op": {
+            "median": 1488,
+            "min": 1488,
+            "max": 1488
+          },
+          "allocs_per_op": {
+            "median": 10,
+            "min": 10,
+            "max": 10
+          }
+        },
+        "32": {
+          "ns_per_op": {
+            "median": 340718,
+            "min": 333093,
+            "max": 350245
+          },
+          "bytes_per_op": {
+            "median": 375410,
+            "min": 375409,
+            "max": 375410
+          },
+          "allocs_per_op": {
+            "median": 1419,
+            "min": 1419,
+            "max": 1419
+          }
+        },
+        "128": {
+          "ns_per_op": {
+            "median": 5047866,
+            "min": 5035342,
+            "max": 5078235
+          },
+          "bytes_per_op": {
+            "median": 6089300,
+            "min": 6089281,
+            "max": 6089306
+          },
+          "allocs_per_op": {
+            "median": 8207,
+            "min": 8207,
+            "max": 8207
+          }
+        }
+      }
+    },
+    "after": {
+      "log": "tests/data/root/updater-lifecycle/performance/after-final.txt",
+      "samples_by_object_count": {
+        "1": [
+          {
+            "log_line": 5,
+            "iterations": 184308,
+            "ns_per_op": 1247,
+            "bytes_per_op": 2144,
+            "allocs_per_op": 20
+          },
+          {
+            "log_line": 6,
+            "iterations": 193982,
+            "ns_per_op": 1328,
+            "bytes_per_op": 2144,
+            "allocs_per_op": 20
+          },
+          {
+            "log_line": 7,
+            "iterations": 185672,
+            "ns_per_op": 1293,
+            "bytes_per_op": 2144,
+            "allocs_per_op": 20
+          }
+        ],
+        "32": [
+          {
+            "log_line": 8,
+            "iterations": 6991,
+            "ns_per_op": 32816,
+            "bytes_per_op": 51608,
+            "allocs_per_op": 241
+          },
+          {
+            "log_line": 9,
+            "iterations": 7120,
+            "ns_per_op": 31891,
+            "bytes_per_op": 51608,
+            "allocs_per_op": 241
+          },
+          {
+            "log_line": 10,
+            "iterations": 7119,
+            "ns_per_op": 31823,
+            "bytes_per_op": 51608,
+            "allocs_per_op": 241
+          }
+        ],
+        "128": [
+          {
+            "log_line": 11,
+            "iterations": 1857,
+            "ns_per_op": 131463,
+            "bytes_per_op": 208859,
+            "allocs_per_op": 835
+          },
+          {
+            "log_line": 12,
+            "iterations": 1873,
+            "ns_per_op": 138775,
+            "bytes_per_op": 208857,
+            "allocs_per_op": 835
+          },
+          {
+            "log_line": 13,
+            "iterations": 1923,
+            "ns_per_op": 131900,
+            "bytes_per_op": 208857,
+            "allocs_per_op": 835
+          }
+        ]
+      },
+      "statistics_by_object_count": {
+        "1": {
+          "ns_per_op": {
+            "median": 1293,
+            "min": 1247,
+            "max": 1328
+          },
+          "bytes_per_op": {
+            "median": 2144,
+            "min": 2144,
+            "max": 2144
+          },
+          "allocs_per_op": {
+            "median": 20,
+            "min": 20,
+            "max": 20
+          }
+        },
+        "32": {
+          "ns_per_op": {
+            "median": 31891,
+            "min": 31823,
+            "max": 32816
+          },
+          "bytes_per_op": {
+            "median": 51608,
+            "min": 51608,
+            "max": 51608
+          },
+          "allocs_per_op": {
+            "median": 241,
+            "min": 241,
+            "max": 241
+          }
+        },
+        "128": {
+          "ns_per_op": {
+            "median": 131900,
+            "min": 131463,
+            "max": 138775
+          },
+          "bytes_per_op": {
+            "median": 208857,
+            "min": 208857,
+            "max": 208859
+          },
+          "allocs_per_op": {
+            "median": 835,
+            "min": 835,
+            "max": 835
+          }
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "objects_with_updaters": 1,
+      "before_median": {
+        "ns_per_op": 2262,
+        "bytes_per_op": 1488,
+        "allocs_per_op": 10
+      },
+      "after_median": {
+        "ns_per_op": 1293,
+        "bytes_per_op": 2144,
+        "allocs_per_op": 20
+      },
+      "time_speedup_before_over_after": 1.74942,
+      "after_minus_before": {
+        "ns_per_op": -969,
+        "bytes_per_op": 656,
+        "allocs_per_op": 10
+      },
+      "after_vs_before_change_percent": {
+        "ns_per_op": -42.838196,
+        "bytes_per_op": 44.086022,
+        "allocs_per_op": 100.0
+      }
+    },
+    {
+      "objects_with_updaters": 32,
+      "before_median": {
+        "ns_per_op": 340718,
+        "bytes_per_op": 375410,
+        "allocs_per_op": 1419
+      },
+      "after_median": {
+        "ns_per_op": 31891,
+        "bytes_per_op": 51608,
+        "allocs_per_op": 241
+      },
+      "time_speedup_before_over_after": 10.683829,
+      "after_minus_before": {
+        "ns_per_op": -308827,
+        "bytes_per_op": -323802,
+        "allocs_per_op": -1178
+      },
+      "after_vs_before_change_percent": {
+        "ns_per_op": -90.64006,
+        "bytes_per_op": -86.252897,
+        "allocs_per_op": -83.016209
+      }
+    },
+    {
+      "objects_with_updaters": 128,
+      "before_median": {
+        "ns_per_op": 5047866,
+        "bytes_per_op": 6089300,
+        "allocs_per_op": 8207
+      },
+      "after_median": {
+        "ns_per_op": 131900,
+        "bytes_per_op": 208857,
+        "allocs_per_op": 835
+      },
+      "time_speedup_before_over_after": 38.270402,
+      "after_minus_before": {
+        "ns_per_op": -4915966,
+        "bytes_per_op": -5880443,
+        "allocs_per_op": -7372
+      },
+      "after_vs_before_change_percent": {
+        "ns_per_op": -97.387015,
+        "bytes_per_op": -96.570098,
+        "allocs_per_op": -89.825758
+      }
+    }
+  ],
+  "single_object_allocation_regression": {
+    "bytes_per_op": {
+      "before_median": 1488,
+      "after_median": 2144,
+      "increase": 656,
+      "increase_percent": 44.086022
+    },
+    "allocs_per_op": {
+      "before_median": 10,
+      "after_median": 20,
+      "increase": 10,
+      "increase_percent": 100
+    },
+    "interpretation": "Observed allocation regression despite lower median runtime. Batch bookkeeping is a plausible source-level explanation; no allocation profile was collected to establish attribution."
+  },
+  "hashes": {
+    "algorithm": "SHA-256",
+    "path_base": "repository root",
+    "artifacts": [
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/after-final.txt",
+        "sha256": "b49a635cef0cc8ec0346ea4afd175e3f01b5f359606dbbe395faeabc43c75c05",
+        "size_bytes": 959,
+        "role": "selected_log"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/after.txt",
+        "sha256": "be8874dafe54c0ba957c4e3f332826e03bbf2bb11e0f9dbf6f2818c0c6037d94",
+        "size_bytes": 959,
+        "role": "unselected_historical_log"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/before-replay.go.txt",
+        "sha256": "ad750d79b479412b8c7483c19273db4669ddf0c1f6abb3c8e1804d9698f4df7d",
+        "size_bytes": 7976,
+        "role": "archived_before_source"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/before-scene.go.txt",
+        "sha256": "c8b7b54fb4b776f55f0455e53e167fd616da8ec0d6e3b3b0c59906dccc735d26",
+        "size_bytes": 8150,
+        "role": "archived_before_source"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/before-sources.json",
+        "sha256": "7fa35307be5d2ef3654376bf80ad1c52e9d7812275a51b087f1f5ff00e37f154",
+        "size_bytes": 262,
+        "role": "before_source_manifest"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/before-updater_lifecycle.go.txt",
+        "sha256": "922c4d603f521c4cf3a109361b517cfc89aae6aa6a4f1fca4a9a88241fedf32c",
+        "size_bytes": 11571,
+        "role": "archived_before_source"
+      },
+      {
+        "path": "tests/data/root/updater-lifecycle/performance/before.txt",
+        "sha256": "5b523bdb7d24e407358ca6d2653698c97d00ac55c7cf20b9d0f0cbdce4a9fa2a",
+        "size_bytes": 959,
+        "role": "selected_log"
+      },
+      {
+        "path": "scene.go",
+        "sha256": "7f49e59b8ddab1cabb7f99dc9d6fb48baa4adebe5455bb0b274c17117da24aa3",
+        "size_bytes": 8724,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "replay.go",
+        "sha256": "ad750d79b479412b8c7483c19273db4669ddf0c1f6abb3c8e1804d9698f4df7d",
+        "size_bytes": 7976,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "updater_lifecycle.go",
+        "sha256": "f8d8d871f4bde9bf429f9e31bb79cf896fae506f6dcd4266fa9af854295d5563",
+        "size_bytes": 12981,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "tests/_cases/root/updater_lifecycle_benchmark_test.go",
+        "sha256": "c2ba71759d1a07de960eeed27dd58a5298f6a5d432301dee011d7e95a0f51a62",
+        "size_bytes": 962,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "tests/cmd/run/main.go",
+        "sha256": "140463f3c8728b84cb6ddaa5177909e7ca09cbfd88240aa45282b0757e2d96eb",
+        "size_bytes": 409,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "tests/internal/harness/harness.go",
+        "sha256": "6b18fe00e1154de63f7e9cbd4b374a45ff9b1d82960f44385d4859f84613d786",
+        "size_bytes": 4977,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "go.mod",
+        "sha256": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+        "size_bytes": 151,
+        "role": "current_source_at_summary_collection"
+      },
+      {
+        "path": "go.sum",
+        "sha256": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b",
+        "size_bytes": 465,
+        "role": "current_source_at_summary_collection"
+      }
+    ],
+    "before_archive_manifest_checks": [
+      {
+        "source_path": "replay.go",
+        "archive_path": "tests/data/root/updater-lifecycle/performance/before-replay.go.txt",
+        "manifest_sha256": "ad750d79b479412b8c7483c19273db4669ddf0c1f6abb3c8e1804d9698f4df7d",
+        "archive_sha256": "ad750d79b479412b8c7483c19273db4669ddf0c1f6abb3c8e1804d9698f4df7d",
+        "matches": true
+      },
+      {
+        "source_path": "scene.go",
+        "archive_path": "tests/data/root/updater-lifecycle/performance/before-scene.go.txt",
+        "manifest_sha256": "c8b7b54fb4b776f55f0455e53e167fd616da8ec0d6e3b3b0c59906dccc735d26",
+        "archive_sha256": "c8b7b54fb4b776f55f0455e53e167fd616da8ec0d6e3b3b0c59906dccc735d26",
+        "matches": true
+      },
+      {
+        "source_path": "updater_lifecycle.go",
+        "archive_path": "tests/data/root/updater-lifecycle/performance/before-updater_lifecycle.go.txt",
+        "manifest_sha256": "922c4d603f521c4cf3a109361b517cfc89aae6aa6a4f1fca4a9a88241fedf32c",
+        "archive_sha256": "922c4d603f521c4cf3a109361b517cfc89aae6aa6a4f1fca4a9a88241fedf32c",
+        "matches": true
+      }
+    ],
+    "scope": "All pre-existing files in this performance directory, plus the selected current implementation/benchmark/harness/module files; not a complete transitive source/dependency archive.",
+    "provenance_limits": [
+      "Before archive hashes match before-sources.json; the log itself does not embed a source hash.",
+      "Current source hashes were collected for this summary, not embedded in after-final.txt; exact historical after-log source binding is unknown.",
+      "No archived historical benchmark source or exact historical toolchain is present among the supplied performance artifacts.",
+      "after.txt is hashed as preserved history and excluded from all statistics.",
+      "summary.json is excluded from its own hash inventory."
+    ]
+  },
+  "limits": [
+    "Shared host and non-interleaved phases allow load, thermal and temporal confounding; observed ratios are descriptive, not controlled causal estimates.",
+    "Only three repetition means per case; no statistical significance or tail-latency claim.",
+    "No render/export/FPS, end-to-end speedup or Manim speedup claim.",
+    "Only fixed-size square children, absolute-time movement and one sample time; redraw, animated suspension, replay and arbitrary callback workloads are not benchmarked.",
+    "Single-object allocation costs regress; do not claim universal allocation improvement.",
+    "No tests or benchmarks were rerun; this is evidence aggregation."
+  ]
+}

@@ -1,0 +1,8 @@
+2026-11-05; Go1.27.3; darwin/arm64; Apple M2; CGO_ENABLED=0; GOMAXPROCS=1
+Central harness adds -tags noasm. Shared host, not isolated performance evidence.
+Command: CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=root -run '^$' -bench '^BenchmarkSurroundingRectangleAnnotation$' -benchmem -benchtime=300ms -count=3
+Workload: prebuilt group containing rectangle2x1 and radius.6 circle shifted to(2,0); default padding options.
+Excludes target construction, animation, rendering, I/O and external references.
+BenchmarkSurroundingRectangleAnnotation  164941  2429 ns/op  2352 B/op  12 allocs/op
+BenchmarkSurroundingRectangleAnnotation  156859  2210 ns/op  2352 B/op  12 allocs/op
+BenchmarkSurroundingRectangleAnnotation  161797  2182 ns/op  2352 B/op  12 allocs/op

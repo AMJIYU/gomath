@@ -1,0 +1,12 @@
+{
+  "clip_rule": "nonzero",
+  "fill_rule": "evenodd",
+  "frame_width": 128,
+  "gradient_alpha": 0.7,
+  "height": 96,
+  "inner_radius": 10,
+  "left_opacity": 0.7,
+  "left_reveal": 0.72,
+  "radius": 25,
+  "width": 128
+}

@@ -1,0 +1,5 @@
+=== RUN   TestPointLightArtifacts
+    point_light_artifacts_test.go:64: /Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/three/world-point-light.png
+--- PASS: TestPointLightArtifacts (0.25s)
+PASS
+ok  	gomath/three	0.251s

@@ -1,0 +1,16 @@
+=== RUN   TestInterRetainedCapacity
+=== RUN   TestInterRetainedCapacity/searchfalse/interfalse
+    performance_test.go:131: retained dynamic byte capacity=92160
+=== RUN   TestInterRetainedCapacity/searchfalse/intertrue
+    performance_test.go:131: retained dynamic byte capacity=321152
+=== RUN   TestInterRetainedCapacity/searchtrue/interfalse
+    performance_test.go:131: retained dynamic byte capacity=92160
+=== RUN   TestInterRetainedCapacity/searchtrue/intertrue
+    performance_test.go:131: retained dynamic byte capacity=325120
+--- PASS: TestInterRetainedCapacity (0.95s)
+    --- PASS: TestInterRetainedCapacity/searchfalse/interfalse (0.13s)
+    --- PASS: TestInterRetainedCapacity/searchfalse/intertrue (0.20s)
+    --- PASS: TestInterRetainedCapacity/searchtrue/interfalse (0.28s)
+    --- PASS: TestInterRetainedCapacity/searchtrue/intertrue (0.35s)
+PASS
+ok  	gomath/internal/h264	0.951s

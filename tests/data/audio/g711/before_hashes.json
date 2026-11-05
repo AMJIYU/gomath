@@ -1,0 +1,16 @@
+{
+  "audio/aiff_read.go": "f5ab66d980343e98f44da8730c888e9d7b883569ae9e5adf848ffa4b0e8ba6e1",
+  "audio/edit.go": "60932000dc7a485a54d511b106792ac709155915f6331ec52e164b7ab5df874a",
+  "audio/flac.go": "2bf58dad2d742933bf2fb9a42f9961cd721d8d96fe13e17a364e0c3ec7b64e45",
+  "audio/flac_read.go": "ae2e5e9eb1bcd13e91d03050441cf5825363dcf7b923099adeac78e1cf2c0396",
+  "audio/pcm.go": "08d2ba7b171ee535c4cd7c670e2429564eec4a66b7f787db41913077cf88d5f5",
+  "audio/remix.go": "0c01cd685a7f342072688e5bd70d175ec886561dbf61d2e5ba79702778ffd5a4",
+  "audio/resample.go": "6b2cfaa5dbae4a1c2871950b99ef982cfb2fa28bbe597fef4a7f5cbc955f2e8d",
+  "audio/sequence.go": "1e0f5fe373e5d795c2e2259ab2fd92777f71cd999eec2c1ff8d47a977ef875da",
+  "audio/wav.go": "b7539163314f4f7a058d1054a265cbc34ce370231351a69933ac600ce6e175a0",
+  "audio/wav_ima.go": "a998141cc9233fc84e58f8d103ba7598a6a88f6448c7285fd6cc5b113ec08d46",
+  "audio/README.md": "8950ef83d942e397d08904448b582ae6c9a31100c02e6367018555f8b7b9a475",
+  "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+  "tests/_cases/audio/wav_test.go": "2e7f8710a0cbbdd3cdc3bfab3c0a034ae0d64e5309e4a4c99bdb10a1a3d172df",
+  "tests/_cases/audio/wav_ima_test.go": "8539055e2b839fad8fc336c566fa757a15822e3ce19fdd6eb580ee0fc6ccbffb"
+}

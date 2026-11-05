@@ -1,0 +1,22 @@
+File: before_pan.test
+Type: alloc_space
+Time: 2026-11-04 13:22:50 CST
+Showing nodes accounting for 38079.71kB, 100% of 38079.71kB total
+      flat  flat%   sum%        cum   cum%
+35333.23kB 92.79% 92.79% 35333.23kB 92.79%  image.NewRGBA
+ 1184.27kB  3.11% 95.90%  1184.27kB  3.11%  runtime/pprof.StartCPUProfile
+ 1034.03kB  2.72% 98.61%  1034.03kB  2.72%  gomath/internal/h264.nal (inline)
+  528.17kB  1.39%   100%   528.17kB  1.39%  gomath/internal/h264.(*PredictiveEncoder).residualWorkspace
+         0     0%   100%  1562.20kB  4.10%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0%   100%  1562.20kB  4.10%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0%   100%  1562.20kB  4.10%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion
+         0     0%   100% 36895.43kB 96.89%  gomath/internal/h264.BenchmarkMotionSearch.func1
+         0     0%   100% 19414.97kB 50.99%  gomath/internal/h264.intraImage
+         0     0%   100% 35333.23kB 92.79%  gomath/internal/h264.motionImage
+         0     0%   100%  1184.27kB  3.11%  main.main
+         0     0%   100%  1184.27kB  3.11%  runtime.main
+         0     0%   100% 36895.43kB 96.89%  testing.(*B).run1.func1
+         0     0%   100% 36895.43kB 96.89%  testing.(*B).runN
+         0     0%   100%  1184.27kB  3.11%  testing.(*M).Run
+         0     0%   100%  1184.27kB  3.11%  testing.(*M).before
+         0     0%   100%  1184.27kB  3.11%  testing/internal/testdeps.TestDeps.StartCPUProfile

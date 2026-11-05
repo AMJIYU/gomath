@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-04",
+  "runtime": "Pure Go. References were generated during development only. Runtime and Go tests do not invoke Python, Cairo, Manim, a browser, native libraries or subprocess renderers.",
+  "scope": {
+    "API": [
+      "gomath.NewDashPattern(lengths []float64, offset float64) (*DashPattern, error)",
+      "(*DashPattern).Lengths() []float64",
+      "(*DashPattern).Offset() float64",
+      "(*DashPattern).Period() float64",
+      "(*DashPattern).Validate() error",
+      "(*DashPattern).Scaled(scale float64) (*DashPattern, error)",
+      "gomath.Style.Dash *DashPattern",
+      "gomath.MaxDashEntries = 1024"
+    ],
+    "ownership": "Constructor copies input; Lengths returns a copy. Private pattern storage is immutable and safe to share between object copies and sampled frames. Nil means solid; zero-value non-nil pattern is invalid. Style interpolation switches the entire pattern at the endpoint.",
+    "values": "Finite nonnegative lengths, finite positive total; odd lists repeat once. Reject empty/all-zero/overflow patterns. Finite offsets reduce modulo period; positive SVG offsets advance into the pattern. Scaled rejects nonpositive/nonfinite scales, overflow and positive entries/offsets underflowing to zero; representable subnormal values remain valid.",
+    "SVG": "Presentation attributes, inline style and embedded CSS stroke-dasharray/stroke-dashoffset reuse the existing cascade and inheritance. Dash offset inherits independently of the array and is reduced only with the final array. Supports none, comma/ASCII whitespace separators, user units and existing absolute units; defs/use instances inherit independently. Uniform SVG transforms, symbol viewport transforms and final world normalization scale lengths and offset together.",
+    "render": "Flatten using existing CurveTolerance (default 0.02 pixels), then split by actual projected XY polyline distance. Preserve source vertices within each dash and reuse existing cap/join outlines. Reset phase per contour. Coalesce zero gaps, including consecutive zero entries. Join painted runs across a closed seam; a fully painted ring remains closed. Zero dashes use round dots or tangent-oriented square dots; butt dots have no coverage. Reveal trims before dashing. Fill is unchanged.",
+    "export": "StrokeAttributes emits full-precision normalized dasharray and offset. Solid explicitly emits none and zero to avoid inherited patterns. Existing SVG world-to-pixel transform supplies scale without doubling dash lengths.",
+    "limits": {
+      "normalized_entries_per_pattern": 1024,
+      "processed_fragments_per_painted_object_across_contours": 65536,
+      "pattern_steps_per_painted_object_across_contours": 262144,
+      "output_polyline_points_per_painted_object_across_contours": 1048576
+    },
+    "limit_behavior": "Zero entries and dots count toward work/fragment budgets, including fragments subsequently merged. Errors abort rendering rather than dropping dashes or falling back to solid. Numeric inability to advance the contour or subdivision returns an explicit error.",
+    "boundaries": [
+      "Curved length is the existing flattened-polyline approximation, not analytic arc length.",
+      "SVG dash percentage lengths, pathLength calibration, calc/var and !important are explicitly rejected.",
+      "Visible nonuniform/sheared SVG strokes retain the importer's explicit rejection.",
+      "Native object geometry transforms retain existing Style world-unit semantics; explicitly call Scaled when also scaling the dash style.",
+      "Image nodes do not apply vector dash paint, consistent with existing image fill/stroke behavior.",
+      "Fixed DashedLine API is unchanged. No claim of full Manim dash-count, animation or browser SVG parity."
+    ]
+  },
+  "fixtures": {
+    "origin": "Synthetic local SVG scenes; no third-party artwork.",
+    "CairoSVG": {
+      "versions": {
+        "Python": "3.11.5",
+        "Pillow": "11.2.1",
+        "CairoSVG": "2.7.1",
+        "Cairo": "1.18.4"
+      },
+      "regenerate_python": "from pathlib import Path\nimport cairosvg\np = Path('tests/data/svg')\nfor name in ['dash-cascade', 'dash-square-dots', 'dash-edge-cases']:\n    cairosvg.svg2png(bytestring=(p/(name+'.svg')).read_bytes(), write_to=str(p/(name+'.png')))",
+      "environment": "Development generation used PYTHONDONTWRITEBYTECODE=1 and DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib. Go tests require neither.",
+      "comparison": "One transparent frame per fixture, premultiplied 8-bit RGBA across all pixels/channels. MAE uses channel units 0..255; fraction counts pixels with any channel delta greater than 8. No reference normalization.",
+      "thresholds": {
+        "RGBA_MAE": 0.1,
+        "maximum_channel_delta": 32,
+        "fraction_pixels_any_channel_over_8": 0.005
+      },
+      "measurements": [
+        {
+          "name": "dash-cascade",
+          "size": [240, 180],
+          "RGBA_MAE": 0.039288194444444445,
+          "maximum_channel_delta": 19,
+          "fraction_pixels_any_channel_over_8": 0.0013657407407407407
+        },
+        {
+          "name": "dash-square-dots",
+          "size": [128, 128],
+          "RGBA_MAE": 0.03521728515625,
+          "maximum_channel_delta": 5,
+          "fraction_pixels_any_channel_over_8": 0
+        },
+        {
+          "name": "dash-edge-cases",
+          "size": [200, 160],
+          "RGBA_MAE": 0.0072890625,
+          "maximum_channel_delta": 9,
+          "fraction_pixels_any_channel_over_8": 0.00009375
+        }
+      ],
+      "coverage": "Colors, curves, cascade, odd arrays, offsets, caps/joins, independent contours, closed seams, zero dashes, diagonal square dots, zero/consecutive-zero gaps. Remaining pixel differences are edge coverage differences."
+    },
+    "Manim": {
+      "file": "dash-manim.json",
+      "source_tree": "/Users/eleven/Documents/工作经历/cloudtorch/manim",
+      "source_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+      "source": "manim/mobject/types/vectorized_mobject.py:DashedVMobject",
+      "source_tree_modified": false,
+      "environment": "Development only: PYTHONDONTWRITEBYTECODE=1, PYTHONPATH set to the read-only Manim source tree, DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib.",
+      "generation": "For Line([-3,0,0],[3,0,0]) and Square(side_length=2), call DashedVMobject(base, num_dashes=4, dashed_ratio=.5, dash_offset=offset, equal_lengths=True) at offsets 0, .25, .75. Record base and each dash's get_start_anchors() followed by get_end(), projected to XY. Line native pattern is [.75,1]; closed square pattern is [1,1]. Native SVG absolute offset = -Manim fractional offset * sum(native pattern). Serialize the six cases to dash-manim.json.",
+      "comparison": "Compare all vertices and dash counts, sorting by dash starts to ignore ordering. Absolute Euclidean vertex tolerance 1e-9.",
+      "result": "PASS: six static geometry cases. Manim fractional phase direction is opposite SVG positive absolute offset. No Manim raster/animation parity claim."
+    }
+  },
+  "validation": {
+    "package_tests": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=root -pkg=render -pkg=svg -pkg=export -count=1 -vet=all",
+      "result": "PASS",
+      "latest_package_seconds": {"root": 0.031, "export": 0.036, "render": 0.081, "svg": 0.424}
+    },
+    "references_command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=render -run='^TestDash(CairoSVGReference|PinnedManimGeometry)$' -count=1 -v",
+    "references_result": "PASS",
+    "vet_command": "CGO_ENABLED=0 go vet -tags noasm . ./svg ./render ./export",
+    "vet_result": "PASS",
+    "purecheck_command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+    "purecheck_result": "PASS: 40 non-standard packages; CGO_ENABLED=0; noasm; no native inputs or runtime process launch imports",
+    "additional_coverage": [
+      "Immutable input/output ownership, independent styles, discrete interpolation, concurrent copies/imports/sampling",
+      "Finite validation, normalized entry count and scaling underflow/overflow",
+      "Native color/opacity/Reveal pixel assertions",
+      "Contour reset, joins, caps, closed full ring, native circle seam rounding",
+      "Consecutive-zero-gap join regression and duplicate terminal zero-dash cap regression",
+      "Per-object fragment/work/output-point limits and explicit Render errors",
+      "SVG independent offset inheritance, defs/use isolation and transform scaling",
+      "SVG export/import raster roundtrip"
+    ],
+    "roundtrip_boundary": "The test removes the exporter's transparent percentage-sized background rect before import because the existing vector rect importer rejects percentage dimensions; no geometry or dash normalization is applied.",
+    "not_run_by_this_slice": "Whole-repository and race suites are coordinated separately by the parent agent."
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=render -p=1 -run=^$ -bench=^BenchmarkDashStrokeRender$ -benchtime=300ms -count=3",
+    "Go": "go1.27.3 darwin/arm64",
+    "CPU": "Apple M2",
+    "CGO_ENABLED": 0,
+    "tags": "noasm",
+    "image_size": [512, 256],
+    "frames_per_op": 1,
+    "workers": 1,
+    "workload": "Transparent frame, FrameWidth=8, one native cubic Circle radius=1.5, stroke width=.035, RGB(.9,.2,.1), default round caps/miter joins, dash [.1,.05], offset=.03, default CurveTolerance=.02 pixels, about 63 dash pieces.",
+    "includes": "Render: RGBA allocation, path flattening, dash subdivision, stroke outlines and compositing.",
+    "excluded": ["object/rasterizer setup", "fixture/reference generation", "file I/O", "output PNG encoding", "animation sampling"],
+    "iterations": [1218, 1300, 1310],
+    "ns_per_op": [299787, 278930, 279169],
+    "bytes_per_op": [675094, 675078, 675080],
+    "allocs_per_op": [713, 713, 713],
+    "interpretation": "Measured workload only; no performance improvement claim."
+  },
+  "sha256": {
+    "dash-cascade.svg": "d3c5a068fb6242c50a304e1ff5b072d2ee7ab00500e9f5816457425d04a24c04",
+    "dash-cascade.png": "ecb89c1416d100e42992301f0d0422f465691cfb8808fc0a274d409d59533cc8",
+    "dash-square-dots.svg": "3e6b7770c64a48d0afb1575a4b79f1abc82a85337986cb42efca4d8ee9ab624b",
+    "dash-square-dots.png": "598c8662031a647bdb1e57c83a97fb83d8870965976dfe079cebb56ceaf38868",
+    "dash-edge-cases.svg": "8f45e55ea6ecbe8087ddd4a081a0d7aeb575a0f0b50a19b7606f6d365e1f343d",
+    "dash-edge-cases.png": "860944102132cf468491dc703058dc0d9f226392a8fbf1bc78c2c69eca77858b",
+    "dash-manim.json": "a4ccfee7dcdbff0acf92d2379050d474da85ebb3d41e248bd34ea2a666ea1790"
+  }
+}

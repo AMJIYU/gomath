@@ -1,0 +1,26 @@
+File: after_noise.test
+Type: alloc_space
+Time: 2026-11-04 13:35:21 CST
+Showing nodes accounting for 38642.75kB, 100% of 38642.75kB total
+Showing top 20 nodes out of 38
+      flat  flat%   sum%        cum   cum%
+31454.10kB 81.40% 81.40% 31454.10kB 81.40%  image.NewRGBA
+ 2627.14kB  6.80% 88.20%  2627.14kB  6.80%  gomath/internal/h264.nal (inline)
+ 1762.94kB  4.56% 92.76%  1762.94kB  4.56%  runtime/pprof.StartCPUProfile
+  655.29kB  1.70% 94.45%  1238.30kB  3.20%  compress/flate.NewWriter (inline)
+  583.01kB  1.51% 95.96%   583.01kB  1.51%  compress/flate.newFastEnc (inline)
+  528.17kB  1.37% 97.33%   528.17kB  1.37%  gomath/internal/h264.(*IntraEncoder).encodeIDR
+  520.04kB  1.35% 98.67%   520.04kB  1.35%  gomath/internal/h264.newPicture420 (inline)
+  512.06kB  1.33%   100%   512.06kB  1.33%  regexp/syntax.parse
+         0     0%   100%   583.01kB  1.51%  compress/flate.(*compressor).init
+         0     0%   100%  1238.30kB  3.20%  compress/gzip.(*Writer).Write
+         0     0%   100%  3675.35kB  9.51%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0%   100%  3147.18kB  8.14%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0%   100%  3147.18kB  8.14%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion
+         0     0%   100%   520.04kB  1.35%  gomath/internal/h264.(*PredictiveEncoder).residualWorkspace
+         0     0%   100%   512.06kB  1.33%  gomath/internal/h264.BenchmarkMotionSearch
+         0     0%   100% 35129.45kB 90.91%  gomath/internal/h264.BenchmarkMotionSearch.func1
+         0     0%   100% 31454.10kB 81.40%  gomath/internal/h264.interImage
+         0     0%   100% 31454.10kB 81.40%  gomath/internal/h264.intraImage
+         0     0%   100% 31454.10kB 81.40%  gomath/internal/h264.motionImage
+         0     0%   100%  1762.94kB  4.56%  main.main

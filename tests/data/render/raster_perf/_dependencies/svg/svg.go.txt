@@ -1,0 +1,417 @@
+package svg
+
+import (
+	"fmt"
+	"gomath"
+	"gomath/geom"
+	"gomath/path"
+	"io"
+	"math"
+	"strconv"
+	"strings"
+)
+
+type Options struct {
+	Width float64
+	// FontResolver resolves immutable fonts for SVG text. Nil selects only the
+	// embedded Go family. A supplied resolver handles every requested family and
+	// style; errors never fall back to a different font. No system font lookup.
+	FontResolver FontResolver
+}
+
+func DefaultOptions() Options { return Options{Width: 4} }
+
+type inheritedStyle struct {
+	fill, stroke                      gomath.Color
+	fillOpacity, strokeOpacity, width float64
+	cap                               gomath.StrokeCap
+	join                              gomath.StrokeJoin
+	miterLimit                        float64
+	dash                              *gomath.DashPattern
+	dashOffset                        float64
+	color                             gomath.Color
+	fillCurrent, strokeCurrent        bool
+	fillServer                        string
+	fillRule                          path.FillRule
+	stopColor                         gomath.Color
+	stopCurrent                       bool
+	stopOpacity                       float64
+	colorInterpolation                string
+	opacity                           float64
+	displayNone, visibilityHidden     bool
+	overflow                          string
+	fontFamily                        string
+	fontSize                          float64
+	fontBold, fontItalic              bool
+	textAnchor                        string
+	preserveSpace                     bool
+	clipPath                          string // computed local fragment ID; empty means none
+	clipRule                          string
+}
+
+// Read imports paths, groups, basic shapes and local defs/symbol/use instances.
+// Both href and xlink:href are accepted; href takes precedence. Referenced
+// objects inherit from the use element, not from their definition's ancestors,
+// and every instance owns fresh geometry and object IDs. Symbol viewports
+// support absolute/percentage dimensions and preserveAspectRatio. Content that
+// requires viewport clipping fails explicitly; overflow="visible" opts out.
+//
+// Embedded style sheets and inline style declarations support type, universal,
+// class and ID selectors, compounds, selector lists, descendant and child
+// combinators. Cascade order is presentation attributes, author rules ordered
+// by (ID,class,type) specificity then source order, and inline declarations.
+// Inheritance, initial/unset/inherit and currentColor are supported. Selectors
+// are rematched inside each use shadow tree, never through its host boundary.
+// Unknown CSS properties/values, !important, at-rules, media conditions, escaped
+// or non-ASCII selectors, attributes, pseudo-classes and sibling combinators
+// return errors even in unmatched rules. CSS controls supported paints, opacity,
+// strokes including absolute dash lengths/offset, display, visibility and
+// symbol overflow. Dashing uses the native renderer; CSS adds no compositing
+// effects or automatic viewport clipping.
+// Ordinary vector interiors support inherited fill-rule nonzero/evenodd through
+// the same cascade and use contexts; the property does not alter clip-rule,
+// stroke outlines or bitmap pixels. Native parity masks have explicit budgets.
+//
+// Image elements accept strictly encoded base64 PNG/JPEG/GIF data URIs. GIF
+// uses frame zero, which must cover its logical canvas. Images support x/y,
+// intrinsic/absolute/percentage dimensions, meet/none aspect placement and
+// affine transforms, including shear and reflection. Assets are immutable and
+// shared within an import; use instances own independent geometry and IDs.
+// Existing bitmap opacity/display/visibility apply; vector paints do not tint
+// images. External images, slice and automatic viewport clipping fail explicitly.
+// Input is capped at 32 MiB, image URIs at 12 MiB each/24 MiB total, encoded
+// assets at 8 MiB each/16 MiB total, decoded assets at 4 Mi pixels each/16 Mi
+// pixels total, and unique assets at 128. See svg/README.md for exact boundaries.
+//
+// Text/tspan elements use gomath/text's real unhinted horizontal font outlines.
+// The default exact family is Go, with regular/bold/italic/bold-italic faces;
+// Options.FontResolver supplies other immutable fonts without system lookup or
+// fallback. Supports scalar absolute x/y/dx/dy, absolute font-size, inherited
+// paints, start/middle/end advance anchors and SVG 1.1 xml:space handling.
+// Only Latin/Greek/Cyrillic and Common-script non-combining characters are
+// accepted, subject to actual font coverage. Complex shaping, bidi, textPath,
+// textLength, rotate, per-character position lists and tspan transforms error.
+// Per import: 256 KiB/65,536 source bytes/runes, 65,536 expanded runes, 32,768
+// outlined glyphs, 1,048,576 outline segments, 32 nested text/tspan levels,
+// 32 family/style pairs and 4,096 outline layout calls. Glyph/group objects also
+// consume the existing expanded element budget. See svg/README.md for details.
+//
+// Local clip-path:url(#id) imports use immutable native nonzero/evenodd Clips. Supports
+// userSpaceOnUse, one basic/path child or direct use, affine transforms, inherited
+// definition styles and nested clip intersections on vectors/text/images/groups.
+// objectBoundingBox supports basic/path/image targets and direct use thereof,
+// using unclipped local geometry (image positioning viewport), excluding stroke.
+// Bbox clipping geometry requires unitless numbers; containers/text, percentages,
+// clip text/groups/images and clone-local definitions error. Multiple children
+// accept 2–16 sharp rect/polygon/closed M/L/H/V/Z paths or direct use only. Each
+// child's rule/CSS/affine silhouette is normalized and geometrically unioned by
+// bounded pure-Go path.Boolean into one NonZero Clip. Curves/open/degenerate
+// multi input and nested clip-path within/to a multi definition error. Ordinary
+// visible clip ancestry still intersects. Shared per-Read limits include 512
+// source segments,128 source contours and32 fully budgeted Boolean calls; one
+// call accepts at most256 operand segments/128 contours. See SVG_CLIP_UNIONS.
+// Compound holes and inherited clip-rule work in both coordinate systems.
+// Per import: 1,024 definitions, 1 MiB per clipping graphic attribute, 8,192
+// source/plan/instance path materializations, 1,048,576 cumulative curves and
+// 65,536 cumulative contours.
+// Native limits are 4,096 contours/65,536 curves per path and 64 intersections.
+// Unsupported/missing/foreign references error even in unused definitions or
+// unmatched CSS declarations. See svg/README.md for the exact supported subset.
+//
+// Local fill paintservers support linearGradient and concentric radialGradient,
+// pad extension, encoded sRGB interpolation, stop-color/currentColor/stop-opacity,
+// same-type href templates, userSpaceOnUse and affine objectBoundingBox mapping.
+// Stop alpha includes fill-opacity; graphics opacity remains on the object tree.
+// Text requires userSpaceOnUse. Stroke paintservers, off-center focus/nonzero fr,
+// repeat/reflect, linearRGB, external/fallback references and clone-local gradient
+// definitions return errors. See svg/README.md for template CSS and exact limits.
+//
+// XML and expanded trees are limited to 128 levels and 100,000 elements each.
+// CSS is limited to 256 KiB total sheet/inline text, 512 rules, 1,024 selectors,
+// 4,096 declarations, 16 compound parts/selector, 16 terms/compound and two
+// million matching/cascade steps per import. Dash lists have at most 1,024
+// normalized entries; percentages and pathLength dash calibration are rejected.
+// Cycles, duplicate IDs, unknown/external references, unsupported paint servers beyond these fills,
+// CSS syntax, unsupported text semantics and unsupported clipping return errors. Coordinates are normalized to
+// opt.Width world units and +Y is flipped upward.
+func Read(reader io.Reader, opt Options) (*gomath.Object, error) {
+	if reader == nil || !valid(opt.Width) || opt.Width <= 0 {
+		return nil, fmt.Errorf("SVG requires a reader and positive world width")
+	}
+	doc, err := readDocument(reader)
+	if err != nil {
+		return nil, err
+	}
+	view, err := documentView(doc.root.attrs)
+	if err != nil {
+		return nil, err
+	}
+	if err := doc.resolveReferences(); err != nil {
+		return nil, err
+	}
+	if err := doc.prepareCSS(); err != nil {
+		return nil, err
+	}
+	if err := doc.prepareGradients(); err != nil {
+		return nil, err
+	}
+	if err := doc.prepareClips(); err != nil {
+		return nil, err
+	}
+	if err := doc.prepareText(); err != nil {
+		return nil, err
+	}
+	if err := doc.prepareImages(); err != nil {
+		return nil, err
+	}
+	state := expansion{document: doc, active: make(map[*element]bool), fontResolver: opt.FontResolver}
+	base := initialSVGStyle()
+	object, err := state.instantiate(doc.root, expansionContext{
+		matrix: geom.Identity(), style: base, viewport: [2]float64{view[2], view[3]},
+	}, 1, false, nil)
+	if err != nil {
+		return nil, err
+	}
+	if err := validateClipDepth(object, 0); err != nil {
+		return nil, err
+	}
+	root := gomath.Group(object)
+	scale := opt.Width / view[2]
+	matrix := geom.Scaling(scale, -scale, 1).Mul(geom.Translation(geom.V(-view[0]-view[2]/2, -view[1]-view[3]/2)))
+	if !valid(scale) || scale <= 0 || !finiteMatrix(matrix) {
+		return nil, fmt.Errorf("SVG normalization exceeds finite coordinate range")
+	}
+	root.ApplyMatrix(matrix)
+	var visualErr error
+	root.Walk(func(o *gomath.Object) {
+		o.Style.StrokeWidth *= scale
+		if dash, err := o.Style.Dash.Scaled(scale); err != nil {
+			visualErr = fmt.Errorf("invalid normalized SVG dash: %w", err)
+		} else {
+			o.Style.Dash = dash
+		}
+		if err := o.ValidateVisual(); err != nil {
+			visualErr = fmt.Errorf("invalid normalized SVG object: %w", err)
+		}
+	})
+	if visualErr != nil {
+		return nil, visualErr
+	}
+	return root, nil
+}
+
+func numbers(s string) ([]float64, error) {
+	scan := scanner{data: s}
+	var out []float64
+	for {
+		scan.space()
+		if scan.pos == len(scan.data) {
+			return out, nil
+		}
+		v, e := scan.number()
+		if e != nil {
+			return nil, e
+		}
+		out = append(out, v)
+	}
+}
+func length(attrs map[string]string, name string, fallback float64) (float64, error) {
+	s, ok := attrs[name]
+	if !ok {
+		return fallback, nil
+	}
+	s = strings.TrimSpace(s)
+	factor := 1.0
+	for unit, mult := range map[string]float64{"px": 1, "pt": 96.0 / 72, "pc": 16, "in": 96, "cm": 96 / 2.54, "mm": 96 / 25.4} {
+		if strings.HasSuffix(s, unit) {
+			s = strings.TrimSpace(strings.TrimSuffix(s, unit))
+			factor = mult
+			break
+		}
+	}
+	v, e := strconv.ParseFloat(s, 64)
+	if e != nil || !valid(v) || !valid(v*factor) {
+		return 0, fmt.Errorf("invalid SVG length %s=%q", name, attrs[name])
+	}
+	return v * factor, nil
+}
+func shape(name string, attrs map[string]string) (path.Path, error) {
+	get := func(k string, def float64) (float64, error) { return length(attrs, k, def) }
+	switch name {
+	case "path":
+		return ParsePath(attrs["d"])
+	case "rect":
+		x, e := get("x", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		y, e := get("y", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		w, e := get("width", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		h, e := get("height", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		rx, e := get("rx", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		ry, e := get("ry", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		if w < 0 || h < 0 || rx < 0 || ry < 0 {
+			return path.Path{}, fmt.Errorf("negative SVG rectangle dimensions")
+		}
+		if _, ok := attrs["rx"]; !ok {
+			rx = ry
+		}
+		if _, ok := attrs["ry"]; !ok {
+			ry = rx
+		}
+		rx, ry = math.Min(rx, w/2), math.Min(ry, h/2)
+		if rx == 0 || ry == 0 {
+			return gomath.Rectangle(w, h).Shift(geom.V(x+w/2, y+h/2)).Path, nil
+		}
+		var b path.Builder
+		b.MoveTo(geom.V(x+rx, y))
+		b.LineTo(geom.V(x+w-rx, y))
+		arcTo(&b, geom.V(x+w-rx, y), geom.V(x+w, y+ry), rx, ry, 0, false, true)
+		b.LineTo(geom.V(x+w, y+h-ry))
+		arcTo(&b, geom.V(x+w, y+h-ry), geom.V(x+w-rx, y+h), rx, ry, 0, false, true)
+		b.LineTo(geom.V(x+rx, y+h))
+		arcTo(&b, geom.V(x+rx, y+h), geom.V(x, y+h-ry), rx, ry, 0, false, true)
+		b.LineTo(geom.V(x, y+ry))
+		arcTo(&b, geom.V(x, y+ry), geom.V(x+rx, y), rx, ry, 0, false, true)
+		b.Close()
+		return b.Path(), nil
+	case "circle", "ellipse":
+		cx, e := get("cx", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		cy, e := get("cy", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		rx, e := get("rx", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		ry, e := get("ry", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		if name == "circle" {
+			rx, e = get("r", 0)
+			ry = rx
+			if e != nil {
+				return path.Path{}, e
+			}
+		}
+		if rx < 0 || ry < 0 {
+			return path.Path{}, fmt.Errorf("negative SVG radius")
+		}
+		return gomath.Circle(1).Path.Transform(geom.Translation(geom.V(cx, cy)).Mul(geom.Scaling(rx, ry, 1))), nil
+	case "line":
+		x1, e := get("x1", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		y1, e := get("y1", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		x2, e := get("x2", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		y2, e := get("y2", 0)
+		if e != nil {
+			return path.Path{}, e
+		}
+		return gomath.Line(geom.V(x1, y1), geom.V(x2, y2)).Path, nil
+	case "polygon", "polyline":
+		nums, e := numbers(attrs["points"])
+		if e != nil {
+			return path.Path{}, e
+		}
+		if len(nums)%2 != 0 {
+			return path.Path{}, fmt.Errorf("SVG points require coordinate pairs")
+		}
+		points := make([]geom.Vec3, len(nums)/2)
+		for i := range points {
+			points[i] = geom.V(nums[2*i], nums[2*i+1])
+		}
+		if name == "polygon" {
+			return gomath.Polygon(points...).Path, nil
+		}
+		return gomath.Polyline(points...).Path, nil
+	default:
+		return path.Path{}, fmt.Errorf("unsupported SVG element <%s>", name)
+	}
+}
+func valid(v float64) bool { return !math.IsNaN(v) && !math.IsInf(v, 0) }
+
+func paint(value string) (gomath.Color, error) {
+	value = trimCSS(value)
+	if strings.EqualFold(value, "none") {
+		return gomath.Transparent, nil
+	}
+	if strings.HasPrefix(value, "#") {
+		s := value[1:]
+		if len(s) == 3 || len(s) == 4 {
+			var b strings.Builder
+			for _, c := range s {
+				b.WriteRune(c)
+				b.WriteRune(c)
+			}
+			s = b.String()
+		}
+		return gomath.Hex(s)
+	}
+	if strings.HasPrefix(strings.ToLower(value), "rgb(") && strings.HasSuffix(value, ")") {
+		// The native SVG gradient exporter preserves channel precision with
+		// comma-separated percentages. Accept exactly three such components;
+		// mixed units and other functional-color grammars remain explicit errors.
+		if strings.Contains(value, "%") {
+			parts := strings.Split(value[4:len(value)-1], ",")
+			if len(parts) != 3 {
+				return gomath.Color{}, fmt.Errorf("SVG percentage rgb requires three comma-separated channels")
+			}
+			var channels [3]float64
+			for i, part := range parts {
+				part = trimCSS(part)
+				if !strings.HasSuffix(part, "%") {
+					return gomath.Color{}, fmt.Errorf("SVG percentage rgb cannot mix channel units")
+				}
+				n, err := strconv.ParseFloat(strings.TrimSuffix(part, "%"), 64)
+				if err != nil || !valid(n) || n < 0 || n > 100 {
+					return gomath.Color{}, fmt.Errorf("SVG percentage rgb channel out of range")
+				}
+				channels[i] = n / 100
+			}
+			return gomath.RGB(channels[0], channels[1], channels[2]), nil
+		}
+		nums, e := numbers(value[4 : len(value)-1])
+		if e != nil || len(nums) != 3 {
+			return gomath.Color{}, fmt.Errorf("invalid SVG rgb color")
+		}
+		for _, n := range nums {
+			if n < 0 || n > 255 {
+				return gomath.Color{}, fmt.Errorf("SVG rgb channel out of range")
+			}
+		}
+		return gomath.RGB(nums[0]/255, nums[1]/255, nums[2]/255), nil
+	}
+	colors := map[string]gomath.Color{"black": gomath.Black, "white": gomath.White, "red": gomath.RGB(1, 0, 0), "green": gomath.RGB(0, .5, 0), "blue": gomath.RGB(0, 0, 1), "yellow": gomath.RGB(1, 1, 0), "cyan": gomath.RGB(0, 1, 1), "magenta": gomath.RGB(1, 0, 1), "gray": gomath.RGB(.5, .5, .5), "grey": gomath.RGB(.5, .5, .5), "orange": gomath.RGB(1, .647, 0), "transparent": gomath.Transparent}
+	if c, ok := colors[strings.ToLower(value)]; ok {
+		return c, nil
+	}
+	return gomath.Color{}, fmt.Errorf("unsupported SVG paint %q", value)
+}

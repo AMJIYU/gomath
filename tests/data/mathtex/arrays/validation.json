@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-05",
+  "wave": 7,
+  "status": "focused array slice complete and frozen",
+  "scope": "Finite mathtex array only; not a whole-repository checkpoint; no wave6 validation inherited.",
+  "public_api": "Existing mathtex.New; no new option or dependency.",
+  "environment": {
+    "go": "go1.27.3",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "cpu": "Apple M2",
+    "os": "macOS 15.7.1 (24G231)",
+    "shared_host": true
+  },
+  "commands": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -count=1",
+      "result": "PASS",
+      "package_seconds": 2.936,
+      "output": "noasm-results.txt"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=mathtex -tags noasm -race -count=1",
+      "result": "PASS",
+      "package_seconds": 44.374,
+      "output": "race-results.txt",
+      "note": "Go race instrumentation uses development cgo; production runtime remains pure Go."
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./mathtex",
+      "result": "PASS",
+      "output": "no diagnostic output"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -vet=all -run '^$'",
+      "result": "PASS",
+      "output": "vet-results.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS",
+      "non_standard_packages": 42,
+      "output": "purecheck-results.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -run '^TestArrayIndependent' -v -count=1",
+      "result": "PASS",
+      "output": "independent-results.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -run '^$' -bench BenchmarkArrayLayout -benchmem -benchtime=150ms -p=1 -cpu=1 -count=3",
+      "result": "PASS",
+      "output": "benchmark.txt"
+    }
+  ],
+  "accepted": "Literal l/c/r and single | per boundary; exact row cell count; single hline at initial or row separator boundaries; one trailing row separator. Real vector rules, cell ascent/depth, nested existing math/font/color/display/phantom.",
+  "unsupported": "Full TeX/amsmath, macro/recursive/repeated colspec, p/m/b and custom insertions/lengths, double rules, row positioning/spacing, cline/noalign/multicolumn, empty or ragged rows. Unknown syntax errors atomically; no fallback.",
+  "limits": {
+    "source_runes": 16384,
+    "raw_bytes_max": 65536,
+    "nesting": 128,
+    "array_rows": 64,
+    "array_columns": 64,
+    "shared_environment_substack_cells": 4096,
+    "shared_charged_curves": 1048576,
+    "max_full_empty_array_rule_curves": 130,
+    "size_max": 1000000,
+    "notes": "Array cells reserve shared capacity before nested parsing. Hidden phantom and legacy structure inside arrays retain all costs. No legacy array-free backend rewrite."
+  },
+  "regressions": [
+    "Exact layout and row baselines, advance-based l/c/r, reserved rule bands",
+    "Legacy mathtex exact fixtures unchanged",
+    "Literal grammar and nil/error atomicity",
+    "Shared source/depth/cell/curve limits including hidden/nested structure",
+    "Maximal 64x64 table and final nested cell capacity regression",
+    "Font face availability; scope restoration; independent object/path IDs",
+    "Concurrent New and concurrent Scene.Sample snapshot mutation",
+    "Write 0/.35/.7/1 reveal plus geometry and raster changes",
+    "Transform .35/.7 geometry controls and independent Cairo frames"
+  ],
+  "independent_reference": {
+    "oracle": "fontTools original TTF outlines/metrics + hand-authored operands/layout + CairoSVG/Cairo, no gomath/TeX output input",
+    "versions": {
+      "Python": "3.11.5",
+      "fontTools": "4.45.1",
+      "CairoSVG": "2.7.1",
+      "Cairo": "1.18.4"
+    },
+    "fonts": [
+      {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048
+      },
+      {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048
+      },
+      {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048
+      },
+      {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048
+      }
+    ],
+    "original_font_hashes_rechecked": true,
+    "all_18_svg_png_hashes_rechecked": true,
+    "width": 768,
+    "height": 768,
+    "pixel_thresholds": {
+      "rgb_mae": 0.08,
+      "rgb_rms": 1,
+      "max_channel_delta": 64,
+      "worst_color_core_iou": 0.97
+    },
+    "metrics": [
+      {
+        "case": "lcr-rules-0",
+        "rgb_mae": 0.0231464527,
+        "rgb_rms": 0.524040149,
+        "max_channel_delta": 50,
+        "worst_color_core_iou": 0.992962829
+      },
+      {
+        "case": "plain-lcr",
+        "rgb_mae": 0.0171808313,
+        "rgb_rms": 0.425143668,
+        "max_channel_delta": 32,
+        "worst_color_core_iou": 0.991762987
+      },
+      {
+        "case": "fraction-phantom",
+        "rgb_mae": 0.0111524794,
+        "rgb_rms": 0.322080781,
+        "max_channel_delta": 40,
+        "worst_color_core_iou": 0.990152193
+      },
+      {
+        "case": "empty-phantom",
+        "rgb_mae": 0.000587180809,
+        "rgb_rms": 0.024231814,
+        "max_channel_delta": 1,
+        "worst_color_core_iou": 1.0
+      },
+      {
+        "case": "lcr-rules-1",
+        "rgb_mae": 0.014895969,
+        "rgb_rms": 0.342752261,
+        "max_channel_delta": 37,
+        "worst_color_core_iou": 0.982717678
+      },
+      {
+        "case": "lcr-rules-2",
+        "rgb_mae": 0.0265163845,
+        "rgb_rms": 0.539154749,
+        "max_channel_delta": 43,
+        "worst_color_core_iou": 0.993304379
+      },
+      {
+        "case": "lcr-rules-3",
+        "rgb_mae": 0.0177284523,
+        "rgb_rms": 0.37000098,
+        "max_channel_delta": 35,
+        "worst_color_core_iou": 0.997064318
+      },
+      {
+        "case": "morph-035",
+        "rgb_mae": 0.0170214618,
+        "rgb_rms": 0.342927816,
+        "max_channel_delta": 26,
+        "worst_color_core_iou": 0.994597636
+      },
+      {
+        "case": "morph-070",
+        "rgb_mae": 0.0257059733,
+        "rgb_rms": 0.559226223,
+        "max_channel_delta": 47,
+        "worst_color_core_iou": 0.991362991
+      }
+    ],
+    "limitations": "Finite policy reference, no full TeX/Manim parity or independent partial-glyph Write AA claim. Existing scale1 signed-area AA limitation unchanged."
+  },
+  "benchmark": {
+    "name": "BenchmarkArrayLayout",
+    "workload": "New-only 2x3 array, 7 vector boundary rules, bold glyph, fraction, phantom, indexed radical, sum/scripts and nested 1x2 matrix",
+    "cpu": 1,
+    "p": 1,
+    "benchtime": "150ms",
+    "count": 3,
+    "image_size": null,
+    "frame_count": 0,
+    "included": "Parsing, real font outlines, structure/rule geometry, audit and object allocation",
+    "excluded": "Rendering, reference generation, I/O",
+    "samples": [
+      {
+        "iterations": 1242,
+        "ns_per_op": 125632,
+        "bytes_per_op": 251185,
+        "allocs_per_op": 749
+      },
+      {
+        "iterations": 1581,
+        "ns_per_op": 131931,
+        "bytes_per_op": 250927,
+        "allocs_per_op": 749
+      },
+      {
+        "iterations": 1557,
+        "ns_per_op": 130218,
+        "bytes_per_op": 250927,
+        "allocs_per_op": 749
+      }
+    ],
+    "claim": "Bounded shared-host observation only; no whole-library speedup claim."
+  },
+  "source_sha256": {
+    "mathtex/array.go": "2245c49c9032f412e0be73143e8453922e203bf5451ed108f6612fe184f16ae2",
+    "mathtex/environments.go": "9c35d8d9774ea1385ff2b6926590f4d1f076d42b372ec0d72388f9fa231d4ea3",
+    "mathtex/mathtex.go": "4cced6a6615dbfabebf15bad88b28aa03f5126863766a8f7f9152a81ce30fef7",
+    "tests/_cases/mathtex/array_test.go": "02ffaae6fcf795ad90726f56b5044ab55cfd54ea642cb2cf0bcd37c767f299b8",
+    "tests/_cases/mathtex/array_reference_test.go": "ff9ffe08ee6044240966880bd0ebe6a6df929dee197bc1163d6fb7bac7c416ba",
+    "tests/reference/mathtex_arrays.py": "6e8dde44b27ab8ddbd85deb1fd316964f7710b032ca723e248b2ebd79096ecbc",
+    "docs/MATH_ARRAYS.md": "96c2d6ef5d8c2b012c4493b34653f567c29816602e7981ca1670a1d631d4cd6d"
+  },
+  "mathtex_package_go_inputs_sha256": {
+    "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+    "mathtex/array.go": "2245c49c9032f412e0be73143e8453922e203bf5451ed108f6612fe184f16ae2",
+    "mathtex/colors.go": "54c4f61daef1a28872a5da15b14e2c278c19a22c41be60d9d6070aba59a8566d",
+    "mathtex/delimiters.go": "f876fa5b5532d9b45ddb257c961ba4dc97d3b46f06c000aa966b932e53a2dbf5",
+    "mathtex/environments.go": "9c35d8d9774ea1385ff2b6926590f4d1f076d42b372ec0d72388f9fa231d4ea3",
+    "mathtex/fractions.go": "2935ff17905563fe14d99391343dec11a02b99979663482f64e1d960790f24ef",
+    "mathtex/math_alphabets.go": "fe4bdc4ce55608c4473a487e091d7cd68da883c3fa2ccca4c6d405568a191e3b",
+    "mathtex/math_alphabets_data.go": "7946ca5cd94dc28fbd19bfe162d5783cf80a808280b490c9925161ab44b55d31",
+    "mathtex/mathtex.go": "4cced6a6615dbfabebf15bad88b28aa03f5126863766a8f7f9152a81ce30fef7",
+    "mathtex/multiline.go": "51288ed32c249f1aed95e31b82e52a11c08bc27c56c5090cc382d424a65c3e40",
+    "mathtex/named_operators.go": "3771d39dd91667b09e8a16bdab318576c92f6a212f2bdd4933ee33c64c66f511",
+    "mathtex/operators.go": "d265224b05bf77f5f5fcd1810810addc0704e4340c70f43e0ed44f8987b29ff6",
+    "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+    "mathtex/set_symbols.go": "b0ed62b8a83fdbc43a8258e71cf88baa56e298f40d5df7cab60281648fac1d9a",
+    "mathtex/set_symbols_data.go": "944fd1d67bcaaed6914ff449b6e434cb6f9ea53b41d16c1891bd4de6dff16534",
+    "mathtex/stacks.go": "bd1b7a9e0d9716151340dd122cd141c7ee4b2c6057b27880e82afc164f47aca6",
+    "mathtex/substack.go": "3b07f9635e4e42abdfe6445c72100cd10ffac79ce4427edadf7d42e020949948"
+  },
+  "supporting_files_sha256": {
+    "tests/data/mathtex/arrays/benchmark.txt": "808e62a7cfe9e4baf27c5e799bd89709c1f2307721cd02287cfbf9d339e1a12d",
+    "tests/data/mathtex/arrays/empty-phantom.png": "0a23b5ecd26dd38f8b47f9b25357130babea50d85210f89b20e325350c30d014",
+    "tests/data/mathtex/arrays/empty-phantom.svg": "7f55c9ca91b51d268d712689abb006cd30cdaf0ab305204f7f54b543525af3cb",
+    "tests/data/mathtex/arrays/fraction-phantom.png": "df354f696b9507d1d8dc849227495e3188b1853bc69babb845bdaafe238b79ad",
+    "tests/data/mathtex/arrays/fraction-phantom.svg": "89e191fab4b4e067ab61f84dc311bb41c94e6d234ba8397eaa8fc0fa90a5df8b",
+    "tests/data/mathtex/arrays/independent-results.txt": "9e316c99808f09f98bf177687f364b6b3208b999b2e34b891048de260b73832b",
+    "tests/data/mathtex/arrays/lcr-rules-0.png": "a1c751f25efaaed2f90c48e0789427edc004ccac2f4fb9348d6ce76449abd3b0",
+    "tests/data/mathtex/arrays/lcr-rules-0.svg": "df99bbe3ab44502b8c43221833868563cca2f894ec264b311943187b18c59c99",
+    "tests/data/mathtex/arrays/lcr-rules-1.png": "492336b79c22a49b9b3b3ade024dbb63638eaa6eac4a619eb4e540c187270b41",
+    "tests/data/mathtex/arrays/lcr-rules-1.svg": "53ab16931dfcee0c002b0e8bec18765eccfe3daf27c4daf8f38ccccc690fabe5",
+    "tests/data/mathtex/arrays/lcr-rules-2.png": "dbba1f830ecf854e6975e77b7ef9d7bb37e4fa9988ead8e715f6e378b396ddee",
+    "tests/data/mathtex/arrays/lcr-rules-2.svg": "b99f70145ddcbd7e9445a22b10953df58e770b13119a3c9e636dab7dc37f1e32",
+    "tests/data/mathtex/arrays/lcr-rules-3.png": "40f611661494c991cf01743fe21a3fe4ca26a41481837a61c792bc13de2f981d",
+    "tests/data/mathtex/arrays/lcr-rules-3.svg": "36f1d606472c18f2052a9c02eae88b6101664a853436863ee59b2487d42aad8f",
+    "tests/data/mathtex/arrays/morph-035.png": "0263a9a615b42cbceaa111d036cc4cabb6d536dfc9c169924d27da47b79007dd",
+    "tests/data/mathtex/arrays/morph-035.svg": "1a74b8611b791c232a70428fed9ffe0d5b8eaf3de0221610469afc61410a82af",
+    "tests/data/mathtex/arrays/morph-070.png": "684928ae9e9923df17ce68a6247b3889823c7f9c38508c4db60d0a0d23d1e7eb",
+    "tests/data/mathtex/arrays/morph-070.svg": "d0f431050439c67ff7213c1ea4394dbd99089fa4075bc69ec3bda109982a9fb7",
+    "tests/data/mathtex/arrays/noasm-results.txt": "4edae0a0155e133d7915d91f037abd11443740cdd4e762c85a34b199fa630ca5",
+    "tests/data/mathtex/arrays/plain-lcr.png": "38edac5fa193aeb45f4a3a0094204248139ef1a010e443e4356c48bdcf0d9a7c",
+    "tests/data/mathtex/arrays/plain-lcr.svg": "3f3740c0d9b883c5a36935e4c34c188b1506bd7c4b8811f56ead7e22892b7f9d",
+    "tests/data/mathtex/arrays/purecheck-results.txt": "0d7e30be95db8937f89e4ab9daba8265020ff0dc18e25f3c6685b8e743df10ba",
+    "tests/data/mathtex/arrays/race-results.txt": "8d22649be1df863be028fa757ff130224ea6cd59bd724a7e3130eb0dc4db0e95",
+    "tests/data/mathtex/arrays/reference.json": "16a85e04b5729fa3ae9f616b127c192afdf3debbc0e7ccfb61339380f70ddb7c",
+    "tests/data/mathtex/arrays/vet-results.txt": "07020e76575ef9cc389d2dcf625f4968303cf0a49cad2563d5f6a84593a9d73d"
+  },
+  "ownership": "Only mathtex array/dispatch/budget comments, new central tests/reference/data, and MATH_ARRAYS.md edited; no root/text/number/render/export/CLI/examples/shared docs/dependency edits.",
+  "staging_removed": true,
+  "production_test_sources": 0
+}

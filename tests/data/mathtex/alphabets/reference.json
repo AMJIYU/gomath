@@ -1,0 +1,3675 @@
+{
+  "provenance": "Original font cmap/hmtx/CFF BoundsPen; unhinted raster via FreeType, never gomath.",
+  "fonttools": "4.45.1",
+  "pillow": "11.2.1",
+  "freetype": "2.13.2",
+  "unicode": "14.0.0",
+  "load_flags": "FT_LOAD_RENDER | FT_LOAD_NO_HINTING | FT_LOAD_NO_BITMAP",
+  "raster": {
+    "width": 384,
+    "height": 384,
+    "ppem": 256,
+    "origin_x": 48,
+    "baseline_y": 288
+  },
+  "custom_font": {
+    "file": "GomathAlphabetTest.otf",
+    "runes": "ℝ𝒜𝔄",
+    "sha256": "efc6436770e206cf9d2c3a10684f9cea19b2f5fb5b80a0cc881177464acdc92f",
+    "license": "SIL OFL 1.1; mathtex/LICENSE-STIX.txt"
+  },
+  "records": [
+    {
+      "command": "mathbb",
+      "input": "A",
+      "rune": "𝔸",
+      "glyph": "u1D538",
+      "advance_em": 0.741,
+      "bbox_em": [
+        0.05,
+        0.0,
+        0.691,
+        0.662
+      ],
+      "raster": "mathbb-0041.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "B",
+      "rune": "𝔹",
+      "glyph": "u1D539",
+      "advance_em": 0.676,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.626,
+        0.662
+      ],
+      "raster": "mathbb-0042.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "C",
+      "rune": "ℂ",
+      "glyph": "uni2102",
+      "advance_em": 0.705,
+      "bbox_em": [
+        0.045,
+        -0.014,
+        0.663,
+        0.676
+      ],
+      "raster": "mathbb-0043.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "D",
+      "rune": "𝔻",
+      "glyph": "u1D53B",
+      "advance_em": 0.722,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.677,
+        0.662
+      ],
+      "raster": "mathbb-0044.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "E",
+      "rune": "𝔼",
+      "glyph": "u1D53C",
+      "advance_em": 0.622,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.567,
+        0.662
+      ],
+      "raster": "mathbb-0045.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "F",
+      "rune": "𝔽",
+      "glyph": "u1D53D",
+      "advance_em": 0.469,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.567,
+        0.662
+      ],
+      "raster": "mathbb-0046.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "G",
+      "rune": "𝔾",
+      "glyph": "u1D53E",
+      "advance_em": 0.706,
+      "bbox_em": [
+        0.045,
+        -0.013,
+        0.664,
+        0.676
+      ],
+      "raster": "mathbb-0047.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "H",
+      "rune": "ℍ",
+      "glyph": "uni210D",
+      "advance_em": 0.718,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.648,
+        0.662
+      ],
+      "raster": "mathbb-0048.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "I",
+      "rune": "𝕀",
+      "glyph": "u1D540",
+      "advance_em": 0.322,
+      "bbox_em": [
+        0.078,
+        0.0,
+        0.244,
+        0.662
+      ],
+      "raster": "mathbb-0049.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "J",
+      "rune": "𝕁",
+      "glyph": "u1D541",
+      "advance_em": 0.56,
+      "bbox_em": [
+        0.04,
+        -0.014,
+        0.495,
+        0.662
+      ],
+      "raster": "mathbb-004a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "K",
+      "rune": "𝕂",
+      "glyph": "u1D542",
+      "advance_em": 0.735,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.729,
+        0.674
+      ],
+      "raster": "mathbb-004b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "L",
+      "rune": "𝕃",
+      "glyph": "u1D543",
+      "advance_em": 0.591,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.571,
+        0.662
+      ],
+      "raster": "mathbb-004c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "M",
+      "rune": "𝕄",
+      "glyph": "u1D544",
+      "advance_em": 0.855,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.785,
+        0.662
+      ],
+      "raster": "mathbb-004d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "N",
+      "rune": "ℕ",
+      "glyph": "uni2115",
+      "advance_em": 0.698,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.628,
+        0.662
+      ],
+      "raster": "mathbb-004e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "O",
+      "rune": "𝕆",
+      "glyph": "u1D546",
+      "advance_em": 0.76,
+      "bbox_em": [
+        0.045,
+        -0.014,
+        0.715,
+        0.676
+      ],
+      "raster": "mathbb-004f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "P",
+      "rune": "ℙ",
+      "glyph": "uni2119",
+      "advance_em": 0.678,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.628,
+        0.662
+      ],
+      "raster": "mathbb-0050.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "Q",
+      "rune": "ℚ",
+      "glyph": "uni211A",
+      "advance_em": 0.765,
+      "bbox_em": [
+        0.045,
+        -0.065,
+        0.715,
+        0.676
+      ],
+      "raster": "mathbb-0051.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "R",
+      "rune": "ℝ",
+      "glyph": "uni211D",
+      "advance_em": 0.747,
+      "bbox_em": [
+        0.07,
+        0.0,
+        0.712,
+        0.662
+      ],
+      "raster": "mathbb-0052.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "S",
+      "rune": "𝕊",
+      "glyph": "u1D54A",
+      "advance_em": 0.636,
+      "bbox_em": [
+        0.035,
+        -0.014,
+        0.597,
+        0.676
+      ],
+      "raster": "mathbb-0053.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "T",
+      "rune": "𝕋",
+      "glyph": "u1D54B",
+      "advance_em": 0.527,
+      "bbox_em": [
+        0.02,
+        0.0,
+        0.622,
+        0.662
+      ],
+      "raster": "mathbb-0054.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "U",
+      "rune": "𝕌",
+      "glyph": "u1D54C",
+      "advance_em": 0.698,
+      "bbox_em": [
+        0.065,
+        -0.014,
+        0.633,
+        0.662
+      ],
+      "raster": "mathbb-0055.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "V",
+      "rune": "𝕍",
+      "glyph": "u1D54D",
+      "advance_em": 0.568,
+      "bbox_em": [
+        0.012,
+        0.0,
+        0.653,
+        0.662
+      ],
+      "raster": "mathbb-0056.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "W",
+      "rune": "𝕎",
+      "glyph": "u1D54E",
+      "advance_em": 0.92,
+      "bbox_em": [
+        0.012,
+        0.0,
+        0.949,
+        0.662
+      ],
+      "raster": "mathbb-0057.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "X",
+      "rune": "𝕏",
+      "glyph": "u1D54F",
+      "advance_em": 0.768,
+      "bbox_em": [
+        0.035,
+        0.0,
+        0.733,
+        0.662
+      ],
+      "raster": "mathbb-0058.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "Y",
+      "rune": "𝕐",
+      "glyph": "u1D550",
+      "advance_em": 0.563,
+      "bbox_em": [
+        0.012,
+        0.0,
+        0.685,
+        0.662
+      ],
+      "raster": "mathbb-0059.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "Z",
+      "rune": "ℤ",
+      "glyph": "uni2124",
+      "advance_em": 0.727,
+      "bbox_em": [
+        0.05,
+        0.0,
+        0.677,
+        0.662
+      ],
+      "raster": "mathbb-005a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "a",
+      "rune": "𝕒",
+      "glyph": "u1D552",
+      "advance_em": 0.561,
+      "bbox_em": [
+        0.045,
+        -0.01,
+        0.506,
+        0.46
+      ],
+      "raster": "mathbb-0061.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "b",
+      "rune": "𝕓",
+      "glyph": "u1D553",
+      "advance_em": 0.565,
+      "bbox_em": [
+        0.05,
+        -0.01,
+        0.524,
+        0.683
+      ],
+      "raster": "mathbb-0062.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "c",
+      "rune": "𝕔",
+      "glyph": "u1D554",
+      "advance_em": 0.52,
+      "bbox_em": [
+        0.045,
+        -0.01,
+        0.475,
+        0.46
+      ],
+      "raster": "mathbb-0063.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "d",
+      "rune": "𝕕",
+      "glyph": "u1D555",
+      "advance_em": 0.574,
+      "bbox_em": [
+        0.045,
+        -0.01,
+        0.519,
+        0.683
+      ],
+      "raster": "mathbb-0064.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "e",
+      "rune": "𝕖",
+      "glyph": "u1D556",
+      "advance_em": 0.523,
+      "bbox_em": [
+        0.045,
+        -0.01,
+        0.478,
+        0.46
+      ],
+      "raster": "mathbb-0065.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "f",
+      "rune": "𝕗",
+      "glyph": "u1D557",
+      "advance_em": 0.368,
+      "bbox_em": [
+        0.025,
+        0.0,
+        0.431,
+        0.683
+      ],
+      "raster": "mathbb-0066.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "g",
+      "rune": "𝕘",
+      "glyph": "u1D558",
+      "advance_em": 0.574,
+      "bbox_em": [
+        0.045,
+        -0.218,
+        0.519,
+        0.46
+      ],
+      "raster": "mathbb-0067.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "h",
+      "rune": "𝕙",
+      "glyph": "u1D559",
+      "advance_em": 0.544,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.489,
+        0.683
+      ],
+      "raster": "mathbb-0068.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "i",
+      "rune": "𝕚",
+      "glyph": "u1D55A",
+      "advance_em": 0.258,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.203,
+        0.683
+      ],
+      "raster": "mathbb-0069.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "j",
+      "rune": "𝕛",
+      "glyph": "u1D55B",
+      "advance_em": 0.305,
+      "bbox_em": [
+        -0.015,
+        -0.217,
+        0.25,
+        0.683
+      ],
+      "raster": "mathbb-006a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "k",
+      "rune": "𝕜",
+      "glyph": "u1D55C",
+      "advance_em": 0.551,
+      "bbox_em": [
+        0.05,
+        0.0,
+        0.539,
+        0.683
+      ],
+      "raster": "mathbb-006b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "l",
+      "rune": "𝕝",
+      "glyph": "u1D55D",
+      "advance_em": 0.258,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.203,
+        0.683
+      ],
+      "raster": "mathbb-006c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "m",
+      "rune": "𝕞",
+      "glyph": "u1D55E",
+      "advance_em": 0.83,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.775,
+        0.46
+      ],
+      "raster": "mathbb-006d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "n",
+      "rune": "𝕟",
+      "glyph": "u1D55F",
+      "advance_em": 0.544,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.489,
+        0.46
+      ],
+      "raster": "mathbb-006e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "o",
+      "rune": "𝕠",
+      "glyph": "u1D560",
+      "advance_em": 0.553,
+      "bbox_em": [
+        0.045,
+        -0.012,
+        0.508,
+        0.458
+      ],
+      "raster": "mathbb-006f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "p",
+      "rune": "𝕡",
+      "glyph": "u1D561",
+      "advance_em": 0.574,
+      "bbox_em": [
+        0.055,
+        -0.218,
+        0.529,
+        0.46
+      ],
+      "raster": "mathbb-0070.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "q",
+      "rune": "𝕢",
+      "glyph": "u1D562",
+      "advance_em": 0.574,
+      "bbox_em": [
+        0.045,
+        -0.218,
+        0.519,
+        0.46
+      ],
+      "raster": "mathbb-0071.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "r",
+      "rune": "𝕣",
+      "glyph": "u1D563",
+      "advance_em": 0.301,
+      "bbox_em": [
+        0.055,
+        0.0,
+        0.407,
+        0.4620202604099865
+      ],
+      "raster": "mathbb-0072.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "s",
+      "rune": "𝕤",
+      "glyph": "u1D564",
+      "advance_em": 0.519,
+      "bbox_em": [
+        0.036,
+        -0.01,
+        0.483,
+        0.46
+      ],
+      "raster": "mathbb-0073.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "t",
+      "rune": "𝕥",
+      "glyph": "u1D565",
+      "advance_em": 0.329,
+      "bbox_em": [
+        0.02,
+        -0.01,
+        0.297,
+        0.633
+      ],
+      "raster": "mathbb-0074.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "u",
+      "rune": "𝕦",
+      "glyph": "u1D566",
+      "advance_em": 0.544,
+      "bbox_em": [
+        0.055,
+        -0.01,
+        0.489,
+        0.45
+      ],
+      "raster": "mathbb-0075.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "v",
+      "rune": "𝕧",
+      "glyph": "u1D567",
+      "advance_em": 0.443,
+      "bbox_em": [
+        0.02,
+        0.0,
+        0.479,
+        0.45
+      ],
+      "raster": "mathbb-0076.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "w",
+      "rune": "𝕨",
+      "glyph": "u1D568",
+      "advance_em": 0.676,
+      "bbox_em": [
+        0.02,
+        0.0,
+        0.695,
+        0.45
+      ],
+      "raster": "mathbb-0077.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "x",
+      "rune": "𝕩",
+      "glyph": "u1D569",
+      "advance_em": 0.56,
+      "bbox_em": [
+        0.03,
+        0.0,
+        0.53,
+        0.45
+      ],
+      "raster": "mathbb-0078.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "y",
+      "rune": "𝕪",
+      "glyph": "u1D56A",
+      "advance_em": 0.468,
+      "bbox_em": [
+        0.02,
+        -0.218,
+        0.51,
+        0.45
+      ],
+      "raster": "mathbb-0079.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "z",
+      "rune": "𝕫",
+      "glyph": "u1D56B",
+      "advance_em": 0.519,
+      "bbox_em": [
+        0.043,
+        0.0,
+        0.476,
+        0.45
+      ],
+      "raster": "mathbb-007a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "0",
+      "rune": "𝟘",
+      "glyph": "u1D7D8",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.028,
+        -0.014,
+        0.512,
+        0.676
+      ],
+      "raster": "mathbb-0030.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "1",
+      "rune": "𝟙",
+      "glyph": "u1D7D9",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.091,
+        0.0,
+        0.355,
+        0.693
+      ],
+      "raster": "mathbb-0031.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "2",
+      "rune": "𝟚",
+      "glyph": "u1D7DA",
+      "advance_em": 0.547,
+      "bbox_em": [
+        0.048,
+        0.0,
+        0.514,
+        0.676
+      ],
+      "raster": "mathbb-0032.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "3",
+      "rune": "𝟛",
+      "glyph": "u1D7DB",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.049,
+        -0.014,
+        0.478,
+        0.676
+      ],
+      "raster": "mathbb-0033.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "4",
+      "rune": "𝟜",
+      "glyph": "u1D7DC",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.02,
+        0.0,
+        0.524,
+        0.676
+      ],
+      "raster": "mathbb-0034.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "5",
+      "rune": "𝟝",
+      "glyph": "u1D7DD",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.035,
+        -0.014,
+        0.489,
+        0.662
+      ],
+      "raster": "mathbb-0035.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "6",
+      "rune": "𝟞",
+      "glyph": "u1D7DE",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.028,
+        -0.014,
+        0.512,
+        0.676
+      ],
+      "raster": "mathbb-0036.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "7",
+      "rune": "𝟟",
+      "glyph": "u1D7DF",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.024,
+        0.0,
+        0.511,
+        0.662
+      ],
+      "raster": "mathbb-0037.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "8",
+      "rune": "𝟠",
+      "glyph": "u1D7E0",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.028,
+        -0.014,
+        0.512,
+        0.676
+      ],
+      "raster": "mathbb-0038.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathbb",
+      "input": "9",
+      "rune": "𝟡",
+      "glyph": "u1D7E1",
+      "advance_em": 0.54,
+      "bbox_em": [
+        0.028,
+        -0.012,
+        0.512,
+        0.676
+      ],
+      "raster": "mathbb-0039.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "A",
+      "rune": "𝒜",
+      "glyph": "u1D49C",
+      "advance_em": 0.855,
+      "bbox_em": [
+        0.031,
+        -0.015,
+        0.846,
+        0.674
+      ],
+      "raster": "mathcal-0041.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "B",
+      "rune": "ℬ",
+      "glyph": "uni212C",
+      "advance_em": 0.95,
+      "bbox_em": [
+        0.034,
+        -0.015,
+        0.902,
+        0.687
+      ],
+      "raster": "mathcal-0042.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "C",
+      "rune": "𝒞",
+      "glyph": "u1D49E",
+      "advance_em": 0.797,
+      "bbox_em": [
+        0.037,
+        -0.015,
+        0.781,
+        0.687
+      ],
+      "raster": "mathcal-0043.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "D",
+      "rune": "𝒟",
+      "glyph": "u1D49F",
+      "advance_em": 0.885,
+      "bbox_em": [
+        0.036,
+        -0.015,
+        0.818,
+        0.687
+      ],
+      "raster": "mathcal-0044.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "E",
+      "rune": "ℰ",
+      "glyph": "uni2130",
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.1,
+        -0.015,
+        0.734,
+        0.687
+      ],
+      "raster": "mathcal-0045.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "F",
+      "rune": "ℱ",
+      "glyph": "uni2131",
+      "advance_em": 0.919,
+      "bbox_em": [
+        0.043,
+        0.0,
+        0.907,
+        0.68
+      ],
+      "raster": "mathcal-0046.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "G",
+      "rune": "𝒢",
+      "glyph": "u1D4A2",
+      "advance_em": 0.773,
+      "bbox_em": [
+        0.083,
+        -0.015,
+        0.74,
+        0.687
+      ],
+      "raster": "mathcal-0047.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "H",
+      "rune": "ℋ",
+      "glyph": "uni210B",
+      "advance_em": 0.997,
+      "bbox_em": [
+        0.053,
+        -0.015,
+        0.991,
+        0.687
+      ],
+      "raster": "mathcal-0048.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "I",
+      "rune": "ℐ",
+      "glyph": "uni2110",
+      "advance_em": 0.897,
+      "bbox_em": [
+        0.026,
+        -0.015,
+        0.888,
+        0.675
+      ],
+      "raster": "mathcal-0049.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "J",
+      "rune": "𝒥",
+      "glyph": "u1D4A5",
+      "advance_em": 0.802,
+      "bbox_em": [
+        0.009,
+        -0.177,
+        0.792,
+        0.674
+      ],
+      "raster": "mathcal-004a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "K",
+      "rune": "𝒦",
+      "glyph": "u1D4A6",
+      "advance_em": 1.009,
+      "bbox_em": [
+        0.04,
+        -0.015,
+        1.004,
+        0.687
+      ],
+      "raster": "mathcal-004b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "L",
+      "rune": "ℒ",
+      "glyph": "uni2112",
+      "advance_em": 0.946,
+      "bbox_em": [
+        0.033,
+        -0.015,
+        0.931,
+        0.687
+      ],
+      "raster": "mathcal-004c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "M",
+      "rune": "ℳ",
+      "glyph": "uni2133",
+      "advance_em": 1.072,
+      "bbox_em": [
+        0.038,
+        -0.015,
+        1.056,
+        0.674
+      ],
+      "raster": "mathcal-004d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "N",
+      "rune": "𝒩",
+      "glyph": "u1D4A9",
+      "advance_em": 0.97,
+      "bbox_em": [
+        0.038,
+        -0.015,
+        0.956,
+        0.687
+      ],
+      "raster": "mathcal-004e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "O",
+      "rune": "𝒪",
+      "glyph": "u1D4AA",
+      "advance_em": 0.692,
+      "bbox_em": [
+        0.082,
+        -0.015,
+        0.663,
+        0.68
+      ],
+      "raster": "mathcal-004f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "P",
+      "rune": "𝒫",
+      "glyph": "u1D4AB",
+      "advance_em": 0.91,
+      "bbox_em": [
+        0.038,
+        -0.015,
+        0.886,
+        0.687
+      ],
+      "raster": "mathcal-0050.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "Q",
+      "rune": "𝒬",
+      "glyph": "u1D4AC",
+      "advance_em": 0.692,
+      "bbox_em": [
+        0.082,
+        -0.038,
+        0.663,
+        0.68
+      ],
+      "raster": "mathcal-0051.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "R",
+      "rune": "ℛ",
+      "glyph": "uni211B",
+      "advance_em": 0.944,
+      "bbox_em": [
+        0.034,
+        -0.015,
+        0.876,
+        0.687
+      ],
+      "raster": "mathcal-0052.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "S",
+      "rune": "𝒮",
+      "glyph": "u1D4AE",
+      "advance_em": 0.743,
+      "bbox_em": [
+        0.067,
+        -0.015,
+        0.701,
+        0.68
+      ],
+      "raster": "mathcal-0053.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "T",
+      "rune": "𝒯",
+      "glyph": "u1D4AF",
+      "advance_em": 0.912,
+      "bbox_em": [
+        0.043,
+        -0.015,
+        0.907,
+        0.687
+      ],
+      "raster": "mathcal-0054.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "U",
+      "rune": "𝒰",
+      "glyph": "u1D4B0",
+      "advance_em": 0.842,
+      "bbox_em": [
+        0.036,
+        -0.015,
+        0.805,
+        0.687
+      ],
+      "raster": "mathcal-0055.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "V",
+      "rune": "𝒱",
+      "glyph": "u1D4B1",
+      "advance_em": 0.932,
+      "bbox_em": [
+        0.035,
+        -0.015,
+        0.922,
+        0.687
+      ],
+      "raster": "mathcal-0056.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "W",
+      "rune": "𝒲",
+      "glyph": "u1D4B2",
+      "advance_em": 1.078,
+      "bbox_em": [
+        0.035,
+        -0.015,
+        1.07,
+        0.687
+      ],
+      "raster": "mathcal-0057.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "X",
+      "rune": "𝒳",
+      "glyph": "u1D4B3",
+      "advance_em": 0.891,
+      "bbox_em": [
+        0.036,
+        -0.015,
+        0.873,
+        0.687
+      ],
+      "raster": "mathcal-0058.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "Y",
+      "rune": "𝒴",
+      "glyph": "u1D4B4",
+      "advance_em": 0.926,
+      "bbox_em": [
+        0.091,
+        -0.226,
+        0.916,
+        0.687
+      ],
+      "raster": "mathcal-0059.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "Z",
+      "rune": "𝒵",
+      "glyph": "u1D4B5",
+      "advance_em": 0.932,
+      "bbox_em": [
+        0.059,
+        -0.015,
+        0.912,
+        0.687
+      ],
+      "raster": "mathcal-005a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "a",
+      "rune": "𝒶",
+      "glyph": "u1D4B6",
+      "advance_em": 0.819,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.758,
+        0.441
+      ],
+      "raster": "mathcal-0061.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "b",
+      "rune": "𝒷",
+      "glyph": "u1D4B7",
+      "advance_em": 0.58,
+      "bbox_em": [
+        0.047,
+        -0.012,
+        0.559,
+        0.687
+      ],
+      "raster": "mathcal-0062.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "c",
+      "rune": "𝒸",
+      "glyph": "u1D4B8",
+      "advance_em": 0.662,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.589,
+        0.441
+      ],
+      "raster": "mathcal-0063.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "d",
+      "rune": "𝒹",
+      "glyph": "u1D4B9",
+      "advance_em": 0.845,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.827,
+        0.687
+      ],
+      "raster": "mathcal-0064.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "e",
+      "rune": "ℯ",
+      "glyph": "uni212F",
+      "advance_em": 0.627,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.554,
+        0.441
+      ],
+      "raster": "mathcal-0065.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "f",
+      "rune": "𝒻",
+      "glyph": "u1D4BB",
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.027,
+        -0.209,
+        0.673,
+        0.687
+      ],
+      "raster": "mathcal-0066.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "g",
+      "rune": "ℊ",
+      "glyph": "uni210A",
+      "advance_em": 0.738,
+      "bbox_em": [
+        0.03,
+        -0.219,
+        0.678,
+        0.441
+      ],
+      "raster": "mathcal-0067.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "h",
+      "rune": "𝒽",
+      "glyph": "u1D4BD",
+      "advance_em": 0.753,
+      "bbox_em": [
+        0.038,
+        -0.011,
+        0.69,
+        0.687
+      ],
+      "raster": "mathcal-0068.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "i",
+      "rune": "𝒾",
+      "glyph": "u1D4BE",
+      "advance_em": 0.496,
+      "bbox_em": [
+        0.083,
+        -0.011,
+        0.484,
+        0.653
+      ],
+      "raster": "mathcal-0069.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "j",
+      "rune": "𝒿",
+      "glyph": "u1D4BF",
+      "advance_em": 0.73,
+      "bbox_em": [
+        0.009,
+        -0.219,
+        0.718,
+        0.653
+      ],
+      "raster": "mathcal-006a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "k",
+      "rune": "𝓀",
+      "glyph": "u1D4C0",
+      "advance_em": 0.726,
+      "bbox_em": [
+        0.04,
+        -0.011,
+        0.666,
+        0.687
+      ],
+      "raster": "mathcal-006b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "l",
+      "rune": "𝓁",
+      "glyph": "u1D4C1",
+      "advance_em": 0.579,
+      "bbox_em": [
+        0.048,
+        -0.011,
+        0.571,
+        0.687
+      ],
+      "raster": "mathcal-006c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "m",
+      "rune": "𝓂",
+      "glyph": "u1D4C2",
+      "advance_em": 1.038,
+      "bbox_em": [
+        0.049,
+        -0.011,
+        0.978,
+        0.441
+      ],
+      "raster": "mathcal-006d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "n",
+      "rune": "𝓃",
+      "glyph": "u1D4C3",
+      "advance_em": 0.761,
+      "bbox_em": [
+        0.049,
+        -0.011,
+        0.701,
+        0.441
+      ],
+      "raster": "mathcal-006e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "o",
+      "rune": "ℴ",
+      "glyph": "uni2134",
+      "advance_em": 0.697,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.68,
+        0.441
+      ],
+      "raster": "mathcal-006f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "p",
+      "rune": "𝓅",
+      "glyph": "u1D4C5",
+      "advance_em": 0.773,
+      "bbox_em": [
+        0.023,
+        -0.209,
+        0.694,
+        0.441
+      ],
+      "raster": "mathcal-0070.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "q",
+      "rune": "𝓆",
+      "glyph": "u1D4C6",
+      "advance_em": 0.78,
+      "bbox_em": [
+        0.03,
+        -0.209,
+        0.743,
+        0.441
+      ],
+      "raster": "mathcal-0071.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "r",
+      "rune": "𝓇",
+      "glyph": "u1D4C7",
+      "advance_em": 0.58,
+      "bbox_em": [
+        0.048,
+        0.0,
+        0.572,
+        0.444
+      ],
+      "raster": "mathcal-0072.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "s",
+      "rune": "𝓈",
+      "glyph": "u1D4C8",
+      "advance_em": 0.515,
+      "bbox_em": [
+        0.062,
+        -0.011,
+        0.412,
+        0.531
+      ],
+      "raster": "mathcal-0073.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "t",
+      "rune": "𝓉",
+      "glyph": "u1D4C9",
+      "advance_em": 0.551,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.532,
+        0.658
+      ],
+      "raster": "mathcal-0074.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "u",
+      "rune": "𝓊",
+      "glyph": "u1D4CA",
+      "advance_em": 0.753,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.693,
+        0.424
+      ],
+      "raster": "mathcal-0075.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "v",
+      "rune": "𝓋",
+      "glyph": "u1D4CB",
+      "advance_em": 0.618,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.582,
+        0.441
+      ],
+      "raster": "mathcal-0076.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "w",
+      "rune": "𝓌",
+      "glyph": "u1D4CC",
+      "advance_em": 0.888,
+      "bbox_em": [
+        0.03,
+        -0.011,
+        0.852,
+        0.441
+      ],
+      "raster": "mathcal-0077.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "x",
+      "rune": "𝓍",
+      "glyph": "u1D4CD",
+      "advance_em": 0.752,
+      "bbox_em": [
+        0.065,
+        -0.011,
+        0.675,
+        0.441
+      ],
+      "raster": "mathcal-0078.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "y",
+      "rune": "𝓎",
+      "glyph": "u1D4CE",
+      "advance_em": 0.658,
+      "bbox_em": [
+        0.03,
+        -0.219,
+        0.617,
+        0.424
+      ],
+      "raster": "mathcal-0079.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathcal",
+      "input": "z",
+      "rune": "𝓏",
+      "glyph": "u1D4CF",
+      "advance_em": 0.691,
+      "bbox_em": [
+        0.052,
+        -0.011,
+        0.617,
+        0.478
+      ],
+      "raster": "mathcal-007a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "A",
+      "rune": "𝔄",
+      "glyph": "u1D504",
+      "advance_em": 0.785,
+      "bbox_em": [
+        0.047,
+        -0.022,
+        0.742,
+        0.695
+      ],
+      "raster": "mathfrak-0041.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "B",
+      "rune": "𝔅",
+      "glyph": "u1D505",
+      "advance_em": 0.822,
+      "bbox_em": [
+        0.048,
+        -0.024,
+        0.774,
+        0.704
+      ],
+      "raster": "mathfrak-0042.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "C",
+      "rune": "ℭ",
+      "glyph": "uni212D",
+      "advance_em": 0.717,
+      "bbox_em": [
+        0.047,
+        -0.024,
+        0.675,
+        0.695
+      ],
+      "raster": "mathfrak-0043.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "D",
+      "rune": "𝔇",
+      "glyph": "u1D507",
+      "advance_em": 0.868,
+      "bbox_em": [
+        0.05,
+        -0.024,
+        0.817,
+        0.695
+      ],
+      "raster": "mathfrak-0044.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "E",
+      "rune": "𝔈",
+      "glyph": "u1D508",
+      "advance_em": 0.729,
+      "bbox_em": [
+        0.05,
+        -0.024,
+        0.678,
+        0.695
+      ],
+      "raster": "mathfrak-0045.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "F",
+      "rune": "𝔉",
+      "glyph": "u1D509",
+      "advance_em": 0.767,
+      "bbox_em": [
+        0.05,
+        -0.204,
+        0.716,
+        0.695
+      ],
+      "raster": "mathfrak-0046.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "G",
+      "rune": "𝔊",
+      "glyph": "u1D50A",
+      "advance_em": 0.806,
+      "bbox_em": [
+        0.05,
+        -0.024,
+        0.755,
+        0.695
+      ],
+      "raster": "mathfrak-0047.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "H",
+      "rune": "ℌ",
+      "glyph": "uni210C",
+      "advance_em": 0.824,
+      "bbox_em": [
+        0.043,
+        -0.204,
+        0.773,
+        0.695
+      ],
+      "raster": "mathfrak-0048.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "I",
+      "rune": "ℑ",
+      "glyph": "uni2111",
+      "advance_em": 0.762,
+      "bbox_em": [
+        0.045,
+        -0.034,
+        0.711,
+        0.695
+      ],
+      "raster": "mathfrak-0049.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "J",
+      "rune": "𝔍",
+      "glyph": "u1D50D",
+      "advance_em": 0.772,
+      "bbox_em": [
+        0.05,
+        -0.204,
+        0.721,
+        0.695
+      ],
+      "raster": "mathfrak-004a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "K",
+      "rune": "𝔎",
+      "glyph": "u1D50E",
+      "advance_em": 0.846,
+      "bbox_em": [
+        0.05,
+        -0.022,
+        0.801,
+        0.695
+      ],
+      "raster": "mathfrak-004b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "L",
+      "rune": "𝔏",
+      "glyph": "u1D50F",
+      "advance_em": 0.669,
+      "bbox_em": [
+        0.047,
+        -0.024,
+        0.626,
+        0.695
+      ],
+      "raster": "mathfrak-004c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "M",
+      "rune": "𝔐",
+      "glyph": "u1D510",
+      "advance_em": 1.083,
+      "bbox_em": [
+        0.05,
+        -0.022,
+        1.031,
+        0.695
+      ],
+      "raster": "mathfrak-004d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "N",
+      "rune": "𝔑",
+      "glyph": "u1D511",
+      "advance_em": 0.827,
+      "bbox_em": [
+        0.05,
+        -0.022,
+        0.775,
+        0.695
+      ],
+      "raster": "mathfrak-004e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "O",
+      "rune": "𝔒",
+      "glyph": "u1D512",
+      "advance_em": 0.837,
+      "bbox_em": [
+        0.037,
+        -0.024,
+        0.786,
+        0.695
+      ],
+      "raster": "mathfrak-004f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "P",
+      "rune": "𝔓",
+      "glyph": "u1D513",
+      "advance_em": 0.823,
+      "bbox_em": [
+        0.04,
+        -0.204,
+        0.773,
+        0.695
+      ],
+      "raster": "mathfrak-0050.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "Q",
+      "rune": "𝔔",
+      "glyph": "u1D514",
+      "advance_em": 0.865,
+      "bbox_em": [
+        0.037,
+        -0.064,
+        0.814,
+        0.695
+      ],
+      "raster": "mathfrak-0051.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "R",
+      "rune": "ℜ",
+      "glyph": "uni211C",
+      "advance_em": 0.874,
+      "bbox_em": [
+        0.05,
+        -0.022,
+        0.829,
+        0.704
+      ],
+      "raster": "mathfrak-0052.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "S",
+      "rune": "𝔖",
+      "glyph": "u1D516",
+      "advance_em": 0.856,
+      "bbox_em": [
+        0.055,
+        -0.024,
+        0.801,
+        0.695
+      ],
+      "raster": "mathfrak-0053.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "T",
+      "rune": "𝔗",
+      "glyph": "u1D517",
+      "advance_em": 0.766,
+      "bbox_em": [
+        0.047,
+        -0.024,
+        0.722,
+        0.695
+      ],
+      "raster": "mathfrak-0054.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "U",
+      "rune": "𝔘",
+      "glyph": "u1D518",
+      "advance_em": 0.787,
+      "bbox_em": [
+        0.05,
+        -0.022,
+        0.744,
+        0.696
+      ],
+      "raster": "mathfrak-0055.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "V",
+      "rune": "𝔙",
+      "glyph": "u1D519",
+      "advance_em": 0.831,
+      "bbox_em": [
+        0.048,
+        -0.024,
+        0.781,
+        0.695
+      ],
+      "raster": "mathfrak-0056.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "W",
+      "rune": "𝔚",
+      "glyph": "u1D51A",
+      "advance_em": 1.075,
+      "bbox_em": [
+        0.048,
+        -0.024,
+        1.025,
+        0.695
+      ],
+      "raster": "mathfrak-0057.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "X",
+      "rune": "𝔛",
+      "glyph": "u1D51B",
+      "advance_em": 0.763,
+      "bbox_em": [
+        0.046,
+        -0.031,
+        0.735,
+        0.695
+      ],
+      "raster": "mathfrak-0058.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "Y",
+      "rune": "𝔜",
+      "glyph": "u1D51C",
+      "advance_em": 0.766,
+      "bbox_em": [
+        0.047,
+        -0.204,
+        0.714,
+        0.695
+      ],
+      "raster": "mathfrak-0059.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "Z",
+      "rune": "ℨ",
+      "glyph": "uni2128",
+      "advance_em": 0.726,
+      "bbox_em": [
+        0.05,
+        -0.204,
+        0.676,
+        0.695
+      ],
+      "raster": "mathfrak-005a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "a",
+      "rune": "𝔞",
+      "glyph": "u1D51E",
+      "advance_em": 0.53,
+      "bbox_em": [
+        0.051,
+        -0.018,
+        0.479,
+        0.468
+      ],
+      "raster": "mathfrak-0061.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "b",
+      "rune": "𝔟",
+      "glyph": "u1D51F",
+      "advance_em": 0.513,
+      "bbox_em": [
+        0.046,
+        -0.018,
+        0.462,
+        0.695
+      ],
+      "raster": "mathfrak-0062.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "c",
+      "rune": "𝔠",
+      "glyph": "u1D520",
+      "advance_em": 0.385,
+      "bbox_em": [
+        0.057,
+        -0.018,
+        0.344,
+        0.468
+      ],
+      "raster": "mathfrak-0063.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "d",
+      "rune": "𝔡",
+      "glyph": "u1D521",
+      "advance_em": 0.506,
+      "bbox_em": [
+        0.045,
+        -0.018,
+        0.455,
+        0.695
+      ],
+      "raster": "mathfrak-0064.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "e",
+      "rune": "𝔢",
+      "glyph": "u1D522",
+      "advance_em": 0.42,
+      "bbox_em": [
+        0.047,
+        -0.018,
+        0.379,
+        0.468
+      ],
+      "raster": "mathfrak-0065.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "f",
+      "rune": "𝔣",
+      "glyph": "u1D523",
+      "advance_em": 0.327,
+      "bbox_em": [
+        0.027,
+        -0.209,
+        0.316,
+        0.694
+      ],
+      "raster": "mathfrak-0066.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "g",
+      "rune": "𝔤",
+      "glyph": "u1D524",
+      "advance_em": 0.499,
+      "bbox_em": [
+        0.051,
+        -0.209,
+        0.461,
+        0.468
+      ],
+      "raster": "mathfrak-0067.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "h",
+      "rune": "𝔥",
+      "glyph": "u1D525",
+      "advance_em": 0.528,
+      "bbox_em": [
+        0.048,
+        -0.209,
+        0.476,
+        0.695
+      ],
+      "raster": "mathfrak-0068.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "i",
+      "rune": "𝔦",
+      "glyph": "u1D526",
+      "advance_em": 0.384,
+      "bbox_em": [
+        0.042,
+        -0.018,
+        0.338,
+        0.694
+      ],
+      "raster": "mathfrak-0069.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "j",
+      "rune": "𝔧",
+      "glyph": "u1D527",
+      "advance_em": 0.345,
+      "bbox_em": [
+        0.044,
+        -0.209,
+        0.311,
+        0.695
+      ],
+      "raster": "mathfrak-006a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "k",
+      "rune": "𝔨",
+      "glyph": "u1D528",
+      "advance_em": 0.42,
+      "bbox_em": [
+        0.048,
+        -0.018,
+        0.368,
+        0.695
+      ],
+      "raster": "mathfrak-006b.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "l",
+      "rune": "𝔩",
+      "glyph": "u1D529",
+      "advance_em": 0.398,
+      "bbox_em": [
+        0.046,
+        -0.018,
+        0.35,
+        0.695
+      ],
+      "raster": "mathfrak-006c.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "m",
+      "rune": "𝔪",
+      "glyph": "u1D52A",
+      "advance_em": 0.91,
+      "bbox_em": [
+        0.059,
+        -0.025,
+        0.856,
+        0.468
+      ],
+      "raster": "mathfrak-006d.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "n",
+      "rune": "𝔫",
+      "glyph": "u1D52B",
+      "advance_em": 0.636,
+      "bbox_em": [
+        0.06,
+        -0.025,
+        0.582,
+        0.468
+      ],
+      "raster": "mathfrak-006e.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "o",
+      "rune": "𝔬",
+      "glyph": "u1D52C",
+      "advance_em": 0.503,
+      "bbox_em": [
+        0.05,
+        -0.018,
+        0.452,
+        0.468
+      ],
+      "raster": "mathfrak-006f.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "p",
+      "rune": "𝔭",
+      "glyph": "u1D52D",
+      "advance_em": 0.555,
+      "bbox_em": [
+        0.038,
+        -0.209,
+        0.504,
+        0.586
+      ],
+      "raster": "mathfrak-0070.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "q",
+      "rune": "𝔮",
+      "glyph": "u1D52E",
+      "advance_em": 0.507,
+      "bbox_em": [
+        0.051,
+        -0.209,
+        0.459,
+        0.468
+      ],
+      "raster": "mathfrak-0071.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "r",
+      "rune": "𝔯",
+      "glyph": "u1D52F",
+      "advance_em": 0.463,
+      "bbox_em": [
+        0.038,
+        -0.018,
+        0.426,
+        0.468
+      ],
+      "raster": "mathfrak-0072.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "s",
+      "rune": "𝔰",
+      "glyph": "u1D530",
+      "advance_em": 0.518,
+      "bbox_em": [
+        0.049,
+        -0.024,
+        0.469,
+        0.623
+      ],
+      "raster": "mathfrak-0073.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "t",
+      "rune": "𝔱",
+      "glyph": "u1D531",
+      "advance_em": 0.374,
+      "bbox_em": [
+        0.038,
+        -0.018,
+        0.337,
+        0.656
+      ],
+      "raster": "mathfrak-0074.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "u",
+      "rune": "𝔲",
+      "glyph": "u1D532",
+      "advance_em": 0.647,
+      "bbox_em": [
+        0.06,
+        -0.018,
+        0.593,
+        0.478
+      ],
+      "raster": "mathfrak-0075.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "v",
+      "rune": "𝔳",
+      "glyph": "u1D533",
+      "advance_em": 0.515,
+      "bbox_em": [
+        0.047,
+        -0.018,
+        0.464,
+        0.586
+      ],
+      "raster": "mathfrak-0076.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "w",
+      "rune": "𝔴",
+      "glyph": "u1D534",
+      "advance_em": 0.759,
+      "bbox_em": [
+        0.041,
+        -0.025,
+        0.708,
+        0.586
+      ],
+      "raster": "mathfrak-0077.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "x",
+      "rune": "𝔵",
+      "glyph": "u1D535",
+      "advance_em": 0.456,
+      "bbox_em": [
+        0.045,
+        -0.189,
+        0.406,
+        0.468
+      ],
+      "raster": "mathfrak-0078.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "y",
+      "rune": "𝔶",
+      "glyph": "u1D536",
+      "advance_em": 0.516,
+      "bbox_em": [
+        0.048,
+        -0.209,
+        0.464,
+        0.586
+      ],
+      "raster": "mathfrak-0079.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    },
+    {
+      "command": "mathfrak",
+      "input": "z",
+      "rune": "𝔷",
+      "glyph": "u1D537",
+      "advance_em": 0.457,
+      "bbox_em": [
+        0.043,
+        -0.209,
+        0.407,
+        0.468
+      ],
+      "raster": "mathfrak-007a.png",
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "units_per_em": 1000,
+        "versions": [
+          "Version 1.1.0"
+        ]
+      }
+    }
+  ]
+}

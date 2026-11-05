@@ -1,0 +1,484 @@
+package render
+
+import (
+	"cmp"
+	"fmt"
+	"gomath/geom"
+	"gomath/path"
+	"image"
+	"image/draw"
+	"math"
+	"math/bits"
+	"slices"
+)
+
+const (
+	// Per-layer scratch is one RGBA and two alpha rectangles: at most 96 MiB
+	// payload, excluding the output frame, outlines and rasterizer scratch.
+	MaxClipRasterPixels = 16 << 20
+	// Shared per-frame limits include repeated ancestor masks for separate
+	// drawables, ordinary evenodd fills and their bounded stroke flattening.
+	MaxClipRasterWork   = 64 << 20
+	MaxClipRasterPoints = 1 << 20
+	// Each evenodd fill/clip mask adds bounded scan-band vertices/intersections
+	// to the shared per-frame work budget. Nonzero keeps its original path/costs.
+	MaxEvenOddClipEvents = 2 << 20
+)
+
+func (r *Rasterizer) clipRegion(bounds geom.Bounds, pad float64) (image.Rectangle, error) {
+	if !bounds.Valid {
+		return image.Rectangle{}, nil
+	}
+	scale := float64(r.config.Width) / r.config.FrameWidth
+	values := [4]float64{
+		float64(r.config.Width)/2 + bounds.Min.X*scale - pad,
+		float64(r.config.Height)/2 - bounds.Max.Y*scale - pad,
+		float64(r.config.Width)/2 + bounds.Max.X*scale + pad,
+		float64(r.config.Height)/2 - bounds.Min.Y*scale + pad,
+	}
+	for _, value := range values {
+		if !finite(value) {
+			return image.Rectangle{}, fmt.Errorf("clip projection exceeds raster coordinate range")
+		}
+	}
+	clamp := func(value float64, limit int) float64 { return math.Max(0, math.Min(float64(limit), value)) }
+	return image.Rect(int(math.Floor(clamp(values[0], r.config.Width))), int(math.Floor(clamp(values[1], r.config.Height))),
+		int(math.Ceil(clamp(values[2], r.config.Width))), int(math.Ceil(clamp(values[3], r.config.Height)))), nil
+}
+
+// clipRasterScratch belongs to one Rasterizer/worker. paintClipped calls paint,
+// which never recursively clips; these images are borrowed only until that
+// drawable has been composited. No returned frame aliases this storage.
+// One shared allocation retains at most 6*MaxClipRasterPixels bytes, matching
+// the existing RGBA + two-alpha scratch budget (also charged by supersampling).
+// Rebuild tight strides/rectangles on every use, including when an equally sized
+// rectangle changes shape or has a different absolute origin.
+type clipRasterScratch struct {
+	pixels     []byte
+	layer      image.RGBA
+	mask, part image.Alpha
+}
+
+func (r *Rasterizer) clipBuffers(region image.Rectangle) (*image.RGBA, *image.Alpha, *image.Alpha) {
+	if r.clipScratch == nil {
+		r.clipScratch = new(clipRasterScratch)
+	}
+	s := r.clipScratch
+	pixels := region.Dx() * region.Dy()
+	if cap(s.pixels) < 6*pixels {
+		s.pixels = make([]byte, 6*pixels)
+	} else {
+		s.pixels = s.pixels[:6*pixels]
+	}
+	s.layer = image.RGBA{Pix: s.pixels[: 4*pixels : 4*pixels], Stride: 4 * region.Dx(), Rect: region}
+	s.mask = image.Alpha{Pix: s.pixels[4*pixels : 5*pixels : 5*pixels], Stride: region.Dx(), Rect: image.Rect(0, 0, region.Dx(), region.Dy())}
+	s.part = image.Alpha{Pix: s.pixels[5*pixels : 6*pixels : 6*pixels], Stride: region.Dx(), Rect: s.mask.Rect}
+	clear(s.layer.Pix)
+	return &s.layer, &s.mask, &s.part
+}
+
+func (r *Rasterizer) paintClipped(dst *image.RGBA, item drawable) error {
+	scale := float64(r.config.Width) / r.config.FrameWidth
+	pad := 2.0
+	if item.object.Style.Stroke.A > 0 {
+		pad += item.object.Style.StrokeExtent() * scale
+	}
+	region, err := r.clipRegion(item.object.Path.Bounds(), pad)
+	if err != nil {
+		return err
+	}
+	region = region.Intersect(dst.Bounds())
+	for _, clip := range item.clips {
+		part, err := r.clipRegion(clip.Bounds(), 1)
+		if err != nil {
+			return err
+		}
+		region = region.Intersect(part)
+	}
+	if region.Empty() {
+		return nil
+	}
+	pixels := region.Dx() * region.Dy()
+	if pixels > MaxClipRasterPixels || pixels > (MaxClipRasterWork-r.clipWork)/len(item.clips) {
+		return fmt.Errorf("clip raster work or scratch pixel budget exceeded")
+	}
+	r.clipWork += pixels * len(item.clips)
+	layer, mask, part := r.clipBuffers(region)
+	if err := r.paint(layer, item); err != nil {
+		return err
+	}
+	for i := range mask.Pix {
+		mask.Pix[i] = 255
+	}
+	for _, clip := range item.clips {
+		clear(part.Pix)
+		r.origin = region.Min
+		outline := clip.Path()
+		if clip.FillRule() == path.EvenOdd {
+			if err := r.paintEvenOddClip(part, outline); err != nil {
+				return err
+			}
+		} else {
+			z := r.fill
+			z.Reset(region.Dx(), region.Dy())
+			for _, contour := range outline.Contours {
+				if r.clipPoints == MaxClipRasterPoints {
+					return fmt.Errorf("clip raster exceeds %d flattened points", MaxClipRasterPoints)
+				}
+				r.clipPoints++
+				x, y, err := r.clipPoint(contour.Start)
+				if err != nil {
+					return err
+				}
+				z.MoveTo(float32(x), float32(y))
+				for _, curve := range contour.Curves {
+					if err := r.clipCurve(curve, 0); err != nil {
+						return err
+					}
+				}
+				z.ClosePath()
+			}
+			z.Draw(part, part.Bounds(), image.White, image.Point{})
+		}
+		for i, value := range part.Pix {
+			mask.Pix[i] = uint8((uint32(mask.Pix[i])*uint32(value) + 127) / 255)
+		}
+	}
+	draw.DrawMask(dst, region, layer, region.Min, mask, image.Point{}, draw.Over)
+	return nil
+}
+
+func (r *Rasterizer) clipPoint(point geom.Vec3) (float64, float64, error) {
+	scale := float64(r.config.Width) / r.config.FrameWidth
+	x := float64(r.config.Width)/2 + point.X*scale - float64(r.origin.X)
+	y := float64(r.config.Height)/2 - point.Y*scale - float64(r.origin.Y)
+	// Bound float32 rasterizer coordinates and subsequent error calculations.
+	// A boundary beyond this range is rejected even if its bbox spans the frame.
+	if !finite(x) || !finite(y) || math.Abs(x) > 1e9 || math.Abs(y) > 1e9 {
+		return 0, 0, fmt.Errorf("clip coordinate exceeds +/-1e9 projected pixels")
+	}
+	return x, y, nil
+}
+
+// Bounded de Casteljau flattening uses a screen-space control polygon bound.
+// A collinear curve that doubles back cannot be collapsed to its endpoint.
+func (r *Rasterizer) clipCurve(curve path.Cubic, depth int) error {
+	return r.clipCurveTo(curve, depth, func(x, y float64) error {
+		r.fill.LineTo(float32(x), float32(y))
+		return nil
+	})
+}
+
+func (r *Rasterizer) clipCurveTo(curve path.Cubic, depth int, emit func(float64, float64) error) error {
+	var points [4][2]float64
+	for i, point := range [4]geom.Vec3{curve.P0, curve.P1, curve.P2, curve.P3} {
+		x, y, err := r.clipPoint(point)
+		if err != nil {
+			return err
+		}
+		points[i] = [2]float64{x, y}
+	}
+	distance := func(a, b [2]float64) float64 { return math.Hypot(a[0]-b[0], a[1]-b[1]) }
+	length := distance(points[0], points[3])
+	errorBound := math.Max(distance(points[1], points[0]), distance(points[2], points[0]))
+	if length > 1e-15 {
+		dx, dy := (points[3][0]-points[0][0])/length, (points[3][1]-points[0][1])/length
+		cross := func(p [2]float64) float64 { return math.Abs((p[0]-points[0][0])*dy - (p[1]-points[0][1])*dx) }
+		errorBound = math.Max(cross(points[1]), cross(points[2]))
+		polygon := distance(points[0], points[1]) + distance(points[1], points[2]) + distance(points[2], points[3])
+		errorBound = math.Max(errorBound, (polygon-length)/2)
+	}
+	tolerance := r.config.CurveTolerance
+	if tolerance == 0 {
+		tolerance = .02
+	}
+	if errorBound <= tolerance {
+		if r.clipPoints == MaxClipRasterPoints {
+			return fmt.Errorf("clip raster exceeds %d flattened points", MaxClipRasterPoints)
+		}
+		r.clipPoints++
+		return emit(points[3][0], points[3][1])
+	}
+	if depth == 18 {
+		return fmt.Errorf("clip curve exceeds bounded flattening depth")
+	}
+	left, right := curve.Split(.5)
+	if err := r.clipCurveTo(left, depth+1, emit); err != nil {
+		return err
+	}
+	return r.clipCurveTo(right, depth+1, emit)
+}
+
+// clipParityEdge has canonical increasing Y, so duplicate reversed edges use
+// identical interpolation arithmetic. Horizontal edges contribute zero area.
+type clipParityEdge struct{ x0, y0, x1, y1 float64 }
+
+func (e clipParityEdge) xAt(y float64) float64 {
+	if y == e.y0 {
+		return e.x0
+	}
+	if y == e.y1 {
+		return e.x1
+	}
+	return e.x0 + (e.x1-e.x0)*((y-e.y0)/(e.y1-e.y0))
+}
+
+func (r *Rasterizer) evenOddClipWork(n int) error {
+	if n < 0 || n > MaxClipRasterWork-r.clipWork {
+		return fmt.Errorf("evenodd clip scan-band work budget exceeded")
+	}
+	r.clipWork += n
+	return nil
+}
+
+// clipLinearIntegral integrates clamp(x(t),0,1) over t in [0,1], for a
+// linear x. Splitting at pixel boundaries analytically retains arbitrarily
+// thin bands; it does not sample a finite collection of scanline centers.
+func clipLinearIntegral(a, b float64) float64 {
+	if a > b {
+		a, b = b, a
+	}
+	switch {
+	case b <= 0:
+		return 0
+	case a >= 1:
+		return 1
+	case a >= 0 && b <= 1:
+		return (a + b) / 2
+	case a < 0 && b <= 1:
+		return b * b / (2 * (b - a))
+	case a >= 0:
+		return 1 - (1-a)*(1-a)/(2*(b-a))
+	default:
+		return (b - .5) / (b - a)
+	}
+}
+
+// paintEvenOddClip integrates the parity region of the flattened polygon.
+// Vertex Y, pair crossings and integer pixel rows delimit bands with a fixed
+// edge ordering. Inside a band, paired edges and each pixel boundary are linear,
+// allowing exact piecewise trapezoid areas up to float64 rounding. Cubics retain
+// the existing flattening tolerance/depth/point limits; this is not an exact
+// Bezier area or rational-topology engine. Nonzero uses its legacy rasterizer.
+func (r *Rasterizer) paintEvenOddClip(dst *image.Alpha, outline path.Path) error {
+	width, height := dst.Rect.Dx(), dst.Rect.Dy()
+	var edges []clipParityEdge
+	addEdge := func(x0, y0, x1, y1 float64) error {
+		if err := r.evenOddClipWork(1); err != nil {
+			return err
+		}
+		if y0 == y1 {
+			return nil
+		}
+		if y0 > y1 {
+			x0, x1, y0, y1 = x1, x0, y1, y0
+		}
+		if y1 <= 0 || y0 >= float64(height) {
+			return nil
+		}
+		e := clipParityEdge{x0, y0, x1, y1}
+		if y0 < 0 {
+			e.x0, e.y0 = e.xAt(0), 0
+		}
+		if y1 > float64(height) {
+			e.x1, e.y1 = e.xAt(float64(height)), float64(height)
+		}
+		if len(edges) == MaxClipRasterPoints {
+			return fmt.Errorf("evenodd clip exceeds bounded edge storage")
+		}
+		if len(edges) == cap(edges) {
+			grown := make([]clipParityEdge, len(edges), min(MaxClipRasterPoints, max(16, 2*cap(edges))))
+			copy(grown, edges)
+			edges = grown
+		}
+		edges = append(edges, e)
+		return nil
+	}
+	for _, contour := range outline.Contours {
+		if r.clipPoints == MaxClipRasterPoints {
+			return fmt.Errorf("clip raster exceeds %d flattened points", MaxClipRasterPoints)
+		}
+		r.clipPoints++
+		sx, sy, err := r.clipPoint(contour.Start)
+		if err != nil {
+			return err
+		}
+		px, py := sx, sy
+		emit := func(x, y float64) error {
+			if err := addEdge(px, py, x, y); err != nil {
+				return err
+			}
+			px, py = x, y
+			return nil
+		}
+		for _, curve := range contour.Curves {
+			if err := r.clipCurveTo(curve, 0, emit); err != nil {
+				return err
+			}
+		}
+		if err := addEdge(px, py, sx, sy); err != nil {
+			return err
+		}
+	}
+	if len(edges) == 0 {
+		return nil
+	}
+	sortCost := func(n int) int {
+		if n < 2 {
+			return 0
+		}
+		return n * bits.Len(uint(n))
+	}
+	if err := r.evenOddClipWork(sortCost(len(edges))); err != nil {
+		return err
+	}
+	slices.SortFunc(edges, func(a, b clipParityEdge) int { return cmp.Compare(a.y0, b.y0) })
+	base := 2*len(edges) + height + 1
+	if base > MaxEvenOddClipEvents {
+		return fmt.Errorf("evenodd clip exceeds %d scan-band events", MaxEvenOddClipEvents)
+	}
+	events := make([]float64, 0, base)
+	addEvent := func(y float64) error {
+		if len(events) == MaxEvenOddClipEvents {
+			return fmt.Errorf("evenodd clip exceeds %d scan-band events", MaxEvenOddClipEvents)
+		}
+		if err := r.evenOddClipWork(1); err != nil {
+			return err
+		}
+		if len(events) == cap(events) {
+			grown := make([]float64, len(events), min(MaxEvenOddClipEvents, max(16, 2*cap(events))))
+			copy(grown, events)
+			events = grown
+		}
+		events = append(events, y)
+		return nil
+	}
+	for y := 0; y <= height; y++ {
+		if err := addEvent(float64(y)); err != nil {
+			return err
+		}
+	}
+	for i, a := range edges {
+		if err := addEvent(a.y0); err != nil {
+			return err
+		}
+		if err := addEvent(a.y1); err != nil {
+			return err
+		}
+		// Broad phase sorted by lower Y. Charge every inspected overlapping-Y pair,
+		// including pairs whose X extents subsequently prove disjoint.
+		for j := i + 1; j < len(edges) && edges[j].y0 < a.y1; j++ {
+			if err := r.evenOddClipWork(1); err != nil {
+				return err
+			}
+			b := edges[j]
+			if math.Max(a.x0, a.x1) < math.Min(b.x0, b.x1) || math.Max(b.x0, b.x1) < math.Min(a.x0, a.x1) {
+				continue
+			}
+			lo, hi := math.Max(a.y0, b.y0), math.Min(a.y1, b.y1)
+			d0, d1 := a.xAt(lo)-b.xAt(lo), a.xAt(hi)-b.xAt(hi)
+			if (d0 < 0 && d1 > 0) || (d0 > 0 && d1 < 0) {
+				y := lo + (hi-lo)*(math.Abs(d0)/(math.Abs(d0)+math.Abs(d1)))
+				if y > lo && y < hi {
+					if err := addEvent(y); err != nil {
+						return err
+					}
+				}
+			}
+		}
+	}
+	if err := r.evenOddClipWork(sortCost(len(events))); err != nil {
+		return err
+	}
+	slices.Sort(events)
+	unique := events[:0]
+	for _, y := range events {
+		if len(unique) == 0 || y != unique[len(unique)-1] {
+			unique = append(unique, y)
+		}
+	}
+	events = unique
+	active := make([]int, 0, len(edges))
+	type crossing struct {
+		index int
+		x     float64
+	}
+	crossings := make([]crossing, 0, len(edges))
+	coverage := make([]float64, width)
+	row, next := -1, 0
+	flush := func() error {
+		if row < 0 {
+			return nil
+		}
+		for x, a := range coverage {
+			if !finite(a) || a < -1e-7 || a > 1+1e-7 {
+				return fmt.Errorf("evenodd clip pixel area exceeds numeric range")
+			}
+			dst.Pix[row*dst.Stride+x] = uint8(math.Round(math.Max(0, math.Min(1, a)) * 255))
+		}
+		clear(coverage)
+		return nil
+	}
+	for i := 0; i+1 < len(events); i++ {
+		lo, hi := events[i], events[i+1]
+		if hi <= lo {
+			continue
+		}
+		y := int(math.Floor(lo))
+		if y != row {
+			if err := flush(); err != nil {
+				return err
+			}
+			row = y
+		}
+		if err := r.evenOddClipWork(len(active)); err != nil {
+			return err
+		}
+		kept := active[:0]
+		for _, index := range active {
+			if edges[index].y1 > lo {
+				kept = append(kept, index)
+			}
+		}
+		active = kept
+		for next < len(edges) && edges[next].y0 <= lo {
+			if edges[next].y1 > lo {
+				active = append(active, next)
+			}
+			next++
+		}
+		if err := r.evenOddClipWork(len(active) + sortCost(len(active))); err != nil {
+			return err
+		}
+		crossings = crossings[:0]
+		middle := lo + (hi-lo)/2
+		for _, index := range active {
+			crossings = append(crossings, crossing{index, edges[index].xAt(middle)})
+		}
+		slices.SortFunc(crossings, func(a, b crossing) int { return cmp.Compare(a.x, b.x) })
+		if len(crossings)%2 != 0 {
+			return fmt.Errorf("evenodd clip has unpaired scan-band boundaries")
+		}
+		for j := 0; j < len(crossings); j += 2 {
+			left, right := edges[crossings[j].index], edges[crossings[j+1].index]
+			l0, l1, r0, r1 := left.xAt(lo), left.xAt(hi), right.xAt(lo), right.xAt(hi)
+			clamp := func(x float64) float64 { return math.Max(0, math.Min(float64(width), x)) }
+			start, end := int(math.Floor(clamp(math.Min(l0, l1)))), int(math.Ceil(clamp(math.Max(r0, r1))))
+			if end <= start {
+				continue
+			}
+			if err := r.evenOddClipWork(end - start); err != nil {
+				return err
+			}
+			for x := start; x < end; x++ {
+				xx := float64(x)
+				a := (clipLinearIntegral(r0-xx, r1-xx) - clipLinearIntegral(l0-xx, l1-xx)) * (hi - lo)
+				if !finite(a) || a < -1e-7 || a > hi-lo+1e-7 {
+					return fmt.Errorf("evenodd clip band area exceeds numeric range")
+				}
+				coverage[x] += math.Max(0, a)
+			}
+		}
+	}
+	return flush()
+}

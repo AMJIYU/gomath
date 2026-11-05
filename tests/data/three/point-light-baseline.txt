@@ -1,0 +1,27 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkRenderSphere-8             	      88	   2518478 ns/op	  852553 B/op	       9 allocs/op
+BenchmarkRenderSphere-8             	     100	   2546066 ns/op	  852435 B/op	       9 allocs/op
+BenchmarkRenderSphere-8             	      93	   2535478 ns/op	  852438 B/op	       9 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8         	     225	   1032541 ns/op	  908552 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8         	     232	   1075731 ns/op	  908530 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/1x-8         	     216	   1072819 ns/op	  908530 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8         	      51	   4966408 ns/op	 3505456 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8         	      51	   4930587 ns/op	 3505451 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/2x-8         	      51	   4828392 ns/op	 3505455 B/op	      20 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8         	      13	  19530929 ns/op	13270342 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8         	      12	  18489618 ns/op	13270337 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter0/4x-8         	      13	  17552811 ns/op	13270337 B/op	      35 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8         	     200	   1198618 ns/op	  908531 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8         	     201	   1216741 ns/op	  908530 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/1x-8         	     192	   1478703 ns/op	  908533 B/op	      15 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8         	      40	   6064543 ns/op	 3702071 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8         	      42	   7394460 ns/op	 3702067 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/2x-8         	      36	   7886867 ns/op	 3702063 B/op	      22 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8         	      10	  21424304 ns/op	13761848 B/op	      40 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8         	      10	  20449488 ns/op	13761838 B/op	      40 allocs/op
+BenchmarkRenderTexturedTriangle/filter1/4x-8         	      12	  20410701 ns/op	13761838 B/op	      40 allocs/op
+PASS
+ok  	gomath/three	6.500s

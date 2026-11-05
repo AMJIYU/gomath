@@ -1,0 +1,45 @@
+{
+  "generator": "tests/reference/clip_evenodd.py",
+  "generator_sha256": "3eb6c1a10e1e4e6aa28d3a26279c5a18f4629e247157cf2f6def57c96850aac8",
+  "versions": {
+    "Python": "3.11.5",
+    "Cairo": "1.18.4",
+    "CairoSVG": "2.7.1",
+    "Pillow": "11.2.1"
+  },
+  "oracle": "Independent, directly authored Cairo paths and FILL_RULE_EVEN_ODD/FILL_RULE_WINDING, native and 4x premultiplied BOX. SVG sources exercise importer semantics but are not interpreted by CairoSVG for the oracle.",
+  "cairo_svg_limitation": {
+    "source_sha256": "daa153a2a21bdf29af90ac3fb7467de094d4f30487fc04ba898a0634d6ce87ef",
+    "commented_evenodd_clip": true,
+    "compound_hole_wrong_alpha": 204
+  },
+  "bitmap": "Cairo paints a constant color equivalent to the independently authored solid-alpha 16x16 PNG; all image edges are outside the visible clip, excluding edge-filter differences.",
+  "scope": "Single compound clip shapes; same-orientation holes, self-crossings, coincident duplicate contours, thin bands, affine/reflection, nested mixed rules, bitmap, gradient and CSS use contexts. No multi-shape clip union, objectBoundingBox, filters, or general fill-rule implementation.",
+  "files_sha256": {
+    "compound.svg": "5eb2847e9fc66486e4e08ff695d6dbb33e89cb2e83bb2be3e21b35af66df7e8b",
+    "crossings.svg": "20646afddd5454039fd4760bb9de166148a49e4b6813ebd71f699b329f971912",
+    "css-use.svg": "d9d0287dbef38e090972c2778bc7557bb6deca1101d28b64eb0ca60fee3d91da",
+    "curve.svg": "dbe6b67613b40f73d4c51efc1a9d18f1b096f440db1a847c8804f5682d5a15d3",
+    "duplicate.svg": "ff9e0a08e85410c34611a3b7b5193c57598133b308423f4bbe9039d4f4256ac0",
+    "gradient.svg": "68a02fde86ea4e23b71468f81f52bda7a021411d18cd0889b2a87c743777b56e",
+    "nested-bitmap.svg": "615b9ce2697f792282bbcea58a6a50c53218f05e3c5f65c011fe4c4961995997",
+    "thin.svg": "fab532e602dce442ae502ecf214930f41777914db5b97cbd43525480313861c9",
+    "compound-cairo-ss1.png": "5678a575ddb444971e4cdbb451a22622c5d5a2551e19a30b8e9ff6a0502e8c3e",
+    "compound-cairo-ss4.png": "80fcc48ba7abccd9d6e2855874f5fd9e350e33e2ec44c8458edf52ed89cb06fd",
+    "crossings-cairo-ss1.png": "1ee456928122c1235da2986df66ceb2ed7379a7b3b32004c9cfd4ad8f1fdfb8f",
+    "crossings-cairo-ss4.png": "8a9228adf1c738af9507262b4715f11945fe3271144287c27b11ec6f7a69ddaf",
+    "css-use-cairo-ss1.png": "95e084583410c16b732f48c52504b3d58616de4fac2671c476de9f24e5004ee3",
+    "css-use-cairo-ss4.png": "95e084583410c16b732f48c52504b3d58616de4fac2671c476de9f24e5004ee3",
+    "curve-cairo-ss1.png": "3af60f922975ac6040352ba745e8d083e2d7c99084e878e4b2363348e3470c33",
+    "curve-cairo-ss4.png": "5db5c26a968f265526d3346513a15b65d8dc51326a723b460f265cf8f4cecfb2",
+    "duplicate-cairo-ss1.png": "a4f17933f8d0c29aaac60b76de1f23630c27521e728351d0b0a4f9a92498d758",
+    "duplicate-cairo-ss4.png": "a4f17933f8d0c29aaac60b76de1f23630c27521e728351d0b0a4f9a92498d758",
+    "gradient-cairo-ss1.png": "8d1cb157128b1787ff32947d70c7edfd89ffbf84197e1c947828ac9d9edcff4b",
+    "gradient-cairo-ss4.png": "a5d6eb1cb0c9eab9cae679547664db49a2b05b4a0778209f64131da00f7b7753",
+    "nested-bitmap-cairo-ss1.png": "d22879e97924b36df7758d796b01b99448c842cc0517cacc80e40e66e793a7b3",
+    "nested-bitmap-cairo-ss4.png": "8f22f7b8a5d99baba9a3877eab153baa6c18ac354c85107dc37cd7abc05ad85b",
+    "thin-cairo-ss1.png": "f02998059fced3ea2d96992ce54f91077b6f3b72e4569f069e1b64560f62a817",
+    "thin-cairo-ss4.png": "f02998059fced3ea2d96992ce54f91077b6f3b72e4569f069e1b64560f62a817",
+    "cases.json": "3a6aae83719cb9af90bba72aa1c425217f729a83caaeb1b13da2ce763ac23e34"
+  }
+}

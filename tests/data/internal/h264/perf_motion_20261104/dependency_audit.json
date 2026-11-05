@@ -1,0 +1,11 @@
+{
+  "packages": 63,
+  "standard_library": 62,
+  "external_packages": 0,
+  "cgo_inputs": 0,
+  "codec_native_or_assembly_inputs": 0,
+  "os_exec_or_plugin_dependencies": 0,
+  "CGO_ENABLED": 0,
+  "tags": "noasm",
+  "scope": "Codec dependencies; standard Go toolchain runtime assembly is permitted."
+}

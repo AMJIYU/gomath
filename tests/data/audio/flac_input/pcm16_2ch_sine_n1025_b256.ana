@@ -1,0 +1,49 @@
+frame=0	offset=86	bits=1552	blocksize=256	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=1
+		warmup[0]=0
+		warmup[1]=660
+		warmup[2]=1319
+		parameter[0]=1
+		parameter[1]=0
+	subframe=1	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=0
+		warmup[1]=724
+		warmup[2]=1447
+		parameter[0]=1
+frame=1	offset=280	bits=1592	blocksize=256	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=21226
+		warmup[1]=21162
+		warmup[2]=21078
+		parameter[0]=1
+	subframe=1	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=14056
+		warmup[1]=13504
+		warmup[2]=12936
+		parameter[0]=1
+frame=2	offset=479	bits=1568	blocksize=256	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=-3478
+		warmup[1]=-4127
+		warmup[2]=-4773
+		parameter[0]=1
+	subframe=1	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=-21120
+		warmup[1]=-21015
+		warmup[2]=-20885
+		parameter[0]=1
+frame=3	offset=675	bits=1568	blocksize=256	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=0
+		warmup[0]=-20657
+		warmup[1]=-20486
+		warmup[2]=-20295
+		parameter[0]=1
+	subframe=1	wasted_bits=0	type=FIXED	order=3	residual_type=RICE	partition_order=1
+		warmup[0]=17679
+		warmup[1]=18073
+		warmup[2]=18445
+		parameter[0]=0
+		parameter[1]=1
+frame=4	offset=871	bits=120	blocksize=1	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=1	type=VERBATIM
+	subframe=1	wasted_bits=2	type=VERBATIM

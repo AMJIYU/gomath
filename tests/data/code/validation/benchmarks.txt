@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/code/_staging
+cpu: Apple M2
+BenchmarkCodeNewGo100Lines-8          	     157	   7597678 ns/op	   0.54 MB/s	16626839 B/op	   28514 allocs/op
+BenchmarkCodeNewGo100Lines-8          	     157	   7543579 ns/op	   0.55 MB/s	16625559 B/op	   28514 allocs/op
+BenchmarkCodeNewGo100Lines-8          	     100	  11346627 ns/op	   0.36 MB/s	16625588 B/op	   28514 allocs/op
+BenchmarkCodeSnapshotCopy100Lines-8   	     588	   2462695 ns/op	 7776344 B/op	   12199 allocs/op
+BenchmarkCodeSnapshotCopy100Lines-8   	     834	   1327573 ns/op	 7775963 B/op	   12199 allocs/op
+BenchmarkCodeSnapshotCopy100Lines-8   	     942	   1309211 ns/op	 7776787 B/op	   12199 allocs/op
+BenchmarkCodeRender100Lines-8         	     288	   4044989 ns/op	 6477386 B/op	   14353 allocs/op
+BenchmarkCodeRender100Lines-8         	     253	   4743573 ns/op	 6477393 B/op	   14353 allocs/op
+BenchmarkCodeRender100Lines-8         	     290	   4060315 ns/op	 6477383 B/op	   14353 allocs/op
+PASS
+ok  	gomath/code/_staging	10.911s

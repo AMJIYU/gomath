@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-05",
+  "files_sha256": {
+    "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+    "go.sum": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b",
+    "object_curve_edit.go": "c9de5de6b55486507a15a1442142d2ddfa121a26d8f992fa93fc7a18109b236a",
+    "path/anchor_handles.go": "47ea1771341d5daf5d6c56fffbf50b680ed3b3eb2382846cce3fde0348d485a0",
+    "path/boolean.go": "6e20311e90bfcb9b33fe146b0d6d5487815202afbe9a1da6dd27f435105a9553",
+    "path/boolean_exact.go": "8fbf9704098e3ed78f5f35e26099d2442920f63f840c8a4c63d490e2b1ca5bba",
+    "path/boolean_graph.go": "1fa331a5c4e79869a854fb8fa4b7bab1a1196676aaf67936d7ac6dc3c6cfe5c9",
+    "path/boolean_round.go": "ee7aeb34622ef3de85da74877ccb96d2312da12454f7ae93170ba03a638929bc",
+    "path/curve_edit.go": "94879933bb45e38821c0209038b5eab28531e9eb06e88aafa2c3d23c7104ba6a",
+    "path/length.go": "29b3e768b380a422a4fdbf15e8cb313ab1c9554b9fca86a5e246f0bde813ce7b",
+    "path/lookup.go": "ad3187641171f89490bc883a0a37693b0882075ba9561327b7e440a58cffabdc",
+    "path/measure.go": "aa0f826243286c8e675489e4e6e89b388bc3cba0ce274e315180cf3491a9c423",
+    "path/parameter.go": "569d0a5679e7097cc301d3633d0f6efd05539ea1ee5fa102a29a90d0ab1d9326",
+    "path/path.go": "194f93952bb7d1565e4a80ca448c5071a38af27dfb7f5e052126148d92ae1fd2",
+    "path/trim.go": "3a848d9b313bed4beaa1b73bca346098929bffd842b5170da5f7403a171f58af"
+  },
+  "reference_head": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "reference_status": ""
+}

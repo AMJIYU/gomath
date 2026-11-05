@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.rfc-editor.org/rfc/rfc9639.txt",
+    "file": "rfc9639.txt",
+    "sha256": "8906404937771aba300e1f7810534efbb8ef722a5a9970e11beaee858c966a13",
+    "sections": [
+      "8.2 STREAMINFO/MD5",
+      "9.1.3 channel assignment",
+      "9.2.2 wasted bits",
+      "9.2.6 LPC",
+      "9.2.7 residual range"
+    ]
+  }
+]

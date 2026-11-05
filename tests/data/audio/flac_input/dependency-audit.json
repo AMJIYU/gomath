@@ -1,0 +1,10 @@
+{
+  "CGO_ENABLED": "0",
+  "tags": "noasm",
+  "packages": 90,
+  "non_standard_packages": [
+    "gomath/audio"
+  ],
+  "cgo_packages": [],
+  "process_launch_packages": []
+}

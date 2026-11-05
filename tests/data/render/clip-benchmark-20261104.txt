@@ -1,0 +1,18 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/render
+cpu: Apple M2
+BenchmarkClippedRaster/vector-baseline         	     997	    364666 ns/op	  926611 B/op	      13 allocs/op
+BenchmarkClippedRaster/vector-baseline         	     703	   2494606 ns/op	  926755 B/op	      13 allocs/op
+BenchmarkClippedRaster/vector-baseline         	     879	    383924 ns/op	  926658 B/op	      13 allocs/op
+BenchmarkClippedRaster/vector-one-clip         	     649	    563517 ns/op	 1172927 B/op	      22 allocs/op
+BenchmarkClippedRaster/vector-one-clip         	     650	    553134 ns/op	 1172926 B/op	      22 allocs/op
+BenchmarkClippedRaster/vector-one-clip         	     656	    555493 ns/op	 1172924 B/op	      22 allocs/op
+BenchmarkClippedRaster/vector-four-clips       	     417	    868387 ns/op	 1166343 B/op	      34 allocs/op
+BenchmarkClippedRaster/vector-four-clips       	     415	    869779 ns/op	 1166345 B/op	      34 allocs/op
+BenchmarkClippedRaster/vector-four-clips       	     418	    864976 ns/op	 1166343 B/op	      34 allocs/op
+BenchmarkClippedRaster/bitmap-one-clip         	      81	   4354225 ns/op	 1215308 B/op	      17 allocs/op
+BenchmarkClippedRaster/bitmap-one-clip         	      82	   4366178 ns/op	 1215283 B/op	      17 allocs/op
+BenchmarkClippedRaster/bitmap-one-clip         	      82	   4457600 ns/op	 1215283 B/op	      17 allocs/op
+PASS
+ok  	gomath/render	6.778s

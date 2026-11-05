@@ -1,0 +1,51 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkRenderMultiLight/sources0/ssaa1-8         	      70	   8179459 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574812 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources0/ssaa1-8         	      72	   8220347 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574808 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources0/ssaa1-8         	      73	   8254005 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574802 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources0/ssaa2-8         	      22	  25701184 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121359 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources0/ssaa2-8         	      22	  25544981 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121372 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources0/ssaa2-8         	      22	  25625809 ns/op	         0 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121382 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa1-8         	      58	   9504037 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574735 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa1-8         	      62	   9428901 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574729 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa1-8         	      60	   9479151 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574728 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa2-8         	      19	  30681077 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121364 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa2-8         	      18	  30650273 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121356 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources1/ssaa2-8         	      19	  30576476 ns/op	         1.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121381 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa1-8         	      56	  10579513 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574730 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa1-8         	      56	  10576508 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574730 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa1-8         	      57	  10564134 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574734 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa2-8         	      16	  35079385 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121366 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa2-8         	      16	  34995034 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121365 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources3/ssaa2-8         	      16	  35091896 ns/op	         3.000 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121364 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa1-8        	      30	  19446322 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574728 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa1-8        	      31	  19466898 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574731 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa1-8        	      31	  19441383 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 1574735 B/op	      25 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa2-8        	       8	  70504875 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121360 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa2-8        	       8	  70539557 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121358 B/op	      42 allocs/op
+BenchmarkRenderMultiLight/sources16/ssaa2-8        	       8	  70402396 ns/op	        16.00 lights/frame	      3982 tris/frame	      2014 vertices/frame	 6121360 B/op	      42 allocs/op
+BenchmarkRenderPointLight/flat/ssaa1-8             	     100	   5875405 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027150 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa1-8             	     100	   5906986 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027150 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa1-8             	      99	   5935473 ns/op	      3982 tris/frame	      2014 vertices/frame	 1027149 B/op	      13 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8             	      36	  16350480 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099236 B/op	      15 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8             	      36	  16410750 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099230 B/op	      15 allocs/op
+BenchmarkRenderPointLight/flat/ssaa2-8             	      36	  16299799 ns/op	      3982 tris/frame	      2014 vertices/frame	 4099224 B/op	      15 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8           	      99	   5972330 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076301 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8           	     100	   6100990 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076302 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa1-8           	      99	   5975848 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076301 B/op	      14 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8           	      36	  16343627 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148369 B/op	      16 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8           	      36	  16356561 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148370 B/op	      16 allocs/op
+BenchmarkRenderPointLight/smooth/ssaa2-8           	      36	  17176802 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148368 B/op	      16 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8          	      62	   9553957 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574633 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8          	      61	  12876973 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574643 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa1-8          	      63	   9112693 ns/op	      3982 tris/frame	      2014 vertices/frame	 1574643 B/op	      24 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8          	      20	  28353594 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121280 B/op	      41 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8          	      20	  28432723 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121278 B/op	      41 allocs/op
+BenchmarkRenderPointLight/mixedUV/ssaa2-8          	      20	  28397956 ns/op	      3982 tris/frame	      2014 vertices/frame	 6121277 B/op	      41 allocs/op
+BenchmarkRenderSphere-8                            	     201	   2963557 ns/op	  852434 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                            	     202	   2954805 ns/op	  852436 B/op	       9 allocs/op
+BenchmarkRenderSphere-8                            	     202	   2976434 ns/op	  852436 B/op	       9 allocs/op
+PASS
+ok  	gomath/three	29.043s

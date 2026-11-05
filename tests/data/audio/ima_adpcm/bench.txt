@@ -1,0 +1,26 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadWAVIMA/ch1_block256         	    1795	    195799 ns/op	 125.82 MB/s	  393704 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block256         	    1862	    201052 ns/op	 122.54 MB/s	  393704 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block256         	    1832	    197349 ns/op	 124.83 MB/s	  393704 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block256         	    1854	    195518 ns/op	 126.00 MB/s	  393704 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block256         	    1850	    210567 ns/op	 117.00 MB/s	  393704 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block1024        	    1646	    202115 ns/op	 121.89 MB/s	  394472 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block1024        	    1819	    234514 ns/op	 105.05 MB/s	  394472 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block1024        	    1692	    212783 ns/op	 115.78 MB/s	  394472 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block1024        	    1801	    198075 ns/op	 124.38 MB/s	  394472 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch1_block1024        	    1810	    197991 ns/op	 124.43 MB/s	  394472 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block256         	    1053	    339100 ns/op	 145.88 MB/s	  770536 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block256         	    1060	    338466 ns/op	 146.15 MB/s	  770536 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block256         	    1033	    341153 ns/op	 145.00 MB/s	  770536 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block256         	    1060	    338595 ns/op	 146.10 MB/s	  770536 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block256         	    1060	    343309 ns/op	 144.09 MB/s	  770536 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block1024        	    1033	    349445 ns/op	 140.83 MB/s	  787688 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block1024        	    1034	    430001 ns/op	 114.45 MB/s	  787688 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block1024        	    1027	    351618 ns/op	 139.96 MB/s	  787688 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block1024        	    1040	    349173 ns/op	 140.94 MB/s	  787688 B/op	      14 allocs/op
+BenchmarkReadWAVIMA/ch2_block1024        	    1036	    350784 ns/op	 140.29 MB/s	  787688 B/op	      14 allocs/op
+PASS
+ok  	gomath/audio	7.928s

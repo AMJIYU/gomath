@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-04",
+  "runtime": "Pure Go: standard image codecs via gomath/rasterimage. No Python, browser, native library or subprocess runtime, no test-time reference renderer.",
+  "scope": {
+    "entrypoint": "svg.Read(io.Reader, svg.Options), no new exported API",
+    "formats": [
+      "data:image/png;base64",
+      "data:image/jpeg;base64",
+      "data:image/gif;base64"
+    ],
+    "uri_encoding": "Strict standard base64, padding required when necessary, no folding/whitespace/percent encoding/MIME parameters; MIME verified against DecodeConfig.",
+    "gif": "Frame zero only. Reject partial logical canvas first frames; no animation/background/disposal composition.",
+    "placement": "x/y and width/height: intrinsic/auto, existing absolute units, percentages of current SVG/symbol viewport. Nine meet alignments, default xMidYMid meet, none. SVG transform and all ancestor/use/symbol transforms compose as affine matrices; local Y reflection preserves image row orientation.",
+    "ownership": "Identical URI strings share an immutable Bitmap only within one import. Each rendered instance has independent geometry, style and ID. No cross-import/global cache.",
+    "styles": "Existing CSS cascade, use shadow isolation, opacity/display/visibility. Vector paint properties do not apply to image pixels. Existing multiplicative group/object opacity and bitmap bilinear premultiplied sRGB sampling remain unchanged.",
+    "rejected": [
+      "external href",
+      "other MIME/encoding",
+      "corrupt/truncated image",
+      "MIME mismatch",
+      "partial first GIF frame",
+      "slice",
+      "defer",
+      "required symbol viewport clipping",
+      "clip-path/mask/filter effects",
+      "unknown image attributes and unknown CSS"
+    ],
+    "validation_timing": "All image elements including unused defs are URI/attribute-whitelist validated and decoded. Geometry/transforms/styles/viewport clipping are checked when instantiated.",
+    "limits": {
+      "XML_input_bytes": 33554432,
+      "per_image_URI_bytes": 12582912,
+      "total_URI_bytes": 25165824,
+      "per_asset_encoded_bytes": 8388608,
+      "total_unique_encoded_bytes": 16777216,
+      "per_asset_pixels": 4194304,
+      "total_unique_pixels": 16777216,
+      "unique_URI_assets": 128
+    },
+    "resource_accounting": "Headers checked before complete decode. Repeated image URI text counts toward URI/XML budgets; identical URI assets consume decode budgets only once. use expansion retains existing depth/node/CSS budgets. Stage limits do not promise a fixed process peak heap.",
+    "exclusions": [
+      "No root Style/bitmap/render/rasterimage/export changes",
+      "No EXIF orientation/ICC processing beyond existing rasterimage semantics",
+      "No isolated offscreen group opacity compositing",
+      "No full SVG/browser CSS equivalence or Manim parity claim"
+    ]
+  },
+  "fixture_origin": {
+    "author": "Synthetic deterministic assets generated locally for GoMath SVG tests; no third-party artwork.",
+    "embedded.png": {
+      "size": [
+        16,
+        8
+      ],
+      "quadrants_RGBA": [
+        [
+          240,
+          24,
+          16,
+          255
+        ],
+        [
+          16,
+          208,
+          48,
+          192
+        ],
+        [
+          24,
+          48,
+          224,
+          128
+        ],
+        [
+          240,
+          200,
+          16,
+          255
+        ]
+      ],
+      "generator": "Pillow Image.new(RGBA); quadrant boundaries x=8,y=4; PNG default save"
+    },
+    "embedded.jpg": {
+      "size": [
+        16,
+        8
+      ],
+      "generator": "embedded.png converted to RGB; Pillow JPEG quality=95, subsampling=0"
+    },
+    "embedded.gif": {
+      "size": [
+        8,
+        4
+      ],
+      "frames": 2,
+      "generator": "Pillow: full-frame first palette frame red left four columns/green right four columns; second frame solid blue; duration=[100,100], loop=0, optimize=False"
+    },
+    "local_Manim_reference": {
+      "path": "/Users/eleven/Documents/工作经历/cloudtorch/manim",
+      "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+      "inspected": "manim/mobject/svg/svg_mobject.py:get_mobjects_from/get_mob_from_shape_element",
+      "finding": "Shape dispatch is vector-oriented and does not dispatch embedded images. Independent Pillow/Cairo references are used for this added feature rather than claiming verified Manim parity.",
+      "source_tree_modified": false
+    }
+  },
+  "references": {
+    "versions": {
+      "Python": "3.11.5",
+      "Pillow": "11.2.1",
+      "CairoSVG": "2.7.1",
+      "Cairo": "1.18.4"
+    },
+    "decode": {
+      "method": "Pillow opens each original asset, seek(0), convert(RGBA), saves <filename>-decoded.png; Go tests compare the complete decoded bitmap in premultiplied RGBA.",
+      "regenerate_python": "from pathlib import Path\nfrom PIL import Image\np=Path('tests/data/svg')\nfor name in ['embedded.png','embedded.jpg','embedded.gif']:\n    with Image.open(p/name) as im:\n        im.seek(0)\n        im.convert('RGBA').save(p/(name+'-decoded.png'))",
+      "max_RGBA_delta": {
+        "PNG": 0,
+        "JPEG": 1,
+        "GIF_frame_zero": 0
+      },
+      "threshold": {
+        "PNG": 0,
+        "JPEG": 3,
+        "GIF": 0
+      }
+    },
+    "raster": {
+      "file": "embedded-images.png",
+      "renderer": "CairoSVG",
+      "size": [
+        160,
+        120
+      ],
+      "frames": 1,
+      "coverage": "PNG alpha quadrants, JPEG, animated GIF first frame, default meet and none, opacity, shear/rotation/reflection, defs/use reuse. A parent group supplies the reference use opacity; CSS opacity on use is independently tested with analytical pixels, not inferred from CairoSVG.",
+      "regenerate_python": "from pathlib import Path\nimport cairosvg\np=Path('tests/data/svg')\ns=(p/'embedded-images.svg').read_text().replace(' href=', ' xlink:href=')\ncairosvg.svg2png(bytestring=s.encode(), write_to=str(p/'embedded-images.png'))",
+      "reference_normalization": "CairoSVG 2.7.x consumes xlink:href; generation normalizes unqualified href spelling only, preserving all geometry, data and styles.",
+      "environment": "Development reference commands use PYTHONDONTWRITEBYTECODE=1 and DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib. Neither required by Go tests.",
+      "measured_premultiplied_RGBA_MAE": 2.5044140625,
+      "measured_max_channel_delta": 156,
+      "measured_fraction_pixels_any_channel_over_8": 0.08359375,
+      "thresholds": {
+        "RGBA_MAE": 3,
+        "max_channel_delta": 170,
+        "fraction_pixels_any_channel_over_8": 0.1
+      },
+      "limitation": "Cairo filters transparent image borders differently from the existing bitmap edge extension/coverage sampling. Full-frame tolerances cover these boundary differences. Exact analytical interior pixel tests separately assert orientation, multiplied opacity and transformed placement; independent complete decode comparisons prevent wrong/missing assets from being accepted by the raster tolerance."
+    }
+  },
+  "tests": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -count=1 -vet=all",
+    "result": "PASS",
+    "package_time_seconds": 0.484,
+    "vet_command": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+    "vet_result": "PASS",
+    "coverage": [
+      "all three codecs and full independent pixel decode",
+      "all nine meet alignments/none/auto/percent/zero dimensions",
+      "affine corners and reflected+rotated pixels",
+      "nested defs/symbol/use dimensions and clipping rejection",
+      "immutable asset sharing and independent objects",
+      "concurrent imports with no shared cache",
+      "CSS and group/use opacity, display, visibility and href precedence",
+      "external/bad base64/MIME mismatch/truncation/unsupported effects/partial GIF errors",
+      "exact/exceeded URI/encoded/decoded/asset budgets, pixel dimension bomb before decode, streaming XML cap"
+    ],
+    "not_run": "Full-repository test/benchmark suite; slice remains unimplemented and rejected.",
+    "purecheck_command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+    "purecheck_result": "PASS: 40 non-standard packages; CGO_ENABLED=0; noasm; no native inputs or runtime process launch imports"
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -p=1 -run=^$ -bench=^BenchmarkReadEmbeddedImageInstances$ -benchtime=300ms -count=3",
+    "Go": "go1.27.3 darwin/arm64",
+    "CPU": "Apple M2",
+    "CGO_ENABLED": 0,
+    "tags": "noasm",
+    "workload": "256 use instances of one embedded 16x8 PNG image in a 256x256 SVG viewport, one unique decoded asset. Parse XML, decode URI/image once, instantiate/normalize/validate all image objects.",
+    "rendered_frames": 0,
+    "excluded": [
+      "frame rasterization",
+      "PNG output encoding",
+      "reference generation",
+      "fixture file I/O outside timer",
+      "animation sampling"
+    ],
+    "iterations": [
+      274,
+      291,
+      284
+    ],
+    "ns_per_op": [
+      1237414,
+      1234701,
+      1327316
+    ],
+    "bytes_per_op": [
+      1483469,
+      1483447,
+      1483448
+    ],
+    "allocs_per_op": [
+      10111,
+      10111,
+      10111
+    ]
+  },
+  "sha256": {
+    "embedded.png": "a06f980293eb6f61a876154ae9e8ed69f8e8ca81fea57cbc32339d262d116430",
+    "embedded.jpg": "96afa9654f1b95bca61e989adf62f835a00669063f754b773492d0ab8d8eb3dc",
+    "embedded.gif": "1c7616f8e0c144b9751ef3590761b4881b786776f609b6298ffaaab93be851c1",
+    "embedded.png-decoded.png": "a06f980293eb6f61a876154ae9e8ed69f8e8ca81fea57cbc32339d262d116430",
+    "embedded.jpg-decoded.png": "a3e462dff1b8b3c323a88fd65d0bda6617b1509ced0842a273576821c421394a",
+    "embedded.gif-decoded.png": "ee37186672e606ecde3d76c60e581938d183eb559da2c2def9f547cdcf1e321f",
+    "embedded-images.svg": "df52beb16520fc4bed6a05c24ec35c6f702d49b968d2c80977d852613bbd3d94",
+    "embedded-images.png": "51f100e9bc6e1d11c92aca93c25022cc242ec881d0f00b40ded5b2c8eab32787"
+  }
+}

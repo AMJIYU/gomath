@@ -1,0 +1,18 @@
+{
+  "audio/aiff_read.go": {
+    "bytes": 11963,
+    "sha256": "f5ab66d980343e98f44da8730c888e9d7b883569ae9e5adf848ffa4b0e8ba6e1"
+  },
+  "audio/README.md": {
+    "bytes": 36111,
+    "sha256": "0d3a15432e48501d468568c81f7c93a6a8ec0c60a0f95a5685aba987c4eebba6"
+  },
+  "tests/_cases/audio/aiff_read_test.go": {
+    "bytes": 23055,
+    "sha256": "019f5a339e6f3a7aaa39ba0c65a5e9dcffdf433c697c73e87d69b83532337aaa"
+  },
+  "tests/reference/audio_aiff.py": {
+    "bytes": 11997,
+    "sha256": "e15e697d694ff9e35c4bbdb0be2d34889e702ab6c83ed9ef85e1515e136ec4ba"
+  }
+}

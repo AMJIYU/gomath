@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96">
+<rect width="100%" height="100%" fill="#000000" fill-opacity="0"/>
+<defs>
+<clipPath id="gomath-clip-0" clipPathUnits="userSpaceOnUse"><path clip-rule="nonzero" transform="translate(64 48) scale(1 -1)" d="M-60 -22C-20 -22 20 -22 60 -22C60 -7.33333333 60 7.33333333 60 22C20 22 -20 22 -60 22C-60 7.33333333 -60 -7.33333333 -60 -22Z"/></clipPath>
+<clipPath id="gomath-clip-1" clipPathUnits="userSpaceOnUse"><path clip-rule="evenodd" transform="translate(64 48) scale(1 -1)" d="M-6 0C-6 13.8071187 -17.1928813 25 -31 25C-44.8071187 25 -56 13.8071187 -56 3.061617e-15C-56 -13.8071187 -44.8071187 -25 -31 -25C-17.1928813 -25 -6 -13.8071187 -6 -6.123234e-15ZM-21 0C-21 5.5228475 -25.4771525 10 -31 10C-36.5228475 10 -41 5.5228475 -41 1.2246468e-15C-41 -5.5228475 -36.5228475 -10 -31 -10C-25.4771525 -10 -21 -5.5228475 -21 -2.4492936e-15Z"/></clipPath>
+<clipPath id="gomath-clip-2" clipPathUnits="userSpaceOnUse"><path clip-rule="nonzero" transform="translate(64 48) scale(1 -1)" d="M56 0C56 13.8071187 44.8071187 25 31 25C17.1928813 25 6 13.8071187 6 3.061617e-15C6 -13.8071187 17.1928813 -25 31 -25C44.8071187 -25 56 -13.8071187 56 -6.123234e-15ZM41 0C41 5.5228475 36.5228475 10 31 10C25.4771525 10 21 5.5228475 21 1.2246468e-15C21 -5.5228475 25.4771525 -10 31 -10C36.5228475 -10 41 -5.5228475 41 -2.4492936e-15Z"/></clipPath>
+</defs>
+<g clip-path="url(#gomath-clip-0)"><path aria-label="" fill="#000000" fill-opacity="0" stroke="#ffffff" stroke-opacity="1" stroke-width="0.035" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" stroke-dashoffset="0" transform="translate(64 48) scale(1 -1)" d=""/>
+</g>
+<g clip-path="url(#gomath-clip-0)"><g clip-path="url(#gomath-clip-1)"><path aria-label="" fill="#30a0e0" fill-opacity="0.7" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" stroke-dashoffset="0" transform="translate(64 48) scale(1 -1)" d="M-61 -30C-41 -30 -21 -30 -1 -30C-1 -10 -1 10 -1 30C-21 30 -41 30 -61 30C-61 10 -61 -10 -61 -30Z"/>
+</g></g>
+<g clip-path="url(#gomath-clip-0)"><g clip-path="url(#gomath-clip-2)"><path aria-label="" fill="#e05030" fill-opacity="1" stroke="#000000" stroke-opacity="0" stroke-width="0" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" stroke-dashoffset="0" transform="translate(64 48) scale(1 -1)" d="M1 -30C21 -30 41 -30 61 -30C61 -10 61 10 61 30C41 30 21 30 1 30C1 10 1 -10 1 -30Z"/>
+</g></g>
+</svg>

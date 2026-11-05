@@ -1,0 +1,5 @@
+go version go1.27.3 darwin/arm64
+Darwin arm64
+Apple M2
+17179869184
+2026-11-05T02:23:06.717352+00:00

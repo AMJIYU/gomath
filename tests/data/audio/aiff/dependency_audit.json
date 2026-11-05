@@ -1,0 +1,10 @@
+{
+  "packages": 90,
+  "standard_library": 89,
+  "external_dependencies": 0,
+  "cgo_inputs": 0,
+  "codec_native_or_asm_inputs": 0,
+  "os_exec_or_plugin_dependencies": 0,
+  "CGO_ENABLED": 0,
+  "tags": "noasm"
+}

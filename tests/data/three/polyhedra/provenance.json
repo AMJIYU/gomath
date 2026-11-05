@@ -1,0 +1,168 @@
+{
+  "slice": "wave5 checked convex/Platonic polyhedra",
+  "status": "frozen",
+  "frozen_at_utc": "2026-11-04T09:26:01.185901+00:00",
+  "scope": "Only two new production files; scoped three validation, not a whole-repository or full Manim parity claim.",
+  "runtime": "Pure Go; no changes to existing raster/camera/light implementations or external runtime dependencies.",
+  "reference": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "source": "manim/mobject/three_d/polyhedra.py",
+    "source_sha256": "dff151690b0c87a695c7ebe77bf85564ca7572d9df8c8f49e5e632cb052c27bd",
+    "oracle": "whitelist AST arithmetic and independent exhaustive supporting triples"
+  },
+  "api": {
+    "constructors": [
+      "Tetrahedron(edgeLength float64) (*Mesh, error)",
+      "Octahedron(edgeLength float64) (*Mesh, error)",
+      "Icosahedron(edgeLength float64) (*Mesh, error)",
+      "Dodecahedron(edgeLength float64) (*Mesh, error)",
+      "Polyhedron(vertices []geom.Vec3, faces [][]int) (*Mesh, error)"
+    ],
+    "edge_length": "finite [1e-6, 1e12]; Dodecahedron also limits resulting b=edgeLength*(3+sqrt(5))/4 to 1e12",
+    "limits": {
+      "vertices": 1024,
+      "faces": 2048,
+      "corners_per_face": 256,
+      "total_corners": 8192,
+      "absolute_coordinate": 1000000000000.0,
+      "minimum_bbox_span": 1e-09,
+      "relative_tolerance": 1e-10
+    },
+    "ownership": "Inputs not retained or mutated; returned Mesh owns independent mutable storage.",
+    "normals_uv": "Flat outward face normals, split face boundary vertices, independent planar UV rectangles.",
+    "unsupported": "Generic input must be closed, connected, strictly convex and consistently outward planar faces. No hull, repair, general tessellation, graph/Dot3D/updater semantics."
+  },
+  "geometry": [
+    {
+      "name": "Tetrahedron",
+      "logical_vertices": 4,
+      "edges": 6,
+      "faces": 4,
+      "split_vertices": 12,
+      "triangles": 4
+    },
+    {
+      "name": "Octahedron",
+      "logical_vertices": 6,
+      "edges": 12,
+      "faces": 8,
+      "split_vertices": 24,
+      "triangles": 8
+    },
+    {
+      "name": "Icosahedron",
+      "logical_vertices": 12,
+      "edges": 30,
+      "faces": 20,
+      "split_vertices": 60,
+      "triangles": 20
+    },
+    {
+      "name": "Dodecahedron",
+      "logical_vertices": 20,
+      "edges": 30,
+      "faces": 12,
+      "split_vertices": 60,
+      "triangles": 36
+    }
+  ],
+  "validation": {
+    "suite": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -count=1",
+      "result": "pass",
+      "seconds": 3.448
+    },
+    "race": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -race -count=1",
+      "result": "pass",
+      "seconds": 25.688
+    },
+    "vet": {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./three",
+      "result": "pass"
+    },
+    "build": {
+      "command": "CGO_ENABLED=0 go build -tags noasm ./three",
+      "result": "pass"
+    },
+    "runner_tags": "central runner includes noasm",
+    "reference_generation": {
+      "command": "python3 tests/reference/three_polyhedra.py",
+      "result": "pass; pinned HEAD and committed source bytes checked; Python development-only"
+    },
+    "pixels": {
+      "frames": 384,
+      "size": [
+        43,
+        31
+      ],
+      "channel_tolerance_bytes": 1,
+      "poses_radians": [
+        0,
+        0.43,
+        1.17,
+        2.23
+      ],
+      "reference": "independent support-plane ray intervals and Rodrigues inversion; both projections, SSAA 1/2/4, clipping, signed nonuniform scale, opaque/alpha/UV-alpha/three point lights"
+    },
+    "numeric": "Pinned source positions/faces, logical V/E/F/Euler2, edge/circumradius/area/volume identities, face normals/winding/seams/UV; extreme finite and invalid inputs.",
+    "budgets": "Reject count/index/geometry/fragment/light limits; valid 1024-position/2044-face bipyramid and 256-sided polygon prism; post-error render succeeds.",
+    "concurrency": "Eight concurrent constructors/readers, source/output isolation, transparent instance order independence.",
+    "legacy": "Existing directional and single point pixel hashes pass; three/light.go, renderer.go and world_renderer.go source hashes equal wave4.",
+    "visual": {
+      "path": "tests/data/three/polyhedra/platonic-solids.png",
+      "panel_size": [
+        240,
+        180
+      ],
+      "ssaa": 2,
+      "result": "Generated and visually inspected; rotated reflected UV-alpha panels compared with independent plane reference."
+    }
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^$' -bench '^(BenchmarkBuildPlatonic|BenchmarkBuildPolyhedron|BenchmarkRenderPolyhedra)$' -benchmem -benchtime=500ms -count=3 -p 1",
+    "result": "pass",
+    "environment": "Go1.27.3 darwin/arm64 Apple M2 16GiB GOMAXPROCS8; CGO0/noasm",
+    "load": "Serial -p1 after own initial race; shared host external load uncontrolled; no speedup claim.",
+    "construction_median_us": {
+      "Tetrahedron": 3.6,
+      "Octahedron": 6.086,
+      "Icosahedron": 16.275,
+      "Dodecahedron": 16.382
+    },
+    "max_vertex_generic_median_ms": 3.179699,
+    "render_median_ms": {
+      "opaque_ssaa1": 0.477343,
+      "opaque_ssaa2": 2.98847,
+      "uv_alpha_three_point_lights_ssaa1": 2.533031,
+      "uv_alpha_three_point_lights_ssaa2": 11.206121
+    },
+    "render_workload": "All four solids,156 split vertices,68 triangles,320x240; includes transform/clipping, shading, texture, depth/fragment work and SSAA; excludes authoring, encoding, I/O, references.",
+    "details": "docs/POLYHEDRA.md and benchmark.txt provide raw samples, ranges, memory and allocation counts."
+  },
+  "owned_source_sha256": {
+    "three/polyhedron.go": "61500cee3881649b3c02d6247050279b9027e93230eab7863475a1e1e8898b3e",
+    "three/platonic.go": "7d48c96313e786f282bfa2fb12fff8c95106acc9904283df123d19279f1b384a",
+    "tests/_cases/three/polyhedron_test.go": "6301a312d89078135708cb45d87e8920235a5c3104bca3b11f3c4af084078476",
+    "tests/_cases/three/polyhedron_reference_test.go": "2fb5533747a98a7ba762b2a245eb362503f8a271d1500f964dbe3fb6a4d02d99",
+    "tests/_cases/three/polyhedron_render_test.go": "ca07228c3eac3caad2d35ef4ff2b000f9eb1235ef9cca52bd32918764f12a62c",
+    "tests/_cases/three/polyhedron_artifacts_test.go": "f8b58b92e4ea9ed71c7992fa83b4411fcf45ab8756776782115d3e431d4e038d",
+    "tests/reference/three_polyhedra.py": "27d074b64c5862d61d922d68b327dcf28bf5c7835197e2f48c1a73f72d72c698",
+    "docs/POLYHEDRA.md": "54292f40097b52af75fd38837117b2c3531d949d28cfd4df3eeca0d448d18c35"
+  },
+  "evidence_sha256": {
+    "tests/data/three/polyhedra/benchmark.txt": "48ddb1d70f4e2239a578cd925ccdab2c3ab3ca9a4565382a59abac37b6046da5",
+    "tests/data/three/polyhedra/build.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/polyhedra/environment.txt": "1ce1eb52d677921fa115a8838808a8634f450f672f3320f2f738c0f48e0fd3ec",
+    "tests/data/three/polyhedra/legacy-source-preservation.json": "8490ea03880f496eccad0a8f7691f6fefc6c4da5444a5b5471bfac8143ebbf98",
+    "tests/data/three/polyhedra/manim-controls.json": "66ebf20e4fda7cbb268cc2831802875730d108a993c65a288b07e68a0ba3a0ff",
+    "tests/data/three/polyhedra/native-dependencies.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/polyhedra/platonic-solids.png": "dc87403eb15065111dc13bd37d98daac8492aef43ba9747a5f8a9168a28b8cd5",
+    "tests/data/three/polyhedra/race-max-face.txt": "f81972f2c3d8536784faf2cee928aefd4149907d80b0d2cdb9854750807d7e62",
+    "tests/data/three/polyhedra/race.txt": "efa7bb0d6d60d4bb2884867d5e675f5a35346c86db9a98af0ab1de5f08ba9e8a",
+    "tests/data/three/polyhedra/reference-generation.txt": "d7ed01f16df3a553112e6b4524980a2567231292120198a379dcefcebc67dd0c",
+    "tests/data/three/polyhedra/suite.txt": "1f8c55e89ff0303c31a8a1d354c999c93a81302cc8f91514b623e007e7a08dce",
+    "tests/data/three/polyhedra/targeted.txt": "723adc362ba92eef8e056e822b19e16e14e6533044889190c7b3770ebeca3c67",
+    "tests/data/three/polyhedra/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

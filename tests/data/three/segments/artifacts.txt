@@ -1,0 +1,5 @@
+=== RUN   TestSegmentArtifacts
+    segment_artifacts_test.go:63: /Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/three/segments/segments.png
+--- PASS: TestSegmentArtifacts (0.28s)
+PASS
+ok  	gomath/three	0.283s

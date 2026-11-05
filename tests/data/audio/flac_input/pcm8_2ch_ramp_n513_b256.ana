@@ -1,0 +1,79 @@
+frame=0	offset=86	bits=1792	blocksize=256	sample_rate=48000	channels=2	channel_assignment=LEFT_SIDE
+	subframe=0	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=6	quantization_level=5	residual_type=RICE	partition_order=4
+		qlp_coeff[0]=30
+		warmup[0]=-31
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=1
+		parameter[3]=3
+		parameter[4]=0
+		parameter[5]=0
+		parameter[6]=1
+		parameter[7]=3
+		parameter[8]=0
+		parameter[9]=1
+		parameter[10]=2
+		parameter[11]=3
+		parameter[12]=0
+		parameter[13]=1
+		parameter[14]=2
+		parameter[15]=3
+	subframe=1	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=6	quantization_level=5	residual_type=RICE	partition_order=4
+		qlp_coeff[0]=30
+		warmup[0]=0
+		parameter[0]=0
+		parameter[1]=1
+		parameter[2]=3
+		parameter[3]=0
+		parameter[4]=0
+		parameter[5]=3
+		parameter[6]=0
+		parameter[7]=0
+		parameter[8]=1
+		parameter[9]=3
+		parameter[10]=0
+		parameter[11]=0
+		parameter[12]=1
+		parameter[13]=3
+		parameter[14]=0
+		parameter[15]=0
+frame=1	offset=310	bits=1824	blocksize=256	sample_rate=48000	channels=2	channel_assignment=LEFT_SIDE
+	subframe=0	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=4
+		warmup[0]=-27
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=0
+		parameter[3]=3
+		parameter[4]=0
+		parameter[5]=0
+		parameter[6]=0
+		parameter[7]=3
+		parameter[8]=0
+		parameter[9]=0
+		parameter[10]=0
+		parameter[11]=3
+		parameter[12]=0
+		parameter[13]=0
+		parameter[14]=0
+		parameter[15]=3
+	subframe=1	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=4
+		warmup[0]=-4
+		parameter[0]=0
+		parameter[1]=3
+		parameter[2]=0
+		parameter[3]=0
+		parameter[4]=0
+		parameter[5]=3
+		parameter[6]=0
+		parameter[7]=0
+		parameter[8]=0
+		parameter[9]=3
+		parameter[10]=0
+		parameter[11]=0
+		parameter[12]=0
+		parameter[13]=3
+		parameter[14]=0
+		parameter[15]=0
+frame=2	offset=538	bits=104	blocksize=1	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM
+	subframe=1	wasted_bits=0	type=VERBATIM

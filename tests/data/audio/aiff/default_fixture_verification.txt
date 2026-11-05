@@ -1,0 +1,128 @@
+=== RUN   TestReadAIFFIndependentFixtures
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_1ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_1ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_2ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_2ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_6ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_6ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_1ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_1ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_2ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_2ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_6ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_6ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_1ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_1ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_2ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_2ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_6ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_6ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_1ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_1ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_2ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_2ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_6ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_6ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_1ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_1ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_2ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_2ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_6ch_n1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_6ch_n17.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s8_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s8_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s8_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s16_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s16_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s16_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s24_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s24_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s24_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s32_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s32_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_AIFF_s32_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s8_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s8_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s8_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s16_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s16_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s16_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s24_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s24_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s24_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s32_1ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s32_2ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_NONE_s32_6ch.aiff
+=== RUN   TestReadAIFFIndependentFixtures/spec_SSNDfirst_offset3_NONE24.aiff
+=== RUN   TestReadAIFFIndependentFixtures/spec_explicit_text_discard.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_s8_rate1.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_s8_rate8000.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_s8_rate11025.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_s8_rate192000.aiff
+=== RUN   TestReadAIFFIndependentFixtures/cpython_s8_rate768000.aiff
+=== RUN   TestReadAIFFIndependentFixtures/spec_COMM_bounds_unused_SSND.aiff
+--- PASS: TestReadAIFFIndependentFixtures (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_1ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_1ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_2ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_2ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_6ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s8_6ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_1ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_1ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_2ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_2ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_6ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16be_6ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_1ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_1ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_2ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_2ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_6ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s24be_6ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_1ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_1ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_2ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_2ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_6ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s32be_6ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_1ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_1ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_2ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_2ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_6ch_n1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/ffmpeg_pcm_s16le_6ch_n17.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s8_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s8_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s8_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s16_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s16_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s16_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s24_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s24_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s24_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s32_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s32_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_AIFF_s32_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s8_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s8_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s8_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s16_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s16_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s16_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s24_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s24_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s24_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s32_1ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s32_2ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_NONE_s32_6ch.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/spec_SSNDfirst_offset3_NONE24.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/spec_explicit_text_discard.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_s8_rate1.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_s8_rate8000.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_s8_rate11025.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_s8_rate192000.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/cpython_s8_rate768000.aiff (0.00s)
+    --- PASS: TestReadAIFFIndependentFixtures/spec_COMM_bounds_unused_SSND.aiff (0.00s)
+PASS
+ok  	gomath/audio	0.008s

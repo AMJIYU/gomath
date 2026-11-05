@@ -1,0 +1,27 @@
+File: after_noise.test
+Type: cpu
+Time: 2026-11-04 13:35:19 CST
+Duration: 2.58s, Total samples = 1.93s (74.75%)
+Showing nodes accounting for 1.86s, 96.37% of 1.93s total
+Showing top 20 nodes out of 60
+      flat  flat%   sum%        cum   cum%
+     0.58s 30.05% 30.05%      1.08s 55.96%  gomath/internal/h264.makeInterMB
+     0.22s 11.40% 41.45%      0.29s 15.03%  gomath/internal/h264.cavlcBitLength
+     0.21s 10.88% 52.33%      0.21s 10.88%  gomath/internal/h264.compensateMotion
+     0.14s  7.25% 59.59%      0.18s  9.33%  gomath/internal/h264.quant4
+     0.11s  5.70% 65.28%      0.11s  5.70%  gomath/internal/h264.inverse4
+     0.09s  4.66% 69.95%      0.14s  7.25%  gomath/internal/h264.dequant4 (inline)
+     0.08s  4.15% 74.09%      0.08s  4.15%  gomath/internal/h264.forward4
+     0.08s  4.15% 78.24%      0.37s 19.17%  gomath/internal/h264.interBitLength
+     0.07s  3.63% 81.87%      0.07s  3.63%  gomath/internal/h264.levelBitLength (inline)
+     0.06s  3.11% 84.97%      0.06s  3.11%  gomath/internal/h264.scaleClass (inline)
+     0.04s  2.07% 87.05%      0.04s  2.07%  gomath/internal/h264.nal
+     0.03s  1.55% 88.60%      1.69s 87.56%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion.func1
+     0.03s  1.55% 90.16%      0.03s  1.55%  gomath/internal/h264.quantize (inline)
+     0.02s  1.04% 91.19%      0.10s  5.18%  gomath/internal/h264.(*IntraEncoder).writeIntraMB
+     0.02s  1.04% 92.23%      0.02s  1.04%  gomath/internal/h264.(*bits).bit (inline)
+     0.02s  1.04% 93.26%      0.05s  2.59%  gomath/internal/h264.cavlc
+     0.02s  1.04% 94.30%      0.02s  1.04%  image.(*RGBA).SetRGBA
+     0.02s  1.04% 95.34%      0.02s  1.04%  runtime.memclrNoHeapPointers
+     0.01s  0.52% 95.85%      0.01s  0.52%  gomath/internal/h264.encodeChroma
+     0.01s  0.52% 96.37%      0.01s  0.52%  gomath/internal/h264.fillPicture420

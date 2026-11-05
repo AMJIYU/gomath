@@ -1,0 +1,28 @@
+File: before_noise.test
+Type: alloc_space
+Time: 2026-11-04 13:23:19 CST
+Showing nodes accounting for 35451.35kB, 100% of 35451.35kB total
+Showing top 22 nodes out of 25
+      flat  flat%   sum%        cum   cum%
+31454.10kB 88.72% 88.72% 31454.10kB 88.72%  image.NewRGBA
+ 1762.94kB  4.97% 93.70%  1762.94kB  4.97%  runtime/pprof.StartCPUProfile
+ 1050.86kB  2.96% 96.66%  1050.86kB  2.96%  gomath/internal/h264.nal (inline)
+  655.29kB  1.85% 98.51%   655.29kB  1.85%  compress/flate.NewWriter (inline)
+  528.17kB  1.49%   100%   528.17kB  1.49%  gomath/internal/h264.(*PredictiveEncoder).residualWorkspace
+         0     0%   100%   655.29kB  1.85%  compress/gzip.(*Writer).Write
+         0     0%   100%  1579.02kB  4.45%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0%   100%  1579.02kB  4.45%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0%   100%  1579.02kB  4.45%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion
+         0     0%   100% 33033.12kB 93.18%  gomath/internal/h264.BenchmarkMotionSearch.func1
+         0     0%   100% 31454.10kB 88.72%  gomath/internal/h264.interImage
+         0     0%   100% 31454.10kB 88.72%  gomath/internal/h264.intraImage
+         0     0%   100% 31454.10kB 88.72%  gomath/internal/h264.motionImage
+         0     0%   100%  1762.94kB  4.97%  main.main
+         0     0%   100%  1762.94kB  4.97%  runtime.main
+         0     0%   100%   655.29kB  1.85%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         0     0%   100%   655.29kB  1.85%  runtime/pprof.(*profileBuilder).build
+         0     0%   100%   655.29kB  1.85%  runtime/pprof.(*profileBuilder).emitLocation
+         0     0%   100%   655.29kB  1.85%  runtime/pprof.(*profileBuilder).flush
+         0     0%   100%   655.29kB  1.85%  runtime/pprof.profileWriter
+         0     0%   100% 33033.12kB 93.18%  testing.(*B).run1.func1
+         0     0%   100% 33033.12kB 93.18%  testing.(*B).runN

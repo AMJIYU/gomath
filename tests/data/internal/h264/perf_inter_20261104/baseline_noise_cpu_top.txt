@@ -1,0 +1,28 @@
+File: baseline_noise.test
+Type: cpu
+Time: 2026-11-04 11:39:49 CST
+Duration: 4.59s, Total samples = 3.78s (82.44%)
+Showing nodes accounting for 3.45s, 91.27% of 3.78s total
+Dropped 20 nodes (cum <= 0.02s)
+Showing top 20 nodes out of 67
+      flat  flat%   sum%        cum   cum%
+     0.84s 22.22% 22.22%      0.85s 22.49%  gomath/internal/h264.(*bits).bit (inline)
+     0.41s 10.85% 33.07%      1.19s 31.48%  gomath/internal/h264.cavlc
+     0.36s  9.52% 42.59%      1.25s 33.07%  gomath/internal/h264.chooseLuma4x4
+     0.24s  6.35% 48.94%      0.42s 11.11%  gomath/internal/h264.makeInterMB
+     0.23s  6.08% 55.03%      0.24s  6.35%  gomath/internal/h264.quant4
+     0.21s  5.56% 60.58%      0.21s  5.56%  runtime.madvise
+     0.19s  5.03% 65.61%      1.44s 38.10%  gomath/internal/h264.searchLumaMB
+     0.18s  4.76% 70.37%      0.18s  4.76%  runtime.memclrNoHeapPointers
+     0.15s  3.97% 74.34%      0.15s  3.97%  gomath/internal/h264.forward4
+     0.11s  2.91% 77.25%      0.13s  3.44%  gomath/internal/h264.dequant4 (inline)
+     0.11s  2.91% 80.16%      0.64s 16.93%  gomath/internal/h264.writeLevel
+     0.09s  2.38% 82.54%      0.60s 15.87%  gomath/internal/h264.(*bits).uint (inline)
+     0.08s  2.12% 84.66%      0.12s  3.17%  gomath/internal/h264.nal
+     0.05s  1.32% 85.98%      0.05s  1.32%  gomath/internal/h264.inverse4
+     0.05s  1.32% 87.30%      0.14s  3.70%  gomath/internal/h264.makePicture420
+     0.04s  1.06% 88.36%      0.04s  1.06%  runtime.nanotime1
+     0.03s  0.79% 89.15%      1.80s 47.62%  gomath/internal/h264.(*IntraEncoder).writeIntraMB
+     0.03s  0.79% 89.95%      0.03s  0.79%  gomath/internal/h264.scaleClass (inline)
+     0.03s  0.79% 90.74%      0.08s  2.12%  runtime.bgsweep
+     0.02s  0.53% 91.27%      0.02s  0.53%  gomath/internal/h264.lumaDC (inline)

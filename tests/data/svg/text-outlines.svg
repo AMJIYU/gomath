@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="200" viewBox="0 0 320 200" text-rendering="geometricPrecision">
+  <style>
+    text {font-family:Go;font-size:32;fill:#193bba}
+    .bold {font-weight:bold;fill:#c73124}
+    .italic {font-style:italic;fill:#178344}
+    .both {font-weight:700;font-style:italic;fill:#873db3}
+    .stroked {fill:#f8d029;stroke:#752d1d;stroke-width:.7}
+  </style>
+  <text x="12" y="44">A</text><text x="60" y="44">é</text><text x="108" y="44">Ω</text><text x="158" y="44">Ж</text><text x="212" y="44">∑</text>
+  <text class="bold" x="12" y="88">A</text><text class="bold" x="60" y="88">é</text><text class="bold" x="108" y="88">Ω</text><text class="bold" x="158" y="88">Ж</text><text class="bold" x="212" y="88">∑</text>
+  <text class="italic" x="12" y="132">A</text><text class="italic" x="60" y="132">é</text><text class="italic" x="108" y="132">Ω</text><text class="italic" x="158" y="132">Ж</text><text class="both" x="212" y="132">∑</text>
+  <text class="stroked" x="12" y="180">A<tspan x="60" font-weight="bold" fill="#ec991b">Ω</tspan><tspan x="108" font-style="italic">é</tspan></text>
+  <defs><text id="glyph" x="0" y="0" font-weight="bold" font-style="italic">Ж</text></defs>
+  <use xlink:href="#glyph" x="158" y="180"/>
+  <text class="both" x="212" y="180" transform="rotate(-12 224 168)">A</text>
+</svg>

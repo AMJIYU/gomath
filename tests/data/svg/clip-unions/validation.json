@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-05",
+  "scope": "Wave6 bounded SVG closed straight polygon multi-child clip union; focused validation only, not a whole-repository checkpoint",
+  "api": "No new public API; svg.Read emits one canonical NonZero immutable native Clip. Old zero/single child compiler retained.",
+  "environment": {
+    "Go": "go1.27.3",
+    "OS": "macOS15.7.1",
+    "GOOS": "darwin",
+    "GOARCH": "arm64",
+    "CPU": "Apple M2",
+    "host": "shared; bounded benchmark observation only"
+  },
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -count=1",
+      "result": "PASS",
+      "package_seconds": 1.355
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -tags noasm -race -count=1",
+      "result": "PASS",
+      "package_seconds": 16.177,
+      "note": "Go race instrumentation uses cgo; product and ordinary validation remain CGO0/pureGo"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -vet=all -run '^$'",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS:42 non-standard packages; no native inputs or runtime process launch imports"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -run '^$' -bench BenchmarkSVGClipUnionImportRender -benchmem -benchtime=150ms -p=1 -cpu=1 -count=3",
+      "result": "PASS",
+      "output": "benchmark.txt"
+    },
+    {
+      "command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib PYTHONDONTWRITEBYTECODE=1 /usr/local/bin/python3.11 tests/reference/svg_clip_unions.py",
+      "result": "PASS:11 scenes at1x/4x,2 independent intermediate images,3 geometry area/membership cases; provenance generator and36 fixture hashes verified"
+    }
+  ],
+  "pixel_metrics": {
+    "static_images": 22,
+    "maximum_MAE": 0.208435059,
+    "maximum_RMS": 0.811898816,
+    "maximum_channel_delta": 17,
+    "intermediate_images": 2,
+    "intermediate_times": [
+      0.35,
+      0.7
+    ],
+    "intermediate_MAE": [
+      0.017333984375,
+      0.0220947265625
+    ],
+    "intermediate_RMS": [
+      0.13181302848795587,
+      0.18377373712893075
+    ],
+    "intermediate_maximum_channel_delta": 2
+  },
+  "old_test_update": "Only obsolete error case for two supported linear children replaced with an unsupported curved multi-child error case. No old fixture or threshold changed.",
+  "source_sha256": {
+    "svg/clip.go": "80e8335f883386c07bbc4d78e4b13183feae32af08a0bf9ef685e5b0d2057b76",
+    "svg/clip_union.go": "80319009b06eff3376bf00023770fcfd66c255884244dd5f78817431dfab838b",
+    "svg/clip_union_budget.go": "c6b69db959e04a50d95cf8faa14f7b5928202b8da920062c34daa30fca7debc2",
+    "svg/svg.go": "142726e164cb8bd0fd447a518527c610bf3ac25041a45adcc90af114dea22697",
+    "svg/README.md": "ae5dd0cd03091ef173079525855875a703d5b96637d2258505ba9113776dabd8",
+    "tests/_cases/svg/clip_test.go": "4fed6a56e7c2c91c32f9e964ca3cdce5a239da3482570bf18165f7b1b4e7f4fc",
+    "tests/_cases/svg/clip_union_test.go": "6cf3dad3c30fd8d63af5ea5ba0e035025f8ed93aa58323bd77da18e7c5ad7358",
+    "tests/_cases/svg/clip_union_private_test.go": "f9b8d5c8489b5406623e077834840a08a5f8490ab101a8592ffd7bb6e0f2caa0",
+    "tests/reference/svg_clip_unions.py": "9f0b44075debe7ed18bc639b297cc33ef662588f304e34f52f4277eb56d89071",
+    "docs/SVG_CLIP_UNIONS.md": "6f15ed32f92e4693267e0e765173db4d86bef6d5439672f74e0c00fe570c9fe7"
+  },
+  "reference_provenance_sha256": "bb7511b6b8cb22b2f67fd621ea02b6a9506550a9a641f16122c40e1855340ff7",
+  "benchmark_sha256": "598494cc9eee45e51ce355b42d0f01b3b7fd6df1054fe4e6e2b8032de430c904",
+  "limitations": "2\u201316 sharp rect/polygon/closed M/L/H/V/Z or direct use. Multi curves/open/degenerate/nested clip definitions explicitly error. Conservative shared32 full Boolean reservations. Native morph interpolates materialized outlines, not child Boolean regions per frame. Skia float32 fixtures are moderate-scale references only."
+}

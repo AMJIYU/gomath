@@ -1,0 +1,44 @@
+{
+  "API": "ReadWAV(io.Reader,WAVReadOptions) (*PCM,error); options and Limits unchanged",
+  "supported": "Microsoft IMA/DVI tag0x11; 4-bit mono/stereo; full blocks only",
+  "unsupported": [
+    "short final blocks",
+    "3-bit",
+    "more than2 channels",
+    "tag2 MS ADPCM",
+    "other IMA variants",
+    "extensible compression GUID",
+    "unknown chunks/extra fact payload"
+  ],
+  "fact": "mandatory4-byte; only final block may be trimmed; no whole hidden block",
+  "budgets": "all block capacity including trimmed padding charged before data reads/allocation; one bounded block scratch",
+  "arithmetic": "1994 Microsoft separate-shift algorithm, exactly matches libsndfile1.2.2",
+  "streams": 37,
+  "returnedScalarSamples": 287069,
+  "capacityScalarSamples": 292300,
+  "libsndfileFullSpecExactStreams": 37,
+  "FFmpegStrictCompleteDecodedStreams": 37,
+  "FFmpegMultiplyOracleFullExactStreams": 37,
+  "FFmpegArithmeticDifferentStreams": 31,
+  "FFmpegDifferentCapacitySamples": 121887,
+  "FFmpegObservedMaxCodeDifference": 32,
+  "FFmpegFullLengthAndPCMExactStreams": 4,
+  "factTrimmedStreams": 17,
+  "oldPCMFloatIndependentCompleteStreams": 15,
+  "oldPCMFloatScalarSamples": 135,
+  "fullAudioTests": "ok  \tgomath/audio\t1.133s\tcoverage: 95.6% of statements",
+  "fullAudioRace": "ok  \tgomath/audio\t9.367s",
+  "fuzz": "20s PASS;962958 executions",
+  "audioCoverage": 95.6,
+  "wavIMASourceCoverage": 100,
+  "vet": "PASS CGO0/noasm ./audio",
+  "linux386": "PASS CGO0/noasm ./audio",
+  "runtimeExternalDependencies": 0,
+  "productionFilesModified": [
+    "audio/wav.go",
+    "audio/README.md"
+  ],
+  "productionFilesAdded": [
+    "audio/wav_ima.go"
+  ]
+}

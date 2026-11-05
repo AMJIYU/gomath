@@ -1,0 +1,15 @@
+{
+  "GOOS": "linux",
+  "GOARCH": "386",
+  "CGO_ENABLED": "0",
+  "Tags": "noasm",
+  "CentralOverlayTestsCompiled": true,
+  "Execution": "not executed on darwin/arm64",
+  "ELFClass": 1,
+  "ELFMachine": 3,
+  "SHA256": "df71719d30feecd29cdd756ad2c4095fa20bd4517da7032dbddb334ffadd3c23",
+  "Commands": [
+    "go build -o tests/reference/_ms_adpcm_tools/central-run ./tests/cmd/run",
+    "CGO_ENABLED=0 GOOS=linux GOARCH=386 tests/reference/_ms_adpcm_tools/central-run -pkg=audio -c -o tests/reference/_ms_adpcm_tools/audio386.test"
+  ]
+}

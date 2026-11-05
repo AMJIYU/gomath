@@ -1,0 +1,52 @@
+{
+  "provenance": "Independent manually assembled SVG + original fontTools outlines; no gomath output read.",
+  "font": {
+    "file": "Go-Regular.ttf",
+    "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3"
+  },
+  "versions": {
+    "Python": "3.11.5",
+    "fontTools": "4.45.1",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4"
+  },
+  "generator_sha256": "3a12be8c91199fbf90ec398490be17e7017f878cfb71cc9b88e9c1b40735be92",
+  "geometry": {
+    "width": 512,
+    "height": 512,
+    "ppem": 204.8,
+    "origin": [
+      160,
+      256
+    ],
+    "fraction_axis": 0.16,
+    "fraction_gap": 0.24,
+    "fraction_stroke": 0.045,
+    "overline_gap": 0.1,
+    "overline_thickness": 0.045
+  },
+  "limits": "Two selected analytic layouts and sRGB paints, not a whole TeX engine/xcolor oracle.",
+  "records": [
+    {
+      "name": "fraction",
+      "source": "\\color{red}\\dfrac{\\textcolor{blue}{n}}{\\textcolor[HTML]{008040}{g}}",
+      "colors": [
+        "ff0000",
+        "0000ff",
+        "008040"
+      ],
+      "svg_sha256": "22e3923ff6ae5c53b9efbc73f8269fa997d1e2d4206d8b79f88c245313f99ecb",
+      "png_sha256": "eb10f2369e8b8820b12d7cf6c8ddfb765955f1a19f6599bf1d2a749d3bc8e796"
+    },
+    {
+      "name": "overline",
+      "source": "\\color{red}\\overline{\\textcolor[HTML]{008040}{g}}",
+      "colors": [
+        "ff0000",
+        "008040"
+      ],
+      "svg_sha256": "b4e108e850b5a2571ea6d401dd8b9d1c6469784292f0ef01db00807bb611fcaa",
+      "png_sha256": "1266ce97798036d9b8e3d27de923fce2ec5420727e9f40c369b72945690eb498"
+    }
+  ]
+}

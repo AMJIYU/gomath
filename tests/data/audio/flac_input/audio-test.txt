@@ -1,0 +1,1 @@
+ok  	gomath/audio	2.852s	coverage: 96.6% of statements

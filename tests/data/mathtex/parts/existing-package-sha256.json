@@ -1,0 +1,23 @@
+{
+  "mathtex/LICENSE-STIX.txt": "57b93bf939274bf62481e40b5314be0de7573b4fb5cc31916b390d849ebb8750",
+  "mathtex/README.md": "393f2fd88f1ed6e98bef191d3fae21e71dcb827679ecf6443eb8e9867e2d5b56",
+  "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+  "mathtex/array.go": "2245c49c9032f412e0be73143e8453922e203bf5451ed108f6612fe184f16ae2",
+  "mathtex/colors.go": "54c4f61daef1a28872a5da15b14e2c278c19a22c41be60d9d6070aba59a8566d",
+  "mathtex/delimiters.go": "f876fa5b5532d9b45ddb257c961ba4dc97d3b46f06c000aa966b932e53a2dbf5",
+  "mathtex/environments.go": "9c35d8d9774ea1385ff2b6926590f4d1f076d42b372ec0d72388f9fa231d4ea3",
+  "mathtex/fractions.go": "2935ff17905563fe14d99391343dec11a02b99979663482f64e1d960790f24ef",
+  "mathtex/math_alphabets.go": "fe4bdc4ce55608c4473a487e091d7cd68da883c3fa2ccca4c6d405568a191e3b",
+  "mathtex/math_alphabets_data.go": "7946ca5cd94dc28fbd19bfe162d5783cf80a808280b490c9925161ab44b55d31",
+  "mathtex/mathtex.go": "4cced6a6615dbfabebf15bad88b28aa03f5126863766a8f7f9152a81ce30fef7",
+  "mathtex/multiline.go": "51288ed32c249f1aed95e31b82e52a11c08bc27c56c5090cc382d424a65c3e40",
+  "mathtex/named_operators.go": "3771d39dd91667b09e8a16bdab318576c92f6a212f2bdd4933ee33c64c66f511",
+  "mathtex/operators.go": "d265224b05bf77f5f5fcd1810810addc0704e4340c70f43e0ed44f8987b29ff6",
+  "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+  "mathtex/set_symbols.go": "b0ed62b8a83fdbc43a8258e71cf88baa56e298f40d5df7cab60281648fac1d9a",
+  "mathtex/set_symbols_data.go": "944fd1d67bcaaed6914ff449b6e434cb6f9ea53b41d16c1891bd4de6dff16534",
+  "mathtex/stacks.go": "bd1b7a9e0d9716151340dd122cd141c7ee4b2c6057b27880e82afc164f47aca6",
+  "mathtex/substack.go": "3b07f9635e4e42abdfe6445c72100cd10ffac79ce4427edadf7d42e020949948",
+  "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+  "go.sum": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b"
+}

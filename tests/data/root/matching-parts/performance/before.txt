@@ -1,0 +1,9 @@
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkMatchingFrame-8   	   13705	     20053 ns/op	   65168 B/op	     334 allocs/op
+BenchmarkMatchingFrame-8   	   12229	     18592 ns/op	   65168 B/op	     334 allocs/op
+BenchmarkMatchingFrame-8   	   13862	     17727 ns/op	   65168 B/op	     334 allocs/op
+PASS
+ok  	gomath	1.309s

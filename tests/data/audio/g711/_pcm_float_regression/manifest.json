@@ -1,0 +1,242 @@
+[
+  {
+    "file": "encoding_1_channels_1.wav",
+    "rate": 8000,
+    "channels": 1,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25
+    ]
+  },
+  {
+    "file": "encoding_1_channels_2.wav",
+    "rate": 44100,
+    "channels": 2,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25
+    ]
+  },
+  {
+    "file": "encoding_1_channels_6.wav",
+    "rate": 48000,
+    "channels": 6,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75
+    ]
+  },
+  {
+    "file": "encoding_2_channels_1.wav",
+    "rate": 8000,
+    "channels": 1,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25
+    ]
+  },
+  {
+    "file": "encoding_2_channels_2.wav",
+    "rate": 44100,
+    "channels": 2,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25
+    ]
+  },
+  {
+    "file": "encoding_2_channels_6.wav",
+    "rate": 48000,
+    "channels": 6,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75
+    ]
+  },
+  {
+    "file": "encoding_3_channels_1.wav",
+    "rate": 8000,
+    "channels": 1,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25
+    ]
+  },
+  {
+    "file": "encoding_3_channels_2.wav",
+    "rate": 44100,
+    "channels": 2,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25
+    ]
+  },
+  {
+    "file": "encoding_3_channels_6.wav",
+    "rate": 48000,
+    "channels": 6,
+    "samples": [
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75
+    ]
+  },
+  {
+    "file": "encoding_4_channels_1.wav",
+    "rate": 8000,
+    "channels": 1,
+    "samples": [
+      -1,
+      2.5,
+      -0.25
+    ]
+  },
+  {
+    "file": "encoding_4_channels_2.wav",
+    "rate": 44100,
+    "channels": 2,
+    "samples": [
+      -1,
+      2.5,
+      -0.25,
+      0,
+      0.125,
+      0.25
+    ]
+  },
+  {
+    "file": "encoding_4_channels_6.wav",
+    "rate": 48000,
+    "channels": 6,
+    "samples": [
+      -1,
+      2.5,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75
+    ]
+  },
+  {
+    "file": "encoding_5_channels_1.wav",
+    "rate": 8000,
+    "channels": 1,
+    "samples": [
+      -1,
+      2.5,
+      -0.25
+    ]
+  },
+  {
+    "file": "encoding_5_channels_2.wav",
+    "rate": 44100,
+    "channels": 2,
+    "samples": [
+      -1,
+      2.5,
+      -0.25,
+      0,
+      0.125,
+      0.25
+    ]
+  },
+  {
+    "file": "encoding_5_channels_6.wav",
+    "rate": 48000,
+    "channels": 6,
+    "samples": [
+      -1,
+      2.5,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.75,
+      0.875,
+      -1,
+      -0.75
+    ]
+  }
+]

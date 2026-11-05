@@ -1,0 +1,102 @@
+[
+  {
+    "Source": "GoMath αβ 123 \n AV\tg ",
+    "Style": 0,
+    "Options": {
+      "Size": 0.5,
+      "LineHeight": 1.3,
+      "Color": {
+        "R": 1,
+        "G": 1,
+        "B": 1,
+        "A": 1
+      },
+      "AllowMissing": true
+    },
+    "Metrics": {
+      "Width": 3.608642578125,
+      "Height": 1.227880859375,
+      "Ascent": 0.472412109375,
+      "Descent": 0.10546875,
+      "Lines": 2
+    },
+    "GeometrySHA256": "341a4ab6eca6d1d32ece8c9fbec841a3de6bb369ce5e330b449a70642cd9d900",
+    "PixelSHA256": "07fa975176eeaab092849f787f39f08fc34467efc5461ebe4dea0f416ac42731",
+    "PNG": "case-0.png"
+  },
+  {
+    "Source": "Ag αβ\nVx ",
+    "Style": 1,
+    "Options": {
+      "Size": 0.73,
+      "LineHeight": 1.7,
+      "Color": {
+        "R": 0.2,
+        "G": 0.7,
+        "B": 1,
+        "A": 1
+      },
+      "AllowMissing": true
+    },
+    "Metrics": {
+      "Width": 2.070234375,
+      "Height": 2.0847060546874996,
+      "Ascent": 0.6897216796875,
+      "Descent": 0.153984375,
+      "Lines": 2
+    },
+    "GeometrySHA256": "b430e2de144542d7e9dc1f9ff86daa42cc2bd6921ca7184f9b573bfc05e9f736",
+    "PixelSHA256": "53a2d362d6b871c8ffb0bd1fe971ce1a469d99e36ba61e193f8b0ecbf454c6f8",
+    "PNG": "case-1.png"
+  },
+  {
+    "Source": " A􏿿g ",
+    "Style": 2,
+    "Options": {
+      "Size": 0.5,
+      "LineHeight": 1.3,
+      "Color": {
+        "R": 1,
+        "G": 1,
+        "B": 1,
+        "A": 1
+      },
+      "AllowMissing": true
+    },
+    "Metrics": {
+      "Width": 1.280517578125,
+      "Height": 0.577880859375,
+      "Ascent": 0.472412109375,
+      "Descent": 0.10546875,
+      "Lines": 1
+    },
+    "GeometrySHA256": "b596420a447e428f8da850b93702286bb581e9726ea91b327a5b7bfe992fc65e",
+    "PixelSHA256": "a53235b2d2275051287aff9d52e775d7cd86cf42644200b0aa9fa7d40a3283bd",
+    "PNG": "case-2.png"
+  },
+  {
+    "Source": "\n\t ",
+    "Style": 3,
+    "Options": {
+      "Size": 0.5,
+      "LineHeight": 1.3,
+      "Color": {
+        "R": 1,
+        "G": 1,
+        "B": 1,
+        "A": 1
+      },
+      "AllowMissing": true
+    },
+    "Metrics": {
+      "Width": 0.27783203125,
+      "Height": 1.227880859375,
+      "Ascent": 0.472412109375,
+      "Descent": 0.10546875,
+      "Lines": 2
+    },
+    "GeometrySHA256": "647a31bc669e7993ff033376f08a9cc8abcd78c93a5f806718f6d6f6026e921d",
+    "PixelSHA256": "4d856b7a9008759aff68a0d1cde95b895fb952761719549f339d00d6eda9f543",
+    "PNG": "case-3.png"
+  }
+]

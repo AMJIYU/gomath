@@ -1,0 +1,8 @@
+--- FAIL: TestAllScenesRender (0.02s)
+    --- FAIL: TestAllScenesRender/math-braces (0.00s)
+        scenes_test.go:20: math at rune 25: unsupported command \cdots
+FAIL
+FAIL	gomath/examples/scenes	0.027s
+FAIL
+exit status 1
+exit status 1

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs><style>.odd{clip-rule:evenodd} #s{clip-rule:inherit}</style>
+<path id="s" d="M.05 .1H.95V.9H.05Z M.3 .3H.7V.7H.3Z"/>
+<clipPath id="odd" clipPathUnits="objectBoundingBox"><use class="odd" href="#s"/></clipPath>
+<clipPath id="nz" clipPathUnits="objectBoundingBox"><use href="#s"/></clipPath></defs><rect x="6" y="12" width="50" height="70" fill="#20a0e0" clip-path="url(#odd)"/><rect x="70" y="12" width="50" height="70" fill="#20a0e0" clip-path="url(#nz)"/></svg>

@@ -1,0 +1,5 @@
+=== RUN   TestMotionMeasurements
+    motion_test.go:507: development measurement; opt in with GOMATH_H264_MEASURE=1
+--- SKIP: TestMotionMeasurements (0.00s)
+PASS
+ok  	gomath/internal/h264	0.005s

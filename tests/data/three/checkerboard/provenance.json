@@ -1,0 +1,173 @@
+{
+  "slice": "wave7 checked two-partition checkerboard parametric surface geometry",
+  "status": "frozen",
+  "frozen_at_utc": "2026-11-05T02:51:27.251965+00:00",
+  "validation_scope": "Fresh targeted/full three package validation, including external three_test scene3d integration. No use of wave6 checkpoint as evidence; no claim of a new whole-repository checkpoint.",
+  "runtime": "Only new production three/checkerboard.go. Pure Go fmt/geom; no dependencies, external/native/cgo/process fallback, per-frame callback or cache. No old camera/light/raster/scene3d/root production changes.",
+  "api": {
+    "signature": "func CheckerboardSurface(uMin,uMax,vMin,vMax float64,uSteps,vSteps int,sample func(u,v float64)(geom.Vec3,error)) ([2]*Mesh,error)",
+    "partition": "cell(i,j) belongs to group(i+j)%2; each cell has two real indexed triangles; no material/color bound into geometry",
+    "empty": "Group1 nil only for1x1; skip nil when creating instances/tracks. All errors return [2]*Mesh{}.",
+    "normals_uv": "Global area-weighted incident triangle normals before partition copies; exact shared positions/normals/global UV(i/uSteps,1-j/vSteps), independent group buffers; no periodic weld/pole or polygon repair.",
+    "sampling": "Synchronous v-row/u-column order, exact endpoints, exactly once per node on success; no callback retained. Domain/count errors before callback. Error/nonfinite output stops at node; callback panics including nil translated without payload formatting; degeneracy/canceled normals after complete grid. Callback side effects/time/memory/Goexit/fatal termination not controlled.",
+    "ownership": "Mutable independent Mesh buffers, no alias across groups/constructions; complete authoring before concurrent render. Existing scene3d.New makes immutable copied snapshots.",
+    "limits": {
+      "scope": "API and numerical/resource limits for wave7, not a previous integration checkpoint",
+      "api": "CheckerboardSurface(uMin,uMax,vMin,vMax float64,uSteps,vSteps int,sample func(float64,float64)(geom.Vec3,error)) ([2]*Mesh,error)",
+      "max_steps_per_axis": 256,
+      "max_callback_invocations": 66049,
+      "max_triangles_combined": 131072,
+      "max_used_vertices_combined": 132094,
+      "max_allocated_vertex_capacity_combined": 132098,
+      "max_output_slice_payload_bytes_64bit": 11600000,
+      "max_temporary_slice_payload_bytes_64bit": 4231248,
+      "input_domains": "strictly increasing finite endpoints/span and representably distinct axis nodes",
+      "sampled_positions": "finite components within +/-1e12; degenerate triangle and zero/canceled global normal sums rejected",
+      "grouping": "(uCell+vCell)%2; group1 nil only at1x1; all failures return two nil pointers",
+      "normal_uv_policy": "Full-grid area weighted smooth normals before copying; global UV=(i/uSteps,1-j/vSteps); no periodic seam weld or analytic derivative sampling."
+    },
+    "unsupported": "No decreasing/zero domains, collapsed poles, automatic periodic seam normals, material binding, n-color/VMobject/stroke/jagged/updater/full Surface parity. Folded/self-intersecting geometry is not globally detected or repaired."
+  },
+  "reference": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "source": "manim/mobject/three_d/three_dimensions.py",
+    "source_sha256": "9343af8b6ae55bbe6d8f2fbd240ed0248a178544ee3829d628973839508553a6",
+    "class": "Surface",
+    "method": "set_fill_by_checkerboard",
+    "source_parity_expression": "(face.u_index + face.v_index) % n_colors",
+    "new_api_subset": "two geometric material groups; no VMobject/stroke/default-style parity or matched Manim render claim",
+    "oracle": "Independent Go full-grid coordinate/normal and ray reference plus direct analytic plane cell classification; scene3d TRS and concurrent snapshot references; no reference runtime fallback"
+  },
+  "validation": {
+    "staging": "Production under three/_checkerboard and test files prefixed underscore; central runner with combined Go overlay validated staged geometry/rays/scene/artifacts before promotion. Staging removed; final fresh normal/race used promoted paths.",
+    "suite": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -count=1",
+      "result": "pass",
+      "seconds": 5.144
+    },
+    "race": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -race -count=1",
+      "result": "pass",
+      "seconds": 32.605
+    },
+    "vet": {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./three",
+      "result": "pass"
+    },
+    "build": {
+      "command": "CGO_ENABLED=0 go build -tags noasm ./three",
+      "result": "pass"
+    },
+    "tags": "CGO_ENABLED=0 for tests/build/vet/benchmarks; central runner supplies noasm.",
+    "geometry": "Six cell grids (1x1,skinny,odd/even) at1e-9,1,1e10; expected sampled coordinates/triangles, exact cell parity/two triangles, complete smooth normals/global UVs, exact cross-material seam values, no unused vertices, open periodic seams/reflection orientation.",
+    "callback_numeric": "Exact endpoint/row order, one invocation per node, huge finite parameters, invalid/nonrepresentable/overflow domains and MaxInt counts before callback, returned-error identity/index, panic including hostile payload/nil, NaN/out-of-bounds fail-fast, degenerate triangles/canceled incident normals and complete nil results.",
+    "budgets": "66049 callback max; each max partition66047 vertices/65536 triangles; fragment/light errors plus post-error recovery; scene aggregate snapshot overflow rejected.",
+    "ray_pixels": {
+      "frames": 108,
+      "size": [
+        41,
+        31
+      ],
+      "ssaa": [
+        1,
+        2,
+        4
+      ],
+      "model_frames": 3,
+      "maximum_channel_error_bytes": 1,
+      "coverage": "Plane and nonplane, both projections, clipping, rotation/nonuniform scale/shear/reflection, opaque/alpha/UV mixed alpha, three colored point lights, opaque mesh depth occlusion",
+      "oracle": "Expected full-grid coordinate/normal reconstruction independent of Mesh/builder; explicit affine/cofactor math; Moller-Trumbore camera rays, independent premultiplied sampler/illumination/front-to-back transmittance."
+    },
+    "analytic_plane_pixels": {
+      "frames": 3,
+      "size": [
+        31,
+        23
+      ],
+      "ssaa": [
+        1,
+        2,
+        4
+      ],
+      "maximum_channel_error_bytes": 1,
+      "oracle": "Direct plane hit/cell floor parity classifier; no triangles, normals or barycentric input."
+    },
+    "scene3d": {
+      "frames": 14,
+      "size": [
+        43,
+        31
+      ],
+      "projections": [
+        "perspective",
+        "orthographic"
+      ],
+      "ssaa": 2,
+      "times": [
+        0,
+        0.1,
+        0.37,
+        1,
+        1.73,
+        1.9,
+        2
+      ],
+      "oracle": "Independent trigonometric Rodrigues TRS, camera interpolation and ray frames; visibility endpoints; no bitmap substitute.",
+      "isolation": "Corrupt mesh buffers, pose/camera/material/visibility/light authoring and texture-source pixels after New; eight readers sample out of order, check exact frozen pixels/stable bitmap ID and frame independence. No callback reevaluation. Nil group authoring and snapshot budget checked."
+    },
+    "concurrency": "Eight constructors/render readers, no group/construction aliasing, exact triangle/instance order independence.",
+    "legacy": "All16 preexisting three production files retain fresh initial hashes; existing legacy pixel/geometry tests pass; no golden overwritten.",
+    "artifacts": {
+      "command": "GOMATH_CHECKERBOARD_ARTIFACTS=\"$PWD/tests/data/three/checkerboard\" CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^TestCheckerboardArtifacts$' -count=1 -v",
+      "result": "pass,0.242s; final source image and independent expected verified/visually inspected",
+      "path": "tests/data/three/checkerboard/checkerboard-surfaces.png",
+      "layout": "Plane/curved columns; opaque geometric parity, affine/texture alpha/pointlights, independent rays rows;240x180 per panel SSAA2."
+    }
+  },
+  "benchmarks": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^$' -bench '^(BenchmarkBuildCheckerboard|BenchmarkRenderCheckerboard)$' -benchmem -benchtime=300ms -count=3 -p 1",
+    "result": "pass,7.328s",
+    "environment": "Go1.27.3 darwin/arm64 Apple M2 16GiB GOMAXPROCS8 CGO0/noasm",
+    "load": "Serial -p1 after own race; shared host external load uncontrolled; bounded observations only, no library speedup claim.",
+    "construction_scope": "32x32 and256x256; full checking, polynomial callback grid, normals, remaps/output, final Validate; output escapes, no cache.",
+    "render_scope": "One16x12 surface as two materials,438vertices/384triangles,320x240 perspective, rotation1.13/nonuniform scale/reflection/shear; default opaque directional or13x9 mixed-alpha bilinear textures/material alpha137/181/three pointlights; SSAA1/2. Includes fresh buffers/validation/transforms/clipping/shading/depth/alpha/resolve; excludes assets, renderer, independent refs, scene3d wrapping, encoding/I/O.",
+    "summary_file": "tests/data/three/checkerboard/benchmark-summary.json",
+    "construction_median_ms": {
+      "32x32": 0.138146,
+      "256x256": 8.895622
+    },
+    "render_median_ms": {
+      "opaque_ssaa1": 0.658048,
+      "opaque_ssaa2": 3.206875,
+      "uv_alpha_lights_ssaa1": 1.972599,
+      "uv_alpha_lights_ssaa2": 8.389648
+    }
+  },
+  "owned_source_sha256": {
+    "three/checkerboard.go": "0ca24c17b76f34fefde1bd899c6f7bca3cb058104ee8721aa0a6c2bf296061ff",
+    "tests/_cases/three/checkerboard_geometry_test.go": "d4d7f9256c7950ae089fbb40788b5a4a5320a4e4b7e59b97b50979ed7c9ed0b5",
+    "tests/_cases/three/checkerboard_reference_test.go": "360f1e4598a6b3d7a07eb274bc4c3335c14cf169d08d3cf230ac2f4fc56445e8",
+    "tests/_cases/three/checkerboard_render_test.go": "23b8476718a3bd797752e62a5be44ab332a4d7c677e7e190e2bf14707f80133b",
+    "tests/_cases/three/checkerboard_scene_test.go": "3943ef1fb2f5dda639c4100d26dfb102a91e3a37a77e2bea61a00a3aa5da3548",
+    "tests/_cases/three/checkerboard_artifacts_test.go": "affb2db544625a240f427f4e0dd7105178ebebb1c1a783ccb6639ae1e463f98d",
+    "docs/CHECKERBOARD_SURFACES.md": "e040527ad4b75036eeaa57bdae21d99c77802ad9c528c2d25b6475f430f33f5e"
+  },
+  "evidence_sha256": {
+    "tests/data/three/checkerboard/artifacts.txt": "8107f2ea094372d855d7721080026296ce23bf4853ca33aba6e24b88807a5c9a",
+    "tests/data/three/checkerboard/benchmark-summary.json": "1b8b7d5a9a56c4230ba108ca90108b5b9714bd0fe620007afecd8e7cb5224bb7",
+    "tests/data/three/checkerboard/benchmark.txt": "18f9225f759373538d892632c34499ae85349df48b6e2b4cc94e0bc30fc33a16",
+    "tests/data/three/checkerboard/build.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/checkerboard/checkerboard-surfaces.png": "e9f88eff0777ce03c7a83d18c52e306299fb37edc2fe8e0fd7248fe35b37137e",
+    "tests/data/three/checkerboard/environment.txt": "8794bec74cede76629e079abf627ec6324e9459712fe79bb2718d63e1fddab6d",
+    "tests/data/three/checkerboard/legacy-before.json": "33597b809b11a6b9408629ba3b8501ae0dbbdf4b3038b4bdb2b1e20dd30592a2",
+    "tests/data/three/checkerboard/legacy-source-preservation.json": "543cc9dbd55ca3e196519f34b3a05276cdc3f89fe3356797cab34ef739250de3",
+    "tests/data/three/checkerboard/limits.json": "518b210b41d85c631a9325b69f06de2caa3aa08cd7722f9933638cb32cae5acc",
+    "tests/data/three/checkerboard/native-dependencies.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/checkerboard/race.txt": "8372cdb396491015feefb205cfedad15095e69041c0af0daa510a3935945ea01",
+    "tests/data/three/checkerboard/reference-provenance.json": "9d02516fa9f8e920fa8379c312c6013c24d28e8b49e34bf4e23e7909c79f25ad",
+    "tests/data/three/checkerboard/staged-final.txt": "9beeb4f49cc597027f7061905f35b6af9f01a4632f27b017ebcfa44ac1c5e633",
+    "tests/data/three/checkerboard/staged-tests.txt": "3acf3b47fd84e59819e7184047f6363718db9d5178d4fe462ebb6b54063f1e80",
+    "tests/data/three/checkerboard/suite.txt": "67e5262788bb2d18b94d2466b51186b4ab6f94b27e236c1d833b17aac4d272a8",
+    "tests/data/three/checkerboard/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

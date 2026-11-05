@@ -1,0 +1,815 @@
+{
+  "provenance": "Development-only fontTools / manual operand / CairoSVG reference.\n\nIndependent source outlines and analytical boxes under the documented finite\npolicy. No Go output read; no full TeX/Manim layout or animation oracle claim.\nThe Go fonts retain the Bigelow & Holmes notices in LICENSES/go-fonts.txt.\n",
+  "generator_sha256": "e2b7bd84382f085706724e3a2b4b193f3375a587c22b0e80b711a42f46635217",
+  "versions": {
+    "Python": "3.11.5",
+    "fontTools": "4.45.1",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4"
+  },
+  "fonts": [
+    {
+      "file": "Go-Regular.ttf",
+      "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold.ttf",
+      "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Italic.ttf",
+      "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold-Italic.ttf",
+      "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+      "units_per_em": 2048
+    }
+  ],
+  "coordinates": {
+    "width": 512,
+    "height": 384,
+    "ppem": 128,
+    "origin": [
+      64,
+      192
+    ]
+  },
+  "policy": {
+    "box_padding": 0.2,
+    "stroke": 0.045,
+    "index_ratio": 0.5,
+    "index_right": 0.18,
+    "index_bottom_min": 0.28,
+    "index_top_ratio": 0.55
+  },
+  "records": [
+    {
+      "name": "indexed-0",
+      "kind": "indexed",
+      "style": 0,
+      "source": "\\color{green}\\sqrt[\\textcolor{red}{n}]{\\textcolor{blue}{g}}",
+      "width": 1.229228515625,
+      "height": 0.6644921874999999,
+      "depth": 0.287578125,
+      "placements": [
+        {
+          "role": "Radicand",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.600576171875,
+          "baseline": 0,
+          "bbox": [
+            0.645986328125,
+            -0.205078125,
+            1.084462890625,
+            0.5419921875
+          ]
+        },
+        {
+          "role": "RootIndex",
+          "letter": "n",
+          "ratio": 0.5,
+          "color": "ff0000",
+          "x": 0.022499999999999964,
+          "baseline": 0.353095703125,
+          "bbox": [
+            0.060097656249999964,
+            0.353095703125,
+            0.26590820312499996,
+            0.6240917968749999
+          ]
+        }
+      ],
+      "svg_sha256": "8264a3844ca38fb67dab06e78c7c231ee98473c6e0108e6576aa754f401238fe",
+      "png_sha256": "1ac843267854c73d8e4a31eca938d50cf9074c2c7275d8639451751788f18e6e"
+    },
+    {
+      "name": "boxed-0",
+      "kind": "boxed",
+      "style": 0,
+      "source": "\\color{green}\\boxed{\\textcolor{blue}{g}}",
+      "width": 1.04615234375,
+      "height": 0.7869921875,
+      "depth": 0.450078125,
+      "placements": [
+        {
+          "role": "BoxedBody",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.245,
+          "baseline": 0,
+          "bbox": [
+            0.29041015625,
+            -0.205078125,
+            0.72888671875,
+            0.5419921875
+          ]
+        }
+      ],
+      "svg_sha256": "a743a512deb98fcac0f04833d49ee50952fdec48d0b52424f3ca6cbe647754e4",
+      "png_sha256": "539b60f60e11b12038146640be8a2eb7a76b496b5776d5dc3a72c677caf20db7"
+    },
+    {
+      "name": "phantom-0",
+      "kind": "phantom",
+      "style": 0,
+      "source": "\\textcolor{red}{A}\\phantom{g}\\textcolor{blue}{B}",
+      "width": 1.97013671875,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.30314453125,
+          "baseline": 0,
+          "bbox": [
+            1.3837109375,
+            0.0,
+            1.90421875,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "ba7072b3899278212e8d94e56558219b37bf9ad45bbe320360d46b352935de7e",
+      "png_sha256": "fab282110c550aa64adab2973193cad0a2cd3ac152525b796c6600cbf40014b2"
+    },
+    {
+      "name": "hphantom-0",
+      "kind": "hphantom",
+      "style": 0,
+      "source": "\\textcolor{red}{A}\\hphantom{g}\\textcolor{blue}{B}",
+      "width": 1.97013671875,
+      "height": 0.72265625,
+      "depth": 0,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.30314453125,
+          "baseline": 0,
+          "bbox": [
+            1.3837109375,
+            0.0,
+            1.90421875,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "ba7072b3899278212e8d94e56558219b37bf9ad45bbe320360d46b352935de7e",
+      "png_sha256": "fab282110c550aa64adab2973193cad0a2cd3ac152525b796c6600cbf40014b2"
+    },
+    {
+      "name": "vphantom-0",
+      "kind": "vphantom",
+      "style": 0,
+      "source": "\\textcolor{red}{A}\\vphantom{g}\\textcolor{blue}{B}",
+      "width": 1.413984375,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.00927734375,
+            0.0,
+            0.6552734375,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.7469921875,
+          "baseline": 0,
+          "bbox": [
+            0.82755859375,
+            0.0,
+            1.34806640625,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "6a76a677e409415a543791b165b946e113b8c886419432444c069f93fe59ab8f",
+      "png_sha256": "16a3f8042125a5e5aea7162760cf370705a970aba813cd1af73b55e3d5fb43df"
+    },
+    {
+      "name": "indexed-1",
+      "kind": "indexed",
+      "style": 1,
+      "source": "\\color{green}\\sqrt[\\textcolor{red}{n}]{\\textcolor{blue}{g}}",
+      "width": 1.311259765625,
+      "height": 0.6708398437499999,
+      "depth": 0.287578125,
+      "placements": [
+        {
+          "role": "Radicand",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.627919921875,
+          "baseline": 0,
+          "bbox": [
+            0.666982421875,
+            -0.205078125,
+            1.166494140625,
+            0.54833984375
+          ]
+        },
+        {
+          "role": "RootIndex",
+          "letter": "n",
+          "ratio": 0.5,
+          "color": "ff0000",
+          "x": 0.022499999999999964,
+          "baseline": 0.35658691406250004,
+          "bbox": [
+            0.058632812499999964,
+            0.35658691406250004,
+            0.29496093749999996,
+            0.6307568359375
+          ]
+        }
+      ],
+      "svg_sha256": "ed5e692a15a30fb621fe3cfc34658d6639fb04b1d93a0acf326e8d724fe9cccd",
+      "png_sha256": "7345272bc793fd019ce2b615fb947997249b46cd30ee0b0684e3e39943e74cb1"
+    },
+    {
+      "name": "boxed-1",
+      "kind": "boxed",
+      "style": 1,
+      "source": "\\color{green}\\boxed{\\textcolor{blue}{g}}",
+      "width": 1.10083984375,
+      "height": 0.79333984375,
+      "depth": 0.450078125,
+      "placements": [
+        {
+          "role": "BoxedBody",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.245,
+          "baseline": 0,
+          "bbox": [
+            0.2840625,
+            -0.205078125,
+            0.78357421875,
+            0.54833984375
+          ]
+        }
+      ],
+      "svg_sha256": "441d389f0415601aee76a809549ad83b5a8221d127a5f8f3965bbbc48acb6c1d",
+      "png_sha256": "9a3190d6e2afc1ad017659f396b412d4f65b83eddbb10bbb2d7fff8f438251b7"
+    },
+    {
+      "name": "phantom-1",
+      "kind": "phantom",
+      "style": 1,
+      "source": "\\textcolor{red}{A}\\phantom{g}\\textcolor{blue}{B}",
+      "width": 2.13517578125,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.4130078125,
+          "baseline": 0,
+          "bbox": [
+            1.49748046875,
+            0.0,
+            2.09953125,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "c49a984eb7a70496c2ebfb1ae13479a73ff985593fe3d14690e8b8962a1d90de",
+      "png_sha256": "3174a8403073475dba531e2a0d5db6b87c871a6b75f38faaee516e8ca2cbb7ae"
+    },
+    {
+      "name": "hphantom-1",
+      "kind": "hphantom",
+      "style": 1,
+      "source": "\\textcolor{red}{A}\\hphantom{g}\\textcolor{blue}{B}",
+      "width": 2.13517578125,
+      "height": 0.72265625,
+      "depth": 0,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.4130078125,
+          "baseline": 0,
+          "bbox": [
+            1.49748046875,
+            0.0,
+            2.09953125,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "c49a984eb7a70496c2ebfb1ae13479a73ff985593fe3d14690e8b8962a1d90de",
+      "png_sha256": "3174a8403073475dba531e2a0d5db6b87c871a6b75f38faaee516e8ca2cbb7ae"
+    },
+    {
+      "name": "vphantom-1",
+      "kind": "vphantom",
+      "style": 1,
+      "source": "\\textcolor{red}{A}\\vphantom{g}\\textcolor{blue}{B}",
+      "width": 1.5243359375,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.80216796875,
+          "baseline": 0,
+          "bbox": [
+            0.886640625,
+            0.0,
+            1.48869140625,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "2af957bcc93d0b9791bf005ccdf04097170d1a06312d26c68f5f5df2ffbfd937",
+      "png_sha256": "e2920685dd723ed62607f2d6cb769d3dca612d235f2aeee7ea82c75a9650cf46"
+    },
+    {
+      "name": "indexed-2",
+      "kind": "indexed",
+      "style": 2,
+      "source": "\\color{green}\\sqrt[\\textcolor{red}{n}]{\\textcolor{blue}{g}}",
+      "width": 1.2772329313858697,
+      "height": 0.6644921874999999,
+      "depth": 0.287578125,
+      "placements": [
+        {
+          "role": "Radicand",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.6095180876358696,
+          "baseline": 0,
+          "bbox": [
+            0.6280727751358696,
+            -0.205078125,
+            1.2047329313858697,
+            0.5419921875
+          ]
+        },
+        {
+          "role": "RootIndex",
+          "letter": "n",
+          "ratio": 0.5,
+          "color": "ff0000",
+          "x": 0.022499999999999964,
+          "baseline": 0.353095703125,
+          "bbox": [
+            0.06278320312499996,
+            0.353095703125,
+            0.3095180876358695,
+            0.6240917968749999
+          ]
+        }
+      ],
+      "svg_sha256": "003a34793a80b98011e9ff2d110601eea85f5c3cbdd37f6dafbdab631b2b9486",
+      "png_sha256": "e531d40b23c28a3f9a2dcbb701299ea01b7560245d75f8083ccb44a480042582"
+    },
+    {
+      "name": "boxed-2",
+      "kind": "boxed",
+      "style": 2,
+      "source": "\\color{green}\\boxed{\\textcolor{blue}{g}}",
+      "width": 1.08521484375,
+      "height": 0.7869921875,
+      "depth": 0.450078125,
+      "placements": [
+        {
+          "role": "BoxedBody",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.245,
+          "baseline": 0,
+          "bbox": [
+            0.2635546875,
+            -0.205078125,
+            0.84021484375,
+            0.5419921875
+          ]
+        }
+      ],
+      "svg_sha256": "a3a1ef60a876dc0d6caa395436546c16e35036765d47656720a169d829368235",
+      "png_sha256": "d73e303cdbd2b400ea650cbb4facd8954d02e2c89e34e3193c2e6d7baa99fb87"
+    },
+    {
+      "name": "phantom-2",
+      "kind": "phantom",
+      "style": 2,
+      "source": "\\textcolor{red}{A}\\phantom{g}\\textcolor{blue}{B}",
+      "width": 2.046604989035088,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.0146484375,
+            0.0,
+            0.66064453125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.35294921875,
+          "baseline": 0,
+          "bbox": [
+            1.43888671875,
+            0.0,
+            2.046604989035088,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "88ce6f9667f7cfbba54b6022107eff91988bfc1791a8e1d34726ab128a455850",
+      "png_sha256": "1b1f369aa863f3f6511c4813d5c5912672ec93fc1e8b8d12fdb02770a1d6276f"
+    },
+    {
+      "name": "hphantom-2",
+      "kind": "hphantom",
+      "style": 2,
+      "source": "\\textcolor{red}{A}\\hphantom{g}\\textcolor{blue}{B}",
+      "width": 2.046604989035088,
+      "height": 0.72265625,
+      "depth": 0,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.0146484375,
+            0.0,
+            0.66064453125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.35294921875,
+          "baseline": 0,
+          "bbox": [
+            1.43888671875,
+            0.0,
+            2.046604989035088,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "88ce6f9667f7cfbba54b6022107eff91988bfc1791a8e1d34726ab128a455850",
+      "png_sha256": "1b1f369aa863f3f6511c4813d5c5912672ec93fc1e8b8d12fdb02770a1d6276f"
+    },
+    {
+      "name": "vphantom-2",
+      "kind": "vphantom",
+      "style": 2,
+      "source": "\\textcolor{red}{A}\\vphantom{g}\\textcolor{blue}{B}",
+      "width": 1.4513901452850877,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.0146484375,
+            0.0,
+            0.66064453125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.757734375,
+          "baseline": 0,
+          "bbox": [
+            0.843671875,
+            0.0,
+            1.4513901452850877,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "b7503ed5b6040a386eb2b753ee9a86ed87810c047084fa3cbd9d60502c4f2002",
+      "png_sha256": "69c1c10220b801ad7e8b9cc0d2349256981424dcbd6b7feab5e01672294da1f5"
+    },
+    {
+      "name": "indexed-3",
+      "kind": "indexed",
+      "style": 3,
+      "source": "\\color{green}\\sqrt[\\textcolor{red}{n}]{\\textcolor{blue}{g}}",
+      "width": 1.3539691162109375,
+      "height": 0.6708398437499999,
+      "depth": 0.287578125,
+      "placements": [
+        {
+          "role": "Radicand",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.6359613037109375,
+          "baseline": 0,
+          "bbox": [
+            0.6628167724609375,
+            -0.205078125,
+            1.2814691162109375,
+            0.54833984375
+          ]
+        },
+        {
+          "role": "RootIndex",
+          "letter": "n",
+          "ratio": 0.5,
+          "color": "ff0000",
+          "x": 0.022499999999999964,
+          "baseline": 0.35658691406250004,
+          "bbox": [
+            0.058632812499999964,
+            0.35658691406250004,
+            0.33596130371093746,
+            0.6307568359375
+          ]
+        }
+      ],
+      "svg_sha256": "363ce32bf098ebc12549afa4699551db634badfea883594a7e981f3de39b7bce",
+      "png_sha256": "3443d68b7fc05cafc68b9e431e2b596d4c27857ff882227c6a03a0fb5d95fd85"
+    },
+    {
+      "name": "boxed-3",
+      "kind": "boxed",
+      "style": 3,
+      "source": "\\color{green}\\boxed{\\textcolor{blue}{g}}",
+      "width": 1.1355078125,
+      "height": 0.79333984375,
+      "depth": 0.450078125,
+      "placements": [
+        {
+          "role": "BoxedBody",
+          "letter": "g",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.245,
+          "baseline": 0,
+          "bbox": [
+            0.27185546875,
+            -0.205078125,
+            0.8905078125,
+            0.54833984375
+          ]
+        }
+      ],
+      "svg_sha256": "97dbf85746c3d593d078ef3962b57e330812832fd0e6fe90020dbd4a8c81a6a0",
+      "png_sha256": "fdab5613697161a6ba5dcc8b2283b90292145af5bea26c37721831cc43989fde"
+    },
+    {
+      "name": "phantom-3",
+      "kind": "phantom",
+      "style": 3,
+      "source": "\\textcolor{red}{A}\\phantom{g}\\textcolor{blue}{B}",
+      "width": 2.2203050915948275,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.44767578125,
+          "baseline": 0,
+          "bbox": [
+            1.5321484375,
+            0.0,
+            2.2203050915948275,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "f58a8aff8883e201c6936299acdc37433dffe135cc0e38d0dee93de967d24197",
+      "png_sha256": "41571ed4d98e356e66b8c23af5477c59b06311659c88f12d6d5fc73c9b5fd5ac"
+    },
+    {
+      "name": "hphantom-3",
+      "kind": "hphantom",
+      "style": 3,
+      "source": "\\textcolor{red}{A}\\hphantom{g}\\textcolor{blue}{B}",
+      "width": 2.2203050915948275,
+      "height": 0.72265625,
+      "depth": 0,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 1.44767578125,
+          "baseline": 0,
+          "bbox": [
+            1.5321484375,
+            0.0,
+            2.2203050915948275,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "f58a8aff8883e201c6936299acdc37433dffe135cc0e38d0dee93de967d24197",
+      "png_sha256": "41571ed4d98e356e66b8c23af5477c59b06311659c88f12d6d5fc73c9b5fd5ac"
+    },
+    {
+      "name": "vphantom-3",
+      "kind": "vphantom",
+      "style": 3,
+      "source": "\\textcolor{red}{A}\\vphantom{g}\\textcolor{blue}{B}",
+      "width": 1.5747972790948275,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "placements": [
+        {
+          "role": "A",
+          "letter": "A",
+          "ratio": 1,
+          "color": "ff0000",
+          "x": 0,
+          "baseline": 0,
+          "bbox": [
+            0.005859375,
+            0.0,
+            0.7158203125,
+            0.72265625
+          ]
+        },
+        {
+          "role": "B",
+          "letter": "B",
+          "ratio": 1,
+          "color": "0000ff",
+          "x": 0.80216796875,
+          "baseline": 0,
+          "bbox": [
+            0.886640625,
+            0.0,
+            1.5747972790948275,
+            0.72265625
+          ]
+        }
+      ],
+      "svg_sha256": "9b5ecaf31cb834f6f40d73ca80908a454543039fc712a5626965e38bdb261a09",
+      "png_sha256": "c1ae197c854d02e821d4f1b1a5ed184a1a165bdce38572fbfc992706a860a95f"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs>
+      <clipPath id="c" transform="translate(64 48) rotate(-17)">
+        <path d="M-36 -24H36V24H-36Z M-12 -9V9H12V-9Z"/>
+      </clipPath>
+      <image id="im" x="-70" y="-55" width="140" height="110"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAJUlEQVR4nGN8UKCwhYECwESJ5lEDIICJgULANGoAw6gBDJQbAADy2AJEj3/y9gAAAABJRU5ErkJggg=="/>
+      </defs><g clip-path="url(#c)" opacity=".6">
+        <use href="#im" transform="translate(64 48) matrix(1 .06 .1 1 0 0)"/>
+      </g></svg>

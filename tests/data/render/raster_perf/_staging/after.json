@@ -1,0 +1,24 @@
+{
+  "Replace": {
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/supersampling_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/supersampling_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/fill_rule_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/fill_rule_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/fill_rule_internal_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/fill_rule_internal_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/clip_evenodd_internal_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/clip_evenodd_internal_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/supersampling_reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/supersampling_reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/dash_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/dash_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/camera_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/camera_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/clip_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/clip_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/gradient_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/gradient_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/dash_reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/dash_reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/partial_glyph_aa_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/partial_glyph_aa_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/clip_benchmark_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/clip_benchmark_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/bitmap_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/bitmap_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/render_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/render_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/raster_perf_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/raster_perf_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/clip_evenodd_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/clip_evenodd_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/stroke_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/render/stroke_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/raster.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/render/raster_perf/_staging/raster.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/render/clip.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/render/raster_perf/_staging/clip.go"
+  }
+}

@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/render
+cpu: Apple M2
+BenchmarkRasterPerfMixed/ordinary         	      30	  11223085 ns/op	 2382891 B/op	     405 allocs/op
+BenchmarkRasterPerfMixed/ordinary         	      33	  10326528 ns/op	 2382893 B/op	     405 allocs/op
+BenchmarkRasterPerfMixed/ordinary         	      36	  11468375 ns/op	 2382893 B/op	     405 allocs/op
+BenchmarkRasterPerfMixed/ordinary         	      28	  13092446 ns/op	 2382892 B/op	     405 allocs/op
+BenchmarkRasterPerfMixed/ordinary         	      31	  10329288 ns/op	 2382890 B/op	     405 allocs/op
+BenchmarkRasterPerfMixed/complex          	      25	  14066933 ns/op	 3261116 B/op	    2025 allocs/op
+BenchmarkRasterPerfMixed/complex          	      25	  14126080 ns/op	 3261116 B/op	    2025 allocs/op
+BenchmarkRasterPerfMixed/complex          	      25	  15117428 ns/op	 3261117 B/op	    2025 allocs/op
+BenchmarkRasterPerfMixed/complex          	      24	  16388259 ns/op	 3261116 B/op	    2025 allocs/op
+BenchmarkRasterPerfMixed/complex          	      24	  14391396 ns/op	 3261115 B/op	    2025 allocs/op
+PASS

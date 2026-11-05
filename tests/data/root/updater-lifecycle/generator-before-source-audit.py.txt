@@ -1,0 +1,64 @@
+"""Pinned Manim object update/suspension unit states, development-only.
+
+This is not a general Scene/dt scheduling oracle. Each sample reconstructs a
+fresh family and performs Animation.begin/interpolate/finish then Mobject.update
+with an explicitly supplied absolute clock. It never reads Go output.
+"""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+import manim
+import numpy as np
+from manim import VMobject, VGroup, Transform, linear
+
+root = Path(__file__).resolve().parents[2]
+reference = root.parent / "manim"
+commit = "16ea443e2a5f1d79db0a721161411ce916d6e733"
+assert subprocess.check_output(["git", "-C", str(reference), "rev-parse", "HEAD"], text=True).strip() == commit
+assert manim.__version__ == "0.22.1"
+out = Path(sys.argv[1]); assert not out.exists()
+base = np.array([[-.5, -.35, 0], [.5, -.35, 0], [.5, .35, 0], [-.5, .35, 0], [-.5, -.35, 0]])
+cases = []
+for kind in ["single", "ordered", "child-parent", "parent-child", "read-target", "manual-suspended", "manual-removed", "no-animation"]:
+    animated = kind not in {"manual-suspended", "manual-removed", "no-animation"}
+    for automatic in ([True, False] if animated else [True]):
+        states = []
+        for alpha in [0., .125, .25, .5, .75, .875, 1.]:
+            a = VMobject().set_points_as_corners(base).shift(np.array([-1., 0, 0]))
+            b = VMobject().set_points_as_corners(base).shift(np.array([1., 0, 0]))
+            parent = VGroup(a, b)
+            target = b if kind == "read-target" else parent if kind == "parent-child" else a
+            def updater(obj):
+                if kind == "parent-child":
+                    obj.shift(np.array([.2*alpha, .1*alpha, 0]))
+                else:
+                    obj.move_to(np.array([alpha, .2, 0]))
+            target.add_updater(updater)
+            if kind == "ordered":
+                target.add_updater(lambda obj: obj.shift(np.array([.3*alpha, .1, 0])))
+            if kind == "manual-suspended":
+                target.suspend_updating()
+            if kind == "manual-removed":
+                target.remove_updater(updater)
+            if animated:
+                subject = parent if kind == "child-parent" else a
+                destination = b if kind == "read-target" else subject.copy().shift(np.array([.8, .4, 0]))
+                animation = Transform(subject, destination, rate_func=linear, suspend_mobject_updating=automatic)
+                animation.begin(); animation.interpolate(alpha)
+                if alpha == 1:
+                    animation.finish()
+            parent.update(0)
+            states.append({"alpha": alpha, "points": parent.get_all_points().tolist()})
+        cases.append({"kind": kind, "automatic": automatic, "states": states})
+out.parent.mkdir(parents=True, exist_ok=True)
+result = {"source": {"version": manim.__version__, "commit": commit,
+    "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    "files": {p: hashlib.sha256((reference/p).read_bytes()).hexdigest() for p in
+        ["manim/animation/animation.py", "manim/mobject/mobject.py"]}},
+    "scope": "13 independently reconstructed object-update/animation-suspension cases and91 ordered complete control states; explicit absolute clock, not general Manim Scene, registration timeline or dt history parity.",
+    "cases": cases}
+with out.open("x") as f: json.dump(result, f, indent=2); f.write("\n")
+print(len(cases), "cases", sum(len(c["states"]) for c in cases), "states")

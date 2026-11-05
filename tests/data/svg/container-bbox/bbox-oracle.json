@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "name": "sheared-cubic",
+      "bbox": [
+        8,
+        6,
+        68.17627457812104,
+        45
+      ],
+      "method": "analytic cubic derivative root (1+sqrt(5))/4"
+    },
+    {
+      "name": "display-visibility",
+      "bbox": [
+        4,
+        10,
+        116,
+        65
+      ],
+      "method": "explicit union; display excluded, visibility/opacity included"
+    },
+    {
+      "name": "use-chain",
+      "bbox": [
+        20.1,
+        19.5,
+        72.60000000000001,
+        58.5
+      ],
+      "method": "explicit affine placement; source ancestors excluded; use shadow selector boundary"
+    },
+    {
+      "name": "text-cells",
+      "bbox": [
+        21.9794921875,
+        31.544921875,
+        84.041015625,
+        32.361328125
+      ],
+      "method": "fontTools hmtx/hhea full glyph cells with advance anchor"
+    },
+    {
+      "name": "text-end",
+      "bbox": [
+        18.869140625,
+        31.544921875,
+        45.130859375,
+        32.361328125
+      ],
+      "method": "fontTools hmtx/hhea full glyph cells with advance anchor"
+    },
+    {
+      "name": "tspan-kern",
+      "font": "kern",
+      "bbox": [
+        28.05078125,
+        31.544921875,
+        26.455078125,
+        32.361328125
+      ],
+      "method": "fontTools original kern table across tspan ownership boundary"
+    },
+    {
+      "name": "space-only",
+      "bbox": [
+        20.0,
+        27.32421875,
+        20.00390625,
+        27.73828125
+      ],
+      "method": "full glyph cells; whitespace with no outlines remains geometry"
+    },
+    {
+      "name": "bearing-and-space",
+      "bbox": [
+        20.0,
+        27.32421875,
+        51.43359375,
+        27.73828125
+      ],
+      "method": "full glyph cells; whitespace with no outlines remains geometry"
+    },
+    {
+      "name": "group-text-shear",
+      "bbox": [
+        19.9296875,
+        25.32421875,
+        63.126562500000006,
+        27.73828125
+      ],
+      "method": "fontTools glyph cells transformed independently into ancestor space"
+    },
+    {
+      "name": "group-image",
+      "bbox": [
+        10,
+        8,
+        100,
+        80
+      ],
+      "method": "SVG image viewport before meet placement"
+    }
+  ],
+  "animation": [
+    {
+      "time": 0.0,
+      "svg_matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "time": 0.25,
+      "svg_matrix": [
+        0.95,
+        0.03,
+        -0.025,
+        1.0125,
+        2.5,
+        -0.75
+      ]
+    },
+    {
+      "time": 0.5,
+      "svg_matrix": [
+        0.9,
+        0.06,
+        -0.05,
+        1.025,
+        5.0,
+        -1.5
+      ]
+    },
+    {
+      "time": 0.75,
+      "svg_matrix": [
+        0.85,
+        0.09,
+        -0.07500000000000001,
+        1.0375,
+        7.5,
+        -2.25
+      ]
+    },
+    {
+      "time": 1.0,
+      "svg_matrix": [
+        0.8,
+        0.12,
+        -0.1,
+        1.05,
+        10.0,
+        -3.0
+      ]
+    }
+  ]
+}

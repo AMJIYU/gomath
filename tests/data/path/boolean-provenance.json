@@ -1,0 +1,24 @@
+{
+  "generator": "tests/reference/path_boolean.py",
+  "generator_sha256": "82ab129c14f9d3691c80814a305c39a54ca02080bb580f26de2ea9246b2ca14e",
+  "source": "manim/manim/mobject/geometry/boolean_ops.py",
+  "source_sha256": "4df9f5fe270f93aa4f0041b3d4fc762f880f0ee71af04a1f196571566674c9f2",
+  "manim_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "python": "3.11.5",
+  "pathops": "0.9.2",
+  "cairosvg": "2.7.1",
+  "cairo": "1.18.4",
+  "method": "Skia pathops filled polygon operations; output polygons rasterized independently by CairoSVG/Cairo, 128x128 straight sRGB fill #4080c0 on transparency, y-up view [-8,8] after translation.",
+  "scope": "Source-pinned Manim backend comparison only, not a Manim animation or Bezier parity claim. Skia uses float32; exact rational/subnormal/rounding failures use separate Go tests. Moderate integer/dyadic fixtures and off-boundary sample grid avoid oracle precision ambiguity.",
+  "fixtures_sha256": {
+    "boolean-oracle.json": "5865f30d2dbda01bf65d4b4fc56e3b3d7f8d415cdd0deabf7a0dc04db59cc15f",
+    "boolean-difference.png": "85d3ec9ae93d975e279db8e664429513693889413fcc5e26570bb908b76c622e",
+    "boolean-intersection.png": "339e0aeba44f7d1d114ebf4126be2718227c0a82c1b21432dab716d34ec192a8",
+    "boolean-union.png": "c0641e73d0cb0659349b4d902765d7ac93a33f37ce7a7d019a2e079107ec0b76",
+    "boolean-xor.png": "c7b554bd6cf5cad4aab78ad70236e857ef6c1fdb11f3272ffd9a7377c5aff914",
+    "boolean-difference.svg": "c3ded09e17dfd07408535d08d1f2718e5168ce68119609c6d3965396047339fd",
+    "boolean-intersection.svg": "e020847f43a3cf0cf2000510586d1022f95c531905b948e7a4c4dc35cf207695",
+    "boolean-union.svg": "3e606fdd4a6534009bec57a3fc49d66bad3e4dec85f603882b8ffa3c95991e9c",
+    "boolean-xor.svg": "9db2ee73fc997035f6fc830744692f0b2a940605487dd4d388c119bbd5135472"
+  }
+}

@@ -1,0 +1,5 @@
+=== RUN   TestRotationContactSheet
+    rotation_workload_test.go:64: 320x240 SSAA2 [0 .5 1 1.5 2], 2400 points and 4140 mesh triangles, independent shortest-arc mesh/point orientations, deforming torus normals/UV/material and point buffers, signed scales/camera motion
+--- PASS: TestRotationContactSheet (0.16s)
+PASS
+ok  	gomath/scene3d	0.165s

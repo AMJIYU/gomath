@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs transform="translate(800 800)">
+      <clipPath id="c" clipPathUnits="userSpaceOnUse" transform="translate(4 3) rotate(11 35 25)">
+        <path d="M4 3H68V49H4Z M20 15V35H49V15Z" transform="matrix(1 .1 .18 1 0 0)"/>
+      </clipPath></defs>
+      <g transform="translate(9 10) scale(1.25 .9)" clip-path="url(#c)">
+        <rect x="-10" y="-10" width="110" height="90" fill="#3070df"/>
+      </g></svg>

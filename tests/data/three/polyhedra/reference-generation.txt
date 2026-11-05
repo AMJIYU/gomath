@@ -1,0 +1,4 @@
+Tetrahedron 4 4 reverse source faces [2, 3]
+Octahedron 6 8 reverse source faces [0, 1]
+Icosahedron 12 20 reverse source faces [1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 17, 19]
+Dodecahedron 20 12 reverse source faces [0, 4, 7]

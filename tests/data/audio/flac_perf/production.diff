@@ -1,0 +1,44 @@
+--- wave5/audio/flac_read.go
++++ wave6/audio/flac_read.go
+@@ -325,6 +325,25 @@
+ 	return b
+ }
+ 
++// flacReadCRC16 contains the remainder for each possible leading byte under
++// FLAC's unreflected x^16+x^15+x^2+1 polynomial. Initialized once, then only
++// read by decoders: each byte update is equivalent to eight long-division steps.
++var flacReadCRC16 = func() [256]uint16 {
++	var table [256]uint16
++	for i := range table {
++		crc := uint16(i) << 8
++		for range 8 {
++			if crc&0x8000 != 0 {
++				crc = crc<<1 ^ 0x8005
++			} else {
++				crc <<= 1
++			}
++		}
++		table[i] = crc
++	}
++	return table
++}()
++
+ func (d *flacDecoder) get(n int) uint64 {
+ 	if d.err != nil {
+ 		return 0
+@@ -354,14 +373,7 @@
+ 				}
+ 			}
+ 			if d.frameCRC {
+-				d.crc16 ^= uint16(b) << 8
+-				for range 8 {
+-					if d.crc16&0x8000 != 0 {
+-						d.crc16 = d.crc16<<1 ^ 0x8005
+-					} else {
+-						d.crc16 <<= 1
+-					}
+-				}
++				d.crc16 = d.crc16<<8 ^ flacReadCRC16[byte(d.crc16>>8)^b]
+ 			}
+ 		}
+ 		take := min(n, int(d.avail))

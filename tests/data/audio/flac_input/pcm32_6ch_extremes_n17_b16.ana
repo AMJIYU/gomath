@@ -1,0 +1,54 @@
+frame=0	offset=86	bits=3064	blocksize=16	sample_rate=48000	channels=6	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM
+	subframe=1	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=13	quantization_level=13	residual_type=RICE2	partition_order=3
+		qlp_coeff[0]=-3511
+		warmup[0]=2147483647
+		parameter[0]=30
+		parameter[1]=0
+		parameter[2]=30
+		parameter[3]=29
+		parameter[4]=30
+		parameter[5]=30
+		parameter[6]=0
+		parameter[7]=30
+	subframe=2	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=13	quantization_level=12	residual_type=RICE2	partition_order=3
+		qlp_coeff[0]=-2048
+		warmup[0]=-1
+		parameter[0]=0
+		parameter[1]=30
+		parameter[2]=30
+		parameter[3]=0
+		parameter[4]=30
+		parameter[5]=29
+		parameter[6]=30
+		parameter[7]=30
+	subframe=3	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=13	quantization_level=12	residual_type=RICE2	partition_order=3
+		qlp_coeff[0]=-2048
+		warmup[0]=0
+		parameter[0]=0
+		parameter[1]=30
+		parameter[2]=29
+		parameter[3]=30
+		parameter[4]=30
+		parameter[5]=0
+		parameter[6]=30
+		parameter[7]=29
+	subframe=4	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=13	quantization_level=12	residual_type=RICE2	partition_order=3
+		qlp_coeff[0]=-2048
+		warmup[0]=1
+		parameter[0]=30
+		parameter[1]=30
+		parameter[2]=0
+		parameter[3]=30
+		parameter[4]=29
+		parameter[5]=30
+		parameter[6]=30
+		parameter[7]=0
+	subframe=5	wasted_bits=0	type=VERBATIM
+frame=1	offset=469	bits=312	blocksize=1	sample_rate=48000	channels=6	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM
+	subframe=1	wasted_bits=0	type=VERBATIM
+	subframe=2	wasted_bits=0	type=VERBATIM
+	subframe=3	wasted_bits=0	type=VERBATIM
+	subframe=4	wasted_bits=31	type=VERBATIM
+	subframe=5	wasted_bits=0	type=VERBATIM

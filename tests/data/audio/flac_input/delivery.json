@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-04",
+  "status": "completed and frozen",
+  "api": "ReadFLAC(io.Reader, FLACReadOptions) (*PCM, error); no new fields",
+  "support": "byte-aligned PCM8/16/24/32, independent assignment0..7/channels1..8; stereo8..10 only2ch; ChannelMask0, indexed order preserved",
+  "limits": "Existing Limits+MaxWork unchanged; output allocation overflow fixed; side33 int64 reconstruction checked; full CRC/MD5/EOF required; errors return nil PCM",
+  "independent": {
+    "real_streams": 194,
+    "scalar_samples": 461638,
+    "hand_streams": 98,
+    "decoders": [
+      "libFLAC1.5.0",
+      "FFmpeg8.0.1 strict"
+    ],
+    "libsndfile1.2.2": {
+      "passed_8_16_24": 144,
+      "explicit_unsupported_32": 50
+    }
+  },
+  "checks": {
+    "audio_default_noasm_cgo0": "PASS 2.852s, 96.6% total statement coverage",
+    "audio_race": "PASS 40.389s, CGO1 solely for race instrumentation",
+    "input_race": "PASS 1.491s",
+    "vet_audio_noasm_cgo0": "PASS",
+    "linux386_noasm_cgo0": "all production+central audio tests crosscompiled; not executed on ARM macOS",
+    "fuzz_input_20s": "PASS 86324 executions, see fuzz.txt",
+    "dependencies": "90 packages, only standard library plus gomath/audio, no CgoFiles/os/exec",
+    "ReadFLAC_coverage": "93.2% statements"
+  },
+  "hashes": {
+    "audio/flac_read.go": "eecb5bffe0814a3edfe73a7f9fa0677ee9bc2b657090a0d45b7b41d6b8f26325",
+    "audio/README.md": "1e506e31b673d29d80d2178323433d190a6f1f06a1461f58f89dc1245e11ba15",
+    "docs/FLAC_INPUT.md": "4ee150638ab32c2507ba89600796ffa4eabadf78220c052e5cd08750b5bc2e04",
+    "tests/_cases/audio/flac_input_test.go": "7dd218ea862b37aa01bad4384541f8e4c165e187bd5d17f679c6556af2ff1b7c",
+    "tests/reference/audio_flac_input.py": "b2d77017132c1ace6280958ba95af6bedb7988020ae235b62f08184c273101be",
+    "tests/data/audio/flac_input/baseline.json": "af382463d86b6c329ac9b2722513e89bac995dfed4f69f8e2ce8f87ccbb07845",
+    "tests/data/audio/flac_input/benchmarks.json": "b2e1eb5d40dea42cf32e6e25a891cef8160b3ce2381495725f526a17562c0f39",
+    "tests/data/audio/flac_input/dependency-audit.json": "c720e1f0a99ad151d9927826853748e24486424790b0d4cfda2f95aced43f23c",
+    "tests/data/audio/flac_input/linux386.json": "8cebcd745923ac7eb3b199f1e8269a7871404a5f55e81462e9a00489de336415",
+    "tests/data/audio/flac_input/manifest.json": "ff9d194c25bd47924199a7f367283d4501283bbe1bde9ab77a92ec5b954fb027",
+    "tests/data/audio/flac_input/preservation.json": "77aad106c04c30c6cd07ab5972a918104ec7440e64d04815271a8ea6ab4c38f3",
+    "tests/data/audio/flac_input/sources.json": "f8cd7897c22a8bc4ded3052ebbb1798f814819d385c1863652199980462e8f7b",
+    "tests/data/audio/flac_input/verification.json": "b3f961c0d11063c2b22fa29491ebf5dcf8787f91183bfaec39d30f268247e14a",
+    "tests/data/audio/flac_input/hand/manifest.json": "6535c36e42ed523fcc466501d8170676e37d40fe8cebe7df9fe31ae9eec8157e",
+    "tests/data/audio/flac_input/hand/verification.json": "493275451db3425a5d1e84edbd2639edcfb8d8cb2234076437f238924426a530"
+  },
+  "preserved": [
+    "WriteFLAC implementation and existing output fixtures",
+    "AU/WAV/AIFF and other audio implementation",
+    "old FLAC reader tests/fixtures",
+    "go.mod",
+    "parent CLI and shared documentation"
+  ],
+  "benchmark": "five samples, before/after raw files and benchmarks.json; stereo PCM16 +3.44% / PCM24 +4.72% median time; allocations unchanged",
+  "pinned_read_only_reference": "16ea443e2a5f1d79db0a721161411ce916d6e733"
+}

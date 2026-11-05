@@ -1,0 +1,178 @@
+{
+  "BenchmarkBuildSegments/arrowfalse/r24/a4-8": {
+    "median_ns": 8326,
+    "min_ns": 8224,
+    "max_ns": 8441,
+    "samples": [
+      {
+        "ns_per_op": 8326,
+        "bytes_per_op": 19040,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 8224,
+        "bytes_per_op": 19040,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 8441,
+        "bytes_per_op": 19040,
+        "allocations_per_op": 5
+      }
+    ]
+  },
+  "BenchmarkBuildSegments/arrowtrue/r24/a4-8": {
+    "median_ns": 17285,
+    "min_ns": 16181,
+    "max_ns": 18830,
+    "samples": [
+      {
+        "ns_per_op": 16181,
+        "bytes_per_op": 32736,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 17285,
+        "bytes_per_op": 32736,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 18830,
+        "bytes_per_op": 32736,
+        "allocations_per_op": 5
+      }
+    ]
+  },
+  "BenchmarkBuildSegments/arrowfalse/r256/a256-8": {
+    "median_ns": 3415638,
+    "min_ns": 3325485,
+    "max_ns": 3425382,
+    "samples": [
+      {
+        "ns_per_op": 3415638,
+        "bytes_per_op": 7446630,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 3325485,
+        "bytes_per_op": 7446630,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 3425382,
+        "bytes_per_op": 7446625,
+        "allocations_per_op": 5
+      }
+    ]
+  },
+  "BenchmarkBuildSegments/arrowtrue/r256/a256-8": {
+    "median_ns": 6727606,
+    "min_ns": 6596840,
+    "max_ns": 6731423,
+    "samples": [
+      {
+        "ns_per_op": 6727606,
+        "bytes_per_op": 14827616,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 6596840,
+        "bytes_per_op": 14827616,
+        "allocations_per_op": 5
+      },
+      {
+        "ns_per_op": 6731423,
+        "bytes_per_op": 14827620,
+        "allocations_per_op": 5
+      }
+    ]
+  },
+  "BenchmarkRenderSegments/opaque/s1-8": {
+    "median_ns": 1461667,
+    "min_ns": 1347476,
+    "max_ns": 1466159,
+    "samples": [
+      {
+        "ns_per_op": 1347476,
+        "bytes_per_op": 1004105,
+        "allocations_per_op": 12
+      },
+      {
+        "ns_per_op": 1461667,
+        "bytes_per_op": 1004104,
+        "allocations_per_op": 12
+      },
+      {
+        "ns_per_op": 1466159,
+        "bytes_per_op": 1004105,
+        "allocations_per_op": 12
+      }
+    ]
+  },
+  "BenchmarkRenderSegments/uv-alpha-lights/s1-8": {
+    "median_ns": 3234230,
+    "min_ns": 3160095,
+    "max_ns": 3389402,
+    "samples": [
+      {
+        "ns_per_op": 3234230,
+        "bytes_per_op": 1207336,
+        "allocations_per_op": 17
+      },
+      {
+        "ns_per_op": 3389402,
+        "bytes_per_op": 1207339,
+        "allocations_per_op": 17
+      },
+      {
+        "ns_per_op": 3160095,
+        "bytes_per_op": 1207337,
+        "allocations_per_op": 17
+      }
+    ]
+  },
+  "BenchmarkRenderSegments/opaque/s2-8": {
+    "median_ns": 3959692,
+    "min_ns": 3934611,
+    "max_ns": 3960805,
+    "samples": [
+      {
+        "ns_per_op": 3934611,
+        "bytes_per_op": 4076168,
+        "allocations_per_op": 14
+      },
+      {
+        "ns_per_op": 3959692,
+        "bytes_per_op": 4076169,
+        "allocations_per_op": 14
+      },
+      {
+        "ns_per_op": 3960805,
+        "bytes_per_op": 4076169,
+        "allocations_per_op": 14
+      }
+    ]
+  },
+  "BenchmarkRenderSegments/uv-alpha-lights/s2-8": {
+    "median_ns": 10198969,
+    "min_ns": 10195653,
+    "max_ns": 10203290,
+    "samples": [
+      {
+        "ns_per_op": 10203290,
+        "bytes_per_op": 4672617,
+        "allocations_per_op": 23
+      },
+      {
+        "ns_per_op": 10198969,
+        "bytes_per_op": 4672617,
+        "allocations_per_op": 23
+      },
+      {
+        "ns_per_op": 10195653,
+        "bytes_per_op": 4672624,
+        "allocations_per_op": 23
+      }
+    ]
+  }
+}

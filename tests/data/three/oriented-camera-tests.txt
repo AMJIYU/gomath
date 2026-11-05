@@ -1,0 +1,1 @@
+ok  	gomath/three	7.287s

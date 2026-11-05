@@ -1,0 +1,16 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/path
+cpu: Apple M2
+BenchmarkMeasureLookupOptions/table-off         	    1124	    319914 ns/op	   10416 B/op	       3 allocs/op
+BenchmarkMeasureLookupOptions/table-off         	    1143	    314902 ns/op	   10416 B/op	       3 allocs/op
+BenchmarkMeasureLookupOptions/table-off         	    1144	    314637 ns/op	   10416 B/op	       3 allocs/op
+BenchmarkMeasureLookupOptions/table-off         	    1144	    314243 ns/op	   10416 B/op	       3 allocs/op
+BenchmarkMeasureLookupOptions/table-off         	    1126	    315720 ns/op	   10416 B/op	       3 allocs/op
+BenchmarkMeasureLookupOptions/adaptive-table    	    1142	    315930 ns/op	   26288 B/op	       8 allocs/op
+BenchmarkMeasureLookupOptions/adaptive-table    	    1144	    315660 ns/op	   26288 B/op	       8 allocs/op
+BenchmarkMeasureLookupOptions/adaptive-table    	    1141	    316525 ns/op	   26288 B/op	       8 allocs/op
+BenchmarkMeasureLookupOptions/adaptive-table    	    1140	    314827 ns/op	   26288 B/op	       8 allocs/op
+BenchmarkMeasureLookupOptions/adaptive-table    	    1149	    317655 ns/op	   26288 B/op	       8 allocs/op
+PASS
+ok  	gomath/path	3.609s

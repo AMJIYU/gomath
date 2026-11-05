@@ -1,0 +1,23 @@
+{
+  "generator": "tests/reference/clip_evenodd_export.py",
+  "generator_sha256": "ae923d6ab755625a6a80dbecb12d07d6e7d784d6c2186be8cfa1a02e20a68d6a",
+  "go_generator": "tests/reference/_clip_evenodd_export/main.go",
+  "go_generator_sha256": "7363741ef256d3271455985ccfbc5aa6d6be725c4532730a7d7931701c2d54e6",
+  "versions": {
+    "Python": "3.11.5",
+    "Cairo": "1.18.4",
+    "Pillow": "11.2.1"
+  },
+  "oracle": "Actual Go SVG export interpreted independently with direct Cairo clip rules by a strict M/L/C/Z solid-path subset reader. No CairoSVG evenodd clip oracle or patched upstream implementation.",
+  "metrics": {
+    "mae": 0.05029296875,
+    "rms": 0.4554537858462334,
+    "max": 20
+  },
+  "files_sha256": {
+    "actual.svg": "b6a19c7ec9cd71d433ca899d5614d119ab0d53a0817560ca39bd33044a866b93",
+    "native.png": "b02168a33963f813ec5b2d4e15f6e948b048b21fdb2a5a37e74954a1f6bd474e",
+    "cairo.png": "50c3d366188526128ffe4823cd7d4d04bea961a3f0d9c497925e0d435d32001e",
+    "input.json": "8640dbf4ea94b58681c4f82329aa7f111b2eaf977a5dee1d550ffaf818df888a"
+  }
+}

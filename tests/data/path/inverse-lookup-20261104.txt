@@ -1,0 +1,16 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/path
+cpu: Apple M2
+BenchmarkInverseLookupOptions/table-off         	   10000	     56771 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/table-off         	   10000	     56004 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/table-off         	   10000	     55402 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/table-off         	   10000	     55315 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/table-off         	   10000	     55276 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/adaptive-table    	  196182	      1840 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/adaptive-table    	  195868	      1840 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/adaptive-table    	  196314	      1839 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/adaptive-table    	  195597	      1840 ns/op	       0 B/op	       0 allocs/op
+BenchmarkInverseLookupOptions/adaptive-table    	  195702	      1840 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	gomath/path	4.598s

@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/number
+cpu: Apple M2
+BenchmarkNumber/New-8         	    5682	     54676 ns/op	  124987 B/op	     251 allocs/op
+BenchmarkNumber/New-8         	    6638	     53655 ns/op	  124985 B/op	     251 allocs/op
+BenchmarkNumber/New-8         	    7119	     46189 ns/op	  124985 B/op	     251 allocs/op
+BenchmarkNumber/SetValue-8    	    5708	     65953 ns/op	   86188 B/op	     209 allocs/op
+BenchmarkNumber/SetValue-8    	    5704	     67584 ns/op	   86188 B/op	     209 allocs/op
+BenchmarkNumber/SetValue-8    	    5736	     65796 ns/op	   86202 B/op	     209 allocs/op
+BenchmarkNumber/SourceAt-8    	   16426	     24135 ns/op	   55566 B/op	     118 allocs/op
+BenchmarkNumber/SourceAt-8    	   16935	     21239 ns/op	   55468 B/op	     118 allocs/op
+BenchmarkNumber/SourceAt-8    	   10000	     32409 ns/op	   55722 B/op	     119 allocs/op
+PASS
+ok  	gomath/number	4.394s

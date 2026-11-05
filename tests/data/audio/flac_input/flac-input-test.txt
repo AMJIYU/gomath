@@ -1,0 +1,544 @@
+=== RUN   TestReadFLACInputFixtures
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_1ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_2ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_3ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_4ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_5ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_6ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_7ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm8_8ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_1ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_2ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_3ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_4ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_5ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_6ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_7ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm16_8ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_1ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_2ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_3ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_4ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_5ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_6ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_7ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm24_8ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_1ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_3ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_4ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_5ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_6ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_7ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_constant_n1_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_extremes_n17_b16.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_random_n255_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_wasted_n257_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_sine_n1025_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_ramp_n513_b256.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_8ch_sine_n4097_b4096.flac
+=== RUN   TestReadFLACInputFixtures/pcm32_2ch_wasted_n65535_b65535.flac
+--- PASS: TestReadFLACInputFixtures (0.06s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_1ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_2ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_3ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_4ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_5ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_6ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_7ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm8_8ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_1ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_2ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_3ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_4ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_5ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_6ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_7ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm16_8ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_1ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_2ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_3ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_4ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_5ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_6ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_7ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm24_8ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_1ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_3ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_4ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_5ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_6ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_7ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_constant_n1_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_extremes_n17_b16.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_random_n255_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_wasted_n257_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_sine_n1025_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_ramp_n513_b256.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_8ch_sine_n4097_b4096.flac (0.00s)
+    --- PASS: TestReadFLACInputFixtures/pcm32_2ch_wasted_n65535_b65535.flac (0.01s)
+=== RUN   TestReadFLACInputHandVectors
+=== RUN   TestReadFLACInputHandVectors/verbatim8_1ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_2ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_3ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_4ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_5ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_6ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_7ch
+=== RUN   TestReadFLACInputHandVectors/verbatim8_8ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_1ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_2ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_3ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_4ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_5ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_6ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_7ch
+=== RUN   TestReadFLACInputHandVectors/verbatim16_8ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_1ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_2ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_3ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_4ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_5ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_6ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_7ch
+=== RUN   TestReadFLACInputHandVectors/verbatim24_8ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_1ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_2ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_3ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_4ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_5ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_6ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_7ch
+=== RUN   TestReadFLACInputHandVectors/verbatim32_8ch
+=== RUN   TestReadFLACInputHandVectors/side33_assignment8
+=== RUN   TestReadFLACInputHandVectors/side33_assignment9
+=== RUN   TestReadFLACInputHandVectors/side33_assignment10
+=== RUN   TestReadFLACInputHandVectors/side33_wasted1
+=== RUN   TestReadFLACInputHandVectors/side33_wasted16
+=== RUN   TestReadFLACInputHandVectors/side33_wasted31
+=== RUN   TestReadFLACInputHandVectors/side33_wasted32
+=== RUN   TestReadFLACInputHandVectors/side33_fixed1
+=== RUN   TestReadFLACInputHandVectors/side33_fixed2
+=== RUN   TestReadFLACInputHandVectors/side33_fixed3
+=== RUN   TestReadFLACInputHandVectors/side33_fixed4
+=== RUN   TestReadFLACInputHandVectors/side33_LPC2_shift15
+=== RUN   TestReadFLACInputHandVectors/side33_LPC12_shift15
+=== RUN   TestReadFLACInputHandVectors/side33_LPC32_shift15
+=== RUN   TestReadFLACInputHandVectors/side33_LPC1_shift0
+=== RUN   TestReadFLACInputHandVectors/residual32_escapefalse
+=== RUN   TestReadFLACInputHandVectors/residual32_escapetrue
+--- PASS: TestReadFLACInputHandVectors (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_1ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_2ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_3ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_4ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_5ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_6ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_7ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim8_8ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_1ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_2ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_3ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_4ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_5ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_6ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_7ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim16_8ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_1ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_2ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_3ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_4ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_5ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_6ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_7ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim24_8ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_1ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_2ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_3ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_4ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_5ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_6ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_7ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/verbatim32_8ch (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_assignment8 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_assignment9 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_assignment10 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_wasted1 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_wasted16 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_wasted31 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_wasted32 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_fixed1 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_fixed2 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_fixed3 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_fixed4 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_LPC2_shift15 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_LPC12_shift15 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_LPC32_shift15 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/side33_LPC1_shift0 (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/residual32_escapefalse (0.00s)
+    --- PASS: TestReadFLACInputHandVectors/residual32_escapetrue (0.00s)
+=== RUN   TestReadFLACInputBudgetsAndConcurrency
+=== RUN   TestReadFLACInputBudgetsAndConcurrency/bytes
+=== RUN   TestReadFLACInputBudgetsAndConcurrency/frames
+=== RUN   TestReadFLACInputBudgetsAndConcurrency/samples
+=== RUN   TestReadFLACInputBudgetsAndConcurrency/work
+--- PASS: TestReadFLACInputBudgetsAndConcurrency (0.01s)
+    --- PASS: TestReadFLACInputBudgetsAndConcurrency/bytes (0.00s)
+    --- PASS: TestReadFLACInputBudgetsAndConcurrency/frames (0.00s)
+    --- PASS: TestReadFLACInputBudgetsAndConcurrency/samples (0.00s)
+    --- PASS: TestReadFLACInputBudgetsAndConcurrency/work (0.00s)
+=== RUN   TestReadFLACInputPredictorWorkBudget
+--- PASS: TestReadFLACInputPredictorWorkBudget (0.00s)
+=== RUN   TestReadFLACInputInvalid
+=== RUN   TestReadFLACInputInvalid/MD5
+=== RUN   TestReadFLACInputInvalid/CRC8
+=== RUN   TestReadFLACInputInvalid/CRC16
+=== RUN   TestReadFLACInputInvalid/depth12
+=== RUN   TestReadFLACInputInvalid/depth20
+=== RUN   TestReadFLACInputInvalid/depth31
+=== RUN   TestReadFLACInputInvalid/assignment8
+=== RUN   TestReadFLACInputInvalid/assignment9
+=== RUN   TestReadFLACInputInvalid/assignment10
+=== RUN   TestReadFLACInputInvalid/assignment11
+=== RUN   TestReadFLACInputInvalid/assignment15
+=== RUN   TestReadFLACInputInvalid/trailing
+=== RUN   TestReadFLACInputInvalid/concatenated
+=== RUN   TestReadFLACInputInvalid/side_positive_restoration
+=== RUN   TestReadFLACInputInvalid/side_min33_restoration
+=== RUN   TestReadFLACInputInvalid/predictor_overflow
+=== RUN   TestReadFLACInputInvalid/side_predictor_overflow
+=== RUN   TestReadFLACInputInvalid/residual_min32
+=== RUN   TestReadFLACInputInvalid/wasted33
+--- PASS: TestReadFLACInputInvalid (0.00s)
+    --- PASS: TestReadFLACInputInvalid/MD5 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/CRC8 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/CRC16 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/depth12 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/depth20 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/depth31 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/assignment8 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/assignment9 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/assignment10 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/assignment11 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/assignment15 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/trailing (0.00s)
+    --- PASS: TestReadFLACInputInvalid/concatenated (0.00s)
+    --- PASS: TestReadFLACInputInvalid/side_positive_restoration (0.00s)
+    --- PASS: TestReadFLACInputInvalid/side_min33_restoration (0.00s)
+    --- PASS: TestReadFLACInputInvalid/predictor_overflow (0.00s)
+    --- PASS: TestReadFLACInputInvalid/side_predictor_overflow (0.00s)
+    --- PASS: TestReadFLACInputInvalid/residual_min32 (0.00s)
+    --- PASS: TestReadFLACInputInvalid/wasted33 (0.00s)
+PASS
+ok  	gomath/audio	0.081s

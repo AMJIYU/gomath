@@ -1,0 +1,17 @@
+Command (staged source tested through central root overlay):
+CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=root -overlay=tests/data/root/_brace/overlay.json -run '^$' -bench '^BenchmarkBraceConstruction$' -benchmem -benchtime=250ms -count=3 -p=1 -cpu=1
+
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkBraceConstruction        48372       5965 ns/op       6656 B/op       10 allocs/op
+BenchmarkBraceConstruction        45790       6407 ns/op       6656 B/op       10 allocs/op
+BenchmarkBraceConstruction        43885      12206 ns/op       6656 B/op       10 allocs/op
+PASS
+ok      gomath 1.125s
+
+Shared host; no samples discarded. Prebuilt rectangle/circle target, default
+options; constructor only. Excludes target construction, labels, sampling,
+rasterization, encoding, reference tools and compilation. No speedup claim.
+Staging overlay is removed after promotion; use docs/BRACES.md's final command.

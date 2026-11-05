@@ -1,0 +1,39 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkBuildPlatonic/Tetrahedron-8         	  177074	      3264 ns/op	    2672 B/op	      75 allocs/op
+BenchmarkBuildPlatonic/Tetrahedron-8         	  191548	      3873 ns/op	    2672 B/op	      75 allocs/op
+BenchmarkBuildPlatonic/Tetrahedron-8         	  165055	      3600 ns/op	    2672 B/op	      75 allocs/op
+BenchmarkBuildPlatonic/Octahedron-8          	   99516	      6015 ns/op	    5832 B/op	     134 allocs/op
+BenchmarkBuildPlatonic/Octahedron-8          	   99008	      6086 ns/op	    5832 B/op	     134 allocs/op
+BenchmarkBuildPlatonic/Octahedron-8          	   99943	      6192 ns/op	    5832 B/op	     134 allocs/op
+BenchmarkBuildPlatonic/Icosahedron-8         	   38031	     16275 ns/op	   18400 B/op	     325 allocs/op
+BenchmarkBuildPlatonic/Icosahedron-8         	   38362	     15444 ns/op	   18400 B/op	     325 allocs/op
+BenchmarkBuildPlatonic/Icosahedron-8         	   38805	     16719 ns/op	   18400 B/op	     325 allocs/op
+BenchmarkBuildPlatonic/Dodecahedron-8        	   31539	     16846 ns/op	   17568 B/op	     312 allocs/op
+BenchmarkBuildPlatonic/Dodecahedron-8        	   31551	     16382 ns/op	   17568 B/op	     312 allocs/op
+BenchmarkBuildPlatonic/Dodecahedron-8        	   38289	     15412 ns/op	   17568 B/op	     312 allocs/op
+BenchmarkBuildPolyhedron/bipyramid32-8       	   12648	     47672 ns/op	        64.00 faces/op	        34.00 logical-vertices/op	   58320 B/op	     930 allocs/op
+BenchmarkBuildPolyhedron/bipyramid32-8       	   12661	     47611 ns/op	        64.00 faces/op	        34.00 logical-vertices/op	   58320 B/op	     930 allocs/op
+BenchmarkBuildPolyhedron/bipyramid32-8       	   12615	     47796 ns/op	        64.00 faces/op	        34.00 logical-vertices/op	   58320 B/op	     930 allocs/op
+BenchmarkBuildPolyhedron/bipyramid256-8      	    1288	    466419 ns/op	       512.0 faces/op	       258.0 logical-vertices/op	  475809 B/op	    7005 allocs/op
+BenchmarkBuildPolyhedron/bipyramid256-8      	    1074	    488391 ns/op	       512.0 faces/op	       258.0 logical-vertices/op	  475810 B/op	    7005 allocs/op
+BenchmarkBuildPolyhedron/bipyramid256-8      	    1299	    593044 ns/op	       512.0 faces/op	       258.0 logical-vertices/op	  475809 B/op	    7005 allocs/op
+BenchmarkBuildPolyhedron/bipyramid1022-8     	     188	   3171684 ns/op	      2044 faces/op	      1024 logical-vertices/op	 1956973 B/op	   27733 allocs/op
+BenchmarkBuildPolyhedron/bipyramid1022-8     	     189	   3194431 ns/op	      2044 faces/op	      1024 logical-vertices/op	 1956969 B/op	   27733 allocs/op
+BenchmarkBuildPolyhedron/bipyramid1022-8     	     188	   3179699 ns/op	      2044 faces/op	      1024 logical-vertices/op	 1956969 B/op	   27733 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa1-8      	    1270	    472901 ns/op	        68.00 tris/frame	       156.0 vertices/frame	  939117 B/op	      18 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa1-8      	    1269	    477343 ns/op	        68.00 tris/frame	       156.0 vertices/frame	  939119 B/op	      18 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa1-8      	    1225	    634453 ns/op	        68.00 tris/frame	       156.0 vertices/frame	  939120 B/op	      18 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa2-8      	     201	   2988470 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4011182 B/op	      20 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa2-8      	     200	   2998164 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4011185 B/op	      20 allocs/op
+BenchmarkRenderPolyhedra/opaque/ssaa2-8      	     201	   2978185 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4011184 B/op	      20 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa1-8         	     236	   2531210 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 1240652 B/op	      24 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa1-8         	     234	   2533031 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 1240654 B/op	      24 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa1-8         	     235	   2554273 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 1240656 B/op	      24 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa2-8         	      52	  11177070 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4902551 B/op	      32 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa2-8         	      54	  11206121 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4902551 B/op	      32 allocs/op
+BenchmarkRenderPolyhedra/textured-alpha-lights/ssaa2-8         	      50	  11246297 ns/op	        68.00 tris/frame	       156.0 vertices/frame	 4902547 B/op	      32 allocs/op
+PASS
+ok  	gomath/three	26.609s

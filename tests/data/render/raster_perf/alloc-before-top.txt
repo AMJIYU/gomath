@@ -1,0 +1,21 @@
+File: before.test
+Type: alloc_space
+Time: 2026-11-05 09:55:59 CST
+Showing nodes accounting for 1038885.63kB, 98.49% of 1054847.55kB total
+Dropped 260 nodes (cum <= 5274.24kB)
+      flat  flat%   sum%        cum   cum%
+770917.67kB 73.08% 73.08% 770917.67kB 73.08%  image.NewRGBA
+214683.12kB 20.35% 93.44% 214683.12kB 20.35%  image.NewAlpha
+44739.84kB  4.24% 97.68% 44739.84kB  4.24%  gomath/path.flatten
+ 7424.81kB   0.7% 98.38%  7424.81kB   0.7%  gomath/path.Path.Clone (inline)
+ 1063.45kB   0.1% 98.48% 45803.30kB  4.34%  gomath/path.Path.Flatten
+   43.58kB 0.0041% 98.49% 65397.42kB  6.20%  gomath/render.(*Rasterizer).paint
+   13.02kB 0.0012% 98.49% 1050222.95kB 99.56%  gomath/render.(*Rasterizer).renderFrame
+    0.12kB 1.2e-05% 98.49% 1052420.52kB 99.77%  testing.(*B).runN
+         0     0% 98.49%  6076.88kB  0.58%  gomath.(*Clip).Path (inline)
+         0     0% 98.49% 1050222.95kB 99.56%  gomath/render.(*Rasterizer).Render
+         0     0% 98.49%  8305.62kB  0.79%  gomath/render.(*Rasterizer).paintBitmap
+         0     0% 98.49% 676574.05kB 64.14%  gomath/render.(*Rasterizer).paintClipped
+         0     0% 98.49% 1052408.51kB 99.77%  gomath/render.BenchmarkRasterPerfMixed.func1
+         0     0% 98.49% 1038149.16kB 98.42%  testing.(*B).launch
+         0     0% 98.49% 14268.72kB  1.35%  testing.(*B).run1.func1

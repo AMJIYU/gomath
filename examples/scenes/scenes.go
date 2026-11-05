@@ -1,0 +1,424 @@
+// Package scenes contains runnable integration scenes shared by the CLI and tests.
+package scenes
+
+import (
+	"bytes"
+	"fmt"
+	"gomath"
+	"gomath/geom"
+	"gomath/graph"
+	"gomath/mathtex"
+	"gomath/matrix"
+	"gomath/rasterimage"
+	"gomath/table"
+	"gomath/text"
+	"image"
+	"image/color"
+	"image/png"
+	"math"
+)
+
+func Build(name string) (*gomath.Scene, error) {
+	switch name {
+	case "transform":
+		return Transform()
+	case "calculus":
+		return Calculus()
+	case "lissajous":
+		return Lissajous()
+	case "reference":
+		return Reference()
+	case "linear-algebra":
+		return LinearAlgebra()
+	case "images":
+		return Images()
+	case "dynamics":
+		return Dynamics()
+	case "networks":
+		return Networks()
+	case "three":
+		return Three()
+	case "mathematics":
+		return Mathematics()
+	case "paths":
+		return Paths()
+	case "composition":
+		return Composition()
+	case "textures":
+		return Textures()
+	case "spectral":
+		return Spectral()
+	case "primitives":
+		return Primitives()
+	case "angle-marks":
+		return AngleMarks()
+	case "arc-connections":
+		return ArcConnections()
+	case "tangential-arcs":
+		return TangentialArcs()
+	case "annotations":
+		return Annotations()
+	case "braces":
+		return Braces()
+	case "arc-braces":
+		return ArcBraces()
+	case "pointwise":
+		return PointwiseMappings()
+	case "image-pixels":
+		return ImagePixels()
+	case "transform-paths":
+		return TransformPaths()
+	case "svg-container-bbox":
+		return SVGContainerBBox()
+	case "code-display":
+		return CodeDisplay()
+	case "curve-edit":
+		return CurveEdit()
+	case "math-parts":
+		return MathParts()
+	case "matching-parts":
+		return MatchingParts()
+	case "path-direction":
+		return PathDirection()
+	case "math-braces":
+		return MathBraces()
+	case "svg-text-gradients":
+		return SVGTextGradients()
+	case "updater-lifecycle":
+		return UpdaterLifecycle()
+	case "network-mutations":
+		return NetworkMutations()
+	case "math-arrays":
+		return MathArrays()
+	case "numbers":
+		return Numbers()
+	case "radical-boxes":
+		return RadicalBoxes()
+	case "curved-networks":
+		return CurvedNetworks()
+	case "svg-clip-unions":
+		return SVGClipUnions()
+	case "adaptive-streamlines":
+		return AdaptiveStreamLines()
+	case "succession":
+		return Succession()
+	case "pointcloud":
+		return PointCloud()
+	case "dynamic-topology":
+		return DynamicTopology()
+	case "crossfade":
+		return Crossfade()
+	case "shadows":
+		return Shadows()
+	case "operator-layout":
+		return OperatorLayout()
+	case "clipping":
+		return Clipping()
+	case "clip-rules":
+		return ClipRules()
+	case "fill-rules":
+		return FillRules()
+	case "svg-bbox-clips":
+		return SVGBBoxClips()
+	case "schur":
+		return Schur()
+	case "point-light":
+		return PointLight()
+	case "table-labels":
+		return TableLabels()
+	case "gradients":
+		return Gradients()
+	case "logarithmic":
+		return Logarithmic()
+	case "math-alphabets":
+		return MathAlphabets()
+	case "complex-solve":
+		return ComplexSolve()
+	case "complex-plane":
+		return ComplexPlane()
+	case "polar-plane":
+		return PolarPlane()
+	case "bicgstab":
+		return BiCGSTAB()
+	case "multiline-math":
+		return MultilineMath()
+	case "font-fallback":
+		return FontFallback()
+	case "text-markup":
+		return TextMarkup()
+	case "sparse-solve":
+		return SparseSolve()
+	case "formula-colors":
+		return FormulaColors()
+	case "sparse-product":
+		return SparseProduct()
+	case "bar-chart":
+		return BarChart()
+	case "fractions":
+		return Fractions()
+	case "boolean":
+		return Boolean()
+	default:
+		return nil, fmt.Errorf("cannot build authored scene %q; choose %v (use BuildSource for compiled timelines)", name, Names())
+	}
+}
+
+func Images() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	label, err := title("Images / pure Go decoding and affine animation")
+	if err != nil {
+		return nil, err
+	}
+	// Construct a transparent fixture and exercise the actual PNG decoder. No
+	// external files, subprocesses or native image libraries are involved.
+	pixels := image.NewNRGBA(image.Rect(0, 0, 128, 128))
+	for y := range 128 {
+		for x := range 128 {
+			u, v := float64(x)/127, float64(y)/127
+			checker := uint8(((x/16 + y/16) % 2) * 70)
+			pixels.SetNRGBA(x, y, color.NRGBA{R: uint8(40 + 180*u), G: uint8(70 + 140*v), B: 180 + checker, A: uint8(80 + 175*(1-math.Min(1, math.Hypot(u-.5, v-.5))))})
+		}
+	}
+	var buffer bytes.Buffer
+	if err := png.Encode(&buffer, pixels); err != nil {
+		return nil, err
+	}
+	left, err := rasterimage.Decode(bytes.NewReader(buffer.Bytes()), 3.2)
+	if err != nil {
+		return nil, err
+	}
+	left.MoveTo(geom.V(-2.7, 0))
+	right := left.Copy().MoveTo(geom.V(2.7, 0)).ApplyMatrix(geom.About(geom.V(2.7, 0), geom.Scaling(-1, 1, 1)))
+	opt := text.DefaultOptions()
+	opt.Size = .35
+	caption, err := text.New("One immutable asset / independent object geometry", text.DefaultFont(), opt)
+	if err != nil {
+		return nil, err
+	}
+	caption.MoveTo(geom.V(0, -2.6))
+	if err := s.Add(label, caption); err != nil {
+		return nil, err
+	}
+	if err := s.Play(.6, gomath.FadeIn(left), gomath.FadeIn(right)); err != nil {
+		return nil, err
+	}
+	if err := s.Play(1.5, gomath.Rotate(left, math.Pi/3), gomath.Rotate(right, -math.Pi/3)); err != nil {
+		return nil, err
+	}
+	if err := s.Play(.7, gomath.Transform(right, right.Copy().Scale(.7).SetOpacity(.5))); err != nil {
+		return nil, err
+	}
+	if err := s.Wait(.8); err != nil {
+		return nil, err
+	}
+	return s, nil
+}
+
+// LinearAlgebra demonstrates matrix selections and table highlights using the
+// same vector animation pipeline as other objects. The multiplication is
+// illustrative; numerical matrix multiplication is outside the layout API.
+func LinearAlgebra() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	label, err := title("Linear algebra / editable matrices and tables")
+	if err != nil {
+		return nil, err
+	}
+	left, err := matrix.NewIntegers([][]int64{{1, 2}, {3, 4}}, matrix.DefaultOptions())
+	if err != nil {
+		return nil, err
+	}
+	left.MoveTo(geom.V(-3.5, 1))
+	if err := left.SetRowColor(0, gomath.Blue); err != nil {
+		return nil, err
+	}
+	vector, err := matrix.New([][]string{{"x"}, {"y"}}, matrix.DefaultOptions())
+	if err != nil {
+		return nil, err
+	}
+	vector.MoveTo(geom.V(-1.5, 1))
+	vector.SetColor(gomath.Yellow)
+	equals, err := mathtex.New("=", mathtex.DefaultOptions())
+	if err != nil {
+		return nil, err
+	}
+	equals.MoveTo(geom.V(0, 1))
+	result, err := matrix.New([][]string{{"x+2y"}, {"3x+4y"}}, matrix.DefaultOptions())
+	if err != nil {
+		return nil, err
+	}
+	result.MoveTo(geom.V(2.5, 1))
+	data, err := table.New([][]string{{"row", "expression", "x=1, y=2"}, {"1", "x+2y", "5"}, {"2", "3x+4y", "11"}}, table.DefaultOptions())
+	if err != nil {
+		return nil, err
+	}
+	data.Scale(.75).MoveTo(geom.V(0, -1.7))
+	if err := data.HighlightCell(0, 0, gomath.Color{R: .15, G: .35, B: .5, A: .5}); err != nil {
+		return nil, err
+	}
+	if err := s.Add(label); err != nil {
+		return nil, err
+	}
+	if err := s.Play(1, gomath.Write(left.Object), gomath.Write(vector.Object)); err != nil {
+		return nil, err
+	}
+	if err := s.Play(.8, gomath.Write(equals), gomath.Write(result.Object)); err != nil {
+		return nil, err
+	}
+	if err := s.Play(.6, gomath.FadeIn(data.Object)); err != nil {
+		return nil, err
+	}
+	cell, err := data.CellBackground(1, 2)
+	if err != nil {
+		return nil, err
+	}
+	entry, err := result.Entry(0, 0)
+	if err != nil {
+		return nil, err
+	}
+	if err := s.Play(.8,
+		gomath.Transform(cell, cell.Copy().SetFill(gomath.Color{R: .15, G: .45, B: .6, A: .7})),
+		gomath.Transform(entry, entry.Copy().SetColor(gomath.Blue))); err != nil {
+		return nil, err
+	}
+	if err := s.Wait(.7); err != nil {
+		return nil, err
+	}
+	return s, nil
+}
+
+// Reference is a static workload for cross-renderer comparison. Export its
+// exact control points so the reference renderer does not rebuild its own arcs.
+func Reference() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	for row := range 10 {
+		for col := range 10 {
+			o := gomath.Circle(.18).SetFill(gomath.Color{R: .2, G: .6, B: .8, A: .7}).SetStroke(gomath.White, .025).MoveTo(geom.V((float64(col)-4.5)*1.15, (float64(row)-4.5)*.65))
+			if e := s.Add(o); e != nil {
+				return nil, e
+			}
+		}
+	}
+	if e := s.Wait(1); e != nil {
+		return nil, e
+	}
+	return s, nil
+}
+func title(value string) (*gomath.Object, error) {
+	opt := text.DefaultOptions()
+	opt.Size = .5
+	o, e := text.New(value, text.DefaultFont(), opt)
+	if e != nil {
+		return nil, e
+	}
+	return o.MoveTo(geom.V(0, 3.1)), nil
+}
+func Transform() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	label, e := title("GoMath / pure Go vector animation")
+	if e != nil {
+		return nil, e
+	}
+	shape := gomath.Square(2).SetFill(gomath.Blue).SetStroke(gomath.White, .035).MoveTo(geom.V(-3, 0))
+	if e = s.Add(label); e != nil {
+		return nil, e
+	}
+	if e = s.Play(.8, gomath.Create(shape)); e != nil {
+		return nil, e
+	}
+	target := gomath.Circle(1.15).SetFill(gomath.Pink).SetStroke(gomath.White, .035).MoveTo(geom.V(0, .2))
+	if e = s.Play(1.2, gomath.Transform(shape, target)); e != nil {
+		return nil, e
+	}
+	if e = s.Play(1, gomath.Shift(shape, geom.V(3, 0))); e != nil {
+		return nil, e
+	}
+	if e = s.Play(1, gomath.Rotate(shape, 2*math.Pi)); e != nil {
+		return nil, e
+	}
+	if e = s.Play(.8, gomath.FadeOut(shape)); e != nil {
+		return nil, e
+	}
+	if e = s.Wait(.3); e != nil {
+		return nil, e
+	}
+	return s, nil
+}
+func Calculus() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	label, e := title("Functions, formulas and vector outlines")
+	if e != nil {
+		return nil, e
+	}
+	axes, e := graph.NewAxes(graph.Range{Min: -4, Max: 4, Step: 1}, graph.Range{Min: -1.5, Max: 1.5, Step: .5}, 11, 3.3)
+	if e != nil {
+		return nil, e
+	}
+	axes.Shift(geom.V(0, -.7))
+	curve, e := axes.Plot(math.Sin, 240)
+	if e != nil {
+		return nil, e
+	}
+	curve.SetStroke(gomath.Blue, .045)
+	formula, e := mathtex.New(`f(x)=\frac{\sin(x)}{1+x^{2}}+\sqrt{x^{2}+1}`, mathtex.DefaultOptions())
+	if e != nil {
+		return nil, e
+	}
+	formula.MoveTo(geom.V(0, 1.8))
+	if e = s.Add(label); e != nil {
+		return nil, e
+	}
+	if e = s.Play(.8, gomath.Create(axes.Object)); e != nil {
+		return nil, e
+	}
+	if e = s.Play(1.5, gomath.Create(curve), gomath.Write(formula)); e != nil {
+		return nil, e
+	}
+	tracker := gomath.Dot(axes.Point(-4, math.Sin(-4)), .085).SetFill(gomath.Yellow)
+	if e = s.Add(tracker); e != nil {
+		return nil, e
+	}
+	if e = s.Wait(2); e != nil {
+		return nil, e
+	}
+	id := tracker.ID
+	start := 2.3
+	if e = s.AddUpdater(func(f *gomath.Frame, t float64) error {
+		if dot := f.Find(id); dot != nil {
+			x := -4 + 8*math.Max(0, math.Min(1, (t-start)/2))
+			dot.MoveTo(axes.Point(x, math.Sin(x)))
+		}
+		return nil
+	}); e != nil {
+		return nil, e
+	}
+	return s, nil
+}
+func Lissajous() (*gomath.Scene, error) {
+	s := gomath.NewScene()
+	label, e := title("Lissajous / deterministic parallel frames")
+	if e != nil {
+		return nil, e
+	}
+	if e = s.Add(label); e != nil {
+		return nil, e
+	}
+	var animations []gomath.Animation
+	for row := range 3 {
+		for col := range 5 {
+			a, b := float64(col+1), float64(row+1)
+			curve, e := graph.Parametric(func(t float64) geom.Vec3 { return geom.V(.85*math.Sin(a*t), .65*math.Sin(b*t+math.Pi/3)) }, 0, 2*math.Pi, 220)
+			if e != nil {
+				return nil, e
+			}
+			curve.Shift(geom.V(float64(col-2)*2.5, float64(1-row)*1.8-.2)).SetStroke(gomath.Blue.Lerp(gomath.Pink, float64(col)/4), .022)
+			animations = append(animations, gomath.Create(curve))
+		}
+	}
+	if e = s.Play(3, gomath.LaggedStart(.07, animations...)...); e != nil {
+		return nil, e
+	}
+	if e = s.Wait(.7); e != nil {
+		return nil, e
+	}
+	return s, nil
+}

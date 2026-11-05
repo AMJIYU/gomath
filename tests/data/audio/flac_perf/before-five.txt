@@ -1,0 +1,50 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     500	    694084 ns/op	  21.91 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     514	    687407 ns/op	  22.12 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     523	    702493 ns/op	  21.65 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     526	    686895 ns/op	  22.14 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac         	     525	    682880 ns/op	  22.27 MB/s	  449940 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     262	   1366509 ns/op	  21.92 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     261	   1787078 ns/op	  16.76 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     229	   1387253 ns/op	  21.59 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     261	   1385828 ns/op	  21.61 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac         	     256	   1580267 ns/op	  18.95 MB/s	  450452 B/op	      27 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1311	    315539 ns/op	   6.63 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1348	    273887 ns/op	   7.63 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1413	    346281 ns/op	   6.04 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1302	    308429 ns/op	   6.78 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac                      	    1412	    284356 ns/op	   7.35 MB/s	  194900 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    1274	    258145 ns/op	  24.11 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    1377	    351453 ns/op	  17.71 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    1261	    273493 ns/op	  22.75 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    1401	    261502 ns/op	  23.80 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac                    	    1374	    262073 ns/op	  23.75 MB/s	   43348 B/op	      21 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	     405	    861809 ns/op	  16.94 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	     424	   1065691 ns/op	  13.70 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	     350	   1232276 ns/op	  11.85 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	     333	    983666 ns/op	  14.84 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac                     	     412	    940202 ns/op	  15.53 MB/s	  201044 B/op	      24 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      40	   8787464 ns/op	  10.15 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      42	   8914142 ns/op	  10.00 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      43	   8314977 ns/op	  10.72 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      45	   8428119 ns/op	  10.58 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac                	      39	   8790650 ns/op	  10.14 MB/s	 2625880 B/op	      15 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   36726	      9360 ns/op	  40.28 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   38982	     10159 ns/op	  37.11 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   38769	     10365 ns/op	  36.37 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   39057	     10625 ns/op	  35.48 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac                          	   36848	      9963 ns/op	  37.84 MB/s	    6944 B/op	      13 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	      64	   5333751 ns/op	 2879782 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	      64	   5407254 ns/op	 2879783 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	      69	   5348321 ns/op	 2879783 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	      68	   5507950 ns/op	 2879783 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM16                                                 	      69	   5325801 ns/op	 2879783 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	      34	  11461570 ns/op	 2887974 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	      43	   8074989 ns/op	 2887975 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	      39	   8299630 ns/op	 2887975 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	      45	   7951807 ns/op	 2887975 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24                                                 	      46	   8393280 ns/op	 2887975 B/op	      19 allocs/op
+PASS

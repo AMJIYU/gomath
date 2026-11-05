@@ -1,0 +1,74 @@
+{
+  "config": "Apple M2, darwin/arm64, Go1.27.3, CGO_ENABLED=0, noasm central runner, GOMAXPROCS=1, -p=1, -benchtime=300ms, -count=5",
+  "exclusions": "input creation/encoding, file I/O and external decoder checks excluded; parent may run other work on shared host",
+  "comparison": "fresh before against after; unfiltered samples, medians reported, no universal speedup claim",
+  "rows": [
+    {
+      "name": "BenchmarkReadFLACInput/pcm8_8ch_sine_n1025_b256.flac",
+      "samples": 5,
+      "median_ns": 272962,
+      "min_ns": 258545,
+      "max_ns": 289003,
+      "B_per_op": 194900,
+      "allocs_per_op": 24
+    },
+    {
+      "name": "BenchmarkReadFLACInput/pcm16_8ch_sine_n1025_b256.flac",
+      "samples": 5,
+      "median_ns": 369945,
+      "min_ns": 366495,
+      "max_ns": 382139,
+      "B_per_op": 196948,
+      "allocs_per_op": 24
+    },
+    {
+      "name": "BenchmarkReadFLACInput/pcm24_8ch_sine_n1025_b256.flac",
+      "samples": 5,
+      "median_ns": 507351,
+      "min_ns": 499637,
+      "max_ns": 521573,
+      "B_per_op": 198996,
+      "allocs_per_op": 24
+    },
+    {
+      "name": "BenchmarkReadFLACInput/pcm32_8ch_sine_n1025_b256.flac",
+      "samples": 5,
+      "median_ns": 845909,
+      "min_ns": 841084,
+      "max_ns": 857609,
+      "B_per_op": 201044,
+      "allocs_per_op": 24
+    },
+    {
+      "name": "BenchmarkReadFLACInput/pcm32_2ch_wasted_n65535_b65535.flac",
+      "samples": 5,
+      "median_ns": 8212048,
+      "min_ns": 8150445,
+      "max_ns": 8301814,
+      "B_per_op": 2625880,
+      "allocs_per_op": 15
+    },
+    {
+      "name": "BenchmarkReadFLAC48kStereo/PCM16",
+      "samples": 5,
+      "median_ns": 5508880,
+      "min_ns": 5446942,
+      "max_ns": 7814170,
+      "B_per_op": 2879783,
+      "allocs_per_op": 19,
+      "before_median_ns": 5325661,
+      "delta_percent": 3.440305344256789
+    },
+    {
+      "name": "BenchmarkReadFLAC48kStereo/PCM24",
+      "samples": 5,
+      "median_ns": 8126074,
+      "min_ns": 8053019,
+      "max_ns": 9828355,
+      "B_per_op": 2887975,
+      "allocs_per_op": 19,
+      "before_median_ns": 7760167,
+      "delta_percent": 4.715194917841337
+    }
+  ]
+}

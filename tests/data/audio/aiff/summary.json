@@ -1,0 +1,37 @@
+{
+  "API": "ReadAIFF(io.Reader, AIFFReadOptions) (*PCM,error)",
+  "options": [
+    "Limits Limits",
+    "MaxWork uint64",
+    "DiscardMetadata bool"
+  ],
+  "supported": [
+    "AIFF signed PCM8/16/24/32 big-endian",
+    "AIFC NONE signed PCM8/16/24/32 big-endian",
+    "AIFC sowt signed PCM16 little-endian"
+  ],
+  "rate": "exact 80-bit integer 1..768000 Hz",
+  "channel_layout": "1..64 file-indexed channels, ChannelMask=0; CHAN always unsupported",
+  "independent_input_streams": 77,
+  "input_scalar_samples": 493662,
+  "go_decoded_streams": 62,
+  "go_exact_scalar_samples": 165432,
+  "go_explicitly_rejected_CHAN_streams": 15,
+  "retained_fixture_streams": 62,
+  "FFmpeg_complete_exact_supported_streams": 61,
+  "COMM_unused_storage_case": "CPython COMM-bounded read and Go exactly match. Whole FFmpeg output contains one extra PCM8 sample; recorded without trimming.",
+  "existing_production_sources_changed": [
+    "audio/README.md"
+  ],
+  "full_audio_coverage_percent": 95.1,
+  "new_AIFF_coverage_percent": 99.5,
+  "no_env_full_suite": "PASS 1.013s",
+  "AIFF_race": "PASS 1.484s, CGO1 used for Go race instrumentation",
+  "fuzz": "PASS20s,787101 executions, CGO0/noasm",
+  "vet": "PASS",
+  "linux386_build": "PASS CGO0/noasm",
+  "defaults_and_existing_PCM_semantics": "unchanged",
+  "go": "go version go1.27.3 darwin/arm64",
+  "platform": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.1\nBuildVersion:\t\t24G231",
+  "new_runtime_dependencies": 0
+}

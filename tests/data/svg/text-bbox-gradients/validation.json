@@ -1,0 +1,479 @@
+{
+  "date": "2026-11-05",
+  "status": "PASS",
+  "promotion": "Final scoped source promoted; staging directories removed. No commits.",
+  "pinned_reference": {
+    "path": "../manim",
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "claim": "SVG/fontTools/Cairo evidence only; no new Manim/Pango/browser/full-SVG parity claim"
+  },
+  "environment": {
+    "go": "go1.27.3 darwin/arm64",
+    "module_go": "1.26.0",
+    "os": "Darwin 24.6.0 arm64",
+    "hardware": "Apple M2",
+    "memory_bytes": 17179869184,
+    "benchmark_gomaxprocs": 8
+  },
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm -count=1 ./...",
+      "exit_code": 0,
+      "log": "full-tests.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./...",
+      "exit_code": 0,
+      "log": "full-vet.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "exit_code": 0,
+      "log": "purecheck.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -count=1 -v",
+      "exit_code": 0,
+      "log": "promoted-svg.txt"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -race -count=1",
+      "exit_code": 0,
+      "log": "promoted-svg-race.txt",
+      "note": "Go race instrumentation requires cgo in development; purecheck and product validation use CGO_ENABLED=0."
+    },
+    {
+      "command": "DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib PYTHONDONTWRITEBYTECODE=1 /usr/local/bin/python3 tests/reference/svg_text_bbox_gradients.py --fonts /Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs --verify",
+      "exit_code": 0,
+      "log": "reference-verify.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -run '^$' -bench 'BenchmarkSVG(TextBBoxGradients|ContainerBBoxImportRender)' -benchmem -benchtime=300ms -count=3",
+      "exit_code": 0,
+      "log": "benchmarks.txt"
+    }
+  ],
+  "reference_files_regenerated": 45,
+  "numerical_paint_matrix_absolute_tolerance": 1e-08,
+  "raster": {
+    "comparisons": 32,
+    "max_mae": 0.0508219401,
+    "max_channel_ss1": 16,
+    "max_channel_ss4": 10,
+    "max_fraction_over_8": 0.00154622396,
+    "limits": {
+      "mae": 0.12,
+      "channel_ss1": 40,
+      "channel_ss4": 24,
+      "fraction_over_8": 0.005
+    },
+    "results": [
+      {
+        "file": "cells-middle-cairo-ss1.png",
+        "mae": 0.0320841471,
+        "maximum": 14,
+        "fraction_over_8": 0.00122070312
+      },
+      {
+        "file": "cells-middle-cairo-ss4.png",
+        "mae": 0.0155232747,
+        "maximum": 9,
+        "fraction_over_8": 8.13802083e-05
+      },
+      {
+        "file": "tspan-whole-kern-cairo-ss1.png",
+        "mae": 0.0292561849,
+        "maximum": 9,
+        "fraction_over_8": 8.13802083e-05
+      },
+      {
+        "file": "tspan-whole-kern-cairo-ss4.png",
+        "mae": 0.0213419596,
+        "maximum": 8,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "relative-kern-cairo-ss1.png",
+        "mae": 0.0383097331,
+        "maximum": 12,
+        "fraction_over_8": 0.000895182292
+      },
+      {
+        "file": "relative-kern-cairo-ss4.png",
+        "mae": 0.0194905599,
+        "maximum": 7,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "chunks-fonts-cairo-ss1.png",
+        "mae": 0.033203125,
+        "maximum": 13,
+        "fraction_over_8": 0.0009765625
+      },
+      {
+        "file": "chunks-fonts-cairo-ss4.png",
+        "mae": 0.0153605143,
+        "maximum": 8,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "visibility-overrides-cairo-ss1.png",
+        "mae": 0.0135091146,
+        "maximum": 13,
+        "fraction_over_8": 0.00048828125
+      },
+      {
+        "file": "visibility-overrides-cairo-ss4.png",
+        "mae": 0.00750732422,
+        "maximum": 4,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "affine-local-cairo-ss1.png",
+        "mae": 0.0222167969,
+        "maximum": 13,
+        "fraction_over_8": 0.000244140625
+      },
+      {
+        "file": "affine-local-cairo-ss4.png",
+        "mae": 0.0160929362,
+        "maximum": 6,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "radial-reflection-cairo-ss1.png",
+        "mae": 0.0419108073,
+        "maximum": 15,
+        "fraction_over_8": 0.00122070312
+      },
+      {
+        "file": "radial-reflection-cairo-ss4.png",
+        "mae": 0.0272623698,
+        "maximum": 9,
+        "fraction_over_8": 0.000244140625
+      },
+      {
+        "file": "use-chain-cairo-ss1.png",
+        "mae": 0.0508219401,
+        "maximum": 16,
+        "fraction_over_8": 0.00154622396
+      },
+      {
+        "file": "use-chain-cairo-ss4.png",
+        "mae": 0.0232747396,
+        "maximum": 6,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "nested-clips-cairo-ss1.png",
+        "mae": 0.0232950846,
+        "maximum": 12,
+        "fraction_over_8": 0.000325520833
+      },
+      {
+        "file": "nested-clips-cairo-ss4.png",
+        "mae": 0.0150960286,
+        "maximum": 10,
+        "fraction_over_8": 8.13802083e-05
+      },
+      {
+        "file": "template-alpha-cairo-ss1.png",
+        "mae": 0.0188395182,
+        "maximum": 4,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "template-alpha-cairo-ss4.png",
+        "mae": 0.0182088216,
+        "maximum": 2,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "zero-width-cairo-ss1.png",
+        "mae": 0.0110677083,
+        "maximum": 11,
+        "fraction_over_8": 0.000732421875
+      },
+      {
+        "file": "zero-width-cairo-ss4.png",
+        "mae": 0.00557454427,
+        "maximum": 5,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "animated-100-cairo-ss1.png",
+        "mae": 0.0181070964,
+        "maximum": 14,
+        "fraction_over_8": 0.000325520833
+      },
+      {
+        "file": "animated-080-cairo-ss1.png",
+        "mae": 0.0212198893,
+        "maximum": 11,
+        "fraction_over_8": 0.000325520833
+      },
+      {
+        "file": "animated-050-cairo-ss1.png",
+        "mae": 0.016418457,
+        "maximum": 15,
+        "fraction_over_8": 0.000325520833
+      },
+      {
+        "file": "animated-000-cairo-ss1.png",
+        "mae": 0.0222167969,
+        "maximum": 13,
+        "fraction_over_8": 0.000244140625
+      },
+      {
+        "file": "animated-100-cairo-ss4.png",
+        "mae": 0.0147298177,
+        "maximum": 6,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "animated-020-cairo-ss1.png",
+        "mae": 0.0165812174,
+        "maximum": 13,
+        "fraction_over_8": 0.000162760417
+      },
+      {
+        "file": "animated-000-cairo-ss4.png",
+        "mae": 0.0160929362,
+        "maximum": 6,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "animated-080-cairo-ss4.png",
+        "mae": 0.0176188151,
+        "maximum": 7,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "animated-020-cairo-ss4.png",
+        "mae": 0.0128580729,
+        "maximum": 6,
+        "fraction_over_8": 0.0
+      },
+      {
+        "file": "animated-050-cairo-ss4.png",
+        "mae": 0.0103352865,
+        "maximum": 4,
+        "fraction_over_8": 0.0
+      }
+    ]
+  },
+  "wave8": {
+    "baseline_manifest": "wave8-baseline.json",
+    "baseline_entries": 210,
+    "unchanged_entries": 205,
+    "changed_paths": [
+      "svg/gradient.go",
+      "svg/instance.go",
+      "svg/svg.go",
+      "svg/text.go",
+      "tests/_cases/svg/gradient_test.go"
+    ],
+    "unchanged_old_fixture_files": 172,
+    "existing_test_change": "Remove exactly one obsolete text objectBoundingBox rejection from gradient_test.go. Existing fixture tests/thresholds unchanged."
+  },
+  "known_inflight_failure_resolved": "UseGroupAndExistingSymbolMapping path comparison now uses existing 1e-9 control-point tolerance; gradient frame equality remains exact. Final whole suite and scoped/race checks pass.",
+  "benchmarks": {
+    "workload": "One import + one render per operation. 128x96 RGBA, frame width 8, one render worker, SS1/SS4. Three text fixtures and existing 64-container fixture, three samples each. Final run started after checks completed.",
+    "excluded": "Fixture reads, reference generation, font installation, rasterizer construction, encoding/export and filesystem I/O are outside timed iteration. Embedded font cache is steady state. No speedup claim.",
+    "samples": {
+      "BenchmarkSVGContainerBBoxImportRender/64_containers_128x96_SS1-8": [
+        {
+          "iterations": 420,
+          "ns_per_op": 1073953,
+          "mb_per_s": 4.26,
+          "bytes_per_op": 750937,
+          "allocs_per_op": 4870
+        },
+        {
+          "iterations": 379,
+          "ns_per_op": 864020,
+          "mb_per_s": 5.3,
+          "bytes_per_op": 750925,
+          "allocs_per_op": 4870
+        },
+        {
+          "iterations": 420,
+          "ns_per_op": 894597,
+          "mb_per_s": 5.12,
+          "bytes_per_op": 750926,
+          "allocs_per_op": 4870
+        }
+      ],
+      "BenchmarkSVGContainerBBoxImportRender/64_containers_128x96_SS4-8": [
+        {
+          "iterations": 138,
+          "ns_per_op": 2645934,
+          "mb_per_s": 1.73,
+          "bytes_per_op": 1734278,
+          "allocs_per_op": 4936
+        },
+        {
+          "iterations": 145,
+          "ns_per_op": 2383904,
+          "mb_per_s": 1.92,
+          "bytes_per_op": 1734248,
+          "allocs_per_op": 4936
+        },
+        {
+          "iterations": 150,
+          "ns_per_op": 2668322,
+          "mb_per_s": 1.71,
+          "bytes_per_op": 1734243,
+          "allocs_per_op": 4936
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/cells-middle_128x96_SS1-8": [
+        {
+          "iterations": 2516,
+          "ns_per_op": 135227,
+          "mb_per_s": 3.05,
+          "bytes_per_op": 282323,
+          "allocs_per_op": 889
+        },
+        {
+          "iterations": 2658,
+          "ns_per_op": 144173,
+          "mb_per_s": 2.86,
+          "bytes_per_op": 282323,
+          "allocs_per_op": 889
+        },
+        {
+          "iterations": 2672,
+          "ns_per_op": 134633,
+          "mb_per_s": 3.06,
+          "bytes_per_op": 282323,
+          "allocs_per_op": 889
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/cells-middle_128x96_SS4-8": [
+        {
+          "iterations": 307,
+          "ns_per_op": 1188702,
+          "mb_per_s": 0.35,
+          "bytes_per_op": 1078150,
+          "allocs_per_op": 893
+        },
+        {
+          "iterations": 312,
+          "ns_per_op": 1278416,
+          "mb_per_s": 0.32,
+          "bytes_per_op": 1078154,
+          "allocs_per_op": 893
+        },
+        {
+          "iterations": 308,
+          "ns_per_op": 1249262,
+          "mb_per_s": 0.33,
+          "bytes_per_op": 1078153,
+          "allocs_per_op": 893
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/nested-clips_128x96_SS1-8": [
+        {
+          "iterations": 2005,
+          "ns_per_op": 297620,
+          "mb_per_s": 2.14,
+          "bytes_per_op": 245947,
+          "allocs_per_op": 896
+        },
+        {
+          "iterations": 2163,
+          "ns_per_op": 196937,
+          "mb_per_s": 3.23,
+          "bytes_per_op": 245944,
+          "allocs_per_op": 896
+        },
+        {
+          "iterations": 2426,
+          "ns_per_op": 152335,
+          "mb_per_s": 4.18,
+          "bytes_per_op": 245943,
+          "allocs_per_op": 896
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/nested-clips_128x96_SS4-8": [
+        {
+          "iterations": 284,
+          "ns_per_op": 1256401,
+          "mb_per_s": 0.51,
+          "bytes_per_op": 1041916,
+          "allocs_per_op": 900
+        },
+        {
+          "iterations": 285,
+          "ns_per_op": 1259886,
+          "mb_per_s": 0.5,
+          "bytes_per_op": 1041915,
+          "allocs_per_op": 900
+        },
+        {
+          "iterations": 285,
+          "ns_per_op": 1276700,
+          "mb_per_s": 0.5,
+          "bytes_per_op": 1041915,
+          "allocs_per_op": 900
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/use-chain_128x96_SS1-8": [
+        {
+          "iterations": 1489,
+          "ns_per_op": 206604,
+          "mb_per_s": 3.75,
+          "bytes_per_op": 383796,
+          "allocs_per_op": 1354
+        },
+        {
+          "iterations": 1750,
+          "ns_per_op": 208958,
+          "mb_per_s": 3.71,
+          "bytes_per_op": 383796,
+          "allocs_per_op": 1354
+        },
+        {
+          "iterations": 1647,
+          "ns_per_op": 208373,
+          "mb_per_s": 3.72,
+          "bytes_per_op": 383796,
+          "allocs_per_op": 1354
+        }
+      ],
+      "BenchmarkSVGTextBBoxGradientsImportRender/use-chain_128x96_SS4-8": [
+        {
+          "iterations": 268,
+          "ns_per_op": 1341543,
+          "mb_per_s": 0.58,
+          "bytes_per_op": 1187274,
+          "allocs_per_op": 1360
+        },
+        {
+          "iterations": 267,
+          "ns_per_op": 1361491,
+          "mb_per_s": 0.57,
+          "bytes_per_op": 1187282,
+          "allocs_per_op": 1360
+        },
+        {
+          "iterations": 247,
+          "ns_per_op": 1445332,
+          "mb_per_s": 0.54,
+          "bytes_per_op": 1187297,
+          "allocs_per_op": 1360
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Existing horizontal text/positioning/font/shaping/bidi restrictions remain.",
+    "Nested SVG viewports and bbox container scopes crossing symbol viewports retain existing rejection; existing supported symbol mapping is compared to explicit affine mapping.",
+    "Existing gradient/stroke/focus/spread/interpolation/clone-local restrictions remain.",
+    "Existing per-drawable opacity model; no isolated group compositing added."
+  ],
+  "shared_paths": "No root/update lifecycle, shared examples/parity docs, go.mod, go.sum or dependencies changed; only the explicitly assigned new docs/SVG_TEXT_GRADIENTS.md was added.",
+  "source_dependencies": "dependency-hashes.json; no input changed during final checks"
+}

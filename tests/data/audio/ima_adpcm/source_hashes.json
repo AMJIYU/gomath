@@ -1,0 +1,8 @@
+{
+  "audio/wav.go": "b7539163314f4f7a058d1054a265cbc34ce370231351a69933ac600ce6e175a0",
+  "audio/wav_ima.go": "a998141cc9233fc84e58f8d103ba7598a6a88f6448c7285fd6cc5b113ec08d46",
+  "audio/README.md": "8950ef83d942e397d08904448b582ae6c9a31100c02e6367018555f8b7b9a475",
+  "tests/_cases/audio/wav_ima_test.go": "8539055e2b839fad8fc336c566fa757a15822e3ce19fdd6eb580ee0fc6ccbffb",
+  "tests/reference/audio_ima_adpcm.py": "f65df7eec3469074308fb3a9c0cc610b00f5f43ca75b9ae92299885e2f1f9b03",
+  "tests/reference/audio_wav_regression.py": "5ff22a8b3e1609305d42892556d88234e60ba18685e36d5a2ff3c5ed32ca9949"
+}

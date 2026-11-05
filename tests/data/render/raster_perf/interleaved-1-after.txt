@@ -1,0 +1,14 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/render
+cpu: Apple M2
+BenchmarkRasterPerfMixed/ordinary         	     100	  10055690 ns/op	 1025444 B/op	     327 allocs/op
+BenchmarkRasterPerfMixed/complex          	      82	  14110779 ns/op	 1304504 B/op	    1557 allocs/op
+BenchmarkSupersamplingMixedFrame/scale1   	     100	  10901358 ns/op	    230400 working-pixels/frame	  955197 B/op	     152 allocs/op
+BenchmarkSupersamplingMixedFrame/scale2   	      27	  41694870 ns/op	    921600 working-pixels/frame	 4697022 B/op	     154 allocs/op
+BenchmarkSupersamplingMixedFrame/scale4   	       7	 162858512 ns/op	   3686400 working-pixels/frame	15952893 B/op	     154 allocs/op
+BenchmarkClippedRaster/vector-baseline    	    3043	    416225 ns/op	  926379 B/op	      13 allocs/op
+BenchmarkClippedRaster/vector-one-clip    	    2143	    642995 ns/op	  926913 B/op	      16 allocs/op
+BenchmarkClippedRaster/vector-four-clips  	    1341	    917156 ns/op	  928497 B/op	      28 allocs/op
+BenchmarkClippedRaster/bitmap-one-clip    	     254	   4611882 ns/op	  968946 B/op	      11 allocs/op
+PASS

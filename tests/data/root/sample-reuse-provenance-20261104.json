@@ -1,0 +1,45 @@
+{
+  "after_sources_sha256": {
+    "animation.go": "4cf42be91d0e69591efee74331ab13174795b74ca4e3eb5fce3c11ee8c27a2cf",
+    "scene.go": "554364317d904cecf0fddb73700176d17d6eb037dabc773a735f126696f17101",
+    "composition.go": "650e3024f38a77a7068388c3b432c37827e42c03edb6c3fc8fdcdb3ec8fc48c4",
+    "object.go": "6215e94d9069c4e050b12e856b8922763c8e8f4b908749272814508d136b3702",
+    "path/path.go": "194f93952bb7d1565e4a80ca448c5071a38af27dfb7f5e052126148d92ae1fd2",
+    "tests/_cases/root/animation_benchmark_test.go": "f28ee4b620eb3124a9b9e3e8bf1a34560f27375f1c55ba990192031981710d60"
+  },
+  "before_sources_sha256_file": "sample-reuse-before-20261104.json",
+  "go": "go1.27.3 darwin/arm64",
+  "hardware": "Apple M2",
+  "CGO_ENABLED": "0",
+  "GOMAXPROCS": 1,
+  "tags": "noasm",
+  "command": "CGO_ENABLED=0 GOMAXPROCS=1 go run -tags noasm ./tests/cmd/run -pkg=root -run '^$' -bench BenchmarkSharedSequenceSampling -benchmem -benchtime=300ms -count=5",
+  "workload": "32-circle family, four authored steps; one interior sample at t=2.4; excludes authoring, rasterization, encoding and output",
+  "medians": {
+    "before": {
+      "explicit-plays": {
+        "ns": 12379.0,
+        "B": 37968,
+        "allocations": 171
+      },
+      "succession": {
+        "ns": 12747.0,
+        "B": 37968,
+        "allocations": 171
+      }
+    },
+    "after": {
+      "explicit-plays": {
+        "ns": 9289.0,
+        "B": 23632,
+        "allocations": 107
+      },
+      "succession": {
+        "ns": 9301.0,
+        "B": 23632,
+        "allocations": 107
+      }
+    }
+  },
+  "limits": "Other agents were developing concurrently; before CPU samples include visible contention/outlier. Allocation deltas are deterministic here; timing is not a fully isolated system experiment or Manim comparison."
+}

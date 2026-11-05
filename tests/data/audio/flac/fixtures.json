@@ -1,0 +1,68 @@
+[
+  {
+    "File": "pcm16_1ch_silence_n1_b16.flac",
+    "Pattern": "silence",
+    "SHA256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+    "Rate": 1,
+    "Channels": 1,
+    "Depth": 16,
+    "Frames": 1,
+    "Block": 16,
+    "FLACSHA256": "224888100eb2a0277279b87745dce473f18826ee7b8afde96eab1ff3d630beae"
+  },
+  {
+    "File": "pcm16_2ch_extremes_n255_b257.flac",
+    "Pattern": "extremes",
+    "SHA256": "4db3b01c1b21e70ce2014b8757091cc94340c9baac2f15ee4c679ac769ff870d",
+    "Rate": 44100,
+    "Channels": 2,
+    "Depth": 16,
+    "Frames": 255,
+    "Block": 257,
+    "FLACSHA256": "b0c4d93b77a9f5ce994d07f041f39480e1f823e8790aa36e4689b7ce841c2370"
+  },
+  {
+    "File": "pcm24_1ch_predictor4_n160_b4096.flac",
+    "Pattern": "predictor4",
+    "SHA256": "6f0e000673ea19ed77df427e62da003385d2296eaa341684998336e8078745f0",
+    "Rate": 48000,
+    "Channels": 1,
+    "Depth": 24,
+    "Frames": 160,
+    "Block": 4096,
+    "FLACSHA256": "e52d8a7a0249354660289c75f9cdc54c103be00211c6ae5e080f4b67450e94b4"
+  },
+  {
+    "File": "pcm24_1ch_escape1_n512_b4096.flac",
+    "Pattern": "escape1",
+    "SHA256": "30d3e88c732b5e3597a284c520ec907de8e4667b048d2d3aab18c6c1382e2496",
+    "Rate": 48000,
+    "Channels": 1,
+    "Depth": 24,
+    "Frames": 512,
+    "Block": 4096,
+    "FLACSHA256": "f9309f6e7760e0f08ae87a77d74eaf17c0396488f8821fda5167b8111c262062"
+  },
+  {
+    "File": "pcm24_2ch_random_n16_b4096.flac",
+    "Pattern": "random",
+    "SHA256": "062dbd9c6c9e6d691358b29b89a3f42141c72d9425a2c795cca39aeea6dbd409",
+    "Rate": 768000,
+    "Channels": 2,
+    "Depth": 24,
+    "Frames": 16,
+    "Block": 4096,
+    "FLACSHA256": "c451deabdc903cadec94bde36761b16bd72854f3700d22fd814e2948e0eec1a1"
+  },
+  {
+    "File": "pcm24_2ch_silence_n4097_b4096.flac",
+    "Pattern": "silence",
+    "SHA256": "c8a38c869f76072a5e7684651b8ba443301303f8178dc6515d6985e12484df09",
+    "Rate": 1,
+    "Channels": 2,
+    "Depth": 24,
+    "Frames": 4097,
+    "Block": 4096,
+    "FLACSHA256": "678780e23f1e4894abcd9394d9d1e9e304904dac3acd0e4b076a5d8145db0a2a"
+  }
+]

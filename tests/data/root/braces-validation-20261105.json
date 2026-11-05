@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "scope": "Seventh-wave checked planar braces and independent label copies; scoped root validation, not whole-repository acceptance",
+  "pinned_manim": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733"
+  },
+  "reference": {
+    "constructions": 32,
+    "ordered_transform_states": 224,
+    "label_placements": 12,
+    "control_point_tolerance": 2e-11,
+    "tip_tolerance": 2e-11,
+    "direction_tolerance": 2e-08,
+    "label_bounds_tolerance": 2e-11,
+    "limits": "Straight target/label paths only; actual cubic target extrema independently tested as explicit GoMath policy. No ArcBrace, live reflow or full Write/style/lifecycle equivalence."
+  },
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=root -overlay=tests/data/root/_brace/overlay.json -count=1 -vet=all",
+      "result": "PASS",
+      "package_seconds": 0.085,
+      "notes": "staged source, identical bytes then promoted; temporary overlay removed"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=root -overlay=tests/data/root/_brace/overlay.json -race -count=1 -vet=all",
+      "result": "PASS",
+      "package_seconds": 1.785,
+      "notes": "Go race instrumentation; product remains CGO0"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=root -run 'Test(PinnedManimBrace|Brace)' -count=1 -vet=all",
+      "result": "PASS",
+      "package_seconds": 0.02,
+      "notes": "normal final package path after promotion"
+    }
+  ],
+  "source_sha256": {
+    "brace.go": "2eadd5f8db545ed761a6c0d0a4c86cfa34412025c3fdcaed73b5b3e668ebb9be",
+    "brace_template_data.go": "1fbd16fb688d026479d7299308019e2b300bc0e8079985e2bcb4b12c9b054249",
+    "tests/_cases/root/braces_test.go": "7c544b0566cfb41ce8a20c4de7e2fc39cf8a9de37d7bf074d7c6ec01f9ecc885",
+    "tests/reference/brace_template.py": "12551829666da2565c45ffbe805988d08732bb23570d938dee73796b9722e483",
+    "tests/reference/braces.py": "cc27f39dfa9f55308dad67bb8499564fd08c0dbc726e615340d8ef5c766ce146",
+    "tests/reference/brace_labels.py": "c46bc76944d556fa63870ed750cbf370283a75d4b1dba1419f2b8c59191d635d",
+    "tests/data/root/manim-braces-0.22.1.json": "36e23288b9296c414ba58fe8d8b2082e59b9b6b08d7b00451e404ec0408ddff9",
+    "tests/data/root/manim-brace-labels-0.22.1.json": "6fbb4bd92ac2aa26731f3c1a4f3ead8ae2b71402172be6fc36b8c0edb77bb3ac",
+    "tests/data/root/brace-benchmark-20261105.txt": "9bfa72326e2d6335892b2b0e06b54dca64f35e1324f6bb2dda9a23d4e27a5617",
+    "docs/BRACES.md": "8344dc026c7829671ac8da06eeae576c9a20921c35b2d28ad91abf5af3e8107a"
+  }
+}

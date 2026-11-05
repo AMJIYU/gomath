@@ -1,0 +1,40 @@
+2026-11-04; Go1.27.3 darwin/arm64; Apple M2; CGO_ENABLED=0; noasm.
+Command: CGO_ENABLED=0 go run ./tests/cmd/run -pkg=render -run '^$' -bench '^BenchmarkOrdinaryEvenOddFill$' -benchmem -benchtime=300ms -count=3 -p=1 -cpu=1 -tags noasm
+Workers=1; GOMAXPROCS=1; output320x240; FrameWidth128; one complete rendered frame/op.
+Includes validation/raster/compose/output allocation/SSAA box resolve.
+Excludes construction, one scratch warm-up, scene sampling, camera, encoding, I/O.
+Shared development machine; not an isolated performance or comparative speedup claim.
+
+goos: darwin
+goarch: arm64
+pkg: gomath/render
+cpu: Apple M2
+BenchmarkOrdinaryEvenOddFill/compound/ss1 606 582274 ns/op 316144 B/op 12 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss1 616 583828 ns/op 316144 B/op 12 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss1 616 588821 ns/op 316144 B/op 12 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss2 100 3759877 ns/op 1548976 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss2 98 3962526 ns/op 1548976 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss2 100 3759773 ns/op 1548976 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss4 26 12666250 ns/op 5242929 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss4 27 12880465 ns/op 5242928 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/compound/ss4 27 12572074 ns/op 5242929 B/op 14 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss1 544 651591 ns/op 361504 B/op 25 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss1 548 719076 ns/op 361504 B/op 25 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss1 548 652662 ns/op 361504 B/op 25 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss2 100 3654864 ns/op 1600096 B/op 27 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss2 98 3658879 ns/op 1600096 B/op 27 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss2 99 3741439 ns/op 1600096 B/op 27 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss4 30 11477000 ns/op 5334112 B/op 28 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss4 31 11978179 ns/op 5334112 B/op 28 allocs/op
+BenchmarkOrdinaryEvenOddFill/partial/ss4 30 11647376 ns/op 5334112 B/op 28 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss1 194 1840861 ns/op 362909 B/op 16 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss1 194 1842722 ns/op 362909 B/op 16 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss1 189 1845434 ns/op 362909 B/op 16 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss2 44 8333683 ns/op 1636706 B/op 19 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss2 44 8335158 ns/op 1636706 B/op 19 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss2 42 8313837 ns/op 1636706 B/op 19 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss4 12 30421896 ns/op 5335777 B/op 19 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss4 12 29943180 ns/op 5335777 B/op 19 allocs/op
+BenchmarkOrdinaryEvenOddFill/linear/ss4 12 29910118 ns/op 5335777 B/op 19 allocs/op
+PASS
+ok gomath/render 11.351s

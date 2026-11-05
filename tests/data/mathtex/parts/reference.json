@@ -1,0 +1,656 @@
+{
+  "provenance": "Development-only independent source-font/manual fragment/Cairo oracle.\n\nNo gomath output is read. This checks the documented finite fragment policy,\nnot TeX concatenation or Manim MathTex isolation parity. Go fonts retain their\nnotices in LICENSES/go-fonts.txt. Python/native libraries are never runtime or\nGo-test dependencies. --overlay-only requires only Python's standard library.\n",
+  "generator_sha256": "a59ce9a925cb2455d80c6eb63916aeaf2f40f3d12b225bb3e4e8198061001020",
+  "manim": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "role": "source identity/behavior review only; not a MathTex layout oracle"
+  },
+  "versions": {
+    "Python": "3.11.5",
+    "fontTools": "4.45.1",
+    "CairoSVG": "2.7.1",
+    "Cairo": "1.18.4"
+  },
+  "fonts": [
+    {
+      "file": "Go-Regular.ttf",
+      "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold.ttf",
+      "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Italic.ttf",
+      "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+      "units_per_em": 2048
+    },
+    {
+      "file": "Go-Bold-Italic.ttf",
+      "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+      "units_per_em": 2048
+    }
+  ],
+  "coordinates": {
+    "width": 768,
+    "height": 768,
+    "origin": [
+      64,
+      384
+    ],
+    "ppem": 128
+  },
+  "policy": {
+    "baseline": 0,
+    "boundary_gap": 0,
+    "fraction_ratio": 0.8,
+    "fraction_padding": 0.25,
+    "fraction_axis": 0.16,
+    "rule_width": 0.045,
+    "rule_cap": "round"
+  },
+  "records": [
+    {
+      "name": "baseline",
+      "style": 0,
+      "sources": [
+        "n",
+        "g",
+        "W"
+      ],
+      "advance": 2.05615234375,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "n",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            0.0751953125,
+            0.0,
+            0.48681640625,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 1,
+          "source": "g",
+          "x": 0.55615234375,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            0.6015625,
+            -0.205078125,
+            1.0400390625,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 2,
+          "source": "W",
+          "x": 1.1123046875,
+          "baseline": 0,
+          "advance": 0.94384765625,
+          "height": 0.72265625,
+          "depth": 0,
+          "bbox": [
+            1.12451171875,
+            0.0,
+            2.0439453125,
+            0.72265625
+          ]
+        }
+      ]
+    },
+    {
+      "name": "repeated",
+      "style": 0,
+      "sources": [
+        "n",
+        "+",
+        "n",
+        "=",
+        "g"
+      ],
+      "advance": 2.83642578125,
+      "height": 0.5419921875,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "n",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            0.0751953125,
+            0.0,
+            0.48681640625,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 1,
+          "source": "+",
+          "x": 0.55615234375,
+          "baseline": 0,
+          "advance": 0.583984375,
+          "height": 0.5302734375,
+          "depth": 0,
+          "bbox": [
+            0.60693359375,
+            0.04833984375,
+            1.0888671875,
+            0.5302734375
+          ]
+        },
+        {
+          "index": 2,
+          "source": "n",
+          "x": 1.14013671875,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            1.21533203125,
+            0.0,
+            1.626953125,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 3,
+          "source": "=",
+          "x": 1.6962890625,
+          "baseline": 0,
+          "advance": 0.583984375,
+          "height": 0.4345703125,
+          "depth": 0,
+          "bbox": [
+            1.7109375,
+            0.1435546875,
+            2.265625,
+            0.4345703125
+          ]
+        },
+        {
+          "index": 4,
+          "source": "g",
+          "x": 2.2802734375,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            2.32568359375,
+            -0.205078125,
+            2.76416015625,
+            0.5419921875
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zero-ink",
+      "style": 0,
+      "sources": [
+        "",
+        "\\quad",
+        "\\hphantom{W}",
+        "g",
+        "\\vphantom{n}"
+      ],
+      "advance": 2.5,
+      "height": 0.5419921875,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0,
+          "height": 0,
+          "depth": 0,
+          "bbox": null
+        },
+        {
+          "index": 1,
+          "source": "\\quad",
+          "x": 0,
+          "baseline": 0,
+          "advance": 1,
+          "height": 0,
+          "depth": 0,
+          "bbox": null
+        },
+        {
+          "index": 2,
+          "source": "\\hphantom{W}",
+          "x": 1,
+          "baseline": 0,
+          "advance": 0.94384765625,
+          "height": 0,
+          "depth": 0,
+          "bbox": null
+        },
+        {
+          "index": 3,
+          "source": "g",
+          "x": 1.94384765625,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            1.9892578125,
+            -0.205078125,
+            2.427734375,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 4,
+          "source": "\\vphantom{n}",
+          "x": 2.5,
+          "baseline": 0,
+          "advance": 0,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "name": "color-scope",
+      "style": 0,
+      "sources": [
+        "\\color{red}n",
+        "g",
+        "\\textcolor{blue}{W}"
+      ],
+      "advance": 2.05615234375,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "\\color{red}n",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            0.0751953125,
+            0.0,
+            0.48681640625,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 1,
+          "source": "g",
+          "x": 0.55615234375,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            0.6015625,
+            -0.205078125,
+            1.0400390625,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 2,
+          "source": "\\textcolor{blue}{W}",
+          "x": 1.1123046875,
+          "baseline": 0,
+          "advance": 0.94384765625,
+          "height": 0.72265625,
+          "depth": 0,
+          "bbox": [
+            1.12451171875,
+            0.0,
+            2.0439453125,
+            0.72265625
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fractions",
+      "style": 0,
+      "sources": [
+        "\\frac{n}{g}",
+        "=",
+        "\\frac{W}{i}"
+      ],
+      "advance": 2.283984375,
+      "height": 0.8981250000000001,
+      "depth": 0.59765625,
+      "parts": [
+        {
+          "index": 0,
+          "source": "\\frac{n}{g}",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.694921875,
+          "height": 0.7535937500000001,
+          "depth": 0.59765625,
+          "bbox": [
+            0,
+            -0.59765625,
+            0.694921875,
+            0.7535937500000001
+          ]
+        },
+        {
+          "index": 1,
+          "source": "=",
+          "x": 0.694921875,
+          "baseline": 0,
+          "advance": 0.583984375,
+          "height": 0.4345703125,
+          "depth": 0,
+          "bbox": [
+            0.7095703125,
+            0.1435546875,
+            1.2642578125,
+            0.4345703125
+          ]
+        },
+        {
+          "index": 2,
+          "source": "\\frac{W}{i}",
+          "x": 1.27890625,
+          "baseline": 0,
+          "advance": 1.005078125,
+          "height": 0.8981250000000001,
+          "depth": 0.5859375,
+          "bbox": [
+            1.27890625,
+            -0.5859375,
+            2.283984375,
+            0.8981250000000001
+          ]
+        }
+      ]
+    },
+    {
+      "name": "face-scope",
+      "style": 0,
+      "sources": [
+        "\\mathbf{n}",
+        "\\mathit{g}",
+        "\\mathrm{W}"
+      ],
+      "advance": 2.14990234375,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "\\mathbf{n}",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.61083984375,
+          "height": 0.54833984375,
+          "depth": 0,
+          "bbox": [
+            0.072265625,
+            0.0,
+            0.544921875,
+            0.54833984375
+          ]
+        },
+        {
+          "index": 1,
+          "source": "\\mathit{g}",
+          "x": 0.61083984375,
+          "baseline": 0,
+          "advance": 0.59521484375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            0.62939453125,
+            -0.205078125,
+            1.2060546875,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 2,
+          "source": "\\mathrm{W}",
+          "x": 1.2060546875,
+          "baseline": 0,
+          "advance": 0.94384765625,
+          "height": 0.72265625,
+          "depth": 0,
+          "bbox": [
+            1.21826171875,
+            0.0,
+            2.1376953125,
+            0.72265625
+          ]
+        }
+      ]
+    },
+    {
+      "name": "italic",
+      "style": 2,
+      "sources": [
+        "n",
+        "g",
+        "W"
+      ],
+      "advance": 2.250305706521739,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "n",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.5740361752717391,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            0.08056640625,
+            0.0,
+            0.5740361752717391,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 1,
+          "source": "g",
+          "x": 0.5740361752717391,
+          "baseline": 0,
+          "advance": 0.59521484375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            0.5925908627717391,
+            -0.205078125,
+            1.1692510190217391,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 2,
+          "source": "W",
+          "x": 1.1692510190217391,
+          "baseline": 0,
+          "advance": 1.0810546875,
+          "height": 0.72265625,
+          "depth": 0,
+          "bbox": [
+            1.3308721127717391,
+            0.0,
+            2.250305706521739,
+            0.72265625
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bold-italic",
+      "style": 3,
+      "sources": [
+        "n",
+        "g",
+        "W"
+      ],
+      "advance": 2.348602294921875,
+      "height": 0.72265625,
+      "depth": 0.205078125,
+      "parts": [
+        {
+          "index": 0,
+          "source": "n",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.626922607421875,
+          "height": 0.54833984375,
+          "depth": 0,
+          "bbox": [
+            0.072265625,
+            0.0,
+            0.626922607421875,
+            0.54833984375
+          ]
+        },
+        {
+          "index": 1,
+          "source": "g",
+          "x": 0.626922607421875,
+          "baseline": 0,
+          "advance": 0.6455078125,
+          "height": 0.54833984375,
+          "depth": 0.205078125,
+          "bbox": [
+            0.653778076171875,
+            -0.205078125,
+            1.272430419921875,
+            0.54833984375
+          ]
+        },
+        {
+          "index": 2,
+          "source": "W",
+          "x": 1.272430419921875,
+          "baseline": 0,
+          "advance": 1.076171875,
+          "height": 0.72265625,
+          "depth": 0,
+          "bbox": [
+            1.428680419921875,
+            0.0,
+            2.348602294921875,
+            0.72265625
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hidden-fraction",
+      "style": 0,
+      "sources": [
+        "\\phantom{\\frac{n}{g}}",
+        "g",
+        "n"
+      ],
+      "advance": 1.8072265625,
+      "height": 0.7535937500000001,
+      "depth": 0.59765625,
+      "parts": [
+        {
+          "index": 0,
+          "source": "\\phantom{\\frac{n}{g}}",
+          "x": 0,
+          "baseline": 0,
+          "advance": 0.694921875,
+          "height": 0.7535937500000001,
+          "depth": 0.59765625,
+          "bbox": null
+        },
+        {
+          "index": 1,
+          "source": "g",
+          "x": 0.694921875,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0.205078125,
+          "bbox": [
+            0.74033203125,
+            -0.205078125,
+            1.17880859375,
+            0.5419921875
+          ]
+        },
+        {
+          "index": 2,
+          "source": "n",
+          "x": 1.25107421875,
+          "baseline": 0,
+          "advance": 0.55615234375,
+          "height": 0.5419921875,
+          "depth": 0,
+          "bbox": [
+            1.32626953125,
+            0.0,
+            1.737890625,
+            0.5419921875
+          ]
+        }
+      ]
+    }
+  ],
+  "files_sha256": {
+    "baseline.svg": "330876916514bf0f1511fb708987842402af68fb1a32bef975e8ca9a52a56861",
+    "baseline.png": "c5cbc85caf79bdb971c5235105f1a4dca491d9877e543e621cff6cb2c3ff0fc8",
+    "transform-whole-035.svg": "6c9eee448eaa36711ac4f83feee6ba9950a3e99011f0f481832bea72cd22ecfb",
+    "transform-whole-035.png": "4bca603a4766a37089e8c568d45511ea50a2b7e0171e73583efc55d81632c72f",
+    "transform-part-035.svg": "b01a7420d8a5ab397a18f585f8b84632e2dac9b551225a300c9b126d74de2057",
+    "transform-part-035.png": "7bd75609301fac1f6e3ee4188b39855694368a76a1c23a796688d85c5248ab8e",
+    "transform-whole-070.svg": "cc6cac7e1908a702a5e3323e5cde85ec9b37f432404b3cc7b3119501349c986b",
+    "transform-whole-070.png": "6282af456ab6783c29b5d6f98088772c982725cddc032f693afec8bc656717e2",
+    "transform-part-070.svg": "bcb75ff72f245afd815b7867db40ebfcdc5aa6d249ac8c256cb88a56e3416893",
+    "transform-part-070.png": "098236a480c802f261bb6a5cc7e5182a862d06c8c9c4adb65f26d48d90b108ea",
+    "repeated.svg": "f614b7b7764cee2ad79c8bcc7101bfcff061a2e7c44a64e1e2f9256ca5bb3473",
+    "repeated.png": "278997531b3dcbce1c51b12cd4a8b4c1982c686be254e8dfa2032354437485c6",
+    "zero-ink.svg": "7175654fc43667b338bffdc2c5ef2af928092cc960e1592152b9c2c80de60c3f",
+    "zero-ink.png": "ff763047865b52f698f5a681d995db50ecde9fde39e848b9baf56aa8ff4f0c27",
+    "color-scope.svg": "5c37eb5b6837e0d2ebf7075b4391ede028f1a72044c3febfabfaf5c6bbc2d0e8",
+    "color-scope.png": "874e5d21f02b5d7336e8c1949e06296161bade99a4b3ed0f97164edccbec89e0",
+    "fractions.svg": "40f70ac7719bda715ab9335730fc600029358aed7f06c5107482b08e064439d1",
+    "fractions.png": "2185b7acedc969ac079cb7a4ee122108043e734da3d1aa3b0bc4e1cbf4a92f49",
+    "face-scope.svg": "a7d4c71effcf1f386540b1d6a8d52059905f1d3126dbd1069c34f97687703637",
+    "face-scope.png": "d9753067006e7bbc34e2597cca3f3833fa9b968257b2038c2fd35e94dec2349e",
+    "italic.svg": "dca96631e8d3483ad399e4c27e146bb24559e02b9cc0ddbdb9cd85ca1720732a",
+    "italic.png": "5c5129b340505acaa156bdcbef37f91ab56a69bf825c659831166a4f44cba76f",
+    "bold-italic.svg": "803755f1ffaad737162f9275ff252ab900893f2b2a098fd06851cee80b6c8924",
+    "bold-italic.png": "e4ad665fc30276ef39fbc7e062714abeddd3274c0323f3833a314e9aaebf770a",
+    "hidden-fraction.svg": "2de6a5b3a9bfb35a36c707bfefbc29b132b0b533d495dfdb9651b9e19e43c597",
+    "hidden-fraction.png": "bc229a69e867b26707f6cc55e221eb7b14e1c47c9e7467ef286d66562f818201"
+  },
+  "limitations": "Manual finite fragment boxes and original quadratic glyph outlines, not TeX macro parsing, full source mapping or Manim MathTex parity. sfnt font extrema may differ by one design unit. Interior references use linear affine transforms of glyph geometry."
+}

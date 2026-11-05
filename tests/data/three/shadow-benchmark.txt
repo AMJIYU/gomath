@@ -1,0 +1,33 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkRenderSphere-8              	      93	   2456683 ns/op	  852555 B/op	       9 allocs/op
+BenchmarkRenderSphere-8              	     100	   2423928 ns/op	  852434 B/op	       9 allocs/op
+BenchmarkRenderSphere-8              	      99	   2427250 ns/op	  852434 B/op	       9 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa1-8         	      58	   4058698 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076403 B/op	      14 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa1-8         	      57	   6217163 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076320 B/op	      14 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa1-8         	      55	   4042232 ns/op	      3982 tris/frame	      2014 vertices/frame	 1076299 B/op	      14 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa2-8         	      21	  13954478 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148368 B/op	      16 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa2-8         	      18	  22027977 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148683 B/op	      16 allocs/op
+BenchmarkRenderDirectionalShadow/off/ssaa2-8         	      18	  13716241 ns/op	      3982 tris/frame	      2014 vertices/frame	 4148383 B/op	      16 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa1-8      	      31	   8261761 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650632 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa1-8      	      32	   7502178 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650633 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa1-8      	      31	   7483673 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650632 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa2-8      	      15	  15053858 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722701 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa2-8      	      15	  14839619 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722698 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/map256/ssaa2-8      	      15	  15130494 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722697 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa1-8     	      19	  11886105 ns/op	      3982 tris/frame	      2014 vertices/frame	 9514971 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa1-8     	      19	  11974221 ns/op	      3982 tris/frame	      2014 vertices/frame	 9514977 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa1-8     	      19	  12095020 ns/op	      3982 tris/frame	      2014 vertices/frame	 9514977 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa2-8     	      12	  19241691 ns/op	      3982 tris/frame	      2014 vertices/frame	12587052 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa2-8     	      12	  19303083 ns/op	      3982 tris/frame	      2014 vertices/frame	12587024 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/map1024/ssaa2-8     	      12	  19255278 ns/op	      3982 tris/frame	      2014 vertices/frame	12587052 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa1-8 	      28	   8262003 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650633 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa1-8 	      28	   9401082 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650637 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa1-8 	      26	   9378554 ns/op	      3982 tris/frame	      2014 vertices/frame	 1650646 B/op	      19 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa2-8 	      13	  17886840 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722708 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa2-8 	      13	  17788016 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722708 B/op	      21 allocs/op
+BenchmarkRenderDirectionalShadow/textured256/ssaa2-8 	      13	  17851506 ns/op	      3982 tris/frame	      2014 vertices/frame	 4722700 B/op	      21 allocs/op
+PASS
+ok  	gomath/three	7.535s

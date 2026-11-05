@@ -1,0 +1,20 @@
+{
+  "config": {
+    "Width": 128,
+    "Height": 96,
+    "FPS": 30,
+    "Workers": 1,
+    "FrameWidth": 128,
+    "Background": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 0
+    },
+    "CurveTolerance": 0,
+    "Supersampling": 1
+  },
+  "height": 96,
+  "scope": "Actual Go SVG export and native raster, independently interpreted by tests/reference/clip_evenodd_export.py; two same-winding compound circles, mixed clip rules, nonzero ancestor and alpha fill.",
+  "width": 128
+}

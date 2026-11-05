@@ -1,0 +1,7 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/render
+cpu: Apple M2
+BenchmarkRasterPerfMixed/ordinary         	     237	  11209767 ns/op	 1025535 B/op	     327 allocs/op
+BenchmarkRasterPerfMixed/complex          	     168	  15860780 ns/op	 1304607 B/op	    1557 allocs/op
+PASS

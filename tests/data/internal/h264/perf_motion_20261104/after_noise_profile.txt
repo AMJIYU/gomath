@@ -1,0 +1,7 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/internal/h264
+cpu: Apple M2
+BenchmarkMotionSearch/noisechange/r2         	       1	2372342875 ns/op	  39539010 ns/frame	 2154440 B/op	      99 allocs/op
+PASS
+ok  	gomath/internal/h264	2.591s

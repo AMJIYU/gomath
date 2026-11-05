@@ -1,0 +1,13 @@
+--- FAIL: TestPinnedManimMatchingParts (0.00s)
+    --- FAIL: TestPinnedManimMatchingParts/mixed (0.00s)
+        matching_test.go:107: alpha 0: got5 drawable nodes want3
+    --- FAIL: TestPinnedManimMatchingParts/all-mismatch (0.00s)
+        matching_test.go:107: alpha 0: got4 drawable nodes want2
+    --- FAIL: TestPinnedManimMatchingParts/target-only (0.00s)
+        matching_test.go:107: alpha 0: got2 drawable nodes want0
+FAIL
+FAIL	gomath	0.009s
+ok  	gomath/mathtex	0.008s
+FAIL
+exit status 1
+exit status 1

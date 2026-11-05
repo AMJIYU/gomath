@@ -1,0 +1,43 @@
+{
+  "changed_original_files": [
+    "audio/README.md",
+    "audio/flac_read.go"
+  ],
+  "unchanged_original_files": [
+    "audio/aiff_read.go",
+    "audio/au_read.go",
+    "audio/edit.go",
+    "audio/flac.go",
+    "audio/pcm.go",
+    "audio/remix.go",
+    "audio/resample.go",
+    "audio/sequence.go",
+    "audio/wav.go",
+    "audio/wav_g711.go",
+    "audio/wav_ima.go",
+    "audio/wav_ms_adpcm.go",
+    "go.mod",
+    "tests/_cases/audio/flac_read_test.go",
+    "tests/_cases/audio/flac_reference_test.go",
+    "tests/_cases/audio/flac_test.go",
+    "tests/data/audio/flac/fixtures.json",
+    "tests/data/audio/flac/pcm16_1ch_silence_n1_b16.flac",
+    "tests/data/audio/flac/pcm16_2ch_extremes_n255_b257.flac",
+    "tests/data/audio/flac/pcm24_1ch_escape1_n512_b4096.flac",
+    "tests/data/audio/flac/pcm24_1ch_predictor4_n160_b4096.flac",
+    "tests/data/audio/flac/pcm24_2ch_random_n16_b4096.flac",
+    "tests/data/audio/flac/pcm24_2ch_silence_n4097_b4096.flac",
+    "tests/data/audio/flac/verification.json",
+    "tests/data/audio/flac_decode/libflac_pcm16_1ch_silence_n1_l0.flac",
+    "tests/data/audio/flac_decode/libflac_pcm16_1ch_sine_n257_l0.flac",
+    "tests/data/audio/flac_decode/libflac_pcm16_2ch_correlated_n8193_l8.flac",
+    "tests/data/audio/flac_decode/libflac_pcm16_2ch_extremes_n15_l5.flac",
+    "tests/data/audio/flac_decode/libflac_pcm24_1ch_ramp_n8193_l8.flac",
+    "tests/data/audio/flac_decode/libflac_pcm24_1ch_wasted_n17_l0.flac",
+    "tests/data/audio/flac_decode/libflac_pcm24_2ch_random_n16_l8.flac",
+    "tests/data/audio/flac_decode/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac",
+    "tests/data/audio/flac_decode/manifest.json",
+    "tests/data/audio/flac_decode/verification.json"
+  ],
+  "claim": "All original audio implementation files other than flac_read.go, go.mod, old FLAC tests and fixture hashes preserved."
+}

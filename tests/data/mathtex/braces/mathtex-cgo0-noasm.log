@@ -1,0 +1,1632 @@
+=== RUN   TestAccentGeometryBaselineAndFilledBounds
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/overline/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/overline/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/overline/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/overline/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/overline/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/underline/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/underline/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/underline/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/underline/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/underline/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/hat/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/hat/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/hat/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/hat/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/hat/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/widehat/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/widehat/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/widehat/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/widehat/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/widehat/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/bar/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/bar/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/bar/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/bar/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/bar/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/vec/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/vec/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/vec/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/vec/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/vec/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/dot/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/dot/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/dot/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/dot/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/dot/\begin{matrix}a&b\\c&d\end{matrix}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/ddot/x
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/ddot/g
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/ddot/\mathit{f}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/ddot/\frac{x_i}{y^2}
+=== RUN   TestAccentGeometryBaselineAndFilledBounds/ddot/\begin{matrix}a&b\\c&d\end{matrix}
+--- PASS: TestAccentGeometryBaselineAndFilledBounds (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/overline/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/overline/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/overline/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/overline/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/overline/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/underline/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/underline/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/underline/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/underline/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/underline/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/hat/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/hat/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/hat/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/hat/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/hat/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/widehat/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/widehat/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/widehat/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/widehat/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/widehat/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/bar/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/bar/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/bar/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/bar/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/bar/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/vec/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/vec/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/vec/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/vec/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/vec/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/dot/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/dot/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/dot/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/dot/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/dot/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/ddot/x (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/ddot/g (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/ddot/\mathit{f} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/ddot/\frac{x_i}{y^2} (0.00s)
+    --- PASS: TestAccentGeometryBaselineAndFilledBounds/ddot/\begin{matrix}a&b\\c&d\end{matrix} (0.00s)
+=== RUN   TestAccentWidthsCentersAndRuleThickness
+--- PASS: TestAccentWidthsCentersAndRuleThickness (0.00s)
+=== RUN   TestAccentNestingScriptsAndComposition
+--- PASS: TestAccentNestingScriptsAndComposition (0.00s)
+=== RUN   TestAccentStyleColorAndSize
+--- PASS: TestAccentStyleColorAndSize (0.00s)
+=== RUN   TestAccentMalformedArgumentsAndInputBudgets
+    accents_test.go:222: unsupported command accepted \overbrace{x} <nil>
+--- FAIL: TestAccentMalformedArgumentsAndInputBudgets (0.00s)
+=== RUN   TestAccentScriptScaleAndScopedMarkStyle
+--- PASS: TestAccentScriptScaleAndScopedMarkStyle (0.00s)
+=== RUN   TestAccentSharesGlyphCurveBudget
+--- PASS: TestAccentSharesGlyphCurveBudget (0.00s)
+=== RUN   TestAccentConcurrentGeometryOwnership
+--- PASS: TestAccentConcurrentGeometryOwnership (0.00s)
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-0
+    array_reference_test.go:221: lcr-rules-0 fontTools/manual/Cairo MAE=0.0231464527 RMS=0.524040149 max=50 worst-color-IoU=0.992962829
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/plain-lcr
+    array_reference_test.go:221: plain-lcr fontTools/manual/Cairo MAE=0.0171808313 RMS=0.425143668 max=32 worst-color-IoU=0.991762987
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/fraction-phantom
+    array_reference_test.go:221: fraction-phantom fontTools/manual/Cairo MAE=0.0111524794 RMS=0.322080781 max=40 worst-color-IoU=0.990152193
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/empty-phantom
+    array_reference_test.go:221: empty-phantom fontTools/manual/Cairo MAE=0.000587180809 RMS=0.024231814 max=1 worst-color-IoU=1
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-1
+    array_reference_test.go:221: lcr-rules-1 fontTools/manual/Cairo MAE=0.014895969 RMS=0.342752261 max=37 worst-color-IoU=0.982717678
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-2
+    array_reference_test.go:221: lcr-rules-2 fontTools/manual/Cairo MAE=0.0265163845 RMS=0.539154749 max=43 worst-color-IoU=0.993304379
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-3
+    array_reference_test.go:221: lcr-rules-3 fontTools/manual/Cairo MAE=0.0177284523 RMS=0.37000098 max=35 worst-color-IoU=0.997064318
+--- PASS: TestArrayIndependentFontMetricsRulesAndCairo (0.54s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-0 (0.09s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/plain-lcr (0.08s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/fraction-phantom (0.10s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/empty-phantom (0.03s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-1 (0.08s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-2 (0.08s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-3 (0.08s)
+=== RUN   TestArrayIndependentIntermediateTransform
+    array_reference_test.go:253: morph-035 fontTools/manual/Cairo MAE=0.0170214618 RMS=0.342927816 max=26 worst-color-IoU=0.994597636
+    array_reference_test.go:253: morph-070 fontTools/manual/Cairo MAE=0.0257059733 RMS=0.559226223 max=47 worst-color-IoU=0.991362991
+--- PASS: TestArrayIndependentIntermediateTransform (0.16s)
+=== RUN   TestArrayLiteralSpecAndExactLayoutPolicy
+--- PASS: TestArrayLiteralSpecAndExactLayoutPolicy (0.00s)
+=== RUN   TestArrayNestedCellsScopesAndPhantoms
+--- PASS: TestArrayNestedCellsScopesAndPhantoms (0.00s)
+=== RUN   TestArrayAtomicUnsupportedGrammar
+--- PASS: TestArrayAtomicUnsupportedGrammar (0.00s)
+=== RUN   TestArrayGlobalBudgetsHiddenAndLegacyStructuralCurves
+--- PASS: TestArrayGlobalBudgetsHiddenAndLegacyStructuralCurves (0.04s)
+=== RUN   TestArrayNestedCellReservationAtExactLimit
+--- PASS: TestArrayNestedCellReservationAtExactLimit (0.00s)
+=== RUN   TestArrayOwnershipFontsConcurrentSnapshots
+--- PASS: TestArrayOwnershipFontsConcurrentSnapshots (0.00s)
+=== RUN   TestArrayWriteTransformIntermediateSnapshots
+--- PASS: TestArrayWriteTransformIntermediateSnapshots (0.00s)
+=== RUN   TestArrayBoundaryDepthAndCustomFontErrors
+--- PASS: TestArrayBoundaryDepthAndCustomFontErrors (0.00s)
+=== RUN   TestBraceIndependentFontGeometryAndCairo
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-0
+    braces_reference_test.go:141: labels-style-0 independent fontTools/manual/Cairo MAE=0.00761978715 RMS=0.282159786 max=28 IoU=0.995865071
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-1
+    braces_reference_test.go:141: labels-style-1 independent fontTools/manual/Cairo MAE=0.00607469347 RMS=0.218233983 max=28 IoU=0.997583976
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-2
+    braces_reference_test.go:141: labels-style-2 independent fontTools/manual/Cairo MAE=0.00977297182 RMS=0.306880352 max=29 IoU=0.994844253
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-3
+    braces_reference_test.go:141: labels-style-3 independent fontTools/manual/Cairo MAE=0.00751862703 RMS=0.240550866 max=26 IoU=0.998134183
+=== RUN   TestBraceIndependentFontGeometryAndCairo/nested
+    braces_reference_test.go:141: nested independent fontTools/manual/Cairo MAE=0.00282005027 RMS=0.140753542 max=24 IoU=0.996147607
+=== RUN   TestBraceIndependentFontGeometryAndCairo/zero
+    braces_reference_test.go:141: zero independent fontTools/manual/Cairo MAE=0.00656071416 RMS=0.282642075 max=39 IoU=0.992194674
+=== RUN   TestBraceIndependentFontGeometryAndCairo/phantom
+    braces_reference_test.go:141: phantom independent fontTools/manual/Cairo MAE=0.000844884802 RMS=0.0725397937 max=18 IoU=0.998435055
+=== RUN   TestBraceIndependentFontGeometryAndCairo/script-brace
+    braces_reference_test.go:141: script-brace independent fontTools/manual/Cairo MAE=0.0164681894 RMS=0.540624415 max=43 IoU=0.991572173
+--- PASS: TestBraceIndependentFontGeometryAndCairo (0.13s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-0 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-1 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-2 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-3 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/nested (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/zero (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/phantom (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/script-brace (0.02s)
+=== RUN   TestBraceIndependentInteriorTransformAndIdentity
+    braces_reference_test.go:178: transform-035 independent fontTools/manual/Cairo MAE=0.00612216526 RMS=0.216437168 max=25 IoU=0.997318136
+    braces_reference_test.go:178: transform-070 independent fontTools/manual/Cairo MAE=0.00773111979 RMS=0.289913662 max=30 IoU=0.997392747
+--- PASS: TestBraceIndependentInteriorTransformAndIdentity (0.03s)
+=== RUN   TestBraceActualOperandGeometry
+=== RUN   TestBraceActualOperandGeometry/overbracei
+=== RUN   TestBraceActualOperandGeometry/overbraceabcdef
+=== RUN   TestBraceActualOperandGeometry/overbrace\mathit{f}
+=== RUN   TestBraceActualOperandGeometry/overbracex_i^{n^2}
+=== RUN   TestBraceActualOperandGeometry/overbrace\frac{n}{g}
+=== RUN   TestBraceActualOperandGeometry/overbrace\sqrt[3]{g}
+=== RUN   TestBraceActualOperandGeometry/overbrace\begin{matrix}a&b\\g&n\end{matrix}
+=== RUN   TestBraceActualOperandGeometry/overbrace\overbrace{n}^{k}
+=== RUN   TestBraceActualOperandGeometry/overbrace\underbrace{g}_{i}
+=== RUN   TestBraceActualOperandGeometry/underbracei
+=== RUN   TestBraceActualOperandGeometry/underbraceabcdef
+=== RUN   TestBraceActualOperandGeometry/underbrace\mathit{f}
+=== RUN   TestBraceActualOperandGeometry/underbracex_i^{n^2}
+=== RUN   TestBraceActualOperandGeometry/underbrace\frac{n}{g}
+=== RUN   TestBraceActualOperandGeometry/underbrace\sqrt[3]{g}
+=== RUN   TestBraceActualOperandGeometry/underbrace\begin{matrix}a&b\\g&n\end{matrix}
+=== RUN   TestBraceActualOperandGeometry/underbrace\overbrace{n}^{k}
+=== RUN   TestBraceActualOperandGeometry/underbrace\underbrace{g}_{i}
+--- PASS: TestBraceActualOperandGeometry (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbracei (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbraceabcdef (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\mathit{f} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbracex_i^{n^2} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\frac{n}{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\sqrt[3]{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\begin{matrix}a&b\\g&n\end{matrix} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\overbrace{n}^{k} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\underbrace{g}_{i} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbracei (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbraceabcdef (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\mathit{f} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbracex_i^{n^2} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\frac{n}{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\sqrt[3]{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\begin{matrix}a&b\\g&n\end{matrix} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\overbrace{n}^{k} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\underbrace{g}_{i} (0.00s)
+=== RUN   TestBraceLabelsScopeAndNesting
+--- PASS: TestBraceLabelsScopeAndNesting (0.00s)
+=== RUN   TestBraceZeroInkAndPhantomExtents
+--- PASS: TestBraceZeroInkAndPhantomExtents (0.00s)
+=== RUN   TestBraceFontsColorsAndFiniteSize
+--- PASS: TestBraceFontsColorsAndFiniteSize (0.00s)
+=== RUN   TestBraceInvalidAtomicAndSharedBudgets
+--- PASS: TestBraceInvalidAtomicAndSharedBudgets (0.00s)
+=== RUN   TestBraceConcurrentLayoutsAndSnapshots
+--- PASS: TestBraceConcurrentLayoutsAndSnapshots (0.00s)
+=== RUN   TestBraceHiddenCurvesChargedExactlyOnce
+--- PASS: TestBraceHiddenCurvesChargedExactlyOnce (0.01s)
+=== RUN   TestBraceWriteIntermediateFrames
+--- PASS: TestBraceWriteIntermediateFrames (0.00s)
+=== RUN   TestMathColorIndependentCairoSVG
+    colors_render_test.go:129: fraction #ff0000: interior IoU 1.000000; whole image RGB MAE 0.008149
+    colors_render_test.go:129: fraction #0000ff: interior IoU 0.998943; whole image RGB MAE 0.008149
+    colors_render_test.go:129: fraction #008040: interior IoU 0.998055; whole image RGB MAE 0.008149
+    colors_render_test.go:129: overline #ff0000: interior IoU 1.000000; whole image RGB MAE 0.004157
+    colors_render_test.go:129: overline #008040: interior IoU 0.995070; whole image RGB MAE 0.004157
+    colors_render_test.go:132: independent CairoSVG color mask minimum IoU 0.995070
+--- PASS: TestMathColorIndependentCairoSVG (0.04s)
+=== RUN   TestMathColorRasterAndSVGDescendants
+--- PASS: TestMathColorRasterAndSVGDescendants (0.02s)
+=== RUN   TestMathColorCloneMorphAndConcurrentSampling
+--- PASS: TestMathColorCloneMorphAndConcurrentSampling (0.00s)
+=== RUN   TestMathColorPaletteAndHTML
+--- PASS: TestMathColorPaletteAndHTML (0.00s)
+=== RUN   TestMathColorScopesAndDescendants
+=== RUN   TestMathColorScopesAndDescendants/a\color{red}b{\color{blue}c}d
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\textcolor{blue}{a\color{green}b}c
+=== RUN   TestMathColorScopesAndDescendants/\frac{\color{red}a}{b}c
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\dfrac{\color{blue}a}{b}c
+=== RUN   TestMathColorScopesAndDescendants/\color{green}\dbinom{\color{red}a}{b}c
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\left(\color{blue}a\right)b
+=== RUN   TestMathColorScopesAndDescendants/\hat{\color{blue}a}b
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\overline{\textcolor{blue}{a}}b
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\sqrt{\color{blue}a}b
+=== RUN   TestMathColorScopesAndDescendants/a_{\color{red}b}^{c}d
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\sum\limits_{\color{blue}a}^{b}c
+=== RUN   TestMathColorScopesAndDescendants/\textcolor{red}{a}_b_c
+=== RUN   TestMathColorScopesAndDescendants/\begin{pmatrix}\color{red}a&b\\\textcolor{blue}{c}&d\end{pmatrix}e
+=== RUN   TestMathColorScopesAndDescendants/\color{red}\substack{\color{blue}a\\b}c
+=== RUN   TestMathColorScopesAndDescendants/\overset{\color{red}a}{b}c
+=== RUN   TestMathColorScopesAndDescendants/\textcolor{red}{\operatorname*{arg_max}\limits_a^b}c
+=== RUN   TestMathColorScopesAndDescendants/\textcolor{blue}{\mathbb{R}\mathcal{A}\mathfrak{g}\mathbf{n}\in}
+=== RUN   TestMathColorScopesAndDescendants/\textcolor{red}{\text{hi}}\textit{a}
+--- PASS: TestMathColorScopesAndDescendants (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/a\color{red}b{\color{blue}c}d (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\textcolor{blue}{a\color{green}b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\frac{\color{red}a}{b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\dfrac{\color{blue}a}{b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{green}\dbinom{\color{red}a}{b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\left(\color{blue}a\right)b (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\hat{\color{blue}a}b (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\overline{\textcolor{blue}{a}}b (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\sqrt{\color{blue}a}b (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/a_{\color{red}b}^{c}d (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\sum\limits_{\color{blue}a}^{b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\textcolor{red}{a}_b_c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\begin{pmatrix}\color{red}a&b\\\textcolor{blue}{c}&d\end{pmatrix}e (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\color{red}\substack{\color{blue}a\\b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\overset{\color{red}a}{b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\textcolor{red}{\operatorname*{arg_max}\limits_a^b}c (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\textcolor{blue}{\mathbb{R}\mathcal{A}\mathfrak{g}\mathbf{n}\in} (0.00s)
+    --- PASS: TestMathColorScopesAndDescendants/\textcolor{red}{\text{hi}}\textit{a} (0.00s)
+=== RUN   TestMathColorGeometryAndFontsUnchanged
+--- PASS: TestMathColorGeometryAndFontsUnchanged (0.00s)
+=== RUN   TestMathColorErrorsAndBudgets
+--- PASS: TestMathColorErrorsAndBudgets (0.00s)
+=== RUN   TestMathColorOwnershipAndConcurrentLayouts
+--- PASS: TestMathColorOwnershipAndConcurrentLayouts (0.00s)
+=== RUN   TestGeneralFractionIndependentFontMetrics
+--- PASS: TestGeneralFractionIndependentFontMetrics (0.00s)
+=== RUN   TestGeneralFractionIndependentFreeTypeOperands
+    fractions_reference_test.go:208: 48 independent FreeType operand masks; minimum silhouette IoU 0.979035
+--- PASS: TestGeneralFractionIndependentFreeTypeOperands (0.06s)
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance/dfrac
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance/tfrac
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance/binom
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance/dbinom
+=== RUN   TestGeneralFractionsDistinctSizesBaselineAndClearance/tbinom
+--- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance (0.00s)
+    --- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance/dfrac (0.00s)
+    --- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance/tfrac (0.00s)
+    --- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance/binom (0.00s)
+    --- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance/dbinom (0.00s)
+    --- PASS: TestGeneralFractionsDistinctSizesBaselineAndClearance/tbinom (0.00s)
+=== RUN   TestGeneralFractionScriptsForceNominalSizeAndScope
+--- PASS: TestGeneralFractionScriptsForceNominalSizeAndScope (0.00s)
+=== RUN   TestGeneralFractionNestedStylesEmptyAndOwnership
+--- PASS: TestGeneralFractionNestedStylesEmptyAndOwnership (0.01s)
+=== RUN   TestGeneralFractionInvalidInputAndCurves
+--- PASS: TestGeneralFractionInvalidInputAndCurves (0.00s)
+=== RUN   TestScalableDelimitersEncloseNestedInk
+--- PASS: TestScalableDelimitersEncloseNestedInk (0.00s)
+=== RUN   TestEnvironmentBaselinesColumnsAndNestedBoxes
+--- PASS: TestEnvironmentBaselinesColumnsAndNestedBoxes (0.00s)
+=== RUN   TestLiteralTextPreservesAllSpaces
+--- PASS: TestLiteralTextPreservesAllSpaces (0.00s)
+=== RUN   TestFontCommandsSelectActualGlyphsAndScope
+--- PASS: TestFontCommandsSelectActualGlyphsAndScope (0.00s)
+=== RUN   TestMalformedStructuresAndUnsupportedSyntax
+--- PASS: TestMalformedStructuresAndUnsupportedSyntax (0.00s)
+=== RUN   TestTypesettingResourceAndOptionLimits
+--- PASS: TestTypesettingResourceAndOptionLimits (0.00s)
+=== RUN   TestConcurrentMathLayoutUsesIndependentGeometry
+--- PASS: TestConcurrentMathLayoutUsesIndependentGeometry (0.00s)
+=== RUN   TestLegacyLayoutControlPointFixtures
+=== RUN   TestLegacyLayoutControlPointFixtures/x_i^2+\frac{a+\sqrt{b}}{g}
+=== RUN   TestLegacyLayoutControlPointFixtures/\int_0^1f(x)dx+\sum_{i=1}^{n}i+\prod_{j=1}^{m}x_j+\lim_{x\rightarrow0}f(x)
+=== RUN   TestLegacyLayoutControlPointFixtures/\sum\limits_{g}^{\hat{n}}+\prod^{m}\nolimits_{j=1}
+=== RUN   TestLegacyLayoutControlPointFixtures/\displaystyle\sum_i^n+{\textstyle\prod_j^m}+\lim_{x\rightarrow0}x
+=== RUN   TestLegacyLayoutControlPointFixtures/\widehat{\overline{x}_i}^2+\underline{g}+\vec{\mathbf{v}}+\ddot{y}
+=== RUN   TestLegacyLayoutControlPointFixtures/\left[\frac{\sum\limits_{g}^{n}}{\sqrt{1+x}}\right]_{i=0}^{m}
+=== RUN   TestLegacyLayoutControlPointFixtures/\begin{pmatrix}\mathbf{a}&\frac{1}{x}\\\widehat{g}&\displaystyle\sum_i^n\end{pmatrix}
+=== RUN   TestLegacyLayoutControlPointFixtures/\mathit{f}+\mathbf{\mathit{A}}+\mathrm{z}+\text{_a__b_}
+--- PASS: TestLegacyLayoutControlPointFixtures (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/x_i^2+\frac{a+\sqrt{b}}{g} (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\int_0^1f(x)dx+\sum_{i=1}^{n}i+\prod_{j=1}^{m}x_j+\lim_{x\rightarrow0}f(x) (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\sum\limits_{g}^{\hat{n}}+\prod^{m}\nolimits_{j=1} (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\displaystyle\sum_i^n+{\textstyle\prod_j^m}+\lim_{x\rightarrow0}x (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\widehat{\overline{x}_i}^2+\underline{g}+\vec{\mathbf{v}}+\ddot{y} (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\left[\frac{\sum\limits_{g}^{n}}{\sqrt{1+x}}\right]_{i=0}^{m} (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\begin{pmatrix}\mathbf{a}&\frac{1}{x}\\\widehat{g}&\displaystyle\sum_i^n\end{pmatrix} (0.00s)
+    --- PASS: TestLegacyLayoutControlPointFixtures/\mathit{f}+\mathbf{\mathit{A}}+\mathrm{z}+\text{_a__b_} (0.00s)
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/sum^{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{abcdefgh}^{\frac{g}{q}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{\quad_g\quad}^{\hat{y}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/prod^{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{abcdefgh}^{\frac{g}{q}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{\quad_g\quad}^{\hat{y}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/lim^{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{abcdefgh}^{\frac{g}{q}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{\quad_g\quad}^{\hat{y}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/int^{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{g}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{abcdefgh}^{\frac{g}{q}}
+=== RUN   TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{\quad_g\quad}^{\hat{y}}
+--- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/sum^{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{abcdefgh}^{\frac{g}{q}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/sum_{\quad_g\quad}^{\hat{y}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/prod^{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{abcdefgh}^{\frac{g}{q}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/prod_{\quad_g\quad}^{\hat{y}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/lim^{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{abcdefgh}^{\frac{g}{q}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/lim_{\quad_g\quad}^{\hat{y}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/int^{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{g} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{abcdefgh}^{\frac{g}{q}} (0.00s)
+    --- PASS: TestLimitsActualCenteredGeometryBaselineAndAdvance/int_{\quad_g\quad}^{\hat{y}} (0.00s)
+=== RUN   TestLimitsScriptAndDirectiveOrder
+--- PASS: TestLimitsScriptAndDirectiveOrder (0.00s)
+=== RUN   TestLimitsDefaultInlineAndDisplayOverrides
+--- PASS: TestLimitsDefaultInlineAndDisplayOverrides (0.00s)
+=== RUN   TestLimitsDeclarationScope
+--- PASS: TestLimitsDeclarationScope (0.00s)
+=== RUN   TestLimitsNestedScriptAndFractionStyle
+--- PASS: TestLimitsNestedScriptAndFractionStyle (0.00s)
+=== RUN   TestLimitsStylesSizesAndEmptyBounds
+--- PASS: TestLimitsStylesSizesAndEmptyBounds (0.01s)
+=== RUN   TestLimitsInvalidPositionsAndBudgets
+--- PASS: TestLimitsInvalidPositionsAndBudgets (0.00s)
+=== RUN   TestLimitsConcurrentDeclarationAndGeometryOwnership
+--- PASS: TestLimitsConcurrentDeclarationAndGeometryOwnership (0.00s)
+=== RUN   TestMathAlphabetIndependentFontMetrics
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/A
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/B
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/C
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/D
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/E
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/F
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/G
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/H
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/I
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/J
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/K
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/L
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/M
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/N
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/O
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/P
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/Q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/R
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/S
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/T
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/U
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/V
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/W
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/X
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/Y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/Z
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/a
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/b
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/c
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/d
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/e
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/f
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/g
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/h
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/i
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/j
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/k
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/l
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/m
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/n
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/o
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/p
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/r
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/s
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/t
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/u
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/v
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/w
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/x
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/z
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/0
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/1
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/2
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/3
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/4
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/5
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/6
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/7
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/8
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathbb/9
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/A
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/B
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/C
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/D
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/E
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/F
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/G
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/H
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/I
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/J
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/K
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/L
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/M
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/N
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/O
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/P
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/Q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/R
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/S
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/T
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/U
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/V
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/W
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/X
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/Y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/Z
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/a
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/b
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/c
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/d
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/e
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/f
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/g
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/h
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/i
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/j
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/k
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/l
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/m
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/n
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/o
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/p
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/r
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/s
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/t
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/u
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/v
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/w
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/x
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathcal/z
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/A
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/B
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/C
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/D
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/E
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/F
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/G
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/H
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/I
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/J
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/K
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/L
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/M
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/N
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/O
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/P
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/Q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/R
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/S
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/T
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/U
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/V
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/W
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/X
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/Y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/Z
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/a
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/b
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/c
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/d
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/e
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/f
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/g
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/h
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/i
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/j
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/k
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/l
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/m
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/n
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/o
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/p
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/q
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/r
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/s
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/t
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/u
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/v
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/w
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/x
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/y
+=== RUN   TestMathAlphabetIndependentFontMetrics/mathfrak/z
+--- PASS: TestMathAlphabetIndependentFontMetrics (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/0 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/1 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/2 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/3 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/4 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/5 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/6 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/7 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/8 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathbb/9 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathcal/z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFontMetrics/mathfrak/z (0.00s)
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/A
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/B
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/C
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/D
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/E
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/F
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/G
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/H
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/I
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/J
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/K
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/L
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/M
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/N
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/O
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/P
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/Q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/R
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/S
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/T
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/U
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/V
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/W
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/X
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/Y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/Z
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/a
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/b
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/c
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/d
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/e
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/f
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/g
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/h
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/i
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/j
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/k
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/l
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/m
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/n
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/o
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/p
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/r
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/s
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/t
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/u
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/v
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/w
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/x
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/z
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/0
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/1
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/2
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/3
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/4
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/5
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/6
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/7
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/8
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathbb/9
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/A
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/B
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/C
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/D
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/E
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/F
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/G
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/H
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/I
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/J
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/K
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/L
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/M
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/N
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/O
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/P
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/Q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/R
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/S
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/T
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/U
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/V
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/W
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/X
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/Y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/Z
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/a
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/b
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/c
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/d
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/e
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/f
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/g
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/h
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/i
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/j
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/k
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/l
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/m
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/n
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/o
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/p
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/r
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/s
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/t
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/u
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/v
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/w
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/x
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathcal/z
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/A
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/B
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/C
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/D
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/E
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/F
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/G
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/H
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/I
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/J
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/K
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/L
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/M
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/N
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/O
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/P
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/R
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/S
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/T
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/U
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/V
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/W
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/X
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Z
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/a
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/b
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/c
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/d
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/e
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/f
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/g
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/h
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/i
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/j
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/k
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/l
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/m
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/n
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/o
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/p
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/q
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/r
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/s
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/t
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/u
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/v
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/w
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/x
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/y
+=== RUN   TestMathAlphabetIndependentFreeTypeMasks/mathfrak/z
+=== NAME  TestMathAlphabetIndependentFreeTypeMasks
+    math_alphabets_reference_test.go:178: 166 independent source glyphs; minimum silhouette IoU 0.986187
+--- PASS: TestMathAlphabetIndependentFreeTypeMasks (0.22s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/0 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/1 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/2 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/3 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/4 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/5 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/6 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/7 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/8 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathbb/9 (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathcal/z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/A (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/B (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/C (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/D (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/E (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/F (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/G (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/H (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/I (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/J (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/K (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/L (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/M (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/N (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/O (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/P (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/R (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/S (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/T (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/U (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/V (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/W (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/X (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/Z (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/a (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/b (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/c (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/d (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/e (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/f (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/g (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/h (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/i (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/j (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/k (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/l (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/m (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/n (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/o (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/p (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/q (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/r (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/s (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/t (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/u (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/v (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/w (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/x (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/y (0.00s)
+    --- PASS: TestMathAlphabetIndependentFreeTypeMasks/mathfrak/z (0.00s)
+=== RUN   TestMathAlphabetCoverageUnicodeAndLetterlike
+--- PASS: TestMathAlphabetCoverageUnicodeAndLetterlike (0.00s)
+=== RUN   TestMathAlphabetStylesScopeAndLiteralContexts
+--- PASS: TestMathAlphabetStylesScopeAndLiteralContexts (0.00s)
+=== RUN   TestMathAlphabetBaselineScriptsAndComposition
+--- PASS: TestMathAlphabetBaselineScriptsAndComposition (0.00s)
+=== RUN   TestMathAlphabetCustomFontStrictCoverage
+--- PASS: TestMathAlphabetCustomFontStrictCoverage (0.00s)
+=== RUN   TestMathAlphabetErrorsAndSharedBudgets
+--- PASS: TestMathAlphabetErrorsAndSharedBudgets (0.00s)
+=== RUN   TestMathAlphabetConcurrentIndependentOwnership
+--- PASS: TestMathAlphabetConcurrentIndependentOwnership (0.00s)
+=== RUN   TestMultilineIndependentFontPlacementAndCairo
+    multiline_reference_test.go:161: aligned-2pairs: source-font baseline/cell metrics; whole image RGB MAE 0.013939 bytes
+    multiline_reference_test.go:161: gathered-4rows: source-font baseline/cell metrics; whole image RGB MAE 0.006308 bytes
+    multiline_reference_test.go:166: 16 independent operand placements; minimum per-color Cairo mask IoU 0.990984
+--- PASS: TestMultilineIndependentFontPlacementAndCairo (0.13s)
+=== RUN   TestMultilineAlternatingAlignmentAndBaselineBoxes
+--- PASS: TestMultilineAlternatingAlignmentAndBaselineBoxes (0.00s)
+=== RUN   TestMultilineGatheredCentersAdvancesAndNestedBodies
+--- PASS: TestMultilineGatheredCentersAdvancesAndNestedBodies (0.00s)
+=== RUN   TestMultilineDisplayColorAndFontScopes
+--- PASS: TestMultilineDisplayColorAndFontScopes (0.00s)
+=== RUN   TestMultilineGrammarAndSharedBudgets
+--- PASS: TestMultilineGrammarAndSharedBudgets (0.01s)
+=== RUN   TestMultilineOwnershipAndConcurrentLayouts
+--- PASS: TestMultilineOwnershipAndConcurrentLayouts (0.00s)
+=== RUN   TestMultilineActualMaximumCellWork
+--- PASS: TestMultilineActualMaximumCellWork (0.06s)
+=== RUN   TestNamedOperatorLiteralUprightGlyphsAndUnicode
+--- PASS: TestNamedOperatorLiteralUprightGlyphsAndUnicode (0.00s)
+=== RUN   TestNamedOperatorModesDirectivesAndOrder
+--- PASS: TestNamedOperatorModesDirectivesAndOrder (0.00s)
+=== RUN   TestNamedOperatorStyleAndDeclarationScope
+--- PASS: TestNamedOperatorStyleAndDeclarationScope (0.00s)
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/oversetx
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/oversetg
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/overset=
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/overset\frac{}{}
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/oversetx_i^2
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/overset\sum\limits_i^n
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/overset\operatorname{rank}
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/undersetx
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/undersetg
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/underset=
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/underset\frac{}{}
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/undersetx_i^2
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/underset\sum\limits_i^n
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/underset\operatorname{rank}
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrelx
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrelg
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrel=
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\frac{}{}
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrelx_i^2
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\sum\limits_i^n
+=== RUN   TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\operatorname{rank}
+--- PASS: TestExplicitStackGeometryBaselineAndOuterScripts (0.01s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/oversetx (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/oversetg (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/overset= (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/overset\frac{}{} (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/oversetx_i^2 (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/overset\sum\limits_i^n (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/overset\operatorname{rank} (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/undersetx (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/undersetg (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/underset= (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/underset\frac{}{} (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/undersetx_i^2 (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/underset\sum\limits_i^n (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/underset\operatorname{rank} (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrelx (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrelg (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrel= (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\frac{}{} (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrelx_i^2 (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\sum\limits_i^n (0.00s)
+    --- PASS: TestExplicitStackGeometryBaselineAndOuterScripts/stackrel\operatorname{rank} (0.00s)
+=== RUN   TestExplicitStackNestedStyleAndScope
+--- PASS: TestExplicitStackNestedStyleAndScope (0.00s)
+=== RUN   TestNamedAndStackErrorsSizesAndBudgets
+--- PASS: TestNamedAndStackErrorsSizesAndBudgets (0.01s)
+=== RUN   TestNamedStacksConcurrentIndependentOwnership
+--- PASS: TestNamedStacksConcurrentIndependentOwnership (0.00s)
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/int/regular
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/sum/regular
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/prod/regular
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/prod/bold
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/int/bold
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/sum/bold
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/prod/italic
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/int/italic
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/sum/italic
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/prod/bold-italic
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/int/bold-italic
+=== RUN   TestOperatorCommandsUseRealEmbeddedGlyphs/sum/bold-italic
+--- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/int/regular (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/sum/regular (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/prod/regular (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/prod/bold (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/int/bold (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/sum/bold (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/prod/italic (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/int/italic (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/sum/italic (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/prod/bold-italic (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/int/bold-italic (0.00s)
+    --- PASS: TestOperatorCommandsUseRealEmbeddedGlyphs/sum/bold-italic (0.00s)
+=== RUN   TestOperatorSideScriptsAndNestedFractions
+--- PASS: TestOperatorSideScriptsAndNestedFractions (0.00s)
+=== RUN   TestOperatorDisplayLimitsDirectiveRemainsUnsupported
+--- PASS: TestOperatorDisplayLimitsDirectiveRemainsUnsupported (0.00s)
+=== RUN   TestPartsIndependentFontGeometryAndCairo
+=== RUN   TestPartsIndependentFontGeometryAndCairo/baseline
+    parts_reference_test.go:177: baseline independent fontTools/manual/Cairo MAE=0.0192260742 RMS=0.563234956 max=56 IoU=0.995550485
+=== RUN   TestPartsIndependentFontGeometryAndCairo/repeated
+    parts_reference_test.go:177: repeated independent fontTools/manual/Cairo MAE=0.00588819716 RMS=0.209117178 max=19 IoU=0.999129773
+=== RUN   TestPartsIndependentFontGeometryAndCairo/zero-ink
+    parts_reference_test.go:177: zero-ink independent fontTools/manual/Cairo MAE=0.00377909342 RMS=0.17438683 max=24 IoU=0.99820981
+=== RUN   TestPartsIndependentFontGeometryAndCairo/color-scope
+    parts_reference_test.go:177: color-scope independent fontTools/manual/Cairo MAE=0.00903320312 RMS=0.355819138 max=56 IoU=0.995550485
+=== RUN   TestPartsIndependentFontGeometryAndCairo/fractions
+    parts_reference_test.go:177: fractions independent fontTools/manual/Cairo MAE=0.0155622694 RMS=0.427890418 max=33 IoU=0.996669997
+=== RUN   TestPartsIndependentFontGeometryAndCairo/face-scope
+    parts_reference_test.go:177: face-scope independent fontTools/manual/Cairo MAE=0.019938151 RMS=0.564596907 max=56 IoU=0.994568002
+=== RUN   TestPartsIndependentFontGeometryAndCairo/italic
+    parts_reference_test.go:177: italic independent fontTools/manual/Cairo MAE=0.0221625434 RMS=0.579890674 max=45 IoU=0.993647192
+=== RUN   TestPartsIndependentFontGeometryAndCairo/bold-italic
+    parts_reference_test.go:177: bold-italic independent fontTools/manual/Cairo MAE=0.0157029894 RMS=0.40566949 max=37 IoU=0.998071764
+=== RUN   TestPartsIndependentFontGeometryAndCairo/hidden-fraction
+    parts_reference_test.go:177: hidden-fraction independent fontTools/manual/Cairo MAE=0.00486077203 RMS=0.192642338 max=22 IoU=0.998064932
+--- PASS: TestPartsIndependentFontGeometryAndCairo (0.15s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/baseline (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/repeated (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/zero-ink (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/color-scope (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/fractions (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/face-scope (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/italic (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/bold-italic (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/hidden-fraction (0.02s)
+=== RUN   TestPartsIndependentInteriorWholeAndFragmentTransforms
+    parts_reference_test.go:224: transform-whole-035 independent fontTools/manual/Cairo MAE=0.0147637261 RMS=0.375691095 max=23 IoU=0.996956573
+    parts_reference_test.go:224: transform-whole-070 independent fontTools/manual/Cairo MAE=0.0210283067 RMS=0.593708595 max=46 IoU=0.994241607
+    parts_reference_test.go:224: transform-part-035 independent fontTools/manual/Cairo MAE=0.0192447238 RMS=0.563696824 max=56 IoU=0.995750546
+    parts_reference_test.go:224: transform-part-070 independent fontTools/manual/Cairo MAE=0.0193193224 RMS=0.565621463 max=56 IoU=0.995662368
+--- PASS: TestPartsIndependentInteriorWholeAndFragmentTransforms (0.07s)
+=== RUN   TestPartsLayoutExactKeysBaselinesAdvancesAndStyles
+--- PASS: TestPartsLayoutExactKeysBaselinesAdvancesAndStyles (0.00s)
+=== RUN   TestPartsStableSelectionsCopiesSnapshotsAndTransforms
+--- PASS: TestPartsStableSelectionsCopiesSnapshotsAndTransforms (0.00s)
+=== RUN   TestPartsConcurrentImmutableSnapshotsAndIndependentSampling
+--- PASS: TestPartsConcurrentImmutableSnapshotsAndIndependentSampling (0.00s)
+=== RUN   TestPartsAtomicInvalidFragmentsOptionsAndAggregateRunes
+--- PASS: TestPartsAtomicInvalidFragmentsOptionsAndAggregateRunes (0.00s)
+=== RUN   TestPartsSharedCurvesHiddenInkStructuralPathsAndCells
+--- PASS: TestPartsSharedCurvesHiddenInkStructuralPathsAndCells (0.01s)
+=== RUN   TestPartsAggregateTreeGlyphCoordinateBoundsAndInvalidOwnership
+--- PASS: TestPartsAggregateTreeGlyphCoordinateBoundsAndInvalidOwnership (0.13s)
+=== RUN   TestPartsAuthoredContourAndChildBudgetsBeforeCopy
+--- PASS: TestPartsAuthoredContourAndChildBudgetsBeforeCopy (0.01s)
+=== RUN   TestRadicalBoxIndependentSourceFontAndCairo
+    radical_boxes_reference_test.go:188: 20 fontTools/manual SVG/Cairo references: worst color IoU 0.990031; maximum whole-image RGB MAE 0.013065 bytes
+--- PASS: TestRadicalBoxIndependentSourceFontAndCairo (0.32s)
+=== RUN   TestRadicalBoxRealInkAndPhantomRendering
+--- PASS: TestRadicalBoxRealInkAndPhantomRendering (0.02s)
+=== RUN   TestRadicalBoxWriteTransformSnapshotsAndPreview
+--- PASS: TestRadicalBoxWriteTransformSnapshotsAndPreview (0.05s)
+=== RUN   TestRadicalBoxLegacyRootPixelsAndPaths
+--- PASS: TestRadicalBoxLegacyRootPixelsAndPaths (0.00s)
+=== RUN   TestRadicalBoxPhantomSemanticExtents
+--- PASS: TestRadicalBoxPhantomSemanticExtents (0.00s)
+=== RUN   TestRadicalBoxOutlineAndScripts
+--- PASS: TestRadicalBoxOutlineAndScripts (0.00s)
+=== RUN   TestRadicalBoxIndexPlacementAndScopes
+--- PASS: TestRadicalBoxIndexPlacementAndScopes (0.00s)
+=== RUN   TestRadicalBoxErrorsAndBudgets
+--- PASS: TestRadicalBoxErrorsAndBudgets (0.01s)
+=== RUN   TestRadicalBoxSharedCurveLedger
+--- PASS: TestRadicalBoxSharedCurveLedger (0.00s)
+=== RUN   TestRadicalBoxConcurrentOwnership
+--- PASS: TestRadicalBoxConcurrentOwnership (0.02s)
+=== RUN   TestSetSymbolIndependentFontMetrics
+=== RUN   TestSetSymbolIndependentFontMetrics/in/0
+=== RUN   TestSetSymbolIndependentFontMetrics/in/1
+=== RUN   TestSetSymbolIndependentFontMetrics/in/2
+=== RUN   TestSetSymbolIndependentFontMetrics/in/3
+=== RUN   TestSetSymbolIndependentFontMetrics/notin/0
+=== RUN   TestSetSymbolIndependentFontMetrics/notin/1
+=== RUN   TestSetSymbolIndependentFontMetrics/notin/2
+=== RUN   TestSetSymbolIndependentFontMetrics/notin/3
+=== RUN   TestSetSymbolIndependentFontMetrics/ni/0
+=== RUN   TestSetSymbolIndependentFontMetrics/ni/1
+=== RUN   TestSetSymbolIndependentFontMetrics/ni/2
+=== RUN   TestSetSymbolIndependentFontMetrics/ni/3
+=== RUN   TestSetSymbolIndependentFontMetrics/subset/0
+=== RUN   TestSetSymbolIndependentFontMetrics/subset/1
+=== RUN   TestSetSymbolIndependentFontMetrics/subset/2
+=== RUN   TestSetSymbolIndependentFontMetrics/subset/3
+=== RUN   TestSetSymbolIndependentFontMetrics/supset/0
+=== RUN   TestSetSymbolIndependentFontMetrics/supset/1
+=== RUN   TestSetSymbolIndependentFontMetrics/supset/2
+=== RUN   TestSetSymbolIndependentFontMetrics/supset/3
+=== RUN   TestSetSymbolIndependentFontMetrics/subseteq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/subseteq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/subseteq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/subseteq/3
+=== RUN   TestSetSymbolIndependentFontMetrics/supseteq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/supseteq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/supseteq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/supseteq/3
+=== RUN   TestSetSymbolIndependentFontMetrics/cup/0
+=== RUN   TestSetSymbolIndependentFontMetrics/cup/1
+=== RUN   TestSetSymbolIndependentFontMetrics/cup/2
+=== RUN   TestSetSymbolIndependentFontMetrics/cup/3
+=== RUN   TestSetSymbolIndependentFontMetrics/cap/0
+=== RUN   TestSetSymbolIndependentFontMetrics/cap/1
+=== RUN   TestSetSymbolIndependentFontMetrics/cap/2
+=== RUN   TestSetSymbolIndependentFontMetrics/cap/3
+=== RUN   TestSetSymbolIndependentFontMetrics/emptyset/0
+=== RUN   TestSetSymbolIndependentFontMetrics/emptyset/1
+=== RUN   TestSetSymbolIndependentFontMetrics/emptyset/2
+=== RUN   TestSetSymbolIndependentFontMetrics/emptyset/3
+=== RUN   TestSetSymbolIndependentFontMetrics/setminus/0
+=== RUN   TestSetSymbolIndependentFontMetrics/setminus/1
+=== RUN   TestSetSymbolIndependentFontMetrics/setminus/2
+=== RUN   TestSetSymbolIndependentFontMetrics/setminus/3
+=== RUN   TestSetSymbolIndependentFontMetrics/subsetneq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/subsetneq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/subsetneq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/subsetneq/3
+=== RUN   TestSetSymbolIndependentFontMetrics/supsetneq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/supsetneq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/supsetneq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/supsetneq/3
+=== RUN   TestSetSymbolIndependentFontMetrics/nsubseteq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/nsubseteq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/nsubseteq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/nsubseteq/3
+=== RUN   TestSetSymbolIndependentFontMetrics/nsupseteq/0
+=== RUN   TestSetSymbolIndependentFontMetrics/nsupseteq/1
+=== RUN   TestSetSymbolIndependentFontMetrics/nsupseteq/2
+=== RUN   TestSetSymbolIndependentFontMetrics/nsupseteq/3
+--- PASS: TestSetSymbolIndependentFontMetrics (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/in/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/in/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/in/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/in/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/notin/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/notin/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/notin/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/notin/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/ni/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/ni/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/ni/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/ni/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cup/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cup/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cup/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cup/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cap/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cap/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cap/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/cap/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/emptyset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/emptyset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/emptyset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/emptyset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/setminus/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/setminus/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/setminus/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/setminus/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subsetneq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subsetneq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subsetneq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/subsetneq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supsetneq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supsetneq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supsetneq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/supsetneq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsubseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsubseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsubseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsubseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsupseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsupseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsupseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFontMetrics/nsupseteq/3 (0.00s)
+=== RUN   TestSetSymbolIndependentFreeTypeMasks
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/in/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/in/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/in/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/in/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/notin/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/notin/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/notin/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/notin/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/ni/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/ni/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/ni/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/ni/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subset/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subset/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subset/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subset/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supset/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supset/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supset/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supset/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subseteq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subseteq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subseteq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subseteq/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supseteq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supseteq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supseteq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supseteq/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cup/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cup/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cup/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cup/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cap/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cap/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cap/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/cap/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/emptyset/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/emptyset/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/emptyset/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/emptyset/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/setminus/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/setminus/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/setminus/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/setminus/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subsetneq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subsetneq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subsetneq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/subsetneq/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supsetneq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supsetneq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supsetneq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/supsetneq/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsubseteq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsubseteq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsubseteq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsubseteq/3
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsupseteq/0
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsupseteq/1
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsupseteq/2
+=== RUN   TestSetSymbolIndependentFreeTypeMasks/nsupseteq/3
+=== NAME  TestSetSymbolIndependentFreeTypeMasks
+    set_symbols_reference_test.go:195: 60 independent font masks; minimum binary silhouette IoU 0.967637
+--- PASS: TestSetSymbolIndependentFreeTypeMasks (0.07s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/in/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/in/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/in/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/in/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/notin/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/notin/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/notin/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/notin/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/ni/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/ni/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/ni/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/ni/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cup/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cup/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cup/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cup/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cap/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cap/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cap/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/cap/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/emptyset/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/emptyset/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/emptyset/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/emptyset/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/setminus/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/setminus/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/setminus/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/setminus/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subsetneq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subsetneq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subsetneq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/subsetneq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supsetneq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supsetneq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supsetneq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/supsetneq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsubseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsubseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsubseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsubseteq/3 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsupseteq/0 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsupseteq/1 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsupseteq/2 (0.00s)
+    --- PASS: TestSetSymbolIndependentFreeTypeMasks/nsupseteq/3 (0.00s)
+=== RUN   TestSetMembershipOperatorLayoutExample
+--- PASS: TestSetMembershipOperatorLayoutExample (0.00s)
+=== RUN   TestSetSymbolEmbeddedCoverage
+--- PASS: TestSetSymbolEmbeddedCoverage (0.00s)
+=== RUN   TestSetSymbolUnicodeStyleAndScope
+--- PASS: TestSetSymbolUnicodeStyleAndScope (0.00s)
+=== RUN   TestSetSymbolScriptsBaselineAndComposition
+--- PASS: TestSetSymbolScriptsBaselineAndComposition (0.00s)
+=== RUN   TestSetSymbolCustomFontsStayStrict
+--- PASS: TestSetSymbolCustomFontsStayStrict (0.00s)
+=== RUN   TestSetSymbolErrorsSizesAndBudgets
+--- PASS: TestSetSymbolErrorsSizesAndBudgets (0.00s)
+=== RUN   TestSetSymbolConcurrentGeometryOwnership
+--- PASS: TestSetSymbolConcurrentGeometryOwnership (0.01s)
+=== RUN   TestSubstackRowsBaselineCenterAndScriptSize
+--- PASS: TestSubstackRowsBaselineCenterAndScriptSize (0.00s)
+=== RUN   TestSubstackDeclarationAndFontScope
+--- PASS: TestSubstackDeclarationAndFontScope (0.00s)
+=== RUN   TestSubstackRejectsUnsupportedRowsAndBudgets
+--- PASS: TestSubstackRejectsUnsupportedRowsAndBudgets (0.00s)
+=== RUN   TestAccentMarksRenderVisibleBoundedInk
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/overline
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/underline
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/hat
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/widehat
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/bar
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/vec
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/dot
+=== RUN   TestAccentMarksRenderVisibleBoundedInk/ddot
+--- PASS: TestAccentMarksRenderVisibleBoundedInk (0.01s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/overline (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/underline (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/hat (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/widehat (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/bar (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/vec (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/dot (0.00s)
+    --- PASS: TestAccentMarksRenderVisibleBoundedInk/ddot (0.00s)
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds/\dfrac{g}{n}
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds/\tfrac{g}{n}
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds/\dbinom{g}{n}
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds/\tbinom{g}{n}
+=== RUN   TestGeneralFractionRenderConstituentsAndBounds/\sum\limits_{\substack{i=1\\j=2}}^n
+--- PASS: TestGeneralFractionRenderConstituentsAndBounds (0.02s)
+    --- PASS: TestGeneralFractionRenderConstituentsAndBounds/\dfrac{g}{n} (0.00s)
+    --- PASS: TestGeneralFractionRenderConstituentsAndBounds/\tfrac{g}{n} (0.00s)
+    --- PASS: TestGeneralFractionRenderConstituentsAndBounds/\dbinom{g}{n} (0.01s)
+    --- PASS: TestGeneralFractionRenderConstituentsAndBounds/\tbinom{g}{n} (0.00s)
+    --- PASS: TestGeneralFractionRenderConstituentsAndBounds/\sum\limits_{\substack{i=1\\j=2}}^n (0.00s)
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/sum
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/\displaystylesum
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/prod
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/\displaystyleprod
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/lim
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/\displaystylelim
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/int
+=== RUN   TestLimitsRenderDistinctUpperAndLowerInk/\displaystyleint
+--- PASS: TestLimitsRenderDistinctUpperAndLowerInk (0.02s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/sum (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/\displaystylesum (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/prod (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/\displaystyleprod (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/lim (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/\displaystylelim (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/int (0.00s)
+    --- PASS: TestLimitsRenderDistinctUpperAndLowerInk/\displaystyleint (0.00s)
+=== RUN   TestMatchingExplicitMathParts
+--- PASS: TestMatchingExplicitMathParts (0.00s)
+=== RUN   TestMathSubset
+=== RUN   TestMathSubset/x^{2}+y_{1}
+=== RUN   TestMathSubset/\frac{a+1}{b^{2}}
+=== RUN   TestMathSubset/\sqrt{x^{2}+1}
+=== RUN   TestMathSubset/\alpha+\beta=\pi
+=== RUN   TestMathSubset/\frac{\frac{1}{2}}{\sqrt{x}}
+=== RUN   TestMathSubset/\sin(x)+\cos(x)
+--- PASS: TestMathSubset (0.00s)
+    --- PASS: TestMathSubset/x^{2}+y_{1} (0.00s)
+    --- PASS: TestMathSubset/\frac{a+1}{b^{2}} (0.00s)
+    --- PASS: TestMathSubset/\sqrt{x^{2}+1} (0.00s)
+    --- PASS: TestMathSubset/\alpha+\beta=\pi (0.00s)
+    --- PASS: TestMathSubset/\frac{\frac{1}{2}}{\sqrt{x}} (0.00s)
+    --- PASS: TestMathSubset/\sin(x)+\cos(x) (0.00s)
+=== RUN   TestRejectUnsupportedOrMalformed
+--- PASS: TestRejectUnsupportedOrMalformed (0.00s)
+=== RUN   TestMultilineRowsRenderVisibleAndBounded
+--- PASS: TestMultilineRowsRenderVisibleAndBounded (0.01s)
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\operatorname{rank}\limits_g^n
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\displaystyle\operatorname*{arg_max}_g^n
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\overset{n}{=}
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\underset{g}{=}
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\stackrel{\operatorname{def}}{=}
+=== RUN   TestNamedOperatorAndStacksRenderActualAnnotations/\overset{n}{\frac{}{}}
+--- PASS: TestNamedOperatorAndStacksRenderActualAnnotations (0.02s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\operatorname{rank}\limits_g^n (0.00s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\displaystyle\operatorname*{arg_max}_g^n (0.00s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\overset{n}{=} (0.00s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\underset{g}{=} (0.00s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\stackrel{\operatorname{def}}{=} (0.00s)
+    --- PASS: TestNamedOperatorAndStacksRenderActualAnnotations/\overset{n}{\frac{}{}} (0.00s)
+=== RUN   TestTypesetPNGAndVectorExamples
+=== RUN   TestTypesetPNGAndVectorExamples/multiline-aligned
+    render_test.go:152: multiline-aligned: 17972 ink pixels; 30 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/multiline-aligned.png
+=== RUN   TestTypesetPNGAndVectorExamples/multiline-gathered
+    render_test.go:152: multiline-gathered: 10632 ink pixels; 26 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/multiline-gathered.png
+=== RUN   TestTypesetPNGAndVectorExamples/delimiters
+    render_test.go:152: delimiters: 20252 ink pixels; 32 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/delimiters.png
+=== RUN   TestTypesetPNGAndVectorExamples/nested-matrices
+    render_test.go:152: nested-matrices: 28291 ink pixels; 27 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/nested-matrices.png
+=== RUN   TestTypesetPNGAndVectorExamples/cases-and-fonts
+    render_test.go:152: cases-and-fonts: 14944 ink pixels; 34 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/cases-and-fonts.png
+=== RUN   TestTypesetPNGAndVectorExamples/operators
+    render_test.go:152: operators: 13072 ink pixels; 30 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/operators.png
+=== RUN   TestTypesetPNGAndVectorExamples/accents
+    render_test.go:152: accents: 10845 ink pixels; 35 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/accents.png
+=== RUN   TestTypesetPNGAndVectorExamples/operator-limits
+    render_test.go:152: operator-limits: 14510 ink pixels; 46 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/operator-limits.png
+=== RUN   TestTypesetPNGAndVectorExamples/named-operators-stacks
+    render_test.go:152: named-operators-stacks: 11393 ink pixels; 39 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/named-operators-stacks.png
+=== RUN   TestTypesetPNGAndVectorExamples/operator-membership
+    render_test.go:152: operator-membership: 34907 ink pixels; 15 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/operator-membership.png
+=== RUN   TestTypesetPNGAndVectorExamples/set-symbols
+    render_test.go:152: set-symbols: 54448 ink pixels; 46 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/set-symbols.png
+=== RUN   TestTypesetPNGAndVectorExamples/math-alphabets
+    render_test.go:152: math-alphabets: 39728 ink pixels; 183 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/math-alphabets.png
+=== RUN   TestTypesetPNGAndVectorExamples/fractions-binomials
+    render_test.go:152: fractions-binomials: 8440 ink pixels; 55 vector paths; /var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/TestTypesetPNGAndVectorExamples1168785650/001/fractions-binomials.png
+--- PASS: TestTypesetPNGAndVectorExamples (0.30s)
+    --- PASS: TestTypesetPNGAndVectorExamples/multiline-aligned (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/multiline-gathered (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/delimiters (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/nested-matrices (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/cases-and-fonts (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/operators (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/accents (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/operator-limits (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/named-operators-stacks (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/operator-membership (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/set-symbols (0.02s)
+    --- PASS: TestTypesetPNGAndVectorExamples/math-alphabets (0.05s)
+    --- PASS: TestTypesetPNGAndVectorExamples/fractions-binomials (0.02s)
+FAIL
+FAIL	gomath/mathtex	2.859s
+FAIL
+exit status 1
+exit status 1

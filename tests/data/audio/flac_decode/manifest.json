@@ -1,0 +1,74 @@
+[
+  {
+    "File": "libflac_pcm16_1ch_silence_n1_l0.flac",
+    "SHA256": "e2640fd42728346e266004e43f9a97c6ca277505bcc081bd7f2fedcfb28afb93",
+    "PCMSHA256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+    "Rate": 48000,
+    "Depth": 16,
+    "Channels": 1,
+    "Frames": 1
+  },
+  {
+    "File": "libflac_pcm16_1ch_sine_n257_l0.flac",
+    "SHA256": "ed35e674e637488814ab3965e58de90bc3dcbaabdc7bd3e5c619178cc831e778",
+    "PCMSHA256": "7723b683f5b80f1d125a2ce52e3bfb1cc932358c21974d349614c190eaa38834",
+    "Rate": 48000,
+    "Depth": 16,
+    "Channels": 1,
+    "Frames": 257
+  },
+  {
+    "File": "libflac_pcm16_2ch_extremes_n15_l5.flac",
+    "SHA256": "9f8315ed03e350dd3d7d674c3d66d68c6c0bd91644009f1baa79b71863374ef0",
+    "PCMSHA256": "d1e359980414a48e0c9fd81009bdea83e052979861cb88c00767ccce22dbf070",
+    "Rate": 48000,
+    "Depth": 16,
+    "Channels": 2,
+    "Frames": 15
+  },
+  {
+    "File": "libflac_pcm16_2ch_correlated_n8193_l8.flac",
+    "SHA256": "a9456d2c1eb823594d58cd5c0fde1d9b78371a661c77ffbff7837b0ad683665b",
+    "PCMSHA256": "c0c3128a9592175c8976bf422529c33095146c977bf147a142ce78b6db6445bb",
+    "Rate": 48000,
+    "Depth": 16,
+    "Channels": 2,
+    "Frames": 8193
+  },
+  {
+    "File": "libflac_pcm24_1ch_wasted_n17_l0.flac",
+    "SHA256": "68061d6b68ee7ab600b55ddcce5c8fae74c19d464c47f0552eb2b5eeac42e1ab",
+    "PCMSHA256": "6124735e85bcb47860748f144483c010c9df153674f2cf157f4d3f114fd4623c",
+    "Rate": 48000,
+    "Depth": 24,
+    "Channels": 1,
+    "Frames": 17
+  },
+  {
+    "File": "libflac_pcm24_1ch_ramp_n8193_l8.flac",
+    "SHA256": "fa9691e88dff73cec2d56cae236e5f5b1bdf1855f7cdc4bd9f0b8e375e89ff1c",
+    "PCMSHA256": "fdbbed70541e70f51a0618ca470341518cd49996e8ab69bc31680ee22e043419",
+    "Rate": 48000,
+    "Depth": 24,
+    "Channels": 1,
+    "Frames": 8193
+  },
+  {
+    "File": "libflac_pcm24_2ch_random_n16_l8.flac",
+    "SHA256": "1b49e1077afa26c14d54c20f338772ac568099a7b8d9aa79a4493f79c94e1f75",
+    "PCMSHA256": "53093d747f7211ea1ab7171bdbda744db3f606d5519c8ea01ec0322160eff885",
+    "Rate": 48000,
+    "Depth": 24,
+    "Channels": 2,
+    "Frames": 16
+  },
+  {
+    "File": "libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac",
+    "SHA256": "ffceeeb421a0d91ed79b000452bcfedc451c42e158884f2bc2633dfc1397a0e5",
+    "PCMSHA256": "6e71baf874ca2c6cc52b91878c5aabecb816f5321285dc7351ce038176426adb",
+    "Rate": 48000,
+    "Depth": 24,
+    "Channels": 2,
+    "Frames": 8193
+  }
+]

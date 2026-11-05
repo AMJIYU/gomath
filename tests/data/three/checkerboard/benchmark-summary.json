@@ -1,0 +1,134 @@
+{
+  "BenchmarkBuildCheckerboard/32x32-8": {
+    "median_ns": 138146,
+    "min_ns": 135598,
+    "max_ns": 139863,
+    "samples": [
+      {
+        "ns_per_op": 139863,
+        "bytes_per_op": 269312,
+        "allocations_per_op": 16
+      },
+      {
+        "ns_per_op": 138146,
+        "bytes_per_op": 269315,
+        "allocations_per_op": 16
+      },
+      {
+        "ns_per_op": 135598,
+        "bytes_per_op": 269312,
+        "allocations_per_op": 16
+      }
+    ]
+  },
+  "BenchmarkBuildCheckerboard/256x256-8": {
+    "median_ns": 8895622,
+    "min_ns": 8511142,
+    "max_ns": 9216455,
+    "samples": [
+      {
+        "ns_per_op": 9216455,
+        "bytes_per_op": 15880916,
+        "allocations_per_op": 16
+      },
+      {
+        "ns_per_op": 8511142,
+        "bytes_per_op": 15880902,
+        "allocations_per_op": 16
+      },
+      {
+        "ns_per_op": 8895622,
+        "bytes_per_op": 15880932,
+        "allocations_per_op": 16
+      }
+    ]
+  },
+  "BenchmarkRenderCheckerboard/opaque/s1-8": {
+    "median_ns": 658048,
+    "min_ns": 649797,
+    "max_ns": 739286,
+    "samples": [
+      {
+        "ns_per_op": 739286,
+        "bytes_per_op": 958794,
+        "allocations_per_op": 12
+      },
+      {
+        "ns_per_op": 649797,
+        "bytes_per_op": 958793,
+        "allocations_per_op": 12
+      },
+      {
+        "ns_per_op": 658048,
+        "bytes_per_op": 958794,
+        "allocations_per_op": 12
+      }
+    ]
+  },
+  "BenchmarkRenderCheckerboard/opaque/s2-8": {
+    "median_ns": 3206875,
+    "min_ns": 3162817,
+    "max_ns": 3252915,
+    "samples": [
+      {
+        "ns_per_op": 3206875,
+        "bytes_per_op": 4030857,
+        "allocations_per_op": 14
+      },
+      {
+        "ns_per_op": 3162817,
+        "bytes_per_op": 4030857,
+        "allocations_per_op": 14
+      },
+      {
+        "ns_per_op": 3252915,
+        "bytes_per_op": 4030858,
+        "allocations_per_op": 14
+      }
+    ]
+  },
+  "BenchmarkRenderCheckerboard/uv-lights/s1-8": {
+    "median_ns": 1972599,
+    "min_ns": 1917415,
+    "max_ns": 2299745,
+    "samples": [
+      {
+        "ns_per_op": 1972599,
+        "bytes_per_op": 1162026,
+        "allocations_per_op": 17
+      },
+      {
+        "ns_per_op": 2299745,
+        "bytes_per_op": 1162025,
+        "allocations_per_op": 17
+      },
+      {
+        "ns_per_op": 1917415,
+        "bytes_per_op": 1162024,
+        "allocations_per_op": 17
+      }
+    ]
+  },
+  "BenchmarkRenderCheckerboard/uv-lights/s2-8": {
+    "median_ns": 8389648,
+    "min_ns": 8075027,
+    "max_ns": 8728119,
+    "samples": [
+      {
+        "ns_per_op": 8389648,
+        "bytes_per_op": 4627305,
+        "allocations_per_op": 23
+      },
+      {
+        "ns_per_op": 8075027,
+        "bytes_per_op": 4627308,
+        "allocations_per_op": 23
+      },
+      {
+        "ns_per_op": 8728119,
+        "bytes_per_op": 4627310,
+        "allocations_per_op": 23
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provenance": "CairoSVG independently interprets gomath SVG paintservers; not an independent source-scene oracle. See render/gradients fixtures for hand-authored sources.",
+  "CairoSVG": "2.7.1",
+  "Cairo": "1.18.4",
+  "results": [
+    {
+      "name": "linear-hard-hole",
+      "RGBA_MAE": 0.010833333333333334,
+      "maximum_channel_delta": 1,
+      "fraction_over_4": 0.0
+    },
+    {
+      "name": "radial-affine-clip",
+      "RGBA_MAE": 0.047239583333333335,
+      "maximum_channel_delta": 1,
+      "fraction_over_4": 0.0
+    },
+    {
+      "name": "linear-alpha",
+      "RGBA_MAE": 0.15302083333333333,
+      "maximum_channel_delta": 2,
+      "fraction_over_4": 0.0
+    }
+  ],
+  "generator_sha256": "f03021d33368d6b963fd9540b972af71de39a60e4fe9549746816836a8e14c30",
+  "files": {
+    "linear-alpha-cairo.png": "82b54343633b00a212dc73435af5ba81130a226ae08473a413aeed6fa8425599",
+    "linear-alpha-export.svg": "7ef1f5358d7bb0fae4a427593c895396e032de58e536a5381e9b7f68fef518ba",
+    "linear-alpha-native.png": "b42e0a84837c3d3e5adee02a316a046694bd1a0dc3498936d4679e91c626924e",
+    "linear-hard-hole-cairo.png": "fb8929661196579b003bc6d2bfc9a6a3d8c5c7915fa397a0df28bad1964bdf2a",
+    "linear-hard-hole-export.svg": "0f5f001dccff2ebd676d069b2523858f7ea2bfb3e3999471ae7da754d7cd8ab0",
+    "linear-hard-hole-native.png": "d4851c12738fcb4fdaa1ae9ec9221a04ee7bfe957a770d74c8d7f1d0825e311d",
+    "radial-affine-clip-cairo.png": "97d84715047efb37ef6ed9391dc406d0251b865044832b467b84e05b41724a0b",
+    "radial-affine-clip-export.svg": "bc4982309b6c0cc5078685b05d7f668911195934ce9d35e4458cd024ea684c5f",
+    "radial-affine-clip-native.png": "4e15199a4dcea26c33071cc64ebf3ef3dbaba44eff8cdfff356eff414ee9f1a0"
+  }
+}

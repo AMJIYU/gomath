@@ -1,0 +1,275 @@
+=== RUN   TestCheckerboardArtifacts
+    checkerboard_artifacts_test.go:60: /Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/three/checkerboard/checkerboard-surfaces.png
+--- PASS: TestCheckerboardArtifacts (0.24s)
+=== RUN   TestCheckerboardTopologyNormalsAndUV
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x1/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x1/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x1/1e+10
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x4/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x4/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/1x4/1e+10
+=== RUN   TestCheckerboardTopologyNormalsAndUV/5x1/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/5x1/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/5x1/1e+10
+=== RUN   TestCheckerboardTopologyNormalsAndUV/2x3/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/2x3/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/2x3/1e+10
+=== RUN   TestCheckerboardTopologyNormalsAndUV/3x3/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/3x3/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/3x3/1e+10
+=== RUN   TestCheckerboardTopologyNormalsAndUV/7x5/1e-09
+=== RUN   TestCheckerboardTopologyNormalsAndUV/7x5/1
+=== RUN   TestCheckerboardTopologyNormalsAndUV/7x5/1e+10
+--- PASS: TestCheckerboardTopologyNormalsAndUV (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x1/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x1/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x1/1e+10 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x4/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x4/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/1x4/1e+10 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/5x1/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/5x1/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/5x1/1e+10 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/2x3/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/2x3/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/2x3/1e+10 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/3x3/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/3x3/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/3x3/1e+10 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/7x5/1e-09 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/7x5/1 (0.00s)
+    --- PASS: TestCheckerboardTopologyNormalsAndUV/7x5/1e+10 (0.00s)
+=== RUN   TestCheckerboardDomainsCallbackOrderAndSeams
+--- PASS: TestCheckerboardDomainsCallbackOrderAndSeams (0.00s)
+=== RUN   TestCheckerboardErrorAtomicityAndBudgets
+--- PASS: TestCheckerboardErrorAtomicityAndBudgets (0.01s)
+=== RUN   TestCheckerboardStorageAndConcurrentConstruction
+--- PASS: TestCheckerboardStorageAndConcurrentConstruction (0.00s)
+=== RUN   TestCheckerboardIndependentRayFrames
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/uv-lights
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/opaque
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/alpha
+=== RUN   TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/uv-lights
+--- PASS: TestCheckerboardIndependentRayFrames (0.42s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s1/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s2/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f0/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f1/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p0/s4/f2/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s1/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s2/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f0/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f1/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedfalse/p1/s4/f2/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s1/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s2/f2/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f0/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f1/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p0/s4/f2/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s1/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f0/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f1/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/opaque (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/alpha (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s2/f2/uv-lights (0.00s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f0/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f1/uv-lights (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/opaque (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/alpha (0.01s)
+    --- PASS: TestCheckerboardIndependentRayFrames/curvedtrue/p1/s4/f2/uv-lights (0.01s)
+=== RUN   TestCheckerboardAnalyticPlaneParityPixels
+--- PASS: TestCheckerboardAnalyticPlaneParityPixels (0.00s)
+=== RUN   TestCheckerboardConcurrentRenderOrderAndBudgets
+--- PASS: TestCheckerboardConcurrentRenderOrderAndBudgets (0.00s)
+=== RUN   TestCheckerboardSceneIntermediateFramesAndSnapshots
+--- PASS: TestCheckerboardSceneIntermediateFramesAndSnapshots (0.03s)
+=== RUN   TestCheckerboardEmptyGroupSceneAndSnapshotBudget
+--- PASS: TestCheckerboardEmptyGroupSceneAndSnapshotBudget (0.01s)
+PASS
+ok  	gomath/three	0.709s

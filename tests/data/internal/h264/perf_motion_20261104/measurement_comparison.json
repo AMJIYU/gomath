@@ -1,0 +1,25 @@
+{
+  "historical_values": [
+    "pan/r0: bytes=1697133 PSNR=40.564473",
+    "pan/r1: bytes=851798 PSNR=40.936842",
+    "pan/r2: bytes=754948 PSNR=40.888852",
+    "static/r0: bytes=29449 PSNR=40.721709",
+    "static/r1: bytes=29463 PSNR=40.739302",
+    "static/r2: bytes=29462 PSNR=40.738587",
+    "noisechange/r0: bytes=1681135 PSNR=40.566387",
+    "noisechange/r1: bytes=1666822 PSNR=40.580109",
+    "noisechange/r2: bytes=1602981 PSNR=40.552949"
+  ],
+  "optimized_values": [
+    "pan/r0: bytes=1697133 PSNR=40.564473",
+    "pan/r1: bytes=851798 PSNR=40.936842",
+    "pan/r2: bytes=754948 PSNR=40.888852",
+    "static/r0: bytes=29449 PSNR=40.721709",
+    "static/r1: bytes=29463 PSNR=40.739302",
+    "static/r2: bytes=29462 PSNR=40.738587",
+    "noisechange/r0: bytes=1681135 PSNR=40.566387",
+    "noisechange/r1: bytes=1666822 PSNR=40.580109",
+    "noisechange/r2: bytes=1602981 PSNR=40.552949"
+  ],
+  "all_nine_equal": true
+}

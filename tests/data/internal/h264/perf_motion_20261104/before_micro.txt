@@ -1,0 +1,21 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/internal/h264
+cpu: Apple M2
+BenchmarkMotionSyntaxWriter/zero         	 5129142	        68.96 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5222092	        69.27 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5210695	        69.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5195767	        68.88 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5231204	        69.23 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  553824	       637.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  565299	       644.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  563798	       636.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  566594	       636.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  563839	       642.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   85328	      4133 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   86541	      4065 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   83586	      4043 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   88333	      4067 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   89242	      4086 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	gomath/internal/h264	5.971s

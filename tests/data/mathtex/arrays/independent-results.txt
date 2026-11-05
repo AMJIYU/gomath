@@ -1,0 +1,29 @@
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-0
+    array_reference_test.go:221: lcr-rules-0 fontTools/manual/Cairo MAE=0.0231464527 RMS=0.524040149 max=50 worst-color-IoU=0.992962829
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/plain-lcr
+    array_reference_test.go:221: plain-lcr fontTools/manual/Cairo MAE=0.0171808313 RMS=0.425143668 max=32 worst-color-IoU=0.991762987
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/fraction-phantom
+    array_reference_test.go:221: fraction-phantom fontTools/manual/Cairo MAE=0.0111524794 RMS=0.322080781 max=40 worst-color-IoU=0.990152193
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/empty-phantom
+    array_reference_test.go:221: empty-phantom fontTools/manual/Cairo MAE=0.000587180809 RMS=0.024231814 max=1 worst-color-IoU=1
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-1
+    array_reference_test.go:221: lcr-rules-1 fontTools/manual/Cairo MAE=0.014895969 RMS=0.342752261 max=37 worst-color-IoU=0.982717678
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-2
+    array_reference_test.go:221: lcr-rules-2 fontTools/manual/Cairo MAE=0.0265163845 RMS=0.539154749 max=43 worst-color-IoU=0.993304379
+=== RUN   TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-3
+    array_reference_test.go:221: lcr-rules-3 fontTools/manual/Cairo MAE=0.0177284523 RMS=0.37000098 max=35 worst-color-IoU=0.997064318
+--- PASS: TestArrayIndependentFontMetricsRulesAndCairo (0.54s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-0 (0.09s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/plain-lcr (0.07s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/fraction-phantom (0.09s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/empty-phantom (0.03s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-1 (0.08s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-2 (0.09s)
+    --- PASS: TestArrayIndependentFontMetricsRulesAndCairo/lcr-rules-3 (0.09s)
+=== RUN   TestArrayIndependentIntermediateTransform
+    array_reference_test.go:253: morph-035 fontTools/manual/Cairo MAE=0.0170214618 RMS=0.342927816 max=26 worst-color-IoU=0.994597636
+    array_reference_test.go:253: morph-070 fontTools/manual/Cairo MAE=0.0257059733 RMS=0.559226223 max=47 worst-color-IoU=0.991362991
+--- PASS: TestArrayIndependentIntermediateTransform (0.17s)
+PASS
+ok  	gomath/mathtex	0.717s

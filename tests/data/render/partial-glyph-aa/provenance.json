@@ -1,0 +1,28 @@
+{
+  "generator": "tests/reference/partial_glyph_aa.py",
+  "generator_sha256": "1a953ed2f0069872c24d16d491cda10e90ec3c9c70f8d4986b7fb45ce493f073",
+  "source_svg": "artifacts/fractions-demo-svg-20261104/frame-00.svg",
+  "source_sha256": "5ffe25d2f8910a7d7934fc3832c70bb735dfbb0e234187994c8105b778c30f16",
+  "scene": "fractions",
+  "time": 0.35,
+  "source_dimensions": [
+    640,
+    360
+  ],
+  "pathops": "0.9.2",
+  "cairosvg": "2.7.1",
+  "cairo": "1.18.4",
+  "coordinates": "Parent exported cubic coordinates mapped to 16x16 pixel-space crops; selected source pixel is crop (4,4). No glyph, animation or exporter code is used by the reproduction.",
+  "scope": "Fill only, white on transparency, nonzero winding, stroke none. Native low-resolution signed-area mask differs from integration of the nonzero region at a self-crossing within a pixel. 32x area averages and Skia pixel intersection are independent diagnostic evidence, not a threshold relaxation or a renderer fix.",
+  "files_sha256": {
+    "cases.json": "a2ae3c4d3dc6931214bd0e26d7e450ba2991b4591ccb6ffcf3d564ee726a628e",
+    "one-pixel-bowtie.svg": "e35ee0b39ea6b39ca114428cc6ab3e3c1e658779053314cc117ecaeb47c6525a",
+    "partial-2-115.svg": "a451d88c41dbd0f06f3f378e3f2b3b5217a1b4280415d72bb0fe8d65dde7712f",
+    "partial-2-70.svg": "020afd3d04ff11283289b283b7f7fca38fa23a6f35a853e5fb689734ae383f8e",
+    "partial-2-84.svg": "65481e4d5cc6bf00f6efc1d86b9362d80078ed29f81901f4a98cd7e68867a897",
+    "one-pixel-bowtie.png": "ff82af0f3e0f54c08d9bb255f91e065468cde9c555064615c0a51e4e50064dc6",
+    "partial-2-115.png": "be7e86f8fa7fb3efb14f959a0fe99d07f65f1ac761853b15661d4a7cffe65bcb",
+    "partial-2-70.png": "e1b47eebff7fbfc35d0a4ceec63cb6b12a27742f5da3415ce559f987ab465571",
+    "partial-2-84.png": "4800ccd7bca7639d1ed4e0e076ddf465ceae50fb4fd5435e7b3fdf38b061cf17"
+  }
+}

@@ -1,0 +1,36 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadWAVG711/tag6_ch1         	    8256	     40093 ns/op	1198.67 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch1         	    8984	     40353 ns/op	1190.94 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch1         	    8832	     41949 ns/op	1145.62 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch1         	    8871	     39670 ns/op	1211.44 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch1         	    9375	     39983 ns/op	1201.97 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch2         	    4894	     72991 ns/op	1316.02 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch2         	    4903	     72155 ns/op	1331.27 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch2         	    4800	     72364 ns/op	1327.44 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch2         	    5068	     74506 ns/op	1289.27 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch2         	    4960	     71400 ns/op	1345.36 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch6         	    1852	    196249 ns/op	1467.82 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch6         	    1845	    191208 ns/op	1506.52 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch6         	    1909	    193490 ns/op	1488.75 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch6         	    1963	    192233 ns/op	1498.49 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag6_ch6         	    1918	    187231 ns/op	1538.52 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch1         	   10000	     37359 ns/op	1286.38 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch1         	    9367	     39445 ns/op	1218.35 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch1         	    9411	     40222 ns/op	1194.82 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch1         	    8930	     56152 ns/op	 855.86 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch1         	    9508	     38223 ns/op	1257.31 MB/s	  418024 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch2         	    5040	     73420 ns/op	1308.34 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch2         	    5185	     72120 ns/op	1331.91 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch2         	    4975	     73907 ns/op	1299.72 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch2         	    4923	     72519 ns/op	1324.58 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch2         	    5173	     72985 ns/op	1316.12 MB/s	  803048 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch6         	    1867	    188869 ns/op	1525.17 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch6         	    1866	    191168 ns/op	1506.83 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch6         	    1926	    190338 ns/op	1513.40 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch6         	    1862	    198085 ns/op	1454.21 MB/s	 2343144 B/op	      14 allocs/op
+BenchmarkReadWAVG711/tag7_ch6         	    1910	    192318 ns/op	1497.82 MB/s	 2343144 B/op	      14 allocs/op
+PASS
+ok  	gomath/audio	11.540s

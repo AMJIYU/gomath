@@ -1,0 +1,535 @@
+{
+  "wave": 8,
+  "date": "2026-11-05",
+  "status": "frozen",
+  "scope": "Bounded SVG g/text/tspan geometry bbox clip targets and supported use chains. No symbol/nested-viewport bbox support claimed.",
+  "runtime": "Pure Go; no cgo/native/process fallback, API addition, or dependency changes. CGO_ENABLED=1 used only for development race instrumentation.",
+  "reference_repository": {
+    "path": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/manim",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "working_tree": "clean; unchanged",
+    "claim": "SVG2/Cairo/fontTools evidence; no new Manim parity claim"
+  },
+  "platform": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "cpu": "Apple M2"
+  },
+  "validation": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -run TestSVGContainerBBox -count=1 -v",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/focused.txt",
+      "log_sha256": "b695c516ad177f54d6c00443cb8d59146963826a523b4fa8fc77a95693e34ce2"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -count=1",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/svg-full.txt",
+      "log_sha256": "9a48b24a05366b4290c56c1e0ee1dcc925b47013fb1460509f1862bb136ea2fb"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -run 'TestSVG.*(Budget|Limit|Bounded|Atomic|Degenerate|Finite|Depth|Cycle|Cache)' -count=1",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/limits.txt",
+      "log_sha256": "c2695eb0387d60a0023c1aba6ac5c2bd188809f9bc6d44ae2179fa0fc3e8eda6"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=svg -race -count=1",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/svg-race.txt",
+      "log_sha256": "0e4ec9bbb86ded9204f4c9da80c69a3703e3287a63551279c3dc2b534e9916e8"
+    },
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm ./...",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/full-tests.txt",
+      "log_sha256": "ecb570b9317bfb076e72c5171695a6f46f3ece9bb0fdc0d1efa41ea1d114b4db"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./... && CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -vet=all -run '^$'",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/vet.txt",
+      "log_sha256": "af45a14b40f2002cfa0375fa4157119f1af8dca1ae3211fda6ed97a090f5af2d"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS",
+      "log": "tests/data/svg/container-bbox/purecheck.txt",
+      "log_sha256": "4c21477f037834f65316da5e6fd91f134eae3034dc132ac87c0db8c9d54a146d"
+    }
+  ],
+  "geometry": {
+    "algorithm": "Same expansion pass, independent target-local affine scopes; transform original curves before scale-independent cubic extrema. No transformed prior curve AABBs, inverse CTM, stroke, clip, fill, opacity or visibility culling.",
+    "numerical_tolerance_svg_units": 1e-08,
+    "numerical_oracles": 10,
+    "source_scale_range": [
+      1e-100,
+      1e+100
+    ],
+    "text": "SVG full glyph cells from horizontal advances plus font ascent/descent, including preserved whitespace, final chunk anchoring, scalar positions and cross-span kerning. Painting retains actual ink outlines. Cache and metric outlines spend existing import ledgers.",
+    "unsupported": "Referenced symbols within active bbox trees; nested SVG viewports; root/symbol bbox targets; clipPath-container and clipping-use-host bbox effects; clone-local clip definitions; previous text/shaping/gradient restrictions."
+  },
+  "budgets": {
+    "paths": 8192,
+    "curves": 1048576,
+    "contours": 65536,
+    "expanded_elements": 100000,
+    "expanded_depth": 128,
+    "native_clip_depth": 64,
+    "new_charges": "One per container scope; two geometry charges per contribution per active scope; metric-cache misses charge existing text/expansion/clip ledgers; clip instances retain prior charges. Direct-use/basic budget boundaries unchanged.",
+    "coverage": "Exact import acceptance/rejection boundaries, empty/degenerate scopes, each active scope, text layout/glyph/segment/expansion exhaustion, finite matrices even under singular world transforms, cyclic/exponential use graphs, atomic nil output."
+  },
+  "references": {
+    "provenance": "tests/data/svg/container-bbox/provenance.json",
+    "provenance_sha256": "444737c2322cbb2b3e21a296f98745b3734916a62a70b9e6feb0830fdf4ced86",
+    "renderer": {
+      "Python": "3.11.5",
+      "Cairo": "1.18.4",
+      "fontTools": "4.45.1",
+      "Pillow": "11.2.1"
+    },
+    "font_sha256": {
+      "Go-Regular.ttf": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+      "text-kern.ttf": "0007d4c8cc89b6066049c0f72544c0b49465128764d37b3c99514180260e1add"
+    },
+    "numerical_oracle_sha256": "e1129dbf9458a88963d40bed7c2a3e166a0aafdfcc31d2fbd98c12b3f2a1ab59",
+    "static_scenes": 8,
+    "animation_times": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "image_size": [
+      128,
+      96
+    ],
+    "supersampling": [
+      1,
+      4
+    ],
+    "new_thresholds": {
+      "mae": 0.35,
+      "fraction_pixels_over_8": 0.02,
+      "ss1_maximum_channel": 80,
+      "ss4_maximum_channel": 45
+    },
+    "new_ss1_limit_reason": "Independent native clip-mask coverage multiplication differs locally from Cairo combined geometric coverage. Exact independent bbox oracle and SS4 checks remain separate.",
+    "metrics": {
+      "animated-000-cairo-ss1.png": {
+        "mae": 0.214660645,
+        "maximum": 67,
+        "fraction_pixels_over_8": 0.00854492188
+      },
+      "animated-000-cairo-ss4.png": {
+        "mae": 0.0810139974,
+        "maximum": 31,
+        "fraction_pixels_over_8": 0.00618489583
+      },
+      "animated-025-cairo-ss1.png": {
+        "mae": 0.193359375,
+        "maximum": 77,
+        "fraction_pixels_over_8": 0.00821940104
+      },
+      "animated-025-cairo-ss4.png": {
+        "mae": 0.0699462891,
+        "maximum": 24,
+        "fraction_pixels_over_8": 0.00545247396
+      },
+      "animated-050-cairo-ss1.png": {
+        "mae": 0.19321696,
+        "maximum": 78,
+        "fraction_pixels_over_8": 0.00821940104
+      },
+      "animated-050-cairo-ss4.png": {
+        "mae": 0.0760091146,
+        "maximum": 31,
+        "fraction_pixels_over_8": 0.00610351562
+      },
+      "animated-075-cairo-ss1.png": {
+        "mae": 0.168212891,
+        "maximum": 77,
+        "fraction_pixels_over_8": 0.00659179688
+      },
+      "animated-075-cairo-ss4.png": {
+        "mae": 0.0553792318,
+        "maximum": 17,
+        "fraction_pixels_over_8": 0.00398763021
+      },
+      "animated-100-cairo-ss1.png": {
+        "mae": 0.154927572,
+        "maximum": 75,
+        "fraction_pixels_over_8": 0.005859375
+      },
+      "animated-100-cairo-ss4.png": {
+        "mae": 0.0541788737,
+        "maximum": 17,
+        "fraction_pixels_over_8": 0.00349934896
+      },
+      "display-visibility-cairo-ss1.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "display-visibility-cairo-ss4.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "group-curves-cairo-ss1.png": {
+        "mae": 0.214660645,
+        "maximum": 67,
+        "fraction_pixels_over_8": 0.00854492188
+      },
+      "group-curves-cairo-ss4.png": {
+        "mae": 0.0810139974,
+        "maximum": 31,
+        "fraction_pixels_over_8": 0.00618489583
+      },
+      "group-image-cairo-ss1.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "group-image-cairo-ss4.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "nested-clips-cairo-ss1.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "nested-clips-cairo-ss4.png": {
+        "mae": 0.0,
+        "maximum": 0,
+        "fraction_pixels_over_8": 0.0
+      },
+      "text-cells-cairo-ss1.png": {
+        "mae": 0.0179443359,
+        "maximum": 8,
+        "fraction_pixels_over_8": 0.0
+      },
+      "text-cells-cairo-ss4.png": {
+        "mae": 0.0118815104,
+        "maximum": 5,
+        "fraction_pixels_over_8": 0.0
+      },
+      "text-end-cairo-ss1.png": {
+        "mae": 0.0221354167,
+        "maximum": 51,
+        "fraction_pixels_over_8": 0.00048828125
+      },
+      "text-end-cairo-ss4.png": {
+        "mae": 0.00954182943,
+        "maximum": 5,
+        "fraction_pixels_over_8": 0.0
+      },
+      "tspan-kern-cairo-ss1.png": {
+        "mae": 0.0401000977,
+        "maximum": 37,
+        "fraction_pixels_over_8": 0.00048828125
+      },
+      "tspan-kern-cairo-ss4.png": {
+        "mae": 0.0242716471,
+        "maximum": 8,
+        "fraction_pixels_over_8": 0.0
+      },
+      "use-chain-cairo-ss1.png": {
+        "mae": 0.166239421,
+        "maximum": 55,
+        "fraction_pixels_over_8": 0.00773111979
+      },
+      "use-chain-cairo-ss4.png": {
+        "mae": 0.0332845052,
+        "maximum": 15,
+        "fraction_pixels_over_8": 0.00325520833
+      }
+    }
+  },
+  "legacy": {
+    "fixtures_unchanged": true,
+    "dependencies_unchanged": true,
+    "thresholds_unchanged": true,
+    "test_adjustment": "Removed only five obsolete rejection entries for newly supported g/text/tspan/use-group/use-chain targets from clip_bbox_test.go. Positive replacements and additional explicit viewport rejection tests are centralized in container_bbox_test.go. All remaining legacy rejection cases preserved.",
+    "baseline_inventory": "tests/data/svg/container-bbox/baseline-sha256.json",
+    "baseline_inventory_sha256": "48d103ab982a6d4969e8b713d8053520c24929a00a796b4b89c8ab15cd3a2cf9",
+    "baseline_changed_files": [
+      "svg/clip_bbox.go",
+      "svg/instance.go",
+      "svg/text.go",
+      "tests/_cases/svg/clip_bbox_test.go"
+    ],
+    "legacy_fixtures_sha256": {
+      "tests/data/svg/dash-cascade.png": "ecb89c1416d100e42992301f0d0422f465691cfb8808fc0a274d409d59533cc8",
+      "tests/data/svg/local-instances.svg": "d45d8b70448be73ed99e1a9fc2766c81c02537c478d3ee14f784a4ccacea3632",
+      "tests/data/svg/dash-square-dots.svg": "3e6b7770c64a48d0afb1575a4b79f1abc82a85337986cb42efca4d8ee9ab624b",
+      "tests/data/svg/text-outlines.svg": "fb0be42cb02ae415fe14bf7becddb85e40ba2c691af608c564cf4115db7f6f02",
+      "tests/data/svg/gradient-import-alpha.png": "6a7991f6115c0097cbf3812605e636366e30318be6dfa5cd8cde05b563a99671",
+      "tests/data/svg/gradient-import-use-clip-bitmap.svg": "4726a7e07a445a7b78f87eafcba63aedc163f426f5a088a8948efd481d8602a7",
+      "tests/data/svg/gradient-import-linear.svg": "c075bedb067a56d1ed2acaa3985032add05d03b58c9f1ba9a16141f49ceb410f",
+      "tests/data/svg/dash-edge-cases.png": "860944102132cf468491dc703058dc0d9f226392a8fbf1bc78c2c69eca77858b",
+      "tests/data/svg/gradient-import-radial.png": "10091c3cf16612ece7ad81d67112ba47875341e344379ab7503ff5f66e5c6ad9",
+      "tests/data/svg/clip-import-use.png": "5d7d018163f28212afbbc038b3a856f66ed2275f565915845b757592f6ced00e",
+      "tests/data/svg/css-cascade.svg": "65a9387978bca79b8d9f54ba37009bb4ff01370512145d840817519a4e39ea46",
+      "tests/data/svg/embedded.jpg": "96afa9654f1b95bca61e989adf62f835a00669063f754b773492d0ab8d8eb3dc",
+      "tests/data/svg/provenance.json": "a109f29857c30234d50040a3723bbeccedb0d56b01e8dc0cc7e4fc166b9656e9",
+      "tests/data/svg/embedded.png": "a06f980293eb6f61a876154ae9e8ed69f8e8ca81fea57cbc32339d262d116430",
+      "tests/data/svg/gradient-import-provenance.json": "24b222e7be3c100cabbd6c66793f9d440de191008954804bf6fa54a63b17691c",
+      "tests/data/svg/clip-import-nested.svg": "8a2014d4d72b01a0e5756b3aed0dedd4aa16ffe4efdb75449d0a7bb044e40cb3",
+      "tests/data/svg/embedded.png-decoded.png": "a06f980293eb6f61a876154ae9e8ed69f8e8ca81fea57cbc32339d262d116430",
+      "tests/data/svg/embedded.gif-decoded.png": "ee37186672e606ecde3d76c60e581938d183eb559da2c2def9f547cdcf1e321f",
+      "tests/data/svg/dash-manim.json": "a4ccfee7dcdbff0acf92d2379050d474da85ebb3d41e248bd34ea2a666ea1790",
+      "tests/data/svg/image-provenance.json": "f28250e2b90914cbaf03815f6bb5e477188462417849d3c7bb82f00ef0ef83fd",
+      "tests/data/svg/clip-import-nested.png": "07e895461263de15e9d337c26394ac198ec64555b137f2480da82e47ab86ce09",
+      "tests/data/svg/clip-import-provenance.json": "64e99973319cfe46c0cc64853d6eed890c31ab8689febf5f56769211b78c2ab3",
+      "tests/data/svg/clip-import-use.svg": "1ec2aa43575a5701923168a5b44816e0adec634728f6e85432899a0dbd773011",
+      "tests/data/svg/css-cascade.png": "f1bd0d1e2019cecc5103a0cca0c198afa2cc62bc5b2894dc4ca503e8fe150d2d",
+      "tests/data/svg/text-cairo-outlines.svg": "5fc40eb7d011a06630bb2901b14cc80d750f5f9e0cd9a17c5f7d9145b8c2c3ca",
+      "tests/data/svg/gradient-import-linear.png": "909c46e9a8fe751428b8866cbedf32d6cfce3f5b6673ec0d82e88d1209899f7f",
+      "tests/data/svg/gradient-import-radial.svg": "ffdd6547c07660956e5f95c4f09a1eb163c7736eb403eae20bd88139d1490e0f",
+      "tests/data/svg/dash-edge-cases.svg": "8f45e55ea6ecbe8087ddd4a081a0d7aeb575a0f0b50a19b7606f6d365e1f343d",
+      "tests/data/svg/gradient-import-use-clip-bitmap.png": "376ac6da1bebd72829fe64a101fa9221ec627a132696894d17686ccb635802f1",
+      "tests/data/svg/gradient-import-alpha.svg": "3be7a98e5d38c84fc9842a6bc0f20b9090f9478ed6b292991c58aacaea83c505",
+      "tests/data/svg/text-provenance.json": "741418f061ae18fc2cf11cd410a372b67c216b1960319fce588dbdd75a18af2c",
+      "tests/data/svg/text-outlines.png": "4e3fb3d1c092ca25fb6bc0fbd78ce4716fbf7032eab3b045cb2d247b528f464a",
+      "tests/data/svg/local-instances.png": "d6fcaa294c5762131e8e3dfa24e7315882e030cf7be9b98e26ba674d082643d8",
+      "tests/data/svg/dash-cascade.svg": "d3c5a068fb6242c50a304e1ff5b072d2ee7ab00500e9f5816457425d04a24c04",
+      "tests/data/svg/dash-square-dots.png": "598c8662031a647bdb1e57c83a97fb83d8870965976dfe079cebb56ceaf38868",
+      "tests/data/svg/text-kern.ttf": "0007d4c8cc89b6066049c0f72544c0b49465128764d37b3c99514180260e1add",
+      "tests/data/svg/text-fonttools.json": "c2b0407ff8be8cbb5be5b04f088114fbe1593cbc931595f05e669ca7b5d242d8",
+      "tests/data/svg/embedded.jpg-decoded.png": "a3e462dff1b8b3c323a88fd65d0bda6617b1509ced0842a273576821c421394a",
+      "tests/data/svg/css-provenance.json": "b4a9ea71258c4c0b19b4b89b7c67da0f0accbde55832612b7d520f5e64d3452d",
+      "tests/data/svg/embedded-images.svg": "df52beb16520fc4bed6a05c24ec35c6f702d49b968d2c80977d852613bbd3d94",
+      "tests/data/svg/clip-import-bitmap.png": "465403c561ae8f3a40d1d8f6b10a40534c3104b91ea7d1ab72d495b9c5a44000",
+      "tests/data/svg/clip-import-use-positions.svg": "aa3cee79ebe3e9c72516d43983bbc2c529483ee0ac14f4d36e85b83a2c0d2ece",
+      "tests/data/svg/dash-provenance.json": "0e103806ed15f0af654adcd66169878e91edeb5aa73628b16a693e5b566586e4",
+      "tests/data/svg/gradient-import-bbox-affine.png": "84ad62cd6b49dfbe75e0d3e1c21b0d09004688fc40652774663da9b98b9abe6d",
+      "tests/data/svg/embedded.gif": "1c7616f8e0c144b9751ef3590761b4881b786776f609b6298ffaaab93be851c1",
+      "tests/data/svg/manim-use.json": "28c0966c9d1ff7dcf1b14bf1c49a6ce0184a492c93b5d19ea7afb70133016ad4",
+      "tests/data/svg/clip-import-transform.png": "6a91c9b9e5ee0ce8ff3bcb73e7427961232218e3543941bb6704d31f3e7d6d1f",
+      "tests/data/svg/clip-import-transform.svg": "c7b946742710ff619ef1df84490787f483f0fb3aace58784584e0e4896224659",
+      "tests/data/svg/manim-use.svg": "38db813e7399830ca01a55310e200c56791b9634798e04052c00739f12c94b47",
+      "tests/data/svg/gradient-import-bbox-affine.svg": "77de91060b4389a4134a2084c3167aeb0432fb67a589a83d0cee4960834717bc",
+      "tests/data/svg/text-font-license.txt": "dc588a7ba9130043b67c2380cc03cc6644ed3557f6d5e8589b96acba1c64e343",
+      "tests/data/svg/clip-import-use-positions.png": "9759d541617b6c62e863cb0728ab617067eedfbf22d5a775d54ed62022f8ae3d",
+      "tests/data/svg/clip-import-bitmap.svg": "cc63955ff2a2bf29a02674e92571228efbf9afb444bce5677b6c804933d660c0",
+      "tests/data/svg/embedded-images.png": "51f100e9bc6e1d11c92aca93c25022cc242ec881d0f00b40ded5b2c8eab32787",
+      "tests/data/svg/clip-unions/opposite-overlap-cairo-ss4.png": "8bc2e23e427dc9609b48050caffc6ef7ec3f4856ad4675747260357441deff5f",
+      "tests/data/svg/clip-unions/degenerate-cairo-ss1.png": "304e1a3c4acd4d46279c49c3a16f2249e14fc715130dfce10162832612a1349f",
+      "tests/data/svg/clip-unions/geometry.json": "3a0199c20b969b42b365fc56050155743e96461bc1ff4e5bd0a75c3ad4d51460",
+      "tests/data/svg/clip-unions/opposite-overlap.svg": "a13fc920a2abd26cae6506ba729ff86ccba75f99b16dc9a24fae1b69202beabd",
+      "tests/data/svg/clip-unions/provenance.json": "bb7511b6b8cb22b2f67fd621ea02b6a9506550a9a641f16122c40e1855340ff7",
+      "tests/data/svg/clip-unions/opposite-overlap-cairo-ss1.png": "8bc2e23e427dc9609b48050caffc6ef7ec3f4856ad4675747260357441deff5f",
+      "tests/data/svg/clip-unions/degenerate-cairo-ss4.png": "304e1a3c4acd4d46279c49c3a16f2249e14fc715130dfce10162832612a1349f",
+      "tests/data/svg/clip-unions/child-affine-cairo-ss4.png": "7754f6290454963c6ed2a8938564372ece6ab3faa0613f8e4de1eb1ee902d582",
+      "tests/data/svg/clip-unions/morph-070-cairo-ss4.png": "1413caf91691c33524e55f2f3f33e81e94912345c0bbc444c99926001c8ee6b9",
+      "tests/data/svg/clip-unions/css-use.svg": "09051d0843eb4312ac809f9d53dcc39f34fee3a155e36818d69a32985de63d2e",
+      "tests/data/svg/clip-unions/css-use-cairo-ss4.png": "5e39749b874386338f00029181ec28e1b134eacfc70a7e1725a223dfc15608eb",
+      "tests/data/svg/clip-unions/ancestor.svg": "575cce643b9809f7007881046b933038e98217f89c70e2ecf21cb279f46fd2d5",
+      "tests/data/svg/clip-unions/css-use-cairo-ss1.png": "5e39749b874386338f00029181ec28e1b134eacfc70a7e1725a223dfc15608eb",
+      "tests/data/svg/clip-unions/child-affine-cairo-ss1.png": "af4250ec34bc455c0be4b60e4773519ca126ec90f3e9a87f61bbbdbcd3cc1f98",
+      "tests/data/svg/clip-unions/gradient.svg": "6dbab6b3778fcbc8cc650a1d3b203f16e943280a765bc5e76a8b000f346f289c",
+      "tests/data/svg/clip-unions/mixed-holes.svg": "2e5e58062b3c5847a214ff140f151726391142171252ef32e024133b99267f67",
+      "tests/data/svg/clip-unions/degenerate.svg": "f318a961430dbd270502bb0c316b9943d9e4bc11f8ebbfdf2eeaae18e987de1a",
+      "tests/data/svg/clip-unions/contacts-cairo-ss4.png": "2883ba9ed60fae3b39f26c98da85910d128ac3e4e5419433d1fbf74204a878cb",
+      "tests/data/svg/clip-unions/bitmap.svg": "0658ba8f35faee291b1ca8417488eab84cee105e6c98c6ed82436f20b75f4018",
+      "tests/data/svg/clip-unions/gradient-cairo-ss1.png": "bf806d0af0057a230e7f3ee7e6925bcbc3ebfdb9dbabf934ee8eec38758f8fea",
+      "tests/data/svg/clip-unions/gradient-cairo-ss4.png": "c9f5a1f368a309a44c5ffd5da4261ff8ff1b0b7e5836e47184efbefb6f7c1317",
+      "tests/data/svg/clip-unions/contacts.svg": "96d52e477b6136fa476542645164ad80652b3d4277f8bbe92a3e5819a973fbf6",
+      "tests/data/svg/clip-unions/validation.json": "7913278ed44e65d50f417a716e8440901e16d88948958dbcdce5c8725f91fcae",
+      "tests/data/svg/clip-unions/contacts-cairo-ss1.png": "2883ba9ed60fae3b39f26c98da85910d128ac3e4e5419433d1fbf74204a878cb",
+      "tests/data/svg/clip-unions/bbox-affine-cairo-ss4.png": "5e560b4d57f634ee7e84a3c98adb707ea4d837b03ed265773c2eddb3c7b84c0d",
+      "tests/data/svg/clip-unions/bitmap-cairo-ss4.png": "dfe8807df00844d1bb244081d8bd6d6943ae97643f66d04c6d9fa817a1941fba",
+      "tests/data/svg/clip-unions/mixed-holes-cairo-ss4.png": "73364c55dcce14ff5b17e7b471f1f62484f1e32b808e5c8e0b182dd944188664",
+      "tests/data/svg/clip-unions/self-crossing-cairo-ss4.png": "2902d6e8ae8cc066b379aaee956e44314c33bf9e564b145d800c149d4cadcc97",
+      "tests/data/svg/clip-unions/bbox-affine.svg": "4bb1be59a7e42569920534c25c6115463e74812fe475241ae0df66debf7c7dab",
+      "tests/data/svg/clip-unions/child-affine.svg": "4585fb9bf6fe0b4d3e58c8bc33b59b17cc1776c8887505834fac7a809ca3f5e8",
+      "tests/data/svg/clip-unions/ancestor-cairo-ss4.png": "817d64940d64eb768e8408af444c45b654b3e141c0f56eba359b42885de0ce16",
+      "tests/data/svg/clip-unions/morph-035-cairo-ss4.png": "6f2c89b7712e7a70e5afb3b5156696e4350510c5c07f12e7bb283cb8a84ccfb2",
+      "tests/data/svg/clip-unions/bbox-affine-cairo-ss1.png": "450fd6986acb476940c94eb0db11ca03d46da0f8cd8758b9229c2c4dca5f178f",
+      "tests/data/svg/clip-unions/bitmap-cairo-ss1.png": "6e6b639476130e2ee894b1d56a2a618a016fff5d04ff56a771e0ac95329f7c37",
+      "tests/data/svg/clip-unions/benchmark.txt": "598494cc9eee45e51ce355b42d0f01b3b7fd6df1054fe4e6e2b8032de430c904",
+      "tests/data/svg/clip-unions/self-crossing.svg": "2b7d511d14a4a8ad47b06f2f86d1346f7aa146d0a29c17b52de18c8623d3e9f3",
+      "tests/data/svg/clip-unions/mixed-holes-cairo-ss1.png": "73364c55dcce14ff5b17e7b471f1f62484f1e32b808e5c8e0b182dd944188664",
+      "tests/data/svg/clip-unions/self-crossing-cairo-ss1.png": "9ba5f2180bb0351e316fd9f6a5676ddfe6f172a4e0bc93014b6732e53f2201d4",
+      "tests/data/svg/clip-unions/ancestor-cairo-ss1.png": "817d64940d64eb768e8408af444c45b654b3e141c0f56eba359b42885de0ce16",
+      "tests/data/svg/bbox-clips/bitmap-meet-cairo-ss4.png": "78280a9f66c55c8fd14705ad3e896eb73cc772c38ca7f1cf18493da1b5f74507",
+      "tests/data/svg/bbox-clips/degenerate-cairo-ss1.png": "ec5ee0993491cc5c4e0a82fcf5642bab600b8df0fc9b73ab657323e48ec7c8d9",
+      "tests/data/svg/bbox-clips/nested-cairo-ss1.png": "479e9d5d727b8f684d779750c3110e03f0114f2c374ef14dbec5d069517478b4",
+      "tests/data/svg/bbox-clips/use.svg": "bf4caadb52afdb0b83533f133120c5e06d1e1dfc58d75eb3b3592c4e83696f64",
+      "tests/data/svg/bbox-clips/affine.svg": "585225c53472ee7a7fc8a26c967ada65bc68ea498765fc0f4ff27ec1d4cd9fcc",
+      "tests/data/svg/bbox-clips/bitmap-meet.svg": "ba09f4c2260f1bb47cfe18da3fcd39c725020c09dfd813292f5759da356ccde8",
+      "tests/data/svg/bbox-clips/provenance.json": "fe276497796d9b484f5687b5472eb1bf0fb57044fb1da45ed7351645f24ab062",
+      "tests/data/svg/bbox-clips/bitmap-meet-cairo-ss1.png": "4c723e7d74aaf90fe91575bd255a74955f32700a776327ee97532d4131f7c12b",
+      "tests/data/svg/bbox-clips/degenerate-cairo-ss4.png": "ec5ee0993491cc5c4e0a82fcf5642bab600b8df0fc9b73ab657323e48ec7c8d9",
+      "tests/data/svg/bbox-clips/nested-cairo-ss4.png": "f8eddb864acf16633d5864d3eb46b0f33d8fd4f5829ed59d5f9cfc77c9829a94",
+      "tests/data/svg/bbox-clips/affine-cairo-ss4.png": "a98ae2966ec5c84c0b31732c47875d48727ef0b360fb97c36d2b45516715531e",
+      "tests/data/svg/bbox-clips/nested.svg": "eac3b171e529414e552706c62292b48c6c0f17ec1695f57144a1c187cd3ce6a7",
+      "tests/data/svg/bbox-clips/use-cairo-ss4.png": "f5253be88ef9da82344a7864e6a148b3c5a7992908c2478a634bc5bf71e82c13",
+      "tests/data/svg/bbox-clips/use-cairo-ss1.png": "8b9a6a41149108ede8babb35b259481c9ec9e6bc05389bc8a7cbc2a52783f1f0",
+      "tests/data/svg/bbox-clips/gradient.svg": "1279e970bec7454301c3501f594c11b18b71e1e1b3aea85be4381e9f326c2876",
+      "tests/data/svg/bbox-clips/affine-cairo-ss1.png": "f86fa62aa61c495defa0defbd9b9690bd4313d1abef4cd600b559956d7082932",
+      "tests/data/svg/bbox-clips/degenerate.svg": "9ecf5cfffbcb6e7ef54333cf85b3e921ff6c770b7d0d004427ecbd459a2119df",
+      "tests/data/svg/bbox-clips/evenodd.svg": "6d769f6e5fd7f2433ef14e9a01a6b8b28476042ee88a8a420aa07ef983157f1c",
+      "tests/data/svg/bbox-clips/gradient-cairo-ss1.png": "7dea02f6ae3fa495fb3680d3ebdc291e350c8dc24523a91d096368e450ea268e",
+      "tests/data/svg/bbox-clips/gradient-cairo-ss4.png": "2b4ee5f022e7efd26db7f7d36aa7b18e0a827aba849ff0310285b2ad55cbc98d",
+      "tests/data/svg/bbox-clips/validation.json": "79f0c67e976258b3fe655684035c4dda645a5384588af91cc8da7f6d0d414b43",
+      "tests/data/svg/bbox-clips/evenodd-cairo-ss1.png": "50130f7a928af8bc17d3855284a25a230fc89107d4aa579821bc5675586df45a",
+      "tests/data/svg/bbox-clips/evenodd-cairo-ss4.png": "1d62bd8b066526805b9eddeacc0acaf9b4df1e8b0a87f43904619444f8fa9951"
+    }
+  },
+  "benchmarks": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -tags noasm -run '^$' -bench 'BenchmarkSVG(ContainerBBox|BBoxClip)ImportRender' -benchmem -p=1 -cpu=1 -count=3",
+    "log": "tests/data/svg/container-bbox/benchmarks.txt",
+    "log_sha256": "21390658a8d121a70b7930dcb794cae6b6ed01cb0007ba402a49dd1fb4e5101f",
+    "workload": "64 curved group-use bbox targets; full import and one 128x96 frame, one worker at SS1/SS4. Existing direct-use rectangle workload also recorded.",
+    "excluded": "Rasterizer construction, I/O, PNG encoding, reference generation. Import/frame allocation included.",
+    "samples": {
+      "BenchmarkSVGBBoxClipImportRender/64_instances_128x96_SS1": [
+        {
+          "ns_per_op": 924711,
+          "bytes_per_op": 780491,
+          "allocs_per_op": 4928
+        },
+        {
+          "ns_per_op": 935874,
+          "bytes_per_op": 780490,
+          "allocs_per_op": 4928
+        },
+        {
+          "ns_per_op": 803216,
+          "bytes_per_op": 780491,
+          "allocs_per_op": 4928
+        }
+      ],
+      "BenchmarkSVGBBoxClipImportRender/64_instances_128x96_SS4": [
+        {
+          "ns_per_op": 2245992,
+          "bytes_per_op": 1567048,
+          "allocs_per_op": 4930
+        },
+        {
+          "ns_per_op": 2444800,
+          "bytes_per_op": 1567050,
+          "allocs_per_op": 4930
+        },
+        {
+          "ns_per_op": 3330663,
+          "bytes_per_op": 1567052,
+          "allocs_per_op": 4930
+        }
+      ],
+      "BenchmarkSVGContainerBBoxImportRender/64_containers_128x96_SS1": [
+        {
+          "ns_per_op": 975893,
+          "bytes_per_op": 750916,
+          "allocs_per_op": 4870
+        },
+        {
+          "ns_per_op": 978728,
+          "bytes_per_op": 750917,
+          "allocs_per_op": 4870
+        },
+        {
+          "ns_per_op": 1174756,
+          "bytes_per_op": 750916,
+          "allocs_per_op": 4870
+        }
+      ],
+      "BenchmarkSVGContainerBBoxImportRender/64_containers_128x96_SS4": [
+        {
+          "ns_per_op": 2499531,
+          "bytes_per_op": 1734086,
+          "allocs_per_op": 4936
+        },
+        {
+          "ns_per_op": 3485868,
+          "bytes_per_op": 1734083,
+          "allocs_per_op": 4936
+        },
+        {
+          "ns_per_op": 2988998,
+          "bytes_per_op": 1734105,
+          "allocs_per_op": 4936
+        }
+      ]
+    },
+    "comparison": "Distinct shapes/workloads; no before/after speedup claim."
+  },
+  "source_sha256": {
+    "svg/clip.go": "80e8335f883386c07bbc4d78e4b13183feae32af08a0bf9ef685e5b0d2057b76",
+    "svg/clip_bbox.go": "004b9f388359bf69bc2127bd5abc4e4950e5374c8010317652cdc1a80427f125",
+    "svg/clip_union.go": "80319009b06eff3376bf00023770fcfd66c255884244dd5f78817431dfab838b",
+    "svg/clip_union_budget.go": "c6b69db959e04a50d95cf8faa14f7b5928202b8da920062c34daa30fca7debc2",
+    "svg/container_bbox.go": "f7045fa8f1f5e3dd56e8065a6eb98d5def1c6c66d3f469cc5901ac9af0b0688e",
+    "svg/css.go": "fb3edf00b1caaa77eb2f76f70736d86d1599f412c2378c5b77ccd894bf2ae1a9",
+    "svg/document.go": "c9ca39a5dc85ac5e5688d6f6b06f7f862fd25eec577acceb0cdd95f45dbb7715",
+    "svg/gradient.go": "d928d863159fab413110e8387273efc7a97fed08e86a3881284499b787df8bbf",
+    "svg/image.go": "a2fa8c37e5bebfb6364bdbd960309480a3df026bddebafe929b1d19721ab2b47",
+    "svg/instance.go": "48c2ded9ba0cc7249db01ce0a5235193ae252d097d99f1dc9da401f51c965919",
+    "svg/path.go": "1ddc04080f236eba47decd9fac16088ed7450de44c5ebf5bcec0f13abbe93432",
+    "svg/style.go": "99dd31026294369076ae23bfb054556bdd41f0d38fd450b80c72de108ec882d0",
+    "svg/svg.go": "142726e164cb8bd0fd447a518527c610bf3ac25041a45adcc90af114dea22697",
+    "svg/text.go": "2056ce94d7174c0f53919b7470ec9fb168aeb5223ef9d59cd9b10f043e7298f2",
+    "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+    "go.sum": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b",
+    "tests/_cases/svg/clip_bbox_test.go": "bc404ab4c75b88a4d70bc913c4f686c71a2fed48f3e74a08ed92ac472299073a",
+    "tests/_cases/svg/container_bbox_test.go": "b130654b93b34dc07e3279a3131080667e2d6602b59e5b7c8b7a9a9c93b63c39",
+    "tests/_cases/svg/container_bbox_limits_test.go": "72acc286ed32f6095fd9b5dc1b2ac91641e7fb08c7a3f2f921b557b16fb3b75c",
+    "tests/reference/svg_container_bbox.py": "4fbfbd84b6c60a5fede124eaafbc4d9197426c7ac2f6ea9b6e6b2ad813b5eda6",
+    "docs/SVG_CONTAINER_BBOX.md": "4a1348f56fa1d1216137e49ef8befb52c323adf4dfe507844b5073ea92cc74f2"
+  },
+  "reference_files_sha256": {
+    "tests/data/svg/container-bbox/animated-000-cairo-ss1.png": "d8f298d5a9019ca2ff2b43b20ef820e76ff40911ad307078405deb1c068c980e",
+    "tests/data/svg/container-bbox/animated-000-cairo-ss4.png": "ae57a85fd099870df161b09310f5d6ed28f7a695629c50d0c434a9c9599ddc8c",
+    "tests/data/svg/container-bbox/animated-025-cairo-ss1.png": "54beac3a1d7c7a96b891be384158f2d04e4b8c8a25b379e22cb28bacdec66821",
+    "tests/data/svg/container-bbox/animated-025-cairo-ss4.png": "687724d955be33a1b391888a9b1247918e2e2ec70aac598ff1507ab16e44e636",
+    "tests/data/svg/container-bbox/animated-050-cairo-ss1.png": "5691107d9567ee399549140de9a5badc94d9796aa49c526b92bfcb99c0686c61",
+    "tests/data/svg/container-bbox/animated-050-cairo-ss4.png": "82bcdd786dcedd83e7ab2ae62761f41f952bc7ecd0c56d184e986f6669845d10",
+    "tests/data/svg/container-bbox/animated-075-cairo-ss1.png": "017fe0ffd7a41eebb5adf67245135d8a3108a04dfec8e3cb2cad7f05d5f2201f",
+    "tests/data/svg/container-bbox/animated-075-cairo-ss4.png": "fed7c2f14bca0b6bc5ba594bb954010519ecea8e85da2f1485076e944f1dd63d",
+    "tests/data/svg/container-bbox/animated-100-cairo-ss1.png": "9e948b7c50405cd06e4a5b7dd1df5905e3e4e24f6285d21c7d1248f3df1d7dd6",
+    "tests/data/svg/container-bbox/animated-100-cairo-ss4.png": "8ca9975b13e581b4f47a83ff36928e6685a90fbc5e67a42ded70160c99224ba1",
+    "tests/data/svg/container-bbox/bbox-oracle.json": "e1129dbf9458a88963d40bed7c2a3e166a0aafdfcc31d2fbd98c12b3f2a1ab59",
+    "tests/data/svg/container-bbox/display-visibility-cairo-ss1.png": "1b0c78f99c6315d6623bf20d1826a7e874981e02e6615882e3c6e470038b9bd0",
+    "tests/data/svg/container-bbox/display-visibility-cairo-ss4.png": "1b0c78f99c6315d6623bf20d1826a7e874981e02e6615882e3c6e470038b9bd0",
+    "tests/data/svg/container-bbox/display-visibility.svg": "1f0a6197fb7b8d3054ed666114cf148eb90b8eb996acfbebb013e186a9ec1199",
+    "tests/data/svg/container-bbox/group-curves-cairo-ss1.png": "d8f298d5a9019ca2ff2b43b20ef820e76ff40911ad307078405deb1c068c980e",
+    "tests/data/svg/container-bbox/group-curves-cairo-ss4.png": "ae57a85fd099870df161b09310f5d6ed28f7a695629c50d0c434a9c9599ddc8c",
+    "tests/data/svg/container-bbox/group-curves.svg": "e2d7405caba92d6d6f138d511741c5e80b008befbd84badb94ccd29a843cd4ad",
+    "tests/data/svg/container-bbox/group-image-cairo-ss1.png": "f0cff583643f62dbc083146976b2ac4a732438c8e1a22256f136c98c04be321e",
+    "tests/data/svg/container-bbox/group-image-cairo-ss4.png": "f0cff583643f62dbc083146976b2ac4a732438c8e1a22256f136c98c04be321e",
+    "tests/data/svg/container-bbox/group-image.svg": "a7f1f5d8a06247c885b97000565b49222e6af7e8079c51e43d65342bce28db5f",
+    "tests/data/svg/container-bbox/nested-clips-cairo-ss1.png": "e5c100a2322e01dff4d5ddfa941bec279907d11363bd8c4ef6af031ad486be2e",
+    "tests/data/svg/container-bbox/nested-clips-cairo-ss4.png": "e5c100a2322e01dff4d5ddfa941bec279907d11363bd8c4ef6af031ad486be2e",
+    "tests/data/svg/container-bbox/nested-clips.svg": "91378bb1b6976bf08b6f20ea801793ac5831ae8a3711cb261962a04bcb93db96",
+    "tests/data/svg/container-bbox/oracle-bearing-and-space.svg": "bfcfe826d65969c6339eb1b09a51483c1a72547853feff9842666a22b3c98770",
+    "tests/data/svg/container-bbox/oracle-display-visibility.svg": "f1376ceab37bd4cfb3871b4671fe55d79d7926acd99a8d4a05c63a44ed9e4aba",
+    "tests/data/svg/container-bbox/oracle-group-image.svg": "6bd480263bdc49b3373160272e6748f29bfd2bf5b798f2c3fab71ae1d2b11dd6",
+    "tests/data/svg/container-bbox/oracle-group-text-shear.svg": "5e1ef2689ecbda39c7df7da07d567107b467f836b4c02c01083e8fd6fa270cf8",
+    "tests/data/svg/container-bbox/oracle-sheared-cubic.svg": "5fd4484de3e6b155d6d048bb2c6da01c1ed580f2437206d059304bcd2cce550c",
+    "tests/data/svg/container-bbox/oracle-space-only.svg": "12e566a45f411612cc66d5457db7ca0c6ef250ae6c9c7b88beb63144c4aab698",
+    "tests/data/svg/container-bbox/oracle-text-cells.svg": "188d7c53eae5a6549e71f88f2011860b8f05f7462d36dc39f407bd49235907b1",
+    "tests/data/svg/container-bbox/oracle-text-end.svg": "e846f8b7489217c519c194ae01c58ca9dcffe7913c79fb304e02f61405b35f86",
+    "tests/data/svg/container-bbox/oracle-tspan-kern.svg": "21d205c010ba09cfa692e55629471ca3b7374081719c91a4b6e95b8cdd327c09",
+    "tests/data/svg/container-bbox/oracle-use-chain.svg": "e7b5dc4561f8338a370c9994b896a972c78a3b2a8d7f672d8c33f56c8a984874",
+    "tests/data/svg/container-bbox/text-cells-cairo-ss1.png": "2f1a4fe5c4f30df4e843c69729586b9ec4ac1eb535af2041c818f82c4bd81c94",
+    "tests/data/svg/container-bbox/text-cells-cairo-ss4.png": "8e913065fa52520cce2a10164bc2a9e291eedc8bbfa5cee3b07ad6f8b54224e9",
+    "tests/data/svg/container-bbox/text-cells.svg": "b4f367005cfbf2121b1fab25c2863c0bffcdfe50abb174e066d1bb2a335d8b4f",
+    "tests/data/svg/container-bbox/text-end-cairo-ss1.png": "6dab2947a5dc842a9f3b5d0b85038b4c6b3c035c4942db8f75662f7693c97a12",
+    "tests/data/svg/container-bbox/text-end-cairo-ss4.png": "235591da898333f33fdf810b05358b912b465688328929afef085e18920e8ab5",
+    "tests/data/svg/container-bbox/text-end.svg": "f8c5be80c0bfd91d1d2e0f67be75d104f7abd91aea9eebd5ad0477dc98257fdf",
+    "tests/data/svg/container-bbox/tspan-kern-cairo-ss1.png": "0c898c3f9be47450dd69aa8a59d2ebf98d350d4ff62d7faf38ea5209ba742c8d",
+    "tests/data/svg/container-bbox/tspan-kern-cairo-ss4.png": "746e0a471794b67bd217de6f411d34e045c18341a4ab6f3774dd2e5c9dac0845",
+    "tests/data/svg/container-bbox/tspan-kern.svg": "665ac469aa668934acb568cae81e7998770d04e82edbd171dccf63da1a8c4d03",
+    "tests/data/svg/container-bbox/use-chain-cairo-ss1.png": "9fa918ae3a1d081d1868f440875da14502e1f6f6f6105fbda9af197369eeefa5",
+    "tests/data/svg/container-bbox/use-chain-cairo-ss4.png": "850ccf7d499341a12b2cec43ff63f96f6a426935824b23aebce9c86790dfabc1",
+    "tests/data/svg/container-bbox/use-chain.svg": "b925d76164d88afb5ce21b4fa625ef5c6ab02641563e9fa7a2e39ca730424947"
+  },
+  "ownership": "Production helper staged with underscore until coherent promotion. Existing-file hashes checked before integration. Only three pre-existing production files changed; document.go reuses existing graph checks and clip budget without modification. README/STATUS/PARITY/examples/CLI and all other baseline production files left unchanged."
+}

@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "slice": "wave7 legacy Graph/DiGraph topology mutation",
+  "scope": "Focused network-only checkpoint. No sixth-wave checkpoint is used as validation evidence. Old hashes are used only to verify untouched files.",
+  "environment": {
+    "go": "go1.27.3",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "kernel": "Darwin 24.6.0",
+    "cpu": "Apple M2"
+  },
+  "runtime": "pure Go; no added dependency, native binding or subprocess fallback",
+  "api": {
+    "types": [
+      "GraphLimits",
+      "VertexSpec"
+    ],
+    "constructors": [
+      "NewGraphWithLimits",
+      "NewDiGraphWithLimits"
+    ],
+    "methods": [
+      "Graph.AddVertices([]VertexSpec) error",
+      "Graph.AddEdges([]Edge) error",
+      "Graph.RemoveVertices([]string) error",
+      "Graph.RemoveEdges([]Edge) error"
+    ],
+    "legacy_signatures": "NewGraph/NewDiGraph and Options fields unchanged; DiGraph inherits Graph methods",
+    "curved": "No new topology mutation methods; private wrapper and original guards unchanged"
+  },
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -count=1 -cover",
+      "result": "PASS",
+      "package_seconds": 0.11,
+      "coverage_percent": 90.9,
+      "note": "Central runner always supplies -tags noasm; includes old Graph/curved tests and new mutation tests."
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=network -race -count=1",
+      "result": "PASS",
+      "package_seconds": 1.3,
+      "note": "Development instrumentation uses CGO1; product stays CGO0."
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./network",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -tags noasm ./network",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -overlay=/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/data/network/_mutation_overlay.json -run '^$' -fuzz '^FuzzGraphMutationTransactions$' -fuzztime=8s -parallel=2",
+      "result": "PASS",
+      "package_seconds": 8.477,
+      "executions": 55941,
+      "workers": 2,
+      "new_interesting": 141,
+      "stage": "Central overlay before promotion; final production bytes unchanged. Transient machine-specific overlay removed after promotion. Reproduce on delivered source by omitting -overlay."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tests/reference/network_mutation_reference.py",
+      "result": "PASS",
+      "note": "Development-only actual pinned source calls; ordinary tests read JSON."
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -run '^$' -bench '^BenchmarkGraphMutation$' -benchmem -benchtime=100ms -p=1 -count=1",
+      "result": "PASS",
+      "package_seconds": 0.224
+    }
+  ],
+  "reference": {
+    "fixture": "tests/data/network/mutation_manim.json",
+    "source": "manim/mobject/graph.py",
+    "source_sha256": "0f22f4c0db17d60d5688f1768b165737fe7772359e8d0212f1416e090ea6fc70",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "manim_version": "0.20.1",
+    "numpy_version": "2.3.5",
+    "graph_types": 2,
+    "operation_states": 10,
+    "edge_endpoint_pairs": 20,
+    "matched": "Stable vertex/edge/neighbor ordering, explicit positions, selected axis-aligned endpoints, source survivor identity and removal/root/dictionary cleanup. Go atomic transactions separately tested.",
+    "differences": [
+      "Go transactions reject unknown/duplicate endpoints atomically; source can partially apply or auto-create endpoints.",
+      "Go preserves edge-first root child ordering; Manim appends submobjects in method call order.",
+      "Go has no background updater or implicit mutation animation.",
+      "Go newly added directed links always have arrowheads."
+    ],
+    "license": "Reference MIT notice retained in tests/data/network/mutation_reference.md",
+    "full_manim_parity_claim": false
+  },
+  "pixels": {
+    "test": "TestGraphMutationCapturedSceneIndependentPixelsAndConcurrentAuthoring",
+    "width": 192,
+    "height": 144,
+    "duration_seconds": 2,
+    "interior_time_seconds": 1,
+    "comparison": "Captured interior frame remains pixel-identical after subsequent graph topology authoring; a fresh scene capture sees changed topology. Concurrent old-scene samples remain independent."
+  },
+  "benchmarks": {
+    "workload": "16 circular-layout vertices, 16 directed cycle edges, scale 3. Round trip: add 8 explicit dots, add 8 links, remove the 8 links, remove the 8 dots.",
+    "sample_count": 1,
+    "benchtime": "100ms",
+    "package_parallelism": 1,
+    "gomaxprocs_suffix": 8,
+    "observations": [
+      {
+        "name": "construct_16vertices_16directed",
+        "iterations": 1760,
+        "ns_per_op": 60420,
+        "bytes_per_op": 118690,
+        "allocs_per_op": 697
+      },
+      {
+        "name": "four_batches_8vertices_8edges",
+        "iterations": 804,
+        "ns_per_op": 136354,
+        "bytes_per_op": 110296,
+        "allocs_per_op": 482
+      }
+    ],
+    "excluded": [
+      "Scene capture",
+      "rasterization",
+      "reference Python",
+      "images",
+      "media encoding"
+    ],
+    "caveat": "Bounded shared-host short observations; no before/after speed claim or whole-library comparison."
+  },
+  "boundaries": [
+    "Simple legacy graphs only; no self-loops or parallel edges.",
+    "Explicit vertices/positions, no implicit endpoint creation or relayout.",
+    "Exclusive graph authoring; captured independent Scene snapshots may be sampled concurrently.",
+    "Surviving object identities/paths/styles persist; surviving edges require explicit UpdateEdges after direct vertex changes.",
+    "Finite planar controls/deltas within 1e12 and bbox precision checks; malformed names/styles/topology rejected.",
+    "Count/name/paint/index/candidate storage and abstract work bounded; model is not RSS/cumulative allocation or CPU time.",
+    "Nil/empty batches still validate current state; unknown/duplicate requests fail atomically.",
+    "Existing captures/animations retain old topology; no background updater."
+  ],
+  "modified_legacy_source": {
+    "file": "network/graph.go",
+    "before_sha256": "f049dd7d213a418bb96f67cee79a4a67925e846c3401adc6263f36fbc9dea2a4",
+    "after_sha256": "05920d5269621148a25f4084bdfdf3484080701e19b1ec940efbc67a92dceb4a",
+    "changes": "Retain original defaults/limits and identity stamps; delegate to bounded preflight; clone ID strings; add coordinate/precision checks. Original supported geometry arithmetic retained."
+  },
+  "delivered_file_sha256": {
+    "network/graph.go": "05920d5269621148a25f4084bdfdf3484080701e19b1ec940efbc67a92dceb4a",
+    "network/graph_mutation.go": "350e1c216c28e4884f9d28398e581d2f8ff520366d05a6f30554841fbe1f2626",
+    "tests/_cases/network/mutation_bench_test.go": "e1fd74a7728fc7e124272e8902a37b793ac6271c4ec6dfe8f972c3f267c9c546",
+    "tests/_cases/network/mutation_fuzz_test.go": "d18faa12818c7770ce0f32b69addd865d3a501d309c38313196ca7108349ad9f",
+    "tests/_cases/network/mutation_limits_test.go": "3a7e000d54eca7fdc8c864989a5714a31da32f162d0eb2a7e47e21c5f373ff75",
+    "tests/_cases/network/mutation_reference_test.go": "849012d1096a806e14a955022b034f39ef5b32c8c788adccef2ebcdd5e3aba4e",
+    "tests/_cases/network/mutation_scene_test.go": "284241f166a0470122fa6d949dd98bafe52a7b9863ca5f52620d0b809ea5c955",
+    "tests/_cases/network/mutation_test.go": "3b5e6109046a3b36cd1b1a31489ac51803d054f353d95d1f79c8e012d1b373f6",
+    "tests/reference/network_mutation_overlay.py": "e37abd12782613575e7543a616fd25bdbe1619e5fc2314d97f05960049b4a83a",
+    "tests/reference/network_mutation_reference.py": "28040b1ab8d759240c126ee6cb7ede360c1cba57c7dbb391a3e9c8c137b5febb",
+    "tests/data/network/mutation_manim.json": "1be2c14193b96a57bd9f691f4ad2e3514828c4d2ad713bd87c7adf3736a7f8e1",
+    "tests/data/network/mutation_reference.md": "8651d15170ff47b4f009a99cb1d6904b532eef445d97f316d52cae04a1ae5cdf",
+    "docs/NETWORK_MUTATIONS.md": "34d5b789c42aa603376d0bbfd1144da89a698d388ebf22ecc9f539909a2bcecf"
+  },
+  "protected_file_sha256": {
+    "network/curved.go": "4525988ec0443eb588a2e5781e9da874fcc251458b55f80577eb74ebe0e01aeb",
+    "network/curved_geometry.go": "02551476e6fe4e3c4412bd6fc677f91a07f98c117e2cc435d8bf0377626fcdca",
+    "network/layout.go": "96e4f682ebdbe873504a279176638e48a2933c3b630c4b6ff3300a89d5ff177c",
+    "tests/data/network/curved_math.json": "2682837f1f07bb19cf1f8f48bea31b97cbe9d0a1d0ca6ff4f5df4fb7e5683962",
+    "tests/data/network/curved_math.md": "1bd6e12e600f1d1253788fbe4014bfa191676a1bc8e5f9d6e06aca398ec78569",
+    "tests/_cases/network/graph_test.go": "bf07e36da5df516e67aa7524bf0148c6834ec197629be63c96852088ff9d5d14",
+    "tests/_cases/network/example_test.go": "4743ebdb994a6a0c081b6b3f627ff029d38844c782492905d7d3102ca3c46287",
+    "tests/_cases/network/curved_bench_test.go": "15cbea0d7eb52727e32078d61ee7830c396fdd51ef474c50dbaa15d2182c0cef",
+    "tests/_cases/network/curved_fuzz_test.go": "e05be4203c2a77a560e601d6d6953381c2a06058a64cc3a5f2b95033c46814a8",
+    "tests/_cases/network/curved_limits_test.go": "91d197be58d75bde2efab3438ba9f6336abcdf235e2a7b3ea2813440cfff7127",
+    "tests/_cases/network/curved_main_test.go": "987de38e40226bfdec546003542a3fbf562516678ca36e66de5a9f4f01c3904d",
+    "tests/_cases/network/curved_reference_test.go": "da3fa40dcbcaad740010a321b9e8024726f27358ab12c72e9e5dfd44968c5ec7",
+    "tests/_cases/network/curved_scene_test.go": "285f923600177457ff00cfca02910d6be7d5667b7da014e66da1d2a1e84773cb",
+    "tests/_cases/network/curved_test.go": "25a3d4700cc0c9c9966c8a39452b4627a878c2c948545e3556bc356264ac098c"
+  },
+  "staging_removed": true,
+  "frozen": true
+}

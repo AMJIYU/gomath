@@ -1,0 +1,5 @@
+=== RUN   TestPointTimelineContactSheet
+    points_workload_test.go:79: 320x240 SSAA2 times[0 .5 1 1.5 2], 2400 indexed points, animated positions/colors/radii plus TRS, 4140 mesh triangles; points added .1, sphere removed 2
+--- PASS: TestPointTimelineContactSheet (0.12s)
+PASS
+ok  	gomath/scene3d	0.125s

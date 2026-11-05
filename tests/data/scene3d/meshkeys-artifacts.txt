@@ -1,0 +1,5 @@
+=== RUN   TestMeshGeometryMaterialContactSheet
+    meshkeys_workload_test.go:78: 320x240 SSAA2 [0 .5 1 1.5 2], 2159 vertices/4140 triangles; torus nonlinear shear, changing normals/UV and material color/alpha, reflected nonuniform TRS, moving camera; sphere removed at 2
+--- PASS: TestMeshGeometryMaterialContactSheet (0.10s)
+PASS
+ok  	gomath/scene3d	0.110s

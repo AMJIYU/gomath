@@ -1,0 +1,26 @@
+{
+  "generator": "tests/reference/fill_evenodd_export.py",
+  "generator_sha256": "2da51efa3bc1c6c4ff04d2654cdfeaba84f4fc3cb99c135d746357d6f905e49b",
+  "go_generator": "tests/reference/_fill_evenodd_export/main.go",
+  "go_generator_sha256": "1f6704047d6d947521c957bd340fc909afecb2c7bf6bffcd216777111b6dd3b2",
+  "versions": {
+    "Python": "3.11.5",
+    "Cairo": "1.18.4",
+    "CairoSVG": "2.7.1",
+    "Pillow": "11.2.1"
+  },
+  "oracle": "Unpatched CairoSVG/Cairo interprets actual SVG ordinary evenodd solid/gradient paths, including partial cubic geometry and a nonzero ancestor clip; explicit ordinary hole probe. No evenodd clip oracle claim.",
+  "cairo_svg_source_sha256": "daa153a2a21bdf29af90ac3fb7467de094d4f30487fc04ba898a0634d6ce87ef",
+  "metrics": {
+    "mae": 0.07609049479166667,
+    "rms": 0.4573705560274222,
+    "max": 14
+  },
+  "files_sha256": {
+    "actual.svg": "05f6f2682ced881a45b0a7f55c20b80e1a698bffa97ebbddc4846241f5bf7483",
+    "native.png": "da5836f37353f52932631ec24ae8174a0767424a251f6aadfd4ab7fb6168dc67",
+    "cairo-ss1.png": "21c74ff5d4f73248dc001fa2849a1cce75805d907afd37c83cc3d1a9b8d7f5d7",
+    "cairo-ss4.png": "690cc5f8855ff202e80a032bb8d07d20cfed6b19b07fff401bae9d0348f268e7",
+    "input.json": "30f1ee136da33abb648f5086a8c506774d53f0afa083745f5de7162d370d9dcc"
+  }
+}

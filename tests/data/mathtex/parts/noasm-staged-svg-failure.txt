@@ -1,0 +1,88 @@
+?   	gomath	[no test files]
+?   	gomath/audio	[no test files]
+?   	gomath/cmd/gomath	[no test files]
+?   	gomath/cmd/purecheck	[no test files]
+?   	gomath/code	[no test files]
+?   	gomath/compat	[no test files]
+?   	gomath/examples/scenes	[no test files]
+?   	gomath/export	[no test files]
+?   	gomath/field	[no test files]
+?   	gomath/geom	[no test files]
+?   	gomath/graph	[no test files]
+?   	gomath/internal/grid	[no test files]
+?   	gomath/internal/h264	[no test files]
+?   	gomath/linalg	[no test files]
+?   	gomath/mathtex	[no test files]
+?   	gomath/matrix	[no test files]
+?   	gomath/network	[no test files]
+?   	gomath/number	[no test files]
+?   	gomath/path	[no test files]
+?   	gomath/rasterimage	[no test files]
+?   	gomath/render	[no test files]
+?   	gomath/scene3d	[no test files]
+?   	gomath/sparse	[no test files]
+?   	gomath/subtitle	[no test files]
+?   	gomath/svg	[no test files]
+?   	gomath/table	[no test files]
+ok  	gomath	0.463s
+ok  	gomath/audio	(cached)
+# gomath/svg/_wave9 [gomath/svg/_wave9.test]
+svg/_wave9/gradient.go:26:18: undefined: element
+svg/_wave9/gradient.go:28:18: undefined: element
+svg/_wave9/gradient.go:127:10: undefined: document
+svg/_wave9/gradient.go:128:14: undefined: element
+svg/_wave9/gradient.go:129:9: undefined: clipCompiler
+svg/_wave9/instance.go:24:17: undefined: element
+svg/_wave9/instance.go:27:17: undefined: element
+svg/_wave9/instance.go:28:16: undefined: bboxScope
+svg/_wave9/instance.go:53:16: undefined: document
+svg/_wave9/text_gradient.go:19:12: undefined: element
+svg/_wave9/instance.go:53:16: too many errors
+# gomath/svg/_wave9_test [gomath/svg/_wave9.test]
+./tests/_cases/svg/_wave9/gradient_test.go:34:10: undefined: readInstances
+./tests/_cases/svg/_wave9/gradient_test.go:56:17: undefined: cssObject
+./tests/_cases/svg/_wave9/gradient_test.go:61:10: undefined: readInstances
+./tests/_cases/svg/_wave9/gradient_test.go:76:7: undefined: cssObject
+./tests/_cases/svg/_wave9/gradient_test.go:83:14: undefined: cssObject
+./tests/_cases/svg/_wave9/gradient_test.go:87:14: undefined: cssObject
+./tests/_cases/svg/_wave9/gradient_test.go:95:10: undefined: readInstances
+./tests/_cases/svg/_wave9/gradient_test.go:102:12: undefined: instanceShapes
+./tests/_cases/svg/_wave9/gradient_test.go:105:16: undefined: cssObject
+./tests/_cases/svg/_wave9/gradient_test.go:117:5: undefined: instanceShapes
+./tests/_cases/svg/_wave9/gradient_test.go:117:5: too many errors
+ok  	gomath/cmd/gomath	1.810s
+ok  	gomath/code	6.239s
+ok  	gomath/compat	(cached)
+ok  	gomath/examples/scenes	6.869s
+ok  	gomath/export	(cached)
+ok  	gomath/field	1.199s
+ok  	gomath/geom	(cached)
+ok  	gomath/graph	0.022s
+ok  	gomath/internal/grid	(cached)
+ok  	gomath/internal/h264	(cached)
+ok  	gomath/linalg	(cached)
+ok  	gomath/mathtex	6.316s
+ok  	gomath/matrix	0.011s
+ok  	gomath/network	0.206s
+ok  	gomath/number	0.989s
+ok  	gomath/path	2.625s
+ok  	gomath/rasterimage	0.494s
+ok  	gomath/render	5.333s
+ok  	gomath/scene3d	(cached)
+ok  	gomath/sparse	(cached)
+ok  	gomath/subtitle	(cached)
+ok  	gomath/svg	3.262s
+FAIL	gomath/svg/_wave9 [build failed]
+ok  	gomath/table	0.013s
+ok  	gomath/text	(cached)
+ok  	gomath/three	(cached)
+FAIL
+--- FAIL: TestCentralSuite (8.30s)
+    suite_test.go:29: exit status 1
+FAIL
+FAIL	gomath/tests	8.309s
+?   	gomath/tests/cmd/run	[no test files]
+ok  	gomath/tests/internal/harness	2.619s
+?   	gomath/text	[no test files]
+?   	gomath/three	[no test files]
+FAIL

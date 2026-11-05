@@ -1,0 +1,1264 @@
+{
+  "reference_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "source": "manim/mobject/graph.py",
+  "source_sha256": "0f22f4c0db17d60d5688f1768b165737fe7772359e8d0212f1416e090ea6fc70",
+  "manim_version": "0.20.1",
+  "numpy_version": "2.3.5",
+  "vertex_radius": 0.12,
+  "differences": [
+    "Go transactions reject unknown/duplicate endpoints atomically; source can partially apply or auto-create endpoints.",
+    "Go preserves edge-first root child ordering; Manim appends submobjects in method call order.",
+    "Go has no background updater or implicit mutation animation.",
+    "Go newly added directed links always have arrowheads."
+  ],
+  "cases": [
+    {
+      "kind": "Graph",
+      "steps": [
+        {
+          "operation": "initial",
+          "vertices": [
+            "a",
+            "b",
+            "c"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                0.0,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [
+              "a"
+            ],
+            "c": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ]
+          ]
+        },
+        {
+          "operation": "add_vertices",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                0.0,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [
+              "a"
+            ],
+            "c": [],
+            "d": [],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ]
+          ]
+        },
+        {
+          "operation": "add_edges",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                0.0,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "b",
+                "c"
+              ],
+              "start": [
+                1.9999999999999998,
+                0.11999999999999998,
+                0.0
+              ],
+              "end": [
+                2.0,
+                1.88,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "c",
+                "d"
+              ],
+              "start": [
+                1.88,
+                2.0,
+                0.0
+              ],
+              "end": [
+                -1.88,
+                2.0,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b",
+              "d"
+            ],
+            "b": [
+              "a",
+              "c"
+            ],
+            "c": [
+              "b",
+              "d"
+            ],
+            "d": [
+              "c",
+              "a"
+            ],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e",
+            "edge:b->c",
+            "edge:c->d",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ]
+        },
+        {
+          "operation": "remove_edges",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                0.0,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "b",
+                "c"
+              ],
+              "start": [
+                1.9999999999999998,
+                0.11999999999999998,
+                0.0
+              ],
+              "end": [
+                2.0,
+                1.88,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b",
+              "d"
+            ],
+            "b": [
+              "a",
+              "c"
+            ],
+            "c": [
+              "b"
+            ],
+            "d": [
+              "a"
+            ],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e",
+            "edge:b->c",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ]
+        },
+        {
+          "operation": "remove_vertices",
+          "vertices": [
+            "a",
+            "c",
+            "d"
+          ],
+          "edges": [
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "d"
+            ],
+            "c": [],
+            "d": [
+              "a"
+            ]
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:c",
+            "vertex:d",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "c",
+            "d"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "c",
+            "d"
+          ],
+          "edge_config_keys": [
+            [
+              "d",
+              "a"
+            ]
+          ]
+        }
+      ],
+      "removed_absent": true,
+      "notes": "Explicit Line buff=.12 matches bbox clipping for these horizontal/vertical center pairs."
+    },
+    {
+      "kind": "DiGraph",
+      "steps": [
+        {
+          "operation": "initial",
+          "vertices": [
+            "a",
+            "b",
+            "c"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                1.4695761589768255e-17,
+                0.0
+              ],
+              "has_tip": true
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [],
+            "c": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ]
+          ]
+        },
+        {
+          "operation": "add_vertices",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                1.4695761589768255e-17,
+                0.0
+              ],
+              "has_tip": true
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [],
+            "c": [],
+            "d": [],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ]
+          ]
+        },
+        {
+          "operation": "add_edges",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                1.4695761589768255e-17,
+                0.0
+              ],
+              "has_tip": true
+            },
+            {
+              "edge": [
+                "b",
+                "c"
+              ],
+              "start": [
+                1.9999999999999998,
+                0.11999999999999998,
+                0.0
+              ],
+              "end": [
+                2.0,
+                1.88,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "c",
+                "d"
+              ],
+              "start": [
+                1.88,
+                2.0,
+                0.0
+              ],
+              "end": [
+                -1.88,
+                2.0,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [
+              "c"
+            ],
+            "c": [
+              "d"
+            ],
+            "d": [
+              "a"
+            ],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e",
+            "edge:b->c",
+            "edge:c->d",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ]
+        },
+        {
+          "operation": "remove_edges",
+          "vertices": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edges": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "b": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ],
+            "e": [
+              0.0,
+              4.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "a",
+                "b"
+              ],
+              "start": [
+                -1.88,
+                0.0,
+                0.0
+              ],
+              "end": [
+                1.88,
+                1.4695761589768255e-17,
+                0.0
+              ],
+              "has_tip": true
+            },
+            {
+              "edge": [
+                "b",
+                "c"
+              ],
+              "start": [
+                1.9999999999999998,
+                0.11999999999999998,
+                0.0
+              ],
+              "end": [
+                2.0,
+                1.88,
+                0.0
+              ],
+              "has_tip": false
+            },
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [
+              "b"
+            ],
+            "b": [
+              "c"
+            ],
+            "c": [],
+            "d": [
+              "a"
+            ],
+            "e": []
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:b",
+            "vertex:c",
+            "edge:a->b",
+            "vertex:d",
+            "vertex:e",
+            "edge:b->c",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "edge_config_keys": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ],
+            [
+              "d",
+              "a"
+            ]
+          ]
+        },
+        {
+          "operation": "remove_vertices",
+          "vertices": [
+            "a",
+            "c",
+            "d"
+          ],
+          "edges": [
+            [
+              "d",
+              "a"
+            ]
+          ],
+          "positions": {
+            "a": [
+              -2.0,
+              0.0,
+              0.0
+            ],
+            "c": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "d": [
+              -2.0,
+              2.0,
+              0.0
+            ]
+          },
+          "endpoints": [
+            {
+              "edge": [
+                "d",
+                "a"
+              ],
+              "start": [
+                -1.9999999999999998,
+                1.88,
+                0.0
+              ],
+              "end": [
+                -2.0,
+                0.12000000000000013,
+                0.0
+              ],
+              "has_tip": false
+            }
+          ],
+          "neighbors": {
+            "a": [],
+            "c": [],
+            "d": [
+              "a"
+            ]
+          },
+          "root_identity_preserved": true,
+          "surviving_node_identity": true,
+          "surviving_edge_identity": true,
+          "root_children": [
+            "vertex:a",
+            "vertex:c",
+            "vertex:d",
+            "edge:d->a"
+          ],
+          "layout_keys": [
+            "a",
+            "c",
+            "d"
+          ],
+          "vertex_config_keys": [
+            "a",
+            "c",
+            "d"
+          ],
+          "edge_config_keys": [
+            [
+              "d",
+              "a"
+            ]
+          ]
+        }
+      ],
+      "removed_absent": true,
+      "notes": "Pinned generic DiGraph.add_edges creates Line instances without adding tips. Go deliberately keeps its original directed-arrow policy for newly added links."
+    }
+  ]
+}

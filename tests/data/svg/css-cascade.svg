@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="96" viewBox="0 0 128 96">
+  <style type="text/css"><![CDATA[
+    rect { fill: green }
+    .hot { fill: orange }
+    rect.hot { fill: red }
+    #source-order { fill: red }
+    #source-order { fill: blue }
+    #inline { fill: red }
+    .glyph-body { fill: inherit }
+    #mark { fill: white }
+    use.red { fill: red }
+    use.blue { fill: blue }
+    .wide { fill: none; stroke: blue; stroke-width: 4; stroke-linecap: square; stroke-linejoin: bevel }
+    .pair > .dot, .dots .dot { fill: cyan }
+  ]]></style>
+  <defs>
+    <g id="glyph" transform="translate(2,2)">
+      <rect class="glyph-body" width="16" height="12"/>
+      <rect id="mark" x="5" y="3" width="6" height="6"/>
+      <defs><rect class="hot" width="128" height="96"/></defs>
+    </g>
+    <symbol id="badge" viewBox="0 0 10 10">
+      <rect class="glyph-body" width="10" height="10"/>
+    </symbol>
+  </defs>
+  <rect x="4" y="4" width="16" height="12" fill="white"/>
+  <rect class="hot" x="28" y="4" width="16" height="12"/>
+  <rect id="source-order" x="52" y="4" width="16" height="12"/>
+  <rect id="inline" x="76" y="4" width="16" height="12" style="fill:white"/>
+  <g transform="translate(2,4)">
+    <use class="red" href="#glyph" x="4" y="24"/>
+    <use class="blue" xlink:href="#glyph" x="28" y="24"/>
+  </g>
+  <use class="red" href="#badge" x="60" y="24" width="32" height="16"/>
+  <path class="wide" d="M8 56L32 56L32 72"/>
+  <g class="pair"><circle class="dot" cx="56" cy="64" r="8"/></g>
+  <g class="dots"><g><circle class="dot" cx="84" cy="64" r="8"/></g></g>
+</svg>

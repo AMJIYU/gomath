@@ -1,0 +1,7 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadFLAC48kStereo/PCM16         	     794	   3260344 ns/op	 2879789 B/op	      19 allocs/op
+BenchmarkReadFLAC48kStereo/PCM24         	     980	   2582695 ns/op	 2887997 B/op	      19 allocs/op
+PASS

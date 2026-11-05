@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-04",
+  "cpu": "Apple M2",
+  "os": "darwin/arm64",
+  "macOS": "15.7.1",
+  "go": "go1.27.3",
+  "CGO_ENABLED": "0",
+  "tags": [
+    "noasm"
+  ],
+  "GOMAXPROCS": 1,
+  "samples_per_case": 5,
+  "benchtime": "300ms",
+  "package_parallelism": 1,
+  "frames_per_operation": 60,
+  "display_geometry": [
+    320,
+    180
+  ],
+  "coded_geometry": [
+    320,
+    192
+  ],
+  "QP": 24,
+  "GOP": 60,
+  "ModeSearch": false,
+  "InterResidual": true,
+  "benchmarked_radius": [
+    0,
+    1,
+    2
+  ],
+  "correctness_verified_radius": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "ffmpeg": "8.0.1",
+  "libavcodec": "62.11.100",
+  "timing_caveat": "Sequential samples on shared hardware; full search is deliberately more expensive."
+}

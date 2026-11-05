@@ -1,0 +1,153 @@
+{
+  "Date": "2026-11-04",
+  "Go": "go1.27.3",
+  "OSArch": "darwin/arm64",
+  "CPU": "Apple M2",
+  "CGO_ENABLED": "0",
+  "Tags": "noasm",
+  "GOMAXPROCS": 1,
+  "Command": "CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=audio -run='^$' -bench='^BenchmarkReadWAVMS$' -benchmem -benchtime=300ms -count=5 -p 1",
+  "Workload": "48000 Hz, 48000 fact frames; FFmpeg ADPCM encoder sine fixtures, mono/stereo, blockAlign256/1024; decode all capacity/padding, includes validation/allocation, excludes fixture I/O/encoding/setup/independent decoders",
+  "Cases": [
+    {
+      "Fixture": "ffmpeg_1ch_align256.wav",
+      "Samples": [
+        {
+          "ns/op": 353878,
+          "B/op": 385585,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 355224,
+          "B/op": 385577,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 363061,
+          "B/op": 385577,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 357422,
+          "B/op": 385577,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 359658,
+          "B/op": 385577,
+          "allocs/op": 20
+        }
+      ],
+      "MedianNS": 357422,
+      "MinNS": 353878,
+      "MaxNS": 363061,
+      "MedianBytes": 385577,
+      "MedianAllocs": 20
+    },
+    {
+      "Fixture": "ffmpeg_1ch_align1024.wav",
+      "Samples": [
+        {
+          "ns/op": 362857,
+          "B/op": 394538,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 360970,
+          "B/op": 394538,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 361108,
+          "B/op": 394538,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 355629,
+          "B/op": 394538,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 355544,
+          "B/op": 394538,
+          "allocs/op": 20
+        }
+      ],
+      "MedianNS": 360970,
+      "MinNS": 355544,
+      "MaxNS": 362857,
+      "MedianBytes": 394538,
+      "MedianAllocs": 20
+    },
+    {
+      "Fixture": "ffmpeg_2ch_align256.wav",
+      "Samples": [
+        {
+          "ns/op": 385224,
+          "B/op": 770622,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 383483,
+          "B/op": 770622,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 384412,
+          "B/op": 770622,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 385626,
+          "B/op": 770622,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 389497,
+          "B/op": 770622,
+          "allocs/op": 20
+        }
+      ],
+      "MedianNS": 385224,
+      "MinNS": 383483,
+      "MaxNS": 389497,
+      "MedianBytes": 770622,
+      "MedianAllocs": 20
+    },
+    {
+      "Fixture": "ffmpeg_2ch_align1024.wav",
+      "Samples": [
+        {
+          "ns/op": 388856,
+          "B/op": 779582,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 388332,
+          "B/op": 779582,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 388287,
+          "B/op": 779582,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 389327,
+          "B/op": 779582,
+          "allocs/op": 20
+        },
+        {
+          "ns/op": 387504,
+          "B/op": 779583,
+          "allocs/op": 20
+        }
+      ],
+      "MedianNS": 388332,
+      "MinNS": 387504,
+      "MaxNS": 389327,
+      "MedianBytes": 779582,
+      "MedianAllocs": 20
+    }
+  ]
+}

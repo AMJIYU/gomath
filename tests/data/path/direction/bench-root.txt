@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkObjectDirectionFamily/Nodes2_Curves16-8         	  510993	       637.2 ns/op	    1648 B/op	       3 allocs/op
+BenchmarkObjectDirectionFamily/Nodes2_Curves16-8         	  589206	       626.2 ns/op	    1648 B/op	       3 allocs/op
+BenchmarkObjectDirectionFamily/Nodes2_Curves16-8         	  589845	       629.0 ns/op	    1648 B/op	       3 allocs/op
+BenchmarkObjectDirectionFamily/Nodes65_Curves1024-8      	    8694	     41573 ns/op	  117360 B/op	     158 allocs/op
+BenchmarkObjectDirectionFamily/Nodes65_Curves1024-8      	    8862	     41223 ns/op	  117360 B/op	     158 allocs/op
+BenchmarkObjectDirectionFamily/Nodes65_Curves1024-8      	    8970	     42172 ns/op	  117360 B/op	     158 allocs/op
+BenchmarkObjectDirectionFamily/Nodes1025_Curves16384-8   	     511	    705257 ns/op	 1903711 B/op	    2109 allocs/op
+BenchmarkObjectDirectionFamily/Nodes1025_Curves16384-8   	     516	    699620 ns/op	 1903701 B/op	    2109 allocs/op
+BenchmarkObjectDirectionFamily/Nodes1025_Curves16384-8   	     519	    694568 ns/op	 1903704 B/op	    2109 allocs/op
+PASS
+ok  	gomath	3.262s

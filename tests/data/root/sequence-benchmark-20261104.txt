@@ -1,0 +1,26 @@
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkRelativeAnimationConstruction/explicit-copy-target         	   33879	     10625 ns/op	   35792 B/op	     162 allocs/op
+BenchmarkRelativeAnimationConstruction/explicit-copy-target         	   35683	     10200 ns/op	   35792 B/op	     162 allocs/op
+BenchmarkRelativeAnimationConstruction/explicit-copy-target         	   35528	     10256 ns/op	   35792 B/op	     162 allocs/op
+BenchmarkRelativeAnimationConstruction/explicit-copy-target         	   32968	     10333 ns/op	   35792 B/op	     162 allocs/op
+BenchmarkRelativeAnimationConstruction/explicit-copy-target         	   35454	     10224 ns/op	   35792 B/op	     162 allocs/op
+BenchmarkRelativeAnimationConstruction/deferred-shift               	14429604	        27.14 ns/op	      48 B/op	       1 allocs/op
+BenchmarkRelativeAnimationConstruction/deferred-shift               	13290548	        26.15 ns/op	      48 B/op	       1 allocs/op
+BenchmarkRelativeAnimationConstruction/deferred-shift               	12496040	        25.46 ns/op	      48 B/op	       1 allocs/op
+BenchmarkRelativeAnimationConstruction/deferred-shift               	14024175	        25.13 ns/op	      48 B/op	       1 allocs/op
+BenchmarkRelativeAnimationConstruction/deferred-shift               	14632881	        25.17 ns/op	      48 B/op	       1 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays                      	   31688	     11338 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays                      	   31750	     11402 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays                      	   31358	     11402 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays                      	   31471	     11410 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/explicit-plays                      	   31318	     11399 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession                          	   31507	     11418 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession                          	   31458	     11402 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession                          	   31458	     11636 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession                          	   31634	     11430 ns/op	   37968 B/op	     171 allocs/op
+BenchmarkSharedSequenceSampling/succession                          	   31539	     11441 ns/op	   37968 B/op	     171 allocs/op
+PASS
+ok  	gomath	7.188s

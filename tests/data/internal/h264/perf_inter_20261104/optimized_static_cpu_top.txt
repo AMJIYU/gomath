@@ -1,0 +1,55 @@
+File: optimized_static.test
+Type: cpu
+Time: 2026-11-04 11:47:49 CST
+Duration: 2.59s, Total samples = 2.06s (79.41%)
+Showing nodes accounting for 1.96s, 95.15% of 2.06s total
+Dropped 20 nodes (cum <= 0.01s)
+      flat  flat%   sum%        cum   cum%
+     0.31s 15.05% 15.05%      0.31s 15.05%  gomath/internal/h264.(*bits).uint
+     0.31s 15.05% 30.10%      0.59s 28.64%  gomath/internal/h264.makeInterMB
+     0.16s  7.77% 37.86%      0.58s 28.16%  gomath/internal/h264.cavlc
+     0.16s  7.77% 45.63%      0.25s 12.14%  gomath/internal/h264.fillPicture420
+     0.15s  7.28% 52.91%      0.26s 12.62%  gomath/internal/h264.quant4
+     0.14s  6.80% 59.71%      1.04s 50.49%  gomath/internal/h264.(*IntraEncoder).writeIntraMB
+     0.11s  5.34% 65.05%      0.11s  5.34%  gomath/internal/h264.inverse4
+     0.09s  4.37% 69.42%      0.09s  4.37%  gomath/internal/h264.scaleClass (inline)
+     0.08s  3.88% 73.30%      0.08s  3.88%  gomath/internal/h264.forward4
+     0.07s  3.40% 76.70%      0.07s  3.40%  image/color.RGBToYCbCr
+     0.06s  2.91% 79.61%      0.06s  2.91%  gomath/internal/h264.quantize (inline)
+     0.06s  2.91% 82.52%      0.34s 16.50%  gomath/internal/h264.writeLevel
+     0.05s  2.43% 84.95%      0.05s  2.43%  gomath/internal/h264.(*bits).bit (inline)
+     0.04s  1.94% 86.89%      0.04s  1.94%  gomath/internal/h264.writeBlock (inline)
+     0.03s  1.46% 88.35%      0.07s  3.40%  gomath/internal/h264.dequant4 (inline)
+     0.03s  1.46% 89.81%      0.20s  9.71%  gomath/internal/h264.encodeChroma
+     0.02s  0.97% 90.78%      0.02s  0.97%  gomath/internal/h264.macroblockSSE
+     0.02s  0.97% 91.75%      0.02s  0.97%  image.(*RGBA).SetRGBA
+     0.02s  0.97% 92.72%      0.02s  0.97%  runtime.(*timers).run
+     0.02s  0.97% 93.69%      0.02s  0.97%  runtime.memclrNoHeapPointers
+     0.01s  0.49% 94.17%      1.90s 92.23%  gomath/internal/h264.(*PredictiveEncoder).encodePResidual
+     0.01s  0.49% 94.66%      0.04s  1.94%  runtime.(*timers).check
+     0.01s  0.49% 95.15%      0.06s  2.91%  runtime.findRunnable
+         0     0% 95.15%      0.04s  1.94%  gomath/internal/h264.(*IntraEncoder).encodeIDR
+         0     0% 95.15%      1.94s 94.17%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0% 95.15%      1.90s 92.23%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0% 95.15%      0.08s  3.88%  gomath/internal/h264.(*bits).writeVLC (inline)
+         0     0% 95.15%      1.98s 96.12%  gomath/internal/h264.BenchmarkInterResidual.func1
+         0     0% 95.15%      0.04s  1.94%  gomath/internal/h264.interImage
+         0     0% 95.15%      0.04s  1.94%  gomath/internal/h264.intraImage
+         0     0% 95.15%      0.02s  0.97%  gomath/internal/h264.makePicture420
+         0     0% 95.15%      0.04s  1.94%  gomath/internal/h264.predictiveImage
+         0     0% 95.15%      0.02s  0.97%  image.NewRGBA
+         0     0% 95.15%      0.02s  0.97%  runtime.(*mheap).alloc.func1
+         0     0% 95.15%      0.02s  0.97%  runtime.(*mheap).allocSpan
+         0     0% 95.15%      0.07s  3.40%  runtime.gopreempt_m (inline)
+         0     0% 95.15%      0.07s  3.40%  runtime.goschedImpl
+         0     0% 95.15%      0.04s  1.94%  runtime.makeslice
+         0     0% 95.15%      0.04s  1.94%  runtime.mallocgc
+         0     0% 95.15%      0.03s  1.46%  runtime.mallocgcLarge
+         0     0% 95.15%      0.02s  0.97%  runtime.memclrNoHeapPointersChunked
+         0     0% 95.15%      0.07s  3.40%  runtime.morestack
+         0     0% 95.15%      0.07s  3.40%  runtime.newstack
+         0     0% 95.15%      0.07s  3.40%  runtime.schedule
+         0     0% 95.15%      0.02s  0.97%  runtime.systemstack
+         0     0% 95.15%      1.82s 88.35%  testing.(*B).launch
+         0     0% 95.15%      0.16s  7.77%  testing.(*B).run1.func1
+         0     0% 95.15%      1.98s 96.12%  testing.(*B).runN

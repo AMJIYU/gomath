@@ -1,0 +1,64 @@
+{
+  "generator": "tests/reference/svg_bbox_clips.py",
+  "generator_sha256": "820ef26cf1df6f164b76ba4be61d5d0072e6006d67222ade13b19c067395a7c5",
+  "versions": {
+    "Python": "3.11.5",
+    "Cairo": "1.18.4",
+    "CairoSVG": "2.7.1",
+    "Pillow": "11.2.1"
+  },
+  "cairosvg_actual_svg_probes": {
+    "affine": {
+      "mae": 0.04038492838541667,
+      "maximum": 1
+    },
+    "use": {
+      "error": "cairo returned CAIRO_STATUS_INVALID_MATRIX: b'invalid matrix (not invertible)'"
+    },
+    "nested": {
+      "mae": 13.523030598958332,
+      "maximum": 223
+    },
+    "gradient": {
+      "mae": 0.004069010416666666,
+      "maximum": 7
+    },
+    "bitmap-meet": {
+      "mae": 0.0020955403645833335,
+      "maximum": 1
+    },
+    "degenerate": {
+      "error": "cairo returned CAIRO_STATUS_INVALID_MATRIX: b'invalid matrix (not invertible)'"
+    }
+  },
+  "primary_spec": [
+    "https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes",
+    "https://www.w3.org/TR/SVG2/coords.html#ObjectBoundingBoxUnits"
+  ],
+  "oracle": "Directly authored Cairo geometry, affine matrices and explicit winding/parity clips, rendered at 1x/4x with premultiplied BOX resolve; no gomath output or production path code is read.",
+  "scope": "Local geometric bbox excluding stroke, clipPath/child transforms, rotation/shear/reflection/nonuniform, nested child bbox clips, use host/source clips, gradient, meet image viewport, inherited CSS rule and degenerate no-effect lines.",
+  "limitations": "CairoSVG 2.7.1 is not an evenodd clip oracle. Bitmap painted constant RGBA equivalent to authored immutable PNG, chosen clip strictly within meet plane to exclude unrelated filter-edge differences. Curve conversion and coverage use existing importer/renderer tolerances; no multi-shape union or container bbox claim.",
+  "files_sha256": {
+    "affine-cairo-ss1.png": "f86fa62aa61c495defa0defbd9b9690bd4313d1abef4cd600b559956d7082932",
+    "affine-cairo-ss4.png": "a98ae2966ec5c84c0b31732c47875d48727ef0b360fb97c36d2b45516715531e",
+    "affine.svg": "585225c53472ee7a7fc8a26c967ada65bc68ea498765fc0f4ff27ec1d4cd9fcc",
+    "bitmap-meet-cairo-ss1.png": "4c723e7d74aaf90fe91575bd255a74955f32700a776327ee97532d4131f7c12b",
+    "bitmap-meet-cairo-ss4.png": "78280a9f66c55c8fd14705ad3e896eb73cc772c38ca7f1cf18493da1b5f74507",
+    "bitmap-meet.svg": "ba09f4c2260f1bb47cfe18da3fcd39c725020c09dfd813292f5759da356ccde8",
+    "degenerate-cairo-ss1.png": "ec5ee0993491cc5c4e0a82fcf5642bab600b8df0fc9b73ab657323e48ec7c8d9",
+    "degenerate-cairo-ss4.png": "ec5ee0993491cc5c4e0a82fcf5642bab600b8df0fc9b73ab657323e48ec7c8d9",
+    "degenerate.svg": "9ecf5cfffbcb6e7ef54333cf85b3e921ff6c770b7d0d004427ecbd459a2119df",
+    "evenodd-cairo-ss1.png": "50130f7a928af8bc17d3855284a25a230fc89107d4aa579821bc5675586df45a",
+    "evenodd-cairo-ss4.png": "1d62bd8b066526805b9eddeacc0acaf9b4df1e8b0a87f43904619444f8fa9951",
+    "evenodd.svg": "6d769f6e5fd7f2433ef14e9a01a6b8b28476042ee88a8a420aa07ef983157f1c",
+    "gradient-cairo-ss1.png": "7dea02f6ae3fa495fb3680d3ebdc291e350c8dc24523a91d096368e450ea268e",
+    "gradient-cairo-ss4.png": "2b4ee5f022e7efd26db7f7d36aa7b18e0a827aba849ff0310285b2ad55cbc98d",
+    "gradient.svg": "1279e970bec7454301c3501f594c11b18b71e1e1b3aea85be4381e9f326c2876",
+    "nested-cairo-ss1.png": "479e9d5d727b8f684d779750c3110e03f0114f2c374ef14dbec5d069517478b4",
+    "nested-cairo-ss4.png": "f8eddb864acf16633d5864d3eb46b0f33d8fd4f5829ed59d5f9cfc77c9829a94",
+    "nested.svg": "eac3b171e529414e552706c62292b48c6c0f17ec1695f57144a1c187cd3ce6a7",
+    "use-cairo-ss1.png": "8b9a6a41149108ede8babb35b259481c9ec9e6bc05389bc8a7cbc2a52783f1f0",
+    "use-cairo-ss4.png": "f5253be88ef9da82344a7864e6a148b3c5a7992908c2478a634bc5bf71e82c13",
+    "use.svg": "bf4caadb52afdb0b83533f133120c5e06d1e1dfc58d75eb3b3592c4e83696f64"
+  }
+}

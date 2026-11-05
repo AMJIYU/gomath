@@ -1,0 +1,29 @@
+File: after.test
+Type: alloc_space
+Time: 2026-11-05 10:09:49 CST
+Showing nodes accounting for 183661.55kB, 98.65% of 186178.45kB total
+Dropped 203 nodes (cum <= 930.89kB)
+      flat  flat%   sum%        cum   cum%
+145555.16kB 78.18% 78.18% 145555.16kB 78.18%  image.NewRGBA
+20943.98kB 11.25% 89.43% 20943.98kB 11.25%  gomath/path.flatten
+ 4258.19kB  2.29% 91.72%  4258.19kB  2.29%  gomath/path.Path.Clone (inline)
+ 3885.19kB  2.09% 93.80%  3885.19kB  2.09%  image.NewAlpha
+    3744kB  2.01% 95.81%     3744kB  2.01%  golang.org/x/image/vector.(*Rasterizer).setUseFloatingPointMath
+ 2800.88kB  1.50% 97.32%  2800.88kB  1.50%  gomath/render.(*Rasterizer).clipBuffers
+  958.78kB  0.51% 97.83%   958.78kB  0.51%  gomath/render.(*Rasterizer).renderFrame.func2
+  738.84kB   0.4% 98.23%  1607.34kB  0.86%  gomath/render.(*Rasterizer).strokeStyledLine
+  517.95kB  0.28% 98.51% 21461.93kB 11.53%  gomath/path.Path.Flatten
+  231.50kB  0.12% 98.63%   958.73kB  0.51%  gomath/render.dashLines
+   21.30kB 0.011% 98.65% 31763.05kB 17.06%  gomath/render.(*Rasterizer).paint
+    4.57kB 0.0025% 98.65% 184058.64kB 98.86%  gomath/render.(*Rasterizer).renderFrame
+    1.09kB 0.00059% 98.65%  2089.77kB  1.12%  gomath/render.rasterPerfScene
+    0.12kB 6.7e-05% 98.65% 186161.70kB   100%  testing.(*B).runN
+         0     0% 98.65%     3744kB  2.01%  golang.org/x/image/vector.(*Rasterizer).Reset
+         0     0% 98.65%  2959.69kB  1.59%  gomath.(*Clip).Path (inline)
+         0     0% 98.65% 184058.64kB 98.86%  gomath/render.(*Rasterizer).Render
+         0     0% 98.65%  3404.69kB  1.83%  gomath/render.(*Rasterizer).paintBitmap
+         0     0% 98.65% 37523.62kB 20.15%  gomath/render.(*Rasterizer).paintClipped
+         0     0% 98.65%  1424.12kB  0.76%  gomath/render.(*Rasterizer).strokeDashPiece
+         0     0% 98.65% 186149.78kB   100%  gomath/render.BenchmarkRasterPerfMixed.func1
+         0     0% 98.65% 176962.66kB 95.05%  testing.(*B).launch
+         0     0% 98.65%  9196.41kB  4.94%  testing.(*B).run1.func1

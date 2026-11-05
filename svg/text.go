@@ -1,0 +1,603 @@
+package svg
+
+import (
+	"fmt"
+	"gomath"
+	"gomath/geom"
+	"gomath/path"
+	"gomath/text"
+	"math"
+	"strings"
+	"unicode"
+)
+
+// FontResolver supplies a parsed immutable font for an exact family/style.
+// Calls are cached per Read, never globally. A resolver must return an error
+// rather than substitute a missing family/style. It is responsible for its own
+// concurrency safety if shared between simultaneous Read calls.
+type FontResolver func(family string, style text.FontStyle) (*text.Font, error)
+
+const (
+	maxTextBytes    = 256 << 10
+	maxTextRunes    = 65536
+	maxTextGlyphs   = 32768
+	maxTextSegments = 1 << 20
+	maxTextDepth    = 32
+	maxTextFonts    = 32
+	maxTextLayouts  = 4096
+)
+
+func textElement(e *element) bool { return e.name.Local == "text" || e.name.Local == "tspan" }
+
+// This whitelist deliberately excludes scripts requiring shaping/bidi, marks,
+// variation selectors and joiners. Precomposed Latin/Greek/Cyrillic letters and
+// Common-script symbols/punctuation use the existing horizontal outline API.
+func supportedTextRune(r rune) bool {
+	if r == '\n' || r == '\r' || r == '\t' {
+		return true
+	}
+	return !unicode.IsControl(r) && !unicode.In(r, unicode.M, unicode.Cf, unicode.Zl, unicode.Zp) &&
+		unicode.In(r, unicode.Latin, unicode.Greek, unicode.Cyrillic, unicode.Common)
+}
+
+type textPosition struct {
+	x, y, dx, dy float64
+	mask         uint8
+}
+
+func parseTextPosition(attrs map[string]string) (textPosition, error) {
+	var p textPosition
+	for i, key := range []string{"x", "y", "dx", "dy"} {
+		if _, ok := attrs[key]; !ok {
+			continue
+		}
+		v, err := length(attrs, key, 0)
+		if err != nil {
+			return p, fmt.Errorf("SVG text %s requires one finite absolute length: %w", key, err)
+		}
+		p.mask |= 1 << i
+		switch i {
+		case 0:
+			p.x = v
+		case 1:
+			p.y = v
+		case 2:
+			p.dx = v
+		case 3:
+			p.dy = v
+		}
+	}
+	return p, nil
+}
+
+func (doc *document) prepareText() error {
+	var visit func(*element, int) error
+	visit = func(e *element, depth int) error {
+		if textElement(e) {
+			depth++
+			if depth > maxTextDepth {
+				return fmt.Errorf("SVG text nesting exceeds %d", maxTextDepth)
+			}
+			for key := range e.attrs {
+				switch key {
+				case "id", "class", "style", "xmlns", "xml:space", "x", "y", "dx", "dy":
+				case "transform":
+					if e.name.Local == "tspan" {
+						return fmt.Errorf("SVG tspan transform is not supported; transform the text or an ancestor group")
+					}
+				default:
+					if !cssProperty(key) {
+						return fmt.Errorf("unsupported SVG text attribute %q", key)
+					}
+				}
+			}
+			if _, err := parseTextPosition(e.attrs); err != nil {
+				return err
+			}
+			if _, _, err := parseStyle(initialSVGStyle(), e.attrs); err != nil {
+				return err
+			}
+			for _, item := range e.content {
+				for _, r := range item.value.String() {
+					if !supportedTextRune(r) {
+						return fmt.Errorf("SVG text %U requires unsupported shaping, bidi or character semantics", r)
+					}
+				}
+			}
+		}
+		for _, child := range e.children {
+			if textElement(e) && child.name.Local != "tspan" && child.name.Local != "title" && child.name.Local != "desc" && child.name.Local != "metadata" {
+				return fmt.Errorf("unsupported SVG text child <%s>", child.name.Local)
+			}
+			if child.name.Local == "tspan" && !textElement(e) {
+				return fmt.Errorf("SVG tspan requires a text/tspan parent")
+			}
+			if err := visit(child, depth); err != nil {
+				return err
+			}
+		}
+		return nil
+	}
+	return visit(doc.root, 0)
+}
+
+// Accept one exact family, optionally quoted; never implement font fallback
+// lists or silently map browser generic families to an unrelated embedded font.
+func parseFontFamily(value string) (string, error) {
+	value = trimCSS(value)
+	if len(value) >= 2 && (value[0] == '\'' || value[0] == '"') && value[len(value)-1] == value[0] {
+		value = value[1 : len(value)-1]
+	}
+	if value == "" || len(value) > 128 || strings.ContainsAny(value, "'\"\\,;(){}\r\n\t") || strings.TrimSpace(value) != value {
+		return "", fmt.Errorf("SVG font-family requires one unescaped exact name (at most 128 bytes)")
+	}
+	return value, nil
+}
+
+func parseTextStyle(base inheritedStyle, properties map[string]string) (inheritedStyle, error) {
+	if value, ok := properties["text-rendering"]; ok && !strings.EqualFold(value, "auto") && !strings.EqualFold(value, "geometricPrecision") {
+		return base, fmt.Errorf("unsupported SVG text-rendering %q; outlines are unhinted", value)
+	}
+	if value, ok := properties["font-family"]; ok {
+		family, err := parseFontFamily(value)
+		if err != nil {
+			return base, err
+		}
+		base.fontFamily = family
+	}
+	if _, ok := properties["font-size"]; ok {
+		size, err := length(properties, "font-size", 16)
+		if err != nil || size <= 0 || size > 1e6 {
+			return base, fmt.Errorf("SVG font-size requires a positive absolute length at most 1e6")
+		}
+		base.fontSize = size
+	}
+	if value, ok := properties["font-weight"]; ok {
+		switch strings.ToLower(value) {
+		case "normal", "400":
+			base.fontBold = false
+		case "bold", "700":
+			base.fontBold = true
+		default:
+			return base, fmt.Errorf("unsupported SVG font-weight %q", value)
+		}
+	}
+	if value, ok := properties["font-style"]; ok {
+		switch strings.ToLower(value) {
+		case "normal":
+			base.fontItalic = false
+		case "italic":
+			base.fontItalic = true
+		default:
+			return base, fmt.Errorf("unsupported SVG font-style %q", value)
+		}
+	}
+	if value, ok := properties["text-anchor"]; ok {
+		switch strings.ToLower(value) {
+		case "start", "middle", "end":
+			base.textAnchor = strings.ToLower(value)
+		default:
+			return base, fmt.Errorf("unsupported SVG text-anchor %q", value)
+		}
+	}
+	if value, ok := properties["xml:space"]; ok {
+		switch value {
+		case "default":
+			base.preserveSpace = false
+		case "preserve":
+			base.preserveSpace = true
+		default:
+			return base, fmt.Errorf("unsupported SVG xml:space %q", value)
+		}
+	}
+	return base, nil
+}
+
+type textFontKey struct {
+	family string
+	style  text.FontStyle
+}
+type textBudget struct {
+	characters, glyphs, segments int
+	layouts                      int
+	fonts                        map[textFontKey]*text.Font
+}
+
+func (s *expansion) textFont(style inheritedStyle) (*text.Font, error) {
+	key := textFontKey{family: style.fontFamily}
+	if style.fontBold {
+		key.style = text.Bold
+	}
+	if style.fontItalic {
+		key.style += text.Italic
+	}
+	if f := s.text.fonts[key]; f != nil {
+		return f, nil
+	}
+	if len(s.text.fonts) >= maxTextFonts {
+		return nil, fmt.Errorf("SVG text font budget exceeds %d family/style pairs", maxTextFonts)
+	}
+	var f *text.Font
+	var err error
+	if s.fontResolver != nil {
+		f, err = s.fontResolver(key.family, key.style)
+	} else if strings.EqualFold(key.family, "Go") {
+		f, err = text.DefaultFontForStyle(key.style)
+	} else {
+		err = fmt.Errorf("unsupported SVG font-family %q; supply Options.FontResolver", key.family)
+	}
+	if err != nil {
+		return nil, fmt.Errorf("SVG text font %q style %d: %w", key.family, key.style, err)
+	}
+	if err := f.Validate(); err != nil {
+		return nil, fmt.Errorf("SVG text font resolver: %w", err)
+	}
+	if s.text.fonts == nil {
+		s.text.fonts = make(map[textFontKey]*text.Font)
+	}
+	s.text.fonts[key] = f
+	return f, nil
+}
+
+type textNode struct {
+	ctx      expansionContext
+	parent   *textNode
+	position textPosition
+	used     bool
+}
+type textCharacter struct {
+	r     rune
+	node  *textNode
+	owner *gomath.Object
+}
+type placedTextGlyph struct {
+	p         path.Path
+	character textCharacter
+}
+
+func (s *expansion) outlineText(value string, font *text.Font, size float64) (*gomath.Object, text.Metrics, error) {
+	s.text.layouts++
+	if s.text.layouts > maxTextLayouts {
+		return nil, text.Metrics{}, fmt.Errorf("SVG text layout work budget exceeds %d calls", maxTextLayouts)
+	}
+	return text.Layout(value, font, text.Options{Size: size, LineHeight: 1, Color: gomath.Black})
+}
+
+// Scalar relative positioning interrupts a run, but it must not discard the
+// boundary kern. Use the same real outline API for pair and single advances;
+// no parallel font parser or font-table approximation lives in the importer.
+func (s *expansion) textBoundaryKern(a, b rune, font *text.Font, size float64) (float64, error) {
+	_, pair, err := s.outlineText(string([]rune{a, b}), font, size)
+	if err != nil {
+		return 0, err
+	}
+	_, first, err := s.outlineText(string(a), font, size)
+	if err != nil {
+		return 0, err
+	}
+	_, second, err := s.outlineText(string(b), font, size)
+	if err != nil {
+		return 0, err
+	}
+	return pair.Width - first.Width - second.Width, nil
+}
+
+func (s *expansion) textCount(n int) error {
+	s.count += n
+	if s.count > maxSVGElements {
+		return fmt.Errorf("SVG expanded element count exceeds %d (including text groups/glyphs)", maxSVGElements)
+	}
+	return nil
+}
+
+func (s *expansion) textInstance(e *element, ctx expansionContext, depth int) (*gomath.Object, error) {
+	ctx.inText = true
+	root := gomath.Group()
+	var raw []textCharacter
+	var finishClips []func() error
+	var collect func(*element, expansionContext, *textNode, *gomath.Object, int, bool) error
+	collect = func(e *element, ctx expansionContext, parent *textNode, owner *gomath.Object, depth int, hidden bool) error {
+		if depth > maxSVGDepth {
+			return fmt.Errorf("SVG expanded depth exceeds %d", maxSVGDepth)
+		}
+		position, err := parseTextPosition(e.attrs)
+		if err != nil {
+			return err
+		}
+		node := &textNode{ctx: ctx, parent: parent, position: position}
+		hidden = hidden || ctx.style.displayNone
+		for _, item := range e.content {
+			if child := item.child; child != nil {
+				if definitionOnly(child) {
+					continue
+				}
+				if child.name.Space != "" && child.name.Space != svgNamespace {
+					return fmt.Errorf("unsupported SVG text child namespace %q", child.name.Space)
+				}
+				if err := s.textCount(1); err != nil {
+					return err
+				}
+				childCtx := ctx
+				childCtx.cssChain = append(childCtx.cssChain, child)
+				attrs, err := s.document.css.attributes(child, childCtx.cssChain)
+				if err != nil {
+					return err
+				}
+				style, opacity, err := parseStyle(ctx.style, attrs)
+				if err != nil {
+					return err
+				}
+				childCtx.style = style
+				if hidden || style.displayNone {
+					childCtx.bboxes = nil
+				}
+				group := gomath.Group().SetOpacity(opacity)
+				group.Name = child.attrs["id"]
+				if style.clipPath != "" && bboxClip(s.document.ids[style.clipPath]) {
+					var box *geom.Bounds
+					childCtx, box, err = childCtx.bboxTarget(s)
+					if err != nil {
+						return err
+					}
+					index := len(owner.Children)
+					owner.Children = append(owner.Children, group)
+					// Layout and chunk anchoring must finish before measuring a span.
+					finishClips = append(finishClips, func() error {
+						clipped, err := s.applyClip(group, style.clipPath, childCtx.matrix, childCtx.shadowRoots, box)
+						if err == nil {
+							owner.Children[index] = clipped
+						}
+						return err
+					})
+				} else {
+					clipped, err := s.applyClip(group, style.clipPath, childCtx.matrix, childCtx.shadowRoots, nil)
+					if err != nil {
+						return err
+					}
+					owner.Children = append(owner.Children, clipped)
+				}
+				if err := collect(child, childCtx, node, group, depth+1, hidden); err != nil {
+					return err
+				}
+				continue
+			}
+			if hidden || item.value.Len() == 0 {
+				continue
+			}
+			if err := s.textCount(1); err != nil {
+				return err
+			}
+			// Segment containers retain mixed-content draw order even when a
+			// single kerned font run crosses span/style boundaries.
+			segment := gomath.Group()
+			owner.Children = append(owner.Children, segment)
+			for _, r := range item.value.String() {
+				s.text.characters++
+				if s.text.characters > maxTextRunes {
+					return fmt.Errorf("SVG expanded text rune budget exceeds %d", maxTextRunes)
+				}
+				raw = append(raw, textCharacter{r, node, segment})
+			}
+		}
+		return nil
+	}
+	if err := collect(e, ctx, nil, root, depth, false); err != nil {
+		return nil, err
+	}
+	chars := raw[:0]
+	for _, c := range raw {
+		preserve := c.node.ctx.style.preserveSpace
+		if !preserve && (c.r == '\n' || c.r == '\r') {
+			continue
+		}
+		if c.r == '\n' || c.r == '\r' || c.r == '\t' {
+			c.r = ' '
+		}
+		if c.r == ' ' && !preserve && (len(chars) == 0 || chars[len(chars)-1].r == ' ') {
+			continue
+		}
+		chars = append(chars, c)
+	}
+	for len(chars) > 0 && chars[len(chars)-1].r == ' ' && !chars[len(chars)-1].node.ctx.style.preserveSpace {
+		chars = chars[:len(chars)-1]
+	}
+	paint, err := s.textGradientTarget(chars, ctx)
+	if err != nil {
+		return nil, err
+	}
+	if err := s.layoutText(chars); err != nil {
+		return nil, err
+	}
+	if err := paint.finish(); err != nil {
+		return nil, err
+	}
+	for _, finish := range finishClips {
+		if err := finish(); err != nil {
+			return nil, err
+		}
+	}
+	return root, nil
+}
+
+func firstTextPosition(node *textNode) textPosition {
+	var result textPosition
+	for n := node; n != nil; n = n.parent {
+		if n.used {
+			continue
+		}
+		p := n.position
+		if p.mask&1 != 0 && result.mask&1 == 0 {
+			result.x = p.x
+		}
+		if p.mask&2 != 0 && result.mask&2 == 0 {
+			result.y = p.y
+		}
+		if p.mask&4 != 0 && result.mask&4 == 0 {
+			result.dx = p.dx
+		}
+		if p.mask&8 != 0 && result.mask&8 == 0 {
+			result.dy = p.dy
+		}
+		result.mask |= p.mask
+		n.used = true
+	}
+	return result
+}
+
+func (s *expansion) layoutText(chars []textCharacter) error {
+	var (
+		x, y, startX float64
+		left, right  = math.Inf(1), math.Inf(-1)
+		anchor       string
+		chunk        []placedTextGlyph
+		cells        []placedTextGlyph
+		run          []textCharacter
+		font         *text.Font
+		size         float64
+		previous     rune
+		hasPrevious  bool
+	)
+	flush := func() error {
+		if len(run) == 0 {
+			return nil
+		}
+		var value strings.Builder
+		for _, c := range run {
+			value.WriteRune(c.r)
+		}
+		object, metrics, err := s.outlineText(value.String(), font, size)
+		if err != nil {
+			return fmt.Errorf("SVG text outlines: %w", err)
+		}
+		s.text.glyphs += len(object.Children)
+		if s.text.glyphs > maxTextGlyphs {
+			return fmt.Errorf("SVG text glyph budget exceeds %d", maxTextGlyphs)
+		}
+		if err := s.textCount(len(object.Children)); err != nil {
+			return err
+		}
+		runCells, err := s.bboxTextCells(run, font, size, x, y)
+		if err != nil {
+			return fmt.Errorf("SVG bbox text cells: %w", err)
+		}
+		cells = append(cells, runCells...)
+		index := 0
+		for _, glyph := range object.Children {
+			for index < len(run) && string(run[index].r) != glyph.Name {
+				index++ // whitespace and other glyphs with no outline
+			}
+			if index == len(run) {
+				return fmt.Errorf("SVG text outline/character association failed")
+			}
+			for _, contour := range glyph.Path.Contours {
+				s.text.segments += 1 + len(contour.Curves)
+			}
+			if s.text.segments > maxTextSegments {
+				return fmt.Errorf("SVG text outline segment budget exceeds %d", maxTextSegments)
+			}
+			p := glyph.Path.Transform(geom.Translation(geom.V(x, y)).Mul(geom.Scaling(1, -1, 1)))
+			chunk = append(chunk, placedTextGlyph{p, run[index]})
+			index++
+		}
+		left = math.Min(left, x)
+		right = math.Max(right, x+metrics.Width)
+		x += metrics.Width
+		if !valid(x) || !valid(y) {
+			return fmt.Errorf("SVG text cursor exceeds finite coordinate range")
+		}
+		run = run[:0]
+		return nil
+	}
+	finish := func() error {
+		shift := 0.0
+		if left <= right {
+			switch anchor {
+			case "start":
+				shift = startX - left
+			case "middle":
+				shift = startX - (left/2 + right/2)
+			case "end":
+				shift = startX - right
+			}
+		}
+		if !valid(shift) {
+			return fmt.Errorf("SVG text anchor exceeds finite coordinate range")
+		}
+		for _, glyph := range chunk {
+			c := glyph.character
+			object, err := s.styledShape(glyph.p.Transform(geom.Translation(geom.V(shift, 0))), c.node.ctx)
+			if err != nil {
+				return fmt.Errorf("SVG text glyph %U: %w", c.r, err)
+			}
+			object.Name = string(c.r)
+			if c.node.ctx.style.visibilityHidden {
+				object.SetOpacity(0)
+			}
+			c.owner.Children = append(c.owner.Children, object)
+		}
+		for _, cell := range cells {
+			if err := s.collectBBox(cell.p.Transform(geom.Translation(geom.V(shift, 0))), cell.character.node.ctx); err != nil {
+				return err
+			}
+		}
+		cells = cells[:0]
+		chunk = chunk[:0]
+		left, right = math.Inf(1), math.Inf(-1)
+		return nil
+	}
+	for _, c := range chars {
+		position := firstTextPosition(c.node)
+		if position.mask != 0 {
+			if err := flush(); err != nil {
+				return err
+			}
+			if position.mask&3 != 0 {
+				if err := finish(); err != nil {
+					return err
+				}
+				anchor = ""
+				hasPrevious = false
+			}
+			if position.mask&1 != 0 {
+				x = position.x
+			}
+			if position.mask&2 != 0 {
+				y = position.y
+			}
+			x += position.dx
+			y += position.dy
+			if !valid(x) || !valid(y) {
+				return fmt.Errorf("SVG text position exceeds finite coordinate range")
+			}
+		}
+		if anchor == "" {
+			anchor, startX = c.node.ctx.style.textAnchor, x
+		}
+		f, err := s.textFont(c.node.ctx.style)
+		if err != nil {
+			return err
+		}
+		if position.mask != 0 && position.mask&3 == 0 && hasPrevious && f == font && size == c.node.ctx.style.fontSize {
+			kern, err := s.textBoundaryKern(previous, c.r, font, size)
+			if err != nil {
+				return fmt.Errorf("SVG text boundary kerning: %w", err)
+			}
+			x += kern
+			if !valid(x) {
+				return fmt.Errorf("SVG text kerned position exceeds finite coordinate range")
+			}
+		}
+		if f != font || size != c.node.ctx.style.fontSize {
+			if err := flush(); err != nil {
+				return err
+			}
+			font, size = f, c.node.ctx.style.fontSize
+		}
+		run = append(run, c)
+		previous, hasPrevious = c.r, true
+	}
+	if err := flush(); err != nil {
+		return err
+	}
+	return finish()
+}

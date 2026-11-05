@@ -1,0 +1,501 @@
+package gomath
+
+import (
+	"fmt"
+	"gomath/geom"
+	"gomath/path"
+)
+
+// Animation describes a single target's change. Combine changes by modifying a
+// copy and using Transform; overlapping writes to an object are rejected.
+type Animation struct {
+	object, target *Object
+	mode           uint8
+	rate           RateFunc
+	start, end     float64
+	rotation       *rotationTrack
+	route          *Object
+	pathTolerance  float64
+	group          *animationGroup
+	duration       float64
+	hasDuration    bool
+	pose           *poseTrack
+	pointColor     *Color
+	relative       *relativeMotion
+	transformPath  *transformPathOptions
+	fit            *FadeTransformOptions
+	matching       *matchingKeys
+}
+
+const (
+	morph uint8 = iota
+	fadeIn
+	fadeOut
+	create
+	replacement
+	pathMove
+	growing
+	wiggleObject
+	waving
+	passingFlash
+	uncreate
+	copyMorph
+	crossFadeIn
+	crossFadeOut
+)
+
+func Transform(object, target *Object) Animation {
+	return Animation{object: object, target: target, rate: Smooth, end: 1}
+}
+
+// ReplacementTransform morphs the source during the segment, then installs the
+// actual target object in the source's tree position at the segment endpoint.
+// The target must not already belong to the scene.
+func ReplacementTransform(object, target *Object) Animation {
+	a := Transform(object, target)
+	a.mode = replacement
+	return a
+}
+
+// TransformFromCopy preserves source and introduces/animates the actual target.
+// Its reversed interpolation clock matches Manim TransformFromCopy, including
+// nonsymmetric custom rates. Source geometry is captured when the step begins.
+func TransformFromCopy(source, target *Object) Animation {
+	return Animation{object: target, target: source, mode: copyMorph, rate: Smooth, end: 1}
+}
+func Shift(object *Object, delta geom.Vec3) Animation {
+	return Animation{object: object, rate: Smooth, end: 1, relative: &relativeMotion{kind: relativeShift, vector: delta}}
+}
+func MoveTo(object *Object, point geom.Vec3) Animation {
+	return Animation{object: object, rate: Smooth, end: 1, relative: &relativeMotion{kind: relativeMoveTo, vector: point}}
+}
+
+// Rotate interpolates a rotation matrix, preserving circular motion rather than
+// morphing the endpoints. A full turn therefore remains visible.
+func Rotate(object *Object, angle float64) Animation {
+	return Animation{object: object, rate: Smooth, end: 1, relative: &relativeMotion{kind: relativeRotate, scalar: angle}}
+}
+func Scale(object *Object, factor float64) Animation {
+	return Animation{object: object, rate: Smooth, end: 1, relative: &relativeMotion{kind: relativeScale, scalar: factor}}
+}
+
+// Relative operations capture their numeric arguments immediately and read the
+// object when Play begins the operation. Succession begins each child after the
+// preceding child's cleanup, so repeated operations compose on the new state.
+type relativeMotion struct {
+	kind   uint8
+	vector geom.Vec3
+	scalar float64
+}
+
+const (
+	relativeShift uint8 = iota
+	relativeMoveTo
+	relativeScale
+	relativeRotate
+)
+
+func FadeIn(object *Object) Animation {
+	return Animation{object: object, mode: fadeIn, rate: Smooth, end: 1}
+}
+func FadeOut(object *Object) Animation {
+	return Animation{object: object, mode: fadeOut, rate: Smooth, end: 1}
+}
+func Create(object *Object) Animation {
+	return Animation{object: object, mode: create, rate: Linear, end: 1}
+}
+func Write(object *Object) Animation                 { return Create(object) }
+func (a Animation) WithRate(rate RateFunc) Animation { a.rate = rate; return a }
+
+// WithWindow places the animation within a normalized interval of Play.
+func (a Animation) WithWindow(start, end float64) Animation { a.start, a.end = start, end; return a }
+func LaggedStart(lag float64, animations ...Animation) []Animation {
+	out := append([]Animation(nil), animations...)
+	span := 1 + lag*float64(max(0, len(out)-1))
+	for i := range out {
+		out[i] = out[i].WithWindow(float64(i)*lag/span, (float64(i)*lag+1)/span)
+	}
+	return out
+}
+
+type rotationTrack struct {
+	angle  float64
+	center geom.Vec3
+}
+type track struct {
+	id          uint64
+	from, to    *Object
+	rate        RateFunc
+	start, end  float64
+	rotation    *rotationTrack
+	motion      *path.ArcLength
+	pose        *poseTrack
+	arcPath     *transformArcTrack
+	hasGradient bool
+	matching    bool
+}
+
+func prepare(a Animation) (track, error) {
+	arcPath, err := prepareTransformArc(a)
+	if err != nil {
+		return track{}, err
+	}
+	if a.object == nil {
+		return track{}, fmt.Errorf("animation has nil object")
+	}
+	if !finite(a.start) || !finite(a.end) || a.start < 0 || a.end > 1 || a.start >= a.end {
+		return track{}, fmt.Errorf("invalid animation window [%g,%g]", a.start, a.end)
+	}
+	if arcPath != nil && a.target != nil && a.matching == nil {
+		if err := validateTransformArcInputs(a.object, a.target); err != nil {
+			return track{}, err
+		}
+	}
+	var f, t *Object
+	if a.matching != nil {
+		f, t, err = prepareMatching(a)
+		if err != nil {
+			return track{}, err
+		}
+	} else {
+		f = a.object.snapshot()
+		t = f.snapshot()
+	}
+	pose, err := preparePose(a, f, t)
+	if err != nil {
+		return track{}, err
+	}
+	switch a.mode {
+	case crossFadeIn:
+		if err := fitGhost(f, a.target, a.fit); err != nil {
+			return track{}, err
+		}
+		f.Style.Opacity = 0
+	case crossFadeOut:
+		if err := fitGhost(t, a.target, a.fit); err != nil {
+			return track{}, err
+		}
+		t.Style.Opacity = 0
+	case copyMorph:
+		if a.target == nil {
+			return track{}, fmt.Errorf("TransformFromCopy has nil source")
+		}
+		if err := validateBitmapMorph(f, a.target); err != nil {
+			return track{}, err
+		}
+		// Retain the destination IDs while placing its starting geometry over
+		// the source. Source/target snapshots never share mutable child paths.
+		source := a.target.snapshot()
+		if err := alignTree(f, source); err != nil {
+			return track{}, err
+		}
+		interpolateTree(f, f, source, 1)
+	case morph, replacement:
+		if a.matching != nil {
+			// The private keyed bucket trees are already captured above.
+		} else if a.relative != nil {
+			r := a.relative
+			if !r.vector.Finite() || !finite(r.scalar) {
+				return track{}, fmt.Errorf("relative animation arguments must be finite")
+			}
+			switch r.kind {
+			case relativeShift:
+				t.Shift(r.vector)
+			case relativeMoveTo:
+				t.MoveTo(r.vector)
+			case relativeScale:
+				t.Scale(r.scalar)
+			case relativeRotate:
+				a.rotation = &rotationTrack{angle: r.scalar, center: f.Center()}
+				t.Rotate(r.scalar)
+			}
+		} else if a.target == nil {
+			return track{}, fmt.Errorf("Transform has nil target")
+		} else if err := validateBitmapMorph(f, a.target); err != nil {
+			return track{}, err
+		} else {
+			t = a.target.snapshot()
+		}
+	case fadeIn:
+		f.Style.Opacity = 0
+	case fadeOut:
+		t.Style.Opacity = 0
+	case create, uncreate:
+		hasBitmap := false
+		f.Walk(func(o *Object) { hasBitmap = hasBitmap || o.Bitmap != nil })
+		if hasBitmap {
+			return track{}, fmt.Errorf("Create/Write require vector paths; use FadeIn for images")
+		}
+		if a.mode == create {
+			f.Walk(func(o *Object) { o.Style.Reveal = 0 })
+		} else {
+			t.Walk(func(o *Object) { o.Style.Reveal = 0 })
+		}
+	case pathMove:
+		if a.route == nil || a.route.Bitmap != nil || len(a.route.Children) != 0 {
+			return track{}, fmt.Errorf("MoveAlongPath requires one vector path without children")
+		}
+		if err := a.route.Validate(); err != nil {
+			return track{}, err
+		}
+	}
+	var motion *path.ArcLength
+	if a.mode == pathMove {
+		var err error
+		motion, err = a.route.Path.Measure(a.pathTolerance)
+		if err != nil {
+			return track{}, err
+		}
+		if _, err = motion.AtFraction(0); err != nil {
+			return track{}, err
+		}
+	}
+	if arcPath != nil {
+		if err := validateTransformArcInputs(f, t); err != nil {
+			return track{}, err
+		}
+	}
+	if err := alignTree(f, t); err != nil {
+		return track{}, err
+	}
+	if a.rotation == nil && arcPath == nil {
+		if err := validateGradientFrames(f, t); err != nil {
+			return track{}, err
+		}
+	}
+	if arcPath != nil {
+		if err := validateTransformArcPaint(f, t, arcPath); err != nil {
+			return track{}, err
+		}
+	}
+	rate := a.rate
+	if rate == nil {
+		rate = Linear
+	}
+	hasGradient := false
+	f.Walk(func(o *Object) { hasGradient = hasGradient || o.Style.FillGradient != nil })
+	return track{id: a.object.ID, from: f, to: t, rate: rate, start: a.start, end: a.end, rotation: a.rotation, motion: motion, pose: pose, hasGradient: hasGradient, arcPath: arcPath, matching: a.matching != nil}, nil
+}
+
+func validateBitmapMorph(a, b *Object) error {
+	if a.Style.FillRule != b.Style.FillRule {
+		return fmt.Errorf("Transform requires matching object fill rules; use FadeTransform for independent layers")
+	}
+	if (a.Clip == nil) != (b.Clip == nil) {
+		return fmt.Errorf("Transform requires matching clip presence; use FadeTransform for independently clipped layers")
+	}
+	if a.Bitmap != b.Bitmap {
+		return fmt.Errorf("Transform requires matching bitmap assets; use separate FadeOut/FadeIn for different images or image/vector conversion")
+	}
+	for i := 0; i < min(len(a.Children), len(b.Children)); i++ {
+		if err := validateBitmapMorph(a.Children[i], b.Children[i]); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+func alignTree(a, b *Object) error {
+	if a.Style.FillRule != b.Style.FillRule {
+		return fmt.Errorf("Transform requires matching object fill rules; use FadeTransform for independent layers")
+	}
+	if err := gradientPaintCompatible(a.Style.FillGradient, b.Style.FillGradient); err != nil {
+		return err
+	}
+	a.Path, b.Path = path.Align(a.Path, b.Path)
+	if err := alignClip(a, b); err != nil {
+		return err
+	}
+	n := max(len(a.Children), len(b.Children))
+	for len(a.Children) < n {
+		q := b.Children[len(a.Children)].Copy()
+		q.Walk(func(c *Object) {
+			if c.Bitmap == nil {
+				c.Path = path.Path{}
+			}
+			c.Style.Opacity = 0
+		})
+		a.Children = append(a.Children, q)
+	}
+	for len(b.Children) < n {
+		q := a.Children[len(b.Children)].snapshot()
+		q.Walk(func(c *Object) {
+			if c.Bitmap == nil {
+				c.Path = path.Path{}
+			}
+			c.Style.Opacity = 0
+		})
+		b.Children = append(b.Children, q)
+	}
+	for i := range n {
+		if err := alignTree(a.Children[i], b.Children[i]); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+func interpolateTree(dst, a, b *Object, t float64) {
+	dst.Bitmap = a.Bitmap
+	dst.Clip = interpolateClip(a.Clip, b.Clip, t)
+	dst.Scalar = a.Scalar*(1-t) + b.Scalar*t
+	interpolatePrivatePath(&dst.Path, a.Path, b.Path, t)
+	dst.Style = a.Style.lerp(b.Style, t)
+	dst.ZIndex = a.ZIndex
+	if t >= 1 {
+		dst.ZIndex = b.ZIndex
+		for i := range dst.Path.Contours {
+			dst.Path.Contours[i].Closed = b.Path.Contours[i].Closed
+		}
+	} else if t <= 0 {
+		for i := range dst.Path.Contours {
+			dst.Path.Contours[i].Closed = a.Path.Contours[i].Closed
+		}
+	}
+	if len(dst.Children) != len(a.Children) {
+		children := make([]*Object, len(a.Children))
+		copy(children, dst.Children)
+		dst.Children = children
+	}
+	for i := range a.Children {
+		if dst.Children[i] == nil {
+			dst.Children[i] = a.Children[i].snapshot()
+		}
+		interpolateTree(dst.Children[i], a.Children[i], b.Children[i], t)
+	}
+}
+
+// dst belongs to the private sampled/staged tree, so its buffers can be reused
+// without aliasing any immutable track or another frame. Geometry is aligned by
+// prepare. Reading each source contour/curve by value also supports dst == a,
+// as used while preparing TransformFromCopy's independent starting snapshot.
+func interpolatePrivatePath(dst *path.Path, a, b path.Path, t float64) {
+	if len(dst.Contours) != len(a.Contours) {
+		dst.Contours = make([]path.Contour, len(a.Contours))
+	}
+	for i := range a.Contours {
+		from, to := a.Contours[i], b.Contours[i]
+		c := &dst.Contours[i]
+		if len(c.Curves) != len(from.Curves) {
+			c.Curves = make([]path.Cubic, len(from.Curves))
+		}
+		c.Start = from.Start.Lerp(to.Start, t)
+		c.Closed = from.Closed && to.Closed
+		for j := range from.Curves {
+			c.Curves[j] = from.Curves[j].Lerp(to.Curves[j], t)
+		}
+	}
+}
+func (t track) apply(dst *Object, alpha float64) (err error) {
+	if dst == nil {
+		return fmt.Errorf("animation target %d missing", t.id)
+	}
+	defer func() {
+		if err == nil && t.hasGradient {
+			dst.Walk(func(o *Object) {
+				if err == nil && o.Style.FillGradient != nil {
+					err = o.Style.FillGradient.Validate()
+					if err == nil {
+						err = o.validateGradientGeometry()
+					}
+				}
+			})
+		}
+	}()
+	a := clamp((alpha - t.start) / (t.end - t.start))
+	a = t.rate(a)
+	if !finite(a) {
+		return fmt.Errorf("rate function returned a non-finite value")
+	}
+	if t.matching && (a < 0 || a > 1) {
+		return fmt.Errorf("matching fade animations require progress in [0,1]")
+	}
+	if t.matching {
+		// Private bucket parents have different identities/topology from the
+		// authored direct children. Seed that topology before interpolation;
+		// reusing direct children by index would duplicate original IDs.
+		dst.Children = nil
+		assignTree(dst, t.from)
+	}
+	if t.hasGradient && t.arcPath == nil && (a < 0 || a > 1) {
+		return fmt.Errorf("gradient animations require rate output in [0,1]; extrapolation is unsupported")
+	}
+	if t.pose != nil {
+		state := t.from.snapshot()
+		if t.pose.kind == growing {
+			interpolateTree(state, t.from, t.to, a)
+		}
+		if err := t.pose.apply(state, a); err != nil {
+			return err
+		}
+		assignTree(dst, state)
+		return nil
+	}
+	if t.motion != nil {
+		point, err := t.motion.AtFraction(clamp(a))
+		if err != nil {
+			return err
+		}
+		state := t.from.snapshot()
+		state.MoveTo(point.Point)
+		assignTree(dst, state)
+		return nil
+	}
+	if t.rotation != nil {
+		angle := t.rotation.angle * a
+		if !finite(angle) {
+			return fmt.Errorf("rotation progress exceeds finite range")
+		}
+		state := t.from.snapshot()
+		state.ApplyMatrix(geom.About(t.rotation.center, geom.RotationZ(angle)))
+		if a < 0 || a > 1 {
+			if err := validateTrackVisual(state); err != nil {
+				return err
+			}
+		}
+		assignTree(dst, state)
+		return nil
+	}
+	if t.arcPath != nil {
+		return t.arcPath.apply(dst, t.from, t.to, a)
+	}
+	interpolateTree(dst, t.from, t.to, a)
+	if a < 0 || a > 1 {
+		return validateTrackVisual(dst)
+	}
+	return nil
+}
+
+// Endpoints are validated when authoring. Finite extrapolation can overflow
+// even when both endpoints are valid; only that uncommon path needs a visual
+// preflight. Track ownership/topology is already captured and does not change.
+func validateTrackVisual(object *Object) error {
+	var err error
+	object.Walk(func(o *Object) {
+		if err == nil {
+			err = o.ValidateVisual()
+		}
+	})
+	if err != nil {
+		return fmt.Errorf("animation extrapolation: %w", err)
+	}
+	return nil
+}
+
+// assignTree preserves existing child pointers when committing a new state.
+func assignTree(dst, src *Object) {
+	dst.Bitmap = src.Bitmap
+	dst.Clip = src.Clip
+	dst.Scalar = src.Scalar
+	dst.Path = src.Path.Clone()
+	dst.Style = src.Style
+	dst.ZIndex = src.ZIndex
+	children := make([]*Object, len(src.Children))
+	copy(children, dst.Children)
+	dst.Children = children
+	for i, c := range src.Children {
+		if dst.Children[i] == nil {
+			dst.Children[i] = c.snapshot()
+		} else {
+			assignTree(dst.Children[i], c)
+		}
+	}
+}

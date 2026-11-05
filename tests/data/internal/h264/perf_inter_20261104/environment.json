@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-04",
+  "cpu": "Apple M2",
+  "go": "go1.27.3",
+  "os": "darwin/arm64",
+  "macOS": "15.7.1 (24G231)",
+  "CGO_ENABLED": "0",
+  "build_tags": [
+    "noasm"
+  ],
+  "GOMAXPROCS": 1,
+  "samples_per_case": 5,
+  "benchtime": "300ms",
+  "package_parallelism": 1,
+  "frames_per_operation": 60,
+  "geometry": [
+    320,
+    180
+  ],
+  "padded_geometry": [
+    320,
+    192
+  ],
+  "QP": 24,
+  "GOP": 60,
+  "profile_benchtime": "2s",
+  "ffmpeg": "8.0.1",
+  "libavcodec": "62.11.100",
+  "timing_caveat": "Sequential before/after samples on shared hardware; no statistical significance claimed."
+}

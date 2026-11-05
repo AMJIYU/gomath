@@ -1,0 +1,69 @@
+File: optimized_noise.test
+Type: cpu
+Time: 2026-11-04 11:48:07 CST
+Duration: 4.45s, Total samples = 3.70s (83.11%)
+Showing nodes accounting for 3.60s, 97.30% of 3.70s total
+Dropped 32 nodes (cum <= 0.02s)
+      flat  flat%   sum%        cum   cum%
+     0.68s 18.38% 18.38%      0.68s 18.38%  gomath/internal/h264.(*bits).uint
+     0.45s 12.16% 30.54%      1.24s 33.51%  gomath/internal/h264.cavlc
+     0.39s 10.54% 41.08%      1.34s 36.22%  gomath/internal/h264.chooseLuma4x4
+     0.35s  9.46% 50.54%      0.56s 15.14%  gomath/internal/h264.makeInterMB
+     0.22s  5.95% 56.49%      0.25s  6.76%  gomath/internal/h264.nal (inline)
+     0.20s  5.41% 61.89%      0.20s  5.41%  runtime.madvise
+     0.18s  4.86% 66.76%      0.25s  6.76%  gomath/internal/h264.quant4
+     0.16s  4.32% 71.08%      0.16s  4.32%  gomath/internal/h264.inverse4
+     0.15s  4.05% 75.14%      0.21s  5.68%  gomath/internal/h264.dequant4 (inline)
+     0.11s  2.97% 78.11%      0.11s  2.97%  gomath/internal/h264.scaleClass (inline)
+     0.07s  1.89% 80.00%      0.07s  1.89%  gomath/internal/h264.(*bits).bit (inline)
+     0.07s  1.89% 81.89%      0.09s  2.43%  gomath/internal/h264.fillPicture420
+     0.06s  1.62% 83.51%      0.06s  1.62%  gomath/internal/h264.forward4
+     0.06s  1.62% 85.14%      0.67s 18.11%  gomath/internal/h264.writeLevel
+     0.05s  1.35% 86.49%      1.40s 37.84%  gomath/internal/h264.searchLumaMB
+     0.04s  1.08% 87.57%      0.42s 11.35%  gomath/internal/h264.writeInterMB
+     0.03s  0.81% 88.38%      0.03s  0.81%  runtime.(*gcControllerState).releaseNextGCMarkWorker
+     0.03s  0.81% 89.19%      0.03s  0.81%  runtime.memclrNoHeapPointers
+     0.03s  0.81% 90.00%      0.03s  0.81%  runtime.nanotime1
+     0.02s  0.54% 90.54%      1.85s 50.00%  gomath/internal/h264.(*IntraEncoder).writeIntraMB
+     0.02s  0.54% 91.08%      0.12s  3.24%  gomath/internal/h264.encodeChroma
+     0.02s  0.54% 91.62%      0.07s  1.89%  gomath/internal/h264.intraImage
+     0.02s  0.54% 92.16%      0.02s  0.54%  gomath/internal/h264.lumaDC (inline)
+     0.02s  0.54% 92.70%      0.02s  0.54%  gomath/internal/h264.macroblockSSE
+     0.02s  0.54% 93.24%      0.02s  0.54%  gomath/internal/h264.quantize (inline)
+     0.02s  0.54% 93.78%      0.02s  0.54%  image.(*RGBA).SetRGBA
+     0.02s  0.54% 94.32%      0.02s  0.54%  image/color.RGBToYCbCr
+     0.02s  0.54% 94.86%      0.12s  3.24%  runtime.findRunnable
+     0.02s  0.54% 95.41%      0.02s  0.54%  runtime.kevent
+     0.02s  0.54% 95.95%      0.02s  0.54%  runtime.runqget (inline)
+     0.02s  0.54% 96.49%      0.17s  4.59%  runtime.schedule
+     0.01s  0.27% 96.76%      0.07s  1.89%  runtime.(*timers).check
+     0.01s  0.27% 97.03%      0.02s  0.54%  runtime.(*timers).run
+     0.01s  0.27% 97.30%      0.06s  1.62%  runtime.makeslice
+         0     0% 97.30%      0.04s  1.08%  gomath/internal/h264.(*IntraEncoder).encodeIDR
+         0     0% 97.30%      3.21s 86.76%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0% 97.30%      3.17s 85.68%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0% 97.30%      3.17s 85.68%  gomath/internal/h264.(*PredictiveEncoder).encodePResidual
+         0     0% 97.30%      0.12s  3.24%  gomath/internal/h264.(*bits).writeVLC (inline)
+         0     0% 97.30%      3.28s 88.65%  gomath/internal/h264.BenchmarkInterResidual.func1
+         0     0% 97.30%      0.07s  1.89%  gomath/internal/h264.interImage
+         0     0% 97.30%      0.03s  0.81%  image.NewRGBA
+         0     0% 97.30%      0.22s  5.95%  runtime.(*mheap).alloc.func1
+         0     0% 97.30%      0.22s  5.95%  runtime.(*mheap).allocSpan
+         0     0% 97.30%      0.02s  0.54%  runtime.gcStart.func4
+         0     0% 97.30%      0.19s  5.14%  runtime.gopreempt_m (inline)
+         0     0% 97.30%      0.19s  5.14%  runtime.goschedImpl
+         0     0% 97.30%      0.05s  1.35%  runtime.mallocgc
+         0     0% 97.30%      0.03s  0.81%  runtime.mallocgcLarge
+         0     0% 97.30%      0.02s  0.54%  runtime.mallocgcSmallNoscan
+         0     0% 97.30%      0.03s  0.81%  runtime.memclrNoHeapPointersChunked
+         0     0% 97.30%      0.19s  5.14%  runtime.morestack
+         0     0% 97.30%      0.03s  0.81%  runtime.nanotime (inline)
+         0     0% 97.30%      0.02s  0.54%  runtime.netpoll
+         0     0% 97.30%      0.19s  5.14%  runtime.newstack
+         0     0% 97.30%      0.02s  0.54%  runtime.startTheWorldWithSema
+         0     0% 97.30%      0.20s  5.41%  runtime.sysUsed (inline)
+         0     0% 97.30%      0.20s  5.41%  runtime.sysUsedOS (inline)
+         0     0% 97.30%      0.24s  6.49%  runtime.systemstack
+         0     0% 97.30%      2.92s 78.92%  testing.(*B).launch
+         0     0% 97.30%      0.36s  9.73%  testing.(*B).run1.func1
+         0     0% 97.30%      3.28s 88.65%  testing.(*B).runN

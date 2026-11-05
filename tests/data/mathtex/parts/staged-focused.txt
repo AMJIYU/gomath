@@ -1,0 +1,49 @@
+=== RUN   TestPartsIndependentFontGeometryAndCairo
+=== RUN   TestPartsIndependentFontGeometryAndCairo/baseline
+    parts_reference_test.go:177: baseline independent fontTools/manual/Cairo MAE=0.0192260742 RMS=0.563234956 max=56 IoU=0.995550485
+=== RUN   TestPartsIndependentFontGeometryAndCairo/repeated
+    parts_reference_test.go:177: repeated independent fontTools/manual/Cairo MAE=0.00588819716 RMS=0.209117178 max=19 IoU=0.999129773
+=== RUN   TestPartsIndependentFontGeometryAndCairo/zero-ink
+    parts_reference_test.go:177: zero-ink independent fontTools/manual/Cairo MAE=0.00377909342 RMS=0.17438683 max=24 IoU=0.99820981
+=== RUN   TestPartsIndependentFontGeometryAndCairo/color-scope
+    parts_reference_test.go:177: color-scope independent fontTools/manual/Cairo MAE=0.00903320312 RMS=0.355819138 max=56 IoU=0.995550485
+=== RUN   TestPartsIndependentFontGeometryAndCairo/fractions
+    parts_reference_test.go:177: fractions independent fontTools/manual/Cairo MAE=0.0155622694 RMS=0.427890418 max=33 IoU=0.996669997
+=== RUN   TestPartsIndependentFontGeometryAndCairo/face-scope
+    parts_reference_test.go:177: face-scope independent fontTools/manual/Cairo MAE=0.019938151 RMS=0.564596907 max=56 IoU=0.994568002
+=== RUN   TestPartsIndependentFontGeometryAndCairo/italic
+    parts_reference_test.go:177: italic independent fontTools/manual/Cairo MAE=0.0221625434 RMS=0.579890674 max=45 IoU=0.993647192
+=== RUN   TestPartsIndependentFontGeometryAndCairo/bold-italic
+    parts_reference_test.go:177: bold-italic independent fontTools/manual/Cairo MAE=0.0157029894 RMS=0.40566949 max=37 IoU=0.998071764
+=== RUN   TestPartsIndependentFontGeometryAndCairo/hidden-fraction
+    parts_reference_test.go:177: hidden-fraction independent fontTools/manual/Cairo MAE=0.00486077203 RMS=0.192642338 max=22 IoU=0.998064932
+--- PASS: TestPartsIndependentFontGeometryAndCairo (0.16s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/baseline (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/repeated (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/zero-ink (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/color-scope (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/fractions (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/face-scope (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/italic (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/bold-italic (0.02s)
+    --- PASS: TestPartsIndependentFontGeometryAndCairo/hidden-fraction (0.02s)
+=== RUN   TestPartsIndependentInteriorWholeAndFragmentTransforms
+    parts_reference_test.go:224: transform-whole-035 independent fontTools/manual/Cairo MAE=0.0147637261 RMS=0.375691095 max=23 IoU=0.996956573
+    parts_reference_test.go:224: transform-whole-070 independent fontTools/manual/Cairo MAE=0.0210283067 RMS=0.593708595 max=46 IoU=0.994241607
+    parts_reference_test.go:224: transform-part-035 independent fontTools/manual/Cairo MAE=0.0192447238 RMS=0.563696824 max=56 IoU=0.995750546
+    parts_reference_test.go:224: transform-part-070 independent fontTools/manual/Cairo MAE=0.0193193224 RMS=0.565621463 max=56 IoU=0.995662368
+--- PASS: TestPartsIndependentInteriorWholeAndFragmentTransforms (0.07s)
+=== RUN   TestPartsLayoutExactKeysBaselinesAdvancesAndStyles
+--- PASS: TestPartsLayoutExactKeysBaselinesAdvancesAndStyles (0.00s)
+=== RUN   TestPartsStableSelectionsCopiesSnapshotsAndTransforms
+--- PASS: TestPartsStableSelectionsCopiesSnapshotsAndTransforms (0.00s)
+=== RUN   TestPartsConcurrentImmutableSnapshotsAndIndependentSampling
+--- PASS: TestPartsConcurrentImmutableSnapshotsAndIndependentSampling (0.00s)
+=== RUN   TestPartsAtomicInvalidFragmentsOptionsAndAggregateRunes
+--- PASS: TestPartsAtomicInvalidFragmentsOptionsAndAggregateRunes (0.00s)
+=== RUN   TestPartsSharedCurvesHiddenInkStructuralPathsAndCells
+--- PASS: TestPartsSharedCurvesHiddenInkStructuralPathsAndCells (0.01s)
+=== RUN   TestPartsAggregateTreeGlyphCoordinateBoundsAndInvalidOwnership
+--- PASS: TestPartsAggregateTreeGlyphCoordinateBoundsAndInvalidOwnership (0.14s)
+PASS
+ok  	gomath/mathtex	0.394s

@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-05",
+  "scope": "Reference generator now verifies imported and local installed Manim source files byte-for-byte against fixed git blobs. Regenerated numerical cases exactly unchanged; original fixture/generator retained as history.",
+  "original_fixture": "manim-0.22.1.json",
+  "verified_fixture": "manim-0.22.1-verified.json",
+  "source_file_count": 8,
+  "regenerated_cases_equal": true,
+  "files": {
+    "tests/data/root/object-curve-edit/manim-0.22.1-verified.json": {
+      "sha256": "6445b18a788cb431e672c434b150bc2a70b4f67af85f3fb5e8f25a8f30f4f621",
+      "bytes": 321172
+    },
+    "tests/reference/object_curve_edit.py": {
+      "sha256": "1b369d8ad89a44ca1236767789281b9ce88b8ff20ee1096b6b50dbb151b397f3",
+      "bytes": 2788
+    },
+    "tests/data/root/object-curve-edit/generator-before-source-audit.py.txt": {
+      "sha256": "7b354ee554203239033a379fb89c15eb83dcf4f8857d660acefc7d8f8d7fd22a",
+      "bytes": 2188
+    }
+  }
+}

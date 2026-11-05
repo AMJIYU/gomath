@@ -1,0 +1,14 @@
+{
+  "provenance": "Independent hand-authored SVG inputs; CairoSVG/Cairo raster, no gomath code loaded.",
+  "CairoSVG": "2.7.1",
+  "Cairo": "1.18.4",
+  "generator_sha256": "c7b34cbac6b0efb1b5193542f468d9c758de142128b53df70be0f07f8a9e9e03",
+  "files": {
+    "linear-alpha.png": "51006d2276db90cdf05d47eaa5306a66a618630a444c54e29b9b2b9aa14f2af9",
+    "linear-alpha.svg": "2dd23a84506898d451a329fc8aa16cdcabb0a30fb6d3e0bbf0b667b65e21ce84",
+    "linear-hard-hole.png": "fe4c5905c7b73b7754b81d0c63be113b6f66eda03723a7fd8c6e0161dbc594af",
+    "linear-hard-hole.svg": "a2173ab26378072c465219c1e542737fe47d638a40d2d961db3b6359802fb5f7",
+    "radial-affine-clip.png": "97d84715047efb37ef6ed9391dc406d0251b865044832b467b84e05b41724a0b",
+    "radial-affine-clip.svg": "5d7b44d7f6b0ae9fc882880e3b90b5c0ef71eb1916f165fa3bba367f34e992da"
+  }
+}

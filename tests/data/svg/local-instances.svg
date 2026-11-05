@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="96" viewBox="0 0 128 96">
+  <defs>
+    <g id="tile" transform="translate(2,3)">
+      <rect width="12" height="10"/>
+      <rect x="4" y="2" width="4" height="4" fill="white"/>
+      <defs><rect id="not-painted" width="128" height="96" fill="magenta"/></defs>
+    </g>
+    <g id="pair">
+      <use href="#tile" x="0"/>
+      <use xlink:href="#tile" x="20" fill="blue"/>
+    </g>
+    <defs>
+      <symbol id="badge" viewBox="10 20 10 10">
+        <rect x="10" y="20" width="10" height="10"/>
+        <rect x="12" y="22" width="6" height="6" fill="white"/>
+      </symbol>
+    </defs>
+    <symbol id="plain" width="16" height="12">
+      <rect x="2" y="2" width="8" height="6"/>
+    </symbol>
+    <rect id="rotated" width="8" height="6"/>
+  </defs>
+  <g transform="translate(5,4)">
+    <use href="#pair" x="5" y="6" fill="green" style="fill:red"/>
+    <use xlink:href="#tile" x="65" y="6" fill="green"/>
+  </g>
+  <use href="#badge" x="10" y="50" width="40" height="20" fill="blue"/>
+  <use href="#badge" x="60" y="45" width="20" height="40" fill="red"/>
+  <use href="#plain" x="100" y="70" width="24" height="12" fill="green"/>
+  <use href="#rotated" x="4" y="6" transform="translate(110,10) rotate(90)" fill="orange"/>
+</svg>

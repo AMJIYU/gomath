@@ -1,0 +1,33 @@
+File: profile.test
+Type: cpu
+Time: 2026-11-05 09:10:36 CST
+Duration: 6.09s, Total samples = 5.23s (85.86%)
+Showing nodes accounting for 5.03s, 96.18% of 5.23s total
+Dropped 48 nodes (cum <= 0.03s)
+Showing top 25 nodes out of 42
+      flat  flat%   sum%        cum   cum%
+     2.45s 46.85% 46.85%      2.45s 46.85%  runtime.kevent
+     1.53s 29.25% 76.10%      1.65s 31.55%  gomath/audio.(*flacDecoder).get
+     0.18s  3.44% 79.54%      0.40s  7.65%  gomath/audio.(*flacDecoder).unary
+     0.17s  3.25% 82.79%      2.15s 41.11%  gomath/audio.(*flacDecoder).subframe
+     0.15s  2.87% 85.66%      0.15s  2.87%  crypto/md5.block
+     0.09s  1.72% 87.38%      2.46s 47.04%  gomath/audio.ReadFLAC
+     0.08s  1.53% 88.91%      1.94s 37.09%  gomath/audio.(*flacDecoder).residual
+     0.07s  1.34% 90.25%      0.07s  1.34%  runtime.madvise
+     0.06s  1.15% 91.40%      0.06s  1.15%  bufio.(*Reader).ReadByte
+     0.06s  1.15% 92.54%      0.06s  1.15%  gomath/audio.(*flacDecoder).spend
+     0.05s  0.96% 93.50%      0.05s  0.96%  runtime.asyncPreempt
+     0.03s  0.57% 94.07%      1.15s 21.99%  gomath/audio.(*flacDecoder).signed
+     0.03s  0.57% 94.65%      0.04s  0.76%  gomath/audio.flacSignedFits (inline)
+     0.03s  0.57% 95.22%      0.03s  0.57%  runtime.(*mSpanList).isEmpty (inline)
+     0.01s  0.19% 95.41%      0.03s  0.57%  runtime.(*timer).unlockAndRun
+     0.01s  0.19% 95.60%      0.10s  1.91%  runtime.bgsweep
+     0.01s  0.19% 95.79%      0.07s  1.34%  runtime.findRunnable
+     0.01s  0.19% 95.98%      0.04s  0.76%  runtime.makeslice
+     0.01s  0.19% 96.18%      0.10s  1.91%  runtime.schedule
+         0     0% 96.18%      0.15s  2.87%  crypto/md5.(*digest).Write
+         0     0% 96.18%      2.46s 47.04%  gomath/audio.BenchmarkReadFLAC48kStereo.func1
+         0     0% 96.18%      0.08s  1.53%  runtime.(*mheap).alloc.func1
+         0     0% 96.18%      0.08s  1.53%  runtime.(*mheap).allocSpan
+         0     0% 96.18%      0.04s  0.76%  runtime.(*timers).check
+         0     0% 96.18%      0.03s  0.57%  runtime.(*timers).run

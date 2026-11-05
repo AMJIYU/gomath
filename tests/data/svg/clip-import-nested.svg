@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs>
+      <clipPath id="outer"><path d="M12 6L114 17L102 88L4 72Z"/></clipPath>
+      <clipPath id="ring" transform="translate(60 48)">
+        <path d="M-36 -28H36V28H-36Z M-14 -12V12H14V-12Z"/>
+      </clipPath></defs>
+      <g clip-path="url(#outer)"><g clip-path="url(#ring)">
+        <rect width="128" height="96" fill="#d04090" opacity=".7"/>
+      </g></g></svg>

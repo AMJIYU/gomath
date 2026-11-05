@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><defs>
+      <rect id="outline" x="1" y="2" width="32" height="28" transform="scale(1.2 .9)"/>
+      <clipPath id="c" transform="translate(3 4)"><use href="#outline" x="2" y="1" transform="rotate(8)"/></clipPath>
+      <rect id="tile" width="60" height="50" clip-path="url(#c)" fill="#30a0e0"/>
+      <clipPath id="host"><rect width="60" height="45"/></clipPath></defs>
+      <use href="#tile" x="12" y="10" transform="translate(3 4)" clip-path="url(#host)"/></svg>

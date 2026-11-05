@@ -1,0 +1,30 @@
+{
+  "Replace": {
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_bbox_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_bbox_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_bbox_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_bbox_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_rule_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_rule_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_union_private_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_union_private_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_union_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/clip_union_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/container_bbox_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/container_bbox_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/container_bbox_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/container_bbox_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/css_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/css_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/dash_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/dash_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/fill_rule_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/fill_rule_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/gradient_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/gradient_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/gradient_reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/gradient_reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/gradient_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/gradient_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/image_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/image_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/image_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/image_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/instances_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/instances_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/stroke_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/stroke_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/svg_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/svg_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_bbox_gradients_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/text_bbox_gradients_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_bbox_gradients_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/text_bbox_gradients_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_limits_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/text_limits_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_reference_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/text_reference_test.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_test.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/_cases/svg/text_test.go"
+  }
+}

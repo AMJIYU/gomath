@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/svg
+cpu: Apple M2
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS1         	     243	    728292 ns/op	   0.54 MB/s	  901108 B/op	   22567 allocs/op
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS1         	     244	    734101 ns/op	   0.54 MB/s	  901101 B/op	   22567 allocs/op
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS1         	     244	    763122 ns/op	   0.52 MB/s	  901114 B/op	   22568 allocs/op
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS4         	      66	   3292588 ns/op	   0.12 MB/s	 2463252 B/op	   22570 allocs/op
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS4         	      66	   3215123 ns/op	   0.12 MB/s	 2463256 B/op	   22570 allocs/op
+BenchmarkSVGClipUnionImportRender/2_children_128x96_SS4         	      69	   3210844 ns/op	   0.12 MB/s	 2462874 B/op	   22569 allocs/op
+PASS
+ok  	gomath/svg	1.434s

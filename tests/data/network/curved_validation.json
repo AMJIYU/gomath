@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "slice": "wave6 curved directed networks",
+  "scope": "Focused network checkpoint only; no reuse of wave5 whole-repository evidence.",
+  "environment": {
+    "go": "go1.27.3",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "kernel": "Darwin 24.6.0",
+    "cpu": "Apple M2"
+  },
+  "product_runtime": "pure Go; no native/runtime subprocess fallback",
+  "api": [
+    "NewCurvedDiGraph",
+    "DefaultCurvedOptions",
+    "CurvedEdge",
+    "DefaultLoopOptions",
+    "LoopOptions",
+    "CurvedLimits",
+    "CurvedDiGraph.SetPositions",
+    "CurvedDiGraph.UpdateEdges",
+    "CurvedDiGraph.Relayout"
+  ],
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -count=1 -cover",
+      "result": "PASS",
+      "package_seconds": 0.062,
+      "coverage_percent": 91.2
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -tags=noasm -count=1 -cover",
+      "result": "PASS",
+      "package_seconds": 0.064,
+      "coverage_percent": 91.2
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=network -race -count=1",
+      "result": "PASS",
+      "package_seconds": 1.271,
+      "note": "Development race instrumentation requires cgo; product checks stay CGO0."
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./network",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -tags noasm ./network",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -run '^$' -fuzz '^FuzzCurvedAtomicPositions$' -fuzztime=8s -parallel=2",
+      "result": "PASS",
+      "package_seconds": 8.099,
+      "executions": 12512,
+      "workers": 2,
+      "new_interesting": 21
+    },
+    {
+      "command": "python3 tests/reference/network_curved_reference.py",
+      "result": "PASS",
+      "note": "Development-only oracle; ordinary Go tests read the static JSON."
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=network -run '^$' -bench '^BenchmarkCurvedNetwork$' -benchmem -benchtime=100ms -p=1 -count=1",
+      "result": "PASS",
+      "package_seconds": 0.225
+    }
+  ],
+  "independent_reference": {
+    "fixture": "tests/data/network/curved_math.json",
+    "generator": "tests/reference/network_curved_reference.py",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "cases": 14,
+    "ordinary_edges": 6,
+    "loop_side_direction_cases": 8,
+    "compared_points": 567,
+    "absolute_geometry_tolerance": 2e-08,
+    "oracle": "circle-center polar tangent cubics, NumPy polynomial roots, SciPy quad/brentq",
+    "manim_pixel_parity_claim": false
+  },
+  "pixels": {
+    "test": "TestCurvedIntermediateFramesPixelsAndConcurrentSnapshots",
+    "width": 192,
+    "height": 144,
+    "duration_seconds": 2,
+    "times_seconds": [
+      0,
+      1,
+      2
+    ],
+    "comparison": "Interior frame pixel equality with independently authored translated pose; start/end visibly differ. Concurrent out-of-order sample snapshots and joins/IDs verified."
+  },
+  "benchmark": {
+    "workload": {
+      "vertices": 12,
+      "curved_cycle_arrows": 12,
+      "self_loops": 3,
+      "layout": "circular",
+      "layout_scale": 3
+    },
+    "samples": 1,
+    "benchtime": "100ms",
+    "package_parallelism": 1,
+    "gomaxprocs_suffix": 8,
+    "observations": [
+      {
+        "name": "build_12vertices_15arrows",
+        "iterations": 319,
+        "ns_per_op": 346048,
+        "bytes_per_op": 325140,
+        "allocs_per_op": 2832
+      },
+      {
+        "name": "setpositions_12vertices_15arrows",
+        "iterations": 321,
+        "ns_per_op": 334199,
+        "bytes_per_op": 282306,
+        "allocs_per_op": 2551
+      }
+    ],
+    "excluded": [
+      "rasterization",
+      "Scene animation/snapshots",
+      "external references",
+      "images",
+      "media encoding"
+    ],
+    "caveat": "Bounded short shared-host observations, not a statistical speed comparison or full-library claim."
+  },
+  "limits": "Explicit modeled counts/storage/work; not RSS/cumulative-allocation/CPU-time guarantees. See docs/CURVED_NETWORKS.md.",
+  "limitations": [
+    "unique ordered pair; no parallel multiedges",
+    "ordinary signed sweep restricted to [-pi,pi]",
+    "clips endpoint axis-aligned bboxes, not filled outlines or stroke-offset shapes",
+    "no obstacle avoidance for unrelated vertices",
+    "explicit tip dimensions; unsupported or degenerate geometry rejected",
+    "exclusive authoring; no per-frame individual-node edge rerouting",
+    "no full Manim parity claim"
+  ],
+  "protected_original_sha256": {
+    "network/graph.go": "f049dd7d213a418bb96f67cee79a4a67925e846c3401adc6263f36fbc9dea2a4",
+    "network/layout.go": "96e4f682ebdbe873504a279176638e48a2933c3b630c4b6ff3300a89d5ff177c",
+    "tests/_cases/network/graph_test.go": "bf07e36da5df516e67aa7524bf0148c6834ec197629be63c96852088ff9d5d14",
+    "tests/_cases/network/example_test.go": "4743ebdb994a6a0c081b6b3f627ff029d38844c782492905d7d3102ca3c46287"
+  },
+  "delivered_file_sha256": {
+    "network/curved.go": "4525988ec0443eb588a2e5781e9da874fcc251458b55f80577eb74ebe0e01aeb",
+    "network/curved_geometry.go": "02551476e6fe4e3c4412bd6fc677f91a07f98c117e2cc435d8bf0377626fcdca",
+    "tests/_cases/network/curved_bench_test.go": "15cbea0d7eb52727e32078d61ee7830c396fdd51ef474c50dbaa15d2182c0cef",
+    "tests/_cases/network/curved_fuzz_test.go": "e05be4203c2a77a560e601d6d6953381c2a06058a64cc3a5f2b95033c46814a8",
+    "tests/_cases/network/curved_limits_test.go": "91d197be58d75bde2efab3438ba9f6336abcdf235e2a7b3ea2813440cfff7127",
+    "tests/_cases/network/curved_main_test.go": "987de38e40226bfdec546003542a3fbf562516678ca36e66de5a9f4f01c3904d",
+    "tests/_cases/network/curved_reference_test.go": "da3fa40dcbcaad740010a321b9e8024726f27358ab12c72e9e5dfd44968c5ec7",
+    "tests/_cases/network/curved_scene_test.go": "285f923600177457ff00cfca02910d6be7d5667b7da014e66da1d2a1e84773cb",
+    "tests/_cases/network/curved_test.go": "25a3d4700cc0c9c9966c8a39452b4627a878c2c948545e3556bc356264ac098c",
+    "tests/reference/network_curved_reference.py": "fe5b1d23c4b7e8d7985a4c7bfada350bfd8578b2223fe672a5fc3e9ba304a20b",
+    "tests/data/network/curved_math.json": "2682837f1f07bb19cf1f8f48bea31b97cbe9d0a1d0ca6ff4f5df4fb7e5683962",
+    "tests/data/network/curved_math.md": "1bd6e12e600f1d1253788fbe4014bfa191676a1bc8e5f9d6e06aca398ec78569",
+    "docs/CURVED_NETWORKS.md": "0feed60c935cc4f0cd28f3787618e664c3a6b74316bc10c5ba89e49c2b8d57c7"
+  },
+  "frozen": true
+}

@@ -1,0 +1,42 @@
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-00.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-00.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-01.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-01.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-02.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-02.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-03.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-03.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-04.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/updater-lifecycle-wave9-svg-20261105/frame-04.svg
+[
+  {
+    "time": 0.5,
+    "RGBA_MAE": 0.0632834201388889,
+    "maximum_channel_delta": 16,
+    "fraction_pixels_any_channel_over_8": 0.0021397569444444446
+  },
+  {
+    "time": 1.5,
+    "RGBA_MAE": 0.06329969618055556,
+    "maximum_channel_delta": 17,
+    "fraction_pixels_any_channel_over_8": 0.0021397569444444446
+  },
+  {
+    "time": 2.5,
+    "RGBA_MAE": 0.06327799479166667,
+    "maximum_channel_delta": 16,
+    "fraction_pixels_any_channel_over_8": 0.002144097222222222
+  },
+  {
+    "time": 3.5,
+    "RGBA_MAE": 0.06326605902777778,
+    "maximum_channel_delta": 16,
+    "fraction_pixels_any_channel_over_8": 0.0021354166666666665
+  },
+  {
+    "time": 4.5,
+    "RGBA_MAE": 0.063330078125,
+    "maximum_channel_delta": 16,
+    "fraction_pixels_any_channel_over_8": 0.0021527777777777778
+  }
+]

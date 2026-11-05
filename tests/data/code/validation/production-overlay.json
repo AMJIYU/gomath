@@ -1,0 +1,8 @@
+{
+  "Replace": {
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/options.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/_staging/options.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/ownership.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/_staging/ownership.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/code.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/_staging/code.go",
+    "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/lexer.go": "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/code/_staging/lexer.go"
+  }
+}

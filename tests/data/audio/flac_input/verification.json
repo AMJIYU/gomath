@@ -1,0 +1,260 @@
+{
+  "date": "2026-11-04",
+  "libFLAC": "flac 1.5.0",
+  "ffmpeg": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "libsndfile": "1.2.2",
+  "soundfile": "0.13.1",
+  "cases": 194,
+  "scalar_samples": 461638,
+  "comparison": "all frames/channels; libFLAC raw == signed input; FFmpeg/libsndfile int32 == exact left-aligned input; Go == original bytes+hash",
+  "libsndfile_results": {
+    "passed": 144,
+    "unsupported": [
+      {
+        "File": "pcm32_1ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_1ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_1ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_1ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_1ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_1ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_1ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_3ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_3ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_4ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_4ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_5ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_5ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_6ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_6ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_7ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_7ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_constant_n1_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_constant_n1_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_extremes_n17_b16.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_extremes_n17_b16.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_random_n255_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_random_n255_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_wasted_n257_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_wasted_n257_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_sine_n1025_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_sine_n1025_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_ramp_n513_b256.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_ramp_n513_b256.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_8ch_sine_n4097_b4096.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_8ch_sine_n4097_b4096.flac': File contains data in an unimplemented format."
+      },
+      {
+        "File": "pcm32_2ch_wasted_n65535_b65535.flac",
+        "error": "Error opening '/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tests/data/audio/flac_input/pcm32_2ch_wasted_n65535_b65535.flac': File contains data in an unimplemented format."
+      }
+    ]
+  },
+  "features": [
+    "channel_assignment=INDEPENDENT",
+    "channel_assignment=LEFT_SIDE",
+    "channel_assignment=MID_SIDE",
+    "order=0",
+    "order=1",
+    "order=10",
+    "order=11",
+    "order=12",
+    "order=13",
+    "order=14",
+    "order=16",
+    "order=2",
+    "order=3",
+    "order=4",
+    "order=8",
+    "order=9",
+    "partition_order=0",
+    "partition_order=1",
+    "partition_order=3",
+    "partition_order=4",
+    "partition_order=7",
+    "type=FIXED",
+    "type=LPC",
+    "type=RICE",
+    "type=RICE2",
+    "type=VERBATIM",
+    "wasted_bits=0",
+    "wasted_bits=1",
+    "wasted_bits=10",
+    "wasted_bits=11",
+    "wasted_bits=12",
+    "wasted_bits=13",
+    "wasted_bits=15",
+    "wasted_bits=2",
+    "wasted_bits=23",
+    "wasted_bits=3",
+    "wasted_bits=31",
+    "wasted_bits=5",
+    "wasted_bits=6",
+    "wasted_bits=7",
+    "wasted_bits=8",
+    "wasted_bits=9"
+  ],
+  "go_verified": true
+}

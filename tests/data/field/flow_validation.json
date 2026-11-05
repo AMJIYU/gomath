@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-04",
+  "scope": "field physical-time Flow; focused checks only",
+  "runtime": "pure Go; no cgo/native/process fallback",
+  "environment": {
+    "go": "go1.27.3 darwin/arm64",
+    "cpu": "Apple M2",
+    "cgo_enabled": "0",
+    "tags": "noasm (central runner/default focused vet/build)"
+  },
+  "source_sha256": {
+    "field/flow.go": "4d1419376bb3f2da01cd604a4214712cc6e3a54efb91e6bd7a2b646fa1edba02"
+  },
+  "frozen_sha256": {
+    "field/adaptive.go": "8dd06aac8cfa1e5d336ac14f767b2ace74438c47ee9e723dc68beb2e1c23b246",
+    "field/adaptive_rk.go": "d1d53e28879f2c5e1ba98ede1a3ccd17a7124712ca76be4b28dec41d1c7fd2e7",
+    "field/adaptive_streamlines.go": "4b555c22115bd5a6cef9ac4aaed5fcef0b602720df10481bfe6c63613a66447e",
+    "field/field.go": "31ed1af82d031b856ffb2b67c3e4d20de6566e25d4ea001873ab402b6549e8cb",
+    "field/streamlines.go": "44835cebe3e2d7048147368d7adab63d9344ea9abd2079d5e8c7cd0724441669",
+    "tests/_cases/field/field_test.go": "78ca81e239dd27720c6ba1794d9fe493476b6de0c3a450a53c5a8c887f15ce2e",
+    "tests/_cases/field/example_test.go": "369ae6a8638d7dd9a6802155f5eb465acc6568757a6c6b46cb06d944d811912f"
+  },
+  "validation": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=field -count=1 -cover",
+      "result": "pass",
+      "seconds": 0.271,
+      "coverage_percent": 95.7
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=field -race -count=1",
+      "result": "pass",
+      "seconds": 2.366
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./field",
+      "result": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -tags noasm ./field",
+      "result": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=field -run '^$' -fuzz '^FuzzFlowBoundedWindows$' -fuzztime=10s -parallel=2",
+      "result": "pass",
+      "seconds": 10.102,
+      "executions": 493677
+    },
+    {
+      "command": "python3 tests/reference/field_flow_reference.py",
+      "result": "pass; source files verified against pinned git blobs"
+    }
+  ],
+  "reference": {
+    "fixture": "tests/data/field/flow_reference.json",
+    "sha256": "529752d41f20807ae29feda7853dddcdd09bdf1f40a70ce3450b94f5a6290d33",
+    "oracle": "Python fractions.Fraction Bernstein polynomial",
+    "configurations": 8,
+    "samples": 72,
+    "point_checks": 200,
+    "manim": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "manim_scope": "actual start_animation updater and ShowPassingFlash bounds; stub objects, zero random phase; no pixels"
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=field -run '^$' -bench '^BenchmarkStreamlineFlow$' -benchmem -benchtime=200ms -p=1 -count=1",
+    "workload": "128 lines x 256 cubics; quadratic physical times; window .125; sample .73; loop true",
+    "excluded": "source integration, reference generation, rasterization; no image/frame-sequence workload",
+    "build": {
+      "ns_per_op": 536929,
+      "bytes_per_op": 3521160,
+      "allocations_per_op": 515
+    },
+    "sample": {
+      "ns_per_op": 65418,
+      "bytes_per_op": 302505,
+      "allocations_per_op": 388
+    }
+  }
+}

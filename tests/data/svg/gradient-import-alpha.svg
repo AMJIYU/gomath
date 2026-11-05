@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><style>.defs > linearGradient {color:#e03010} .defs stop {stop-color:currentColor} #end {stop-color:#2040ee}</style>
+ <defs class="defs"><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="16" x2="112">
+ <stop stop-opacity="0"/><stop id="end" offset="1" stop-opacity=".85"/>
+ </linearGradient></defs><g opacity=".6"><rect x="6" y="8" width="116" height="80" fill="url(#g)" fill-opacity=".7"/></g></svg>

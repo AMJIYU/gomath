@@ -1,0 +1,14 @@
+CGO_ENABLED=0 go test -tags noasm -overlay tests/data/path/curve-edit/stage-overlay.json ./path -run '^$' -fuzz '^FuzzCurveEditSubdivision$' -fuzztime=15s -parallel=4
+Production was staged and mapped into gomath/path; the temporary overlay has
+been removed after promotion. The promoted production code is byte-identical.
+
+fuzz: elapsed: 0s, gathering baseline coverage: 0/2 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 2/2 completed, now fuzzing with 4 workers
+fuzz: elapsed: 3s, execs: 58964 (19625/sec), new interesting: 11 (total: 13)
+fuzz: elapsed: 6s, execs: 150479 (30541/sec), new interesting: 11 (total: 13)
+fuzz: elapsed: 9s, execs: 282293 (43937/sec), new interesting: 11 (total: 13)
+fuzz: elapsed: 12s, execs: 441655 (53133/sec), new interesting: 11 (total: 13)
+fuzz: elapsed: 15s, execs: 592477 (50279/sec), new interesting: 11 (total: 13)
+fuzz: elapsed: 15s, execs: 592477 (0/sec), new interesting: 11 (total: 13)
+PASS
+ok  gomath/path 15.063s

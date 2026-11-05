@@ -1,0 +1,605 @@
+{
+  "date": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS: bounded reversal implementation and source-pinned numerical validation; no complete Manim parity claim",
+  "apis": [
+    "func (c path.Contour) Reversed() (path.Contour, error)",
+    "func (p path.Path) Reversed() (path.Path, error)",
+    "func (o *gomath.Object) ReversePoints() error",
+    "func (o *gomath.Object) ReverseDirection() error"
+  ],
+  "source": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "files_sha256": {
+      "manim/__init__.py": "4f42a0d494527ee0ae6b4349bbafdeee66a3aa1b3d70a3d824e17e2fff3b480c",
+      "manim/_config/__init__.py": "238cdb3ca51351c945d8168c0ad98678db982019e8c51c8eb479268a424053d3",
+      "manim/_config/cli_colors.py": "ad809b2aaf196f965ff9461c77e9bff93395666968d9997f67410b44f70b057a",
+      "manim/_config/logger_utils.py": "00a7c70d42bc0f38ca2cea78502f37b4aacbbb9a4e52e509c95822e04d8b9293",
+      "manim/_config/output.py": "29de2187984039a2aeb3c24452b51997f14b8daad037b770d9fff2379377acd0",
+      "manim/_config/output_plan.py": "2b07ca978dd2e61ead1f7c5556bdf62752da37afabe189b65a18c58be87a82b6",
+      "manim/_config/render_session.py": "4fa5f7928a34d5abfe6e57d86766165eb6b0f400dae8c0d92ae5532027687448",
+      "manim/_config/utils.py": "5aef659196c96be0ceb1f9d97f3c39b7437912848cae7a63a9c6925cc7021fb1",
+      "manim/_config/video_encoder.py": "365f111f75e2aa9b8a305e487beef661e5e89bd883ce4f37b00d6b7aa8fb4d87",
+      "manim/animation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/animation/animation.py": "be310092d2bd6283faf4b3f2e36f661024964e558176312a5a0dfe2c974eca5f",
+      "manim/animation/changing.py": "a69d028e75c27e77f5955621cc5dbf1fb135149853d51ad63d29bbc914cf8dcc",
+      "manim/animation/composition.py": "d561bcb11c2aedac32b2ce90314c46332e6b0a999583485da77c3190cdda48ef",
+      "manim/animation/creation.py": "f37450b2b7072c4e0b869681b8c48659e4ed18e39bef03c4cae2316676eafff0",
+      "manim/animation/fading.py": "32a7a29cd27383db8875c625c2d279c2a58ce9013d024eb3a5d4bcefd27d3c16",
+      "manim/animation/growing.py": "24830bd5aecf87c8529594459fbb1b94c2a43260e0c200740c40de234a2c50e8",
+      "manim/animation/indication.py": "a53ae9130bcafb11b795e594a3c3c563869495a7a0b6f153be312d7df3f974c5",
+      "manim/animation/movement.py": "679e82408dfb64587baf6da6a03cb5486e1a2498a45140f4490fe452e8591cad",
+      "manim/animation/numbers.py": "8b519af9dd3bb097294ec44a77ddcd3a02165f321914419278704142a2bf5992",
+      "manim/animation/rotation.py": "e6acb16896d715c2534f2f5a25655926ffda1f5137e79313e20fe469b5198c4b",
+      "manim/animation/specialized.py": "274e68de05fb29f606612f3adbf57cd26068cfb0a36053153b6f23b92067ccf5",
+      "manim/animation/speedmodifier.py": "98c7b5d58fd098facf2a95724e3e8dcbf102e56045a8039dece4908ec2d7ba56",
+      "manim/animation/transform.py": "54f719428e4fb306c5b6252bca035d2197ab4e6a617223f5399849db92ea95bf",
+      "manim/animation/transform_matching_parts.py": "26b6045c59a86b95abca4fff655e003b1b4ed84a9797850d0ee417d054aa4765",
+      "manim/animation/updaters/__init__.py": "8e0285bde4733f014b6d51e44df26bbf7a8322b803fb2b85298b0c464c293c97",
+      "manim/animation/updaters/mobject_update_utils.py": "c28ed4fee67fbcbdefbfad5bf009bc5ff3964a4c1d98b5c24d217e6450ca9bdc",
+      "manim/animation/updaters/update.py": "5e6386e34fd3f725e6ae47350f52eda3ec0cfb15818098e782391e723bf44fea",
+      "manim/camera/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/camera/camera.py": "3a7ac3e37eef552adb8ac5a80ccbd88dfdba1da47d4dc6b0566935250b966d7d",
+      "manim/camera/mapping_camera.py": "8d0466611f735e8c552b8592edf3bab59dd0e98998eee9645210b37cfe89b426",
+      "manim/camera/moving_camera.py": "fd0d16f906b5f95cca92dc8a83dce5b729917cd18f7bae95d4ef6a9347b6ccff",
+      "manim/camera/multi_camera.py": "da468548dc4d2d216d97f3684d88305e70669ca1ba9a3cb37e98c866951fdb20",
+      "manim/camera/three_d_camera.py": "5b051af70e370db76adc9ed1ed7d980052e8cca8a73aed10fa4d3b5a6f2b2d1c",
+      "manim/constants.py": "a6b62c6585fc90309d1f1760c14a4a10d6a3a2423f838c655524d5579ced1fd6",
+      "manim/data_structures.py": "920db2355b419308b7506932d1598b90a676f923dc442002d9cd2b7ca7d3602b",
+      "manim/manager.py": "78573bdee1b7681916ba49277a781bf3b0630ee645a2e3c724329462d9466327",
+      "manim/mobject/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/mobject/frame.py": "c85541c8398e7e92fedc710cfedfddd9b3463f102d4d943cd2ea2666d126e98a",
+      "manim/mobject/geometry/__init__.py": "d9ca2e928c4a5c313a2e6a830dc17f7210593d861bea87b7cb84fc76e57c2ef9",
+      "manim/mobject/geometry/arc.py": "941a9d29ae7c3a00f3d21878f65b96fdbf6b485497b94f79eaeabd865503872d",
+      "manim/mobject/geometry/boolean_ops.py": "4df9f5fe270f93aa4f0041b3d4fc762f880f0ee71af04a1f196571566674c9f2",
+      "manim/mobject/geometry/labeled.py": "1a97d996cf0116542ef17fec982fb5f0a7b0b52e314f320fbccbacc72f3ef9e3",
+      "manim/mobject/geometry/line.py": "ea0df13aa2eebf789829ca66b0e943de18b65397de4aa31aa9eb26c06cf08464",
+      "manim/mobject/geometry/polygram.py": "e9708479aec42f87c11d70fd2b928ea9bbb0665353827de952b56df39d391a53",
+      "manim/mobject/geometry/shape_matchers.py": "59e23f67495fee5dab1d3baa0b4a5eabc43fc7761a33217a8937da9e1459e3c6",
+      "manim/mobject/geometry/tips.py": "cfe7bd31acff51ec054fe71ed372d80c0c2097d150b1ce24cfa945f185d8cceb",
+      "manim/mobject/graph.py": "0f22f4c0db17d60d5688f1768b165737fe7772359e8d0212f1416e090ea6fc70",
+      "manim/mobject/graphing/__init__.py": "2dff6dc8b9714c17243cb308ed9002bbc63146bb0c1313a8aa98beeb9ece310f",
+      "manim/mobject/graphing/coordinate_systems.py": "92297e7b9897c55c151a1d6128eb859449ef4afa7fc60a0e78297c5e76e412a6",
+      "manim/mobject/graphing/functions.py": "2aed95a4530579577549147268ad7d36fd29ffa61fc128de9e5e52155394eb00",
+      "manim/mobject/graphing/number_line.py": "ffed1bd73385b42fb71b280b34e4a32f70f8893869e9a4f5c585747f0997bfc0",
+      "manim/mobject/graphing/probability.py": "646f4ec269317af40ef5520dd92a1d8923ce8c37df6d4de336c1350db426b234",
+      "manim/mobject/graphing/scale.py": "38192c9a25253088caf0e3952ee0adb50b81680d80b873f313c6814b4569ffe3",
+      "manim/mobject/logo.py": "2d9ff596c06e82aeb91a463daf7d3a49ffb2b6e10c4b2c1fb416a41f9f3957f6",
+      "manim/mobject/matrix.py": "3159b6b7d4d5063a86520e9148b97b927c3193c13d4168d9f4c3e408262fb6e7",
+      "manim/mobject/mobject.py": "76627cf88eb493fc300ae2d6aac74ee6dabfec8ceecc9262fc900ee77249c797",
+      "manim/mobject/opengl/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/mobject/opengl/dot_cloud.py": "fd00c23f13f278308520759a9460e7acfd9898badc63b6cef66b036545c6c780",
+      "manim/mobject/opengl/opengl_compatibility.py": "cbe7d2a21f5851e577f40842e5c681bfe5622f5012199a7160034005d7248779",
+      "manim/mobject/opengl/opengl_image_mobject.py": "92bbebf604e9974b3f29d0aaea2c0f66bd43691bc90dcb5bd79d66e8aee694c7",
+      "manim/mobject/opengl/opengl_mobject.py": "caca5de46fb3cb2977e25262691af473c9a635c522bcab683da927ba7d7b4bc7",
+      "manim/mobject/opengl/opengl_point_cloud_mobject.py": "9dbe9ef826932cae59199346a4e97120c06f5e8d00c83a2a57ded73071104190",
+      "manim/mobject/opengl/opengl_surface.py": "6c07014bab5b98f8e59272c8cb37687a83fb5ef827ff711012ad4c6ce52b5621",
+      "manim/mobject/opengl/opengl_three_dimensions.py": "bee3a4d6a03bfa45273fce089b38ebef1d9a1c650eaf7de8ce8c14419a4e4f58",
+      "manim/mobject/opengl/opengl_vectorized_mobject.py": "05d5e4a7dff8a47b9786c23a11af05ac20594feaf93574e319fb44bb53ec181c",
+      "manim/mobject/svg/__init__.py": "8fcf8f164500b31e04f9eec01e6dc2a0c8e8db65652b33ce45002cc855a749de",
+      "manim/mobject/svg/brace.py": "01f4b1df3d0af7d5e8921aae8779cb81e58c9de7c90eae4a8927743578e3c501",
+      "manim/mobject/svg/svg_mobject.py": "5cc60b07abc7fa24e66fdad776c805724d50768904e6383828007a7baed7d0c2",
+      "manim/mobject/table.py": "81fc0819dc80433222f9c12958f86dcaab4bc893aa55cbb9cf15cc22a0d4d6b5",
+      "manim/mobject/text/__init__.py": "476c405c9631c41ec729f133ce39cfa34f6f5ea92ae4e1eb4b5c2e1cb686049f",
+      "manim/mobject/text/code_mobject.py": "d88f13c596745ac55e303a9ad26e6618ae1cae61697084a9d8f1a0e564a28088",
+      "manim/mobject/text/numbers.py": "d2d0b1bf1505a14129fec5b72b5612818a9c1d3c6ce3b21fe2f9f1a16452deaa",
+      "manim/mobject/text/tex_mobject.py": "4065d0d4c2ce4d69074bf8dd1642eb38c24aece8b2e05aca99a1918f8369d8f6",
+      "manim/mobject/text/text_mobject.py": "121474c1d1e6550c8eee979f40d1c67dcdd46a416a779987b57a1484871ab5cd",
+      "manim/mobject/text/typst_mobject.py": "ea7ebce56b98f27a396ac8e8c98baf872cf6fe72989cc2014843d585f8fd0040",
+      "manim/mobject/three_d/__init__.py": "ca2b1c74bbb5d9e128ca0c86a74e55efcf73868baa1000e29fba300240bdc94e",
+      "manim/mobject/three_d/polyhedra.py": "dff151690b0c87a695c7ebe77bf85564ca7572d9df8c8f49e5e632cb052c27bd",
+      "manim/mobject/three_d/three_d_utils.py": "91750651534a46f145309edfb5e228464fae985acfebd03f16f6a5847cb46f02",
+      "manim/mobject/three_d/three_dimensions.py": "9343af8b6ae55bbe6d8f2fbd240ed0248a178544ee3829d628973839508553a6",
+      "manim/mobject/types/__init__.py": "1fe4b4e09347cac2a4f4e6ecdad72d5d5a13c88cc32fb26766aa87b751ae5926",
+      "manim/mobject/types/image_mobject.py": "dc4c34e421250985a6b0af7ac130137983dfab10d82523f923a9f65bdb9d556f",
+      "manim/mobject/types/point_cloud_mobject.py": "2914357cab39391e22788d6ec4e68f4154f5d0dbf1be6aa3ebac5b4e99da48ac",
+      "manim/mobject/types/vectorized_mobject.py": "d5b930f53d5e16d358400068919c97d914704fa8dab6ddae43e93af800bd8a99",
+      "manim/mobject/utils.py": "8e9e5a2a4102791bbfd25ac8845b96ed018fe2f7a2def30da25aee2b88a4e644",
+      "manim/mobject/value_tracker.py": "3711b5dc03bcde4c8204e5e26d22cb9b74040bae9bf4c01571ede8d435eb07e9",
+      "manim/mobject/vector_field.py": "9389b2af3e71faf15660fc92f1301dcbd621bd052ea572617c2e7e1ef835f80a",
+      "manim/opengl/__init__.py": "2e231be6c94018d97e68c9e4510a5e9529092e376fefd3ef05fea051cb1579ea",
+      "manim/plugins/__init__.py": "4f026534bed7a0a91ccc45762ae21233e996f184d59e0c54916bcc918b772ea7",
+      "manim/plugins/plugins_flags.py": "97aab1cf53bc03f193a80d7bf5072721a98eafc52b2ba68c9e8879bc45a3feac",
+      "manim/renderer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/renderer/cairo_renderer.py": "040a1dbbbff6fc02cf1ffe65d6ab5ea7b37948b3eb01f127f4101f4bfd70663b",
+      "manim/renderer/opengl_renderer.py": "4c6e5aa9d5f3949504660270792ea33c8fd3d1699dc5a1c0c23fef8784cd5e2b",
+      "manim/renderer/protocol.py": "8011378f751c577fdb03072f73a60cc9f87a54785e322abd63b591d52456cab5",
+      "manim/renderer/shader.py": "593edfa2ad119f7e976ab380085ee293f17625b896f393e255e6a970ed4eb8e6",
+      "manim/renderer/shader_wrapper.py": "6a0f2b6c0479446cec31a0208730be301d02b7d7789abd311507bfd33a32ba9e",
+      "manim/renderer/vectorized_mobject_rendering.py": "ec7e62eb724bb7703729c71af3b51b183b6ce11670eb85fecaf80c50d6742fb7",
+      "manim/scene/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/scene/moving_camera_scene.py": "a6d97a0f8710f7481392ce39c8cc88169371c08306d392a97208c7a560ff6e60",
+      "manim/scene/scene.py": "0396056a0f59184e7e0f48488a9ab4a30fbad328c96813f3b3655025d4622305",
+      "manim/scene/scene_file_writer.py": "4af69e183773e9eccb804703acb490119a7ad9766cfdf48914e860b7049e84bc",
+      "manim/scene/section.py": "bf896be7df260fc10fe844badc582753ec094b4ceef150dbec86743e7ae9f619",
+      "manim/scene/three_d_scene.py": "d955ca318f9f34bda1c7be6a2f3336e6bfc4dd08be5e5878ef315f0c8cfe0ed1",
+      "manim/scene/vector_space_scene.py": "7859ecc067b8b852697a3b76b8d80362b8fb79f066d106a736f2904afc83f430",
+      "manim/scene/video_segment_encoder.py": "88dc7c4ae2ea6ed3444d9199b5781a5880e55c95146491e48a84206919434c04",
+      "manim/scene/zoomed_scene.py": "97eb43a4699e4e7e6ecf62bb8d0fb6c765b9e5525659131813d4dbe4ae2ac7b1",
+      "manim/typing.py": "f5db104e748d3e750925325c44bb85026076564da7f764cb5064af5a991b6714",
+      "manim/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manim/utils/bezier.py": "a2c760c8d521ce6d6b20f2a16454e3cb8293284efbfd7c27affc5c94a424cd86",
+      "manim/utils/caching.py": "57c03f992551ce0786e50c5fc81e3a34bc0f34cfd4054b715ca9f16db38276fd",
+      "manim/utils/color/AS2700.py": "9fdc873d1de15344003ba4666f8c299297c14432828e7e1cdd6114057968bd22",
+      "manim/utils/color/BS381.py": "179936d504bd268f4b04809a2ccffe7e69a744e3b0bd60709581fbe0a9b2cebc",
+      "manim/utils/color/DVIPSNAMES.py": "2ab2bc314016f6b4be25a39e53f4d2b2bf3a2f20934b11c38f43a04c4c98a973",
+      "manim/utils/color/SVGNAMES.py": "4d5ce9fb209bab8bbd127f00f7e7280d9358f3a3767687cbe3df6b61ba5340e0",
+      "manim/utils/color/X11.py": "e81b40656d71c2acccd8bf785bfc24942e898ec103a17a912a6d03c4081b9652",
+      "manim/utils/color/XKCD.py": "92519c59353d8c0288354f4fb7818394d67f1e67e8021caa7bfd5628cbd866eb",
+      "manim/utils/color/__init__.py": "f9dd8c72ac1d901479a13e3a11cef079a29e38d4ebb3382612b349a659bf6171",
+      "manim/utils/color/core.py": "0453d2b2a9969ff3e0ea0fc2bddf90699dd7457da07c93043ba71e007eed063d",
+      "manim/utils/color/manim_colors.py": "7f7113e5d9523c31d028c7d0af1c8532c9bdfc07fa3a524cb5e2574518f059c9",
+      "manim/utils/commands.py": "4f09ec4fcf2f09965a9a706f9c4a2ad074cd9ee298c1b45dd18aa9ec1f0c2c61",
+      "manim/utils/config_ops.py": "230a4d1d4ae4c7892b855dc74cd47ade48a27b02240a7f1fa289df78cd01969c",
+      "manim/utils/debug.py": "e1fac3d46bc37f3252d824e68dc1ef4424820c957e692444ab2a0b0f5d80c42e",
+      "manim/utils/exceptions.py": "2c338813a55c6a2e0da7acbcdd4b8c59d892213678dc0739044fe33d7285af4d",
+      "manim/utils/family.py": "5b500588f1d0ac5c81e93aee9589eb8474aa1a203412d835a032f94ae4cd8281",
+      "manim/utils/family_ops.py": "20132c1a55836a0f3d22ff6493eccb803dc373f4e744658c2355c189424cf8f1",
+      "manim/utils/file_ops.py": "982038e0176952a5d2afd12ed298b13185b203b613942561100d08572bf6b429",
+      "manim/utils/hashing.py": "56fc4e55d1c176c34029ad062a8842df0ed3e0bd0a26ffd33307ef872342e600",
+      "manim/utils/images.py": "e62383cccbe9bf6444081a59b1aa8946d98e74c4af2fc9f17dc4e58d58fba99e",
+      "manim/utils/iterables.py": "80d73dcf296eb35b95a6bb65d0f03c57698bc0ea3e5f9811d021f109dde02f9d",
+      "manim/utils/module_ops.py": "9a0acade702afe156f664bf17d4efa6ea4cad52fdd9e85f1e2e366e90494e8c9",
+      "manim/utils/opengl.py": "7872473725217b6e155c2ba087c11cb189ae3acce1b897b699665e5a3ef43ab9",
+      "manim/utils/parameter_parsing.py": "adc08f06dcdf203a89b04b3ec5221b2c9977c1a38ca43184cf645f9c2682d5db",
+      "manim/utils/paths.py": "18842c2c5a4580af89768058056a6d932663aa11312a2c8a28b6116a8da89641",
+      "manim/utils/polylabel.py": "d3cf8bfee951bfda775fd90529c5f9051dbc6e98d8275ea75d8b0921fae25dc9",
+      "manim/utils/qhull.py": "9fd7b56fde2fe82dc5664f44260f1a73df7b7b9abf9705243df705d33cd80812",
+      "manim/utils/rate_functions.py": "3e0ca0021e72685e0c9d276b59ddc614c974b398ced0b79adb74905575d46c93",
+      "manim/utils/simple_functions.py": "8e38d531c78fce53c1ab87a5cf4f85b53370c2c6eba9a0a4c0e39ccbac3b8142",
+      "manim/utils/sounds.py": "497a678bf11e9cb6ba14539321ba656d07e456c9db1a4b9b6a3c3ca74ad41949",
+      "manim/utils/space_ops.py": "6a1d05fcd62aeb34be512bcb33bda229f5924cbc8730f77791f66a7e14dfd57f",
+      "manim/utils/tex.py": "f7aa83daeba7bf312f80c0b348fe452eff01a6340d161543974de29d7be3cc78",
+      "manim/utils/tex_file_writing.py": "57d2179de2e7f099ecf6cbaf9e3dd407667f51549a8b89cbf763bdfacd5a6853",
+      "manim/utils/tex_templates.py": "e141de552f59c9856c4b36540b815916a5bca34d88319485e0a9a0a87799ee5e",
+      "manim/utils/typst_file_writing.py": "83836449000d698a7d239539a26614cda7903f5bb55d8db8efa74b9dda508ce1",
+      "manim/utils/unit.py": "f97aadf5c1de60d5f64efceef2e5d44d431596b7815fbca030946df794ad75d7"
+    },
+    "generator_sha256": "76cc86611a6a62f261abb149e9bd1b1475fc09978119407c4bdef9c44a721a1b",
+    "installed_equals_local_equals_git": true
+  },
+  "reference_environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "executable": "/Users/eleven/.cache/uv/archive-v0/IbSuL_WJt_ZGfpsZITU_N/bin/python"
+  },
+  "reference_scope": {
+    "path_cases": 8,
+    "tree_operations": 6,
+    "force_direction_audit_probes": 18,
+    "path_transform_states": 30,
+    "path_interior_states": 20,
+    "tree_transform_states": 24,
+    "tree_interior_states": 16,
+    "static_control_tolerance": 0,
+    "transform_vector_absolute_tolerance": 1e-10,
+    "raster": false,
+    "go_actual_scene_transform": true,
+    "animated_alignment": "matching per-contour counts and identical family topology; no automatic unequal matching claim"
+  },
+  "limits": {
+    "max_contours_shared": 4096,
+    "max_cubics_shared": 65536,
+    "max_work_units": 1048576,
+    "max_accounted_bytes": 12582912,
+    "max_abs_coordinate": 1000000000,
+    "max_object_nodes": 4096,
+    "max_tree_depth": 64,
+    "root_depth": 1,
+    "connectivity": "exact Vec3 component equality",
+    "implicit_closure": "reject every nonzero closing gap on a Closed contour with cubics; point-only closed contours allowed",
+    "path_work": "8*curves+2*contours",
+    "object_work": "12*curves+3*contours+2*nodes",
+    "path_storage": "192*curves+112*contours",
+    "object_storage": "192*curves+112*contours+64*nodes",
+    "storage_excludes": "caller Object allocations, paint/clip/image backing, maps and allocator overhead, GC retention and RSS",
+    "work_cap": "deterministic conservative work units; count/storage caps bind first at configured limits"
+  },
+  "atomicity": "All selected geometry is staged before any Path field is assigned. Errors retain original numerical controls, slice backing/length/capacity, node/child pointers, IDs and styles. This is authoring failure atomicity, not concurrent mutation synchronization.",
+  "checks": [
+    {
+      "name": "path-suite",
+      "command": [
+        "go",
+        "run",
+        "./tests/cmd/run",
+        "-pkg=path",
+        "-count=1",
+        "-v"
+      ],
+      "CGO_ENABLED": "0",
+      "tags": "noasm (central harness)",
+      "exit_code": 0,
+      "log": "path-suite.txt"
+    },
+    {
+      "name": "root-focused",
+      "command": [
+        "go",
+        "run",
+        "./tests/cmd/run",
+        "-pkg=root",
+        "-p=1",
+        "-run",
+        "^(TestObjectDirection|TestPinnedManimObjectCurveEdits|TestObjectCurveEdits)",
+        "-count=1",
+        "-v"
+      ],
+      "CGO_ENABLED": "0",
+      "exit_code": 0,
+      "elapsed_seconds": 1.1905415409710258,
+      "log": "root-focused.txt"
+    },
+    {
+      "name": "race",
+      "command": [
+        "go",
+        "run",
+        "./tests/cmd/run",
+        "-pkg=path",
+        "-pkg=root",
+        "-p=1",
+        "-run",
+        "^(TestDirection|TestObjectDirection)",
+        "-race",
+        "-count=1",
+        "-v"
+      ],
+      "CGO_ENABLED": "1",
+      "exit_code": 0,
+      "elapsed_seconds": 6.670935750007629,
+      "log": "race.txt"
+    },
+    {
+      "name": "build-noasm",
+      "command": [
+        "go",
+        "test",
+        "-tags",
+        "noasm",
+        "./...",
+        "-run",
+        "^$"
+      ],
+      "CGO_ENABLED": "0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4468689589994028,
+      "log": "build-noasm.txt"
+    },
+    {
+      "name": "vet",
+      "command": [
+        "go",
+        "vet",
+        "-tags",
+        "noasm",
+        "./..."
+      ],
+      "CGO_ENABLED": "0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.3170314999879338,
+      "log": "vet.txt"
+    },
+    {
+      "name": "purecheck",
+      "command": [
+        "go",
+        "run",
+        "-tags",
+        "noasm",
+        "./cmd/purecheck"
+      ],
+      "CGO_ENABLED": "0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.20288754103239626,
+      "log": "purecheck.txt"
+    }
+  ],
+  "benchmarks": {
+    "environment": {
+      "go": "go version go1.27.3 darwin/arm64",
+      "goenv": {
+        "GOARCH": "arm64",
+        "GOOS": "darwin",
+        "GOVERSION": "go1.27.3"
+      },
+      "platform": "macOS-15.7.1-arm64-arm-64bit",
+      "cpu": "Apple M2",
+      "memory_bytes": 17179869184,
+      "cpu_count": 8,
+      "CGO_ENABLED": 0,
+      "tags": "noasm",
+      "benchtime": "300ms",
+      "count": 3,
+      "image_size": null,
+      "rendered_frames_per_operation": 0,
+      "parallelism": "Commands executed sequentially. Shared machine; no exclusive CPU reservation.",
+      "GOMAXPROCS_from_benchmark_suffix": 8
+    },
+    "checks": [
+      {
+        "name": "bench-path",
+        "command": [
+          "go",
+          "run",
+          "./tests/cmd/run",
+          "-pkg=path",
+          "-p=1",
+          "-run",
+          "^$",
+          "-bench",
+          "^BenchmarkDirectionReversed$",
+          "-benchmem",
+          "-benchtime=300ms",
+          "-count=3"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 7.469166165974457,
+        "log": "bench-path.txt"
+      },
+      {
+        "name": "bench-root",
+        "command": [
+          "go",
+          "run",
+          "./tests/cmd/run",
+          "-pkg=root",
+          "-p=1",
+          "-run",
+          "^$",
+          "-bench",
+          "^BenchmarkObjectDirectionFamily$",
+          "-benchmem",
+          "-benchtime=300ms",
+          "-count=3"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 3.789913874992635,
+        "log": "bench-root.txt"
+      }
+    ],
+    "results": {
+      "BenchmarkDirectionReversed/Curves64_Contours1": {
+        "samples": [
+          {
+            "ns_per_op": 1278.0,
+            "bytes_per_op": 6208,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 1291.0,
+            "bytes_per_op": 6208,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 1278.0,
+            "bytes_per_op": 6208,
+            "allocs_per_op": 2
+          }
+        ],
+        "median_ns_per_op": 1278.0,
+        "median_bytes_per_op": 6208,
+        "median_allocs_per_op": 2
+      },
+      "BenchmarkDirectionReversed/Curves64_Contours16": {
+        "samples": [
+          {
+            "ns_per_op": 1914.0,
+            "bytes_per_op": 7168,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 1820.0,
+            "bytes_per_op": 7168,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 1921.0,
+            "bytes_per_op": 7168,
+            "allocs_per_op": 17
+          }
+        ],
+        "median_ns_per_op": 1914.0,
+        "median_bytes_per_op": 7168,
+        "median_allocs_per_op": 17
+      },
+      "BenchmarkDirectionReversed/Curves1024_Contours1": {
+        "samples": [
+          {
+            "ns_per_op": 20462.0,
+            "bytes_per_op": 98368,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 19530.0,
+            "bytes_per_op": 98368,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 19589.0,
+            "bytes_per_op": 98368,
+            "allocs_per_op": 2
+          }
+        ],
+        "median_ns_per_op": 19589.0,
+        "median_bytes_per_op": 98368,
+        "median_allocs_per_op": 2
+      },
+      "BenchmarkDirectionReversed/Curves1024_Contours16": {
+        "samples": [
+          {
+            "ns_per_op": 22388.0,
+            "bytes_per_op": 99328,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 22743.0,
+            "bytes_per_op": 99328,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 20901.0,
+            "bytes_per_op": 99328,
+            "allocs_per_op": 17
+          }
+        ],
+        "median_ns_per_op": 22388.0,
+        "median_bytes_per_op": 99328,
+        "median_allocs_per_op": 17
+      },
+      "BenchmarkDirectionReversed/Curves16384_Contours1": {
+        "samples": [
+          {
+            "ns_per_op": 277663.0,
+            "bytes_per_op": 1572928,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 278166.0,
+            "bytes_per_op": 1572928,
+            "allocs_per_op": 2
+          },
+          {
+            "ns_per_op": 279735.0,
+            "bytes_per_op": 1572929,
+            "allocs_per_op": 2
+          }
+        ],
+        "median_ns_per_op": 278166.0,
+        "median_bytes_per_op": 1572928,
+        "median_allocs_per_op": 2
+      },
+      "BenchmarkDirectionReversed/Curves16384_Contours16": {
+        "samples": [
+          {
+            "ns_per_op": 304156.0,
+            "bytes_per_op": 1573891,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 515440.0,
+            "bytes_per_op": 1573893,
+            "allocs_per_op": 17
+          },
+          {
+            "ns_per_op": 322671.0,
+            "bytes_per_op": 1573891,
+            "allocs_per_op": 17
+          }
+        ],
+        "median_ns_per_op": 322671.0,
+        "median_bytes_per_op": 1573891,
+        "median_allocs_per_op": 17
+      },
+      "BenchmarkObjectDirectionFamily/Nodes2_Curves16": {
+        "samples": [
+          {
+            "ns_per_op": 637.2,
+            "bytes_per_op": 1648,
+            "allocs_per_op": 3
+          },
+          {
+            "ns_per_op": 626.2,
+            "bytes_per_op": 1648,
+            "allocs_per_op": 3
+          },
+          {
+            "ns_per_op": 629.0,
+            "bytes_per_op": 1648,
+            "allocs_per_op": 3
+          }
+        ],
+        "median_ns_per_op": 629.0,
+        "median_bytes_per_op": 1648,
+        "median_allocs_per_op": 3
+      },
+      "BenchmarkObjectDirectionFamily/Nodes65_Curves1024": {
+        "samples": [
+          {
+            "ns_per_op": 41573.0,
+            "bytes_per_op": 117360,
+            "allocs_per_op": 158
+          },
+          {
+            "ns_per_op": 41223.0,
+            "bytes_per_op": 117360,
+            "allocs_per_op": 158
+          },
+          {
+            "ns_per_op": 42172.0,
+            "bytes_per_op": 117360,
+            "allocs_per_op": 158
+          }
+        ],
+        "median_ns_per_op": 41573.0,
+        "median_bytes_per_op": 117360,
+        "median_allocs_per_op": 158
+      },
+      "BenchmarkObjectDirectionFamily/Nodes1025_Curves16384": {
+        "samples": [
+          {
+            "ns_per_op": 705257.0,
+            "bytes_per_op": 1903711,
+            "allocs_per_op": 2109
+          },
+          {
+            "ns_per_op": 699620.0,
+            "bytes_per_op": 1903701,
+            "allocs_per_op": 2109
+          },
+          {
+            "ns_per_op": 694568.0,
+            "bytes_per_op": 1903704,
+            "allocs_per_op": 2109
+          }
+        ],
+        "median_ns_per_op": 699620.0,
+        "median_bytes_per_op": 1903704,
+        "median_allocs_per_op": 2109
+      }
+    },
+    "scope": "Path: 64/1024/16384 nonplanar explicit cubics over 1 or 16 contours. Object: group with 1/64/1024 vector children, 16 cubics each. Includes validation, output allocation and (Object) shared tree preflight, staging, publication. Input generation excluded.",
+    "excluded": "Python, I/O, rendering, encoding, Transform sampling, input construction. No Python comparison or speedup claim.",
+    "image_size": null,
+    "rendered_frames_per_operation": 0,
+    "path_MB_per_second": "accounted input/output geometry bytes divided by time, not measured hardware bandwidth"
+  },
+  "scope": {
+    "owned_sources": [
+      "path/direction.go",
+      "object_direction.go",
+      "tests/_cases/path/direction_test.go",
+      "tests/_cases/root/object_direction_test.go",
+      "tests/reference/path_direction.py",
+      "docs/PATH_DIRECTION.md"
+    ],
+    "fixtures_and_logs": "tests/data/path/direction/",
+    "protected_baseline": "preexisting-freeze.json",
+    "baseline_files_unchanged": 15,
+    "reference_checkout_clean_before_after": true,
+    "old_path_path_go_unchanged": true,
+    "object_curve_edit_go_unchanged": true,
+    "dependencies_unchanged": true,
+    "shared_docs_examples_edited": false,
+    "commit_created": false,
+    "whole_root_suite_run": false,
+    "whole_root_race_run": false,
+    "whole_repo_go_test": "compile-only -run ^$; complete path and focused root via central harness",
+    "race": "CGO enabled solely for Go race instrumentation; normal validation and benchmarks CGO0/noasm"
+  },
+  "history": {
+    "path-focused-initial.txt": "An initial alias test failed because existing Path.Clone normalizes non-nil empty curve slices to nil. Corrected the test baseline; production aliasing was not implicated. Initial raw log retained.",
+    "focused-initial.txt": "Passed the first combined direction suite before final storage accounting and stricter lazy-import source audit. Final path/root/race logs validate the final files.",
+    "reference-generation.txt": "Initial verified reference generation; generator then gained a lazy-import audit and deterministic source-hash ordering.",
+    "reference-generation-final.txt": "Final generator source and fixture; path/tree/force numeric outputs compared equal to first generation before promotion."
+  },
+  "limitations": [
+    "No ForceDirection/GetDirection API; pinned force-direction behavior audited only.",
+    "Point-only mixed contour positions and explicit closure metadata are Go representation contracts; raw malformed/trailing point-array semantics are not emulated.",
+    "No generic non-vector attr-array or OpenGL reversal.",
+    "Whole-tree structure and resource preflight apply even to receiver-only reversal; descendant geometry/visual state is not validated by that operation.",
+    "No concurrent authoring of a shared tree; outside-tree aliases of Object pointers cannot be detected.",
+    "No raster/dash/reveal/pixel equivalence or keyed/unequal topology matching claim."
+  ]
+}

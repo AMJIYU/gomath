@@ -1,0 +1,42 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkPointTimeline/TRS/ssaa1-8         	      43	   5987204 ns/op	 1883008 B/op	      37 allocs/op
+BenchmarkPointTimeline/TRS/ssaa1-8         	      39	   5964638 ns/op	 1883845 B/op	      37 allocs/op
+BenchmarkPointTimeline/TRS/ssaa1-8         	      44	   5935431 ns/op	 1883776 B/op	      37 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa1-8         	      44	   6642625 ns/op	 1959744 B/op	      38 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa1-8         	      37	   6571588 ns/op	 1959698 B/op	      38 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa1-8         	      39	   6555297 ns/op	 1959484 B/op	      38 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa1-8           	      42	   6188340 ns/op	 1455752 B/op	      21 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa1-8           	      42	   6495514 ns/op	 1455755 B/op	      21 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa1-8           	      36	   6185451 ns/op	 1456534 B/op	      21 allocs/op
+BenchmarkPointTimeline/TRS/ssaa2-8                   	      15	  16622817 ns/op	 5348469 B/op	      45 allocs/op
+BenchmarkPointTimeline/TRS/ssaa2-8                   	      15	  16003764 ns/op	 5348461 B/op	      45 allocs/op
+BenchmarkPointTimeline/TRS/ssaa2-8                   	      15	  16978622 ns/op	 5348469 B/op	      45 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa2-8         	      15	  18150142 ns/op	 5650289 B/op	      50 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa2-8         	      15	  18220542 ns/op	 5649927 B/op	      50 allocs/op
+BenchmarkPointTimeline/BuffersAndTRS/ssaa2-8         	      15	  18126650 ns/op	 5649942 B/op	      50 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa2-8           	      15	  18166383 ns/op	 5145749 B/op	      33 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa2-8           	      15	  18170614 ns/op	 5145726 B/op	      33 allocs/op
+BenchmarkPointTimeline/DirectThree/ssaa2-8           	      15	  18053667 ns/op	 5145733 B/op	      33 allocs/op
+BenchmarkPointTimeline/SnapshotBuffers-8             	    1894	    160180 ns/op	  430994 B/op	      42 allocs/op
+BenchmarkPointTimeline/SnapshotBuffers-8             	    1836	    127306 ns/op	  430994 B/op	      42 allocs/op
+BenchmarkPointTimeline/SnapshotBuffers-8             	    1822	    131432 ns/op	  430994 B/op	      42 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8                     	      48	   4965814 ns/op	 1404860 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8                     	      50	   4915697 ns/op	 1404869 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8                     	      50	   4908610 ns/op	 1404862 B/op	      25 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8                	      55	   5954851 ns/op	 1092244 B/op	      15 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8                	      39	   9183950 ns/op	 1092242 B/op	      15 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8                	      38	   9840122 ns/op	 1092242 B/op	      15 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8                     	      10	  25666458 ns/op	 4477455 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8                     	      15	  14104961 ns/op	 4476921 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8                     	      20	  12715408 ns/op	 4476948 B/op	      27 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8                	      22	  12778396 ns/op	 4164298 B/op	      17 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8                	      21	  17234534 ns/op	 4164298 B/op	      17 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8                	      21	  14029812 ns/op	 4164314 B/op	      17 allocs/op
+BenchmarkTimeline/Snapshot-8                         	    2221	    120658 ns/op	  239089 B/op	      32 allocs/op
+BenchmarkTimeline/Snapshot-8                         	    2372	    101805 ns/op	  239089 B/op	      32 allocs/op
+BenchmarkTimeline/Snapshot-8                         	    2528	     98710 ns/op	  239089 B/op	      32 allocs/op
+PASS
+ok  	gomath/scene3d	10.651s

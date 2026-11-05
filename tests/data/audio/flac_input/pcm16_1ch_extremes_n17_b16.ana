@@ -1,0 +1,12 @@
+frame=0	offset=86	bits=304	blocksize=16	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=0	residual_type=RICE	partition_order=3
+		parameter[0]=14
+		parameter[1]=0
+		parameter[2]=14
+		parameter[3]=14
+		parameter[4]=0
+		parameter[5]=14
+		parameter[6]=0
+		parameter[7]=14
+frame=1	offset=124	bits=96	blocksize=1	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM

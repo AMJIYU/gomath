@@ -1,0 +1,27 @@
+=== RUN   TestPointLightLegacyHashes
+    multilight_legacy_test.go:17: constant/ssaa1 947aff8d249d054ecd22dddd9939dc690f49fbcd3324fc2fa1edd9a5810c57e0
+    multilight_legacy_test.go:17: constant/ssaa2 4d05b8b32e07a586cc18013b4c43bc284397a9e55dab2b17b3354a92729249f7
+    multilight_legacy_test.go:17: constant/ssaa4 d64126ab0450240550dfed97ce316dea5a8c604b95f7b66e7c354003657a4adf
+    multilight_legacy_test.go:17: opaque-bilinear/ssaa1 ef64636a2253615b63dc456bde7cc86ec20902b85da3f9af6a7763751b6863a4
+    multilight_legacy_test.go:17: opaque-bilinear/ssaa2 b6c281d6f421200bef924878950ec9f3de0d65df183c477eb0a9505fb6d83ee7
+    multilight_legacy_test.go:17: opaque-bilinear/ssaa4 16d8b902a28cf1e57ffd6a4a72387e67e7740e087b6d02ecd01df0bb813e3bd7
+    multilight_legacy_test.go:17: tinted-bilinear/ssaa1 4081622d229a40180be39d84057665ea11e2f8ac62e318019bac2de9db394e26
+    multilight_legacy_test.go:17: tinted-bilinear/ssaa2 9d83cbc1728ebd3358ea402b7646fed451a097c68ac116646e11843437075214
+    multilight_legacy_test.go:17: tinted-bilinear/ssaa4 bc8e3a915b1c113a8289b0830410497eab35bf3ec3174d955c40d4546fa3cfc4
+--- PASS: TestPointLightLegacyHashes (0.00s)
+=== RUN   TestDirectionalLightLegacyHashes
+=== RUN   TestDirectionalLightLegacyHashes/opaque1
+=== RUN   TestDirectionalLightLegacyHashes/opaque2
+=== RUN   TestDirectionalLightLegacyHashes/opaque4
+=== RUN   TestDirectionalLightLegacyHashes/alphaUV
+=== RUN   TestDirectionalLightLegacyHashes/shadow
+=== RUN   TestDirectionalLightLegacyHashes/points
+--- PASS: TestDirectionalLightLegacyHashes (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque1 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque2 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/opaque4 (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/alphaUV (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/shadow (0.00s)
+    --- PASS: TestDirectionalLightLegacyHashes/points (0.00s)
+PASS
+ok  	gomath/three	0.011s

@@ -1,0 +1,561 @@
+--- baseline/internal/h264/VALIDATION.md
++++ optimized/internal/h264/VALIDATION.md
+@@ -704,3 +704,140 @@
+ in `tests/_cases/internal/h264/validate_predictive.py`; new
+ `tests/data/internal/h264/inter_vectors.json`; and this record. Existing three
+ golden files were not edited. No files outside the codec ownership were changed.
++
++## InterResidual allocation and bit-writer optimization (2026-11-04)
++
++Public APIs, option defaults, mode decisions, QP, cost weights, coefficient
++selection, frame order and parameter sets are unchanged. This slice optimizes
++the enabled path without changing its compression or reconstruction. Before
++editing, a fresh 20-file source/test/fixture/document snapshot was recorded in
++`tests/data/internal/h264/perf_inter_20261104/baseline_sources.zip`, with sizes
++and SHA-256 values in `baseline_files.json`. This is the baseline for this
++section, not the earlier GOMAXPROCS8 measurements above.
++
++### Profile and focused changes
++
++Two-second CPU and allocation profiles were captured before and after for
++`static/searchfalse/intertrue` and `noisechange/searchtrue/intertrue`. Baseline
++CPU samples attributed 12.84% and 22.22% flat to single-bit writes. Static
++allocation space attributed 72.31% to new YUV pictures, with another 14.49%
++directly in `encodePResidual`; CPU included 15.60% memory clearing. Profiles
++include benchmark setup and profiler allocations, unlike benchmark B/op, so
++their percentages are diagnostic and are not per-frame allocation measurements.
++
++- The shared bit writer now appends byte fragments, masks partial writes and
++  emits Exp-Golomb/CAVLC zero prefixes in bulk. Selected trial syntax is joined
++  by copying aligned bytes or carrying unaligned bytes, instead of bit loops.
++  This also affects PCM/intra and InterResidual=false; all bytes remain equal.
++- Enabled predictive encoders reuse their source YUV, spare reconstruction,
++  count/mode grids, bounded trial buffers and RBSP capacity under the existing
++  mutex. Source conversion overwrites every padded sample. Each macroblock's
++  trial/selected reconstruction overwrites its complete target region. Counts
++  and modes are initialized per picture. Reference and target rotate only on
++  successful P encoding and are always distinct. IDR encoding still allocates
++  its own buffers; returned NALs still own independent allocations.
++- Reset releases the reference and workspace. ForceIDR retains reusable storage.
++  Invalid input is rejected before touching workspace or sequence state.
++
++Optimized static CPU memory clearing was 0.97% flat; the remaining main costs
++include transform/quantization, intra trials and CAVLC. In the changing-noise
++profile, chooseLuma4x4 remained 36.22% cumulative and CAVLC 33.51%; bulk writes
++were still 18.38% flat. These sample shares are not additive speedups. No trials,
++quality checks or coding branches were removed to improve the measurements.
++
++### Matched five-sample measurements
++
++Apple M2, darwin/arm64, macOS15.7.1, Go1.27.3, **CGO_ENABLED=0, noasm,
++GOMAXPROCS=1**, serial `-p 1`, five300ms samples per case. The runner supplies
++`-tags noasm`. Baseline and optimized runs use the exact same unchanged
++`BenchmarkInterResidual`: fixed320x180, padded320x192, QP24, GOP60, four input
++patterns, both ModeSearch values and both InterResidual settings. One benchmark
++operation encodes60 frames. Conversion, matching, full inter/intra trials,
++quantization, reconstruction, NAL creation and one IDR per group are included.
++Input construction, encoder construction, SPS/PPS, muxing, filesystem, parsing
++and independent decoding are excluded. Workspace startup is included and
++amortized over the benchmark; these are not first-frame/cold-start timings.
++
++```sh
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^$' -bench='^BenchmarkInterResidual$' -benchmem \
++  -benchtime=300ms -count=5 -p 1
++python3 tests/_cases/internal/h264/summarize_perf.py \
++  tests/data/internal/h264/perf_inter_20261104
++```
++
++Enabled cases below show medians of five samples. B/frame and allocations/frame
++divide B/op and allocs/op by60. The raw files and generated summary retain
++**all five samples and minimum/maximum**, including disabled controls:
++`baseline_bench.txt`, `optimized_bench.txt`, `benchmark_summary.json` and
++`benchmark_summary.md` in the capture directory.
++
++| Pattern / ModeSearch | Baseline → optimized ms/frame | Time change | Baseline → optimized B/frame | Baseline → optimized allocations/frame |
++|---|---:|---:|---:|---:|
++| static / false | 3.2441 → 2.8476 | -12.2% | 244,073.5 → 6,457.2 | 12.967 → 1.267 |
++| static / true | 6.0259 → 5.2776 | -12.4% | 248,271.7 → 8,606.1 | 14.967 → 1.450 |
++| drift / false | 3.2016 → 3.0479 | -4.8% | 245,512.5 → 7,896.3 | 12.967 → 1.267 |
++| drift / true | 5.7811 → 5.4869 | -5.1% | 249,658.7 → 9,993.1 | 14.967 → 1.450 |
++| local / false | 0.3452 → 0.3331 | -3.5% | 243,758.4 → 4,362.5 | 12.967 → 1.167 |
++| local / true | 0.3910 → 0.3724 | -4.8% | 247,982.7 → 4,454.8 | 14.967 → 1.217 |
++| changing-noise / false | 4.6423 → 3.8516 | -17.0% | 272,247.5 → 34,631.2 | 12.967 → 1.267 |
++| changing-noise / true | 7.1299 → 6.3120 | -11.5% | 275,063.5 → 35,397.9 | 14.967 → 1.450 |
++
++Enabled allocation volume fell87.1%–98.2% for these cases. Disabled controls
++retained exactly the previous allocation counts/volumes; their observed timing
++medians fell1.9%–14.4%, including the shared writer changes. Runs were sequential
++on a shared machine, and baseline timings have visible outliers (for example
++static/searchfalse/interfalse spans1.9340–2.6136ms/frame). Five samples do not
++establish statistical significance or a general speed guarantee. Enabled inter
++remains slower than its optimized disabled control on every measured pattern,
++by up to about2.07x; compression/quality tradeoffs remain those documented above.
++
++### Retained-memory cost and correctness
++
++Reduced allocation is paid for with longer-lived buffers. After60 static
++320x180 frames, dynamic byte-slice capacities retained by the encoder are:
++
++| Configuration | Retained capacity |
++|---|---:|
++| baseline enabled, or optimized disabled | 92,160B |
++| optimized enabled / ModeSearch false | 321,152B |
++| optimized enabled / ModeSearch true | 325,120B |
++| any configuration after Reset | 0B |
++
++These are actual slice capacities, excluding struct/slice headers, runtime
++allocator overhead, caller images and returned NALs. They are not RSS/peak heap
++claims. The enabled encoder retains source plus two reconstruction pictures,
++contexts, trial storage and RBSP high-water capacity. Larger dimensions and
++more complex frames increase capacity; a long-lived idle instance retains it
++until Reset or collection. ForceIDR does not shrink it. The first IDR, GOP1 and
++the disabled path do not allocate the optional workspace.
++
++Full owned-package tests passed with **99.7% statement coverage**, including all
++existing PCM/intra/ModeSearch/predictive/inter fixtures and all52 QPs. New central
++tests compare bulk writes with an independent bit specification over all byte
++alignments and widths0..64; check buffer/reference separation across periodic
++and forced IDRs, errors and Reset; verify retained capacities; and ensure old
++returned NALs survive later encoding and Reset without modification. Existing
++synthetic syntax tests cover every concatenation alignment. Serialization and
++workspace tests additionally passed three times with GOMAXPROCS8. Targeted vet
++and a scoped noasm dependency audit passed:62 standard-library dependencies,
++no external/runtime native inputs, os/exec or plugin. Race instrumentation and
++whole-repository tests were left to the parent integration task.
++
++Fresh optimized vectors were independently strictly decoded with FFmpeg8.0.1 /
++libavcodec62.11.100: **428 streams,6,708 frames,50 fresh IDR entries**, every
++visible Y/Cb/Cr byte equal to the encoder reconstruction. The generated manifest
++was byte-identical to the existing `inter_vectors.json` (SHA-256
++`73ac76a1e775a9ab044926ec82d23a6b63e6858e92ee99e2987c267765f80b8e`). All four
++existing golden files still match the fresh baseline hashes. Therefore sizes,
++quality, skip/mode decisions and reconstruction for those fixtures are exactly
++unchanged, not merely within a tolerance. Independent decoder tooling remains
++development-only; normal Go tests require no FFmpeg/Python/subprocess.
++
++Captured evidence includes raw benchmarks, both before/after CPU/allocation
++profiles with text tops, source diff and before/after hashes, package/concurrency
++test logs, retained-capacity logs, dependency audit and independent decode JSON.
++Temporary decoder streams and test binaries were removed after verification.
++Production edits are limited to `internal/h264/{pcm,cavlc,intra,inter,predictive}.go`;
++new tests/tooling are `tests/_cases/internal/h264/{performance_test.go,summarize_perf.py}`.
++Only owned codec/test/data paths and this validation record were changed.
+--- baseline/internal/h264/cavlc.go
++++ optimized/internal/h264/cavlc.go
+@@ -93,9 +93,7 @@
+ 			tail -= 15
+ 		}
+ 	}
+-	for range prefix {
+-		w.bit(0)
+-	}
++	w.uint(0, prefix)
+ 	w.bit(1)
+ 	w.uint(uint32(tail), size)
+ }
+--- baseline/internal/h264/inter.go
++++ optimized/internal/h264/inter.go
+@@ -207,12 +207,21 @@
+ }
+ 
+ func appendBits(w, src *bits) {
++	if w.used == 0 {
++		w.data = append(w.data, src.data...)
++		w.used = src.used
++		return
++	}
+ 	full := len(src.data)
+ 	if src.used != 0 {
+ 		full--
+ 	}
++	// The destination alignment stays fixed for each complete source byte.
++	// Carry its low bits into a new partial byte instead of expanding 8 bits.
++	used := w.used
+ 	for _, b := range src.data[:full] {
+-		w.uint(uint32(b), 8)
++		w.data[len(w.data)-1] |= b >> used
++		w.data = append(w.data, b<<(8-used))
+ 	}
+ 	if src.used != 0 {
+ 		w.uint(uint32(src.data[full]>>(8-src.used)), int(src.used))
+@@ -227,25 +236,49 @@
+ 	return n
+ }
+ 
++// The mutex-owned workspace retains conversion/context/syntax buffers and one
++// spare reconstruction. Reference and target rotate after successful P coding;
++// returned NALs are independently allocated. Reset releases the whole workspace.
++type interWorkspace struct {
++	src, rec                         picture420
++	counts                           [3][]uint8
++	modes, scratch                   []byte
++	interScratch, intraScratch, rbsp []byte
++}
++
++func (e *PredictiveEncoder) residualWorkspace(pw, ph int) *interWorkspace {
++	if e.workspace == nil {
++		ws := &interWorkspace{
++			src: newPicture420(pw, ph), rec: newPicture420(pw, ph),
++			counts:       [3][]uint8{make([]uint8, pw*ph/16), make([]uint8, pw*ph/64), make([]uint8, pw*ph/64)},
++			interScratch: make([]byte, 4096), intraScratch: make([]byte, 4096), rbsp: make([]byte, 0, pw*ph/2),
++		}
++		if e.intra.modeSearch {
++			ws.modes, ws.scratch = make([]byte, pw*ph/16), make([]byte, 128)
++		}
++		e.workspace = ws
++	}
++	ws := e.workspace
++	for _, counts := range ws.counts {
++		clear(counts)
++	}
++	for i := range ws.modes {
++		ws.modes[i] = intraDC
++	}
++	// Pixels need no clear: conversion overwrites every source sample; every
++	// macroblock trial/selection fully writes its target before it can be used.
++	return ws
++}
++
+ func (e *PredictiveEncoder) encodePResidual(img *image.RGBA, frameNum uint8) ([]byte, picture420, int) {
+ 	width, height := e.intra.geometry.Width, e.intra.geometry.Height
+ 	pw, ph := (width+15)/16*16, (height+15)/16*16
+-	src, rec := makePicture420(img, width, height, pw, ph), newPicture420(pw, ph)
+-	counts := [3][]uint8{make([]uint8, pw*ph/16), make([]uint8, pw*ph/64), make([]uint8, pw*ph/64)}
+-	var modes, scratch []byte
+-	if e.intra.modeSearch {
+-		modes, scratch = make([]byte, pw*ph/16), make([]byte, 128)
+-		for i := range modes {
+-			modes[i] = intraDC
+-		}
+-	}
+-	// Two bounded macroblock trials, reusing frame-local buffers. There is no
+-	// combinatorial/recursive mode search. Coefficients fit Baseline's level
+-	// bound; 4096 bytes exceeds the worst 24 blocks * 16 levels * 28 bits plus
+-	// syntax. No buffer is shared between Encode calls.
+-	interScratch, intraScratch := make([]byte, 4096), make([]byte, 4096)
+-	var w bits
+-	w.data = make([]byte, 0, pw*ph/2)
++	ws := e.residualWorkspace(pw, ph)
++	src, rec := ws.src, ws.rec
++	fillPicture420(src, img, width, height, pw, ph)
++	counts, modes, scratch := ws.counts, ws.modes, ws.scratch
++	interScratch, intraScratch := ws.interScratch, ws.intraScratch
++	w := bits{data: ws.rbsp[:0]}
+ 	w.ue(0)
+ 	w.ue(0)
+ 	w.ue(0)
+@@ -305,5 +338,9 @@
+ 		w.ue(uint32(run))
+ 	}
+ 	w.trailing()
++	ws.rbsp = w.data
++	// e.reference is still the old reference here. Encode commits rec only
++	// after return, so the next target is always distinct from its reference.
++	ws.rec = e.reference
+ 	return nal(0x41, w.data), rec, skipped
+ }
+--- baseline/internal/h264/intra.go
++++ optimized/internal/h264/intra.go
+@@ -85,6 +85,13 @@
+ 
+ func makePicture420(img *image.RGBA, width, height, pw, ph int) picture420 {
+ 	p := newPicture420(pw, ph)
++	fillPicture420(p, img, width, height, pw, ph)
++	return p
++}
++
++// fillPicture420 overwrites every padded sample, allowing serialized encoders
++// to reuse conversion storage without sharing their reconstructed reference.
++func fillPicture420(p picture420, img *image.RGBA, width, height, pw, ph int) {
+ 	for y := 0; y < ph; y += 2 {
+ 		for x := 0; x < pw; x += 2 {
+ 			var cb, cr int
+@@ -100,7 +107,6 @@
+ 			p.planes[2][y/2*(pw/2)+x/2] = byte((cr + 2) / 4)
+ 		}
+ 	}
+-	return p
+ }
+ 
+ func (e *IntraEncoder) encode(img *image.RGBA) ([]byte, picture420, error) {
+--- baseline/internal/h264/pcm.go
++++ optimized/internal/h264/pcm.go
+@@ -31,9 +31,27 @@
+ 	w.data[len(w.data)-1] |= byte(v&1) << (7 - w.used)
+ 	w.used = (w.used + 1) % 8
+ }
++
++// Write whole byte fragments rather than repeatedly appending a single bit.
++// Mask each partial fragment: callers may supply set bits above the width.
+ func (w *bits) uint(v uint32, n int) {
+-	for i := n - 1; i >= 0; i-- {
+-		w.bit(v >> uint(i))
++	for n > 0 {
++		if w.used == 0 {
++			if n >= 8 {
++				n -= 8
++				w.data = append(w.data, byte(v>>uint(n)))
++				continue
++			}
++			w.data = append(w.data, byte(v<<uint(8-n)))
++			w.used = uint8(n)
++			return
++		}
++		free := 8 - int(w.used)
++		take := min(n, free)
++		n -= take
++		fragment := byte(v>>uint(n)) & byte((1<<take)-1)
++		w.data[len(w.data)-1] |= fragment << uint(free-take)
++		w.used = (w.used + uint8(take)) & 7
+ 	}
+ }
+ func (w *bits) ue(v uint32) {
+@@ -42,9 +60,7 @@
+ 	for z := v; z > 1; z >>= 1 {
+ 		n++
+ 	}
+-	for range n {
+-		w.bit(0)
+-	}
++	w.uint(0, n)
+ 	w.uint(v, n+1)
+ }
+ func (w *bits) se(v int32) {
+--- baseline/internal/h264/predictive.go
++++ optimized/internal/h264/predictive.go
+@@ -50,6 +50,7 @@
+ // Use this encoder's SPS/PPS: NewIntra's SPS has no reference-picture storage.
+ type PredictiveEncoder struct {
+ 	interResidual bool
++	workspace     *interWorkspace
+ 	intra         *IntraEncoder
+ 	gop           int
+ 	mu            sync.Mutex
+@@ -87,12 +88,13 @@
+ 	e.forceIDR = true
+ }
+ 
+-// Reset also releases the retained reference. The next successful output is an
+-// IDR. Parameter sets and options remain unchanged.
++// Reset also releases the retained reference and optional reusable workspace.
++// The next successful output is an IDR. Parameter sets and options remain unchanged.
+ func (e *PredictiveEncoder) Reset() {
+ 	e.mu.Lock()
+ 	defer e.mu.Unlock()
+ 	e.reference = picture420{}
++	e.workspace = nil
+ 	e.position = 0
+ 	e.forceIDR = true
+ }
+--- /dev/null
++++ optimized/tests/_cases/internal/h264/performance_test.go
+@@ -0,0 +1,139 @@
++package h264
++
++import (
++	"bytes"
++	"fmt"
++	"testing"
++)
++
++// Compare packed writes with a direct single-bit specification, including set
++// bits above the requested width, empty widths and widths exceeding uint32.
++func TestBitsBulkWrites(t *testing.T) {
++	for prefix := range 8 {
++		for n := range 65 {
++			for _, v := range []uint32{0, 1, 0xffffffff, 0x89abcdef, 0x12345678, 0x80000000} {
++				var w bits
++				var want []byte
++				used := 0
++				write := func(bit byte) {
++					if used == 0 {
++						want = append(want, 0)
++					}
++					want[len(want)-1] |= (bit & 1) << uint(7-used)
++					used = (used + 1) % 8
++				}
++				for i := range prefix {
++					w.bit(uint32(i))
++					write(byte(i))
++				}
++				w.uint(v, n)
++				for i := n - 1; i >= 0; i-- {
++					write(byte(v >> uint(i)))
++				}
++				if !bytes.Equal(w.data, want) || int(w.used) != used {
++					t.Fatal("bulk bit write", prefix, n, v, w.data, want, w.used, used)
++				}
++			}
++		}
++	}
++}
++
++func pictureCapacity(p picture420) int {
++	n := 0
++	for _, plane := range p.planes {
++		n += cap(plane)
++	}
++	return n
++}
++
++// Dynamic byte capacities retained by one encoder, excluding slice headers,
++// scalar struct fields, returned NALs, caller inputs and the runtime allocator.
++func encoderRetainedCapacity(e *PredictiveEncoder) int {
++	n := pictureCapacity(e.reference)
++	if ws := e.workspace; ws != nil {
++		n += pictureCapacity(ws.src) + pictureCapacity(ws.rec)
++		for _, count := range ws.counts {
++			n += cap(count)
++		}
++		for _, buf := range [][]byte{ws.modes, ws.scratch, ws.interScratch, ws.intraScratch, ws.rbsp} {
++			n += cap(buf)
++		}
++	}
++	return n
++}
++
++func TestInterWorkspaceLifetime(t *testing.T) {
++	e, _ := NewPredictive(34, 38, 24, PredictiveOptions{QP: 24, ModeSearch: true, GOP: 7, InterResidual: true})
++	var nals, saved [][]byte
++	for f := range 40 {
++		out, err := e.Encode(interImage("drift", 34, 38, f))
++		if err != nil {
++			t.Fatal(err)
++		}
++		nals = append(nals, out.NAL)
++		saved = append(saved, bytes.Clone(out.NAL))
++		if ws := e.workspace; ws != nil {
++			for c := range 3 {
++				if &e.reference.planes[c][0] == &ws.rec.planes[c][0] || &e.reference.planes[c][0] == &ws.src.planes[c][0] || &ws.rec.planes[c][0] == &ws.src.planes[c][0] {
++					t.Fatal("reference/target/source alias", f, c)
++				}
++			}
++		}
++	}
++	ws := e.workspace
++	if ws == nil {
++		t.Fatal("workspace not used")
++	}
++	e.ForceIDR()
++	if _, err := e.Encode(nil); err == nil || e.workspace != ws {
++		t.Fatal("error consumed/replaced workspace")
++	}
++	out, err := e.Encode(interImage("static", 34, 38, 0))
++	if err != nil || !out.Keyframe {
++		t.Fatal("forced IDR recovery", err)
++	}
++	if e.workspace != ws {
++		t.Fatal("ForceIDR discarded reusable storage")
++	}
++	e.Reset()
++	if e.workspace != nil || e.reference.planes[0] != nil || encoderRetainedCapacity(e) != 0 {
++		t.Fatal("Reset retained workspace/reference")
++	}
++	for f := range 3 {
++		if _, err := e.Encode(interImage("static", 34, 38, f)); err != nil {
++			t.Fatal(err)
++		}
++	}
++	if e.workspace == ws {
++		t.Fatal("Reset reused retained workspace")
++	}
++	for i, nal := range nals {
++		if !bytes.Equal(nal, saved[i]) {
++			t.Fatal("returned NAL was overwritten", i)
++		}
++	}
++}
++
++func TestInterRetainedCapacity(t *testing.T) {
++	for _, search := range []bool{false, true} {
++		for _, enabled := range []bool{false, true} {
++			t.Run(fmt.Sprintf("search%t/inter%t", search, enabled), func(t *testing.T) {
++				e, _ := NewPredictive(320, 180, 24, PredictiveOptions{QP: 24, ModeSearch: search, GOP: 60, InterResidual: enabled})
++				im := interImage("static", 320, 180, 0)
++				for range 60 {
++					if _, err := e.Encode(im); err != nil {
++						t.Fatal(err)
++					}
++				}
++				if !enabled && e.workspace != nil {
++					t.Fatal("disabled path allocated workspace")
++				}
++				t.Logf("retained dynamic byte capacity=%d", encoderRetainedCapacity(e))
++				e.Reset()
++				if encoderRetainedCapacity(e) != 0 {
++					t.Fatal("Reset retained dynamic storage")
++				}
++			})
++		}
++	}
++}
+--- /dev/null
++++ optimized/tests/_cases/internal/h264/summarize_perf.py
+@@ -0,0 +1,66 @@
++#!/usr/bin/env python3
++"""Development-only summary of matched five-sample InterResidual benchmarks.
++
++Usage: python3 tests/_cases/internal/h264/summarize_perf.py <capture-directory>
++Reads baseline_bench.txt / optimized_bench.txt and preserves individual samples
++in benchmark_summary.json. B/op and allocs/op cover 60 frames, not one frame.
++Only the Python standard library is needed; this is not part of Go tests.
++"""
++import argparse
++import json
++import statistics
++
++
++def read(path):
++    cases = {}
++    for line in path.read_text().splitlines():
++        if not line.startswith("BenchmarkInterResidual/"):
++            continue
++        fields = line.split()
++        sample = {unit: float(fields[fields.index(unit) - 1])
++                  for unit in ("ns/frame", "B/op", "allocs/op")}
++        cases.setdefault(fields[0].split("/", 1)[1], []).append(sample)
++    assert len(cases) == 16, (path, len(cases))
++    for name, samples in cases.items():
++        assert len(samples) == 5, (path, name, len(samples))
++    return cases
++
++
++def summarize(samples):
++    return {unit: {"median": statistics.median(s[unit] for s in samples),
++                   "min": min(s[unit] for s in samples),
++                   "max": max(s[unit] for s in samples)}
++            for unit in samples[0]}
++
++
++def main():
++    from pathlib import Path
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("capture", type=Path)
++    directory = parser.parse_args().capture
++    baseline = read(directory / "baseline_bench.txt")
++    optimized = read(directory / "optimized_bench.txt")
++    assert baseline.keys() == optimized.keys()
++    results = {}
++    rows = ["| Pattern / search / inter | Baseline median [min,max] ms/frame | "
++            "Optimized median [min,max] ms/frame | Time change | B/frame before → after | "
++            "Allocations/frame before → after |",
++            "|---|---:|---:|---:|---:|---:|"]
++    for name, before in baseline.items():
++        after = optimized[name]
++        a, b = summarize(before), summarize(after)
++        change = 100 * (b["ns/frame"]["median"] / a["ns/frame"]["median"] - 1)
++        results[name] = {"baseline_samples": before, "optimized_samples": after,
++                         "baseline": a, "optimized": b, "time_change_percent": change}
++        times = ["{median:.4f} [{min:.4f},{max:.4f}]".format(
++            **{k: v / 1e6 for k, v in x["ns/frame"].items()}) for x in (a, b)]
++        rows.append(f"| {name} | {times[0]} | {times[1]} | {change:+.1f}% | "
++                    f"{a['B/op']['median']/60:,.1f} → {b['B/op']['median']/60:,.1f} | "
++                    f"{a['allocs/op']['median']/60:.3f} → {b['allocs/op']['median']/60:.3f} |")
++    (directory / "benchmark_summary.json").write_text(json.dumps(results, indent=2) + "\n")
++    (directory / "benchmark_summary.md").write_text("\n".join(rows) + "\n")
++    print("\n".join(rows))
++
++
++if __name__ == "__main__":
++    main()

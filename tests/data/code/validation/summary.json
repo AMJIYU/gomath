@@ -1,0 +1,166 @@
+{
+  "status": "frozen staged candidate, ready for parent promotion",
+  "date": "2026-11-05",
+  "manifest_sha256": "3e958c1ce8d71751d5349bbe08b3d76a50cc92fc3eccf94b82cc0abe51d59a4b",
+  "frozen_files": 44,
+  "platform": {
+    "go": "go1.27.3",
+    "os": "macOS 15.7.1 (24G231)",
+    "arch": "darwin/arm64",
+    "cpu": "Apple M2"
+  },
+  "checks": {
+    "focused_tests": "PASS, CGO_ENABLED=0, noasm, vet=all, 96.1% statements",
+    "focused_race": "PASS, 43.340s",
+    "focused_vet": "PASS",
+    "focused_purecheck": "PASS: focused candidate plus 19 non-standard dependencies; CGO_ENABLED=0; noasm; no native inputs, runtime process launch or test imports",
+    "fuzz": "PASS, 21516 executions; 5s requested, 6.118s including shutdown"
+  },
+  "pixel_records": [
+    {
+      "name": "grid",
+      "rgb_mae_bytes": 0.028458,
+      "nonblack_iou": 1.0
+    },
+    {
+      "name": "multiline",
+      "rgb_mae_bytes": 0.015816,
+      "nonblack_iou": 1.0
+    },
+    {
+      "name": "whitespace",
+      "rgb_mae_bytes": 0.002353,
+      "nonblack_iou": 1.0
+    },
+    {
+      "name": "tokens",
+      "rgb_mae_bytes": 0.01881,
+      "nonblack_iou": 0.992605
+    },
+    {
+      "name": "animation-source",
+      "rgb_mae_bytes": 0.00235,
+      "nonblack_iou": 0.997452
+    },
+    {
+      "name": "animation-target",
+      "rgb_mae_bytes": 0.002356,
+      "nonblack_iou": 0.99645
+    },
+    {
+      "name": "write-000",
+      "rgb_mae_bytes": 0.0,
+      "nonblack_iou": 1.0
+    },
+    {
+      "name": "write-025",
+      "rgb_mae_bytes": 0.001208,
+      "nonblack_iou": 0.994797
+    },
+    {
+      "name": "write-050",
+      "rgb_mae_bytes": 0.001617,
+      "nonblack_iou": 0.99788
+    },
+    {
+      "name": "write-075",
+      "rgb_mae_bytes": 0.002069,
+      "nonblack_iou": 0.996623
+    },
+    {
+      "name": "write-100",
+      "rgb_mae_bytes": 0.00235,
+      "nonblack_iou": 0.997452
+    },
+    {
+      "name": "transform-000",
+      "rgb_mae_bytes": 0.002348,
+      "nonblack_iou": 0.997961
+    },
+    {
+      "name": "transform-025",
+      "rgb_mae_bytes": 0.002372,
+      "nonblack_iou": 0.993616
+    },
+    {
+      "name": "transform-050",
+      "rgb_mae_bytes": 0.002484,
+      "nonblack_iou": 0.993518
+    },
+    {
+      "name": "transform-075",
+      "rgb_mae_bytes": 0.002449,
+      "nonblack_iou": 0.996661
+    },
+    {
+      "name": "transform-100",
+      "rgb_mae_bytes": 0.002356,
+      "nonblack_iou": 0.99645
+    }
+  ],
+  "benchmarks": {
+    "samples": {
+      "BenchmarkCodeNewGo100Lines": [
+        {
+          "ns_per_op": 7597678,
+          "bytes_per_op": 16626839,
+          "allocs_per_op": 28514
+        },
+        {
+          "ns_per_op": 7543579,
+          "bytes_per_op": 16625559,
+          "allocs_per_op": 28514
+        },
+        {
+          "ns_per_op": 11346627,
+          "bytes_per_op": 16625588,
+          "allocs_per_op": 28514
+        }
+      ],
+      "BenchmarkCodeSnapshotCopy100Lines": [
+        {
+          "ns_per_op": 2462695,
+          "bytes_per_op": 7776344,
+          "allocs_per_op": 12199
+        },
+        {
+          "ns_per_op": 1327573,
+          "bytes_per_op": 7775963,
+          "allocs_per_op": 12199
+        },
+        {
+          "ns_per_op": 1309211,
+          "bytes_per_op": 7776787,
+          "allocs_per_op": 12199
+        }
+      ],
+      "BenchmarkCodeRender100Lines": [
+        {
+          "ns_per_op": 4044989,
+          "bytes_per_op": 6477386,
+          "allocs_per_op": 14353
+        },
+        {
+          "ns_per_op": 4743573,
+          "bytes_per_op": 6477393,
+          "allocs_per_op": 14353
+        },
+        {
+          "ns_per_op": 4060315,
+          "bytes_per_op": 6477383,
+          "allocs_per_op": 14353
+        }
+      ]
+    },
+    "median_ns": {
+      "BenchmarkCodeNewGo100Lines": 7597678,
+      "BenchmarkCodeSnapshotCopy100Lines": 1327573,
+      "BenchmarkCodeRender100Lines": 4060315
+    },
+    "workload": "Construction/copy: 100 code rows + header + final empty line = 102 physical lines, 4118 UTF-8 bytes; raster: 100 shorter code rows + header + final empty line, one 1200x720 frame, one worker. No speedup claim.",
+    "excluded": "Reference generation, file I/O, encoding; raster also excludes font/layout construction."
+  },
+  "earlier_repository_logs": "full-tests/full-race/full-vet/purecheck/staged-purecheck were captured before the final source freeze and parent checkpoint deferral; they are not the final parent integration checkpoint.",
+  "promotion": "Move code/_staging/*.go to code/ and tests/_cases/code/_staging/*_test.go to tests/_cases/code/. No package/import changes in those files; manifest uses promotion paths. Parent owns examples/README/PARITY/STATUS.",
+  "limitations": "Go lexical display only; no Python, Pygments/Pango parity, semantic highlighting, file reads, runtime highlighters, shaping, ligatures, fallback, rounded/window decorations or source retokenization after morphs."
+}

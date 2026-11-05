@@ -1,0 +1,1458 @@
+{
+  "provenance": "Source-font cmap/hmtx/outlines via fontTools BoundsPen; raster via Pillow/FreeType, never gomath.",
+  "fonttools": "4.45.1",
+  "pillow": "11.2.1",
+  "freetype": "2.13.3",
+  "raster": {
+    "width": 320,
+    "height": 320,
+    "ppem": 256,
+    "origin_x": 32,
+    "baseline_y": 224
+  },
+  "aliases": {
+    "owns": "ni"
+  },
+  "records": [
+    {
+      "command": "in",
+      "rune": "∈",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2208",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.027,
+        0.625,
+        0.531
+      ],
+      "raster": "in-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "in",
+      "rune": "∈",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2208",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "in-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "in",
+      "rune": "∈",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2208",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.027,
+        0.625,
+        0.531
+      ],
+      "raster": "in-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "in",
+      "rune": "∈",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2208",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "in-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "notin",
+      "rune": "∉",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2209",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.157,
+        0.625,
+        0.662
+      ],
+      "raster": "notin-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "notin",
+      "rune": "∉",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2209",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.146,
+        0.668,
+        0.68
+      ],
+      "raster": "notin-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "notin",
+      "rune": "∉",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2209",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.157,
+        0.625,
+        0.662
+      ],
+      "raster": "notin-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "notin",
+      "rune": "∉",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2209",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.146,
+        0.668,
+        0.68
+      ],
+      "raster": "notin-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "ni",
+      "rune": "∋",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni220B",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.027,
+        0.625,
+        0.531
+      ],
+      "raster": "ni-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "ni",
+      "rune": "∋",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni220B",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "ni-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "ni",
+      "rune": "∋",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni220B",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.06,
+        -0.027,
+        0.625,
+        0.531
+      ],
+      "raster": "ni-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "ni",
+      "rune": "∋",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni220B",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "ni-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subset",
+      "rune": "⊂",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2282",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.025,
+        0.621,
+        0.531
+      ],
+      "raster": "subset-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subset",
+      "rune": "⊂",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2282",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "subset-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subset",
+      "rune": "⊂",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2282",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.025,
+        0.621,
+        0.531
+      ],
+      "raster": "subset-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subset",
+      "rune": "⊂",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2282",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "subset-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supset",
+      "rune": "⊃",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2283",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.025,
+        0.621,
+        0.531
+      ],
+      "raster": "supset-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supset",
+      "rune": "⊃",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2283",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "supset-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supset",
+      "rune": "⊃",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2283",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.025,
+        0.621,
+        0.531
+      ],
+      "raster": "supset-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supset",
+      "rune": "⊃",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2283",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.013,
+        0.668,
+        0.547
+      ],
+      "raster": "supset-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subseteq",
+      "rune": "⊆",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2286",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.103,
+        0.621,
+        0.607
+      ],
+      "raster": "subseteq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subseteq",
+      "rune": "⊆",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2286",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.101,
+        0.668,
+        0.647
+      ],
+      "raster": "subseteq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subseteq",
+      "rune": "⊆",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2286",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.103,
+        0.621,
+        0.607
+      ],
+      "raster": "subseteq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subseteq",
+      "rune": "⊆",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2286",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.101,
+        0.668,
+        0.647
+      ],
+      "raster": "subseteq-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supseteq",
+      "rune": "⊇",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2287",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.103,
+        0.621,
+        0.607
+      ],
+      "raster": "supseteq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supseteq",
+      "rune": "⊇",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2287",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.101,
+        0.668,
+        0.647
+      ],
+      "raster": "supseteq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supseteq",
+      "rune": "⊇",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2287",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.103,
+        0.621,
+        0.607
+      ],
+      "raster": "supseteq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supseteq",
+      "rune": "⊇",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2287",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.101,
+        0.668,
+        0.647
+      ],
+      "raster": "supseteq-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "cup",
+      "rune": "∪",
+      "style": 0,
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "union",
+      "native": true,
+      "advance_em": 0.71875,
+      "bbox_em": [
+        0.0703125,
+        0.0,
+        0.6484375,
+        0.72265625
+      ],
+      "raster": "cup-regular.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "cup",
+      "rune": "∪",
+      "style": 1,
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "union",
+      "native": true,
+      "advance_em": 0.72216796875,
+      "bbox_em": [
+        0.07177734375,
+        0.0,
+        0.64990234375,
+        0.72265625
+      ],
+      "raster": "cup-bold.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "cup",
+      "rune": "∪",
+      "style": 2,
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "union",
+      "native": true,
+      "advance_em": 0.71875,
+      "bbox_em": [
+        0.08828485735488127,
+        0.0,
+        0.75927734375,
+        0.72265625
+      ],
+      "raster": "cup-italic.png",
+      "outline_origin_x_em": 0.033203125
+    },
+    {
+      "command": "cup",
+      "rune": "∪",
+      "style": 3,
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "union",
+      "native": true,
+      "advance_em": 0.72216796875,
+      "bbox_em": [
+        0.08974970110488127,
+        0.0,
+        0.7607421875,
+        0.72265625
+      ],
+      "raster": "cup-bold-italic.png",
+      "outline_origin_x_em": 0.033203125
+    },
+    {
+      "command": "cap",
+      "rune": "∩",
+      "style": 0,
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "intersection",
+      "native": true,
+      "advance_em": 0.71875,
+      "bbox_em": [
+        0.0703125,
+        0.0,
+        0.6484375,
+        0.72265625
+      ],
+      "raster": "cap-regular.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "cap",
+      "rune": "∩",
+      "style": 1,
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "intersection",
+      "native": true,
+      "advance_em": 0.72216796875,
+      "bbox_em": [
+        0.07177734375,
+        0.0,
+        0.64990234375,
+        0.72265625
+      ],
+      "raster": "cap-bold.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "cap",
+      "rune": "∩",
+      "style": 2,
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "intersection",
+      "native": true,
+      "advance_em": 0.71875,
+      "bbox_em": [
+        0.0703125,
+        0.0,
+        0.7411158854166666,
+        0.72265625
+      ],
+      "raster": "cap-italic.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "cap",
+      "rune": "∩",
+      "style": 3,
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ],
+        "units_per_em": 2048
+      },
+      "glyph": "intersection",
+      "native": true,
+      "advance_em": 0.72216796875,
+      "bbox_em": [
+        0.07177734375,
+        0.0,
+        0.7425807291666666,
+        0.72265625
+      ],
+      "raster": "cap-bold-italic.png",
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "command": "emptyset",
+      "rune": "∅",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2205",
+      "native": false,
+      "advance_em": 0.762,
+      "bbox_em": [
+        0.05,
+        -0.079,
+        0.712,
+        0.583
+      ],
+      "raster": "emptyset-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "emptyset",
+      "rune": "∅",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2205",
+      "native": false,
+      "advance_em": 0.787,
+      "bbox_em": [
+        0.05,
+        -0.09,
+        0.737,
+        0.594
+      ],
+      "raster": "emptyset-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "emptyset",
+      "rune": "∅",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2205",
+      "native": false,
+      "advance_em": 0.762,
+      "bbox_em": [
+        0.05,
+        -0.079,
+        0.712,
+        0.583
+      ],
+      "raster": "emptyset-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "emptyset",
+      "rune": "∅",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2205",
+      "native": false,
+      "advance_em": 0.787,
+      "bbox_em": [
+        0.05,
+        -0.09,
+        0.737,
+        0.594
+      ],
+      "raster": "emptyset-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "setminus",
+      "rune": "∖",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2216",
+      "native": false,
+      "advance_em": 0.428,
+      "bbox_em": [
+        0.025,
+        0.093,
+        0.403,
+        0.411
+      ],
+      "raster": "setminus-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "setminus",
+      "rune": "∖",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2216",
+      "native": false,
+      "advance_em": 0.452,
+      "bbox_em": [
+        0.025,
+        0.093,
+        0.427,
+        0.411
+      ],
+      "raster": "setminus-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "setminus",
+      "rune": "∖",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2216",
+      "native": false,
+      "advance_em": 0.428,
+      "bbox_em": [
+        0.025,
+        0.093,
+        0.403,
+        0.411
+      ],
+      "raster": "setminus-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "setminus",
+      "rune": "∖",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2216",
+      "native": false,
+      "advance_em": 0.452,
+      "bbox_em": [
+        0.025,
+        0.093,
+        0.427,
+        0.411
+      ],
+      "raster": "setminus-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subsetneq",
+      "rune": "⊊",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228A",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.216,
+        0.621,
+        0.627
+      ],
+      "raster": "subsetneq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subsetneq",
+      "rune": "⊊",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228A",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.2,
+        0.668,
+        0.734
+      ],
+      "raster": "subsetneq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subsetneq",
+      "rune": "⊊",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228A",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.216,
+        0.621,
+        0.627
+      ],
+      "raster": "subsetneq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "subsetneq",
+      "rune": "⊊",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228A",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.2,
+        0.668,
+        0.734
+      ],
+      "raster": "subsetneq-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supsetneq",
+      "rune": "⊋",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228B",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.216,
+        0.621,
+        0.627
+      ],
+      "raster": "supsetneq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supsetneq",
+      "rune": "⊋",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228B",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.2,
+        0.668,
+        0.734
+      ],
+      "raster": "supsetneq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supsetneq",
+      "rune": "⊋",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228B",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.216,
+        0.621,
+        0.627
+      ],
+      "raster": "supsetneq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "supsetneq",
+      "rune": "⊋",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni228B",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.2,
+        0.668,
+        0.734
+      ],
+      "raster": "supsetneq-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsubseteq",
+      "rune": "⊈",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2288",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.229,
+        0.621,
+        0.73
+      ],
+      "raster": "nsubseteq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsubseteq",
+      "rune": "⊈",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2288",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.201,
+        0.668,
+        0.747
+      ],
+      "raster": "nsubseteq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsubseteq",
+      "rune": "⊈",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2288",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.229,
+        0.621,
+        0.73
+      ],
+      "raster": "nsubseteq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsubseteq",
+      "rune": "⊈",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2288",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.201,
+        0.668,
+        0.747
+      ],
+      "raster": "nsubseteq-bold-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsupseteq",
+      "rune": "⊉",
+      "style": 0,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2289",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.229,
+        0.621,
+        0.73
+      ],
+      "raster": "nsupseteq-regular.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsupseteq",
+      "rune": "⊉",
+      "style": 1,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2289",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.201,
+        0.668,
+        0.747
+      ],
+      "raster": "nsupseteq-bold.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsupseteq",
+      "rune": "⊉",
+      "style": 2,
+      "font": {
+        "file": "STIXGeneral.otf",
+        "sha256": "5add3f3f2bd7fd897d2fa5ccbe468607c52111dc44cdfaaf2d851a574f5357a7",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2289",
+      "native": false,
+      "advance_em": 0.685,
+      "bbox_em": [
+        0.064,
+        -0.229,
+        0.621,
+        0.73
+      ],
+      "raster": "nsupseteq-italic.png",
+      "outline_origin_x_em": 0
+    },
+    {
+      "command": "nsupseteq",
+      "rune": "⊉",
+      "style": 3,
+      "font": {
+        "file": "STIXGeneralBol.otf",
+        "sha256": "7e4dfb4979e9bb79a0bdedc56f055eab615fb9a3dff8788a52992ae65e8f572d",
+        "versions": [
+          "Version 1.1.0"
+        ],
+        "units_per_em": 1000
+      },
+      "glyph": "uni2289",
+      "native": false,
+      "advance_em": 0.75,
+      "bbox_em": [
+        0.082,
+        -0.201,
+        0.668,
+        0.747
+      ],
+      "raster": "nsupseteq-bold-italic.png",
+      "outline_origin_x_em": 0
+    }
+  ]
+}

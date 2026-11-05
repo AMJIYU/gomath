@@ -1,0 +1,34 @@
+=== RUN   TestDirectionPinnedManimAndTransformControls
+=== RUN   TestDirectionPinnedManimAndTransformControls/empty
+=== RUN   TestDirectionPinnedManimAndTransformControls/point_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/open_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/closed_curved_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/constant
+=== RUN   TestDirectionPinnedManimAndTransformControls/near_closed_open
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_open_closed
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_unequal
+--- PASS: TestDirectionPinnedManimAndTransformControls (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/empty (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/point_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/open_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/closed_curved_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/constant (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/near_closed_open (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_open_closed (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_unequal (0.00s)
+=== RUN   TestDirectionExactReversalShapeEndpointsAndMetadata
+--- PASS: TestDirectionExactReversalShapeEndpointsAndMetadata (0.00s)
+=== RUN   TestDirectionStrictInputsAndImplicitClosureAtomicity
+--- PASS: TestDirectionStrictInputsAndImplicitClosureAtomicity (0.00s)
+=== RUN   TestDirectionSharedBudgetsAndEarlyRejection
+--- PASS: TestDirectionSharedBudgetsAndEarlyRejection (0.00s)
+=== RUN   TestDirectionIndependentAliasedContoursAndConcurrentCalls
+    direction_test.go:284: output aliases input or another output contour
+--- FAIL: TestDirectionIndependentAliasedContoursAndConcurrentCalls (0.00s)
+=== RUN   TestDirectionRandomCurves
+--- PASS: TestDirectionRandomCurves (0.00s)
+FAIL
+FAIL	gomath/path	0.013s
+FAIL
+exit status 1
+exit status 1

@@ -1,0 +1,1 @@
+ok  	gomath/mathtex	0.006s [no tests to run]

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-05",
+  "scope": "All38 delivered hashes verified before integration; production and new brace tests promoted unchanged. Remove only newly supported overbrace/underbrace from the old unsupported-command list; preserve all other strict rejection checks. Add current integration note to docs, preserve original document.",
+  "original_freeze": "tests/data/mathtex/braces/freeze-manifest.json",
+  "original_freeze_sha256": "865f69db0e703d5d44aa9a88fb6eac1ba3c9e59201c28c9bc293bc6ba095503a",
+  "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -count=1 -vet=all",
+  "result": "ok  \tgomath/mathtex\t2.874s\n",
+  "files": {
+    "docs/MATH_BRACES.md": {
+      "sha256": "a37aed9e53394b45b0efe2cdd8e9a594c9a2aaa314424dc881999e56cdca522e",
+      "bytes": 11202
+    },
+    "tests/_cases/mathtex/accents_test.go": {
+      "sha256": "3220e5b8b3db603f9c4305f2ee486da9015c89be63357408850ba127c990c76e",
+      "bytes": 11153
+    },
+    "tests/data/mathtex/braces/agent-document.md": {
+      "sha256": "c20180f22244e59bd1998dd9f6b3ae43fc9df10b81b1353ed513e1738cb09dc1",
+      "bytes": 10806
+    },
+    "tests/data/mathtex/braces/parent-full-mathtex.txt": {
+      "sha256": "fecc8158de37ee80d8512e6685625df1a16a2924881e656418d497a569a03f14",
+      "bytes": 27
+    }
+  }
+}

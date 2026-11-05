@@ -1,0 +1,66 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadAU/tag1_unknownfalse         	    5008	     66038 ns/op	1454.06 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag1_unknownfalse         	    5266	     68710 ns/op	1397.53 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag1_unknownfalse         	    5242	     68750 ns/op	1396.72 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag1_unknownfalse         	    5082	     68909 ns/op	1393.49 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag1_unknownfalse         	    5166	     69525 ns/op	1381.14 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag1_unknowntrue          	    2482	    140788 ns/op	 682.05 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag1_unknowntrue          	    2577	    149736 ns/op	 641.29 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag1_unknowntrue          	    2454	    147699 ns/op	 650.13 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag1_unknowntrue          	    2496	    146297 ns/op	 656.36 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag1_unknowntrue          	    2464	    141864 ns/op	 676.88 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag2_unknownfalse         	    2815	    123550 ns/op	 777.21 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag2_unknownfalse         	    2992	    126411 ns/op	 759.62 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag2_unknownfalse         	    2994	    125787 ns/op	 763.38 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag2_unknownfalse         	    2846	    126039 ns/op	 761.86 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag2_unknownfalse         	    2853	    129932 ns/op	 739.03 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag2_unknowntrue          	    1287	    236220 ns/op	 406.50 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag2_unknowntrue          	    1694	    217583 ns/op	 441.32 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag2_unknowntrue          	    1791	    200668 ns/op	 478.52 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag2_unknowntrue          	    1759	    201711 ns/op	 476.05 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag2_unknowntrue          	    1783	    201115 ns/op	 477.46 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag3_unknownfalse         	    2510	    141725 ns/op	1354.91 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag3_unknownfalse         	    2569	    140313 ns/op	1368.54 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag3_unknownfalse         	    2650	    141997 ns/op	1352.31 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag3_unknownfalse         	    2522	    142068 ns/op	1351.63 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag3_unknownfalse         	    2612	    142590 ns/op	1346.69 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag3_unknowntrue          	    1608	    222433 ns/op	 863.29 MB/s	 2003064 B/op	       9 allocs/op
+BenchmarkReadAU/tag3_unknowntrue          	    1636	    222608 ns/op	 862.61 MB/s	 2003064 B/op	       9 allocs/op
+BenchmarkReadAU/tag3_unknowntrue          	    1587	    212639 ns/op	 903.05 MB/s	 2003064 B/op	       9 allocs/op
+BenchmarkReadAU/tag3_unknowntrue          	    1716	    218450 ns/op	 879.03 MB/s	 2003064 B/op	       9 allocs/op
+BenchmarkReadAU/tag3_unknowntrue          	    1610	    223822 ns/op	 857.93 MB/s	 2003064 B/op	       9 allocs/op
+BenchmarkReadAU/tag4_unknownfalse         	    2282	    154521 ns/op	1863.98 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag4_unknownfalse         	    2223	    159195 ns/op	1809.25 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag4_unknownfalse         	    2266	    168261 ns/op	1711.77 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag4_unknownfalse         	    2197	    168829 ns/op	1706.01 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag4_unknownfalse         	    2096	    167874 ns/op	1715.71 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag4_unknowntrue          	    1270	    278029 ns/op	1035.95 MB/s	 2764920 B/op	      10 allocs/op
+BenchmarkReadAU/tag4_unknowntrue          	    1293	    281199 ns/op	1024.27 MB/s	 2764920 B/op	      10 allocs/op
+BenchmarkReadAU/tag4_unknowntrue          	    1279	    289071 ns/op	 996.38 MB/s	 2764920 B/op	      10 allocs/op
+BenchmarkReadAU/tag4_unknowntrue          	    1286	    283765 ns/op	1015.01 MB/s	 2764920 B/op	      10 allocs/op
+BenchmarkReadAU/tag4_unknowntrue          	    1338	    271661 ns/op	1060.23 MB/s	 2764920 B/op	      10 allocs/op
+BenchmarkReadAU/tag5_unknownfalse         	    2682	    132738 ns/op	2893.09 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag5_unknownfalse         	    2817	    130580 ns/op	2940.90 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag5_unknownfalse         	    2803	    128995 ns/op	2977.04 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag5_unknownfalse         	    2850	    130529 ns/op	2942.05 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag5_unknownfalse         	    2821	    129995 ns/op	2954.16 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag5_unknowntrue          	    1512	    246380 ns/op	1558.67 MB/s	 2068600 B/op	      10 allocs/op
+BenchmarkReadAU/tag5_unknowntrue          	    1467	    244299 ns/op	1571.94 MB/s	 2068600 B/op	      10 allocs/op
+BenchmarkReadAU/tag5_unknowntrue          	    1456	    245087 ns/op	1566.89 MB/s	 2068600 B/op	      10 allocs/op
+BenchmarkReadAU/tag5_unknowntrue          	    1477	    244106 ns/op	1573.19 MB/s	 2068600 B/op	      10 allocs/op
+BenchmarkReadAU/tag5_unknowntrue          	    1482	    244328 ns/op	1571.76 MB/s	 2068600 B/op	      10 allocs/op
+BenchmarkReadAU/tag27_unknownfalse        	    5343	     67623 ns/op	1419.98 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag27_unknownfalse        	    5427	     67538 ns/op	1421.78 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag27_unknownfalse        	    5274	     67457 ns/op	1423.48 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag27_unknownfalse        	    5348	     67564 ns/op	1421.24 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag27_unknownfalse        	    5372	     67966 ns/op	1412.83 MB/s	  807032 B/op	       6 allocs/op
+BenchmarkReadAU/tag27_unknowntrue         	    2553	    142963 ns/op	 671.67 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag27_unknowntrue         	    2529	    142553 ns/op	 673.60 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag27_unknowntrue         	    2436	    143283 ns/op	 670.17 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag27_unknowntrue         	    2534	    144377 ns/op	 665.09 MB/s	 1871992 B/op	       8 allocs/op
+BenchmarkReadAU/tag27_unknowntrue         	    2523	    145487 ns/op	 660.02 MB/s	 1871992 B/op	       8 allocs/op
+PASS
+ok  	gomath/audio	22.681s

@@ -1,0 +1,68 @@
+"""Development-only source-pinned default exact-key bucket animation oracle.
+
+Uses original manually specified closed polygons, never Go output or TeX.
+Compares all in-flight path controls/colors, plus independent cleanup states.
+"""
+import hashlib,json,subprocess,sys
+from pathlib import Path
+import manim
+import numpy as np
+from manim import VMobject,VGroup,Scene,linear
+from manim.animation.transform_matching_parts import TransformMatchingAbstractBase
+from manim.utils.color import ManimColor
+root=Path(__file__).resolve().parents[2]; reference=root.parent/'manim'
+commit='16ea443e2a5f1d79db0a721161411ce916d6e733'
+assert manim.__version__=='0.22.1'
+assert subprocess.check_output(['git','-C',str(reference),'rev-parse','HEAD'],text=True).strip()==commit
+hashes={}
+for name in ['animation/transform_matching_parts.py','animation/composition.py','animation/transform.py','animation/fading.py','animation/animation.py','mobject/mobject.py','mobject/types/vectorized_mobject.py','utils/bezier.py','utils/paths.py']:
+ blob=subprocess.check_output(['git','-C',str(reference),'show',f'{commit}:manim/{name}'])
+ assert blob==(Path(manim.__file__).parent/name).read_bytes(),name
+ assert blob==(reference/'manim'/name).read_bytes(),name
+ hashes['manim/'+name]=hashlib.sha256(blob).hexdigest()
+class Matching(TransformMatchingAbstractBase):
+ @staticmethod
+ def get_mobject_parts(obj):return obj.submobjects
+ @staticmethod
+ def get_mobject_key(obj):return obj.key
+
+def outlines(count,side):
+ result=[]
+ for i in range(count):
+  x=(i-(count-1)/2)*1.3 + (.2 if side else -.1)
+  y=.7 if side else -.7
+  anchors=np.array([[x-.3,y-.22,0],[x+.3,y-.22,0],[x+.3,y+.22,0],[x-.3,y+.22,0],[x-.3,y-.22,0]])
+  pts=[]
+  for a,b in zip(anchors,anchors[1:]):pts.extend([a,(2*a+b)/3,(a+2*b)/3,b])
+  result.append({'name':('T' if side else 'S')+str(i),'points':np.array(pts).tolist(),'color':[.2,.75,.9] if side else [.9,.3,.2]})
+ return result
+
+def group(parts,keys):
+ children=[]
+ for part,key in zip(parts,keys):
+  obj=VMobject().set_points(np.array(part['points'])).set_fill(ManimColor(part['color']),opacity=1).set_stroke(width=0,opacity=0)
+  obj.name=part['name'];obj.key=key;children.append(obj)
+ return VGroup(*children)
+
+def capture(obj):
+ return [{'name':v.name,'points':v.points.tolist(),'fill':v.get_fill_color().to_rgb().tolist(),'alpha':float(v.get_fill_opacity())} for v in obj.family_members_with_points()]
+inputs=[('reorder',['a','b','c'],['c','a','b']),('repeat-grow',['x','z'],['x','z','x','x']),('repeat-shrink',['x','z','x','x'],['z','x']),('mixed',['x','+','y'],['y','=','z']),('all-mismatch',['a','b'],['c','d']),('source-only',['a','b'],[]),('target-only',[],['c','d'])]
+cases=[]
+for name,sk,tk in inputs:
+ sp,tp=outlines(len(sk),False),outlines(len(tk),True)
+ states=[]
+ for alpha in [0.,.125,.25,.5,.75,.875,.999]:
+  a,b=group(sp,sk),group(tp,tk)
+  anim=Matching(a,b,rate_func=linear)
+  anim.begin();anim.interpolate(alpha)
+  states.append({'alpha':alpha,'objects':capture(VGroup(*(child.mobject for child in anim.animations)))})
+ # Cleanup explicitly restores source and installs the real target.
+ a,b=group(sp,sk),group(tp,tk);scene=Scene();scene.add(a)
+ anim=Matching(a,b,rate_func=linear);anim.begin();anim.interpolate(1);anim.finish();anim.clean_up_from_scene(scene)
+ assert len(scene.mobjects)==1 and scene.mobjects[0] is b
+ restored=capture(a)
+ assert all(np.allclose(v['points'],p['points'],atol=1e-14,rtol=0) for v,p in zip(restored,sp))
+ cases.append({'name':name,'source_keys':sk,'target_keys':tk,'source':sp,'target':tp,'states':states,'cleanup_target':capture(b),'restored_source':restored})
+out=Path(sys.argv[1]);out.parent.mkdir(parents=True,exist_ok=True)
+with out.open('x') as f:json.dump({'source':{'version':manim.__version__,'commit':commit,'files':hashes,'generator_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()},'scope':'Default key buckets, manually specified equal-four-cubic polygons;49 in-flight control/color states and7 explicit cleanup cases. No TeX or automatic unequal-curve alignment parity.','cases':cases},f,indent=2);f.write('\n')
+print(len(cases),'cases',sum(len(c['states']) for c in cases),'in-flight states')

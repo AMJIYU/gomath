@@ -1,0 +1,356 @@
+=== RUN   TestEvenOddClipAnalyticalAreaAndRationalPolygonOracle
+--- PASS: TestEvenOddClipAnalyticalAreaAndRationalPolygonOracle (0.07s)
+=== RUN   TestEvenOddClipIntegralAndExplicitBudgets
+--- PASS: TestEvenOddClipIntegralAndExplicitBudgets (0.00s)
+=== RUN   TestEvenOddClipWorkAbortReturnsNoPartialOutput
+--- PASS: TestEvenOddClipWorkAbortReturnsNoPartialOutput (0.07s)
+=== RUN   TestDashCairoSVGReference
+=== RUN   TestDashCairoSVGReference/dash-cascade
+    dash_reference_test.go:68: CairoSVG dash-cascade: MAE=0.039288194444444445 max=19 fraction_over_8=0.0013657407407407407
+=== RUN   TestDashCairoSVGReference/dash-square-dots
+    dash_reference_test.go:68: CairoSVG dash-square-dots: MAE=0.03521728515625 max=5 fraction_over_8=0
+=== RUN   TestDashCairoSVGReference/dash-edge-cases
+    dash_reference_test.go:68: CairoSVG dash-edge-cases: MAE=0.0072890625 max=9 fraction_over_8=9.375e-05
+--- PASS: TestDashCairoSVGReference (0.00s)
+    --- PASS: TestDashCairoSVGReference/dash-cascade (0.00s)
+    --- PASS: TestDashCairoSVGReference/dash-square-dots (0.00s)
+    --- PASS: TestDashCairoSVGReference/dash-edge-cases (0.00s)
+=== RUN   TestDashPinnedManimGeometry
+--- PASS: TestDashPinnedManimGeometry (0.00s)
+=== RUN   TestDashPolylineLengthsOffsetAndContourReset
+=== RUN   TestDashPolylineLengthsOffsetAndContourReset/0
+=== RUN   TestDashPolylineLengthsOffsetAndContourReset/2
+=== RUN   TestDashPolylineLengthsOffsetAndContourReset/-2
+=== RUN   TestDashPolylineLengthsOffsetAndContourReset/10
+--- PASS: TestDashPolylineLengthsOffsetAndContourReset (0.00s)
+    --- PASS: TestDashPolylineLengthsOffsetAndContourReset/0 (0.00s)
+    --- PASS: TestDashPolylineLengthsOffsetAndContourReset/2 (0.00s)
+    --- PASS: TestDashPolylineLengthsOffsetAndContourReset/-2 (0.00s)
+    --- PASS: TestDashPolylineLengthsOffsetAndContourReset/10 (0.00s)
+=== RUN   TestDashClosedSeamAndZeroEntries
+--- PASS: TestDashClosedSeamAndZeroEntries (0.00s)
+=== RUN   TestDashCapsReuseSolidOutlines
+--- PASS: TestDashCapsReuseSolidOutlines (0.00s)
+=== RUN   TestDashBudgetsAndRenderingError
+--- PASS: TestDashBudgetsAndRenderingError (0.03s)
+=== RUN   TestDashSquareDotUsesPathTangent
+--- PASS: TestDashSquareDotUsesPathTangent (0.00s)
+=== RUN   TestDashNativeColorOpacityAndReveal
+--- PASS: TestDashNativeColorOpacityAndReveal (0.00s)
+=== RUN   TestDashNativeCircleRoundoffSeam
+--- PASS: TestDashNativeCircleRoundoffSeam (0.00s)
+=== RUN   TestDashConsecutiveZeroGapsPreserveJoins
+--- PASS: TestDashConsecutiveZeroGapsPreserveJoins (0.00s)
+=== RUN   TestOrdinaryParitySharesMaskBudgetsAndRetainsNoPartialFrame
+--- PASS: TestOrdinaryParitySharesMaskBudgetsAndRetainsNoPartialFrame (0.07s)
+=== RUN   TestGradientIndependentCairoSVGReferences
+=== RUN   TestGradientIndependentCairoSVGReferences/linear-hard-hole
+    gradient_test.go:111: independent CairoSVG linear-hard-hole: premultiplied RGBA MAE 0, max 0
+=== RUN   TestGradientIndependentCairoSVGReferences/radial-affine-clip
+    gradient_test.go:111: independent CairoSVG radial-affine-clip: premultiplied RGBA MAE 0.0416406, max 1
+=== RUN   TestGradientIndependentCairoSVGReferences/linear-alpha
+    gradient_test.go:111: independent CairoSVG linear-alpha: premultiplied RGBA MAE 0.11375, max 1
+--- PASS: TestGradientIndependentCairoSVGReferences (0.00s)
+    --- PASS: TestGradientIndependentCairoSVGReferences/linear-hard-hole (0.00s)
+    --- PASS: TestGradientIndependentCairoSVGReferences/radial-affine-clip (0.00s)
+    --- PASS: TestGradientIndependentCairoSVGReferences/linear-alpha (0.00s)
+=== RUN   TestGradientAnalyticPixelOpacityCoverageAndCamera
+--- PASS: TestGradientAnalyticPixelOpacityCoverageAndCamera (0.00s)
+=== RUN   TestGradientRasterBudgetsAndInvalidContent
+--- PASS: TestGradientRasterBudgetsAndInvalidContent (0.00s)
+=== RUN   TestGradientConcurrentImmutableRender
+--- PASS: TestGradientConcurrentImmutableRender (0.01s)
+=== RUN   TestPartialGlyphFillAAIndependentHighResolutionReference
+=== RUN   TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-70
+    partial_glyph_aa_test.go:75: scale=1 tolerance=0 native alpha=10; Cairo native=113 Cairo 32x=103.552734; Skia nonzero area*255=103.514027 abs(signed area)*255=12.0613237
+    partial_glyph_aa_test.go:75: scale=1 tolerance=1e-05 native alpha=12; Cairo native=113 Cairo 32x=103.552734; Skia nonzero area*255=103.514027 abs(signed area)*255=12.0613237
+    partial_glyph_aa_test.go:75: scale=8 tolerance=0 native alpha=101.65625; Cairo native=113 Cairo 32x=103.552734; Skia nonzero area*255=103.514027 abs(signed area)*255=12.0613237
+    partial_glyph_aa_test.go:75: scale=32 tolerance=0 native alpha=103.283203; Cairo native=113 Cairo 32x=103.552734; Skia nonzero area*255=103.514027 abs(signed area)*255=12.0613237
+=== RUN   TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-84
+    partial_glyph_aa_test.go:75: scale=1 tolerance=0 native alpha=10; Cairo native=114 Cairo 32x=103.256836; Skia nonzero area*255=103.207854 abs(signed area)*255=12.8327828
+    partial_glyph_aa_test.go:75: scale=1 tolerance=1e-05 native alpha=12; Cairo native=114 Cairo 32x=103.256836; Skia nonzero area*255=103.207854 abs(signed area)*255=12.8327828
+    partial_glyph_aa_test.go:75: scale=8 tolerance=0 native alpha=101.421875; Cairo native=114 Cairo 32x=103.256836; Skia nonzero area*255=103.207854 abs(signed area)*255=12.8327828
+    partial_glyph_aa_test.go:75: scale=32 tolerance=0 native alpha=102.956055; Cairo native=114 Cairo 32x=103.256836; Skia nonzero area*255=103.207854 abs(signed area)*255=12.8327828
+=== RUN   TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-115
+    partial_glyph_aa_test.go:75: scale=1 tolerance=0 native alpha=44; Cairo native=137 Cairo 32x=132.250977; Skia nonzero area*255=132.071279 abs(signed area)*255=43.1367574
+    partial_glyph_aa_test.go:75: scale=1 tolerance=1e-05 native alpha=43; Cairo native=137 Cairo 32x=132.250977; Skia nonzero area*255=132.071279 abs(signed area)*255=43.1367574
+    partial_glyph_aa_test.go:75: scale=8 tolerance=0 native alpha=130.890625; Cairo native=137 Cairo 32x=132.250977; Skia nonzero area*255=132.071279 abs(signed area)*255=43.1367574
+    partial_glyph_aa_test.go:75: scale=32 tolerance=0 native alpha=131.879883; Cairo native=137 Cairo 32x=132.250977; Skia nonzero area*255=132.071279 abs(signed area)*255=43.1367574
+=== RUN   TestPartialGlyphFillAAIndependentHighResolutionReference/one-pixel-bowtie
+    partial_glyph_aa_test.go:75: scale=1 tolerance=0 native alpha=0; Cairo native=126 Cairo 32x=127.509766; Skia nonzero area*255=127.5 abs(signed area)*255=0
+    partial_glyph_aa_test.go:75: scale=1 tolerance=1e-05 native alpha=0; Cairo native=126 Cairo 32x=127.509766; Skia nonzero area*255=127.5 abs(signed area)*255=0
+    partial_glyph_aa_test.go:75: scale=8 tolerance=0 native alpha=127.625; Cairo native=126 Cairo 32x=127.509766; Skia nonzero area*255=127.5 abs(signed area)*255=0
+    partial_glyph_aa_test.go:75: scale=32 tolerance=0 native alpha=127.53125; Cairo native=126 Cairo 32x=127.509766; Skia nonzero area*255=127.5 abs(signed area)*255=0
+--- PASS: TestPartialGlyphFillAAIndependentHighResolutionReference (0.00s)
+    --- PASS: TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-70 (0.00s)
+    --- PASS: TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-84 (0.00s)
+    --- PASS: TestPartialGlyphFillAAIndependentHighResolutionReference/partial-2-115 (0.00s)
+    --- PASS: TestPartialGlyphFillAAIndependentHighResolutionReference/one-pixel-bowtie (0.00s)
+=== RUN   TestClipScratchSequenceIsolation
+--- PASS: TestClipScratchSequenceIsolation (0.10s)
+=== RUN   TestClipScratchFailureBudgetAndRecovery
+--- PASS: TestClipScratchFailureBudgetAndRecovery (0.06s)
+=== RUN   TestClipScratchIndependentWorkers
+--- PASS: TestClipScratchIndependentWorkers (0.02s)
+=== RUN   TestRasterPerfFrozenPixels
+--- PASS: TestRasterPerfFrozenPixels (0.55s)
+=== RUN   TestStrokeCapEndpointCoverage
+--- PASS: TestStrokeCapEndpointCoverage (0.00s)
+=== RUN   TestStrokeDiagonalSquareCap
+--- PASS: TestStrokeDiagonalSquareCap (0.00s)
+=== RUN   TestStrokeJoinCornerCoverage
+--- PASS: TestStrokeJoinCornerCoverage (0.00s)
+=== RUN   TestStrokeMiterLimitAndClosedJoins
+--- PASS: TestStrokeMiterLimitAndClosedJoins (0.00s)
+=== RUN   TestStrokeDuplicateAndZeroLengthPoints
+--- PASS: TestStrokeDuplicateAndZeroLengthPoints (0.00s)
+=== RUN   TestStrokeRejectsInvalidStyle
+--- PASS: TestStrokeRejectsInvalidStyle (0.00s)
+=== RUN   TestStrokeSharpMiterUsesConfiguredLimit
+--- PASS: TestStrokeSharpMiterUsesConfiguredLimit (0.00s)
+=== RUN   TestStrokeShortTurnHasNoUnboundedInnerSpike
+--- PASS: TestStrokeShortTurnHasNoUnboundedInnerSpike (0.00s)
+=== RUN   TestRoundStrokeMatchesDistanceToSegments
+--- PASS: TestRoundStrokeMatchesDistanceToSegments (0.00s)
+=== RUN   TestImportedSVGStrokeAffectsRenderedCoverage
+--- PASS: TestImportedSVGStrokeAffectsRenderedCoverage (0.00s)
+=== RUN   TestSupersamplingDefaultPreservesExistingPixels
+--- PASS: TestSupersamplingDefaultPreservesExistingPixels (0.00s)
+=== RUN   TestSupersamplingBoxResolvePremultipliedOddDimensions
+--- PASS: TestSupersamplingBoxResolvePremultipliedOddDimensions (0.00s)
+=== RUN   TestSupersamplingEntirePipelineCameraAndStateIsolation
+--- PASS: TestSupersamplingEntirePipelineCameraAndStateIsolation (0.21s)
+=== RUN   TestSupersamplingConfigurationBudgets
+--- PASS: TestSupersamplingConfigurationBudgets (0.00s)
+=== RUN   TestSupersamplingWorkersOrderOwnershipAndBudgetAbort
+--- PASS: TestSupersamplingWorkersOrderOwnershipAndBudgetAbort (0.02s)
+=== RUN   TestSupersamplingCameraCompensation
+--- PASS: TestSupersamplingCameraCompensation (0.05s)
+=== RUN   TestSupersamplingWorkingClipBudgetReturnsNoPartialOutput
+--- PASS: TestSupersamplingWorkingClipBudgetReturnsNoPartialOutput (0.09s)
+=== RUN   TestBitmapParallelSamplingMatchesSerial
+--- PASS: TestBitmapParallelSamplingMatchesSerial (0.01s)
+=== RUN   TestBitmapAffineOrientation
+=== RUN   TestBitmapAffineOrientation/original
+=== RUN   TestBitmapAffineOrientation/rotate
+=== RUN   TestBitmapAffineOrientation/reflect
+=== RUN   TestBitmapAffineOrientation/translate
+--- PASS: TestBitmapAffineOrientation (0.00s)
+    --- PASS: TestBitmapAffineOrientation/original (0.00s)
+    --- PASS: TestBitmapAffineOrientation/rotate (0.00s)
+    --- PASS: TestBitmapAffineOrientation/reflect (0.00s)
+    --- PASS: TestBitmapAffineOrientation/translate (0.00s)
+=== RUN   TestBitmapAlphaAndAntialiasedBoundary
+--- PASS: TestBitmapAlphaAndAntialiasedBoundary (0.00s)
+=== RUN   TestBitmapBilinearAndValidation
+--- PASS: TestBitmapBilinearAndValidation (0.00s)
+=== RUN   TestProjectFrameNoCameraFastPath
+--- PASS: TestProjectFrameNoCameraFastPath (0.00s)
+=== RUN   TestProjectFrameGeometryIdentityIsolationAndConfig
+--- PASS: TestProjectFrameGeometryIdentityIsolationAndConfig (0.00s)
+=== RUN   TestProjectFrameBitmapPlaneAndRaster
+--- PASS: TestProjectFrameBitmapPlaneAndRaster (0.00s)
+=== RUN   TestProjectFramePanZoomAndWorldStrokeWidths
+--- PASS: TestProjectFramePanZoomAndWorldStrokeWidths (0.00s)
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/zero_camera
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/nil_object
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/cycle
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/shared_child
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/invalid_geometry
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/curved_image
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/invalid_config
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/overflow_scale
+=== RUN   TestProjectFrameRejectsInvalidInputsWithoutMutation/overflow_projection
+--- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/zero_camera (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/nil_object (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/cycle (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/shared_child (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/invalid_geometry (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/curved_image (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/invalid_config (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/overflow_scale (0.00s)
+    --- PASS: TestProjectFrameRejectsInvalidInputsWithoutMutation/overflow_projection (0.00s)
+=== RUN   TestProjectFrameArbitraryOrder
+--- PASS: TestProjectFrameArbitraryOrder (0.00s)
+=== RUN   TestEvenOddClipIndependentCairoReferences
+=== RUN   TestEvenOddClipIndependentCairoReferences/compound
+    clip_evenodd_test.go:163: scale=1 MAE=0.018656 RMS=0.136588 max=1
+    clip_evenodd_test.go:163: scale=4 MAE=0.129211 RMS=0.359460 max=1
+=== RUN   TestEvenOddClipIndependentCairoReferences/duplicate
+    clip_evenodd_test.go:163: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_evenodd_test.go:163: scale=4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestEvenOddClipIndependentCairoReferences/curve
+    clip_evenodd_test.go:163: scale=1 MAE=0.102844 RMS=0.814863 max=21
+    clip_evenodd_test.go:163: scale=4 MAE=0.030640 RMS=0.227861 max=5
+=== RUN   TestEvenOddClipIndependentCairoReferences/crossings
+    clip_evenodd_test.go:163: scale=1 MAE=0.125916 RMS=0.846002 max=17
+    clip_evenodd_test.go:163: scale=4 MAE=0.017334 RMS=0.142064 max=3
+=== RUN   TestEvenOddClipIndependentCairoReferences/thin
+    clip_evenodd_test.go:163: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_evenodd_test.go:163: scale=4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestEvenOddClipIndependentCairoReferences/nested-bitmap
+    clip_evenodd_test.go:163: scale=1 MAE=0.038757 RMS=0.312858 max=10
+    clip_evenodd_test.go:163: scale=4 MAE=0.165283 RMS=0.407750 max=2
+=== RUN   TestEvenOddClipIndependentCairoReferences/gradient
+    clip_evenodd_test.go:163: scale=1 MAE=0.084066 RMS=0.290081 max=2
+    clip_evenodd_test.go:163: scale=4 MAE=0.144450 RMS=0.416097 max=2
+=== RUN   TestEvenOddClipIndependentCairoReferences/css-use
+    clip_evenodd_test.go:163: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_evenodd_test.go:163: scale=4 MAE=0.000000 RMS=0.000000 max=0
+--- PASS: TestEvenOddClipIndependentCairoReferences (0.13s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/compound (0.01s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/duplicate (0.01s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/curve (0.01s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/crossings (0.01s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/thin (0.00s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/nested-bitmap (0.04s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/gradient (0.03s)
+    --- PASS: TestEvenOddClipIndependentCairoReferences/css-use (0.01s)
+=== RUN   TestEvenOddClipReferenceProvenance
+--- PASS: TestEvenOddClipReferenceProvenance (0.00s)
+=== RUN   TestClipDefaultNonzeroPixelsRemainExact
+--- PASS: TestClipDefaultNonzeroPixelsRemainExact (0.00s)
+=== RUN   TestEvenOddClipCameraRuleAndPixels
+--- PASS: TestEvenOddClipCameraRuleAndPixels (0.08s)
+=== RUN   TestEvenOddClipSupersamplingAnalyticPixelsAndWorkers
+--- PASS: TestEvenOddClipSupersamplingAnalyticPixelsAndWorkers (0.09s)
+=== RUN   TestNestedClipIntersectionsOpacityAndSiblingIsolation
+--- PASS: TestNestedClipIntersectionsOpacityAndSiblingIsolation (0.00s)
+=== RUN   TestClippedBitmapAndStrokeHaveNoOffscreenLayerOffset
+--- PASS: TestClippedBitmapAndStrokeHaveNoOffscreenLayerOffset (0.00s)
+=== RUN   TestClipEmptyImplicitClosureNonzeroHolesAndLimits
+--- PASS: TestClipEmptyImplicitClosureNonzeroHolesAndLimits (0.00s)
+=== RUN   TestClipIndependentCairoSVGReferenceAndCamera
+=== RUN   TestClipIndependentCairoSVGReferenceAndCamera/clip-nested
+    clip_test.go:244: CairoSVG clip-nested MAE 0.030979/255 max 34 fraction>8 0.002206
+=== RUN   TestClipIndependentCairoSVGReferenceAndCamera/clip-bitmap
+    clip_test.go:244: CairoSVG clip-bitmap MAE 0.006149/255 max 5 fraction>8 0.000000
+--- PASS: TestClipIndependentCairoSVGReferenceAndCamera (0.00s)
+    --- PASS: TestClipIndependentCairoSVGReferenceAndCamera/clip-nested (0.00s)
+    --- PASS: TestClipIndependentCairoSVGReferenceAndCamera/clip-bitmap (0.00s)
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/nested-clip
+    fill_rule_test.go:139: ss1 MAE=0.065247 RMS=0.566770 max=19
+    fill_rule_test.go:139: ss4 MAE=0.090576 RMS=0.304587 max=4
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/css-use
+    fill_rule_test.go:139: ss1 MAE=0.000000 RMS=0.000000 max=0
+    fill_rule_test.go:139: ss4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/duplicate
+    fill_rule_test.go:139: ss1 MAE=0.000000 RMS=0.000000 max=0
+    fill_rule_test.go:139: ss4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/triple
+    fill_rule_test.go:139: ss1 MAE=0.010498 RMS=0.102460 max=1
+    fill_rule_test.go:139: ss4 MAE=0.002258 RMS=0.047522 max=1
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/linear
+    fill_rule_test.go:139: ss1 MAE=0.078145 RMS=0.497328 max=16
+    fill_rule_test.go:139: ss4 MAE=0.122111 RMS=0.403738 max=3
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/partial
+    fill_rule_test.go:139: ss1 MAE=0.100281 RMS=0.821973 max=23
+    fill_rule_test.go:139: ss4 MAE=0.029968 RMS=0.225933 max=5
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/stroke-dash
+    fill_rule_test.go:139: ss1 MAE=0.011108 RMS=0.179404 max=23
+    fill_rule_test.go:139: ss4 MAE=0.006653 RMS=0.081565 max=1
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/compound
+    fill_rule_test.go:139: ss1 MAE=0.023743 RMS=0.154087 max=1
+    fill_rule_test.go:139: ss4 MAE=0.131592 RMS=0.362756 max=1
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/curve
+    fill_rule_test.go:139: ss1 MAE=0.100220 RMS=0.787656 max=21
+    fill_rule_test.go:139: ss4 MAE=0.030131 RMS=0.226113 max=5
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/crossings
+    fill_rule_test.go:139: ss1 MAE=0.131246 RMS=0.883941 max=17
+    fill_rule_test.go:139: ss4 MAE=0.019104 RMS=0.146089 max=3
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/thin
+    fill_rule_test.go:139: ss1 MAE=0.002035 RMS=0.045105 max=1
+    fill_rule_test.go:139: ss4 MAE=0.002035 RMS=0.045105 max=1
+=== RUN   TestOrdinaryEvenOddIndependentCairoReferences/radial
+    fill_rule_test.go:139: ss1 MAE=0.087769 RMS=0.296258 max=1
+    fill_rule_test.go:139: ss4 MAE=0.111328 RMS=0.341255 max=2
+--- PASS: TestOrdinaryEvenOddIndependentCairoReferences (0.05s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/nested-clip (0.01s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/css-use (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/duplicate (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/triple (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/linear (0.01s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/partial (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/stroke-dash (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/compound (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/curve (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/crossings (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/thin (0.00s)
+    --- PASS: TestOrdinaryEvenOddIndependentCairoReferences/radial (0.01s)
+=== RUN   TestOrdinaryEvenOddCameraSSAAAndOwnership
+--- PASS: TestOrdinaryEvenOddCameraSSAAAndOwnership (0.63s)
+=== RUN   TestOrdinaryEvenOddWorkersAndValidation
+--- PASS: TestOrdinaryEvenOddWorkersAndValidation (0.01s)
+=== RUN   TestOrdinaryEvenOddReferenceProvenance
+--- PASS: TestOrdinaryEvenOddReferenceProvenance (0.00s)
+=== RUN   TestOrdinaryEvenOddStrokeAndGradientAlphaSemantics
+--- PASS: TestOrdinaryEvenOddStrokeAndGradientAlphaSemantics (0.00s)
+=== RUN   TestOrdinaryEvenOddAndNonzeroReuseCoverageScratch
+--- PASS: TestOrdinaryEvenOddAndNonzeroReuseCoverageScratch (0.05s)
+=== RUN   TestPinnedManimRasterReference
+--- PASS: TestPinnedManimRasterReference (0.01s)
+=== RUN   TestFillStrokeAndAlpha
+--- PASS: TestFillStrokeAndAlpha (0.00s)
+=== RUN   TestClosedStrokeHasHole
+--- PASS: TestClosedStrokeHasHole (0.00s)
+=== RUN   TestArrowShaftAndTipVisible
+--- PASS: TestArrowShaftAndTipVisible (0.00s)
+=== RUN   TestThinPolylineHasNoJoinSpikes
+--- PASS: TestThinPolylineHasNoJoinSpikes (0.00s)
+=== RUN   TestParallelFramesEqualSerial
+--- PASS: TestParallelFramesEqualSerial (0.00s)
+=== RUN   TestCancelAndSinkFailureAbort
+--- PASS: TestCancelAndSinkFailureAbort (0.00s)
+=== RUN   TestUpdaterFailureStopsWorkers
+--- PASS: TestUpdaterFailureStopsWorkers (0.00s)
+=== RUN   TestOutstandingFramesAreBounded
+--- PASS: TestOutstandingFramesAreBounded (0.02s)
+=== RUN   TestInvalidConfigAndFrame
+--- PASS: TestInvalidConfigAndFrame (0.00s)
+=== RUN   TestSupersamplingIndependentCairoOddSizeReferences
+=== RUN   TestSupersamplingIndependentCairoOddSizeReferences/crossing
+    supersampling_reference_test.go:81: scale=1 MAE=0.183041 RMS=1.549840 maximum=126
+    supersampling_reference_test.go:81: scale=2 MAE=0.113367 RMS=0.883762 maximum=40
+    supersampling_reference_test.go:81: scale=4 MAE=0.105388 RMS=0.793431 maximum=19
+    supersampling_reference_test.go:81: scale=8 MAE=0.025647 RMS=0.160669 maximum=2
+=== RUN   TestSupersamplingIndependentCairoOddSizeReferences/holes-duplicate
+    supersampling_reference_test.go:81: scale=1 MAE=1.483876 RMS=6.857178 maximum=63
+    supersampling_reference_test.go:81: scale=2 MAE=0.969549 RMS=3.515350 maximum=33
+    supersampling_reference_test.go:81: scale=4 MAE=0.559357 RMS=1.677546 maximum=13
+    supersampling_reference_test.go:81: scale=8 MAE=0.414495 RMS=1.027707 maximum=9
+=== RUN   TestSupersamplingIndependentCairoOddSizeReferences/mixed
+    supersampling_reference_test.go:81: scale=1 MAE=1.383500 RMS=4.632902 maximum=55
+    supersampling_reference_test.go:81: scale=2 MAE=1.363283 RMS=4.615143 maximum=55
+    supersampling_reference_test.go:81: scale=4 MAE=1.380660 RMS=4.622784 maximum=55
+    supersampling_reference_test.go:81: scale=8 MAE=1.407602 RMS=4.652099 maximum=55
+--- PASS: TestSupersamplingIndependentCairoOddSizeReferences (0.11s)
+    --- PASS: TestSupersamplingIndependentCairoOddSizeReferences/crossing (0.01s)
+    --- PASS: TestSupersamplingIndependentCairoOddSizeReferences/holes-duplicate (0.01s)
+    --- PASS: TestSupersamplingIndependentCairoOddSizeReferences/mixed (0.09s)
+=== RUN   TestSupersamplingPartialFractionsIndependentCairoReference
+    supersampling_reference_test.go:132: scale=1 against Cairo1 MAE=0.032938 RMS=0.472951 max=83; against matching Cairo+BOX MAE=0.032938 RMS=0.472951 max=83
+    supersampling_reference_test.go:132: scale=2 against Cairo1 MAE=0.034172 RMS=0.461258 max=34; against matching Cairo+BOX MAE=0.018638 RMS=0.239350 max=31
+    supersampling_reference_test.go:132: scale=4 against Cairo1 MAE=0.035637 RMS=0.470945 max=18; against matching Cairo+BOX MAE=0.010340 RMS=0.143784 max=8
+    supersampling_reference_test.go:132: scale=8 against Cairo1 MAE=0.036227 RMS=0.477809 max=18; against matching Cairo+BOX MAE=0.006029 RMS=0.104769 max=7
+--- PASS: TestSupersamplingPartialFractionsIndependentCairoReference (0.23s)
+=== RUN   TestSupersamplingAnalyticalBowtieAndPartialGlyphArea
+    supersampling_reference_test.go:177: partial-2-70 scale=2 alpha=72 independent area*255=103.514027 error=31.514027
+    supersampling_reference_test.go:177: partial-2-70 scale=4 alpha=96 independent area*255=103.514027 error=7.514027
+    supersampling_reference_test.go:177: partial-2-70 scale=8 alpha=102 independent area*255=103.514027 error=1.514027
+    supersampling_reference_test.go:177: partial-2-84 scale=2 alpha=72 independent area*255=103.207854 error=31.207854
+    supersampling_reference_test.go:177: partial-2-84 scale=4 alpha=95 independent area*255=103.207854 error=8.207854
+    supersampling_reference_test.go:177: partial-2-84 scale=8 alpha=101 independent area*255=103.207854 error=2.207854
+    supersampling_reference_test.go:177: partial-2-115 scale=2 alpha=116 independent area*255=132.071279 error=16.071279
+    supersampling_reference_test.go:177: partial-2-115 scale=4 alpha=128 independent area*255=132.071279 error=4.071279
+    supersampling_reference_test.go:177: partial-2-115 scale=8 alpha=131 independent area*255=132.071279 error=1.071279
+    supersampling_reference_test.go:177: one-pixel-bowtie scale=2 alpha=128 independent area*255=127.500000 error=0.500000
+    supersampling_reference_test.go:177: one-pixel-bowtie scale=4 alpha=128 independent area*255=127.500000 error=0.500000
+    supersampling_reference_test.go:177: one-pixel-bowtie scale=8 alpha=128 independent area*255=127.500000 error=0.500000
+--- PASS: TestSupersamplingAnalyticalBowtieAndPartialGlyphArea (0.00s)
+=== RUN   TestSupersamplingReferenceProvenance
+--- PASS: TestSupersamplingReferenceProvenance (0.00s)
+PASS
+ok  	gomath/render	2.816s

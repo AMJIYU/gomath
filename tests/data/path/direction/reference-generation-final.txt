@@ -1,0 +1,3 @@
+verified 143 installed==local==git source files at 16ea443e2a5f1d79db0a721161411ce916d6e733
+wrote 8 paths, 6 tree operations, 18 force-direction audit probes
+actual Transform states: path=30, tree=24

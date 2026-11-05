@@ -1,0 +1,1 @@
+ok  	gomath/path	1.215s

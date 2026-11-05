@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: gomath
+cpu: Apple M2
+BenchmarkObjectUpdaterFrame/1-8 	  122535	      2262 ns/op	    1488 B/op	      10 allocs/op
+BenchmarkObjectUpdaterFrame/1-8 	  167306	      2820 ns/op	    1488 B/op	      10 allocs/op
+BenchmarkObjectUpdaterFrame/1-8 	  195913	      1582 ns/op	    1488 B/op	      10 allocs/op
+BenchmarkObjectUpdaterFrame/32-8         	     670	    340718 ns/op	  375410 B/op	    1419 allocs/op
+BenchmarkObjectUpdaterFrame/32-8         	     712	    350245 ns/op	  375410 B/op	    1419 allocs/op
+BenchmarkObjectUpdaterFrame/32-8         	     717	    333093 ns/op	  375409 B/op	    1419 allocs/op
+BenchmarkObjectUpdaterFrame/128-8        	      45	   5047866 ns/op	 6089306 B/op	    8207 allocs/op
+BenchmarkObjectUpdaterFrame/128-8        	      49	   5078235 ns/op	 6089300 B/op	    8207 allocs/op
+BenchmarkObjectUpdaterFrame/128-8        	      45	   5035342 ns/op	 6089281 B/op	    8207 allocs/op
+PASS
+ok  	gomath	2.696s

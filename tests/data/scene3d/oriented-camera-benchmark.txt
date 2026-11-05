@@ -1,0 +1,24 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkOrientedCameraTimeline/Sample/ssaa1-8         	      27	   8466647 ns/op	 2443640 B/op	      47 allocs/op
+BenchmarkOrientedCameraTimeline/Sample/ssaa1-8         	      27	   8356943 ns/op	 2443441 B/op	      46 allocs/op
+BenchmarkOrientedCameraTimeline/Sample/ssaa1-8         	      28	   8973488 ns/op	 2441511 B/op	      46 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa1-8    	      28	   8543104 ns/op	 1864253 B/op	      25 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa1-8    	      30	   9066108 ns/op	 1870739 B/op	      25 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa1-8    	      26	  15211718 ns/op	 1868300 B/op	      25 allocs/op
+BenchmarkOrientedCameraTimeline/Sample/ssaa2-8         	       8	  33033172 ns/op	 7193518 B/op	      65 allocs/op
+BenchmarkOrientedCameraTimeline/Sample/ssaa2-8         	       8	  25571240 ns/op	 7193502 B/op	      65 allocs/op
+BenchmarkOrientedCameraTimeline/Sample/ssaa2-8         	       8	  29229844 ns/op	 7193502 B/op	      65 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa2-8    	       8	  25669010 ns/op	 6616250 B/op	      44 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa2-8    	       9	  24885694 ns/op	 6631304 B/op	      45 allocs/op
+BenchmarkOrientedCameraTimeline/DirectThree/ssaa2-8    	       7	  28572798 ns/op	 6639060 B/op	      44 allocs/op
+BenchmarkOrientedCameraTimeline/CameraAt-8             	 1000000	       252.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOrientedCameraTimeline/CameraAt-8             	 1000000	       232.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOrientedCameraTimeline/CameraAt-8             	  916088	       262.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkOrientedCameraTimeline/Snapshot-8             	    1010	    232461 ns/op	  553845 B/op	      52 allocs/op
+BenchmarkOrientedCameraTimeline/Snapshot-8             	    1111	    221954 ns/op	  553843 B/op	      52 allocs/op
+BenchmarkOrientedCameraTimeline/Snapshot-8             	    1048	    221752 ns/op	  553842 B/op	      52 allocs/op
+PASS
+ok  	gomath/scene3d	5.099s

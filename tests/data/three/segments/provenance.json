@@ -1,0 +1,139 @@
+{
+  "slice": "wave6 checked 3D endpoint cylinder/arrow geometry",
+  "status": "frozen",
+  "frozen_at_utc": "2026-11-05T01:37:07.804077+00:00",
+  "validation_scope": "Fresh targeted and full three package validation. Does not reuse wave5 checkpoint or claim a new whole-repository checkpoint.",
+  "runtime": "pure Go; only new production three/segment.go; no new dependency, native binding, cgo, subprocess or fallback runtime",
+  "api": {
+    "CylinderBetween": "func CylinderBetween(start, end geom.Vec3, radius float64, radialSegments, heightSegments int) (*Mesh, error)",
+    "ArrowBetween": "func ArrowBetween(start, end geom.Vec3, options ArrowOptions) (*Mesh, error)",
+    "ArrowOptions": [
+      "ShaftRadius float64",
+      "HeadRadius float64",
+      "HeadLength float64",
+      "RadialSegments int",
+      "ShaftSegments int",
+      "HeadSegments int"
+    ],
+    "geometry": "Closed exterior mesh: cylinder side plus two caps; arrow shaft side plus conical side plus tail cap and annular downward shoulder, no internal overlapping caps. Exact copied hard-boundary positions; split outward normals and UVs.",
+    "ownership": "Independent caller-owned mutable Mesh slices; endpoints/options copied by value, no retained input or cache; finish editing before concurrent render.",
+    "limits": {
+      "coordinate_abs": 1000000000000.0,
+      "minimum_length_radius_head_length": 1e-06,
+      "maximum_radius_head_length": 1000000000000.0,
+      "minimum_shaft_length": 1e-06,
+      "minimum_head_minus_shaft_radius": 1e-06,
+      "radial_segments": [
+        3,
+        256
+      ],
+      "axial_segments": [
+        1,
+        256
+      ],
+      "detail_policy": "minimum radial sagitta/axial step/annular gap >=32 ULPs at endpoint-plus-max-radius magnitude; final Mesh.Validate bounds output",
+      "cylinder_max_vertices": 66563,
+      "cylinder_max_triangles": 131584,
+      "arrow_max_vertices": 132868,
+      "arrow_max_triangles": 262656
+    },
+    "unsupported": "No short-arrow scaling/default options, head-only/equal-or-narrower head, per-part materials, bevels, boundary attachment or path frame transport. Least-aligned-axis roll may switch at ties. No full Manim parity claim."
+  },
+  "reference": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "source": "manim/mobject/three_d/three_dimensions.py",
+    "sha256": "9343af8b6ae55bbe6d8f2fbd240ed0248a178544ee3829d628973839508553a6",
+    "classes": [
+      "Line3D",
+      "Arrow3D"
+    ],
+    "scope": "Read-only source semantics: thickness radius, shaft shortened by height, conical tip at end; no matching default styling/topology or Manim render claim. Expected geometry and pixels use independent Go parameter/ray formulas, with no Manim runtime."
+  },
+  "validation": {
+    "staging": "Production first authored under three/_segment; central runner plus Go overlay validated staged geometry/rays before moving into package. Staging removed after success.",
+    "suite": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -count=1",
+      "result": "pass",
+      "seconds": 4.616
+    },
+    "race": {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -race -count=1",
+      "result": "pass",
+      "seconds": 31.133
+    },
+    "vet": {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./three",
+      "result": "pass"
+    },
+    "build": {
+      "command": "CGO_ENABLED=0 go build -tags noasm ./three",
+      "result": "pass"
+    },
+    "tags": "Central runner supplies noasm; CGO_ENABLED=0 for all tests/build/vet/benchmarks.",
+    "numeric": "48 geometry configurations across eight directions (including +/-Z and near-axis) and scales1e-5,1,1e10; independent parameter-domain coordinates/normals/UVs, polygon volume, winding, closed edge incidence/Euler2. Exact endpoints and hard-split ring copies. Inclusive maximum counts, NaN/Inf/MaxInt/short/out-of-bounds/unrepresentable final ring and annular gap.",
+    "pixels": {
+      "full_frames": 108,
+      "size": [
+        41,
+        31
+      ],
+      "ssaa": [
+        1,
+        2,
+        4
+      ],
+      "angles_radians": [
+        0,
+        0.43,
+        1.13
+      ],
+      "channel_tolerance_bytes": 1,
+      "coverage": "Both meshes and projections, nonuniform/reflected TRS, near/far/side clipping, opaque/alpha/bilinear UV alpha with three colored point lights",
+      "oracle": "Separate analytic parametric geometry/cross-product basis, Rodrigues/inverse-scale normal transform, independent Moller-Trumbore rays/camera/clipping/texture/lighting/composition; does not read production Mesh/builder."
+    },
+    "concurrency": "Eight concurrent constructors/readers; independent storage; triangle and instance order byte-identical.",
+    "budgets": "Explicit constructor bounds/resolution failures; existing aggregate frame geometry/transparent fragment/point-light work errors; fragment/light error recovery renders succeed.",
+    "legacy": "15 preexisting production three source hashes unchanged; existing Cylinder/Cone/Box and legacy pixel tests pass.",
+    "artifacts": {
+      "command": "GOMATH_SEGMENT_ARTIFACTS=\"$PWD/tests/data/three/segments\" CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^TestSegmentArtifacts$' -count=1 -v",
+      "result": "pass,0.283s; final source image visually inspected",
+      "path": "tests/data/three/segments/segments.png",
+      "layout": "2 columns cylinder/arrow,3 rows opaque/rotated reflected texture alpha with point lights/independent expected,240x180 per panel SSAA2"
+    }
+  },
+  "benchmarks": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^$' -bench '^(BenchmarkBuildSegments|BenchmarkRenderSegments)$' -benchmem -benchtime=300ms -count=3 -p 1",
+    "result": "pass,9.698s",
+    "environment": "Go1.27.3 darwin/arm64 Apple M2 16GiB GOMAXPROCS8 CGO0/noasm",
+    "load": "Serial -p1 after own race; external agents share host and load is uncontrolled. Limited workload observations, no whole-library speed claim.",
+    "construction_scope": "Complete checking/allocation/geometry/Validate; radius .32 cylinder or shaft.22/head.52/length.8 arrow; arbitrary endpoints; no cache.",
+    "render_scope": "320x240,one cylinder+one arrow,979 split vertices/1344 triangles,radial48,axial4,rotation.63 plus separate translations; default opaque directional or mixed-alpha bilinear texture/material alpha191/three point lights; SSAA1/2; includes fresh buffers/validation/transforms/clipping/shading/depth/alpha/resolve; excludes assets/references/renderer setup, scene3d wrapping, encoding and I/O.",
+    "summary_file": "tests/data/three/segments/benchmark-summary.json"
+  },
+  "owned_source_sha256": {
+    "three/segment.go": "4d83271a548e913c08b772b2816b633f7080e8dcee095944a2945b3f8be5f55f",
+    "tests/_cases/three/segment_test.go": "1e2d99a2b4e44fc12f487ef43a53c67d448c0ee8a34ce23ba0333e9c3c54125b",
+    "tests/_cases/three/segment_reference_test.go": "2b3e26c45cb74e5065b3cfd7d077d9df233ce975d6b6e0174620dbf60b9a0c3a",
+    "tests/_cases/three/segment_render_test.go": "b34fe6153c0e27e6ad014a2eed0c8755606754a7c07bc6b2e1733c3ad9edee4e",
+    "tests/_cases/three/segment_artifacts_test.go": "9365fbc337017300e0e6f1d90bde24122797ce1ac1b48820840fddf867b25a4e",
+    "docs/SEGMENT3D.md": "ff95242a3d91a54c42d5de7c0108dff6fd673a7e28adc84e108bee5741b29aa4"
+  },
+  "evidence_sha256": {
+    "tests/data/three/segments/artifacts.txt": "c46181d8490ff9c0c9ce41528ec3cbfeee70566f57d7c1fe3150a0f0edafcd72",
+    "tests/data/three/segments/benchmark-summary.json": "163f1c044e6cf03b47af2471ed25492ff6e851c29c964a797aad5b21907a695f",
+    "tests/data/three/segments/benchmark.txt": "05b398d86dbc3d7c42a5b9024c64e6ae436f595f3ec76dfbecacc462c556ebf8",
+    "tests/data/three/segments/build.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/segments/environment.txt": "50b4d68bed45bcc2bd0ff7bf28bcf2ed11e6065061206798d9288707c1a37b77",
+    "tests/data/three/segments/legacy-before.json": "b41b27ab6d8e9738803ec4489117dbcacf59d0e460150e16de00d56ca827ee74",
+    "tests/data/three/segments/legacy-source-preservation.json": "4f4f1f39ca0e3653050874bf05fb09e3c9e22ed165527aaf2251914afdcc6380",
+    "tests/data/three/segments/native-dependencies.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/segments/race.txt": "98faf0d5e6cb7caed506e3e1f4bc833438e15a6ad22e8acedb8cd8ff9f0d6512",
+    "tests/data/three/segments/reference-provenance.json": "640f4d5aeff28a4dcd17b766e2a227f9348fc506a9651b196a25833b6db8cb1d",
+    "tests/data/three/segments/segments.png": "1ff8d9584cd5f11f344486412ddbc1627e97c606b7c424a43cd22d78cbead41a",
+    "tests/data/three/segments/staged-final.txt": "d5c11432212a4f2b615b75c711ee8c0f3b3ec0212479cd6fa975c5a78037d266",
+    "tests/data/three/segments/staged-geometry.txt": "16d1d391ad360f3416dcf44e2ea2c1cc5630e93fae369e381d51c63d55b0e3e9",
+    "tests/data/three/segments/staged-tests.txt": "11c82bc663bc75dbcee0d3941cebf9bad119a97d71896910ed4edf442facc866",
+    "tests/data/three/segments/suite.txt": "a6cdc89049e526900da0fee794245de045279fedf6f00062acb1fc4887b6fbf6",
+    "tests/data/three/segments/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

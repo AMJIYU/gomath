@@ -1,0 +1,9 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/graph
+cpu: Apple M2
+BenchmarkBarChartSetValues 	     231	    703349 ns/op	  782320 B/op	    2107 allocs/op
+BenchmarkBarChartSetValues 	     280	   1094009 ns/op	  782320 B/op	    2107 allocs/op
+BenchmarkBarChartSetValues 	     285	    637667 ns/op	  782320 B/op	    2107 allocs/op
+PASS
+ok  	gomath/graph	0.664s

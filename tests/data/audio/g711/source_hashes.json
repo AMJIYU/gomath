@@ -1,0 +1,10 @@
+{
+  "audio/wav.go": "7ec0b31217b37616767de3b6ba6e2b4ebd193cca4a0e29c0ce0af7c0f6c1768c",
+  "audio/wav_g711.go": "b056e2374831e0cb9d775441f1099e82091bf0dec7be0469b24accc510b0429c",
+  "audio/README.md": "a64691299f4cb7121350d072e28c2025445237654ff0a29314b626e053b45c14",
+  "tests/_cases/audio/wav_g711_test.go": "d85f57c47dc81979c95da3f3b8dfd4be0dbd96f9f68c993907a74f392844c43a",
+  "tests/reference/audio_g711.py": "2f2c210b0ce025184cc3eb83a6f485ea71db6dc232c6a34d7170bb7c41acc9bb",
+  "tests/data/audio/g711/manifest.json": "383b5149de922541bcaf6c90f4ecbce8c59572d3652a03ceba2cc7e0ed161d54",
+  "tests/data/audio/g711/code_tables.json": "8cd07cb31ac66dcadd5e94e23cebda4b7f50afe5365ca1a314ff401b1d4e1b75",
+  "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641"
+}

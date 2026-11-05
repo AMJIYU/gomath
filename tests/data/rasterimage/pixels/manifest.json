@@ -1,0 +1,267 @@
+{
+  "api": [
+    "NewAsset(image.Image) (*Asset,error)",
+    "(*Asset).Bitmap() *gomath.Bitmap",
+    "(*Asset).Invert() (*Asset,error)",
+    "(*Asset).SetColor(gomath.Color,...float64) (*Asset,error)",
+    "(*Asset).Tint(gomath.Color) (*Asset,error)",
+    "(*Asset).SetOpacity(float64) (*Asset,error)",
+    "(*Asset).NewImage(float64) (*gomath.Object,error)",
+    "(*Asset).WithPixels(*gomath.Object) (*gomath.Object,error)"
+  ],
+  "benchmark": {
+    "allocation_bytes_per_op": 524472,
+    "allocs_per_op": 6,
+    "benchtime": "200ms",
+    "contention": "shared workspace/host; samples support no comparative speedup claim",
+    "cpu": "Apple M2",
+    "excludes": [
+      "source import",
+      "source decoding",
+      "PNG/SVG encoding",
+      "disk I/O",
+      "scene render"
+    ],
+    "frames": 0,
+    "gomaxprocs": 1,
+    "image_size": [
+      256,
+      256
+    ],
+    "includes": [
+      "immutable RGB/alpha edit",
+      "new straight pixel storage",
+      "premultiplied Bitmap construction"
+    ],
+    "median_ns_per_op": {
+      "color": 307422,
+      "invert": 398789,
+      "opacity": 533120,
+      "tint": 373597
+    },
+    "memory_bytes": 17179869184,
+    "platform": "macOS-15.7.1-arm64-arm-64bit",
+    "repetitions": 3,
+    "samples_ns_per_op": {
+      "color": [
+        314560,
+        307422,
+        299552
+      ],
+      "invert": [
+        428581,
+        392119,
+        398789
+      ],
+      "opacity": [
+        387997,
+        533120,
+        1061808
+      ],
+      "tint": [
+        373597,
+        376745,
+        372241
+      ]
+    },
+    "toolchain": "go version go1.27.3 darwin/arm64"
+  },
+  "bounds": {
+    "color_alpha": "validated but ignored; optional SetColor alpha is explicit",
+    "coordinate_spans": "unsigned differences plus division validated before allocating/reading",
+    "factor_range": [
+      0,
+      1
+    ],
+    "finite_only": true,
+    "max_pixel_bytes": 67108864,
+    "max_pixel_pixels": 7456540,
+    "new_buffer_bytes_per_derived_pixel": 8,
+    "objects": "valid leaf images of matching pixel dimensions; preserve path, clip, style and metadata; new identity",
+    "retained_bytes_per_imported_pixel": 9,
+    "storage_budget_excludes": [
+      "source buffers",
+      "object headers",
+      "allocator rounding",
+      "simultaneously retained assets"
+    ]
+  },
+  "checks": [
+    {
+      "command": "python3 tests/reference/image_pixels.py --check",
+      "exit_code": 0,
+      "log": "reference-check.txt",
+      "status": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=rasterimage -pkg=render -pkg=export -tags noasm -vet=all -count=1",
+      "exit_code": 0,
+      "log": "focused-tests.txt",
+      "status": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=rasterimage -tags noasm -race -count=1",
+      "exit_code": 0,
+      "log": "race.txt",
+      "note": "race detector development runtime requires cgo on this host; no production cgo",
+      "status": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./...",
+      "exit_code": 0,
+      "log": "vet.txt",
+      "status": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "exit_code": 0,
+      "log": "purecheck.txt",
+      "status": "pass"
+    },
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm ./...",
+      "exit_code": 1,
+      "failures": [
+        "gomath root centralized tests/_cases/root/transform_path_test.go reference WithPathArc, ClockwiseTransform, CounterclockwiseTransform before production APIs exist",
+        "gomath/svg container_bbox_test.go independent Cairo references differ for group-curves/use-chain/text-end/tspan-kern and animated interiors"
+      ],
+      "log": "full-tests.txt",
+      "passed_scoped_packages": [
+        "gomath/rasterimage",
+        "gomath/render",
+        "gomath/export"
+      ],
+      "status": "failed_outside_owned_scope"
+    },
+    {
+      "command": "GOMAXPROCS=1 CGO_ENABLED=0 go run ./tests/cmd/run -pkg=rasterimage -tags noasm -run '^$' -bench BenchmarkPixelOperations -benchmem -benchtime=200ms -count=3",
+      "exit_code": 0,
+      "log": "benchmark.txt",
+      "status": "pass"
+    }
+  ],
+  "date": "2026-11-05",
+  "evidence_sha256": {
+    "benchmark.txt": "e8f17efc3a360cc2e7a8e42133b79ae531f652e0e7023f82fc0c8977958569c1",
+    "focused-tests.txt": "0a94ecb4651e70f6bdaa3dc7c60013de3407967817c5d446ec6dc564940c6c61",
+    "full-tests.txt": "3a24421008c41a624dba70aabe2b2dc4a24da571c11b2490c9f64d1932dcb783",
+    "purecheck.txt": "4c21477f037834f65316da5e6fd91f134eae3034dc132ac87c0db8c9d54a146d",
+    "race.txt": "7e99968292673b1c239fdb51d44877b8413e6902a5a024ded675088053025942",
+    "reference-check.txt": "7253248fe892cd42ef7c2a5f46ef3cbe5f655b90b53d0f864cc7d327782ec678",
+    "vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "files_sha256": {
+    "docs/IMAGE_PIXELS.md": "ba16ad06cc5f054aa2e6653e05df220a3b831068c0a779baeff3945049fc66f7",
+    "rasterimage/image.go": "55e566ab2c253e7c75875e2df3739185689c475b35808e4244c1333823601e5d",
+    "rasterimage/pixels.go": "48dfccb1fcb0533614cd4150b1e11db7206fcf868598409e116374c334263258",
+    "tests/_cases/rasterimage/image_test.go": "fabc3dc1fa07c1e53ec302c622ad7b1f53c1db64d2c9fb2861e439563d4527ba",
+    "tests/_cases/rasterimage/pixel_limits_test.go": "e6e11cff4238a3d512c9490042c8e7b0a3daeddbd43514e515370e221096fa42",
+    "tests/_cases/rasterimage/pixel_scene_test.go": "a596f2381a9fe2a2716fc72485c1bc888d8d8fa9deb7ba7b366c71440c9f07a0",
+    "tests/_cases/rasterimage/pixels_test.go": "02b235b7dc20b1ae74f3bb1aadf8b55a010019d045e45aa9115de1a671fe2bda",
+    "tests/data/rasterimage/pixels/chain.png": "a7974d051fecb763b17e7d30f95d4a9e9e5baa2dafba3eeb3d0c4153f5a55131",
+    "tests/data/rasterimage/pixels/chain.rgba": "da4dce47d791f4829a2de879b7d599c152340073906bf420b90499bc8882fdaa",
+    "tests/data/rasterimage/pixels/frame_0.25.png": "02caef5080b062c7a0a70f87b6d07311101c505a309dc6a231fc8d795e79d6f2",
+    "tests/data/rasterimage/pixels/frame_0.5.png": "899e06b63bf6e1b7a8613c2d851b183d79c3943efa5d5b27d446ca6b5ecc1430",
+    "tests/data/rasterimage/pixels/frame_0.75.png": "026105dc21284675e42cc7c34234d45a433a075a4384b83c193ae9f720e17176",
+    "tests/data/rasterimage/pixels/frame_0.png": "e0a600268e4e838cbb2d645ad9b64530a4ccac386ae25907aad6d9f68271b733",
+    "tests/data/rasterimage/pixels/frame_1.5.png": "5b99c9192c107ec817661eda9b9fac762533742e47a3135e7ce9f6a4198c25c3",
+    "tests/data/rasterimage/pixels/frame_1.png": "6aa454045200c7ed9b32a9d31b6dc8ac81b99f24a4b1630a9654ccc52529349d",
+    "tests/data/rasterimage/pixels/frame_2.5.png": "65d19a5ed18d9afcdba03dddf27e9d89f94aa485321d86cbe2eda58d5402e206",
+    "tests/data/rasterimage/pixels/frame_2.png": "7469a62eb66b952f1a77fafc27ca3cf55b4d2dcc561960d9db727fb250baa659",
+    "tests/data/rasterimage/pixels/frame_3.png": "e0a600268e4e838cbb2d645ad9b64530a4ccac386ae25907aad6d9f68271b733",
+    "tests/data/rasterimage/pixels/input.nrgba": "56b364402210cb771f60fa06c7d135431d5e954dda5fe21ac2cc519e18ee5ff0",
+    "tests/data/rasterimage/pixels/input.png": "c1e1b2fe8f1b8a4f84b85a044ddab9301f3c5336412cbe395a4cb8c84688df83",
+    "tests/data/rasterimage/pixels/invert.png": "144dcd9293f593a8181ee4234966ec986fdc829190e325b2105403be258c108e",
+    "tests/data/rasterimage/pixels/invert.rgba": "5c0ef3616f9a37351af1d7744feecb768324a31886f039877b388a0be0074647",
+    "tests/data/rasterimage/pixels/invert_twice.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "tests/data/rasterimage/pixels/invert_twice.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "tests/data/rasterimage/pixels/opacity.png": "d1d42eaa3125dfbbf58d57abed41388abdc26fc709d8a00d3691875348ad8acd",
+    "tests/data/rasterimage/pixels/opacity.rgba": "c4cd265745161ac5c123a0c5b3ebd10ab04c914a7af3dfc7f496c3fa373cd9cb",
+    "tests/data/rasterimage/pixels/opacity_absolute.png": "6a3e50a03828b403362a3e4b1d6a8a2b8bd7ef8320b29a4b98738b283a1fb535",
+    "tests/data/rasterimage/pixels/opacity_absolute.rgba": "6bd39057df5cb216d195549ea6cb05d5a7e4c5510c52ac4d21fa8c1fd40c34fb",
+    "tests/data/rasterimage/pixels/opacity_restore.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "tests/data/rasterimage/pixels/opacity_restore.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "tests/data/rasterimage/pixels/opacity_subbyte.png": "aebc86755d7beb8b01bcd992ab44e1133afcb473511b7832eb82228be275473f",
+    "tests/data/rasterimage/pixels/opacity_subbyte.rgba": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+    "tests/data/rasterimage/pixels/oracle.json": "da0db5a7199bae857a83df1b4aec548c3f8f1c195036a8798aaa4b3d25acb773",
+    "tests/data/rasterimage/pixels/original.png": "8799035f68be195ece232eb13223394fc20e56e2ad35ec2a15e628e1844a3963",
+    "tests/data/rasterimage/pixels/original.rgba": "1bf0e3948a035d8efb6c9351296aabdf0303b8e0a03779c788a79a20bc843e01",
+    "tests/data/rasterimage/pixels/replace.png": "84cfd645b1895a214769ecedad5716a5117817beacd748c30d627cb3323c215c",
+    "tests/data/rasterimage/pixels/replace.rgba": "ad9820e450a477dc75cea5ca224e4cbb59bcde33363eec0bfb7932aeb6beb368",
+    "tests/data/rasterimage/pixels/replace_alpha.png": "7bfaf84d27a3355cd5d8b958d5424f2813b33f128ca2dcb0b1fd3347320916a3",
+    "tests/data/rasterimage/pixels/replace_alpha.rgba": "9b697655eab23440b703fac999f4eed37687bec85ad83915ccf36d8f472b83ad",
+    "tests/data/rasterimage/pixels/replace_restore.png": "f7e234bcc15f741841b982239d1ac815e516d1f14567260b987fed0f75a37cc1",
+    "tests/data/rasterimage/pixels/replace_restore.rgba": "335e3440cc6b5f848a22f5d5959e5c7831fc852ccaf8fa3b16eff7297203002d",
+    "tests/data/rasterimage/pixels/scene_input.nrgba": "e9471368207ac7e5ed17e57eb06e43e32f8d0738fc334234d686deefa43bca88",
+    "tests/data/rasterimage/pixels/subbyte16.rgba": "f0bec2f52cdccac7183bbca3014cf4ccb3dfdc3afd25bc28d4a9a2600cf76953",
+    "tests/data/rasterimage/pixels/tint.png": "8238d81e50f4b3b291def3d60454e3ee0daae5abb41d22b6ba536d4d98ad538d",
+    "tests/data/rasterimage/pixels/tint.rgba": "189e70b6c016e73f7735993968d5e4786bf3cd74f05442418890028aa1bc27e8",
+    "tests/data/rasterimage/pixels/zero_invert_restore.png": "144dcd9293f593a8181ee4234966ec986fdc829190e325b2105403be258c108e",
+    "tests/data/rasterimage/pixels/zero_invert_restore.rgba": "5c0ef3616f9a37351af1d7744feecb768324a31886f039877b388a0be0074647",
+    "tests/reference/image_pixels.py": "4bdf9083ee829d86f1471c9bebac7efa162a71fb865ce3ba12aa899cc4fd4650"
+  },
+  "freeze_notes": "files_sha256 excludes this manifest and validation logs; evidence_sha256 covers logs separately so test execution can append logs without self-invalidating source/reference freeze. No external upstream checkout is required by Go tests.",
+  "owned_files": [
+    "rasterimage/pixels.go",
+    "tests/_cases/rasterimage/pixels_test.go",
+    "tests/_cases/rasterimage/pixel_limits_test.go",
+    "tests/_cases/rasterimage/pixel_scene_test.go",
+    "tests/reference/image_pixels.py",
+    "docs/IMAGE_PIXELS.md"
+  ],
+  "package": "gomath/rasterimage",
+  "preserved_baseline_files_sha256": {
+    "rasterimage/image.go": "55e566ab2c253e7c75875e2df3739185689c475b35808e4244c1333823601e5d",
+    "tests/_cases/rasterimage/image_test.go": "fabc3dc1fa07c1e53ec302c622ad7b1f53c1db64d2c9fb2861e439563d4527ba"
+  },
+  "reference": {
+    "alpha_channel_pairs": "every uint8 R/A,G/A,B/A pair",
+    "animation": "90-degree rotation, integer translations, linear FadeIn/FadeOut; independent NumPy composition/Pillow rotation",
+    "animation_frames": 9,
+    "file_count": 40,
+    "frame_size": [
+      64,
+      64
+    ],
+    "oracle": "tests/data/rasterimage/pixels/oracle.json",
+    "oracle_sha256": "da0db5a7199bae857a83df1b4aec548c3f8f1c195036a8798aaa4b3d25acb773",
+    "pixel_chains": 13,
+    "pixels_per_chain": 65536,
+    "scope_excludes": [
+      "arbitrary-angle Manim camera/resampling parity",
+      "mutable image families",
+      "cross-asset per-pixel interpolation",
+      "hidden alpha0 original RGB parity"
+    ]
+  },
+  "schema": 1,
+  "semantics": {
+    "alpha0": "hidden RGB discarded on import, including 16-bit alpha below 256; temporary edit-induced alpha0 retains owned RGB",
+    "color": "straight RGB replacement; trunc(255*channel); optional uniform alpha",
+    "geometry": "WithPixels returns an independent copy; no root API or style acceptance changes",
+    "invert": "255 minus original/current private straight RGB, then premultiply",
+    "morphs": "same Bitmap geometric Transform supported; distinct assets require two-layer FadeTransform or FadeOut/FadeIn",
+    "opacity": "trunc(saved import-time alpha * factor), not cumulative",
+    "ordinary_object_setcolor": "existing no-op on default image; unsupported painted fill/tint remains rejected",
+    "premultiplied_import": "only canonical recoverable straight color; no reconstruction of already-lost input precision",
+    "tint": "straight sRGB byte multiplication; truncate; extension"
+  },
+  "source": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "execution": "AST-extracted original ImageMobject set_color/set_opacity, constructor inversion and saved-alpha, color_to_int_rgb/to_int_rgb; minimal state and color constructor",
+    "files_sha256": {
+      "LICENSE": "c6a922fc1cfaed7ac0f87aa1dc77ebf5a3c8d1ccc5ab01da33153f0d013bf019",
+      "manim/mobject/types/image_mobject.py": "dc4c34e421250985a6b0af7ac130137983dfab10d82523f923a9f65bdb9d556f",
+      "manim/typing.py": "f5db104e748d3e750925325c44bb85026076564da7f764cb5064af5a991b6714",
+      "manim/utils/color/core.py": "0453d2b2a9969ff3e0ea0fc2bddf90699dd7457da07c93043ba71e007eed063d",
+      "manim/utils/images.py": "e62383cccbe9bf6444081a59b1aa8946d98e74c4af2fc9f17dc4e58d58fba99e"
+    },
+    "generator": "tests/reference/image_pixels.py",
+    "generator_sha256": "4bdf9083ee829d86f1471c9bebac7efa162a71fb865ce3ba12aa899cc4fd4650",
+    "numpy": "2.3.5",
+    "pillow": "11.2.1",
+    "repository": "../manim"
+  },
+  "status": "scoped_pixel_implementation_complete; global_suite_has_out_of_scope_failures",
+  "wave": 8
+}

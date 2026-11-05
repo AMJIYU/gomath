@@ -1,0 +1,363 @@
+{
+  "status": "FROZEN",
+  "date": "2026-11-05",
+  "scope": "SVG text bbox gradients wave9",
+  "manifest_algorithm": "SHA256 of UTF-8 lines: <file sha256><two spaces><repository-relative path><LF>, sorted by path",
+  "tree_sha256": "f06d7ce5ab388baceba956232e6a1c0011c94050d198ed99f22c44706ef083dc",
+  "exact_frozen_paths": [
+    "docs/SVG_TEXT_GRADIENTS.md",
+    "svg/README.md",
+    "svg/gradient.go",
+    "svg/instance.go",
+    "svg/svg.go",
+    "svg/text.go",
+    "svg/text_gradient.go",
+    "tests/_cases/svg/gradient_test.go",
+    "tests/_cases/svg/text_bbox_gradients_limits_test.go",
+    "tests/_cases/svg/text_bbox_gradients_test.go",
+    "tests/data/svg/text-bbox-gradients/affine-local-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/affine-local-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/affine-local.svg",
+    "tests/data/svg/text-bbox-gradients/animated-000-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/animated-000-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/animated-020-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/animated-020-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/animated-050-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/animated-050-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/animated-080-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/animated-080-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/animated-100-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/animated-100-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/benchmarks.txt",
+    "tests/data/svg/text-bbox-gradients/cells-middle-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/cells-middle-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/cells-middle.svg",
+    "tests/data/svg/text-bbox-gradients/chunks-fonts-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/chunks-fonts-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/chunks-fonts.svg",
+    "tests/data/svg/text-bbox-gradients/dependency-hashes.json",
+    "tests/data/svg/text-bbox-gradients/font-license.txt",
+    "tests/data/svg/text-bbox-gradients/full-tests.txt",
+    "tests/data/svg/text-bbox-gradients/full-vet.txt",
+    "tests/data/svg/text-bbox-gradients/implementation.diff",
+    "tests/data/svg/text-bbox-gradients/nested-clips-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/nested-clips-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/nested-clips.svg",
+    "tests/data/svg/text-bbox-gradients/oracle.json",
+    "tests/data/svg/text-bbox-gradients/promoted-svg-race.txt",
+    "tests/data/svg/text-bbox-gradients/promoted-svg.txt",
+    "tests/data/svg/text-bbox-gradients/provenance.json",
+    "tests/data/svg/text-bbox-gradients/purecheck.txt",
+    "tests/data/svg/text-bbox-gradients/radial-reflection-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/radial-reflection-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/radial-reflection.svg",
+    "tests/data/svg/text-bbox-gradients/reference-verify.txt",
+    "tests/data/svg/text-bbox-gradients/relative-kern-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/relative-kern-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/relative-kern.svg",
+    "tests/data/svg/text-bbox-gradients/template-alpha-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/template-alpha-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/template-alpha.svg",
+    "tests/data/svg/text-bbox-gradients/test-overlay.json",
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern.svg",
+    "tests/data/svg/text-bbox-gradients/use-chain-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/use-chain-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/use-chain.svg",
+    "tests/data/svg/text-bbox-gradients/validation.json",
+    "tests/data/svg/text-bbox-gradients/visibility-overrides-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/visibility-overrides-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/visibility-overrides.svg",
+    "tests/data/svg/text-bbox-gradients/wave8-baseline.json",
+    "tests/data/svg/text-bbox-gradients/zero-advance.ttf",
+    "tests/data/svg/text-bbox-gradients/zero-width-cairo-ss1.png",
+    "tests/data/svg/text-bbox-gradients/zero-width-cairo-ss4.png",
+    "tests/data/svg/text-bbox-gradients/zero-width.svg",
+    "tests/reference/svg_text_bbox_gradients.py"
+  ],
+  "files": {
+    "svg/README.md": {
+      "sha256": "ea5ec5cb3aafd28272e03f7cfcb54e0e7df843964fd97617d8daa3220f2cf0fe",
+      "bytes": 28621
+    },
+    "svg/gradient.go": {
+      "sha256": "777aaf78f4074b0bbd748606da0b5db81fca92137130c0270b396f683d4e4b52",
+      "bytes": 17246
+    },
+    "svg/instance.go": {
+      "sha256": "73f446ebd86793845d72f61fcdbaffb6e1e302c54e1273ec0443adf20e762ddf",
+      "bytes": 14473
+    },
+    "svg/svg.go": {
+      "sha256": "31b0944fd12bb67870b57dad8100ebb7fcdc9c496223859b6756b9eebeb0304c",
+      "bytes": 16201
+    },
+    "svg/text.go": {
+      "sha256": "46aa9de044674ddabb2229bdf93d0e0fa6f661df924d30c9fbc0cd9bcd153239",
+      "bytes": 17425
+    },
+    "svg/text_gradient.go": {
+      "sha256": "5c4e5ea9a4be7f7366e46a3733fd57cfa78e1fa4c8b3b321f87126a004b4eeb9",
+      "bytes": 2628
+    },
+    "tests/_cases/svg/gradient_test.go": {
+      "sha256": "c44210e45bdcb126c18a0b7c10dbb2bec07c5f216283246e4895ab75b41554d2",
+      "bytes": 15763
+    },
+    "tests/_cases/svg/text_bbox_gradients_test.go": {
+      "sha256": "d8601b02d911da0474d51fe8f3cbe102695b2d2e8893faef63d7d3357aea071c",
+      "bytes": 14826
+    },
+    "tests/_cases/svg/text_bbox_gradients_limits_test.go": {
+      "sha256": "7e9b49627fd6d9ea949735cc635e1024e9b3d78751ded02fa49459923cd1597c",
+      "bytes": 6830
+    },
+    "tests/reference/svg_text_bbox_gradients.py": {
+      "sha256": "695b09afda53ede8025d99b6b128c152faaa48315836349e5da273ba684fdbde",
+      "bytes": 16387
+    },
+    "docs/SVG_TEXT_GRADIENTS.md": {
+      "sha256": "cb3ceeb38f96b54146abaab1c1ac0bb2e0d0b7fe2ff39598a8f976deb9e8cfef",
+      "bytes": 5661
+    },
+    "tests/data/svg/text-bbox-gradients/affine-local-cairo-ss1.png": {
+      "sha256": "0e4b955d5558359bcdb93dbb8db019f639edf89d012266f6789878fb32b38d2b",
+      "bytes": 1381
+    },
+    "tests/data/svg/text-bbox-gradients/affine-local-cairo-ss4.png": {
+      "sha256": "1e2297b23959917ecf1a328788511861b7c951a9a06dbfe05df5bda97115b46c",
+      "bytes": 1411
+    },
+    "tests/data/svg/text-bbox-gradients/affine-local.svg": {
+      "sha256": "6a2160a9ad40254e586a700c655a4a8f21204a280d3ea2bf8f3215f159ef69cd",
+      "bytes": 418
+    },
+    "tests/data/svg/text-bbox-gradients/animated-000-cairo-ss1.png": {
+      "sha256": "0e4b955d5558359bcdb93dbb8db019f639edf89d012266f6789878fb32b38d2b",
+      "bytes": 1381
+    },
+    "tests/data/svg/text-bbox-gradients/animated-000-cairo-ss4.png": {
+      "sha256": "1e2297b23959917ecf1a328788511861b7c951a9a06dbfe05df5bda97115b46c",
+      "bytes": 1411
+    },
+    "tests/data/svg/text-bbox-gradients/animated-020-cairo-ss1.png": {
+      "sha256": "89111f7c0a27915ee17090e0b4f11e01f09a84587a0b2ebefcbeae39647978cd",
+      "bytes": 1305
+    },
+    "tests/data/svg/text-bbox-gradients/animated-020-cairo-ss4.png": {
+      "sha256": "2b12399703f5721db53265714ea010c28c13855e47a430e754c74a33973c387e",
+      "bytes": 1356
+    },
+    "tests/data/svg/text-bbox-gradients/animated-050-cairo-ss1.png": {
+      "sha256": "51845ab3dd531e06dbc67b1c7d9db6b3c07108ca4ca938ae43ae3ff01ce7e942",
+      "bytes": 1312
+    },
+    "tests/data/svg/text-bbox-gradients/animated-050-cairo-ss4.png": {
+      "sha256": "a29ff431a6a6aa0e667cf3508e7a5e7fb7761c8ca67668dfe96227a085b1a93f",
+      "bytes": 1348
+    },
+    "tests/data/svg/text-bbox-gradients/animated-080-cairo-ss1.png": {
+      "sha256": "ff0df1485328d7abf864a2b351d71fc3aeb6a983b7a33e2c227516d34e9c8dec",
+      "bytes": 1315
+    },
+    "tests/data/svg/text-bbox-gradients/animated-080-cairo-ss4.png": {
+      "sha256": "b4bd2ae9228b8550d79f9ce7135fb9d857f5d6a057909fd25d0fab42440250d6",
+      "bytes": 1349
+    },
+    "tests/data/svg/text-bbox-gradients/animated-100-cairo-ss1.png": {
+      "sha256": "3ca9342aad3ca450c78b488c762d163e6960b9a99bb27b4784263d9efb8a59c3",
+      "bytes": 1352
+    },
+    "tests/data/svg/text-bbox-gradients/animated-100-cairo-ss4.png": {
+      "sha256": "2d1d58a7fe71f346b0b2f2b772dade79bd7cf6461d82af137b6547589f61568a",
+      "bytes": 1367
+    },
+    "tests/data/svg/text-bbox-gradients/benchmarks.txt": {
+      "sha256": "64843c86a4744dce62d635fcf3a2f0d81d0c3ffa5c89301d54b8b29223cf40fd",
+      "bytes": 3590
+    },
+    "tests/data/svg/text-bbox-gradients/cells-middle-cairo-ss1.png": {
+      "sha256": "81dfbdd2230f7eb65afa5618c484176011200ae6833d145eab228954299bac73",
+      "bytes": 1502
+    },
+    "tests/data/svg/text-bbox-gradients/cells-middle-cairo-ss4.png": {
+      "sha256": "ff3c74ac59b6aca3e3fae71b366fd2faeb85752f6df2d54dac45adeae635b547",
+      "bytes": 1564
+    },
+    "tests/data/svg/text-bbox-gradients/cells-middle.svg": {
+      "sha256": "9c7381bf1073c907a750cbcd0383685dd71e85a9788cc4824472c1b593ebe21c",
+      "bytes": 412
+    },
+    "tests/data/svg/text-bbox-gradients/chunks-fonts-cairo-ss1.png": {
+      "sha256": "ac5b3450f86cb9b5d9172698bf8cc26f5bfeec9ad9b8c44e633627e27c58cea7",
+      "bytes": 1588
+    },
+    "tests/data/svg/text-bbox-gradients/chunks-fonts-cairo-ss4.png": {
+      "sha256": "7c4297f47e550e4c9ca343a5b866581f080daf8d9b9d70e2d0575bc0f09bdfc4",
+      "bytes": 1642
+    },
+    "tests/data/svg/text-bbox-gradients/chunks-fonts.svg": {
+      "sha256": "bb9f4984d4e91d1d6023ce3624c34b33e20058cacb26477af0d81f340fe14036",
+      "bytes": 466
+    },
+    "tests/data/svg/text-bbox-gradients/dependency-hashes.json": {
+      "sha256": "151ceee08e96fc9aae0a5b8f3e1f0909d5fbc6878750d690fbf1ba987d83d995",
+      "bytes": 21211
+    },
+    "tests/data/svg/text-bbox-gradients/font-license.txt": {
+      "sha256": "dc588a7ba9130043b67c2380cc03cc6644ed3557f6d5e8589b96acba1c64e343",
+      "bytes": 1913
+    },
+    "tests/data/svg/text-bbox-gradients/full-tests.txt": {
+      "sha256": "42eb566dae9b304697820282e2aac44e02a10c4a24ec4b9ab70e50e70909dcbe",
+      "bytes": 1111
+    },
+    "tests/data/svg/text-bbox-gradients/full-vet.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests/data/svg/text-bbox-gradients/implementation.diff": {
+      "sha256": "a670fa6a5a39aad9c7cd6cc581a76e86f9f35a719ce1e29ed9f3af207945840a",
+      "bytes": 52846
+    },
+    "tests/data/svg/text-bbox-gradients/nested-clips-cairo-ss1.png": {
+      "sha256": "233ffccfbe9734addf15b20e4cbf354ac5bb4b45ce077132f53ff51f157e0d23",
+      "bytes": 1400
+    },
+    "tests/data/svg/text-bbox-gradients/nested-clips-cairo-ss4.png": {
+      "sha256": "73273a0583d8a419e5c38c0f71c6dd7eb61893bd8f1d094d38634b3d0fc9686e",
+      "bytes": 1463
+    },
+    "tests/data/svg/text-bbox-gradients/nested-clips.svg": {
+      "sha256": "eb7050038bbc6b640261a8602302f9860b120042b067cabc3a8db63f1c356bc4",
+      "bytes": 636
+    },
+    "tests/data/svg/text-bbox-gradients/oracle.json": {
+      "sha256": "f40302cf3a89c616fe7c45b4bf422e20cc0b2bf2de4d56b02dcce6246e3ff088",
+      "bytes": 27382
+    },
+    "tests/data/svg/text-bbox-gradients/promoted-svg-race.txt": {
+      "sha256": "3faa05262548f1dc870f8d79d781ddff4f876b48f8ab49e30c2b0e239d2b1043",
+      "bytes": 24
+    },
+    "tests/data/svg/text-bbox-gradients/promoted-svg.txt": {
+      "sha256": "56aa30ecd94ef7445ffb3023bb26281d32c308a6c34e8524131b6815e568e060",
+      "bytes": 125837
+    },
+    "tests/data/svg/text-bbox-gradients/provenance.json": {
+      "sha256": "709996d4016131993486332174f6947e56a14da8161374084d10053df50ecfba",
+      "bytes": 6367
+    },
+    "tests/data/svg/text-bbox-gradients/purecheck.txt": {
+      "sha256": "37eaeffbb661a7493a0d69173f45d501da450fd1b1cf69b40605fd4edfb83014",
+      "bytes": 105
+    },
+    "tests/data/svg/text-bbox-gradients/radial-reflection-cairo-ss1.png": {
+      "sha256": "4419c40f7b1378d6bb5ac102d2fb946bb10b5bfa901170bc296bd8fbd7db98ab",
+      "bytes": 1986
+    },
+    "tests/data/svg/text-bbox-gradients/radial-reflection-cairo-ss4.png": {
+      "sha256": "7418c2a98c7e3d84330f39c551cd1377f93490e342fa564395a7ead9707aef9c",
+      "bytes": 2036
+    },
+    "tests/data/svg/text-bbox-gradients/radial-reflection.svg": {
+      "sha256": "bf278cd29e81cdc6af920f981668990cd7c31edbb1f2fec3b93554f5b9e2da83",
+      "bytes": 405
+    },
+    "tests/data/svg/text-bbox-gradients/reference-verify.txt": {
+      "sha256": "b062894284f25ef7917d793f28d9e50e124e7b1c75428d0d12edf253dccc3cb8",
+      "bytes": 81
+    },
+    "tests/data/svg/text-bbox-gradients/relative-kern-cairo-ss1.png": {
+      "sha256": "05b929587390d8b8c303ca5357c8507568123c5960c31b60a15a3cc568c85cc3",
+      "bytes": 1949
+    },
+    "tests/data/svg/text-bbox-gradients/relative-kern-cairo-ss4.png": {
+      "sha256": "4fa33b6873e9c3d5b280670364c56fac03b672b9d27cefc9a26561eaa580d610",
+      "bytes": 2035
+    },
+    "tests/data/svg/text-bbox-gradients/relative-kern.svg": {
+      "sha256": "04a6e37de597dd5e38f7cbcc667396218658c08fc3b8807aaf1364f1169b9a81",
+      "bytes": 466
+    },
+    "tests/data/svg/text-bbox-gradients/template-alpha-cairo-ss1.png": {
+      "sha256": "6f15f46d60851a41504ea6015488b8b143c35b68a6d687098dfcc04c6d07739e",
+      "bytes": 2080
+    },
+    "tests/data/svg/text-bbox-gradients/template-alpha-cairo-ss4.png": {
+      "sha256": "b1d0e68cf57f84153077c5775267a04d810d3cec11e57f3f3cc24b581da35b6c",
+      "bytes": 2088
+    },
+    "tests/data/svg/text-bbox-gradients/template-alpha.svg": {
+      "sha256": "293613df56751f4eb7d0e8c72c23f99cec2862dacd3b7a24cdf2b325b16ff3ec",
+      "bytes": 474
+    },
+    "tests/data/svg/text-bbox-gradients/test-overlay.json": {
+      "sha256": "f5876879bcdd33d840fbf9b619df5f2f36cce9d71af7f3ed9cb6d3f4528d387d",
+      "bytes": 5364
+    },
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern-cairo-ss1.png": {
+      "sha256": "061bd1d61eb7d3bf8e2375cf07d701eff624f792ebba833e7a6dafcc9661f443",
+      "bytes": 1738
+    },
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern-cairo-ss4.png": {
+      "sha256": "2e7537b1db1243b3951a67ff5276eec07ccec37ce457b24e9dedf1d31e95d60c",
+      "bytes": 1820
+    },
+    "tests/data/svg/text-bbox-gradients/tspan-whole-kern.svg": {
+      "sha256": "272b00c4969d66106fb76321db46268c592ea574587b8ec0dc74e8b7716b7b02",
+      "bytes": 417
+    },
+    "tests/data/svg/text-bbox-gradients/use-chain-cairo-ss1.png": {
+      "sha256": "56e017903e8a29f67e3c52909f354d3fdac8e37b044c5f135fedf1c874f374f1",
+      "bytes": 2373
+    },
+    "tests/data/svg/text-bbox-gradients/use-chain-cairo-ss4.png": {
+      "sha256": "b63fb310534f78748e285f96b5b8a2121bc6059a16cf219903efa94a4d271c56",
+      "bytes": 2399
+    },
+    "tests/data/svg/text-bbox-gradients/use-chain.svg": {
+      "sha256": "0f1f34a1e4eb10bc457cc4e573ff4ad635795b2d54bf5c9c2185c4b42fdaba4a",
+      "bytes": 775
+    },
+    "tests/data/svg/text-bbox-gradients/validation.json": {
+      "sha256": "b87e0984c356b7a532dea8670aa4beddc0fdde3b4edd87ec6855d7c2708e432d",
+      "bytes": 14090
+    },
+    "tests/data/svg/text-bbox-gradients/visibility-overrides-cairo-ss1.png": {
+      "sha256": "510e6c5b12b26007fd8445783bb33db20cfa14830ce34900fbf7f601c4a02fdb",
+      "bytes": 830
+    },
+    "tests/data/svg/text-bbox-gradients/visibility-overrides-cairo-ss4.png": {
+      "sha256": "80d5f08d5d2989a6ed3763735f387616205f823e21f9c6ceda567dc0aa8b214a",
+      "bytes": 864
+    },
+    "tests/data/svg/text-bbox-gradients/visibility-overrides.svg": {
+      "sha256": "23dd4aa6eed5679cb9a95f396a7047c736fb20d67b45704aec535ac38beb6876",
+      "bytes": 571
+    },
+    "tests/data/svg/text-bbox-gradients/wave8-baseline.json": {
+      "sha256": "307dd86a1a361447577b067c40da30bcf9524f8352c8053f88fab52896e7e5ae",
+      "bytes": 24246
+    },
+    "tests/data/svg/text-bbox-gradients/zero-advance.ttf": {
+      "sha256": "5c00e30eca37ce746d97ce87d5955ba40dd64d8bdb37ae5e9a6b5e6cbe438754",
+      "bytes": 148672
+    },
+    "tests/data/svg/text-bbox-gradients/zero-width-cairo-ss1.png": {
+      "sha256": "bacdd0429b1e79fcf451f3a0d7da2c8bdb6d7c8a3e3fc39f10cd6274a49b36e3",
+      "bytes": 722
+    },
+    "tests/data/svg/text-bbox-gradients/zero-width-cairo-ss4.png": {
+      "sha256": "821baa2a9991eaddb44af3b6e9d9474481dfc68a52c3d18dd3877a267fe49111",
+      "bytes": 719
+    },
+    "tests/data/svg/text-bbox-gradients/zero-width.svg": {
+      "sha256": "b3006ec08e489541dd82c55f80eb531771d542391a01b3bf702985e98373d84d",
+      "bytes": 395
+    }
+  },
+  "self_excluded": "freeze.json; hash separately in handoff",
+  "staging": "svg/_wave9 and tests/_cases/svg/_wave9 removed after promotion"
+}

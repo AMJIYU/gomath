@@ -1,0 +1,86 @@
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_direction
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_direction
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_direction
+--- PASS: TestObjectDirectionPinnedManimAndActualTransform (0.01s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_direction (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_direction (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_direction (0.00s)
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/join
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/implicit
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/coordinate
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/bitmap
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/style
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/scalar
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/clip
+--- PASS: TestObjectDirectionAtomicLateFailureAndAliasing (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/join (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/implicit (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/coordinate (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/bitmap (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/style (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/scalar (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/clip (0.00s)
+=== RUN   TestObjectDirectionReceiverOnlyAndEmptyFamilies
+--- PASS: TestObjectDirectionReceiverOnlyAndEmptyFamilies (0.00s)
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/selfcycle
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/cycle
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/shared
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/nilchild
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/zeroID
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/duplicateID
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/contours
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/curves
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/storage
+--- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds (0.53s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/selfcycle (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/cycle (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/shared (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/nilchild (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/zeroID (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/duplicateID (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/contours (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/curves (0.13s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/storage (0.13s)
+=== RUN   TestObjectDirectionConcurrentIndependentEditsAndSceneSampling
+--- PASS: TestObjectDirectionConcurrentIndependentEditsAndSceneSampling (0.00s)
+PASS
+ok  	gomath	1.576s
+=== RUN   TestDirectionPinnedManimAndTransformControls
+=== RUN   TestDirectionPinnedManimAndTransformControls/empty
+=== RUN   TestDirectionPinnedManimAndTransformControls/point_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/open_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/closed_curved_3d
+=== RUN   TestDirectionPinnedManimAndTransformControls/constant
+=== RUN   TestDirectionPinnedManimAndTransformControls/near_closed_open
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_open_closed
+=== RUN   TestDirectionPinnedManimAndTransformControls/multi_unequal
+--- PASS: TestDirectionPinnedManimAndTransformControls (0.01s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/empty (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/point_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/open_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/closed_curved_3d (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/constant (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/near_closed_open (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_open_closed (0.00s)
+    --- PASS: TestDirectionPinnedManimAndTransformControls/multi_unequal (0.00s)
+=== RUN   TestDirectionExactReversalShapeEndpointsAndMetadata
+--- PASS: TestDirectionExactReversalShapeEndpointsAndMetadata (0.00s)
+=== RUN   TestDirectionStrictInputsAndImplicitClosureAtomicity
+--- PASS: TestDirectionStrictInputsAndImplicitClosureAtomicity (0.00s)
+=== RUN   TestDirectionSharedBudgetsAndEarlyRejection
+--- PASS: TestDirectionSharedBudgetsAndEarlyRejection (0.01s)
+=== RUN   TestDirectionIndependentAliasedContoursAndConcurrentCalls
+--- PASS: TestDirectionIndependentAliasedContoursAndConcurrentCalls (0.00s)
+=== RUN   TestDirectionRandomCurves
+--- PASS: TestDirectionRandomCurves (0.02s)
+PASS
+ok  	gomath/path	1.066s

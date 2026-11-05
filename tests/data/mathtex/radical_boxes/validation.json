@@ -1,0 +1,176 @@
+{
+  "checkpoint": "wave6-mathtex-radical-boxes-focused-source-freeze",
+  "date_local": "2026-11-05",
+  "scope": "Only the bounded mathtex radical/box/phantom slice. Not whole-repository wave6 validation; prior wave5 checkpoint does not certify these changes.",
+  "changed_source_sha256": {
+    "mathtex/mathtex.go": "fc735abd9377ee843f53599e97e5fec7face87c8b6ce2825632345f43eac5f31",
+    "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+    "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+    "tests/_cases/mathtex/layout_test.go": "cf387e2d5a6c7d05922cb8a2010e621e865cd60db279a87bf2ae1decc7816dd7",
+    "tests/_cases/mathtex/radical_boxes_test.go": "43a46fa3959db8bb236541c561b2541629b992593227c8908a4c6cb574b2ff62",
+    "tests/_cases/mathtex/radical_boxes_reference_test.go": "9f8f577101c7b9fa1ebf8826892eed40b70ce330245cd4f03fe930ef6d093b8e",
+    "tests/_cases/mathtex/radical_boxes_render_test.go": "dd3a0fb0f19fc9ae9a368a2c2b8faea30e73166a0ad52f7a19dfedd9a1a3577b",
+    "tests/reference/mathtex_radical_boxes.py": "e2b7bd84382f085706724e3a2b4b193f3375a587c22b0e80b711a42f46635217",
+    "tests/reference/_radical_legacy_capture/main.go": "95e00d5cef7931b14f89f344e2c236289fa6aa3f1d54eb29b616c95226bde75a",
+    "docs/RADICAL_BOXES.md": "2783546b53a66ee66bb8172e178a716c885bcdc83aa6d737840dc1beb98b7fa5"
+  },
+  "mathtex_package_sha256": {
+    "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+    "mathtex/colors.go": "54c4f61daef1a28872a5da15b14e2c278c19a22c41be60d9d6070aba59a8566d",
+    "mathtex/delimiters.go": "f876fa5b5532d9b45ddb257c961ba4dc97d3b46f06c000aa966b932e53a2dbf5",
+    "mathtex/environments.go": "b928a469492f5575021871bc6dafd0ab54978f6d15668aebd4490e77dc85b97a",
+    "mathtex/fractions.go": "2935ff17905563fe14d99391343dec11a02b99979663482f64e1d960790f24ef",
+    "mathtex/math_alphabets.go": "fe4bdc4ce55608c4473a487e091d7cd68da883c3fa2ccca4c6d405568a191e3b",
+    "mathtex/math_alphabets_data.go": "7946ca5cd94dc28fbd19bfe162d5783cf80a808280b490c9925161ab44b55d31",
+    "mathtex/mathtex.go": "fc735abd9377ee843f53599e97e5fec7face87c8b6ce2825632345f43eac5f31",
+    "mathtex/multiline.go": "51288ed32c249f1aed95e31b82e52a11c08bc27c56c5090cc382d424a65c3e40",
+    "mathtex/named_operators.go": "3771d39dd91667b09e8a16bdab318576c92f6a212f2bdd4933ee33c64c66f511",
+    "mathtex/operators.go": "d265224b05bf77f5f5fcd1810810addc0704e4340c70f43e0ed44f8987b29ff6",
+    "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+    "mathtex/set_symbols.go": "b0ed62b8a83fdbc43a8258e71cf88baa56e298f40d5df7cab60281648fac1d9a",
+    "mathtex/set_symbols_data.go": "944fd1d67bcaaed6914ff449b6e434cb6f9ea53b41d16c1891bd4de6dff16534",
+    "mathtex/stacks.go": "bd1b7a9e0d9716151340dd122cd141c7ee4b2c6057b27880e82afc164f47aca6",
+    "mathtex/substack.go": "3b07f9635e4e42abdfe6445c72100cd10ffac79ce4427edadf7d42e020949948"
+  },
+  "commands": [
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -count=1",
+      "result": "PASS",
+      "package_seconds": 1.951
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -tags noasm -count=1",
+      "result": "PASS",
+      "package_seconds": 1.939
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=mathtex -tags noasm -race -count=1",
+      "result": "PASS",
+      "package_seconds": 32.612,
+      "note": "cgo only for Go race instrumentation; not a product dependency"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./mathtex",
+      "result": "PASS"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS",
+      "non_standard_packages": 42,
+      "note": "No native inputs or runtime process-launch imports"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -run ^TestRadicalBox -v -count=1",
+      "result": "PASS",
+      "note": "20 independent references; exact legacy captures; real ink; budgets; ownership and concurrent reads"
+    },
+    {
+      "command": "GOMATH_RADICAL_BOXES_PREVIEW_DIR=\"$PWD/tests/data/mathtex/radical_boxes/preview\" CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -run ^TestRadicalBoxWriteTransformSnapshotsAndPreview$ -count=1",
+      "result": "PASS",
+      "package_seconds": 0.061
+    }
+  ],
+  "API": {
+    "entry": "mathtex.New; no Options additions",
+    "syntax": [
+      "\\sqrt[index]{radicand}",
+      "\\boxed{body}",
+      "\\phantom{body}",
+      "\\hphantom{body}",
+      "\\vphantom{body}"
+    ],
+    "index_scale": 0.5,
+    "box_padding_em": 0.2,
+    "stroke_em": 0.045,
+    "new_stroke_join": "round"
+  },
+  "limits": {
+    "source_runes": 16384,
+    "source_bytes": 65536,
+    "nesting": 128,
+    "environment_rows": 64,
+    "environment_columns": 64,
+    "shared_environment_cells_substack_rows": 4096,
+    "curves": 1048576,
+    "hidden_operand_work": "Fully retained; source/depth/cells shared; audit uncharged legacy structural paths without double charging glyphs/marks. No curve refunds on phantom removal."
+  },
+  "independent_reference": {
+    "generator": "tests/reference/mathtex_radical_boxes.py",
+    "manifest": "tests/data/mathtex/radical_boxes/reference.json",
+    "records": 20,
+    "real_font_faces": 4,
+    "minimum_color_IoU": 0.990031,
+    "maximum_RGB_MAE_byte": 0.013065,
+    "metric_tolerance_em": 0.0009765625,
+    "oracle_boundary": "Original fontTools hmtx/glyf outlines + manually specified finite policy + CairoSVG. Not a full TeX/Manim layout oracle; tools absent from Go tests and runtime."
+  },
+  "legacy_compatibility": {
+    "existing_fixtures_modified": false,
+    "existing_metric_controlpoint_fixtures": 8,
+    "additional_pre_extension_root_geometry_and_RGBA_captures": 5,
+    "manifest": "tests/data/mathtex/radical_boxes/legacy.json",
+    "test_change": "Only replace obsolete unsupported sqrt[3]{x} entry with malformed sqrt[3{x} in layout_test.go."
+  },
+  "animation_preview": {
+    "directory": "tests/data/mathtex/radical_boxes/preview",
+    "PNG_SVG_pairs": 4,
+    "times": [
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "checks": "Write reveal and actual non-static intermediate pixels; same-topology linear Transform border controlpoint interpolation; identity preservation; snapshot isolation; concurrent sampling/raster reads."
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -run '^$' -bench '^BenchmarkRadicalBoxes$' -benchmem -benchtime=300ms -count=3 -p 1",
+    "result": "PASS",
+    "toolchain": "go1.27.3 darwin/arm64",
+    "CPU": "Apple M2",
+    "GOMAXPROCS": 8,
+    "workload": "Two short formulas at default .55em; layout/construction only, excluding raster, SVG, external tools. Shared-host bounded observations; no whole-library speed claim.",
+    "samples": {
+      "indexed": {
+        "ns_op": [
+          45533,
+          44521,
+          46575
+        ],
+        "B_op": [
+          95937,
+          95937,
+          95936
+        ],
+        "allocs_op": [
+          292,
+          292,
+          292
+        ]
+      },
+      "boxed-phantoms": {
+        "ns_op": [
+          87547,
+          82844,
+          80857
+        ],
+        "B_op": [
+          193794,
+          193794,
+          193794
+        ],
+        "allocs_op": [
+          509,
+          509,
+          509
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Finite declared geometry; no font MATH-table degree placement/display-size radical or full TeX parity.",
+    "Raw index brackets require grouping, literal text or matched delimiters; empty indices reject.",
+    "Advance-only atoms still receive the existing row gap; ink bounds remain empty for standalone phantoms.",
+    "Existing commands requiring visible ink still reject standalone phantom bodies.",
+    "Caller must not mutate shared authored trees during reads/sampling."
+  ]
+}

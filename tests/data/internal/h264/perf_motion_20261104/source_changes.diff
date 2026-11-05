@@ -1,0 +1,715 @@
+--- before/internal/h264/VALIDATION.md
++++ after/internal/h264/VALIDATION.md
+@@ -1027,13 +1027,19 @@
+ retained. Reset releases the grid. This does not claim reduced idle memory/RSS.
+ 
+ ```sh
+-CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++CGO_ENABLED=0 GOMAXPROCS=1 GOMATH_H264_MEASURE=1 go run ./tests/cmd/run -pkg=internal/h264 \
+   -run='^TestMotionMeasurements$' -v -count=1 -p 1
+ CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
+   -run='^$' -bench='^BenchmarkMotionSearch$' -benchmem \
+   -benchtime=300ms -count=5 -p 1
+ python3 tests/_cases/internal/h264/summarize_motion.py
+ ```
++
++The log-only `TestMotionMeasurements` is development-only and skips unless
++`GOMATH_H264_MEASURE=1` is explicitly set. Existing historical raw captures above
++are unchanged. All deterministic ReferenceVectors and independent-decoder
++fixtures remain complete in the default suite, including race runs; no
++correctness matrix is gated or reduced for performance collection.
+ 
+ Production changes: new `internal/h264/motion.go`, opt-in API/dispatch in
+ `predictive.go`, shared signed-MVD writer and optional grid in `inter.go`, and
+@@ -1042,3 +1048,146 @@
+ `inter_test.go`, and add opt-in `--all-idr` to `validate_predictive.py`. New golden,
+ raw measurements, independent decode output and test logs live only under
+ `tests/data/internal/h264`; this validation file is the only documentation edit.
++
++## Byte-identical exhaustive motion optimization — 2026-11-04
++
++`PredictiveOptions`, `MotionSearchRadius`, defaults and supported geometry are
++unchanged. The search still transforms, quantizes and reconstructs every
++candidate in the same order, using the same exact local rate/distortion cost
++and tie rules. No candidate shortlist, early termination, changed QP or reduced
++correctness matrix was introduced.
++
++Fresh before sources/hashes, raw five-sample timings, separate CPU/allocation
++profiles, after sources/hashes, test logs and decoder results are preserved in
++`tests/data/internal/h264/perf_motion_20261104/`. The 26-file before archive
++matches every recorded SHA256. The benchmark body itself is unchanged. Previous
++motion captures outside this directory are historical and were not replaced.
++
++The before pan/r2 and changing-noise/r2 CPU profiles identified temporary
++candidate CAVLC byte writing: `bits.uint` alone accounted for26.55%/22.58% of
++CPU samples, and CAVLC for45.17%/38.71% cumulatively. The changes are:
++
++- `cost.go` counts the exact syntax length of a candidate, including context
++  dependent tokens, signs, adaptive levels, zeros, runs, MVD, CBP and QP delta.
++  It updates the same current-MB nonzero contexts. Selected syntax still uses
++  the original byte writer. Its normative size tables are shared with that
++  writer; mirrored traversal/level logic is a maintenance cost, covered by
++  differential tests rather than treated as an approximate rate estimator.
++- `makeInterMB` quantizes directly into the returned luma/chroma coefficient
++  arrays, removing a separately zeroed temporary and copies. All transform,
++  quantization, reconstruction and SSE arithmetic is unchanged.
++- Motion trials no longer rewrite the unused current-MB intra modes, and motion
++  encoders no longer allocate the obsolete4096-byte inter-trial byte buffer.
++  Final selection still clears/updates modes and contexts normally. Radius0
++  retains its original trial writer and buffer.
++
++After profiles show candidate syntax counting at21.47%/19.17% cumulative CPU
++samples and `bits.uint` at0.52%/0%; remaining work is primarily transform,
++quantization and compensation. Sample percentages have different denominators
++and are not speedup measurements. Allocation profiles are sampled; the exact
++4096-byte/one-allocation startup reduction is established by benchmark counters
++and a workspace/Reset regression, not by inferring small objects from pprof.
++
++### Matched workload and observed performance
++
++AppleM2, macOS15.7.1(24G231), Go1.27.3, darwin/arm64, CGO_ENABLED=0,
++noasm, GOMAXPROCS1, serial-p1. Each case is320x180, QP24, ModeSearchfalse,
++InterResidualtrue, GOP60,60 frames/operation, five300ms samples. Inputs, encoder
++construction, SPS/PPS, mux, decoder and filesystem are excluded. Conversion,
++every candidate, intra comparison, selected bitstream, reconstruction and NAL
++allocation are included. First-use workspace allocation is included/amortized;
++expensive radius1/2 samples each contain only one operation. CPU/allocation
++profiling was a separate2s capture, outside the timing samples.
++
++These sequential shared-machine captures are indicative. A parent integration
++race process was active during the before capture and had exited before the
++after capture. Consequently the full before/after percentages include possible
++load differences and are not an isolated causal estimate or latency guarantee.
++The separate unchanged-writer versus exact-counter microbenchmark below checks
++the targeted operation under the same post-change measurement conditions.
++
++| Pattern/radius | Before median ms/frame | After median ms/frame | Time change |
++|---|---:|---:|---:|
++| pan/r0 | 4.1871 | 4.0603 | -3.0% |
++| pan/r1 | 21.8373 | 15.9918 | -26.8% |
++| pan/r2 | 56.4084 | 40.1229 | -28.9% |
++| static/r0 | 2.9864 | 2.9253 | -2.0% |
++| static/r1 | 20.0658 | 15.2703 | -23.9% |
++| static/r2 | 54.4977 | 39.6795 | -27.2% |
++| changing-noise/r0 | 4.0089 | 3.9134 | -2.4% |
++| changing-noise/r1 | 21.6214 | 15.8033 | -26.9% |
++| changing-noise/r2 | 57.1778 | 40.1812 | -29.7% |
++
++All five individual samples, minimum/maximum, bytes and allocations per frame
++are retained in `benchmark_summary.json` / `benchmark_summary.md`, generated by
++`tests/_cases/internal/h264/summarize_motion_perf.py`. Radius1/2 allocations
++fall84→83 per60 frames; bytes fall4096 per operation in these one-operation
++samples. For example pan/r2 falls1,271,424→1,267,328B/op. Radius0 allocation
++counts are unchanged; an8B spread in static/r0 bytes is measurement noise.
++The removed buffer saves4096 retained bytes per enabled motion encoder, with
++no additional cache. This does not claim reduced RSS or zero allocation.
++
++Paired post-change exact-MB syntax microbenchmarks (five300ms samples, same
++MVD/context/reset, preallocated original byte writer, zero allocations for both):
++
++| Coefficients | Original writer median ns/op | Exact counter median ns/op |
++|---|---:|---:|
++| zero | 69.89 | 41.91 |
++| sparse | 619.0 | 343.7 |
++| dense | 3907 | 1348 |
++
++All nine opt-in size/PSNR measurements exactly match the previous motion table.
++For pan/r2 this remains754,948 bytes/40.888852dB, static/r2 remains29,462 bytes/
++40.738587dB, and changing-noise/r2 remains1,602,981 bytes/40.552949dB. The
++optimization changes neither compression ratio nor reconstruction quality.
++Radius2 still costs approximately9.9–13.6 times radius0 in these after captures;
++exhaustive search remains expensive. Radius3/4 correctness is retained but no
++timing or universal speed claim is made for those workloads.
++
++### Regression and independent decoder evidence
++
++- Complete owned-package suite: **PASS,46.518s,99.8% statement coverage**,
++  including all52 QPs, all supported radii, both ModeSearch settings, state,
++  error recovery, crops, borders and five unchanged golden manifests.
++- Differential CAVLC tests check every coefficient-presence mask for4/15/16
++  coefficients, rotating signs/contexts/alignment; random signed levels and all
++  supported suffix thresholds; complete inter syntax for all48 CBPs, borders,
++  interior positions and MVD combinations; actual quantizer output at every QP.
++  Bit lengths, TotalCoeff and full nonzero-count grids match the original writer.
++- Fresh optimized output: **303 streams,5182 frames,825 fresh IDR suffixes**
++  strictly decoded by FFmpeg8.0.1/libavcodec62.11.100 with `-xerror
++  -err_detect explode -threads 1`. Every cropped Y/Cb/Cr byte matches internal
++  reconstruction. The regenerated manifest is byte-identical to the existing
++  motion golden, SHA256
++  `61964cc73100801da8f02c5c7e49ee2238258b26d56466d0117f2b946876299c`.
++  Temporary streams were removed after verification; the result and manifest
++  comparison are recorded in the capture directory. No fixture was promoted.
++- GOMAXPROCS8 concurrency, returned-NAL ownership, workspace lifetime/Reset,
++  retained capacity, sampling and state checks: **PASS,2.036s**. Targeted vet
++  passed. Scoped CGO0/noasm dependency audit found62 standard-library packages
++  plus the codec, no external packages, cgo, codec native/assembly inputs,
++  `os/exec` or `plugin`. Standard Go runtime assembly is outside the codec scope.
++- `TestMotionMeasurements` skips by default (verified0.005s); explicit
++  `GOMATH_H264_MEASURE=1` executes all540 frames and reproduces all nine
++  historical size/PSNR values (11.758s). No deterministic correctness test was
++  gated, shortened or conditionally skipped for race. The parent reported its
++  prior integration race pass487.432s; no new whole-repository or race run is
++  claimed by this slice.
++
++```sh
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^$' -bench='^BenchmarkMotionSearch$' -benchmem \
++  -benchtime=300ms -count=5 -p 1
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^$' -bench='^BenchmarkMotionSyntax(Writer|Counter)$' -benchmem \
++  -benchtime=300ms -count=5 -p 1
++python3 tests/_cases/internal/h264/summarize_motion_perf.py \
++  tests/data/internal/h264/perf_motion_20261104
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -count=1 -cover -p 1
++```
++
++This slice changes `inter.go`, `motion.go`, adds `cost.go`, gates the log-only
++measurement in central `motion_test.go`, adds central `motion_performance_test.go`
++and `summarize_motion_perf.py`, and updates this validation record and the owned
++test README. API/defaults, export/CLI and all historical golden data are unchanged.
+--- before/internal/h264/inter.go
++++ after/internal/h264/inter.go
+@@ -35,7 +35,13 @@
+ 		if c != 0 {
+ 			stride, size, bx, by, qpc, blocks = stride/2, 8, mx/2, my/2, chromaQP(max(4, qp)), 4
+ 		}
+-		var q [16][16]int
++		// Quantize directly into the returned coefficients. Every active row is
++		// overwritten by quant4, so a second zeroed 16x16 temporary and copies
++		// are unnecessary (especially for the four-block chroma planes).
++		q := mb.luma[:]
++		if c != 0 {
++			q = mb.ac[c-1][:]
++		}
+ 		var dc [4]int
+ 		for b := range blocks {
+ 			x, y := (b/4%2)*8+b%2*4, b/8*8+(b/2%2)*4
+@@ -64,9 +70,7 @@
+ 				}
+ 			}
+ 		}
+-		if c == 0 {
+-			mb.luma = q
+-		} else {
++		if c != 0 {
+ 			dc = hadamard2(dc)
+ 			for i := range dc {
+ 				dc[i] = quantize(dc[i], forwardScale[qpc%6][0], 16+qpc/6)
+@@ -75,7 +79,6 @@
+ 				}
+ 			}
+ 			mb.dc[c-1] = dc
+-			copy(mb.ac[c-1][:], q[:4])
+ 			dc = hadamard2(dc)
+ 		}
+ 		for b := range blocks {
+@@ -258,7 +261,10 @@
+ 		ws := &interWorkspace{
+ 			src: newPicture420(pw, ph), rec: newPicture420(pw, ph),
+ 			counts:       [3][]uint8{make([]uint8, pw*ph/16), make([]uint8, pw*ph/64), make([]uint8, pw*ph/64)},
+-			interScratch: make([]byte, 4096), intraScratch: make([]byte, 4096), rbsp: make([]byte, 0, pw*ph/2),
++			intraScratch: make([]byte, 4096), rbsp: make([]byte, 0, pw*ph/2),
++		}
++		if e.motionRadius == 0 {
++			ws.interScratch = make([]byte, 4096)
+ 		}
+ 		if e.intra.modeSearch {
+ 			ws.modes, ws.scratch = make([]byte, pw*ph/16), make([]byte, 128)
+--- before/internal/h264/motion.go
++++ after/internal/h264/motion.go
+@@ -134,11 +134,10 @@
+ 			trial := func(mv motionVector) {
+ 				compensateMotion(prediction, e.reference, mx, my, mv)
+ 				mb := makeInterMB(source, prediction, 0, 0, e.intra.qp)
+-				clearMBContext(ws.counts, ws.modes, pw, mx, my)
+-				t := bits{data: ws.interScratch[:0]}
+-				writeInterMBDelta(&t, &mb, ws.counts, pw, mx, my, 4*(mv.x-mvp.x), 4*(mv.y-mvp.y))
++				clearMBContext(ws.counts, nil, pw, mx, my)
++				length := interBitLength(&mb, ws.counts, pw, mx, my, 4*(mv.x-mvp.x), 4*(mv.y-mvp.y))
+ 				isSkip := mb.cbp == 0 && mv == skipMV
+-				rate := ueLength(run) + bitLength(&t)
++				rate := ueLength(run) + length
+ 				if isSkip {
+ 					rate = ueLength(run + 1)
+ 				}
+--- before/tests/_cases/internal/h264/motion_test.go
++++ after/tests/_cases/internal/h264/motion_test.go
+@@ -503,6 +503,9 @@
+ }
+ 
+ func TestMotionMeasurements(t *testing.T) {
++	if os.Getenv("GOMATH_H264_MEASURE") != "1" {
++		t.Skip("development measurement; opt in with GOMATH_H264_MEASURE=1")
++	}
+ 	for _, kind := range []string{"pan", "static", "noisechange"} {
+ 		for _, r := range []int{0, 1, 2} {
+ 			e, _ := NewPredictive(320, 180, 24, PredictiveOptions{QP: 24, GOP: 60, InterResidual: true, MotionSearchRadius: r})
+--- /dev/null
++++ after/internal/h264/cost.go
+@@ -0,0 +1,132 @@
++package h264
++
++// cavlcBitLength computes the exact length of the same syntax emitted by
++// cavlc, including tokens, signs, adaptive levels, total_zeros and run_before.
++// Losing RDO candidates need this length and TotalCoeff, but not a byte buffer.
++// Keep the writer as the byte-producing authority; differential tests compare
++// this counter and its contexts with that writer across the supported domain.
++func cavlcBitLength(coeff []int, nC int) (length, total int) {
++	var positions, levels [16]int
++	for i, c := range coeff {
++		if c != 0 {
++			positions[total], levels[total] = i, c
++			total++
++		}
++	}
++	trailing := 0
++	for trailing < min(3, total) && absInt(levels[total-1-trailing]) == 1 {
++		trailing++
++	}
++	table := 0
++	switch {
++	case nC == -1:
++		table = 4
++	case nC >= 8:
++		table = 3
++	case nC >= 4:
++		table = 2
++	case nC >= 2:
++		table = 1
++	}
++	length = int(coeffToken[table][total][trailing].size)
++	if total == 0 {
++		return
++	}
++	length += trailing
++	suffix := 0
++	if total > 10 && trailing < 3 {
++		suffix = 1
++	}
++	for i := total - 1 - trailing; i >= 0; i-- {
++		level := levels[i]
++		code := 2*absInt(level) - 2
++		if level < 0 {
++			code++
++		}
++		if i == total-1-trailing && trailing < 3 {
++			code -= 2
++		}
++		length += levelBitLength(code, suffix)
++		if suffix == 0 {
++			suffix = 1
++		}
++		if suffix < 6 && absInt(level) > 3<<(suffix-1) {
++			suffix++
++		}
++	}
++	zeros := positions[total-1] + 1 - total
++	if total < len(coeff) {
++		if nC == -1 {
++			length += int(chromaDCZeros[total-1][zeros].size)
++		} else {
++			length += int(totalZeros[total-1][zeros].size)
++		}
++	}
++	for i := total - 1; i > 0 && zeros > 0; i-- {
++		run := positions[i] - positions[i-1] - 1
++		length += int(runBefore[min(zeros, 7)-1][run].size)
++		zeros -= run
++	}
++	return
++}
++
++func levelBitLength(code, suffix int) int {
++	prefix, size := code>>suffix, suffix
++	if suffix == 0 && code >= 14 && code < 30 {
++		prefix, size = 14, 4
++	} else if prefix >= 15 {
++		prefix, size = 15, 12
++	}
++	return prefix + 1 + size
++}
++
++func signedBitLength(v int) int {
++	if v > 0 {
++		return ueLength(2*v - 1)
++	}
++	return ueLength(-2 * v)
++}
++
++// Exact counterpart of writeInterMBDelta. Only current-MB counts are updated;
++// the caller starts them at zero, retaining the selected neighboring contexts.
++func interBitLength(mb *interMB, counts [3][]uint8, pw, mx, my, dx, dy int) int {
++	length := 1 + signedBitLength(dx) + signedBitLength(dy) + ueLength(int(interCBPCode[mb.cbp]))
++	if mb.cbp == 0 {
++		return length
++	}
++	length++ // mb_qp_delta=0
++	for b := range 16 {
++		if mb.cbp&(1<<(b/4)) == 0 {
++			continue
++		}
++		x, y := mx+(b/4%2)*8+b%2*4, my+b/8*8+(b/2%2)*4
++		var scan [16]int
++		for i, pos := range frameScan {
++			scan[i] = mb.luma[b][pos]
++		}
++		n, total := cavlcBitLength(scan[:], neighborCount(counts[0], pw/4, x/4, y/4))
++		length += n
++		counts[0][y/4*(pw/4)+x/4] = uint8(total)
++	}
++	if mb.cbp/16 != 0 {
++		for c := range 2 {
++			n, _ := cavlcBitLength(mb.dc[c][:], -1)
++			length += n
++		}
++	}
++	if mb.cbp/16 == 2 {
++		for c := range 2 {
++			for b := range 4 {
++				x, y := mx/2+b%2*4, my/2+b/2*4
++				var scan [15]int
++				for i, pos := range frameScan[1:] {
++					scan[i] = mb.ac[c][b][pos]
++				}
++				n, total := cavlcBitLength(scan[:], neighborCount(counts[c+1], pw/8, x/4, y/4))
++				length += n
++				counts[c+1][y/4*(pw/8)+x/4] = uint8(total)
++			}
++		}
++	}
++	return length
++}
+--- /dev/null
++++ after/tests/_cases/internal/h264/motion_performance_test.go
+@@ -0,0 +1,209 @@
++package h264
++
++import (
++	"bytes"
++	"math/rand/v2"
++	"testing"
++)
++
++var motionSyntaxSink int
++
++func motionSyntaxInputs(kind string) (interMB, [3][]uint8) {
++	src, ref := newPicture420(16, 16), equalReference128(16, 16)
++	for c := range 3 {
++		copy(src.planes[c], ref.planes[c])
++		if kind == "dense" {
++			for i := range src.planes[c] {
++				src.planes[c][i] = byte(i*73 + c*19)
++			}
++		}
++	}
++	if kind == "sparse" {
++		src.planes[0][0], src.planes[2][0] = 255, 0
++	}
++	counts := [3][]uint8{make([]uint8, 64), make([]uint8, 16), make([]uint8, 16)}
++	for _, c := range counts {
++		for i := range c {
++			c[i] = uint8(i % 17)
++		}
++	}
++	return makeInterMB(src, ref, 0, 0, 24), counts
++}
++
++// One exact MB's complete syntax, with the same nonzero surrounding contexts
++// and MVD on every iteration. Setup is excluded; output capacity is preallocated
++// just like a motion trial. Keep this writer baseline unchanged after profiling.
++func BenchmarkMotionSyntaxWriter(b *testing.B) {
++	for _, kind := range []string{"zero", "sparse", "dense"} {
++		b.Run(kind, func(b *testing.B) {
++			mb, counts := motionSyntaxInputs(kind)
++			buf := make([]byte, 4096)
++			b.ReportAllocs()
++			b.ResetTimer()
++			for range b.N {
++				clearMBContext(counts, nil, 32, 16, 16)
++				w := bits{data: buf[:0]}
++				writeInterMBDelta(&w, &mb, counts, 32, 16, 16, -12, 8)
++				motionSyntaxSink = bitLength(&w)
++			}
++		})
++	}
++}
++
++func BenchmarkMotionSyntaxCounter(b *testing.B) {
++	for _, kind := range []string{"zero", "sparse", "dense"} {
++		b.Run(kind, func(b *testing.B) {
++			mb, counts := motionSyntaxInputs(kind)
++			b.ReportAllocs()
++			b.ResetTimer()
++			for range b.N {
++				clearMBContext(counts, nil, 32, 16, 16)
++				motionSyntaxSink = interBitLength(&mb, counts, 32, 16, 16, -12, 8)
++			}
++		})
++	}
++}
++
++func TestCAVLCBitLengthMatchesWriter(t *testing.T) {
++	buf := make([]byte, 4096)
++	for suffix := range 7 {
++		for code := range 4111 {
++			w := bits{data: buf[:0]}
++			w.uint(5, 3)
++			writeLevel(&w, code, suffix)
++			if got := levelBitLength(code, suffix); got != bitLength(&w)-3 {
++				t.Fatal("level length", code, suffix, got, bitLength(&w)-3)
++			}
++		}
++	}
++	check := func(coeff []int, nc, prefix int) {
++		t.Helper()
++		w := bits{data: buf[:0]}
++		w.uint(0x55, prefix)
++		wantTotal := cavlc(&w, coeff, nc)
++		length, total := cavlcBitLength(coeff, nc)
++		if total != wantTotal || length != bitLength(&w)-prefix {
++			t.Fatal("CAVLC counter", coeff, nc, prefix, length, bitLength(&w)-prefix, total, wantTotal)
++		}
++	}
++	contexts := []int{0, 1, 2, 3, 4, 7, 8, 16}
++	for _, n := range []int{4, 15, 16} {
++		var coeff [16]int
++		// Every coefficient-presence mask exercises all run/zero patterns and
++		// trailing-one counts; rotate signs, context tables and byte alignment.
++		for mask := range 1 << n {
++			for i := range n {
++				coeff[i] = 0
++				if mask&(1<<i) != 0 {
++					coeff[i] = 1 - 2*((mask>>uint((i+3)%n))&1)
++				}
++			}
++			nc := contexts[mask%len(contexts)]
++			if n == 4 {
++				nc = -1
++			}
++			check(coeff[:n], nc, mask%8)
++		}
++		rng := rand.New(rand.NewPCG(73, uint64(n)))
++		for sample := range 512 {
++			for i := range n {
++				coeff[i] = 0
++				if rng.Uint32()%3 != 0 {
++					coeff[i] = int(rng.Uint32()%2047) - 1023
++				}
++			}
++			if n == 4 {
++				check(coeff[:n], -1, sample%8)
++			} else {
++				for _, nc := range contexts {
++					check(coeff[:n], nc, sample%8)
++				}
++			}
++		}
++	}
++}
++
++func TestInterBitLengthMatchesWriter(t *testing.T) {
++	buf := make([]byte, 4096)
++	check := func(mb *interMB, mx, my, dx, dy, seed int) {
++		t.Helper()
++		a := [3][]uint8{make([]uint8, 144), make([]uint8, 36), make([]uint8, 36)}
++		b := [3][]uint8{make([]uint8, 144), make([]uint8, 36), make([]uint8, 36)}
++		for c := range a {
++			for i := range a[c] {
++				a[c][i] = uint8((i*13 + seed) % 17)
++			}
++			copy(b[c], a[c])
++		}
++		clearMBContext(a, nil, 48, mx, my)
++		clearMBContext(b, nil, 48, mx, my)
++		w := bits{data: buf[:0]}
++		writeInterMBDelta(&w, mb, a, 48, mx, my, dx, dy)
++		if got := interBitLength(mb, b, 48, mx, my, dx, dy); got != bitLength(&w) {
++			t.Fatal("MB bit length", mb.cbp, mx, my, dx, dy, got, bitLength(&w))
++		}
++		for c := range a {
++			if !bytes.Equal(a[c], b[c]) {
++				t.Fatal("MB count grid", mb.cbp, c)
++			}
++		}
++	}
++	for cbp := range 48 {
++		var mb interMB
++		mb.cbp = uint8(cbp)
++		for i := range 16 {
++			for j := range 16 {
++				mb.luma[i][j] = (i*37+j*13)%103 - 51
++			}
++		}
++		for c := range 2 {
++			for i := range 4 {
++				mb.dc[c][i] = (i*23+c*17)%41 - 20
++				for j := range 16 {
++					mb.ac[c][i][j] = (i*7+j*23+c*17)%101 - 50
++				}
++			}
++		}
++		for _, pos := range [][2]int{{0, 0}, {32, 0}, {0, 32}, {32, 32}, {16, 16}} {
++			for _, dx := range []int{-32, -4, 0, 4, 32} {
++				for _, dy := range []int{-32, -4, 0, 4, 32} {
++					check(&mb, pos[0], pos[1], dx, dy, cbp)
++				}
++			}
++		}
++	}
++	// Actual quantizer extrema at every QP, not just hand-built syntax levels.
++	for qp := range 52 {
++		for seed := range 16 {
++			src, ref := newPicture420(16, 16), newPicture420(16, 16)
++			for c := range 3 {
++				for i := range src.planes[c] {
++					src.planes[c][i], ref.planes[c][i] = byte(i*73+seed*19+c*7), byte(i*11+seed*47+c*3)
++				}
++			}
++			mb := makeInterMB(src, ref, 0, 0, qp)
++			check(&mb, 16, 16, seed*4-32, 32-seed*4, seed)
++		}
++	}
++}
++
++func TestMotionTrialStorage(t *testing.T) {
++	for radius := range 5 {
++		e, err := NewPredictive(34, 38, 24, PredictiveOptions{QP: 24, GOP: 7, InterResidual: true, MotionSearchRadius: radius})
++		if err != nil {
++			t.Fatal(err)
++		}
++		for f := range 3 {
++			if _, err := e.Encode(motionImage("pan", 34, 38, f)); err != nil {
++				t.Fatal(err)
++			}
++		}
++		if ws := e.workspace; ws == nil || (radius == 0) != (len(ws.interScratch) == 4096) {
++			t.Fatal("unexpected inter trial byte buffer", radius)
++		}
++		e.Reset()
++		if e.workspace != nil || e.reference.planes[0] != nil {
++			t.Fatal("retained motion workspace")
++		}
++	}
++}
+--- /dev/null
++++ after/tests/_cases/internal/h264/README.md
+@@ -0,0 +1,49 @@
++# H.264 development validation
++
++Run deterministic correctness tests through the central overlay runner:
++
++```sh
++CGO_ENABLED=0 go run ./tests/cmd/run -pkg=internal/h264 -count=1 -p 1
++```
++
++All ReferenceVectors, including the full motion/QP/radius/recovery matrix, run
++normally. Their verified decoder hashes require no external programs. Race
++runs retain the same correctness matrix; there is no race-specific skip.
++
++`TestMotionMeasurements` only collects/logs size and PSNR for 540 large frames.
++It has no correctness assertions and is explicitly opt-in for development:
++
++```sh
++CGO_ENABLED=0 GOMAXPROCS=1 GOMATH_H264_MEASURE=1 \
++  go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^TestMotionMeasurements$' -v -count=1 -p 1
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^$' -bench='^BenchmarkMotionSearch$' -benchmem \
++  -benchtime=300ms -count=5 -p 1
++```
++
++Independent strict decoder validation is development-only. Generate fresh
++vectors with `GOMATH_H264_MOTION_DUMP_DIR=<absolute-temporary-directory>`, then
++run `validate_predictive.py <directory> --manifest motion_vectors.json --all-idr`.
++It checks every stream and every IDR-entry suffix against internal reconstruction.
++Existing historical raw data are preserved under `tests/data/internal/h264/`.
++
++The byte-identical motion optimization capture is in
++`tests/data/internal/h264/perf_motion_20261104/`, including fresh before source
++hashes/archive, all five raw before/after benchmark samples, CPU/allocation
++profiles, full regression logs and strict independent-decoder results. Rebuild
++its comparison table without overwriting historical motion captures:
++
++```sh
++python3 tests/_cases/internal/h264/summarize_motion_perf.py \
++  tests/data/internal/h264/perf_motion_20261104
++CGO_ENABLED=0 GOMAXPROCS=1 go run ./tests/cmd/run -pkg=internal/h264 \
++  -run='^$' -bench='^BenchmarkMotionSyntax(Writer|Counter)$' -benchmem \
++  -benchtime=300ms -count=5 -p 1
++```
++
++The syntax counter is exact and differentially checked against the original
++writer, including nonzero contexts. Search traversal, costs and ties are
++unchanged. See `internal/h264/VALIDATION.md` for workload boundaries, shared-host
++measurement caveats, all nine cases, and verification details. No new full race
++run is claimed by this focused capture.
+--- /dev/null
++++ after/tests/_cases/internal/h264/summarize_motion_perf.py
+@@ -0,0 +1,66 @@
++#!/usr/bin/env python3
++"""Summarize preserved before/after five-sample exhaustive-motion benchmarks.
++
++Usage: python3 tests/_cases/internal/h264/summarize_motion_perf.py <capture-dir>
++Reads before_bench.txt and after_bench.txt, without changing historical captures.
++Each operation covers 60 frames. This is development-only, standard-library
++tooling; no Go test or production codec invokes it.
++"""
++import argparse
++import json
++from pathlib import Path
++import statistics
++
++
++def read(path):
++    cases = {}
++    for line in path.read_text().splitlines():
++        if not line.startswith("BenchmarkMotionSearch/"):
++            continue
++        fields = line.split()
++        sample = {unit: float(fields[fields.index(unit) - 1])
++                  for unit in ("ns/frame", "B/op", "allocs/op")}
++        cases.setdefault(fields[0].split("/", 1)[1], []).append(sample)
++    assert len(cases) == 9, (path, len(cases))
++    for name, samples in cases.items():
++        assert len(samples) == 5, (path, name, len(samples))
++    return cases
++
++
++def summarize(samples):
++    return {unit: {"median": statistics.median(s[unit] for s in samples),
++                   "min": min(s[unit] for s in samples),
++                   "max": max(s[unit] for s in samples)}
++            for unit in samples[0]}
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("capture", type=Path)
++    directory = parser.parse_args().capture
++    baseline = read(directory / "before_bench.txt")
++    optimized = read(directory / "after_bench.txt")
++    assert baseline.keys() == optimized.keys()
++    results = {}
++    rows = ["| Pattern/radius | Before median [min,max] ms/frame | "
++            "After median [min,max] ms/frame | Time change | B/frame before → after | "
++            "Allocations/frame before → after |",
++            "|---|---:|---:|---:|---:|---:|"]
++    for name, before in baseline.items():
++        after = optimized[name]
++        a, b = summarize(before), summarize(after)
++        change = 100 * (b["ns/frame"]["median"] / a["ns/frame"]["median"] - 1)
++        results[name] = {"before_samples": before, "after_samples": after,
++                         "before": a, "after": b, "time_change_percent": change}
++        times = ["{median:.4f} [{min:.4f},{max:.4f}]".format(
++            **{k: v / 1e6 for k, v in x["ns/frame"].items()}) for x in (a, b)]
++        rows.append(f"| {name} | {times[0]} | {times[1]} | {change:+.1f}% | "
++                    f"{a['B/op']['median']/60:,.1f} → {b['B/op']['median']/60:,.1f} | "
++                    f"{a['allocs/op']['median']/60:.3f} → {b['allocs/op']['median']/60:.3f} |")
++    (directory / "benchmark_summary.json").write_text(json.dumps(results, indent=2) + "\n")
++    (directory / "benchmark_summary.md").write_text("\n".join(rows) + "\n")
++    print("\n".join(rows))
++
++
++if __name__ == "__main__":
++    main()

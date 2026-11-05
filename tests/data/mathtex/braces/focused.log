@@ -1,0 +1,84 @@
+=== RUN   TestBraceIndependentFontGeometryAndCairo
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-0
+    braces_reference_test.go:141: labels-style-0 independent fontTools/manual/Cairo MAE=0.00761978715 RMS=0.282159786 max=28 IoU=0.995865071
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-1
+    braces_reference_test.go:141: labels-style-1 independent fontTools/manual/Cairo MAE=0.00607469347 RMS=0.218233983 max=28 IoU=0.997583976
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-2
+    braces_reference_test.go:141: labels-style-2 independent fontTools/manual/Cairo MAE=0.00977297182 RMS=0.306880352 max=29 IoU=0.994844253
+=== RUN   TestBraceIndependentFontGeometryAndCairo/labels-style-3
+    braces_reference_test.go:141: labels-style-3 independent fontTools/manual/Cairo MAE=0.00751862703 RMS=0.240550866 max=26 IoU=0.998134183
+=== RUN   TestBraceIndependentFontGeometryAndCairo/nested
+    braces_reference_test.go:141: nested independent fontTools/manual/Cairo MAE=0.00282005027 RMS=0.140753542 max=24 IoU=0.996147607
+=== RUN   TestBraceIndependentFontGeometryAndCairo/zero
+    braces_reference_test.go:141: zero independent fontTools/manual/Cairo MAE=0.00656071416 RMS=0.282642075 max=39 IoU=0.992194674
+=== RUN   TestBraceIndependentFontGeometryAndCairo/phantom
+    braces_reference_test.go:141: phantom independent fontTools/manual/Cairo MAE=0.000844884802 RMS=0.0725397937 max=18 IoU=0.998435055
+=== RUN   TestBraceIndependentFontGeometryAndCairo/script-brace
+    braces_reference_test.go:141: script-brace independent fontTools/manual/Cairo MAE=0.0164681894 RMS=0.540624415 max=43 IoU=0.991572173
+--- PASS: TestBraceIndependentFontGeometryAndCairo (0.13s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-0 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-1 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-2 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/labels-style-3 (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/nested (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/zero (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/phantom (0.02s)
+    --- PASS: TestBraceIndependentFontGeometryAndCairo/script-brace (0.02s)
+=== RUN   TestBraceIndependentInteriorTransformAndIdentity
+    braces_reference_test.go:178: transform-035 independent fontTools/manual/Cairo MAE=0.00612216526 RMS=0.216437168 max=25 IoU=0.997318136
+    braces_reference_test.go:178: transform-070 independent fontTools/manual/Cairo MAE=0.00773111979 RMS=0.289913662 max=30 IoU=0.997392747
+--- PASS: TestBraceIndependentInteriorTransformAndIdentity (0.03s)
+=== RUN   TestBraceActualOperandGeometry
+=== RUN   TestBraceActualOperandGeometry/overbracei
+=== RUN   TestBraceActualOperandGeometry/overbraceabcdef
+=== RUN   TestBraceActualOperandGeometry/overbrace\mathit{f}
+=== RUN   TestBraceActualOperandGeometry/overbracex_i^{n^2}
+=== RUN   TestBraceActualOperandGeometry/overbrace\frac{n}{g}
+=== RUN   TestBraceActualOperandGeometry/overbrace\sqrt[3]{g}
+=== RUN   TestBraceActualOperandGeometry/overbrace\begin{matrix}a&b\\g&n\end{matrix}
+=== RUN   TestBraceActualOperandGeometry/overbrace\overbrace{n}^{k}
+=== RUN   TestBraceActualOperandGeometry/overbrace\underbrace{g}_{i}
+=== RUN   TestBraceActualOperandGeometry/underbracei
+=== RUN   TestBraceActualOperandGeometry/underbraceabcdef
+=== RUN   TestBraceActualOperandGeometry/underbrace\mathit{f}
+=== RUN   TestBraceActualOperandGeometry/underbracex_i^{n^2}
+=== RUN   TestBraceActualOperandGeometry/underbrace\frac{n}{g}
+=== RUN   TestBraceActualOperandGeometry/underbrace\sqrt[3]{g}
+=== RUN   TestBraceActualOperandGeometry/underbrace\begin{matrix}a&b\\g&n\end{matrix}
+=== RUN   TestBraceActualOperandGeometry/underbrace\overbrace{n}^{k}
+=== RUN   TestBraceActualOperandGeometry/underbrace\underbrace{g}_{i}
+--- PASS: TestBraceActualOperandGeometry (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbracei (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbraceabcdef (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\mathit{f} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbracex_i^{n^2} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\frac{n}{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\sqrt[3]{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\begin{matrix}a&b\\g&n\end{matrix} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\overbrace{n}^{k} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/overbrace\underbrace{g}_{i} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbracei (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbraceabcdef (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\mathit{f} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbracex_i^{n^2} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\frac{n}{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\sqrt[3]{g} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\begin{matrix}a&b\\g&n\end{matrix} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\overbrace{n}^{k} (0.00s)
+    --- PASS: TestBraceActualOperandGeometry/underbrace\underbrace{g}_{i} (0.00s)
+=== RUN   TestBraceLabelsScopeAndNesting
+--- PASS: TestBraceLabelsScopeAndNesting (0.00s)
+=== RUN   TestBraceZeroInkAndPhantomExtents
+--- PASS: TestBraceZeroInkAndPhantomExtents (0.00s)
+=== RUN   TestBraceFontsColorsAndFiniteSize
+--- PASS: TestBraceFontsColorsAndFiniteSize (0.00s)
+=== RUN   TestBraceInvalidAtomicAndSharedBudgets
+--- PASS: TestBraceInvalidAtomicAndSharedBudgets (0.00s)
+=== RUN   TestBraceConcurrentLayoutsAndSnapshots
+--- PASS: TestBraceConcurrentLayoutsAndSnapshots (0.00s)
+=== RUN   TestBraceHiddenCurvesChargedExactlyOnce
+--- PASS: TestBraceHiddenCurvesChargedExactlyOnce (0.01s)
+=== RUN   TestBraceWriteIntermediateFrames
+--- PASS: TestBraceWriteIntermediateFrames (0.00s)
+PASS
+ok  	gomath/mathtex	0.196s

@@ -1,0 +1,1809 @@
+=== RUN   TestSVGBBoxClipGeometryAndInstancesShareBudget
+=== RUN   TestSVGBBoxClipGeometryAndInstancesShareBudget/false
+=== RUN   TestSVGBBoxClipGeometryAndInstancesShareBudget/true
+--- PASS: TestSVGBBoxClipGeometryAndInstancesShareBudget (0.64s)
+    --- PASS: TestSVGBBoxClipGeometryAndInstancesShareBudget/false (0.13s)
+    --- PASS: TestSVGBBoxClipGeometryAndInstancesShareBudget/true (0.51s)
+=== RUN   TestSVGBBoxClipEvenDegenerateTargetsChargeGeometry
+--- PASS: TestSVGBBoxClipEvenDegenerateTargetsChargeGeometry (0.16s)
+=== RUN   TestSVGBBoxClipMixedModeCacheCannotBypassUnitValidation
+--- PASS: TestSVGBBoxClipMixedModeCacheCannotBypassUnitValidation (0.00s)
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/definitions
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/contours
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/curves
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/source_geometry_bytes
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/intersection_depth
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/ancestor_depth
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/instance_paths
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/instance_contours
+=== RUN   TestSVGClipLimitsAbortWithoutPartialOutput/instance_curves
+--- PASS: TestSVGClipLimitsAbortWithoutPartialOutput (0.73s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/definitions (0.00s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/contours (0.01s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/curves (0.11s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/source_geometry_bytes (0.01s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/intersection_depth (0.00s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/ancestor_depth (0.00s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/instance_paths (0.21s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/instance_contours (0.00s)
+    --- PASS: TestSVGClipLimitsAbortWithoutPartialOutput/instance_curves (0.39s)
+=== RUN   TestSVGClipAcceptsNativeAncestorBoundary
+--- PASS: TestSVGClipAcceptsNativeAncestorBoundary (0.00s)
+=== RUN   TestClipUnionSharedBudgetsPreflight
+=== RUN   TestClipUnionSharedBudgetsPreflight/inputs
+=== RUN   TestClipUnionSharedBudgetsPreflight/segments
+=== RUN   TestClipUnionSharedBudgetsPreflight/contours
+=== RUN   TestClipUnionSharedBudgetsPreflight/calls
+--- PASS: TestClipUnionSharedBudgetsPreflight (0.00s)
+    --- PASS: TestClipUnionSharedBudgetsPreflight/inputs (0.00s)
+    --- PASS: TestClipUnionSharedBudgetsPreflight/segments (0.00s)
+    --- PASS: TestClipUnionSharedBudgetsPreflight/contours (0.00s)
+    --- PASS: TestClipUnionSharedBudgetsPreflight/calls (0.00s)
+=== RUN   TestClipUnionBooleanOperandPreflight
+--- PASS: TestClipUnionBooleanOperandPreflight (0.00s)
+=== RUN   TestSVGContainerBBoxSharedImportPathBudgetBoundary
+=== RUN   TestSVGContainerBBoxSharedImportPathBudgetBoundary/group
+=== RUN   TestSVGContainerBBoxSharedImportPathBudgetBoundary/use-group
+=== RUN   TestSVGContainerBBoxSharedImportPathBudgetBoundary/use-chain
+--- PASS: TestSVGContainerBBoxSharedImportPathBudgetBoundary (0.63s)
+    --- PASS: TestSVGContainerBBoxSharedImportPathBudgetBoundary/group (0.26s)
+    --- PASS: TestSVGContainerBBoxSharedImportPathBudgetBoundary/use-group (0.18s)
+    --- PASS: TestSVGContainerBBoxSharedImportPathBudgetBoundary/use-chain (0.20s)
+=== RUN   TestSVGContainerBBoxEvenEmptyAndDegenerateScopesSpendBudget
+--- PASS: TestSVGContainerBBoxEvenEmptyAndDegenerateScopesSpendBudget (0.09s)
+=== RUN   TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget
+=== RUN   TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/paths
+=== RUN   TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/curves
+=== RUN   TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/contours
+--- PASS: TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget (0.00s)
+    --- PASS: TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/paths (0.00s)
+    --- PASS: TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/curves (0.00s)
+    --- PASS: TestSVGContainerBBoxEveryActiveScopeSpendsGeometryBudget/contours (0.00s)
+=== RUN   TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets
+=== RUN   TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/layouts
+=== RUN   TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/glyphs
+=== RUN   TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/segments
+=== RUN   TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/expanded
+--- PASS: TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets (0.00s)
+    --- PASS: TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/layouts (0.00s)
+    --- PASS: TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/glyphs (0.00s)
+    --- PASS: TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/segments (0.00s)
+    --- PASS: TestSVGContainerBBoxMetricWorkSharesTextAndExpansionBudgets/expanded (0.00s)
+=== RUN   TestSVGContainerBBoxExpandedGraphStillBounded
+--- PASS: TestSVGContainerBBoxExpandedGraphStillBounded (0.50s)
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/definitions
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/gradient_attribute
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/stop_attribute
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/raw_stops
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/per_definition
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/normalized_endpoints
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/depth
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/cached_depth
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/resolved_work
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/instances
+=== RUN   TestSVGGradientLimitsAbortWithoutPartialOutput/copied_stops
+--- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput (0.73s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/definitions (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/gradient_attribute (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/stop_attribute (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/raw_stops (0.08s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/per_definition (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/normalized_endpoints (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/depth (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/cached_depth (0.00s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/resolved_work (0.16s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/instances (0.26s)
+    --- PASS: TestSVGGradientLimitsAbortWithoutPartialOutput/copied_stops (0.23s)
+=== RUN   TestSVGGradientAcceptsLimitBoundaries
+--- PASS: TestSVGGradientAcceptsLimitBoundaries (0.06s)
+=== RUN   TestEmbeddedImageBudgetBoundaries
+=== RUN   TestEmbeddedImageBudgetBoundaries/single_decode
+=== RUN   TestEmbeddedImageBudgetBoundaries/exact_aggregate_budgets
+=== RUN   TestEmbeddedImageBudgetBoundaries/aggregate_encoded
+=== RUN   TestEmbeddedImageBudgetBoundaries/aggregate_pixels
+=== RUN   TestEmbeddedImageBudgetBoundaries/asset_count
+=== RUN   TestEmbeddedImageBudgetBoundaries/exact_per_URI
+=== RUN   TestEmbeddedImageBudgetBoundaries/per_URI_exceeded
+=== RUN   TestEmbeddedImageBudgetBoundaries/exact_total_URI
+=== RUN   TestEmbeddedImageBudgetBoundaries/total_URI_exceeded
+--- PASS: TestEmbeddedImageBudgetBoundaries (1.02s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/single_decode (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/exact_aggregate_budgets (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/aggregate_encoded (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/aggregate_pixels (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/asset_count (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/exact_per_URI (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/per_URI_exceeded (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/exact_total_URI (0.00s)
+    --- PASS: TestEmbeddedImageBudgetBoundaries/total_URI_exceeded (0.00s)
+=== RUN   TestSVGTextBBoxGradientSharedScopeAndOwnedSlices
+--- PASS: TestSVGTextBBoxGradientSharedScopeAndOwnedSlices (0.00s)
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/scope
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/layouts
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/glyphs
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/segments
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/expanded
+=== RUN   TestSVGTextBBoxGradientScopeAndMetricsBudgets/metric-paths
+--- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/scope (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/layouts (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/glyphs (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/segments (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/expanded (0.00s)
+    --- PASS: TestSVGTextBBoxGradientScopeAndMetricsBudgets/metric-paths (0.00s)
+=== RUN   TestSVGTextBBoxGradientQueueBudgetsAndError
+=== RUN   TestSVGTextBBoxGradientQueueBudgetsAndError/instances
+=== RUN   TestSVGTextBBoxGradientQueueBudgetsAndError/stops
+=== RUN   TestSVGTextBBoxGradientQueueBudgetsAndError/missing-scope
+--- PASS: TestSVGTextBBoxGradientQueueBudgetsAndError (0.00s)
+    --- PASS: TestSVGTextBBoxGradientQueueBudgetsAndError/instances (0.00s)
+    --- PASS: TestSVGTextBBoxGradientQueueBudgetsAndError/stops (0.00s)
+    --- PASS: TestSVGTextBBoxGradientQueueBudgetsAndError/missing-scope (0.00s)
+=== RUN   TestSVGTextBBoxGradientNoExtraScopeForUserSpaceOrSolids
+--- PASS: TestSVGTextBBoxGradientNoExtraScopeForUserSpaceOrSolids (0.00s)
+=== RUN   TestSVGTextBBoxGradientZeroBoundsTransparentAndAtomicBudget
+--- PASS: TestSVGTextBBoxGradientZeroBoundsTransparentAndAtomicBudget (0.12s)
+=== RUN   TestTextSourceExpansionAndNestingBudgets
+--- PASS: TestTextSourceExpansionAndNestingBudgets (0.05s)
+=== RUN   TestTextAggregateGlyphSegmentAndElementBudgets
+=== RUN   TestTextAggregateGlyphSegmentAndElementBudgets/glyph
+=== RUN   TestTextAggregateGlyphSegmentAndElementBudgets/segment
+=== RUN   TestTextAggregateGlyphSegmentAndElementBudgets/element
+=== RUN   TestTextAggregateGlyphSegmentAndElementBudgets/layout_work
+--- PASS: TestTextAggregateGlyphSegmentAndElementBudgets (0.00s)
+    --- PASS: TestTextAggregateGlyphSegmentAndElementBudgets/glyph (0.00s)
+    --- PASS: TestTextAggregateGlyphSegmentAndElementBudgets/segment (0.00s)
+    --- PASS: TestTextAggregateGlyphSegmentAndElementBudgets/element (0.00s)
+    --- PASS: TestTextAggregateGlyphSegmentAndElementBudgets/layout_work (0.00s)
+=== RUN   TestTextFontResolutionBudget
+--- PASS: TestTextFontResolutionBudget (0.00s)
+=== RUN   TestSVGBBoxClipUsesLocalGeometryBeforeAffine
+=== RUN   TestSVGBBoxClipUsesLocalGeometryBeforeAffine/rotate(31_20_30)
+=== RUN   TestSVGBBoxClipUsesLocalGeometryBeforeAffine/matrix(1_.2_.7_1_3_4)
+=== RUN   TestSVGBBoxClipUsesLocalGeometryBeforeAffine/matrix(-2_.1_.2_1.5_90_2)
+=== RUN   TestSVGBBoxClipUsesLocalGeometryBeforeAffine/scale(2_.5)
+--- PASS: TestSVGBBoxClipUsesLocalGeometryBeforeAffine (0.00s)
+    --- PASS: TestSVGBBoxClipUsesLocalGeometryBeforeAffine/rotate(31_20_30) (0.00s)
+    --- PASS: TestSVGBBoxClipUsesLocalGeometryBeforeAffine/matrix(1_.2_.7_1_3_4) (0.00s)
+    --- PASS: TestSVGBBoxClipUsesLocalGeometryBeforeAffine/matrix(-2_.1_.2_1.5_90_2) (0.00s)
+    --- PASS: TestSVGBBoxClipUsesLocalGeometryBeforeAffine/scale(2_.5) (0.00s)
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e-100
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e-15
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent/1
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e+15
+=== RUN   TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e+100
+--- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent (0.00s)
+    --- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e-100 (0.00s)
+    --- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e-15 (0.00s)
+    --- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent/1 (0.00s)
+    --- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e+15 (0.00s)
+    --- PASS: TestSVGBBoxClipCubicExtremaAreScaleIndependent/1e+100 (0.00s)
+=== RUN   TestSVGBBoxClipBasicShapesAndDecimalRange
+--- PASS: TestSVGBBoxClipBasicShapesAndDecimalRange (0.00s)
+=== RUN   TestSVGBBoxClipDefinitionTransformChildUseAndCascade
+--- PASS: TestSVGBBoxClipDefinitionTransformChildUseAndCascade (0.00s)
+=== RUN   TestSVGBBoxClipUseHostMeasuresUnclippedSourceInHostSpace
+--- PASS: TestSVGBBoxClipUseHostMeasuresUnclippedSourceInHostSpace (0.00s)
+=== RUN   TestSVGBBoxClipExplicitInheritReevaluatesUseAndTarget
+--- PASS: TestSVGBBoxClipExplicitInheritReevaluatesUseAndTarget (0.00s)
+=== RUN   TestSVGBBoxClipImageViewportBeforeMeetAndUse
+--- PASS: TestSVGBBoxClipImageViewportBeforeMeetAndUse (0.00s)
+=== RUN   TestSVGBBoxClipNestedReferencesAndDegenerateBBox
+--- PASS: TestSVGBBoxClipNestedReferencesAndDegenerateBBox (0.00s)
+=== RUN   TestSVGBBoxClipStrictAtomicBoundaries
+--- PASS: TestSVGBBoxClipStrictAtomicBoundaries (0.00s)
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/affine/ss1
+    clip_bbox_test.go:308: direct Cairo bbox affine SS1 MAE=0.0874023438 max=17 pixels>8=0.00187174479
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/affine/ss4
+    clip_bbox_test.go:308: direct Cairo bbox affine SS4 MAE=0.0653686523 max=7 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/use/ss1
+    clip_bbox_test.go:308: direct Cairo bbox use SS1 MAE=0.0708007812 max=45 pixels>8=0.00162760417
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/use/ss4
+    clip_bbox_test.go:308: direct Cairo bbox use SS4 MAE=0.0402832031 max=7 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/nested/ss1
+    clip_bbox_test.go:308: direct Cairo bbox nested SS1 MAE=0.099222819 max=11 pixels>8=0.00113932292
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/nested/ss4
+    clip_bbox_test.go:308: direct Cairo bbox nested SS4 MAE=0.0887247721 max=9 pixels>8=8.13802083e-05
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/gradient/ss1
+    clip_bbox_test.go:308: direct Cairo bbox gradient SS1 MAE=0.13852946 max=12 pixels>8=0.00349934896
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/gradient/ss4
+    clip_bbox_test.go:308: direct Cairo bbox gradient SS4 MAE=0.132568359 max=12 pixels>8=0.00276692708
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/bitmap-meet/ss1
+    clip_bbox_test.go:308: direct Cairo bbox bitmap-meet SS1 MAE=0.0396931966 max=3 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/bitmap-meet/ss4
+    clip_bbox_test.go:308: direct Cairo bbox bitmap-meet SS4 MAE=0.0383300781 max=3 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/evenodd/ss1
+    clip_bbox_test.go:308: direct Cairo bbox evenodd SS1 MAE=0.177734375 max=1 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/evenodd/ss4
+    clip_bbox_test.go:308: direct Cairo bbox evenodd SS4 MAE=0.182291667 max=1 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/degenerate/ss1
+    clip_bbox_test.go:308: direct Cairo bbox degenerate SS1 MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGBBoxClipIndependentReferencesCameraMorphExport/degenerate/ss4
+    clip_bbox_test.go:308: direct Cairo bbox degenerate SS4 MAE=0 max=0 pixels>8=0
+--- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport (0.17s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/affine/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/affine/ss4 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/use/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/use/ss4 (0.01s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/nested/ss1 (0.02s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/nested/ss4 (0.05s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/gradient/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/gradient/ss4 (0.02s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/bitmap-meet/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/bitmap-meet/ss4 (0.01s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/evenodd/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/evenodd/ss4 (0.02s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/degenerate/ss1 (0.00s)
+    --- PASS: TestSVGBBoxClipIndependentReferencesCameraMorphExport/degenerate/ss4 (0.01s)
+=== RUN   TestSVGBBoxClipConcurrentImports
+=== RUN   TestSVGBBoxClipConcurrentImports/0
+=== PAUSE TestSVGBBoxClipConcurrentImports/0
+=== RUN   TestSVGBBoxClipConcurrentImports/1
+=== PAUSE TestSVGBBoxClipConcurrentImports/1
+=== RUN   TestSVGBBoxClipConcurrentImports/2
+=== PAUSE TestSVGBBoxClipConcurrentImports/2
+=== RUN   TestSVGBBoxClipConcurrentImports/3
+=== PAUSE TestSVGBBoxClipConcurrentImports/3
+=== RUN   TestSVGBBoxClipConcurrentImports/4
+=== PAUSE TestSVGBBoxClipConcurrentImports/4
+=== RUN   TestSVGBBoxClipConcurrentImports/5
+=== PAUSE TestSVGBBoxClipConcurrentImports/5
+=== RUN   TestSVGBBoxClipConcurrentImports/6
+=== PAUSE TestSVGBBoxClipConcurrentImports/6
+=== RUN   TestSVGBBoxClipConcurrentImports/7
+=== PAUSE TestSVGBBoxClipConcurrentImports/7
+=== RUN   TestSVGBBoxClipConcurrentImports/8
+=== PAUSE TestSVGBBoxClipConcurrentImports/8
+=== RUN   TestSVGBBoxClipConcurrentImports/9
+=== PAUSE TestSVGBBoxClipConcurrentImports/9
+=== RUN   TestSVGBBoxClipConcurrentImports/10
+=== PAUSE TestSVGBBoxClipConcurrentImports/10
+=== RUN   TestSVGBBoxClipConcurrentImports/11
+=== PAUSE TestSVGBBoxClipConcurrentImports/11
+=== CONT  TestSVGBBoxClipConcurrentImports/0
+=== CONT  TestSVGBBoxClipConcurrentImports/11
+=== CONT  TestSVGBBoxClipConcurrentImports/10
+=== CONT  TestSVGBBoxClipConcurrentImports/9
+=== CONT  TestSVGBBoxClipConcurrentImports/8
+=== CONT  TestSVGBBoxClipConcurrentImports/7
+=== CONT  TestSVGBBoxClipConcurrentImports/6
+=== CONT  TestSVGBBoxClipConcurrentImports/5
+=== CONT  TestSVGBBoxClipConcurrentImports/4
+=== CONT  TestSVGBBoxClipConcurrentImports/3
+=== CONT  TestSVGBBoxClipConcurrentImports/2
+=== CONT  TestSVGBBoxClipConcurrentImports/1
+--- PASS: TestSVGBBoxClipConcurrentImports (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/0 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/11 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/10 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/9 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/8 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/7 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/6 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/5 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/4 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/3 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/2 (0.00s)
+    --- PASS: TestSVGBBoxClipConcurrentImports/1 (0.00s)
+=== RUN   TestSVGClipIndependentCairoReferences
+=== RUN   TestSVGClipIndependentCairoReferences/transform
+    clip_reference_test.go:67: CairoSVG clip transform 128x96 premultiplied RGBA: MAE=0.126322428 max=18 fraction>8=0.00992838542
+=== RUN   TestSVGClipIndependentCairoReferences/nested
+    clip_reference_test.go:67: CairoSVG clip nested 128x96 premultiplied RGBA: MAE=0.0684000651 max=1 fraction>8=0
+=== RUN   TestSVGClipIndependentCairoReferences/bitmap
+    clip_reference_test.go:67: CairoSVG clip bitmap 128x96 premultiplied RGBA: MAE=0.102050781 max=6 fraction>8=0
+=== RUN   TestSVGClipIndependentCairoReferences/use
+    clip_reference_test.go:67: CairoSVG clip use 128x96 premultiplied RGBA: MAE=0.00152587891 max=1 fraction>8=0
+=== RUN   TestSVGClipIndependentCairoReferences/use-positions
+    clip_reference_test.go:67: CairoSVG clip use-positions 128x96 premultiplied RGBA: MAE=0.0341796875 max=16 fraction>8=0.00236002604
+--- PASS: TestSVGClipIndependentCairoReferences (0.01s)
+    --- PASS: TestSVGClipIndependentCairoReferences/transform (0.00s)
+    --- PASS: TestSVGClipIndependentCairoReferences/nested (0.00s)
+    --- PASS: TestSVGClipIndependentCairoReferences/bitmap (0.01s)
+    --- PASS: TestSVGClipIndependentCairoReferences/use (0.00s)
+    --- PASS: TestSVGClipIndependentCairoReferences/use-positions (0.00s)
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/default
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/defs_inherited
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/definition_inherited
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/child_override
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/child_inline
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/css_specificity
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/css_inherit
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/css_unset_inherited
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/css_initial
+=== RUN   TestSVGClipRuleCascadeInheritanceAndUseContexts/graphic_host_cannot_override_definition
+--- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/default (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/defs_inherited (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/definition_inherited (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/child_override (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/child_inline (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/css_specificity (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/css_inherit (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/css_unset_inherited (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/css_initial (0.00s)
+    --- PASS: TestSVGClipRuleCascadeInheritanceAndUseContexts/graphic_host_cannot_override_definition (0.00s)
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/compound
+    clip_rule_test.go:110: scale=1 MAE=0.018656 RMS=0.136588 max=1
+    clip_rule_test.go:110: scale=4 MAE=0.129211 RMS=0.359460 max=1
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/duplicate
+    clip_rule_test.go:110: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_rule_test.go:110: scale=4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/curve
+    clip_rule_test.go:110: scale=1 MAE=0.102844 RMS=0.814863 max=21
+    clip_rule_test.go:110: scale=4 MAE=0.030640 RMS=0.227861 max=5
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/crossings
+    clip_rule_test.go:110: scale=1 MAE=0.125916 RMS=0.846002 max=17
+    clip_rule_test.go:110: scale=4 MAE=0.017334 RMS=0.142064 max=3
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/thin
+    clip_rule_test.go:110: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_rule_test.go:110: scale=4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/nested-bitmap
+    clip_rule_test.go:110: scale=1 MAE=0.038757 RMS=0.312858 max=10
+    clip_rule_test.go:110: scale=4 MAE=0.165283 RMS=0.407750 max=2
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/gradient
+    clip_rule_test.go:110: scale=1 MAE=0.084066 RMS=0.290081 max=2
+    clip_rule_test.go:110: scale=4 MAE=0.144450 RMS=0.416097 max=2
+=== RUN   TestSVGClipEvenOddIndependentCairoFixtures/css-use
+    clip_rule_test.go:110: scale=1 MAE=0.000000 RMS=0.000000 max=0
+    clip_rule_test.go:110: scale=4 MAE=0.000000 RMS=0.000000 max=0
+--- PASS: TestSVGClipEvenOddIndependentCairoFixtures (0.10s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/compound (0.00s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/duplicate (0.01s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/curve (0.01s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/crossings (0.01s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/thin (0.00s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/nested-bitmap (0.02s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/gradient (0.04s)
+    --- PASS: TestSVGClipEvenOddIndependentCairoFixtures/css-use (0.00s)
+=== RUN   TestSVGClipEvenOddRetainsUnsupportedBoundaries
+--- PASS: TestSVGClipEvenOddRetainsUnsupportedBoundaries (0.00s)
+=== RUN   TestSVGClipTransformUseCSSAndIndependentOwnership
+--- PASS: TestSVGClipTransformUseCSSAndIndependentOwnership (0.00s)
+=== RUN   TestSVGClipUseHostCoordinatesAndNestedTransform
+--- PASS: TestSVGClipUseHostCoordinatesAndNestedTransform (0.00s)
+=== RUN   TestSVGClipCSSWideValuesAndDefinitionInheritance
+--- PASS: TestSVGClipCSSWideValuesAndDefinitionInheritance (0.00s)
+=== RUN   TestSVGClipSilhouetteNonzeroHoleAndPaintIndependence
+--- PASS: TestSVGClipSilhouetteNonzeroHoleAndPaintIndependence (0.00s)
+=== RUN   TestSVGClipVisibilityAndDisplay
+--- PASS: TestSVGClipVisibilityAndDisplay (0.00s)
+=== RUN   TestSVGClipPathAndChildIntersection
+--- PASS: TestSVGClipPathAndChildIntersection (0.00s)
+=== RUN   TestSVGClipTextTspanAndSymbol
+--- PASS: TestSVGClipTextTspanAndSymbol (0.00s)
+=== RUN   TestSVGClipAffineReflectionAndBitmapOpacity
+--- PASS: TestSVGClipAffineReflectionAndBitmapOpacity (0.00s)
+=== RUN   TestSVGClipCloneLocalDefinitionsExplicitBoundary
+--- PASS: TestSVGClipCloneLocalDefinitionsExplicitBoundary (0.00s)
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/external
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/file
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/missing
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/unmatched_missing
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/unused_missing
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/override_missing
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/wrong_target
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/duplicate
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/self_cycle
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/child_cycle
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/indirect_cycle
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/use_cycle
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/invalid_units
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/invalid_rule
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/curved_union
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/group
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/text
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/use_group
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/use_chain
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/percent
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/unknown_child_attr
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/unknown_def_attr
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/empty_uri
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/fallback
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/basic_CSS_shape
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/escape
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/space
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/nonfinite
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/namespaced_attribute
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/namespaced_geometry
+=== RUN   TestSVGClipRejectUnsupportedAndInvalidInputs/xml_base
+--- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/external (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/file (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/missing (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/unmatched_missing (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/unused_missing (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/override_missing (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/wrong_target (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/duplicate (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/self_cycle (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/child_cycle (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/indirect_cycle (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/use_cycle (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/invalid_units (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/invalid_rule (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/curved_union (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/group (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/text (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/use_group (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/use_chain (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/percent (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/unknown_child_attr (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/unknown_def_attr (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/empty_uri (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/fallback (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/basic_CSS_shape (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/escape (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/space (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/nonfinite (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/namespaced_attribute (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/namespaced_geometry (0.00s)
+    --- PASS: TestSVGClipRejectUnsupportedAndInvalidInputs/xml_base (0.00s)
+=== RUN   TestSVGClipConcurrentImports
+=== RUN   TestSVGClipConcurrentImports/0
+=== PAUSE TestSVGClipConcurrentImports/0
+=== RUN   TestSVGClipConcurrentImports/1
+=== PAUSE TestSVGClipConcurrentImports/1
+=== RUN   TestSVGClipConcurrentImports/2
+=== PAUSE TestSVGClipConcurrentImports/2
+=== RUN   TestSVGClipConcurrentImports/3
+=== PAUSE TestSVGClipConcurrentImports/3
+=== RUN   TestSVGClipConcurrentImports/4
+=== PAUSE TestSVGClipConcurrentImports/4
+=== RUN   TestSVGClipConcurrentImports/5
+=== PAUSE TestSVGClipConcurrentImports/5
+=== RUN   TestSVGClipConcurrentImports/6
+=== PAUSE TestSVGClipConcurrentImports/6
+=== RUN   TestSVGClipConcurrentImports/7
+=== PAUSE TestSVGClipConcurrentImports/7
+=== RUN   TestSVGClipConcurrentImports/8
+=== PAUSE TestSVGClipConcurrentImports/8
+=== RUN   TestSVGClipConcurrentImports/9
+=== PAUSE TestSVGClipConcurrentImports/9
+=== RUN   TestSVGClipConcurrentImports/10
+=== PAUSE TestSVGClipConcurrentImports/10
+=== RUN   TestSVGClipConcurrentImports/11
+=== PAUSE TestSVGClipConcurrentImports/11
+=== CONT  TestSVGClipConcurrentImports/0
+=== CONT  TestSVGClipConcurrentImports/11
+=== CONT  TestSVGClipConcurrentImports/10
+=== CONT  TestSVGClipConcurrentImports/9
+=== CONT  TestSVGClipConcurrentImports/8
+=== CONT  TestSVGClipConcurrentImports/7
+=== CONT  TestSVGClipConcurrentImports/6
+=== CONT  TestSVGClipConcurrentImports/5
+=== CONT  TestSVGClipConcurrentImports/4
+=== CONT  TestSVGClipConcurrentImports/3
+=== CONT  TestSVGClipConcurrentImports/2
+=== CONT  TestSVGClipConcurrentImports/1
+--- PASS: TestSVGClipConcurrentImports (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/0 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/11 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/10 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/9 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/8 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/7 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/6 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/5 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/4 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/3 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/2 (0.00s)
+    --- PASS: TestSVGClipConcurrentImports/1 (0.00s)
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/opposite-overlap
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/identical-opposite
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/evenodd-duplicates-across-children
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/evenodd-duplicates-within-child
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/mixed-holes
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/nonzero-hole
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/winding-cancel-within
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/edge-and-point-contacts
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/partial-collinear
+=== RUN   TestSVGClipUnionRegionsAndIndependentRules/scientific-relative
+--- PASS: TestSVGClipUnionRegionsAndIndependentRules (0.04s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/opposite-overlap (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/identical-opposite (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/evenodd-duplicates-across-children (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/evenodd-duplicates-within-child (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/mixed-holes (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/nonzero-hole (0.01s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/winding-cancel-within (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/edge-and-point-contacts (0.01s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/partial-collinear (0.00s)
+    --- PASS: TestSVGClipUnionRegionsAndIndependentRules/scientific-relative (0.00s)
+=== RUN   TestSVGClipUnionCSSUseTransformsAndOwnership
+--- PASS: TestSVGClipUnionCSSUseTransformsAndOwnership (0.00s)
+=== RUN   TestSVGClipUnionVisibilityAndPaintIndependence
+--- PASS: TestSVGClipUnionVisibilityAndPaintIndependence (0.00s)
+=== RUN   TestSVGClipUnionBBoxAndAffine
+--- PASS: TestSVGClipUnionBBoxAndAffine (0.01s)
+=== RUN   TestSVGClipUnionRejectUnsupportedAtomically
+--- PASS: TestSVGClipUnionRejectUnsupportedAtomically (0.00s)
+=== RUN   TestSVGClipUnionLimits
+--- PASS: TestSVGClipUnionLimits (0.01s)
+=== RUN   TestSVGClipUnionConcurrentImports
+=== RUN   TestSVGClipUnionConcurrentImports/0
+=== PAUSE TestSVGClipUnionConcurrentImports/0
+=== RUN   TestSVGClipUnionConcurrentImports/1
+=== PAUSE TestSVGClipUnionConcurrentImports/1
+=== RUN   TestSVGClipUnionConcurrentImports/2
+=== PAUSE TestSVGClipUnionConcurrentImports/2
+=== RUN   TestSVGClipUnionConcurrentImports/3
+=== PAUSE TestSVGClipUnionConcurrentImports/3
+=== RUN   TestSVGClipUnionConcurrentImports/4
+=== PAUSE TestSVGClipUnionConcurrentImports/4
+=== RUN   TestSVGClipUnionConcurrentImports/5
+=== PAUSE TestSVGClipUnionConcurrentImports/5
+=== RUN   TestSVGClipUnionConcurrentImports/6
+=== PAUSE TestSVGClipUnionConcurrentImports/6
+=== RUN   TestSVGClipUnionConcurrentImports/7
+=== PAUSE TestSVGClipUnionConcurrentImports/7
+=== RUN   TestSVGClipUnionConcurrentImports/8
+=== PAUSE TestSVGClipUnionConcurrentImports/8
+=== RUN   TestSVGClipUnionConcurrentImports/9
+=== PAUSE TestSVGClipUnionConcurrentImports/9
+=== RUN   TestSVGClipUnionConcurrentImports/10
+=== PAUSE TestSVGClipUnionConcurrentImports/10
+=== RUN   TestSVGClipUnionConcurrentImports/11
+=== PAUSE TestSVGClipUnionConcurrentImports/11
+=== CONT  TestSVGClipUnionConcurrentImports/0
+=== CONT  TestSVGClipUnionConcurrentImports/11
+=== CONT  TestSVGClipUnionConcurrentImports/5
+=== CONT  TestSVGClipUnionConcurrentImports/8
+=== CONT  TestSVGClipUnionConcurrentImports/4
+=== CONT  TestSVGClipUnionConcurrentImports/7
+=== CONT  TestSVGClipUnionConcurrentImports/9
+=== CONT  TestSVGClipUnionConcurrentImports/1
+=== CONT  TestSVGClipUnionConcurrentImports/3
+=== CONT  TestSVGClipUnionConcurrentImports/2
+=== CONT  TestSVGClipUnionConcurrentImports/10
+=== CONT  TestSVGClipUnionConcurrentImports/6
+--- PASS: TestSVGClipUnionConcurrentImports (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/0 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/11 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/9 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/3 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/2 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/8 (0.01s)
+    --- PASS: TestSVGClipUnionConcurrentImports/6 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/4 (0.01s)
+    --- PASS: TestSVGClipUnionConcurrentImports/10 (0.00s)
+    --- PASS: TestSVGClipUnionConcurrentImports/1 (0.01s)
+    --- PASS: TestSVGClipUnionConcurrentImports/7 (0.01s)
+    --- PASS: TestSVGClipUnionConcurrentImports/5 (0.01s)
+=== RUN   TestSVGClipUnionIndependentCairo
+=== RUN   TestSVGClipUnionIndependentCairo/ancestor/ss1
+    clip_union_test.go:264: direct Cairo ancestor SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/ancestor/ss4
+    clip_union_test.go:264: direct Cairo ancestor SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/bbox-affine/ss1
+    clip_union_test.go:264: direct Cairo bbox-affine SS1 MAE=0.0644734701 RMS=0.540005214 max=14
+=== RUN   TestSVGClipUnionIndependentCairo/bbox-affine/ss4
+    clip_union_test.go:264: direct Cairo bbox-affine SS4 MAE=0.0354817708 RMS=0.259738701 max=8
+=== RUN   TestSVGClipUnionIndependentCairo/bitmap/ss1
+    clip_union_test.go:264: direct Cairo bitmap SS1 MAE=0.0619913737 RMS=0.272319142 max=4
+=== RUN   TestSVGClipUnionIndependentCairo/bitmap/ss4
+    clip_union_test.go:264: direct Cairo bitmap SS4 MAE=0.0593465169 RMS=0.255513742 max=4
+=== RUN   TestSVGClipUnionIndependentCairo/child-affine/ss1
+    clip_union_test.go:264: direct Cairo child-affine SS1 MAE=0.0136108398 RMS=0.286375461 max=11
+=== RUN   TestSVGClipUnionIndependentCairo/child-affine/ss4
+    clip_union_test.go:264: direct Cairo child-affine SS4 MAE=0.00404866536 RMS=0.077994683 max=2
+=== RUN   TestSVGClipUnionIndependentCairo/contacts/ss1
+    clip_union_test.go:264: direct Cairo contacts SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/contacts/ss4
+    clip_union_test.go:264: direct Cairo contacts SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/css-use/ss1
+    clip_union_test.go:264: direct Cairo css-use SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/css-use/ss4
+    clip_union_test.go:264: direct Cairo css-use SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/degenerate/ss1
+    clip_union_test.go:264: direct Cairo degenerate SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/degenerate/ss4
+    clip_union_test.go:264: direct Cairo degenerate SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/gradient/ss1
+    clip_union_test.go:264: direct Cairo gradient SS1 MAE=0.188273112 RMS=0.811898816 max=17
+=== RUN   TestSVGClipUnionIndependentCairo/gradient/ss4
+    clip_union_test.go:264: direct Cairo gradient SS4 MAE=0.208435059 RMS=0.746451567 max=17
+=== RUN   TestSVGClipUnionIndependentCairo/mixed-holes/ss1
+    clip_union_test.go:264: direct Cairo mixed-holes SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/mixed-holes/ss4
+    clip_union_test.go:264: direct Cairo mixed-holes SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/opposite-overlap/ss1
+    clip_union_test.go:264: direct Cairo opposite-overlap SS1 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/opposite-overlap/ss4
+    clip_union_test.go:264: direct Cairo opposite-overlap SS4 MAE=0 RMS=0 max=0
+=== RUN   TestSVGClipUnionIndependentCairo/self-crossing/ss1
+    clip_union_test.go:264: direct Cairo self-crossing SS1 MAE=0.0518188477 RMS=0.526730933 max=15
+=== RUN   TestSVGClipUnionIndependentCairo/self-crossing/ss4
+    clip_union_test.go:264: direct Cairo self-crossing SS4 MAE=0.0232340495 RMS=0.208170509 max=6
+--- PASS: TestSVGClipUnionIndependentCairo (0.24s)
+    --- PASS: TestSVGClipUnionIndependentCairo/ancestor/ss1 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/ancestor/ss4 (0.02s)
+    --- PASS: TestSVGClipUnionIndependentCairo/bbox-affine/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/bbox-affine/ss4 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/bitmap/ss1 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/bitmap/ss4 (0.02s)
+    --- PASS: TestSVGClipUnionIndependentCairo/child-affine/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/child-affine/ss4 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/contacts/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/contacts/ss4 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/css-use/ss1 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/css-use/ss4 (0.02s)
+    --- PASS: TestSVGClipUnionIndependentCairo/degenerate/ss1 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/degenerate/ss4 (0.01s)
+    --- PASS: TestSVGClipUnionIndependentCairo/gradient/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/gradient/ss4 (0.04s)
+    --- PASS: TestSVGClipUnionIndependentCairo/mixed-holes/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/mixed-holes/ss4 (0.02s)
+    --- PASS: TestSVGClipUnionIndependentCairo/opposite-overlap/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/opposite-overlap/ss4 (0.02s)
+    --- PASS: TestSVGClipUnionIndependentCairo/self-crossing/ss1 (0.00s)
+    --- PASS: TestSVGClipUnionIndependentCairo/self-crossing/ss4 (0.02s)
+=== RUN   TestSVGClipUnionOracleGeometry
+=== RUN   TestSVGClipUnionOracleGeometry/mixed-holes
+=== RUN   TestSVGClipUnionOracleGeometry/contacts
+=== RUN   TestSVGClipUnionOracleGeometry/opposite-overlap
+--- PASS: TestSVGClipUnionOracleGeometry (0.01s)
+    --- PASS: TestSVGClipUnionOracleGeometry/mixed-holes (0.00s)
+    --- PASS: TestSVGClipUnionOracleGeometry/contacts (0.00s)
+    --- PASS: TestSVGClipUnionOracleGeometry/opposite-overlap (0.00s)
+=== RUN   TestSVGClipUnionIntermediateMorph
+--- PASS: TestSVGClipUnionIntermediateMorph (0.00s)
+=== RUN   TestSVGClipUnionMaximumChildrenAndNumericFailures
+--- PASS: TestSVGClipUnionMaximumChildrenAndNumericFailures (0.00s)
+=== RUN   TestSVGClipUnionIndependentIntermediateAnimation
+    clip_union_test.go:545: Cairo intermediate t=0.35 MAE=0.017333984375 RMS=0.13181302848795587 max=2
+    clip_union_test.go:545: Cairo intermediate t=0.7 MAE=0.0220947265625 RMS=0.18377373712893075 max=2
+--- PASS: TestSVGClipUnionIndependentIntermediateAnimation (0.01s)
+=== RUN   TestSVGClipUnionSourceCacheModesAndRules
+--- PASS: TestSVGClipUnionSourceCacheModesAndRules (0.00s)
+=== RUN   TestSVGContainerBBoxExactIndependentOracle
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/sheared-cubic
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/display-visibility
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/use-chain
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/text-cells
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/text-end
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/tspan-kern
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/space-only
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/bearing-and-space
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/group-text-shear
+=== RUN   TestSVGContainerBBoxExactIndependentOracle/group-image
+--- PASS: TestSVGContainerBBoxExactIndependentOracle (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/sheared-cubic (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/display-visibility (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/use-chain (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/text-cells (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/text-end (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/tspan-kern (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/space-only (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/bearing-and-space (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/group-text-shear (0.00s)
+    --- PASS: TestSVGContainerBBoxExactIndependentOracle/group-image (0.00s)
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e-100
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e-15
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e+15
+=== RUN   TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e+100
+--- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema (0.00s)
+    --- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e-100 (0.00s)
+    --- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e-15 (0.00s)
+    --- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1 (0.00s)
+    --- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e+15 (0.00s)
+    --- PASS: TestSVGContainerBBoxTransformOriginalCurvesBeforeExtrema/1e+100 (0.00s)
+=== RUN   TestSVGContainerBBoxIgnoresPaintStrokeClippingAndDefinitions
+--- PASS: TestSVGContainerBBoxIgnoresPaintStrokeClippingAndDefinitions (0.00s)
+=== RUN   TestSVGContainerBBoxNestedTargetsMeasureUnclippedGeometry
+--- PASS: TestSVGContainerBBoxNestedTargetsMeasureUnclippedGeometry (0.00s)
+=== RUN   TestSVGContainerBBoxUseChainsTextAndCSS
+--- PASS: TestSVGContainerBBoxUseChainsTextAndCSS (0.00s)
+=== RUN   TestSVGContainerBBoxTextSpanPositionAnchorAndNestedClips
+--- PASS: TestSVGContainerBBoxTextSpanPositionAnchorAndNestedClips (0.00s)
+=== RUN   TestSVGContainerBBoxDegenerateAndEmptyGeometry
+--- PASS: TestSVGContainerBBoxDegenerateAndEmptyGeometry (0.00s)
+=== RUN   TestSVGContainerBBoxUnsupportedBranchesAreAtomic
+--- PASS: TestSVGContainerBBoxUnsupportedBranchesAreAtomic (0.00s)
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/group-curves/ss1
+    container_bbox_test.go:243: container Cairo group-curves-cairo-ss1.png MAE=0.214660645 max=67 pixels>8=0.00854492188
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/group-curves/ss4
+    container_bbox_test.go:243: container Cairo group-curves-cairo-ss4.png MAE=0.0810139974 max=31 pixels>8=0.00618489583
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/display-visibility/ss1
+    container_bbox_test.go:243: container Cairo display-visibility-cairo-ss1.png MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/display-visibility/ss4
+    container_bbox_test.go:243: container Cairo display-visibility-cairo-ss4.png MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/use-chain/ss1
+    container_bbox_test.go:243: container Cairo use-chain-cairo-ss1.png MAE=0.166239421 max=55 pixels>8=0.00773111979
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/use-chain/ss4
+    container_bbox_test.go:243: container Cairo use-chain-cairo-ss4.png MAE=0.0332845052 max=15 pixels>8=0.00325520833
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/nested-clips/ss1
+    container_bbox_test.go:243: container Cairo nested-clips-cairo-ss1.png MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/nested-clips/ss4
+    container_bbox_test.go:243: container Cairo nested-clips-cairo-ss4.png MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/text-cells/ss1
+    container_bbox_test.go:243: container Cairo text-cells-cairo-ss1.png MAE=0.0179443359 max=8 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/text-cells/ss4
+    container_bbox_test.go:243: container Cairo text-cells-cairo-ss4.png MAE=0.0118815104 max=5 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/text-end/ss1
+    container_bbox_test.go:243: container Cairo text-end-cairo-ss1.png MAE=0.0221354167 max=51 pixels>8=0.00048828125
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/text-end/ss4
+    container_bbox_test.go:243: container Cairo text-end-cairo-ss4.png MAE=0.00954182943 max=5 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/tspan-kern/ss1
+    container_bbox_test.go:243: container Cairo tspan-kern-cairo-ss1.png MAE=0.0401000977 max=37 pixels>8=0.00048828125
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/tspan-kern/ss4
+    container_bbox_test.go:243: container Cairo tspan-kern-cairo-ss4.png MAE=0.0242716471 max=8 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/group-image/ss1
+    container_bbox_test.go:243: container Cairo group-image-cairo-ss1.png MAE=0 max=0 pixels>8=0
+=== RUN   TestSVGContainerBBoxIndependentCairoAndCamera/group-image/ss4
+    container_bbox_test.go:243: container Cairo group-image-cairo-ss4.png MAE=0 max=0 pixels>8=0
+--- PASS: TestSVGContainerBBoxIndependentCairoAndCamera (0.08s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/group-curves/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/group-curves/ss4 (0.01s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/display-visibility/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/display-visibility/ss4 (0.02s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/use-chain/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/use-chain/ss4 (0.01s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/nested-clips/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/nested-clips/ss4 (0.01s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/text-cells/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/text-cells/ss4 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/text-end/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/text-end/ss4 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/tspan-kern/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/tspan-kern/ss4 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/group-image/ss1 (0.00s)
+    --- PASS: TestSVGContainerBBoxIndependentCairoAndCamera/group-image/ss4 (0.02s)
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0
+=== PAUSE TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25
+=== PAUSE TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/50
+=== PAUSE TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/50
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75
+=== PAUSE TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75
+=== RUN   TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/100
+=== PAUSE TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/100
+=== CONT  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0
+=== CONT  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75
+=== CONT  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/100
+    container_bbox_test.go:281: container Cairo animated-100-cairo-ss1.png MAE=0.154927572 max=75 pixels>8=0.005859375
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0
+    container_bbox_test.go:281: container Cairo animated-000-cairo-ss1.png MAE=0.214660645 max=67 pixels>8=0.00854492188
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75
+    container_bbox_test.go:281: container Cairo animated-075-cairo-ss1.png MAE=0.168212891 max=77 pixels>8=0.00659179688
+=== CONT  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/50
+    container_bbox_test.go:281: container Cairo animated-050-cairo-ss1.png MAE=0.19321696 max=78 pixels>8=0.00821940104
+=== CONT  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/100
+    container_bbox_test.go:281: container Cairo animated-100-cairo-ss4.png MAE=0.0541788737 max=17 pixels>8=0.00349934896
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25
+    container_bbox_test.go:281: container Cairo animated-025-cairo-ss1.png MAE=0.193359375 max=77 pixels>8=0.00821940104
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0
+    container_bbox_test.go:281: container Cairo animated-000-cairo-ss4.png MAE=0.0810139974 max=31 pixels>8=0.00618489583
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75
+    container_bbox_test.go:281: container Cairo animated-075-cairo-ss4.png MAE=0.0553792318 max=17 pixels>8=0.00398763021
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25
+    container_bbox_test.go:281: container Cairo animated-025-cairo-ss4.png MAE=0.0699462891 max=24 pixels>8=0.00545247396
+=== NAME  TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/50
+    container_bbox_test.go:281: container Cairo animated-050-cairo-ss4.png MAE=0.0760091146 max=31 pixels>8=0.00610351562
+--- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership (0.00s)
+    --- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/100 (0.01s)
+    --- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/0 (0.01s)
+    --- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/75 (0.01s)
+    --- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/25 (0.01s)
+    --- PASS: TestSVGContainerBBoxAnimatedIntermediateCairoAndOwnership/50 (0.01s)
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/0
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/0
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/1
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/1
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/2
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/2
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/3
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/3
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/4
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/4
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/5
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/5
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/6
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/6
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/7
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/7
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/8
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/8
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/9
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/9
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/10
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/10
+=== RUN   TestSVGContainerBBoxConcurrentImportsAndSnapshots/11
+=== PAUSE TestSVGContainerBBoxConcurrentImportsAndSnapshots/11
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/0
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/8
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/11
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/5
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/2
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/10
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/9
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/4
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/7
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/6
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/3
+=== CONT  TestSVGContainerBBoxConcurrentImportsAndSnapshots/1
+--- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/11 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/8 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/5 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/2 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/9 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/6 (0.01s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/1 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/4 (0.01s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/7 (0.01s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/3 (0.00s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/10 (0.01s)
+    --- PASS: TestSVGContainerBBoxConcurrentImportsAndSnapshots/0 (0.01s)
+=== RUN   TestCSSCascadeSpecificityOrderAndPresentation
+--- PASS: TestCSSCascadeSpecificityOrderAndPresentation (0.00s)
+=== RUN   TestCSSDescendantChildCompoundsAndComments
+--- PASS: TestCSSDescendantChildCompoundsAndComments (0.00s)
+=== RUN   TestCSSClassWhitespaceAndCase
+--- PASS: TestCSSClassWhitespaceAndCase (0.01s)
+=== RUN   TestCSSInheritanceKeywordsAndCurrentColor
+--- PASS: TestCSSInheritanceKeywordsAndCurrentColor (0.00s)
+=== RUN   TestCSSUseShadowBoundaryAndStyleOwnership
+--- PASS: TestCSSUseShadowBoundaryAndStyleOwnership (0.00s)
+=== RUN   TestCSSVisibilityAndDisplayPixelSemantics
+--- PASS: TestCSSVisibilityAndDisplayPixelSemantics (0.00s)
+=== RUN   TestCSSNestedUseBoundariesAndOriginalElement
+--- PASS: TestCSSNestedUseBoundariesAndOriginalElement (0.00s)
+=== RUN   TestCSSSymbolOverflowAndInlinePrecedence
+--- PASS: TestCSSSymbolOverflowAndInlinePrecedence (0.00s)
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect:hover{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/[id=x]{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/g_+_rect{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/g_~_rect{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/svg|rect{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect::before{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/:is(rect){fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/.\78{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/.中文{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/@import_"https://example.invalid/a.css";
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/@media_all_{rect{fill:red}}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/@keyframes_x{}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red!important}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red_!_IMPORTANT}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red!}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/.unmatched{unknown-visible:1}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{filter:blur(2px)}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{transform:scale(2)}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:var(--x)}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{width:10px}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{mix-blend-mode:screen}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{stroke-dasharray:0_0}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill-rule:winding}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{color:none}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect_fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red}bad
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:blue}_}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect,_{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/>rect{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect_>_{fill:red}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/rect{.x{fill:red}}
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties//*unclosed
+=== RUN   TestCSSRejectUnsupportedSyntaxAndProperties/re/**/ct{fill:red}
+--- PASS: TestCSSRejectUnsupportedSyntaxAndProperties (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect:hover{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/[id=x]{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/g_+_rect{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/g_~_rect{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/svg|rect{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect::before{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/:is(rect){fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/.\78{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/.中文{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/@import_"https://example.invalid/a.css"; (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/@media_all_{rect{fill:red}} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/@keyframes_x{} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red!important} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red_!_IMPORTANT} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red!} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/.unmatched{unknown-visible:1} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{filter:blur(2px)} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{transform:scale(2)} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:var(--x)} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{width:10px} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{mix-blend-mode:screen} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{stroke-dasharray:0_0} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill-rule:winding} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{color:none} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect_fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:red}bad (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{fill:blue}_} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect,_{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/>rect{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect_>_{fill:red} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/rect{.x{fill:red}} (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties//*unclosed (0.00s)
+    --- PASS: TestCSSRejectUnsupportedSyntaxAndProperties/re/**/ct{fill:red} (0.00s)
+=== RUN   TestCSSLimits
+=== RUN   TestCSSLimits/bytes
+=== RUN   TestCSSLimits/rules
+=== RUN   TestCSSLimits/selectors
+=== RUN   TestCSSLimits/declarations
+=== RUN   TestCSSLimits/inline_declarations
+=== RUN   TestCSSLimits/parts
+=== RUN   TestCSSLimits/terms
+=== RUN   TestCSSLimits/matching_work
+--- PASS: TestCSSLimits (0.18s)
+    --- PASS: TestCSSLimits/bytes (0.00s)
+    --- PASS: TestCSSLimits/rules (0.00s)
+    --- PASS: TestCSSLimits/selectors (0.05s)
+    --- PASS: TestCSSLimits/declarations (0.01s)
+    --- PASS: TestCSSLimits/inline_declarations (0.02s)
+    --- PASS: TestCSSLimits/parts (0.00s)
+    --- PASS: TestCSSLimits/terms (0.00s)
+    --- PASS: TestCSSLimits/matching_work (0.09s)
+=== RUN   TestCSSRasterReference
+    css_test.go:336: CairoSVG CSS 128x96 RGBA: MAE=0.032023111979166664 max=9 changed-pixel-ratio=0.007649739583333333
+--- PASS: TestCSSRasterReference (0.00s)
+=== RUN   TestCSSUseShadowReferencePixels
+--- PASS: TestCSSUseShadowReferencePixels (0.00s)
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/0
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/0
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/1
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/1
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/2
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/2
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/3
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/3
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/4
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/4
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/5
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/5
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/6
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/6
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/7
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/7
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/8
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/8
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/9
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/9
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/10
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/10
+=== RUN   TestCSSReadIsolationAcrossConcurrentImports/11
+=== PAUSE TestCSSReadIsolationAcrossConcurrentImports/11
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/0
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/11
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/10
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/9
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/8
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/7
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/6
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/5
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/4
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/3
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/2
+=== CONT  TestCSSReadIsolationAcrossConcurrentImports/1
+--- PASS: TestCSSReadIsolationAcrossConcurrentImports (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/0 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/11 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/10 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/9 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/8 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/7 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/6 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/5 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/4 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/3 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/2 (0.00s)
+    --- PASS: TestCSSReadIsolationAcrossConcurrentImports/1 (0.00s)
+=== RUN   TestSVGDashCascadeInheritanceUseAndScaling
+--- PASS: TestSVGDashCascadeInheritanceUseAndScaling (0.00s)
+=== RUN   TestSVGDashIndependentOffsetInheritanceAndKeywords
+--- PASS: TestSVGDashIndependentOffsetInheritanceAndKeywords (0.00s)
+=== RUN   TestSVGDashRejectUnsupportedAndInvalid
+--- PASS: TestSVGDashRejectUnsupportedAndInvalid (0.00s)
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/default
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inherited
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/presentation_override
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inline
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/specificity
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/source_order
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inline_precedence
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/selector_list_child_descendant
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inherit
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/unset
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/initial
+=== RUN   TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/clip_rule_independent
+--- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse (0.01s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/default (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inherited (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/presentation_override (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inline (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/specificity (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/source_order (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inline_precedence (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/selector_list_child_descendant (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/inherit (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/unset (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/initial (0.00s)
+    --- PASS: TestSVGOrdinaryFillRuleCascadeInheritanceAndUse/clip_rule_independent (0.00s)
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/compound
+    fill_rule_test.go:139: ss1 MAE=0.023743 RMS=0.154087 max=1
+    fill_rule_test.go:139: ss4 MAE=0.131592 RMS=0.362756 max=1
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/duplicate
+    fill_rule_test.go:139: ss1 MAE=0.000000 RMS=0.000000 max=0
+    fill_rule_test.go:139: ss4 MAE=0.000000 RMS=0.000000 max=0
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/triple
+    fill_rule_test.go:139: ss1 MAE=0.010498 RMS=0.102460 max=1
+    fill_rule_test.go:139: ss4 MAE=0.002258 RMS=0.047522 max=1
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/curve
+    fill_rule_test.go:139: ss1 MAE=0.100220 RMS=0.787656 max=21
+    fill_rule_test.go:139: ss4 MAE=0.030131 RMS=0.226113 max=5
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/crossings
+    fill_rule_test.go:139: ss1 MAE=0.131246 RMS=0.883941 max=17
+    fill_rule_test.go:139: ss4 MAE=0.019104 RMS=0.146089 max=3
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/thin
+    fill_rule_test.go:139: ss1 MAE=0.002035 RMS=0.045105 max=1
+    fill_rule_test.go:139: ss4 MAE=0.002035 RMS=0.045105 max=1
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/linear
+    fill_rule_test.go:139: ss1 MAE=0.078145 RMS=0.497328 max=16
+    fill_rule_test.go:139: ss4 MAE=0.122111 RMS=0.403738 max=3
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/radial
+    fill_rule_test.go:139: ss1 MAE=0.087769 RMS=0.296258 max=1
+    fill_rule_test.go:139: ss4 MAE=0.111328 RMS=0.341255 max=2
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/partial
+    fill_rule_test.go:139: ss1 MAE=0.100281 RMS=0.821973 max=23
+    fill_rule_test.go:139: ss4 MAE=0.029968 RMS=0.225933 max=5
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/nested-clip
+    fill_rule_test.go:139: ss1 MAE=0.065247 RMS=0.566770 max=19
+    fill_rule_test.go:139: ss4 MAE=0.090576 RMS=0.304587 max=4
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/stroke-dash
+    fill_rule_test.go:139: ss1 MAE=0.011108 RMS=0.179404 max=23
+    fill_rule_test.go:139: ss4 MAE=0.006653 RMS=0.081565 max=1
+=== RUN   TestSVGOrdinaryEvenOddIndependentCairoReferences/css-use
+    fill_rule_test.go:139: ss1 MAE=0.000000 RMS=0.000000 max=0
+    fill_rule_test.go:139: ss4 MAE=0.000000 RMS=0.000000 max=0
+--- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences (0.09s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/compound (0.00s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/duplicate (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/triple (0.00s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/curve (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/crossings (0.00s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/thin (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/linear (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/radial (0.02s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/partial (0.00s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/nested-clip (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/stroke-dash (0.01s)
+    --- PASS: TestSVGOrdinaryEvenOddIndependentCairoReferences/css-use (0.00s)
+=== RUN   TestSVGGradientIndependentCairoReferences
+=== RUN   TestSVGGradientIndependentCairoReferences/linear
+    gradient_reference_test.go:67: CairoSVG gradient linear 128x96 premultiplied RGBA: MAE=0.0288085938 max=1 fraction>8=0
+    gradient_reference_test.go:85: camera max delta 1
+=== RUN   TestSVGGradientIndependentCairoReferences/bbox-affine
+    gradient_reference_test.go:67: CairoSVG gradient bbox-affine 128x96 premultiplied RGBA: MAE=0.133687337 max=14 fraction>8=0.00699869792
+=== RUN   TestSVGGradientIndependentCairoReferences/radial
+    gradient_reference_test.go:67: CairoSVG gradient radial 128x96 premultiplied RGBA: MAE=0.00533040365 max=1 fraction>8=0
+=== RUN   TestSVGGradientIndependentCairoReferences/alpha
+    gradient_reference_test.go:67: CairoSVG gradient alpha 128x96 premultiplied RGBA: MAE=0.227864583 max=1 fraction>8=0
+=== RUN   TestSVGGradientIndependentCairoReferences/use-clip-bitmap
+    gradient_reference_test.go:67: CairoSVG gradient use-clip-bitmap 128x96 premultiplied RGBA: MAE=0.146179199 max=1 fraction>8=0
+--- PASS: TestSVGGradientIndependentCairoReferences (0.02s)
+    --- PASS: TestSVGGradientIndependentCairoReferences/linear (0.00s)
+    --- PASS: TestSVGGradientIndependentCairoReferences/bbox-affine (0.00s)
+    --- PASS: TestSVGGradientIndependentCairoReferences/radial (0.00s)
+    --- PASS: TestSVGGradientIndependentCairoReferences/alpha (0.00s)
+    --- PASS: TestSVGGradientIndependentCairoReferences/use-clip-bitmap (0.01s)
+=== RUN   TestSVGGradientTextOutlinePixelsUseOneUserSpaceFrame
+    gradient_reference_test.go:155: real glyph outline gradient: 954 covered pixels, analytical RGB max quantization delta 1, solid-mask alpha max delta 1
+--- PASS: TestSVGGradientTextOutlinePixelsUseOneUserSpaceFrame (0.00s)
+=== RUN   TestSVGGradientBoundingBoxAffineAndUserSpace
+--- PASS: TestSVGGradientBoundingBoxAffineAndUserSpace (0.00s)
+=== RUN   TestSVGGradientStopCascadeTemplateCurrentColorAndOpacity
+--- PASS: TestSVGGradientStopCascadeTemplateCurrentColorAndOpacity (0.00s)
+=== RUN   TestSVGGradientUseSymbolTextAndOwnership
+--- PASS: TestSVGGradientUseSymbolTextAndOwnership (0.00s)
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/offset_clamp
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/endpoints
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/empty
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/single
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/zero_linear
+=== RUN   TestSVGGradientStopNormalizationAndDegenerates/zero_radial
+--- PASS: TestSVGGradientStopNormalizationAndDegenerates (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/offset_clamp (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/endpoints (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/empty (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/single (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/zero_linear (0.00s)
+    --- PASS: TestSVGGradientStopNormalizationAndDegenerates/zero_radial (0.00s)
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/unknown
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/unmatched
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/overridden
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/wrong_type
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/external
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/fallback
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/stroke
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/cycle
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/external_href
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/mixed_href
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/missing_href
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/duplicate
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/repeat
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/reflect
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/focus
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/focus_radius
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/negative_r
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/nan
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/bbox_units
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/too_large
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/empty_coordinate
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_units
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/singular
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/unsupported_attr
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/hex_offset
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/quoted_href
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_stop_offset
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/none_stop
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_alpha
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/unknown_CSS
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/important
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/wrong_child
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/stop_child
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/orphan_stop
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/clone_local
+=== RUN   TestSVGGradientRejectsUnsupportedAndInvalidInputs/xml_base
+--- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/unknown (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/unmatched (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/overridden (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/wrong_type (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/external (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/fallback (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/stroke (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/cycle (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/external_href (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/mixed_href (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/missing_href (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/duplicate (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/repeat (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/reflect (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/focus (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/focus_radius (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/negative_r (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/nan (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/bbox_units (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/too_large (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/empty_coordinate (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_units (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/singular (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/unsupported_attr (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/hex_offset (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/quoted_href (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_stop_offset (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/none_stop (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/bad_alpha (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/unknown_CSS (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/important (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/wrong_child (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/stop_child (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/orphan_stop (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/clone_local (0.00s)
+    --- PASS: TestSVGGradientRejectsUnsupportedAndInvalidInputs/xml_base (0.00s)
+=== RUN   TestSVGGradientCSSPaintResetAlphaAndCurveBounds
+--- PASS: TestSVGGradientCSSPaintResetAlphaAndCurveBounds (0.00s)
+=== RUN   TestSVGGradientRepeatedTemplateClippedGroupsAndBitmap
+--- PASS: TestSVGGradientRepeatedTemplateClippedGroupsAndBitmap (0.00s)
+=== RUN   TestEmbeddedImageFormats
+=== RUN   TestEmbeddedImageFormats/png
+    image_test.go:70: Pillow complete png frame-zero decode max RGBA delta=0
+=== RUN   TestEmbeddedImageFormats/jpeg
+    image_test.go:70: Pillow complete jpeg frame-zero decode max RGBA delta=1
+=== RUN   TestEmbeddedImageFormats/gif
+    image_test.go:70: Pillow complete gif frame-zero decode max RGBA delta=0
+--- PASS: TestEmbeddedImageFormats (0.00s)
+    --- PASS: TestEmbeddedImageFormats/png (0.00s)
+    --- PASS: TestEmbeddedImageFormats/jpeg (0.00s)
+    --- PASS: TestEmbeddedImageFormats/gif (0.00s)
+=== RUN   TestEmbeddedImagePlacement
+=== RUN   TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40"
+=== RUN   TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40"_preserveAspectRatio="xMaxYMax_meet"
+=== RUN   TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40"_preserveAspectRatio="none"
+=== RUN   TestEmbeddedImagePlacement/x="10%"_y="20%"_width="40%"_height="40%"_preserveAspectRatio="xMinYMin"
+=== RUN   TestEmbeddedImagePlacement/width="32"
+=== RUN   TestEmbeddedImagePlacement/height="12"
+=== RUN   TestEmbeddedImagePlacement/#00
+=== RUN   TestEmbeddedImagePlacement/width="0"_height="10"_preserveAspectRatio="none"
+--- PASS: TestEmbeddedImagePlacement (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40"_preserveAspectRatio="xMaxYMax_meet" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/x="10"_y="20"_width="40"_height="40"_preserveAspectRatio="none" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/x="10%"_y="20%"_width="40%"_height="40%"_preserveAspectRatio="xMinYMin" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/width="32" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/height="12" (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/#00 (0.00s)
+    --- PASS: TestEmbeddedImagePlacement/width="0"_height="10"_preserveAspectRatio="none" (0.00s)
+=== RUN   TestEmbeddedImageAffineAndOwnership
+=== RUN   TestEmbeddedImageAffineAndOwnership/0
+=== PAUSE TestEmbeddedImageAffineAndOwnership/0
+=== RUN   TestEmbeddedImageAffineAndOwnership/1
+=== PAUSE TestEmbeddedImageAffineAndOwnership/1
+=== RUN   TestEmbeddedImageAffineAndOwnership/2
+=== PAUSE TestEmbeddedImageAffineAndOwnership/2
+=== RUN   TestEmbeddedImageAffineAndOwnership/3
+=== PAUSE TestEmbeddedImageAffineAndOwnership/3
+=== CONT  TestEmbeddedImageAffineAndOwnership/0
+=== CONT  TestEmbeddedImageAffineAndOwnership/3
+=== CONT  TestEmbeddedImageAffineAndOwnership/2
+=== CONT  TestEmbeddedImageAffineAndOwnership/1
+--- PASS: TestEmbeddedImageAffineAndOwnership (0.00s)
+    --- PASS: TestEmbeddedImageAffineAndOwnership/0 (0.00s)
+    --- PASS: TestEmbeddedImageAffineAndOwnership/3 (0.00s)
+    --- PASS: TestEmbeddedImageAffineAndOwnership/2 (0.00s)
+    --- PASS: TestEmbeddedImageAffineAndOwnership/1 (0.00s)
+=== RUN   TestEmbeddedImageCSSOpacityAndHref
+--- PASS: TestEmbeddedImageCSSOpacityAndHref (0.00s)
+=== RUN   TestEmbeddedImageFailures
+=== RUN   TestEmbeddedImageFailures/external
+=== RUN   TestEmbeddedImageFailures/local_path
+=== RUN   TestEmbeddedImageFailures/fragment
+=== RUN   TestEmbeddedImageFailures/missing
+=== RUN   TestEmbeddedImageFailures/percent
+=== RUN   TestEmbeddedImageFailures/bad64
+=== RUN   TestEmbeddedImageFailures/folded
+=== RUN   TestEmbeddedImageFailures/mime
+=== RUN   TestEmbeddedImageFailures/truncated
+=== RUN   TestEmbeddedImageFailures/slice
+=== RUN   TestEmbeddedImageFailures/bad_aspect
+=== RUN   TestEmbeddedImageFailures/negative
+=== RUN   TestEmbeddedImageFailures/nan
+=== RUN   TestEmbeddedImageFailures/clip
+=== RUN   TestEmbeddedImageFailures/css_effect
+=== RUN   TestEmbeddedImageFailures/attribute_effect
+=== RUN   TestEmbeddedImageFailures/child
+=== RUN   TestEmbeddedImageFailures/unused_external
+=== RUN   TestEmbeddedImageFailures/symbol_clip
+--- PASS: TestEmbeddedImageFailures (0.00s)
+    --- PASS: TestEmbeddedImageFailures/external (0.00s)
+    --- PASS: TestEmbeddedImageFailures/local_path (0.00s)
+    --- PASS: TestEmbeddedImageFailures/fragment (0.00s)
+    --- PASS: TestEmbeddedImageFailures/missing (0.00s)
+    --- PASS: TestEmbeddedImageFailures/percent (0.00s)
+    --- PASS: TestEmbeddedImageFailures/bad64 (0.00s)
+    --- PASS: TestEmbeddedImageFailures/folded (0.00s)
+    --- PASS: TestEmbeddedImageFailures/mime (0.00s)
+    --- PASS: TestEmbeddedImageFailures/truncated (0.00s)
+    --- PASS: TestEmbeddedImageFailures/slice (0.00s)
+    --- PASS: TestEmbeddedImageFailures/bad_aspect (0.00s)
+    --- PASS: TestEmbeddedImageFailures/negative (0.00s)
+    --- PASS: TestEmbeddedImageFailures/nan (0.00s)
+    --- PASS: TestEmbeddedImageFailures/clip (0.00s)
+    --- PASS: TestEmbeddedImageFailures/css_effect (0.00s)
+    --- PASS: TestEmbeddedImageFailures/attribute_effect (0.00s)
+    --- PASS: TestEmbeddedImageFailures/child (0.00s)
+    --- PASS: TestEmbeddedImageFailures/unused_external (0.00s)
+    --- PASS: TestEmbeddedImageFailures/symbol_clip (0.00s)
+=== RUN   TestEmbeddedImageRasterReference
+    image_test.go:250: CairoSVG embedded images 160x120 RGBA: MAE=2.5044140625 max=156 fraction_over_8=0.08359375
+--- PASS: TestEmbeddedImageRasterReference (0.00s)
+=== RUN   TestEmbeddedImageSymbolAndAspectAlignments
+--- PASS: TestEmbeddedImageSymbolAndAspectAlignments (0.00s)
+=== RUN   TestUseForwardReferencesNestedDefsAndIndependentInstances
+--- PASS: TestUseForwardReferencesNestedDefsAndIndependentInstances (0.00s)
+=== RUN   TestUseHrefNamespaceAndPrecedence
+=== RUN   TestUseHrefNamespaceAndPrecedence/href="#a"
+=== RUN   TestUseHrefNamespaceAndPrecedence/xlink:href="#a"
+=== RUN   TestUseHrefNamespaceAndPrecedence/legacy:href="#a"
+=== RUN   TestUseHrefNamespaceAndPrecedence/xlink:href="#missing"_href="#a"
+=== RUN   TestUseHrefNamespaceAndPrecedence/href="#a"_xlink:href="#missing"
+--- PASS: TestUseHrefNamespaceAndPrecedence (0.00s)
+    --- PASS: TestUseHrefNamespaceAndPrecedence/href="#a" (0.00s)
+    --- PASS: TestUseHrefNamespaceAndPrecedence/xlink:href="#a" (0.00s)
+    --- PASS: TestUseHrefNamespaceAndPrecedence/legacy:href="#a" (0.00s)
+    --- PASS: TestUseHrefNamespaceAndPrecedence/xlink:href="#missing"_href="#a" (0.00s)
+    --- PASS: TestUseHrefNamespaceAndPrecedence/href="#a"_xlink:href="#missing" (0.00s)
+=== RUN   TestUseNestedTransformsAndInlineStyle
+--- PASS: TestUseNestedTransformsAndInlineStyle (0.00s)
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/default_parent_viewport
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/symbol_dimensions
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/use_overrides_dimensions
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/no_viewBox_does_not_scale
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/nonzero_viewBox_origin
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/none
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/max_meet
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/min_meet
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/slice_visible
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/percentage_use
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/percentage_symbol
+=== RUN   TestSymbolViewBoxDimensionsAndAspectRatio/physical_units
+--- PASS: TestSymbolViewBoxDimensionsAndAspectRatio (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/default_parent_viewport (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/symbol_dimensions (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/use_overrides_dimensions (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/no_viewBox_does_not_scale (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/nonzero_viewBox_origin (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/none (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/max_meet (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/min_meet (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/slice_visible (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/percentage_use (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/percentage_symbol (0.00s)
+    --- PASS: TestSymbolViewBoxDimensionsAndAspectRatio/physical_units (0.00s)
+=== RUN   TestSymbolZeroDimensionsAndOrdinaryUseDimensions
+--- PASS: TestSymbolZeroDimensionsAndOrdinaryUseDimensions (0.00s)
+=== RUN   TestNestedSymbolPercentageViewportAndClipFrames
+--- PASS: TestNestedSymbolPercentageViewportAndClipFrames (0.00s)
+=== RUN   TestUseRejectInvalidReferencesAndDocuments
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/missing_href
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/empty_fragment
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/unknown
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/unknown_in_unused_defs
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/external_file
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/external_URL
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/data_URI
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/external_xlink
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/empty_href_overrides_xlink
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/foreign_href_namespace
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/duplicate_unused_IDs
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/duplicate_rendered_IDs
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/self_cycle
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/indirect_cycle
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/ancestor_cycle
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/symbol_cycle
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/defs_target
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/unsupported_target
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/unsupported_stylesheet_in_defs
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/multiple_roots
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/unclosed
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/duplicate_attribute
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/text_outside_root
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/use_child
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/foreign_defs
+=== RUN   TestUseRejectInvalidReferencesAndDocuments/nonfinite_transform
+--- PASS: TestUseRejectInvalidReferencesAndDocuments (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/missing_href (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/empty_fragment (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/unknown (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/unknown_in_unused_defs (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/external_file (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/external_URL (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/data_URI (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/external_xlink (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/empty_href_overrides_xlink (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/foreign_href_namespace (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/duplicate_unused_IDs (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/duplicate_rendered_IDs (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/self_cycle (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/indirect_cycle (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/ancestor_cycle (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/symbol_cycle (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/defs_target (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/unsupported_target (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/unsupported_stylesheet_in_defs (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/multiple_roots (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/unclosed (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/duplicate_attribute (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/text_outside_root (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/use_child (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/foreign_defs (0.00s)
+    --- PASS: TestUseRejectInvalidReferencesAndDocuments/nonfinite_transform (0.00s)
+=== RUN   TestPinnedManimUseGeometryAndPaint
+--- PASS: TestPinnedManimUseGeometryAndPaint (0.00s)
+=== RUN   TestSymbolRejectUnsupportedAndInvalidGeometry
+--- PASS: TestSymbolRejectUnsupportedAndInvalidGeometry (0.00s)
+=== RUN   TestSVGReferenceAndXMLLimits
+--- PASS: TestSVGReferenceAndXMLLimits (0.32s)
+=== RUN   TestLocalInstancesRasterReference
+    instances_test.go:381: CairoSVG 2.7.1, 128x96 RGBA: MAE=0 max=0
+--- PASS: TestLocalInstancesRasterReference (0.00s)
+=== RUN   TestUseOpacityAndIndependentRasterColors
+--- PASS: TestUseOpacityAndIndependentRasterColors (0.00s)
+=== RUN   TestImportStrokeInheritanceAndCSSPrecedence
+--- PASS: TestImportStrokeInheritanceAndCSSPrecedence (0.00s)
+=== RUN   TestSVGStrokeDefaultsAndUnsupportedStyles
+--- PASS: TestSVGStrokeDefaultsAndUnsupportedStyles (0.00s)
+=== RUN   TestAllPathCommands
+=== RUN   TestAllPathCommands/M0_0_10_0_10_10z
+=== RUN   TestAllPathCommands/m1_1_l2_0_h2_v2_H0_V0_Z
+=== RUN   TestAllPathCommands/M0_0C1_0_1_1_2_1S3_2_4_1
+=== RUN   TestAllPathCommands/M0_0Q1_2_2_0T4_0
+=== RUN   TestAllPathCommands/M0_0_A10_20_30_0_1_20_0
+=== RUN   TestAllPathCommands/M0_0a10_10_0_0110_10
+=== RUN   TestAllPathCommands/M.5-.5L1e1-2.5e-1
+--- PASS: TestAllPathCommands (0.00s)
+    --- PASS: TestAllPathCommands/M0_0_10_0_10_10z (0.00s)
+    --- PASS: TestAllPathCommands/m1_1_l2_0_h2_v2_H0_V0_Z (0.00s)
+    --- PASS: TestAllPathCommands/M0_0C1_0_1_1_2_1S3_2_4_1 (0.00s)
+    --- PASS: TestAllPathCommands/M0_0Q1_2_2_0T4_0 (0.00s)
+    --- PASS: TestAllPathCommands/M0_0_A10_20_30_0_1_20_0 (0.00s)
+    --- PASS: TestAllPathCommands/M0_0a10_10_0_0110_10 (0.00s)
+    --- PASS: TestAllPathCommands/M.5-.5L1e1-2.5e-1 (0.00s)
+=== RUN   TestSmoothControlReflection
+--- PASS: TestSmoothControlReflection (0.00s)
+=== RUN   TestEllipticalArcEndpointsAndBounds
+--- PASS: TestEllipticalArcEndpointsAndBounds (0.00s)
+=== RUN   TestImportViewBoxTransformsAndStyle
+--- PASS: TestImportViewBoxTransformsAndStyle (0.00s)
+=== RUN   TestRoundRectAndBasicShapes
+--- PASS: TestRoundRectAndBasicShapes (0.00s)
+=== RUN   TestRejectUnsupportedAndMalformed
+--- PASS: TestRejectUnsupportedAndMalformed (0.00s)
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/cells-middle
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/tspan-whole-kern
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/relative-kern
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/chunks-fonts
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/visibility-overrides
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/affine-local
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/radial-reflection
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/use-chain
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/nested-clips
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/template-alpha
+=== RUN   TestSVGTextBBoxGradientsFontToolsOracle/zero-width
+--- PASS: TestSVGTextBBoxGradientsFontToolsOracle (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/cells-middle (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/tspan-whole-kern (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/relative-kern (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/chunks-fonts (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/visibility-overrides (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/affine-local (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/radial-reflection (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/use-chain (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/nested-clips (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/template-alpha (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsFontToolsOracle/zero-width (0.00s)
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/cells-middle/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo cells-middle-cairo-ss1.png MAE=0.0320841471 max=14 fraction>8=0.00122070312
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/cells-middle/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo cells-middle-cairo-ss4.png MAE=0.0155232747 max=9 fraction>8=8.13802083e-05
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/tspan-whole-kern/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo tspan-whole-kern-cairo-ss1.png MAE=0.0292561849 max=9 fraction>8=8.13802083e-05
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/tspan-whole-kern/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo tspan-whole-kern-cairo-ss4.png MAE=0.0213419596 max=8 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/relative-kern/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo relative-kern-cairo-ss1.png MAE=0.0383097331 max=12 fraction>8=0.000895182292
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/relative-kern/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo relative-kern-cairo-ss4.png MAE=0.0194905599 max=7 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/chunks-fonts/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo chunks-fonts-cairo-ss1.png MAE=0.033203125 max=13 fraction>8=0.0009765625
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/chunks-fonts/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo chunks-fonts-cairo-ss4.png MAE=0.0153605143 max=8 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/visibility-overrides/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo visibility-overrides-cairo-ss1.png MAE=0.0135091146 max=13 fraction>8=0.00048828125
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/visibility-overrides/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo visibility-overrides-cairo-ss4.png MAE=0.00750732422 max=4 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/affine-local/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo affine-local-cairo-ss1.png MAE=0.0222167969 max=13 fraction>8=0.000244140625
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/affine-local/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo affine-local-cairo-ss4.png MAE=0.0160929362 max=6 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/radial-reflection/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo radial-reflection-cairo-ss1.png MAE=0.0419108073 max=15 fraction>8=0.00122070312
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/radial-reflection/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo radial-reflection-cairo-ss4.png MAE=0.0272623698 max=9 fraction>8=0.000244140625
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/use-chain/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo use-chain-cairo-ss1.png MAE=0.0508219401 max=16 fraction>8=0.00154622396
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/use-chain/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo use-chain-cairo-ss4.png MAE=0.0232747396 max=6 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/nested-clips/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo nested-clips-cairo-ss1.png MAE=0.0232950846 max=12 fraction>8=0.000325520833
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/nested-clips/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo nested-clips-cairo-ss4.png MAE=0.0150960286 max=10 fraction>8=8.13802083e-05
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/template-alpha/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo template-alpha-cairo-ss1.png MAE=0.0188395182 max=4 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/template-alpha/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo template-alpha-cairo-ss4.png MAE=0.0182088216 max=2 fraction>8=0
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/zero-width/ss1
+    text_bbox_gradients_test.go:179: fontTools+Cairo zero-width-cairo-ss1.png MAE=0.0110677083 max=11 fraction>8=0.000732421875
+=== RUN   TestSVGTextBBoxGradientsIndependentCairoCamera/zero-width/ss4
+    text_bbox_gradients_test.go:179: fontTools+Cairo zero-width-cairo-ss4.png MAE=0.00557454427 max=5 fraction>8=0
+--- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera (0.10s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/cells-middle/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/cells-middle/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/tspan-whole-kern/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/tspan-whole-kern/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/relative-kern/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/relative-kern/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/chunks-fonts/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/chunks-fonts/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/visibility-overrides/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/visibility-overrides/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/affine-local/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/affine-local/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/radial-reflection/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/radial-reflection/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/use-chain/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/use-chain/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/nested-clips/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/nested-clips/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/template-alpha/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/template-alpha/ss4 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/zero-width/ss1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsIndependentCairoCamera/zero-width/ss4 (0.00s)
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0
+=== PAUSE TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20
+=== PAUSE TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50
+=== PAUSE TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80
+=== PAUSE TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80
+=== RUN   TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100
+=== PAUSE TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100
+=== CONT  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0
+=== CONT  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100
+=== CONT  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80
+=== CONT  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50
+=== CONT  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-100-cairo-ss1.png MAE=0.0181070964 max=14 fraction>8=0.000325520833
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-080-cairo-ss1.png MAE=0.0212198893 max=11 fraction>8=0.000325520833
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-050-cairo-ss1.png MAE=0.016418457 max=15 fraction>8=0.000325520833
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-000-cairo-ss1.png MAE=0.0222167969 max=13 fraction>8=0.000244140625
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-100-cairo-ss4.png MAE=0.0147298177 max=6 fraction>8=0
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-020-cairo-ss1.png MAE=0.0165812174 max=13 fraction>8=0.000162760417
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-000-cairo-ss4.png MAE=0.0160929362 max=6 fraction>8=0
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-080-cairo-ss4.png MAE=0.0176188151 max=7 fraction>8=0
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-020-cairo-ss4.png MAE=0.0128580729 max=6 fraction>8=0
+=== NAME  TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50
+    text_bbox_gradients_test.go:228: fontTools+Cairo animated-050-cairo-ss4.png MAE=0.0103352865 max=4 fraction>8=0
+--- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership/100 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership/0 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership/80 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership/20 (0.01s)
+    --- PASS: TestSVGTextBBoxGradientsAnimationInteriorsOwnership/50 (0.01s)
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/0
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/0
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/1
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/1
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/2
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/2
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/3
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/3
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/4
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/4
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/5
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/5
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/6
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/6
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/7
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/7
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/8
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/8
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/9
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/9
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/10
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/10
+=== RUN   TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/11
+=== PAUSE TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/11
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/0
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/11
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/6
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/3
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/7
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/5
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/4
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/2
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/9
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/10
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/1
+=== CONT  TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/8
+--- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/0 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/11 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/7 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/5 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/2 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/8 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/1 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/10 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/4 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/6 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/3 (0.00s)
+    --- PASS: TestSVGTextBBoxGradientsConcurrentImportsUseOwnership/9 (0.00s)
+=== RUN   TestSVGTextBBoxGradientsUnsupportedAtomic
+--- PASS: TestSVGTextBBoxGradientsUnsupportedAtomic (0.00s)
+=== RUN   TestSVGTextBBoxGradientsInheritedFillKeywordsAndUserSpace
+--- PASS: TestSVGTextBBoxGradientsInheritedFillKeywordsAndUserSpace (0.00s)
+=== RUN   TestSVGTextBBoxGradientsUseGroupAndExistingSymbolMapping
+--- PASS: TestSVGTextBBoxGradientsUseGroupAndExistingSymbolMapping (0.00s)
+=== RUN   TestTextFontToolsIndependentGeometry
+=== RUN   TestTextFontToolsIndependentGeometry/normal
+    text_reference_test.go:67: fontTools independent bounds/advance max error=0 SVG units
+=== RUN   TestTextFontToolsIndependentGeometry/bold
+    text_reference_test.go:67: fontTools independent bounds/advance max error=0 SVG units
+=== RUN   TestTextFontToolsIndependentGeometry/italic
+    text_reference_test.go:67: fontTools independent bounds/advance max error=0 SVG units
+=== RUN   TestTextFontToolsIndependentGeometry/bolditalic
+    text_reference_test.go:67: fontTools independent bounds/advance max error=0.000539537292823411 SVG units
+--- PASS: TestTextFontToolsIndependentGeometry (0.00s)
+    --- PASS: TestTextFontToolsIndependentGeometry/normal (0.00s)
+    --- PASS: TestTextFontToolsIndependentGeometry/bold (0.00s)
+    --- PASS: TestTextFontToolsIndependentGeometry/italic (0.00s)
+    --- PASS: TestTextFontToolsIndependentGeometry/bolditalic (0.00s)
+=== RUN   TestTextCairoSVGMatchingFonts
+    text_reference_test.go:119: CairoSVG matched Go fonts: MAE=0.09182421875 max=29 fraction_over_8=0.003046875
+--- PASS: TestTextCairoSVGMatchingFonts (0.00s)
+=== RUN   TestTextDrawOrderOpacityPixels
+--- PASS: TestTextDrawOrderOpacityPixels (0.00s)
+=== RUN   TestTextRealStylesBaselineAndUnicode
+=== RUN   TestTextRealStylesBaselineAndUnicode/font-weight="400"_font-style="normal"
+=== RUN   TestTextRealStylesBaselineAndUnicode/font-weight="bold"
+=== RUN   TestTextRealStylesBaselineAndUnicode/font-style="italic"
+=== RUN   TestTextRealStylesBaselineAndUnicode/font-style="italic"_font-weight="700"
+--- PASS: TestTextRealStylesBaselineAndUnicode (0.00s)
+    --- PASS: TestTextRealStylesBaselineAndUnicode/font-weight="400"_font-style="normal" (0.00s)
+    --- PASS: TestTextRealStylesBaselineAndUnicode/font-weight="bold" (0.00s)
+    --- PASS: TestTextRealStylesBaselineAndUnicode/font-style="italic" (0.00s)
+    --- PASS: TestTextRealStylesBaselineAndUnicode/font-style="italic"_font-weight="700" (0.00s)
+=== RUN   TestTextWhitespaceAndAnchors
+--- PASS: TestTextWhitespaceAndAnchors (0.00s)
+=== RUN   TestTextSpanPositionsChunkAnchorsAndEmptySpans
+--- PASS: TestTextSpanPositionsChunkAnchorsAndEmptySpans (0.00s)
+=== RUN   TestTextSpanKerningWithCallerFontAndRelativePositions
+--- PASS: TestTextSpanKerningWithCallerFontAndRelativePositions (0.00s)
+=== RUN   TestTextMixedSizesCSSWideKeywordsAndSymbol
+--- PASS: TestTextMixedSizesCSSWideKeywordsAndSymbol (0.00s)
+=== RUN   TestTextBackwardRelativeOffsetsUseAdvanceExtents
+--- PASS: TestTextBackwardRelativeOffsetsUseAdvanceExtents (0.00s)
+=== RUN   TestTextCSSUseTransformsPaintAndOwnership
+--- PASS: TestTextCSSUseTransformsPaintAndOwnership (0.00s)
+=== RUN   TestTextResolverCachingIsolationAndFailure
+=== RUN   TestTextResolverCachingIsolationAndFailure/0
+=== PAUSE TestTextResolverCachingIsolationAndFailure/0
+=== RUN   TestTextResolverCachingIsolationAndFailure/1
+=== PAUSE TestTextResolverCachingIsolationAndFailure/1
+=== RUN   TestTextResolverCachingIsolationAndFailure/2
+=== PAUSE TestTextResolverCachingIsolationAndFailure/2
+=== RUN   TestTextResolverCachingIsolationAndFailure/3
+=== PAUSE TestTextResolverCachingIsolationAndFailure/3
+=== RUN   TestTextResolverCachingIsolationAndFailure/4
+=== PAUSE TestTextResolverCachingIsolationAndFailure/4
+=== RUN   TestTextResolverCachingIsolationAndFailure/5
+=== PAUSE TestTextResolverCachingIsolationAndFailure/5
+=== RUN   TestTextResolverCachingIsolationAndFailure/6
+=== PAUSE TestTextResolverCachingIsolationAndFailure/6
+=== RUN   TestTextResolverCachingIsolationAndFailure/7
+=== PAUSE TestTextResolverCachingIsolationAndFailure/7
+=== CONT  TestTextResolverCachingIsolationAndFailure/0
+=== CONT  TestTextResolverCachingIsolationAndFailure/4
+=== CONT  TestTextResolverCachingIsolationAndFailure/6
+=== CONT  TestTextResolverCachingIsolationAndFailure/5
+=== CONT  TestTextResolverCachingIsolationAndFailure/2
+=== CONT  TestTextResolverCachingIsolationAndFailure/3
+=== CONT  TestTextResolverCachingIsolationAndFailure/1
+=== CONT  TestTextResolverCachingIsolationAndFailure/7
+--- PASS: TestTextResolverCachingIsolationAndFailure (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/6 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/2 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/5 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/4 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/0 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/3 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/1 (0.00s)
+    --- PASS: TestTextResolverCachingIsolationAndFailure/7 (0.00s)
+=== RUN   TestTextUnsupportedSemanticsAreErrors
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_x="1_2">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_x="10%">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_dx="1,2">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_y="NaN">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_rotate="0">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_textLength="20">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_lengthAdjust="spacing">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text><textPath_href="#x">A</textPath></text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-size="0">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-size="1em">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-size="1e7">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-style="oblique">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-weight="600">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-family="sans-serif">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_font-family="Go,serif">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_text-anchor="left">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_xml:space="bogus">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_xml:lang="en">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text><tspan_transform="scale(2)">A</tspan></text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<tspan>A</tspan>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text><use_href="#a"/></text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_letter-spacing="1">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<g_writing-mode="vertical-rl"><text>A</text></g>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<g_font-variant="small-caps"><text>A</text></g>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_direction="rtl">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_style="font-feature-settings:'liga'">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_style="white-space:pre">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_text-rendering="optimizeLegibility">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>Á</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>مرحبا</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>שלום</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>हिन्दी</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>中文</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>A&#x200d;B</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text>🦄</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_transform="scale(2,1)"_stroke="red">A</text>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<defs><text_rotate="2">A</text></defs>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<defs><text>Á</text></defs>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<defs><symbol_id="s"_viewBox="0_0_10_10"><text_font-size="20">W</text></symbol></defs><use_href="#s"_width="10"_height="10"/>
+=== RUN   TestTextUnsupportedSemanticsAreErrors/<text_x="1e308"_dx="1e308">A</text>
+--- PASS: TestTextUnsupportedSemanticsAreErrors (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_x="1_2">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_x="10%">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_dx="1,2">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_y="NaN">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_rotate="0">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_textLength="20">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_lengthAdjust="spacing">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text><textPath_href="#x">A</textPath></text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-size="0">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-size="1em">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-size="1e7">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-style="oblique">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-weight="600">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-family="sans-serif">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_font-family="Go,serif">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_text-anchor="left">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_xml:space="bogus">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_xml:lang="en">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text><tspan_transform="scale(2)">A</tspan></text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<tspan>A</tspan> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text><use_href="#a"/></text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_letter-spacing="1">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<g_writing-mode="vertical-rl"><text>A</text></g> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<g_font-variant="small-caps"><text>A</text></g> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_direction="rtl">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_style="font-feature-settings:'liga'">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_style="white-space:pre">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_text-rendering="optimizeLegibility">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>Á</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>مرحبا</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>שלום</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>हिन्दी</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>中文</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>A&#x200d;B</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text>🦄</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_transform="scale(2,1)"_stroke="red">A</text> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<defs><text_rotate="2">A</text></defs> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<defs><text>Á</text></defs> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<defs><symbol_id="s"_viewBox="0_0_10_10"><text_font-size="20">W</text></symbol></defs><use_href="#s"_width="10"_height="10"/> (0.00s)
+    --- PASS: TestTextUnsupportedSemanticsAreErrors/<text_x="1e308"_dx="1e308">A</text> (0.00s)
+=== RUN   TestTextEmptyAndVisibilityLayout
+--- PASS: TestTextEmptyAndVisibilityLayout (0.00s)
+=== RUN   FuzzParsePath
+=== RUN   FuzzParsePath/seed#0
+=== RUN   FuzzParsePath/seed#1
+--- PASS: FuzzParsePath (0.00s)
+    --- PASS: FuzzParsePath/seed#0 (0.00s)
+    --- PASS: FuzzParsePath/seed#1 (0.00s)
+PASS
+ok  	gomath/svg	6.278s

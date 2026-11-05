@@ -1,0 +1,7 @@
+{
+  "Packages": 90,
+  "NonStdlib": [],
+  "Cgo": [],
+  "ProhibitedImports": [],
+  "AudioAssembly": []
+}

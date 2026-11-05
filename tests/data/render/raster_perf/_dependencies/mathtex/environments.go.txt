@@ -1,0 +1,166 @@
+package mathtex
+
+import (
+	"fmt"
+	"gomath"
+	"gomath/geom"
+	"math"
+)
+
+func (p *parser) environmentName() (string, error) {
+	p.skipSpace()
+	if p.position >= len(p.source) || p.source[p.position] != '{' {
+		return "", p.error("environment requires a braced name")
+	}
+	p.position++
+	start := p.position
+	for p.position < len(p.source) && p.source[p.position] != '}' {
+		r := p.source[p.position]
+		if r < 'A' || r > 'z' || (r > 'Z' && r < 'a') {
+			return "", p.error("invalid environment name")
+		}
+		p.position++
+	}
+	if p.position == len(p.source) {
+		return "", p.error("unclosed environment name")
+	}
+	name := string(p.source[start:p.position])
+	p.position++
+	return name, nil
+}
+
+func (p *parser) environment(name string, size float64) (box, error) {
+	left, right := ".", "."
+	switch name {
+	case "aligned", "gathered":
+		return p.multilineEnvironment(name, size)
+	case "matrix":
+	case "pmatrix":
+		left, right = "(", ")"
+	case "bmatrix":
+		left, right = "[", "]"
+	case "Bmatrix":
+		left, right = "{", "}"
+	case "vmatrix":
+		left, right = "|", "|"
+	case "Vmatrix":
+		left, right = "||", "||"
+	case "cases":
+		left, right = "{", "."
+	default:
+		return box{}, p.error("unsupported environment " + name)
+	}
+	var rows [][]box
+	var row []box
+	for {
+		cell, stop, err := p.row(cellRow, size)
+		if err != nil {
+			return box{}, err
+		}
+		// One trailing row separator is accepted; no empty row is materialized.
+		trailing := stop == environmentEnd && len(row) == 0 && !cell.content && len(rows) > 0
+		if !trailing {
+			if len(row) == 0 && !cell.content && stop != columnEnd {
+				return box{}, p.error("empty environment or empty row")
+			}
+			row = append(row, cell)
+			p.cells++
+			if len(row) > MaxEnvironmentColumns {
+				return box{}, p.error("environment exceeds 64 columns")
+			}
+			if p.cells > MaxEnvironmentCells {
+				return box{}, p.error("formula exceeds 4096 environment cells")
+			}
+		}
+		switch stop {
+		case columnEnd:
+			p.position++
+			continue
+		case matrixRowEnd, environmentEnd:
+			if !trailing {
+				if len(rows) > 0 && len(row) != len(rows[0]) {
+					return box{}, p.error(fmt.Sprintf("ragged %s row %d: got %d columns, want %d", name, len(rows), len(row), len(rows[0])))
+				}
+				if name == "cases" && len(row) != 2 {
+					return box{}, p.error("cases requires exactly two columns")
+				}
+				rows = append(rows, row)
+				row = nil
+				if len(rows) > MaxEnvironmentRows {
+					return box{}, p.error("environment exceeds 64 rows")
+				}
+			}
+			if stop == matrixRowEnd {
+				_, p.position = p.commandAt()
+				p.skipSpace()
+				if p.position < len(p.source) && p.source[p.position] == '[' {
+					return box{}, p.error("optional row spacing is unsupported")
+				}
+				continue
+			}
+			_, p.position = p.commandAt()
+			end, err := p.environmentName()
+			if err != nil {
+				return box{}, err
+			}
+			if end != name {
+				return box{}, p.error("mismatched environment end " + end + "; want " + name)
+			}
+			return p.environmentBox(name, rows, left, right, size), nil
+		default:
+			return box{}, p.error("unclosed environment " + name)
+		}
+	}
+}
+
+// Environment cells use baseline boxes, not centered ink bounds: a fraction
+// and a plain variable in a row share a baseline, and blank cells retain space.
+// Constructing these boxes locally avoids a matrix -> mathtex -> matrix cycle.
+func (p *parser) environmentBox(name string, rows [][]box, left, right string, size float64) box {
+	nr, nc := len(rows), len(rows[0])
+	widths := make([]float64, nc)
+	heights, depths := make([]float64, nr), make([]float64, nr)
+	for i, row := range rows {
+		heights[i], depths[i] = size*.7, size*.2
+		for j, cell := range row {
+			widths[j] = math.Max(widths[j], math.Max(size*.25, cell.width))
+			heights[i] = math.Max(heights[i], cell.height)
+			depths[i] = math.Max(depths[i], cell.depth)
+		}
+	}
+	gapX, gapY := size*.5, size*.3
+	width, height := gapX*float64(nc-1), gapY*float64(nr-1)
+	for _, w := range widths {
+		width += w
+	}
+	for i := range heights {
+		height += heights[i] + depths[i]
+	}
+	top := size*.16 + height/2
+	y := top
+	var cells []*gomath.Object
+	for i, row := range rows {
+		y -= heights[i]
+		x := 0.0
+		for j, cell := range row {
+			dx := 0.0
+			if name != "cases" {
+				dx = (widths[j] - cell.width) / 2
+			}
+			cell.object.Shift(geom.V(x+dx, y))
+			cell.object.Name = fmt.Sprintf("%s cell[%d,%d]", name, i, j)
+			cells = append(cells, cell.object)
+			x += widths[j] + gapX
+		}
+		y -= depths[i] + gapY
+	}
+	object := gomath.Group(cells...)
+	object.Name = "Environment " + name
+	b := box{object: object, width: width, height: top, depth: height - top, content: true}
+	if left == "." && right == "." {
+		return b
+	}
+	result := p.enclose(b, left, right, size)
+	result.object.Name = "Environment " + name
+	return result
+}

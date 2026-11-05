@@ -1,0 +1,46 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/audio
+cpu: Apple M2
+BenchmarkReadAIFF/pcm8/SSNDfirstfalse         	    2482	    139733 ns/op	 687.02 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirstfalse         	    2486	    141207 ns/op	 679.85 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirstfalse         	    2545	    141555 ns/op	 678.18 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirstfalse         	    2617	    139608 ns/op	 687.64 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirstfalse         	    2564	    139685 ns/op	 687.26 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirsttrue          	    2335	    156014 ns/op	 615.33 MB/s	 1040893 B/op	      22 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirsttrue          	    2305	    157008 ns/op	 611.44 MB/s	 1040893 B/op	      22 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirsttrue          	    2218	    157830 ns/op	 608.25 MB/s	 1040893 B/op	      22 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirsttrue          	    2239	    156324 ns/op	 614.11 MB/s	 1040893 B/op	      22 allocs/op
+BenchmarkReadAIFF/pcm8/SSNDfirsttrue          	    2367	    155523 ns/op	 617.27 MB/s	 1040893 B/op	      22 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirstfalse        	    2037	    177684 ns/op	1080.57 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirstfalse        	    2037	    179485 ns/op	1069.73 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirstfalse        	    1932	    187707 ns/op	1022.87 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirstfalse        	    2006	    178016 ns/op	1078.56 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirstfalse        	    1866	    182081 ns/op	1054.47 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirsttrue         	    1557	    219241 ns/op	 875.75 MB/s	 1270271 B/op	      23 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirsttrue         	    1674	    215227 ns/op	 892.08 MB/s	 1270272 B/op	      23 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirsttrue         	    1645	    227487 ns/op	 844.00 MB/s	 1270271 B/op	      23 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirsttrue         	    1195	    271268 ns/op	 707.79 MB/s	 1270271 B/op	      23 allocs/op
+BenchmarkReadAIFF/pcm16/SSNDfirsttrue         	    1591	    228787 ns/op	 839.21 MB/s	 1270271 B/op	      23 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirstfalse        	    1876	    186764 ns/op	1542.05 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirstfalse        	    1942	    214072 ns/op	1345.34 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirstfalse        	    2005	    179512 ns/op	1604.35 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirstfalse        	    1993	    180622 ns/op	1594.49 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirstfalse        	    1994	    179643 ns/op	1603.18 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirsttrue         	    1576	    230451 ns/op	1249.72 MB/s	 1630720 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirsttrue         	    1587	    228644 ns/op	1259.60 MB/s	 1630719 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirsttrue         	    1518	    230356 ns/op	1250.24 MB/s	 1630720 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirsttrue         	    1520	    234218 ns/op	1229.62 MB/s	 1630720 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm24/SSNDfirsttrue         	    1539	    235039 ns/op	1225.33 MB/s	 1630719 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirstfalse        	    2030	    182643 ns/op	2102.46 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirstfalse        	    2005	    180997 ns/op	2121.58 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirstfalse        	    1978	    180337 ns/op	2129.35 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirstfalse        	    1968	    181763 ns/op	2112.64 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirstfalse        	    1950	    182140 ns/op	2108.27 MB/s	  811472 B/op	      14 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirsttrue         	    1537	    235701 ns/op	1629.18 MB/s	 1720831 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirsttrue         	    1520	    235460 ns/op	1630.85 MB/s	 1720831 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirsttrue         	    1514	    238985 ns/op	1606.80 MB/s	 1720831 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirsttrue         	    1464	    239982 ns/op	1600.12 MB/s	 1720831 B/op	      24 allocs/op
+BenchmarkReadAIFF/pcm32/SSNDfirsttrue         	    1465	    235797 ns/op	1628.52 MB/s	 1720831 B/op	      24 allocs/op
+PASS
+ok  	gomath/audio	15.491s

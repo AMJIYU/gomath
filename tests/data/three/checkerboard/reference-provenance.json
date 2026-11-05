@@ -1,0 +1,10 @@
+{
+  "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "source": "manim/mobject/three_d/three_dimensions.py",
+  "source_sha256": "9343af8b6ae55bbe6d8f2fbd240ed0248a178544ee3829d628973839508553a6",
+  "class": "Surface",
+  "method": "set_fill_by_checkerboard",
+  "source_parity_expression": "(face.u_index + face.v_index) % n_colors",
+  "new_api_subset": "two geometric material groups; no VMobject/stroke/default-style parity or matched Manim render claim",
+  "oracle": "Independent Go full-grid coordinate/normal and ray reference plus direct analytic plane cell classification; scene3d TRS and concurrent snapshot references; no reference runtime fallback"
+}

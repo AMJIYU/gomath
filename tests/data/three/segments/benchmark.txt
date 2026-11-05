@@ -1,0 +1,30 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/three
+cpu: Apple M2
+BenchmarkBuildSegments/arrowfalse/r24/a4-8         	   40370	      8326 ns/op	   19040 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowfalse/r24/a4-8         	   43474	      8224 ns/op	   19040 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowfalse/r24/a4-8         	   43980	      8441 ns/op	   19040 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r24/a4-8          	   23029	     16181 ns/op	   32736 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r24/a4-8          	   20332	     17285 ns/op	   32736 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r24/a4-8          	   23388	     18830 ns/op	   32736 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowfalse/r256/a256-8      	      98	   3415638 ns/op	 7446630 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowfalse/r256/a256-8      	     100	   3325485 ns/op	 7446630 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowfalse/r256/a256-8      	     100	   3425382 ns/op	 7446625 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r256/a256-8       	      50	   6727606 ns/op	14827616 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r256/a256-8       	      54	   6596840 ns/op	14827616 B/op	       5 allocs/op
+BenchmarkBuildSegments/arrowtrue/r256/a256-8       	      54	   6731423 ns/op	14827620 B/op	       5 allocs/op
+BenchmarkRenderSegments/opaque/s1-8                	     262	   1347476 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1004105 B/op	      12 allocs/op
+BenchmarkRenderSegments/opaque/s1-8                	     266	   1461667 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1004104 B/op	      12 allocs/op
+BenchmarkRenderSegments/opaque/s1-8                	     260	   1466159 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1004105 B/op	      12 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s1-8       	     100	   3234230 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1207336 B/op	      17 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s1-8       	     100	   3389402 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1207339 B/op	      17 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s1-8       	     100	   3160095 ns/op	      1344 tris/frame	       979.0 vertices/frame	 1207337 B/op	      17 allocs/op
+BenchmarkRenderSegments/opaque/s2-8                	      86	   3934611 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4076168 B/op	      14 allocs/op
+BenchmarkRenderSegments/opaque/s2-8                	      79	   3959692 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4076169 B/op	      14 allocs/op
+BenchmarkRenderSegments/opaque/s2-8                	      85	   3960805 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4076169 B/op	      14 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s2-8       	      34	  10203290 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4672617 B/op	      23 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s2-8       	      34	  10198969 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4672617 B/op	      23 allocs/op
+BenchmarkRenderSegments/uv-alpha-lights/s2-8       	      34	  10195653 ns/op	      1344 tris/frame	       979.0 vertices/frame	 4672624 B/op	      23 allocs/op
+PASS
+ok  	gomath/three	9.698s

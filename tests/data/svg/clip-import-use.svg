@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="96" viewBox="0 0 128 96"><style>.tile {clip-path:url(#c)} .def > clipPath > .outline {clip-rule:nonzero}</style>
+      <defs class="def">
+        <path id="outline" d="M0 0H32V28H0Z M10 8V20H22V8Z" transform="scale(1.15 .9)"/>
+        <clipPath id="c" transform="translate(3 4)"><use class="outline" href="#outline" transform="translate(2 1)"/></clipPath>
+        <rect id="tile" class="tile" x="-2" y="-2" width="48" height="40" fill="#10a070"/>
+        <clipPath id="host"><rect x="3" y="3" width="90" height="36"/></clipPath>
+      </defs>
+      <use href="#tile" x="12" y="10" transform="translate(2 4)" clip-path="url(#host)"/>
+      <use href="#tile" x="70" y="56" fill="red"/></svg>

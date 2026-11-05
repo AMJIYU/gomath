@@ -1,0 +1,26 @@
+File: after_pan.test
+Type: alloc_space
+Time: 2026-11-04 13:34:54 CST
+Showing nodes accounting for 43667.52kB, 100% of 43667.52kB total
+Showing top 20 nodes out of 26
+      flat  flat%   sum%        cum   cum%
+39720.23kB 90.96% 90.96% 39720.23kB 90.96%  image.NewRGBA
+ 1562.41kB  3.58% 94.54%  1562.41kB  3.58%  gomath/internal/h264.nal (inline)
+ 1184.27kB  2.71% 97.25%  1184.27kB  2.71%  runtime/pprof.StartCPUProfile
+  688.56kB  1.58% 98.83%   688.56kB  1.58%  compress/flate.(*fastGen).addBlock
+  512.05kB  1.17%   100%   512.05kB  1.17%  runtime/pprof.(*profileBuilder).emitLocation
+         0     0%   100%   688.56kB  1.58%  compress/flate.(*Writer).Close (inline)
+         0     0%   100%   688.56kB  1.58%  compress/flate.(*compressor).close
+         0     0%   100%   688.56kB  1.58%  compress/flate.(*compressor).deflateFast
+         0     0%   100%   688.56kB  1.58%  compress/flate.(*fastEncL1).encode
+         0     0%   100%   688.56kB  1.58%  compress/gzip.(*Writer).Close
+         0     0%   100%  1562.41kB  3.58%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0%   100%  1562.41kB  3.58%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0%   100%  1562.41kB  3.58%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion
+         0     0%   100% 41282.64kB 94.54%  gomath/internal/h264.BenchmarkMotionSearch.func1
+         0     0%   100% 26348.89kB 60.34%  gomath/internal/h264.intraImage
+         0     0%   100% 39720.23kB 90.96%  gomath/internal/h264.motionImage
+         0     0%   100%  1184.27kB  2.71%  main.main
+         0     0%   100%  1184.27kB  2.71%  runtime.main
+         0     0%   100%   512.05kB  1.17%  runtime/pprof.(*profileBuilder).appendLocsForStack
+         0     0%   100%  1200.61kB  2.75%  runtime/pprof.(*profileBuilder).build

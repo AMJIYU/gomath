@@ -1,0 +1,34 @@
+=== RUN   TestNumberPublicFormattingAndBounds
+--- PASS: TestNumberPublicFormattingAndBounds (0.01s)
+=== RUN   TestIntegerFullRangeAndIdentity
+--- PASS: TestIntegerFullRangeAndIdentity (0.00s)
+=== RUN   TestNumberRightSlotsGrowthShrinkAndStyles
+--- PASS: TestNumberRightSlotsGrowthShrinkAndStyles (0.00s)
+=== RUN   TestNumberAffineAnchorsAndImmutableSource
+--- PASS: TestNumberAffineAnchorsAndImmutableSource (0.01s)
+=== RUN   TestNumberLateFontFailureAndLimitsAreAtomic
+--- PASS: TestNumberLateFontFailureAndLimitsAreAtomic (0.00s)
+=== RUN   TestNumberRejectsModifiedTopologyAndNonAffinePaths
+--- PASS: TestNumberRejectsModifiedTopologyAndNonAffinePaths (0.00s)
+=== RUN   TestNumberSourceConcurrentAndIntegerSnapshot
+--- PASS: TestNumberSourceConcurrentAndIntegerSnapshot (0.02s)
+=== RUN   TestNumberSlotLedgerSurvivesUpdatesAndPublicSliceEdits
+--- PASS: TestNumberSlotLedgerSurvivesUpdatesAndPublicSliceEdits (0.00s)
+=== RUN   TestNumberLateWorldBudgetAndReflection
+--- PASS: TestNumberLateWorldBudgetAndReflection (0.00s)
+=== RUN   TestNumberIndependentPythonAndPinnedManimFormats
+    reference_test.go:116: 1376 binary64 fixed formats / 48 exact int64 formats; 4 documented pinned numpy.round zero-sign deviations
+--- PASS: TestNumberIndependentPythonAndPinnedManimFormats (0.01s)
+=== RUN   TestNumberIndependentFontToolsAndCairo
+    reference_test.go:271: 20 independent real-font/Cairo layouts; minimum mask IoU 0.983016, maximum RGB MAE 0.024230 bytes
+--- PASS: TestNumberIndependentFontToolsAndCairo (0.21s)
+=== RUN   TestNumberCustomKerningAndCurveBoundary
+--- PASS: TestNumberCustomKerningAndCurveBoundary (0.00s)
+=== RUN   TestNumberTrackerDynamicSnapshotsAndIndependentMidFrames
+--- PASS: TestNumberTrackerDynamicSnapshotsAndIndependentMidFrames (0.01s)
+=== RUN   TestNumberSceneBeforeSetValueIsIndependentAndSamplingErrorsAtomic
+--- PASS: TestNumberSceneBeforeSetValueIsIndependentAndSamplingErrorsAtomic (0.00s)
+=== RUN   TestNumberWriteTransformAndPreview
+--- PASS: TestNumberWriteTransformAndPreview (0.03s)
+PASS
+ok  	gomath/number	0.333s

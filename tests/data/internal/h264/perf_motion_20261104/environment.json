@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-04",
+  "go": "go version go1.27.3 darwin/arm64",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.1\nBuildVersion:\t\t24G231",
+  "arch": "arm64",
+  "cpu": "Apple M2",
+  "CGO_ENABLED": 0,
+  "GOMAXPROCS": 1,
+  "tags": "noasm",
+  "test_parallelism": 1,
+  "samples_per_case": 5,
+  "benchtime": "300ms",
+  "frames_per_op": 60,
+  "width": 320,
+  "height": 180,
+  "QP": 24,
+  "ModeSearch": false,
+  "InterResidual": true,
+  "GOP": 60,
+  "radii": [
+    0,
+    1,
+    2
+  ],
+  "decoder": [
+    "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+    "built with Apple clang version 17.0.0 (clang-1700.6.3.2)",
+    "configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-videotoolbox --enable-audiotoolbox --enable-neon",
+    "libavutil      60.  8.100 / 60.  8.100",
+    "libavcodec     62. 11.100 / 62. 11.100",
+    "libavformat    62.  3.100 / 62.  3.100",
+    "libavdevice    62.  1.100 / 62.  1.100",
+    "libavfilter    11.  4.100 / 11.  4.100",
+    "libswscale      9.  1.100 /  9.  1.100",
+    "libswresample   6.  1.100 /  6.  1.100",
+    "",
+    "Exiting with exit code 0"
+  ],
+  "caveat": "Sequential shared-machine samples; parent integration race active during before capture, exited before after. Separate profiles and syntax microbenchmark controls retained."
+}

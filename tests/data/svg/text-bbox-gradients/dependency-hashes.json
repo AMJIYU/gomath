@@ -1,0 +1,349 @@
+[
+  {
+    "package": "gomath/audio",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/aiff_read.go": "f5ab66d980343e98f44da8730c888e9d7b883569ae9e5adf848ffa4b0e8ba6e1",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/au_read.go": "e914562667fbeda7e9ec21c65d9e5095a20c3ba476d2318d012fcef0d20842ca",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/edit.go": "60932000dc7a485a54d511b106792ac709155915f6331ec52e164b7ab5df874a",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/flac.go": "2bf58dad2d742933bf2fb9a42f9961cd721d8d96fe13e17a364e0c3ec7b64e45",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/flac_read.go": "c268146e8c3b64f8baa82daeebb36c2f2df1bba8fa8211b562ce97111a925ab9",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/pcm.go": "08d2ba7b171ee535c4cd7c670e2429564eec4a66b7f787db41913077cf88d5f5",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/remix.go": "0c01cd685a7f342072688e5bd70d175ec886561dbf61d2e5ba79702778ffd5a4",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/resample.go": "6b2cfaa5dbae4a1c2871950b99ef982cfb2fa28bbe597fef4a7f5cbc955f2e8d",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/sequence.go": "1e0f5fe373e5d795c2e2259ab2fd92777f71cd999eec2c1ff8d47a977ef875da",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/wav.go": "4d025c9da3596dd1fec69fb3718a1549cb819fcd05a616099bbbfa740d92940b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/wav_g711.go": "b056e2374831e0cb9d775441f1099e82091bf0dec7be0469b24accc510b0429c",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/wav_ima.go": "a998141cc9233fc84e58f8d103ba7598a6a88f6448c7285fd6cc5b113ec08d46",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/audio/wav_ms_adpcm.go": "259625898046ef8ae857f5b49e1a3541c911aa034691f5167786e47c2105e12f"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/geom",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/geom/quaternion.go": "96a05053499c4ace5b223179fb92eab8a62ab9fb19e55b9ab0fc5a4f2fff84d3",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/geom/vector.go": "cd3aa8937e2415d7dd75510f2c6baa1400ce6c8459ba6d1b665213cbb7d32fa5"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/path",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/anchor_handles.go": "47ea1771341d5daf5d6c56fffbf50b680ed3b3eb2382846cce3fde0348d485a0",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/boolean.go": "6e20311e90bfcb9b33fe146b0d6d5487815202afbe9a1da6dd27f435105a9553",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/boolean_exact.go": "8fbf9704098e3ed78f5f35e26099d2442920f63f840c8a4c63d490e2b1ca5bba",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/boolean_graph.go": "1fa331a5c4e79869a854fb8fa4b7bab1a1196676aaf67936d7ac6dc3c6cfe5c9",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/boolean_round.go": "ee7aeb34622ef3de85da74877ccb96d2312da12454f7ae93170ba03a638929bc",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/curve_edit.go": "94879933bb45e38821c0209038b5eab28531e9eb06e88aafa2c3d23c7104ba6a",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/length.go": "29b3e768b380a422a4fdbf15e8cb313ab1c9554b9fca86a5e246f0bde813ce7b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/lookup.go": "ad3187641171f89490bc883a0a37693b0882075ba9561327b7e440a58cffabdc",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/measure.go": "aa0f826243286c8e675489e4e6e89b388bc3cba0ce274e315180cf3491a9c423",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/parameter.go": "569d0a5679e7097cc301d3633d0f6efd05539ea1ee5fa102a29a90d0ab1d9326",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/path.go": "194f93952bb7d1565e4a80ca448c5071a38af27dfb7f5e052126148d92ae1fd2",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/path/trim.go": "3a848d9b313bed4beaa1b73bca346098929bffd842b5170da5f7403a171f58af"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/subtitle",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/subtitle/cue.go": "63ecf8ce689a0488d018c28c6a80c2b84d4293e923f646e2eac54992757330c3",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/subtitle/read.go": "45d1b0829d9746ff1cc42f456b0c80d35bab53be90e5fc06db4f395c9b17abdc",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/subtitle/time.go": "b611ac349e439b31c6653145b9447134f2b09259b5b76696a67243f29f3e34f9",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/subtitle/write.go": "b84207ba07145f956ac63dde3489d8137e4aaead9fb642f71f6277aff4f1eb7b"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/angle_marks.go": "e146250ac424a02241bfec7e52c0e971c21c2381dbaa213a38bb472dd615fd24",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/animation.go": "407d5f851830ce2464fe23088f016874d51812b74b28afb220ddae90aa48c88f",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/annotations.go": "6cd0dcdb2a02f2060fe4c18d73a3240157b8bf0b99132ab23196c99325b0e5d5",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/arc_brace.go": "4b448f992a6aab19bb62206c2ccf854a6c8d18f8c9d4b0ae1ec8614b77333fe4",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/arc_connections.go": "14c7ca830126316fdf1c001bf09fc382a9b7d64c03aad4d9c9f26be4c48f2a79",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/bitmap.go": "74838e9813fca55b5746176050865b9fde0a46d86e5acc8f82abc06cf6785f70",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/brace.go": "2eadd5f8db545ed761a6c0d0a4c86cfa34412025c3fdcaed73b5b3e668ebb9be",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/brace_template_data.go": "1fbd16fb688d026479d7299308019e2b300bc0e8079985e2bcb4b12c9b054249",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/camera.go": "f8e160380855e68f4fe6acc6eb386a15916febc63f5adbc21eaf51beb2ad1ef5",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/caption.go": "7249aa9cd1eecb02d3f54240664a55e544d39be4bb77a4dfc854eaf37f6ac01b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/clip.go": "06324c9007476b48e70c9d728769661a6cad621155b11c43e56413035c5c7f4c",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/color.go": "64e8abea1f248b7e317932c39153a0233eaa82ba7fbed9a7b8421cb79d9e89a6",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/composition.go": "8647707cd9aa3dc90ba89477712787078b3ffd62815a649a56efc88eec839a9b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/crossfade.go": "f44e61f9169fc452b10af0eeb53fc0da62d28749f81a61727d4bcf64541acdb4",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/dash.go": "008067b0f3c70a7d80e50aaeb70ce3641e114bd513413b7f82668c543698c131",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/doc.go": "e4f2ccaf3880d0bcfe1a6b36ea42a7a9c5524122bb196479bdcc0f01075881d5",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/dynamic.go": "159cc7404a5ac35a391b6f78e0a73035de586d0fe39ca318752886ec621ecf92",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/elbow.go": "55e7ff5ad7ff9932840871196dba896a06e6102b35db79c3f4b90089418d75d1",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/fill_rule.go": "432f45bb682592f70bb72f4c435ac4cd8a61ccf8af27eb644910348529cad236",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/flash.go": "ee6f9b3923a82e286016fb434f4cd7d2081ce92f04247053c45774f479bfb249",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/gradient.go": "d6b6791eada340574a7d1977da6ec77fc434c197c90b336c9b3e4403060d862f",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/indication.go": "3625e297cf17aead6d92b2f836588de29e5bbe93da59629513f483fba92c5694",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/movement.go": "5f64eb44b96153e190c60151c78faac57e193d47db93aefbbfcfef196e79afbe",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/nonlinear.go": "7a8aa4914edc0762c4591c94c22e21d0f76788e77ced44a7e480eeeebbf3d0ab",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/object.go": "f34ddfba00645bc0b019a6c95bf9059a5242966d3c3bbb8bb283ef747a1175cb",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/primitives.go": "548b5297b442bb4f7ef413531a074b12345259e6b420d8082411627ab71fcf83",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/rate.go": "11a4fc03354f23d8c29d6f1f1d73393cde403a5b93696f7093f1db7b7cd3b017",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/replay.go": "ad750d79b479412b8c7483c19273db4669ddf0c1f6abb3c8e1804d9698f4df7d",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/scene.go": "7f49e59b8ddab1cabb7f99dc9d6fb48baa4adebe5455bb0b274c17117da24aa3",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/shapes.go": "abcd59e7244fb9ccfbb206e4af399fe2bcf4f7216ab779399a3851fe58bb85ff",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/sound.go": "cdb631a74cc5626041c62a3d9b9f36d3a630a8b3b6747b1e4a28a9d2db14169a",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/succession.go": "0300f0b2dd2138325827af3bf3312af52c22025f60f544c5708a7c64dd27354b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tangential_arc.go": "78ba8afca668ceeff741349063c831b8856e8dad88fa65e6cab1ebba5c20ad10",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/tracker.go": "f60456006360acd490d8d9865509402dfed2e371c316c97fc249ae9c686d9264",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/transform_path.go": "2efe14fce535e0d31cc6d20b7173fa5f4697e8668a442b36efa8b299c88252b4",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/updater_lifecycle.go": "f8d8d871f4bde9bf429f9e31bb79cf896fae506f6dcd4266fa9af854295d5563"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/rasterimage",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/rasterimage/image.go": "55e566ab2c253e7c75875e2df3739185689c475b35808e4244c1333823601e5d",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/rasterimage/pixels.go": "48dfccb1fcb0533614cd4150b1e11db7206fcf868598409e116374c334263258"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/math/fixed",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/math/fixed/fixed.go": "b74f2166fce03cecfebb00d3e9641b559dab8ffb00d72139c1dc69ed1ac05725"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/font.go": "736c63e19b49ab0921e909e43181234eb25a2bd5f1a487bddc1ce3fd89bee3d9"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font/gofont/gobold",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/gobold/data.go": "fc7962ee60b083d84f22a643e1cb835735c32b48d48916a8b183b5b4571882e2"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font/gofont/gobolditalic",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/gobolditalic/data.go": "74779e6e424d9c8c83616dde46abe52ca1b310e019129e24b4c7f7d972eb72a5"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font/gofont/goitalic",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/goitalic/data.go": "02ca8ee69646b7a21a4588aea1afc77c48275a4d313edc79ae91635ca4e24ef8"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font/gofont/goregular",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/goregular/data.go": "3c5bc52e0342e5d9f50f90cb331b64bc2227b88def55d23ed1112a71f84b821c"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/text/encoding/internal/identifier",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/internal/identifier/identifier.go": "50c99f12c73517c9314d04fb7807e7fdc57e75436306d3b38036fb17bc0c41ca",
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/internal/identifier/mib.go": "7dac7c2f13c9a8f31f6f8228e71ea0ae6f470f3099a2ba8cebc4a1fbc876385a"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/text/transform",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/transform/transform.go": "7716301e210f42b764ec78f4adffb05075f1d5103446a40b8a38043f5a7abd88"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/text/encoding",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/encoding.go": "7a66d04774bf136fc1e655e0746eee54237e33ce21802d7e286c87b6e1307172"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/text/encoding/internal",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/internal/internal.go": "d49433c5ac6f01c29013957898b7fd9d899832d2c7d09cc137ff52a4270aff87"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/text/encoding/charmap",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/charmap/charmap.go": "8f2418e924ccf719fcef0ec4ca1895657c1b98dcb7df4bfeba204970ebd98b33",
+      "/Users/eleven/go/pkg/mod/golang.org/x/text@v0.43.0/encoding/charmap/tables.go": "63a3da1a54945679073726ca71567cc7402eba352005c983866c8c0ae6b55afd"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "golang.org/x/image/font/sfnt",
+    "files_sha256": {
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/cmap.go": "be879d4e304e524a7ef96e7ae0643af79e701a5010e07223a31fede022685235",
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/data.go": "773c9ac68a3a7a5c471a7da48e787a21bd0d4b43f71dbed7f315ee9e551d05ab",
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/gpos.go": "5a5a5bd0385fc95dd381a16e80065ced50b52124690670ca1143218f67a2ced4",
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/postscript.go": "381b248558cddf7bb3a30932089a873a902bafd44089a30dba7016c17138abed",
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/sfnt.go": "f7db41fb73c3ecb3edb131b8cd7f2b45a238acb402e32eedcb52738076cb045c",
+      "/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/sfnt/truetype.go": "efebbe59761b48668c980bdc3f46ae7420cd6776546db440954b79c1f2916cab"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/text",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/text/fallback.go": "bd2e7729aa464985518a59868d3b527edccaa2e080ad3a6ca89ebc3988a38086",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/text/fonts.go": "3dc6bb4dfd26581f976cb4fcf7ca40738ec41ee92ad851e4e22bea43fc8057e9",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/text/markup.go": "420d0515ea665fde1456f0759851c8b8528f011fe2ffbe794fc719db432d3930",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/text/text.go": "bcb6889d73c0e1bb47c7033ecf3db3e008bbf73c65348674a40c5d641e125682"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  },
+  {
+    "package": "gomath/svg",
+    "files_sha256": {
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip.go": "80e8335f883386c07bbc4d78e4b13183feae32af08a0bf9ef685e5b0d2057b76",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_bbox.go": "004b9f388359bf69bc2127bd5abc4e4950e5374c8010317652cdc1a80427f125",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_union.go": "80319009b06eff3376bf00023770fcfd66c255884244dd5f78817431dfab838b",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/clip_union_budget.go": "c6b69db959e04a50d95cf8faa14f7b5928202b8da920062c34daa30fca7debc2",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/container_bbox.go": "f7045fa8f1f5e3dd56e8065a6eb98d5def1c6c66d3f469cc5901ac9af0b0688e",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/css.go": "fb3edf00b1caaa77eb2f76f70736d86d1599f412c2378c5b77ccd894bf2ae1a9",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/document.go": "c9ca39a5dc85ac5e5688d6f6b06f7f862fd25eec577acceb0cdd95f45dbb7715",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/gradient.go": "777aaf78f4074b0bbd748606da0b5db81fca92137130c0270b396f683d4e4b52",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/image.go": "a2fa8c37e5bebfb6364bdbd960309480a3df026bddebafe929b1d19721ab2b47",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/instance.go": "73f446ebd86793845d72f61fcdbaffb6e1e302c54e1273ec0443adf20e762ddf",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/path.go": "1ddc04080f236eba47decd9fac16088ed7450de44c5ebf5bcec0f13abbe93432",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/style.go": "99dd31026294369076ae23bfb054556bdd41f0d38fd450b80c72de108ec882d0",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/svg.go": "31b0944fd12bb67870b57dad8100ebb7fcdc9c496223859b6756b9eebeb0304c",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text.go": "46aa9de044674ddabb2229bdf93d0e0fa6f661df924d30c9fbc0cd9bcd153239",
+      "/Users/eleven/Documents/\u5de5\u4f5c\u7ecf\u5386/cloudtorch/gomath/svg/text_gradient.go": "5c4e5ea9a4be7f7366e46a3733fd57cfa78e1fa4c8b3b321f87126a004b4eeb9"
+    },
+    "native_files": {
+      "CgoFiles": [],
+      "CFiles": [],
+      "CXXFiles": [],
+      "SFiles": [],
+      "SysoFiles": []
+    }
+  }
+]

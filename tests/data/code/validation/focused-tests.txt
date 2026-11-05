@@ -1,0 +1,843 @@
+=== RUN   TestCodePhysicalGridAndStableSelections
+--- PASS: TestCodePhysicalGridAndStableSelections (0.00s)
+=== RUN   TestCodeEmptyWhitespaceAndTabs
+--- PASS: TestCodeEmptyWhitespaceAndTabs (0.00s)
+=== RUN   TestCodeErrorsAndLimits
+=== RUN   TestCodeErrorsAndLimits/python
+=== RUN   TestCodeErrorsAndLimits/alias
+=== RUN   TestCodeErrorsAndLimits/utf8
+=== RUN   TestCodeErrorsAndLimits/bare-cr
+=== RUN   TestCodeErrorsAndLimits/null
+=== RUN   TestCodeErrorsAndLimits/delete
+=== RUN   TestCodeErrorsAndLimits/bidi
+=== RUN   TestCodeErrorsAndLimits/combining
+=== RUN   TestCodeErrorsAndLimits/nbsp
+=== RUN   TestCodeErrorsAndLimits/bom
+=== RUN   TestCodeErrorsAndLimits/unicode-newline
+=== RUN   TestCodeErrorsAndLimits/escape
+=== RUN   TestCodeErrorsAndLimits/comment
+=== RUN   TestCodeErrorsAndLimits/raw
+=== RUN   TestCodeErrorsAndLimits/number
+=== RUN   TestCodeErrorsAndLimits/missing
+=== RUN   TestCodeErrorsAndLimits/font
+=== RUN   TestCodeErrorsAndLimits/zero-options
+=== RUN   TestCodeErrorsAndLimits/size-low
+=== RUN   TestCodeErrorsAndLimits/size-nan
+=== RUN   TestCodeErrorsAndLimits/size-inf
+=== RUN   TestCodeErrorsAndLimits/height
+=== RUN   TestCodeErrorsAndLimits/height-inf
+=== RUN   TestCodeErrorsAndLimits/padding
+=== RUN   TestCodeErrorsAndLimits/padding-nan
+=== RUN   TestCodeErrorsAndLimits/tab
+=== RUN   TestCodeErrorsAndLimits/tab-high
+=== RUN   TestCodeErrorsAndLimits/number-negative
+=== RUN   TestCodeErrorsAndLimits/number-high
+=== RUN   TestCodeErrorsAndLimits/palette
+=== RUN   TestCodeErrorsAndLimits/bytes
+=== RUN   TestCodeErrorsAndLimits/runes
+=== RUN   TestCodeErrorsAndLimits/lines
+=== RUN   TestCodeErrorsAndLimits/columns
+=== RUN   TestCodeErrorsAndLimits/tokens
+=== RUN   TestCodeErrorsAndLimits/depth
+=== RUN   TestCodeErrorsAndLimits/glyphs
+=== RUN   TestCodeErrorsAndLimits/number-glyphs
+=== RUN   TestCodeErrorsAndLimits/curves
+=== RUN   TestCodeErrorsAndLimits/bg-curves
+=== RUN   TestCodeErrorsAndLimits/dimensions
+=== RUN   TestCodeErrorsAndLimits/hard-bytes
+=== RUN   TestCodeErrorsAndLimits/hard-runes
+=== RUN   TestCodeErrorsAndLimits/hard-lines
+=== RUN   TestCodeErrorsAndLimits/hard-columns
+=== RUN   TestCodeErrorsAndLimits/hard-depth
+--- PASS: TestCodeErrorsAndLimits (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/python (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/alias (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/utf8 (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/bare-cr (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/null (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/delete (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/bidi (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/combining (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/nbsp (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/bom (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/unicode-newline (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/escape (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/comment (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/raw (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/number (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/missing (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/font (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/zero-options (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/size-low (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/size-nan (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/size-inf (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/height (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/height-inf (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/padding (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/padding-nan (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/tab (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/tab-high (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/number-negative (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/number-high (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/palette (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/bytes (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/runes (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/lines (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/columns (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/tokens (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/depth (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/glyphs (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/number-glyphs (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/curves (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/bg-curves (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/dimensions (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/hard-bytes (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/hard-runes (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/hard-lines (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/hard-columns (0.00s)
+    --- PASS: TestCodeErrorsAndLimits/hard-depth (0.00s)
+=== RUN   TestCodeExactBudgetBoundariesAndFonts
+--- PASS: TestCodeExactBudgetBoundariesAndFonts (0.00s)
+=== RUN   TestCodePhysicalScannerErrorsAndPaletteSnapshot
+--- PASS: TestCodePhysicalScannerErrorsAndPaletteSnapshot (0.00s)
+=== RUN   TestCodeCopyRejectsInvalidAuthoringWithoutRecursion
+--- PASS: TestCodeCopyRejectsInvalidAuthoringWithoutRecursion (0.00s)
+=== RUN   TestCodeConcurrentSnapshotsAndFontOwnership
+--- PASS: TestCodeConcurrentSnapshotsAndFontOwnership (0.01s)
+=== RUN   TestCodeHardBoundariesAndAllLexicalCategories
+--- PASS: TestCodeHardBoundariesAndAllLexicalCategories (0.03s)
+=== RUN   TestCodeFrozenCandidateAndReferenceHashes
+--- PASS: TestCodeFrozenCandidateAndReferenceHashes (0.01s)
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/bottom
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-0
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-1
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-2
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-3
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-4
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-5
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-6
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-7
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-8
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-9
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-10
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-11
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-12
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-13
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-14
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-15
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-16
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-17
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-18
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-19
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-20
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-21
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-22
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-23
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-24
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-25
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-26
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-27
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-28
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-29
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-30
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-31
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-32
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-33
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-34
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-35
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-36
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-37
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-38
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-39
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-40
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-41
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-42
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-43
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-44
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-45
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-46
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-47
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-48
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-49
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-50
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-51
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-52
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-53
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-54
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-55
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-56
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-57
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-58
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-59
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid
+    reference_test.go:266: grid RGB MAE 0.028458 bytes; nonblack IoU 1.000000
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/bottom
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-0
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-1
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-2
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-3
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-4
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-5
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-6
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-7
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-8
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-9
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-10
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-11
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-12
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-13
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-14
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-15
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-16
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-17
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-18
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-19
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-20
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-21
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-22
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-23
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-24
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-25
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-26
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-27
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-28
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-29
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-30
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-31
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-32
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-33
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-34
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-35
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-36
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-37
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-38
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-39
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-40
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-41
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-42
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-43
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-44
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-45
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-46
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-47
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-48
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-49
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-50
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline
+    reference_test.go:266: multiline RGB MAE 0.015816 bytes; nonblack IoU 1.000000
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/bottom
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace
+    reference_test.go:266: whitespace RGB MAE 0.002353 bytes; nonblack IoU 1.000000
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/bottom
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-0
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-1
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-2
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-3
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-4
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-5
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-6
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-7
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-8
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-9
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-10
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-11
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-12
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-13
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-14
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-15
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-16
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-17
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-18
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-19
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-20
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-21
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-22
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-23
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-24
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-25
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-26
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-27
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-28
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-29
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-30
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-31
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-32
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-33
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-34
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-35
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-36
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-37
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-38
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-39
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-40
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-41
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-42
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-43
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-44
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-45
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-46
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-47
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-48
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-49
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-50
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-51
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-52
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-53
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-54
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-55
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-56
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-57
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens
+    reference_test.go:266: tokens RGB MAE 0.018810 bytes; nonblack IoU 0.992605
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/bottom
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-0
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-1
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-2
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-3
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-4
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-5
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source
+    reference_test.go:266: animation-source RGB MAE 0.002350 bytes; nonblack IoU 0.997452
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/line_advance
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/ascent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/lines
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/content_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/left
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/curves
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/descent
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/columns
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/right
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/top
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/bottom
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyphs
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/cell_width
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-0
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-1
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-2
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-3
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-4
+=== RUN   TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-5
+=== NAME  TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target
+    reference_test.go:266: animation-target RGB MAE 0.002356 bytes; nonblack IoU 0.996450
+--- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry (1.15s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid (0.19s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/bottom (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-0 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-1 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-2 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-3 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-4 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-6 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-7 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-8 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-9 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-10 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-11 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-12 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-13 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-14 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-15 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-16 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-17 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-18 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-19 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-20 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-21 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-22 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-23 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-24 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-25 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-26 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-27 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-28 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-29 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-30 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-31 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-32 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-33 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-34 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-35 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-36 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-37 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-38 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-39 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-40 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-41 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-42 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-43 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-44 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-45 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-46 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-47 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-48 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-49 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-50 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-51 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-52 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-53 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-54 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-55 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-56 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-57 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-58 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/grid/glyph-59 (0.00s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline (0.23s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/bottom (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-0 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-1 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-2 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-3 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-4 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-6 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-7 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-8 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-9 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-10 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-11 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-12 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-13 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-14 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-15 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-16 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-17 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-18 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-19 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-20 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-21 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-22 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-23 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-24 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-25 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-26 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-27 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-28 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-29 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-30 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-31 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-32 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-33 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-34 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-35 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-36 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-37 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-38 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-39 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-40 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-41 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-42 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-43 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-44 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-45 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-46 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-47 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-48 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-49 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/multiline/glyph-50 (0.00s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace (0.18s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/whitespace/bottom (0.00s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens (0.17s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/bottom (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-0 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-1 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-2 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-3 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-4 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-6 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-7 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-8 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-9 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-10 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-11 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-12 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-13 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-14 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-15 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-16 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-17 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-18 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-19 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-20 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-21 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-22 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-23 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-24 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-25 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-26 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-27 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-28 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-29 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-30 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-31 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-32 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-33 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-34 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-35 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-36 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-37 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-38 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-39 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-40 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-41 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-42 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-43 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-44 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-45 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-46 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-47 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-48 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-49 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-50 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-51 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-52 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-53 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-54 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-55 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-56 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/tokens/glyph-57 (0.00s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source (0.18s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/bottom (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-0 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-1 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-2 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-3 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-4 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-source/glyph-5 (0.00s)
+    --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target (0.16s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/line_advance (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/ascent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/lines (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/content_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/left (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/curves (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/descent (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/columns (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/right (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/top (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/bottom (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyphs (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/cell_width (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-0 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-1 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-2 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-3 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-4 (0.00s)
+        --- PASS: TestCodeIndependentTokenizerGridAndFontToolsGeometry/animation-target/glyph-5 (0.00s)
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/write/write-000
+    reference_test.go:330: write-000 RGB MAE 0.000000 bytes; nonblack IoU 1.000000
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/write/write-025
+    reference_test.go:330: write-025 RGB MAE 0.001208 bytes; nonblack IoU 0.994797
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/write/write-050
+    reference_test.go:330: write-050 RGB MAE 0.001617 bytes; nonblack IoU 0.997880
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/write/write-075
+    reference_test.go:330: write-075 RGB MAE 0.002069 bytes; nonblack IoU 0.996623
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/write/write-100
+    reference_test.go:330: write-100 RGB MAE 0.002350 bytes; nonblack IoU 0.997452
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000
+    reference_test.go:330: transform-000 RGB MAE 0.002348 bytes; nonblack IoU 0.997961
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025
+    reference_test.go:330: transform-025 RGB MAE 0.002372 bytes; nonblack IoU 0.993616
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050
+    reference_test.go:330: transform-050 RGB MAE 0.002484 bytes; nonblack IoU 0.993518
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075
+    reference_test.go:330: transform-075 RGB MAE 0.002449 bytes; nonblack IoU 0.996661
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-0
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-1
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-2
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-3
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-4
+=== RUN   TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-5
+=== NAME  TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100
+    reference_test.go:330: transform-100 RGB MAE 0.002356 bytes; nonblack IoU 0.996450
+--- PASS: TestCodeIndependentWriteTransformInteriorFrames (1.73s)
+    --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write (0.93s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000 (0.17s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-000/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025 (0.18s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-025/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050 (0.23s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-050/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075 (0.19s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-075/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100 (0.17s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/write/write-100/glyph-5 (0.00s)
+    --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform (0.80s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000 (0.16s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-000/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025 (0.16s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-025/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050 (0.16s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-050/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075 (0.16s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-075/glyph-5 (0.00s)
+        --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100 (0.16s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-0 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-1 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-2 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-3 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-4 (0.00s)
+            --- PASS: TestCodeIndependentWriteTransformInteriorFrames/transform/transform-100/glyph-5 (0.00s)
+=== RUN   FuzzCodeCheckedSource
+=== RUN   FuzzCodeCheckedSource/seed#0
+=== RUN   FuzzCodeCheckedSource/seed#1
+=== RUN   FuzzCodeCheckedSource/seed#2
+=== RUN   FuzzCodeCheckedSource/seed#3
+=== RUN   FuzzCodeCheckedSource/seed#4
+=== RUN   FuzzCodeCheckedSource/seed#5
+=== RUN   FuzzCodeCheckedSource/seed#6
+=== RUN   FuzzCodeCheckedSource/seed#7
+=== RUN   FuzzCodeCheckedSource/seed#8
+--- PASS: FuzzCodeCheckedSource (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#0 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#1 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#2 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#3 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#4 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#5 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#6 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#7 (0.00s)
+    --- PASS: FuzzCodeCheckedSource/seed#8 (0.00s)
+PASS
+coverage: 96.1% of statements
+ok  	gomath/code/_staging	2.943s	coverage: 96.1% of statements

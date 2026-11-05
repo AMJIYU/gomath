@@ -1,0 +1,1168 @@
+{
+  "provenance": "Source Go-font hmtx/glyf metrics via fontTools; source outlines rasterized directly by FreeType. No gomath/TeX layout output.",
+  "fonttools": "4.45.1",
+  "freetype": "2.13.2",
+  "pillow": "11.2.1",
+  "load_flags": "FT_LOAD_RENDER | FT_LOAD_NO_HINTING | FT_LOAD_NO_BITMAP",
+  "raster": {
+    "width": 384,
+    "height": 384,
+    "ppem": 256,
+    "origin_x": 48,
+    "baseline_y": 288
+  },
+  "records": [
+    {
+      "context": "dfrac",
+      "style": 0,
+      "rune": "n",
+      "ratio": 1,
+      "raster": "dfrac-0-n.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.48681640625,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 0,
+      "rune": "n",
+      "ratio": 0.7,
+      "raster": "tfrac-0-n.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.48681640625,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 0,
+      "rune": "n",
+      "ratio": 0.65,
+      "raster": "substack-0-n.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.48681640625,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 0,
+      "rune": "n",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-0-n.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.48681640625,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 0,
+      "rune": "g",
+      "ratio": 1,
+      "raster": "dfrac-0-g.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.04541015625,
+        -0.205078125,
+        0.48388671875,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 0,
+      "rune": "g",
+      "ratio": 0.7,
+      "raster": "tfrac-0-g.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.04541015625,
+        -0.205078125,
+        0.48388671875,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 0,
+      "rune": "g",
+      "ratio": 0.65,
+      "raster": "substack-0-g.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.04541015625,
+        -0.205078125,
+        0.48388671875,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 0,
+      "rune": "g",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-0-g.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.04541015625,
+        -0.205078125,
+        0.48388671875,
+        0.5419921875
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 0,
+      "rune": "k",
+      "ratio": 1,
+      "raster": "dfrac-0-k.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.4912109375,
+        0.77099609375
+      ],
+      "advance_em": 0.5,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 0,
+      "rune": "k",
+      "ratio": 0.7,
+      "raster": "tfrac-0-k.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.4912109375,
+        0.77099609375
+      ],
+      "advance_em": 0.5,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 0,
+      "rune": "k",
+      "ratio": 0.65,
+      "raster": "substack-0-k.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.4912109375,
+        0.77099609375
+      ],
+      "advance_em": 0.5,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 0,
+      "rune": "k",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-0-k.png",
+      "font": {
+        "file": "Go-Regular.ttf",
+        "sha256": "197d9f3703b4c00af609178876a8d73e396f64fe438b2c871778566632374be3",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.0751953125,
+        0.0,
+        0.4912109375,
+        0.77099609375
+      ],
+      "advance_em": 0.5,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 1,
+      "rune": "n",
+      "ratio": 1,
+      "raster": "dfrac-1-n.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.544921875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 1,
+      "rune": "n",
+      "ratio": 0.7,
+      "raster": "tfrac-1-n.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.544921875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 1,
+      "rune": "n",
+      "ratio": 0.65,
+      "raster": "substack-1-n.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.544921875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 1,
+      "rune": "n",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-1-n.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.544921875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 1,
+      "rune": "g",
+      "ratio": 1,
+      "raster": "dfrac-1-g.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0390625,
+        -0.205078125,
+        0.53857421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 1,
+      "rune": "g",
+      "ratio": 0.7,
+      "raster": "tfrac-1-g.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0390625,
+        -0.205078125,
+        0.53857421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 1,
+      "rune": "g",
+      "ratio": 0.65,
+      "raster": "substack-1-g.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0390625,
+        -0.205078125,
+        0.53857421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 1,
+      "rune": "g",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-1-g.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0390625,
+        -0.205078125,
+        0.53857421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 1,
+      "rune": "k",
+      "ratio": 1,
+      "raster": "dfrac-1-k.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.5517578125,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 1,
+      "rune": "k",
+      "ratio": 0.7,
+      "raster": "tfrac-1-k.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.5517578125,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 1,
+      "rune": "k",
+      "ratio": 0.65,
+      "raster": "substack-1-k.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.5517578125,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 1,
+      "rune": "k",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-1-k.png",
+      "font": {
+        "file": "Go-Bold.ttf",
+        "sha256": "c18494baa7ea35b8dbfac3861787d360b9c0ab91232562371a09e6fbf09aaa40",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.5517578125,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 2,
+      "rune": "n",
+      "ratio": 1,
+      "raster": "dfrac-2-n.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.5740361752717391,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 2,
+      "rune": "n",
+      "ratio": 0.7,
+      "raster": "tfrac-2-n.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.5740361752717391,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 2,
+      "rune": "n",
+      "ratio": 0.65,
+      "raster": "substack-2-n.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.5740361752717391,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 2,
+      "rune": "n",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-2-n.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.5740361752717391,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 2,
+      "rune": "g",
+      "ratio": 1,
+      "raster": "dfrac-2-g.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0185546875,
+        -0.205078125,
+        0.59521484375,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 2,
+      "rune": "g",
+      "ratio": 0.7,
+      "raster": "tfrac-2-g.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0185546875,
+        -0.205078125,
+        0.59521484375,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 2,
+      "rune": "g",
+      "ratio": 0.65,
+      "raster": "substack-2-g.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0185546875,
+        -0.205078125,
+        0.59521484375,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 2,
+      "rune": "g",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-2-g.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.0185546875,
+        -0.205078125,
+        0.59521484375,
+        0.5419921875
+      ],
+      "advance_em": 0.56689453125,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 2,
+      "rune": "k",
+      "ratio": 1,
+      "raster": "dfrac-2-k.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.55224609375,
+        0.77099609375
+      ],
+      "advance_em": 0.5107421875,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 2,
+      "rune": "k",
+      "ratio": 0.7,
+      "raster": "tfrac-2-k.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.55224609375,
+        0.77099609375
+      ],
+      "advance_em": 0.5107421875,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 2,
+      "rune": "k",
+      "ratio": 0.65,
+      "raster": "substack-2-k.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.55224609375,
+        0.77099609375
+      ],
+      "advance_em": 0.5107421875,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 2,
+      "rune": "k",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-2-k.png",
+      "font": {
+        "file": "Go-Italic.ttf",
+        "sha256": "6efef00d080c8fe68bbe2bf08526294c83d52d7b90b16f938953025c0868cc57",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.08056640625,
+        0.0,
+        0.55224609375,
+        0.77099609375
+      ],
+      "advance_em": 0.5107421875,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 3,
+      "rune": "n",
+      "ratio": 1,
+      "raster": "dfrac-3-n.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.626922607421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 3,
+      "rune": "n",
+      "ratio": 0.7,
+      "raster": "tfrac-3-n.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.626922607421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 3,
+      "rune": "n",
+      "ratio": 0.65,
+      "raster": "substack-3-n.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.626922607421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 3,
+      "rune": "n",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-3-n.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "n",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.626922607421875,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 3,
+      "rune": "g",
+      "ratio": 1,
+      "raster": "dfrac-3-g.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.02685546875,
+        -0.205078125,
+        0.6455078125,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 3,
+      "rune": "g",
+      "ratio": 0.7,
+      "raster": "tfrac-3-g.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.02685546875,
+        -0.205078125,
+        0.6455078125,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 3,
+      "rune": "g",
+      "ratio": 0.65,
+      "raster": "substack-3-g.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.02685546875,
+        -0.205078125,
+        0.6455078125,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 3,
+      "rune": "g",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-3-g.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "g",
+      "bbox_em": [
+        0.02685546875,
+        -0.205078125,
+        0.6455078125,
+        0.54833984375
+      ],
+      "advance_em": 0.61083984375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "dfrac",
+      "style": 3,
+      "rune": "k",
+      "ratio": 1,
+      "raster": "dfrac-3-k.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.62109375,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "tfrac",
+      "style": 3,
+      "rune": "k",
+      "ratio": 0.7,
+      "raster": "tfrac-3-k.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.62109375,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "substack",
+      "style": 3,
+      "rune": "k",
+      "ratio": 0.65,
+      "raster": "substack-3-k.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.62109375,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    },
+    {
+      "context": "script-binom",
+      "style": 3,
+      "rune": "k",
+      "ratio": 0.45499999999999996,
+      "raster": "script-binom-3-k.png",
+      "font": {
+        "file": "Go-Bold-Italic.ttf",
+        "sha256": "d6c33857c7ea7d740a8e1d81d37261782f698e9c17a2c9bf3bb0abbaf99e3c90",
+        "units_per_em": 2048,
+        "versions": [
+          "Version 2.010; ttfautohint (v1.8.3)"
+        ]
+      },
+      "glyph": "k",
+      "bbox_em": [
+        0.072265625,
+        0.0,
+        0.62109375,
+        0.77099609375
+      ],
+      "advance_em": 0.55615234375,
+      "outline_origin_x_em": 0.0
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+frame=0	offset=86	bits=2120	blocksize=255	sample_rate=48000	channels=1	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM

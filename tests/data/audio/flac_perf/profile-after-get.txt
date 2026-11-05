@@ -1,0 +1,46 @@
+Total: 5.17s
+ROUTINE ======================== gomath/audio.(*flacDecoder).get in /Users/eleven/Documents/工作经历/cloudtorch/gomath/audio/flac_read.go
+     680ms      830ms (flat, cum) 16.05% of Total
+     100ms      100ms    347:func (d *flacDecoder) get(n int) uint64 {
+      30ms       30ms    348:	if d.err != nil {
+         .          .    349:		return 0
+         .          .    350:	}
+         .       60ms    351:	d.spend(uint64(n))
+         .          .    352:	var v uint64
+     100ms      100ms    353:	for n > 0 && d.err == nil {
+      60ms       60ms    354:		if d.avail == 0 {
+         .       90ms    355:			b, err := d.r.ReadByte()
+      20ms       20ms    356:			if err != nil {
+         .          .    357:				if errors.Is(err, io.EOF) {
+         .          .    358:					err = io.ErrUnexpectedEOF
+         .          .    359:				}
+         .          .    360:				d.err = fmt.Errorf("%w: FLAC frame: %w", ErrInvalidInput, err)
+         .          .    361:				return 0
+         .          .    362:			}
+      10ms       10ms    363:			d.used++
+         .          .    364:			d.byte, d.avail = b, 8
+      10ms       10ms    365:			if d.headerCRC {
+         .          .    366:				d.crc8 ^= b
+         .          .    367:				for range 8 {
+         .          .    368:					if d.crc8&128 != 0 {
+         .          .    369:						d.crc8 = d.crc8<<1 ^ 7
+         .          .    370:					} else {
+         .          .    371:						d.crc8 <<= 1
+         .          .    372:					}
+         .          .    373:				}
+         .          .    374:			}
+         .          .    375:			if d.frameCRC {
+     150ms      150ms    376:				d.crc16 = d.crc16<<8 ^ flacReadCRC16[byte(d.crc16>>8)^b]
+         .          .    377:			}
+         .          .    378:		}
+      30ms       30ms    379:		take := min(n, int(d.avail))
+     100ms      100ms    380:		v = v<<uint(take) | uint64(d.byte>>uint(d.avail-uint8(take)))&((1<<uint(take))-1)
+      20ms       20ms    381:		d.avail -= uint8(take)
+         .          .    382:		n -= take
+         .          .    383:	}
+      50ms       50ms    384:	return v
+         .          .    385:}
+         .          .    386:
+         .          .    387:func (d *flacDecoder) signed(n int) int64 {
+         .          .    388:	v := d.get(n)
+         .          .    389:	if n == 0 {

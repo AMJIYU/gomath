@@ -1,0 +1,12 @@
+{
+  "audio": {
+    "statements": 1434,
+    "covered": 1364,
+    "percent": 95.11854951185495
+  },
+  "aiff_read.go": {
+    "statements": 208,
+    "covered": 207,
+    "percent": 99.51923076923077
+  }
+}

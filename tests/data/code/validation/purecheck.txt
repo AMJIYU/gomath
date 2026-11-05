@@ -1,0 +1,1 @@
+PASS: 43 non-standard packages; CGO_ENABLED=0; noasm; no native inputs or runtime process launch imports

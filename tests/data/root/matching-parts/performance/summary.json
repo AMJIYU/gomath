@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-05",
+  "workload": "32 unique keyed squares, one arbitrary-time Frame Sample(.5) per operation; no render, images, I/O, encoding or reference generation; full current compiler/host/commands in run metadata.",
+  "change": "Reuse the already aligned private bucket topology from seg.before; only seed new topology during authoring rather than cloning it again on every sample.",
+  "phases": {
+    "before": {
+      "samples": [
+        {
+          "ns/op": 20053,
+          "B/op": 65168,
+          "allocs/op": 334
+        },
+        {
+          "ns/op": 18592,
+          "B/op": 65168,
+          "allocs/op": 334
+        },
+        {
+          "ns/op": 17727,
+          "B/op": 65168,
+          "allocs/op": 334
+        }
+      ],
+      "medians": {
+        "ns/op": 18592,
+        "B/op": 65168,
+        "allocs/op": 334
+      },
+      "run": "before-run.json"
+    },
+    "after": {
+      "samples": [
+        {
+          "ns/op": 33841,
+          "B/op": 34962,
+          "allocs/op": 173
+        },
+        {
+          "ns/op": 20245,
+          "B/op": 34960,
+          "allocs/op": 173
+        },
+        {
+          "ns/op": 19616,
+          "B/op": 34960,
+          "allocs/op": 173
+        }
+      ],
+      "medians": {
+        "ns/op": 20245,
+        "B/op": 34960,
+        "allocs/op": 173
+      },
+      "run": "after-run.json"
+    }
+  },
+  "percent_change": {
+    "ns/op": 8.890920826161786,
+    "B/op": -46.35403879204517,
+    "allocs/op": -48.203592814371255
+  },
+  "limitations": "Shared host with other workers; three 200ms repetitions in non-interleaved phases. Allocation decrease is observed; timing median regresses. No significance, universal speedup or Manim comparison claim.",
+  "files": {
+    "tests/data/root/matching-parts/performance/after-run.json": {
+      "sha256": "1b4d4d6c44fdd423a95559c39b7cc212cb3d997d2e41173bce0b500a64f5658e",
+      "bytes": 1453
+    },
+    "tests/data/root/matching-parts/performance/after.txt": {
+      "sha256": "ebae50588728d8936377c8349060a7aed5e2f89bc98daeffb0e511e28022f5c6",
+      "bytes": 338
+    },
+    "tests/data/root/matching-parts/performance/before-animation.go.txt": {
+      "sha256": "f25419d21e9a38104aee738d27226a6fd9ed233ff73733d90fe69631baa21310",
+      "bytes": 14903
+    },
+    "tests/data/root/matching-parts/performance/before-matching.go.txt": {
+      "sha256": "44d56da4b2458c6f1457423fda7b339dffedaac80040f7f66ebb231311a55adf",
+      "bytes": 8678
+    },
+    "tests/data/root/matching-parts/performance/before-run.json": {
+      "sha256": "5f5f99ff98953995dd900fefa2e42e9c57082b4e09e006bbcc9330981f1d60ab",
+      "bytes": 1453
+    },
+    "tests/data/root/matching-parts/performance/before-scene.go.txt": {
+      "sha256": "7acb836a2e4e4a66502149a7cf25fe8d77a20df80d3feae3a2d933031b1d80a0",
+      "bytes": 9009
+    },
+    "tests/data/root/matching-parts/performance/before-tests__cases_root_matching_test.go.txt": {
+      "sha256": "c498052ffed3d789e2b5df5117091259d2b34718244ff14cdb3b6f7415fac2fc",
+      "bytes": 12195
+    },
+    "tests/data/root/matching-parts/performance/before.txt": {
+      "sha256": "2faafae255e931858df0c7229c3bcc040774dd333353c646532638a129e533fb",
+      "bytes": 338
+    }
+  }
+}

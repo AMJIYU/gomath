@@ -1,0 +1,86 @@
+=== RUN   TestPinnedManimObjectCurveEdits
+=== RUN   TestPinnedManimObjectCurveEdits/single/smooth
+=== RUN   TestPinnedManimObjectCurveEdits/single/jagged
+=== RUN   TestPinnedManimObjectCurveEdits/single/prepare11
+=== RUN   TestPinnedManimObjectCurveEdits/single/prepare3
+=== RUN   TestPinnedManimObjectCurveEdits/multi/smooth
+=== RUN   TestPinnedManimObjectCurveEdits/multi/jagged
+=== RUN   TestPinnedManimObjectCurveEdits/multi/prepare11
+=== RUN   TestPinnedManimObjectCurveEdits/multi/prepare3
+=== RUN   TestPinnedManimObjectCurveEdits/nested/smooth
+=== RUN   TestPinnedManimObjectCurveEdits/nested/jagged
+=== RUN   TestPinnedManimObjectCurveEdits/nested/prepare11
+=== RUN   TestPinnedManimObjectCurveEdits/nested/prepare3
+--- PASS: TestPinnedManimObjectCurveEdits (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/single/smooth (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/single/jagged (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/single/prepare11 (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/single/prepare3 (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/multi/smooth (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/multi/jagged (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/multi/prepare11 (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/multi/prepare3 (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/nested/smooth (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/nested/jagged (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/nested/prepare11 (0.00s)
+    --- PASS: TestPinnedManimObjectCurveEdits/nested/prepare3 (0.00s)
+=== RUN   TestObjectCurveEditsAtomicityPointersAndBounds
+--- PASS: TestObjectCurveEditsAtomicityPointersAndBounds (0.00s)
+=== RUN   TestObjectCurveEditsIndependentCopiesAndSampling
+--- PASS: TestObjectCurveEditsIndependentCopiesAndSampling (0.00s)
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_direction
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_direction
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_points
+=== RUN   TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_direction
+--- PASS: TestObjectDirectionPinnedManimAndActualTransform (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_empty/reverse_direction (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_root_points/reverse_direction (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_points (0.00s)
+    --- PASS: TestObjectDirectionPinnedManimAndActualTransform/nested_point_only/reverse_direction (0.00s)
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/join
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/implicit
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/coordinate
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/bitmap
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/style
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/scalar
+=== RUN   TestObjectDirectionAtomicLateFailureAndAliasing/clip
+--- PASS: TestObjectDirectionAtomicLateFailureAndAliasing (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/join (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/implicit (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/coordinate (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/bitmap (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/style (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/scalar (0.00s)
+    --- PASS: TestObjectDirectionAtomicLateFailureAndAliasing/clip (0.00s)
+=== RUN   TestObjectDirectionReceiverOnlyAndEmptyFamilies
+--- PASS: TestObjectDirectionReceiverOnlyAndEmptyFamilies (0.00s)
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/selfcycle
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/cycle
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/shared
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/nilchild
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/zeroID
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/duplicateID
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/contours
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/curves
+=== RUN   TestObjectDirectionTreeOwnershipAndExactBudgetBounds/storage
+--- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds (0.03s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/selfcycle (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/cycle (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/shared (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/nilchild (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/zeroID (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/duplicateID (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/contours (0.00s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/curves (0.01s)
+    --- PASS: TestObjectDirectionTreeOwnershipAndExactBudgetBounds/storage (0.01s)
+=== RUN   TestObjectDirectionConcurrentIndependentEditsAndSceneSampling
+--- PASS: TestObjectDirectionConcurrentIndependentEditsAndSceneSampling (0.00s)
+PASS
+ok  	gomath	0.036s

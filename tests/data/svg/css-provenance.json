@@ -1,0 +1,163 @@
+{
+  "runtime": "Pure Go. Checked-in tests read SVG/PNG fixtures and require no Python, Cairo, browser, cgo or subprocess renderer.",
+  "scope": {
+    "selectors": [
+      "type",
+      "universal",
+      "class",
+      "ID",
+      "compound selectors",
+      "comma selector lists",
+      "descendant",
+      "direct child"
+    ],
+    "cascade": "Presentation attributes precede author rules; lexicographic (ID,class,type) specificity, then source order; inline declarations override author rules. Inheritance uses computed parent values with inherit, initial, unset and currentColor.",
+    "use": "Selectors are rematched in each isolated use shadow tree. Host ancestors and uncloned definition ancestors do not participate; styles inherit from the host. Rules inside defs are document-wide. Nested use creates a new boundary.",
+    "style_properties": [
+      "color",
+      "fill",
+      "stroke",
+      "opacity",
+      "fill-opacity",
+      "stroke-opacity",
+      "stroke-width",
+      "stroke-linecap",
+      "stroke-linejoin",
+      "stroke-miterlimit",
+      "display",
+      "visibility",
+      "symbol overflow"
+    ],
+    "neutral_properties_only": [
+      "fill-rule:nonzero",
+      "stroke-dasharray:none",
+      "stroke-dashoffset:0",
+      "clip-path:none",
+      "mask:none",
+      "filter:none",
+      "vector-effect:none"
+    ],
+    "limits": {
+      "total_sheet_inline_bytes": 262144,
+      "rules": 512,
+      "selectors": 1024,
+      "declarations": 4096,
+      "compound_parts_per_selector": 16,
+      "terms_per_compound": 16,
+      "matching_cascade_steps": 2000000
+    },
+    "rejected": [
+      "!important",
+      "at-rules and external stylesheets",
+      "media conditions other than all",
+      "scoped stylesheets",
+      "attribute selectors",
+      "pseudo classes/elements",
+      "sibling combinators",
+      "namespace selectors",
+      "escaped/non-ASCII selectors",
+      "CSS variables/functions beyond supported rgb() paint",
+      "CSS geometry/transforms",
+      "unknown properties and unsupported values, including unmatched/overridden declarations"
+    ],
+    "existing_render_boundaries": "No change to gomath.Style or render. No new viewport clipping or group offscreen compositing. Symbol overflow requiring clipping and non-visible root viewport overflow return errors. Existing group opacity multiplication remains in use."
+  },
+  "references": {
+    "css-cascade.png": {
+      "renderer": "CairoSVG 2.7.1",
+      "cairo": "1.18.4",
+      "width": 128,
+      "height": 96,
+      "frames": 1,
+      "regenerate": "cairosvg.svg2png(url=\"tests/data/svg/css-cascade.svg\",write_to=\"tests/data/svg/css-cascade.png\")",
+      "coverage": "Cascade, presentation and inline precedence, source order, compounds, selector list, descendant/child selectors, local use instances, symbol viewport placement, stroke styling and antialiased circles.",
+      "measured_RGBA_MAE": 0.032023111979166664,
+      "measured_RGBA_max": 9,
+      "measured_fraction_pixels_over_2": 0.007649739583333333,
+      "thresholds": {
+        "RGBA_MAE": 0.1,
+        "RGBA_max": 16,
+        "fraction_pixels_over_2": 0.02
+      }
+    },
+    "shadow_semantics": {
+      "basis": "https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance",
+      "validation": "Analytical pixel expectations and computed styles test source/host ancestor isolation, cloned-subtree child matching, inherited colors, nested boundaries, independent IDs/styles and repeat/concurrent imports. Complex shadow-boundary behavior is not inferred from CairoSVG."
+    }
+  },
+  "validation": {
+    "test": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -count=1 -vet=all",
+    "vet": "CGO_ENABLED=0 go vet -tags noasm ./svg",
+    "result": "PASS"
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -p=1 -run=^$ -bench=^BenchmarkRead(CSS|Local)Instances$ -benchtime=300ms -count=3",
+    "go_version": "go1.27.3 darwin/arm64",
+    "cpu": "Apple M2",
+    "tags": "noasm",
+    "CGO_ENABLED": 0,
+    "workload": "Each import expands 256 use instances of a two-shape group into 512 vector shapes in a 256x256 SVG user-space viewport. CSS variant adds four selectors, including a child selector, and class/ID matching.",
+    "rendered_frames": 0,
+    "image_size": "Not applicable for importer benchmark. Separate raster reference is 128x96, one frame.",
+    "excluded": [
+      "Rendering",
+      "PNG encoding/decoding",
+      "reference generation",
+      "disk I/O",
+      "animation sampling"
+    ],
+    "final_source_samples": {
+      "CSS": {
+        "ns_per_op": [
+          2726695,
+          2534942,
+          2558977
+        ],
+        "bytes_per_op": [
+          4138873,
+          4138880,
+          4138873
+        ],
+        "allocs_per_op": [
+          23474,
+          23474,
+          23474
+        ]
+      },
+      "local_without_stylesheet": {
+        "ns_per_op": [
+          2987090,
+          2032885,
+          2029402
+        ],
+        "bytes_per_op": [
+          3241081,
+          3241073,
+          3241082
+        ],
+        "allocs_per_op": [
+          19557,
+          19557,
+          19557
+        ]
+      }
+    },
+    "earlier_development_samples": {
+      "CSS_ns_per_op": [
+        8444482,
+        2584449,
+        2548468
+      ],
+      "local_ns_per_op": [
+        2021392,
+        1994368,
+        2051563
+      ],
+      "note": "First CSS sample was noisy on the shared development machine; a later final-source measurement is recorded without excluding any samples."
+    }
+  },
+  "sha256": {
+    "css-cascade.svg": "65a9387978bca79b8d9f54ba37009bb4ff01370512145d840817519a4e39ea46",
+    "css-cascade.png": "f1bd0d1e2019cecc5103a0cca0c198afa2cc62bc5b2894dc4ca503e8fe150d2d"
+  }
+}

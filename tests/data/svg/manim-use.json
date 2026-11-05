@@ -1,0 +1,54 @@
+{
+  "manim_distribution_version": "0.20.1",
+  "source_commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "source_file": "manim/mobject/svg/svg_mobject.py",
+  "coordinate_convention": "original SVG coordinates; SVGMobject final flip(RIGHT) undone",
+  "settings": {
+    "should_center": false,
+    "height": null,
+    "width": null,
+    "use_svg_cache": false
+  },
+  "shapes": [
+    {
+      "bounds": [
+        25.0,
+        41.0,
+        16.0,
+        12.0
+      ],
+      "fill": "#FF0000",
+      "fill_opacity": 1.0
+    },
+    {
+      "bounds": [
+        27.0,
+        43.0,
+        12.0,
+        8.0
+      ],
+      "fill": "#FFFFFF",
+      "fill_opacity": 1.0
+    },
+    {
+      "bounds": [
+        56.0,
+        19.0,
+        6.0,
+        8.0
+      ],
+      "fill": "#0000FF",
+      "fill_opacity": 1.0
+    },
+    {
+      "bounds": [
+        57.0,
+        20.0,
+        4.0,
+        6.0
+      ],
+      "fill": "#FFFFFF",
+      "fill_opacity": 1.0
+    }
+  ]
+}

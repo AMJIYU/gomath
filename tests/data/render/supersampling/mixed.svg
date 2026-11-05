@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="63" viewBox="0 0 95 63"><defs>
+ <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="5" y1="0" x2="90" y2="0"><stop offset="0" stop-color="#ff0000" stop-opacity=".4"/><stop offset="1" stop-color="#0000ff" stop-opacity=".8"/></linearGradient>
+ <clipPath id="outer"><path d="M5.3 4.6H89.4V58.1H5.3Z"/></clipPath>
+ <clipPath id="inner"><path d="M52 10L82 16L77 40L48 34Z"/></clipPath>
+ </defs><g clip-path="url(#outer)" opacity=".8">
+ <path fill="url(#g)" stroke="white" stroke-width=".7" d="M1 1H94V62H1Z M28 22V44H64V22Z"/>
+ <g clip-path="url(#inner)"><image x="50" y="8" width="30" height="30" preserveAspectRatio="none" opacity=".6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGklEQVR4nAXBAQEAAAiAIKY1rXm9MhAroSvzPwYHg9d0GuoAAAAASUVORK5CYII="/></g>
+ <path fill="none" stroke="#80c040" stroke-width="1.1" stroke-linecap="square" stroke-linejoin="round" stroke-dasharray="4 2" stroke-dashoffset=".5" d="M10 50L24 15L40 49"/>
+ </g></svg>

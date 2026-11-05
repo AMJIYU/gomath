@@ -1,0 +1,53 @@
+Total: 5.23s
+ROUTINE ======================== gomath/audio.(*flacDecoder).get in /Users/eleven/Documents/工作经历/cloudtorch/gomath/audio/flac_read.go
+     1.53s      1.65s (flat, cum) 31.55% of Total
+      30ms       30ms    328:func (d *flacDecoder) get(n int) uint64 {
+      10ms       10ms    329:	if d.err != nil {
+         .          .    330:		return 0
+         .          .    331:	}
+         .       60ms    332:	d.spend(uint64(n))
+         .          .    333:	var v uint64
+      90ms       90ms    334:	for n > 0 && d.err == nil {
+      10ms       10ms    335:		if d.avail == 0 {
+      10ms       70ms    336:			b, err := d.r.ReadByte()
+      10ms       10ms    337:			if err != nil {
+         .          .    338:				if errors.Is(err, io.EOF) {
+         .          .    339:					err = io.ErrUnexpectedEOF
+         .          .    340:				}
+         .          .    341:				d.err = fmt.Errorf("%w: FLAC frame: %w", ErrInvalidInput, err)
+         .          .    342:				return 0
+         .          .    343:			}
+      10ms       10ms    344:			d.used++
+         .          .    345:			d.byte, d.avail = b, 8
+      10ms       10ms    346:			if d.headerCRC {
+         .          .    347:				d.crc8 ^= b
+         .          .    348:				for range 8 {
+         .          .    349:					if d.crc8&128 != 0 {
+         .          .    350:						d.crc8 = d.crc8<<1 ^ 7
+         .          .    351:					} else {
+         .          .    352:						d.crc8 <<= 1
+         .          .    353:					}
+         .          .    354:				}
+         .          .    355:			}
+         .          .    356:			if d.frameCRC {
+      30ms       30ms    357:				d.crc16 ^= uint16(b) << 8
+     250ms      250ms    358:				for range 8 {
+         .          .    359:					if d.crc16&0x8000 != 0 {
+     510ms      510ms    360:						d.crc16 = d.crc16<<1 ^ 0x8005
+         .          .    361:					} else {
+     430ms      430ms    362:						d.crc16 <<= 1
+         .          .    363:					}
+         .          .    364:				}
+         .          .    365:			}
+         .          .    366:		}
+      10ms       10ms    367:		take := min(n, int(d.avail))
+     100ms      100ms    368:		v = v<<uint(take) | uint64(d.byte>>uint(d.avail-uint8(take)))&((1<<uint(take))-1)
+      10ms       10ms    369:		d.avail -= uint8(take)
+         .          .    370:		n -= take
+         .          .    371:	}
+      10ms       10ms    372:	return v
+         .          .    373:}
+         .          .    374:
+         .          .    375:func (d *flacDecoder) signed(n int) int64 {
+         .          .    376:	v := d.get(n)
+         .          .    377:	if n == 0 {

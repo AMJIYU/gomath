@@ -1,0 +1,872 @@
+{
+  "Sources": [
+    {
+      "title": "ITU-T G.711 (11/1988)",
+      "url": "https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-G.711-198811-I!!PDF-E&type=items",
+      "sha256": "4348b527fbb1488677503d3b0f65094fb8a4b01e159ce01d7adbc29d5efdc556",
+      "section": "Tables 1a/b, 2a/b: sign, segment, quantization interval and alternating/complemented code bits"
+    },
+    {
+      "title": "Microsoft Multimedia Standards Update, Revision3.0 (1994-04-15)",
+      "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/Docs/RIFFNEW.pdf",
+      "sha256": "b2473ccc73d0f6378f7f56b9f47bea10a9d90a162e7be2d31049cf664c0eb303",
+      "section": "WAVEFORMATEX, fact and registered mu-law/A-law formats"
+    },
+    {
+      "title": "Microsoft/IBM Multimedia Programming Interface and Data Specifications1.0 (1991)",
+      "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/Docs/riffmci.pdf",
+      "sha256": "d2340df3978259b366cbd5acaff049bb3fe81d0d345335a946ee25e4f8b167fa",
+      "section": "RIFF zero pad, WAVE fmt-before-data, non-PCM fact sample count per channel"
+    }
+  ],
+  "FFmpegVersion": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+  "LibsndfileVersion": "1.2.2",
+  "Cases": [
+    {
+      "File": "spec_alaw_all_codes_1ch.wav",
+      "PCMFile": "spec_alaw_all_codes_1ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "1007500b510b054ae84e4b3e65074f6c24475d65841aa40096e85ab7b6b8ca62",
+      "PCMSHA256": "e04788d110e58ff8c70c93b8480190d973e3b67876b6119abbaec766cc75c174",
+      "FFmpegWholeSHA256": "e04788d110e58ff8c70c93b8480190d973e3b67876b6119abbaec766cc75c174",
+      "LibsndfileWholeSHA256": "e04788d110e58ff8c70c93b8480190d973e3b67876b6119abbaec766cc75c174",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_all_codes_2ch.wav",
+      "PCMFile": "spec_alaw_all_codes_2ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 6,
+      "Channels": 2,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "1f2dbdaa74f223f20e6de5851b15dcbcc5b07f484a34745005b00e463b098a69",
+      "PCMSHA256": "ec46c142bf6b4a4880907ae2dadab97406d11760fc9f988d9c63762c0cb2c075",
+      "FFmpegWholeSHA256": "ec46c142bf6b4a4880907ae2dadab97406d11760fc9f988d9c63762c0cb2c075",
+      "LibsndfileWholeSHA256": "ec46c142bf6b4a4880907ae2dadab97406d11760fc9f988d9c63762c0cb2c075",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_all_codes_3ch.wav",
+      "PCMFile": "spec_alaw_all_codes_3ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "c365a07048a9307817ba0c2a6ae57dea5762b697d3c95d4f9e9e4e1acb636dbf",
+      "PCMSHA256": "afb2308bd3756206f9df03b3fc7107506d15616f0db7c9e420136046bef7ee82",
+      "FFmpegWholeSHA256": "afb2308bd3756206f9df03b3fc7107506d15616f0db7c9e420136046bef7ee82",
+      "LibsndfileWholeSHA256": "afb2308bd3756206f9df03b3fc7107506d15616f0db7c9e420136046bef7ee82",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_all_codes_6ch.wav",
+      "PCMFile": "spec_alaw_all_codes_6ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 6,
+      "Channels": 6,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "b60197232196786d18c6acbeaffe55eefff62c27d09fc3e0d291b077ec9b68b2",
+      "PCMSHA256": "a48502b851f9443390e3ef15b849d0c840ac9c68c78b6d4284a2a98aa5912802",
+      "FFmpegWholeSHA256": "a48502b851f9443390e3ef15b849d0c840ac9c68c78b6d4284a2a98aa5912802",
+      "LibsndfileWholeSHA256": "a48502b851f9443390e3ef15b849d0c840ac9c68c78b6d4284a2a98aa5912802",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_all_codes_64ch.wav",
+      "PCMFile": "spec_alaw_all_codes_64ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 6,
+      "Channels": 64,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "b848ad59ab7d517f8a9c2a48f3d8508e9e3ef50784b446c989cdbe378f64436b",
+      "PCMSHA256": "0caa683e1b8fae3f3b9dff0a27c08322b9cd28d5017884711009dc48da2eb92c",
+      "FFmpegWholeSHA256": "0caa683e1b8fae3f3b9dff0a27c08322b9cd28d5017884711009dc48da2eb92c",
+      "LibsndfileWholeSHA256": "0caa683e1b8fae3f3b9dff0a27c08322b9cd28d5017884711009dc48da2eb92c",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_rate1.wav",
+      "PCMFile": "spec_alaw_rate1.s16le",
+      "Origin": "exact integer sample rate",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 1,
+      "Frames": 17,
+      "EncodedSHA256": "1c30b66642d3ca5d54b31617c8913a7f19d5d045c1b764bec3c0b54f53968014",
+      "PCMSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "FFmpegWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "LibsndfileWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_rate768000.wav",
+      "PCMFile": "spec_alaw_rate768000.s16le",
+      "Origin": "exact integer sample rate",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 768000,
+      "Frames": 17,
+      "EncodedSHA256": "d0352d59db300dee8809544d7d13a2293aa06bc0461ce52bd9abdaf95f25ea31",
+      "PCMSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "FFmpegWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "LibsndfileWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_1ch_n0.wav",
+      "PCMFile": "spec_alaw_1ch_n0.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 0,
+      "EncodedSHA256": "3d38651281a81d11ede133448554ef223dbced718f37145ee3a14be4bf93df05",
+      "PCMSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FFmpegWholeSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LibsndfileWholeSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_1ch_n1.wav",
+      "PCMFile": "spec_alaw_1ch_n1.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 1,
+      "EncodedSHA256": "2f1cd1fa8800e943c8f7b202107dd372c83d7ad195ebd4896791a24d385f86fb",
+      "PCMSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+      "FFmpegWholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+      "LibsndfileWholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_1ch_n17.wav",
+      "PCMFile": "spec_alaw_1ch_n17.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "9ab23b881b206909218571ec18011a6f91b7d95e1958cae215698b0b3c0d0ece",
+      "PCMSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "FFmpegWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "LibsndfileWholeSHA256": "4feb52808f688e169d70cf65f79fdad2dde91138876f682577d68633f0cb3eb9",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_1ch_n32769.wav",
+      "PCMFile": "spec_alaw_1ch_n32769.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 32769,
+      "EncodedSHA256": "6acbbf6f971b87a2c37c793eeb517616741edb54674e0c84d9bea2c53d76e321",
+      "PCMSHA256": "144bfc2f72296e91b37dcd736ef2c4a639085cff6f2a2662ef586b6c4217ec9b",
+      "FFmpegWholeSHA256": "144bfc2f72296e91b37dcd736ef2c4a639085cff6f2a2662ef586b6c4217ec9b",
+      "LibsndfileWholeSHA256": "144bfc2f72296e91b37dcd736ef2c4a639085cff6f2a2662ef586b6c4217ec9b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_3ch_n16385.wav",
+      "PCMFile": "spec_alaw_3ch_n16385.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 16385,
+      "EncodedSHA256": "ba5fa221ac4ceee8ac2ee36ae67f6f9ed52454241f199d2f6d4c5be742b4f7eb",
+      "PCMSHA256": "fc63c6d8892713a5fbdab1ab774af7ff97981f5628a6a94aadfb0351b8b8e7d5",
+      "FFmpegWholeSHA256": "fc63c6d8892713a5fbdab1ab774af7ff97981f5628a6a94aadfb0351b8b8e7d5",
+      "LibsndfileWholeSHA256": "fc63c6d8892713a5fbdab1ab774af7ff97981f5628a6a94aadfb0351b8b8e7d5",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_fact_first.wav",
+      "PCMFile": "spec_alaw_fact_first.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "d86236e122038a5b3908a94f8c7a5ed608dea31146df096ddb086ad8330c4779",
+      "PCMSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "FFmpegWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "LibsndfileWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_fact_after.wav",
+      "PCMFile": "spec_alaw_fact_after.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "c29c68db25fa3f7a35550ad1587922f17e94135da8c9f6d3bd31912910c952e8",
+      "PCMSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "FFmpegWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "LibsndfileWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_junk_pad.wav",
+      "PCMFile": "spec_alaw_junk_pad.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "4a26dacb94c8e1fcfa1d245fc8e76e9f9714bed9c513e2016cafe6f549f529e5",
+      "PCMSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "FFmpegWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "LibsndfileWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_alaw_metadata.wav",
+      "PCMFile": "spec_alaw_metadata.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "59a6ab669fc5f667d9f79aa3e442368fa53ee6ee944005888f0c99fb1e6abbfa",
+      "PCMSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "FFmpegWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "LibsndfileWholeSHA256": "66c644cc27896712336a87a2fdfea50bb0e21418871c12553e0d356007896885",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "ffmpeg_alaw_1ch.wav",
+      "PCMFile": "ffmpeg_alaw_1ch.s16le",
+      "Origin": "FFmpeg encoder from explicit signed16 sine",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 44100,
+      "Frames": 257,
+      "EncodedSHA256": "d52de15205b7011f4aaeaa15d3acf35901f9542759772a09578037f4f5d02dc6",
+      "PCMSHA256": "b460c4dbff1053101208be3a34bdb3c23f3d416b3a194086b74ec00393e4c43c",
+      "FFmpegWholeSHA256": "b460c4dbff1053101208be3a34bdb3c23f3d416b3a194086b74ec00393e4c43c",
+      "LibsndfileWholeSHA256": "b460c4dbff1053101208be3a34bdb3c23f3d416b3a194086b74ec00393e4c43c",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "ffmpeg_alaw_2ch.wav",
+      "PCMFile": "ffmpeg_alaw_2ch.s16le",
+      "Origin": "FFmpeg encoder from explicit signed16 sine",
+      "Tag": 6,
+      "Channels": 2,
+      "Rate": 44100,
+      "Frames": 257,
+      "EncodedSHA256": "3c69cf8126bd253460a64bbfa9e4897dcb9b62c27c0c6a4ef979bd711caada29",
+      "PCMSHA256": "daa50e9030f34232f1d30cfd87c2ae4073ac965d2e2c22016b3fed45a4d7f359",
+      "FFmpegWholeSHA256": "daa50e9030f34232f1d30cfd87c2ae4073ac965d2e2c22016b3fed45a4d7f359",
+      "LibsndfileWholeSHA256": "daa50e9030f34232f1d30cfd87c2ae4073ac965d2e2c22016b3fed45a4d7f359",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "libsndfile_alaw_1ch.wav",
+      "PCMFile": "libsndfile_alaw_1ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 6,
+      "Channels": 1,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "dd08da1e0c40904399db2d18b363d3c940c16b7a5fcc1df9949b9aedca1359f0",
+      "PCMSHA256": "5101367a54967f8a0835ff5c25a00f4e7f166823f826d589eb5d7fe2a5a0ea4b",
+      "FFmpegWholeSHA256": "5101367a54967f8a0835ff5c25a00f4e7f166823f826d589eb5d7fe2a5a0ea4b",
+      "LibsndfileWholeSHA256": "5101367a54967f8a0835ff5c25a00f4e7f166823f826d589eb5d7fe2a5a0ea4b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "libsndfile_alaw_2ch.wav",
+      "PCMFile": "libsndfile_alaw_2ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 6,
+      "Channels": 2,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "b3b4efa660944a422804fd2adaeaf4efa7d9126b1fd449bf300129d963f906ae",
+      "PCMSHA256": "bc18a6c75b8fde659ceb8056df0a584a187131250d8bb00d445962f62a4ed693",
+      "FFmpegWholeSHA256": "bc18a6c75b8fde659ceb8056df0a584a187131250d8bb00d445962f62a4ed693",
+      "LibsndfileWholeSHA256": "bc18a6c75b8fde659ceb8056df0a584a187131250d8bb00d445962f62a4ed693",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "libsndfile_alaw_3ch.wav",
+      "PCMFile": "libsndfile_alaw_3ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 6,
+      "Channels": 3,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "15748504687b1baa219eb1dd679b0dd640a969b887e439e4d832bbd2dc6f85c4",
+      "PCMSHA256": "f126280e9add03cc2f2dbf9b14ecff17df2387630fd9b9eb0b40355cf4a2a5e7",
+      "FFmpegWholeSHA256": "f126280e9add03cc2f2dbf9b14ecff17df2387630fd9b9eb0b40355cf4a2a5e7",
+      "LibsndfileWholeSHA256": "f126280e9add03cc2f2dbf9b14ecff17df2387630fd9b9eb0b40355cf4a2a5e7",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_all_codes_1ch.wav",
+      "PCMFile": "spec_mulaw_all_codes_1ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "45bbc2fc14228458337b49530a7bb4927d54b9baf73a97cda06b70aa1e45531c",
+      "PCMSHA256": "3dab54339e520bb2c924826e3b72a917a2b612e9fd12fc867500f1d983a75827",
+      "FFmpegWholeSHA256": "3dab54339e520bb2c924826e3b72a917a2b612e9fd12fc867500f1d983a75827",
+      "LibsndfileWholeSHA256": "3dab54339e520bb2c924826e3b72a917a2b612e9fd12fc867500f1d983a75827",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_all_codes_2ch.wav",
+      "PCMFile": "spec_mulaw_all_codes_2ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 7,
+      "Channels": 2,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "042b5eba3d63ee4906a15059abee0e0d066f21ee38bdaa229754034b7331e0cc",
+      "PCMSHA256": "deb3696ac9f744d11dba80dc716d786b4a5e71282224172663d518fc11475d29",
+      "FFmpegWholeSHA256": "deb3696ac9f744d11dba80dc716d786b4a5e71282224172663d518fc11475d29",
+      "LibsndfileWholeSHA256": "deb3696ac9f744d11dba80dc716d786b4a5e71282224172663d518fc11475d29",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_all_codes_3ch.wav",
+      "PCMFile": "spec_mulaw_all_codes_3ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "32f62fd78df2efe145ab8071b9a5698b2b6b26361cb5a0c96e98486ad100b897",
+      "PCMSHA256": "50f9a27cdaac9c3d7d5ab827ad1794426a76768384cf8e28752a5c957273460b",
+      "FFmpegWholeSHA256": "50f9a27cdaac9c3d7d5ab827ad1794426a76768384cf8e28752a5c957273460b",
+      "LibsndfileWholeSHA256": "50f9a27cdaac9c3d7d5ab827ad1794426a76768384cf8e28752a5c957273460b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_all_codes_6ch.wav",
+      "PCMFile": "spec_mulaw_all_codes_6ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 7,
+      "Channels": 6,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "184400274b24d7bc62cfa6733b9ccb6d0cdae850b1ea4cc0fef44dca8e2d050e",
+      "PCMSHA256": "8ce65555ea7f69d3fda4ddef8b78b192ee7e86865572fefd7eea6b818c18ac7f",
+      "FFmpegWholeSHA256": "8ce65555ea7f69d3fda4ddef8b78b192ee7e86865572fefd7eea6b818c18ac7f",
+      "LibsndfileWholeSHA256": "8ce65555ea7f69d3fda4ddef8b78b192ee7e86865572fefd7eea6b818c18ac7f",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_all_codes_64ch.wav",
+      "PCMFile": "spec_mulaw_all_codes_64ch.s16le",
+      "Origin": "ITU midpoint oracle, every code in each channel",
+      "Tag": 7,
+      "Channels": 64,
+      "Rate": 8000,
+      "Frames": 256,
+      "EncodedSHA256": "a84a443e37b7ed9bf1349d6bf7574ee65c3cb3157ef3c721b419a56113a8f72b",
+      "PCMSHA256": "b9bd9aac39d7bc6026889ad5e68bf1c599c61352bbd3506c6967e768886bd9e7",
+      "FFmpegWholeSHA256": "b9bd9aac39d7bc6026889ad5e68bf1c599c61352bbd3506c6967e768886bd9e7",
+      "LibsndfileWholeSHA256": "b9bd9aac39d7bc6026889ad5e68bf1c599c61352bbd3506c6967e768886bd9e7",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_rate1.wav",
+      "PCMFile": "spec_mulaw_rate1.s16le",
+      "Origin": "exact integer sample rate",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 1,
+      "Frames": 17,
+      "EncodedSHA256": "84b7449a78447dfe29797c5142f8695534765b218bd65ed3456dfb9f766c2de4",
+      "PCMSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "FFmpegWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "LibsndfileWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_rate768000.wav",
+      "PCMFile": "spec_mulaw_rate768000.s16le",
+      "Origin": "exact integer sample rate",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 768000,
+      "Frames": 17,
+      "EncodedSHA256": "2197d111c4b3d340d4dc4d2c4306aaa85727873bfca15c150ea0590d61a7f38e",
+      "PCMSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "FFmpegWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "LibsndfileWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_1ch_n0.wav",
+      "PCMFile": "spec_mulaw_1ch_n0.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 0,
+      "EncodedSHA256": "1adf86f96c93cee914fbbf70c2c288d379bce116432703fa8060d72ff4484851",
+      "PCMSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FFmpegWholeSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LibsndfileWholeSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_1ch_n1.wav",
+      "PCMFile": "spec_mulaw_1ch_n1.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 1,
+      "EncodedSHA256": "a88dc0b4006493504badabcc0f0a2272065c54446f3d8891330fbd3ebc48e8a6",
+      "PCMSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+      "FFmpegWholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+      "LibsndfileWholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_1ch_n17.wav",
+      "PCMFile": "spec_mulaw_1ch_n17.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "d77a4cd036f7ca6e257b6aca1a1b51f860ffbe3d5118a9d9625772a8af76660f",
+      "PCMSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "FFmpegWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "LibsndfileWholeSHA256": "3b2b18b7464ebe0d6b8c80ba1a8fc2bd191055997d2124d5ed8a8ffbe6d95d3b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_1ch_n32769.wav",
+      "PCMFile": "spec_mulaw_1ch_n32769.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 8000,
+      "Frames": 32769,
+      "EncodedSHA256": "463d9474f673a01fb6e0444516088f236a1ee07541063cd582ba1d82e98b9848",
+      "PCMSHA256": "af4a42b989aa2ad02c7c3adc77ae3665031a50c08a48da3bb9c2e323c57e1e88",
+      "FFmpegWholeSHA256": "af4a42b989aa2ad02c7c3adc77ae3665031a50c08a48da3bb9c2e323c57e1e88",
+      "LibsndfileWholeSHA256": "af4a42b989aa2ad02c7c3adc77ae3665031a50c08a48da3bb9c2e323c57e1e88",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_3ch_n16385.wav",
+      "PCMFile": "spec_mulaw_3ch_n16385.s16le",
+      "Origin": "empty, odd-pad and 32KiB boundary",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 16385,
+      "EncodedSHA256": "cc3b870c11eb55fb93b415f080d413bce436390556811e4b72bd76f29aa44fc8",
+      "PCMSHA256": "f545aa59906da4824250dea840f3eeafc5f25c65e902f1168392cfafcec56abc",
+      "FFmpegWholeSHA256": "f545aa59906da4824250dea840f3eeafc5f25c65e902f1168392cfafcec56abc",
+      "LibsndfileWholeSHA256": "f545aa59906da4824250dea840f3eeafc5f25c65e902f1168392cfafcec56abc",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_fact_first.wav",
+      "PCMFile": "spec_mulaw_fact_first.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "b2592263155e064d2eac5693c6bf8f9d4bc74fe880fbb83097c1083a7236e6da",
+      "PCMSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "FFmpegWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "LibsndfileWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_fact_after.wav",
+      "PCMFile": "spec_mulaw_fact_after.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "478cd023015e2fdd38b10d50918eee92f5efa498c3298dcf933463342580f2a3",
+      "PCMSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "FFmpegWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "LibsndfileWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_junk_pad.wav",
+      "PCMFile": "spec_mulaw_junk_pad.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "bda55253a973598fade0672d22ade3b5b305fd37f1fc6fd619c99280b81f2709",
+      "PCMSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "FFmpegWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "LibsndfileWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "spec_mulaw_metadata.wav",
+      "PCMFile": "spec_mulaw_metadata.s16le",
+      "Origin": "independent RIFF ordering/pad/metadata construction",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 8000,
+      "Frames": 17,
+      "EncodedSHA256": "d2a67fa5d76a3c34fcb2c0196bed8852dcca88f0f623aa9fdfbfaa6c4dc73105",
+      "PCMSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "FFmpegWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "LibsndfileWholeSHA256": "ddc6b2eccce1f2e4569be92c53bca7dffc680b88e6589c6d88eb8fadc66d5e6b",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "ffmpeg_mulaw_1ch.wav",
+      "PCMFile": "ffmpeg_mulaw_1ch.s16le",
+      "Origin": "FFmpeg encoder from explicit signed16 sine",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 44100,
+      "Frames": 257,
+      "EncodedSHA256": "19c30ce2cdc2d72a9abf19bf29315b36a8d528206dbb44d33645bb775edbd9a9",
+      "PCMSHA256": "aee19b4e6666400817cf87bad48360b4933d17eaa7484e182610c1acb46e9730",
+      "FFmpegWholeSHA256": "aee19b4e6666400817cf87bad48360b4933d17eaa7484e182610c1acb46e9730",
+      "LibsndfileWholeSHA256": "aee19b4e6666400817cf87bad48360b4933d17eaa7484e182610c1acb46e9730",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "ffmpeg_mulaw_2ch.wav",
+      "PCMFile": "ffmpeg_mulaw_2ch.s16le",
+      "Origin": "FFmpeg encoder from explicit signed16 sine",
+      "Tag": 7,
+      "Channels": 2,
+      "Rate": 44100,
+      "Frames": 257,
+      "EncodedSHA256": "6ebe31f627e569d0c2e5461d3afcfda02002f121160b34da201f9efa11cb6856",
+      "PCMSHA256": "89cd326b56006c6de1a1beb915c1f35368caf0b28d0b45550f18e2b619eb24e8",
+      "FFmpegWholeSHA256": "89cd326b56006c6de1a1beb915c1f35368caf0b28d0b45550f18e2b619eb24e8",
+      "LibsndfileWholeSHA256": "89cd326b56006c6de1a1beb915c1f35368caf0b28d0b45550f18e2b619eb24e8",
+      "DiscardMetadata": true
+    },
+    {
+      "File": "libsndfile_mulaw_1ch.wav",
+      "PCMFile": "libsndfile_mulaw_1ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 7,
+      "Channels": 1,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "4fb8b87da0cb8e9f1c9d0142db5dd75fa98f4917fd369c1f5211d5ae8ff26af5",
+      "PCMSHA256": "8b45c27bb84f96b748508fad7c8d43a26724aa784f94d604cfdb0689debba695",
+      "FFmpegWholeSHA256": "8b45c27bb84f96b748508fad7c8d43a26724aa784f94d604cfdb0689debba695",
+      "LibsndfileWholeSHA256": "8b45c27bb84f96b748508fad7c8d43a26724aa784f94d604cfdb0689debba695",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "libsndfile_mulaw_2ch.wav",
+      "PCMFile": "libsndfile_mulaw_2ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 7,
+      "Channels": 2,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "14f5ce105003a34b4e908a3eb26f86b9467e571ff1e698d434d5edd69d776e12",
+      "PCMSHA256": "b806aefeb63b9ec54a10f794b5cf2ba686d5a4bb9efde3e3e0e579404345000e",
+      "FFmpegWholeSHA256": "b806aefeb63b9ec54a10f794b5cf2ba686d5a4bb9efde3e3e0e579404345000e",
+      "LibsndfileWholeSHA256": "b806aefeb63b9ec54a10f794b5cf2ba686d5a4bb9efde3e3e0e579404345000e",
+      "DiscardMetadata": false
+    },
+    {
+      "File": "libsndfile_mulaw_3ch.wav",
+      "PCMFile": "libsndfile_mulaw_3ch.s16le",
+      "Origin": "libsndfile encoder from explicit signed16 extrema/zero",
+      "Tag": 7,
+      "Channels": 3,
+      "Rate": 22050,
+      "Frames": 257,
+      "EncodedSHA256": "7ecd276a58dc98ca3c8ec993b90ae79329871bb00163618145309977eb3e57d9",
+      "PCMSHA256": "ae81a749a7c03d862c5133cec7725bfcbd9e237c1833fbf77e37491b41d86e0a",
+      "FFmpegWholeSHA256": "ae81a749a7c03d862c5133cec7725bfcbd9e237c1833fbf77e37491b41d86e0a",
+      "LibsndfileWholeSHA256": "ae81a749a7c03d862c5133cec7725bfcbd9e237c1833fbf77e37491b41d86e0a",
+      "DiscardMetadata": false
+    }
+  ],
+  "RejectedCases": [
+    {
+      "File": "ffmpeg_alaw_6ch.wav",
+      "EncodedSHA256": "7576dca53bd3d7800acf609980494eab72df338ebdecff86308dadc8c8ed2777",
+      "Category": "unsupported",
+      "Reason": "real FFmpeg extensible compression GUID and speaker layout; preserved verbatim",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 3084,
+        "WholeSHA256": "6271ae76154377504653f80eaa6ab4781609ff3730937c712c3586d1df43c226"
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1542,
+        "WholeSHA256": "6271ae76154377504653f80eaa6ab4781609ff3730937c712c3586d1df43c226"
+      }
+    },
+    {
+      "File": "ffmpeg_mulaw_6ch.wav",
+      "EncodedSHA256": "693f0bd61e2b083708abb1f0671e8ce7f61eaf97a956139710e554660e02d878",
+      "Category": "unsupported",
+      "Reason": "real FFmpeg extensible compression GUID and speaker layout; preserved verbatim",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 3084,
+        "WholeSHA256": "989c8157da9d1856c47bef058a4ed2c72ed1312998e104023f161ca5df97907d"
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1542,
+        "WholeSHA256": "989c8157da9d1856c47bef058a4ed2c72ed1312998e104023f161ca5df97907d"
+      }
+    },
+    {
+      "File": "reject_alaw_missing_fact.wav",
+      "EncodedSHA256": "ecb3e31892d80a4984d3df181b9fc0dcb5f490b7d2d9a6e6a61d2987ed2c31e1",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_fact_short.wav",
+      "EncodedSHA256": "1db2a9f9e3d1f19e0f508233914bc88380ff5a5bf7623e87782200d534491336",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_fact_long.wav",
+      "EncodedSHA256": "bce5d434ae31501c6368430d570163632b2d9dd8b1bc0883df5967d732153390",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_fmt16.wav",
+      "EncodedSHA256": "2105a09f70b7dd8a38d0d1fc3c932b2815d3915d8f2d7b18b16d2b8053b4c736",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_cbSize2.wav",
+      "EncodedSHA256": "0d19d0b746a03e6d5a6132bc395dc5a36420a7f94f1170f76b58730bcd614941",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_nonzero_pad.wav",
+      "EncodedSHA256": "1524e90c045b9c77dbd8c9b21d5b5adc904fa8d70cdd35fc8a955a13fde32992",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_alaw_extensible.wav",
+      "EncodedSHA256": "a451d2f6c559734daebb3d34f0adf8e109a5eecef27ce202482912301d3d8ded",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "5f352058589fd768c2333d89e2bf97fb0e515fcdf6570f73ecface09cf0e42ed"
+      }
+    },
+    {
+      "File": "reject_mulaw_missing_fact.wav",
+      "EncodedSHA256": "eb209f7ea23601bf35c2d8a9151bff6d4fc35d69ffb8c47e1b8cebc0d0ce220f",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_fact_short.wav",
+      "EncodedSHA256": "c585a97e8bf21c9649f2032c12fd6b5e524e224527d6be30fb384ce2fb9f25fd",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_fact_long.wav",
+      "EncodedSHA256": "0dcdfec947de3b2948e7f54681237a1c54233bdc977bb14818d8d63b63996f3a",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_fmt16.wav",
+      "EncodedSHA256": "bd640cc8823b5e8bc25f6cee5a818e9263848e58cfd41dd163929f58c22d4019",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_cbSize2.wav",
+      "EncodedSHA256": "5e307f4e0dc49f43c2d8144b3b72e13d7f4994c63bc61c8ace0e6bf29bc7bf77",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_nonzero_pad.wav",
+      "EncodedSHA256": "ca49839186e2d832f42b5ab3d2236b1134eb1f6536075e6a8edfbe58ca5d975b",
+      "Category": "invalid",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    },
+    {
+      "File": "reject_mulaw_extensible.wav",
+      "EncodedSHA256": "b3ec42f53438fe8f04e4195b6a5b71086f452da3599e9686b2a68b6858047745",
+      "Category": "unsupported",
+      "FFmpeg": {
+        "Accepted": true,
+        "WholeBytes": 2,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e",
+        "Stderr": ""
+      },
+      "Libsndfile": {
+        "Accepted": true,
+        "ScalarSamples": 1,
+        "WholeSHA256": "ce33bcae8f211ce4e19ed5e639bb3a29a9d1bd3d925bae7445a8bee98529016e"
+      }
+    }
+  ]
+}

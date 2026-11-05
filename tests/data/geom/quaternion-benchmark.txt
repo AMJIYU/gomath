@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/geom
+cpu: Apple M2
+BenchmarkQuaternion/Slerp-8         	 2447916	        96.95 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQuaternion/Slerp-8         	 1000000	       252.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQuaternion/Slerp-8         	 2184541	       106.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQuaternion/Rotate-8        	 4577786	        52.21 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQuaternion/Rotate-8        	 4728116	        49.25 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQuaternion/Rotate-8        	 4858746	        49.82 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	gomath/geom	1.813s

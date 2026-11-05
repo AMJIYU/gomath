@@ -1,0 +1,18 @@
+{
+  "unchanged_existing_golden_sha256": {
+    "intra_vectors.json": "2993d641807e1d0b2ec9436df7f9149d9a6e151cc7f1cee6d99f4909d9223592",
+    "intra_modesearch_vectors.json": "4ecd5a33da3b930cdae14f813ff24ac489f6a216273a33baf0a0ba72c42c5967",
+    "predictive_vectors.json": "1dfdd93b1be588ab47ebe24b22bbc15de445339d3d073cab5283e5fa27dfecc9",
+    "inter_vectors.json": "73ac76a1e775a9ab044926ec82d23a6b63e6858e92ee99e2987c267765f80b8e"
+  },
+  "new_motion_golden_sha256": "61964cc73100801da8f02c5c7e49ee2238258b26d56466d0117f2b946876299c",
+  "full_package_coverage_percent": 99.8,
+  "full_package_elapsed_seconds": 72.885,
+  "independent_decode": {
+    "streams": 303,
+    "frames": 5182,
+    "fresh_IDR_entries": 825,
+    "verified_manifest_sha256": "61964cc73100801da8f02c5c7e49ee2238258b26d56466d0117f2b946876299c"
+  },
+  "temporary_decoder_files_removed": true
+}

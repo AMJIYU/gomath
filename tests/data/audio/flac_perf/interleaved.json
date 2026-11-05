@@ -1,0 +1,1024 @@
+{
+  "date": "2026-11-05",
+  "go": "go version go1.27.3 darwin/arm64",
+  "config": {
+    "CGO_ENABLED": "0",
+    "GOMAXPROCS": "1",
+    "tags": "noasm",
+    "test.cpu": "1",
+    "benchtime": "300ms",
+    "rounds": 5
+  },
+  "source_sha256": {
+    "before": "eecb5bffe0814a3edfe73a7f9fa0677ee9bc2b657090a0d45b7b41d6b8f26325",
+    "after": "c268146e8c3b64f8baa82daeebb36c2f2df1bba8fa8211b562ce97111a925ab9"
+  },
+  "binary_sha256": {
+    "before": "e96cd0169817f3f3efe976c1e2bed72309a92b66260b9589c5c205f307597d8e",
+    "after": "40cac23c2ae8e3d951f4cfa1b18d4f11c001cbbe0b982d5b7d14cc808d5849c3"
+  },
+  "test_sources_sha256": {
+    "tests/_cases/audio/aiff_read_test.go": "019f5a339e6f3a7aaa39ba0c65a5e9dcffdf433c697c73e87d69b83532337aaa",
+    "tests/_cases/audio/au_read_test.go": "8f8e6b72479139e8065299a1d7aa97be289de3abfd8053eb9500f09116052565",
+    "tests/_cases/audio/benchmark_test.go": "695fcc9fb4fe41885bd59655562fec0f7dbe46009c6742c2e99d278bf3168a2e",
+    "tests/_cases/audio/edit_test.go": "2c73773209c1afbe7650488c8edeed22c2b04e2587d6f82d34eb2be8d01baf2b",
+    "tests/_cases/audio/flac_input_test.go": "7dd218ea862b37aa01bad4384541f8e4c165e187bd5d17f679c6556af2ff1b7c",
+    "tests/_cases/audio/flac_perf_test.go": "7dc182110a1b44c7a72885142f901059a29d7e176a1b12096ef1ebfc2bd5d826",
+    "tests/_cases/audio/flac_read_test.go": "e60c92ae3c565aa41eef2fe5cf6185cf7d2fa7ade21f3dcf97a51a6166f6b1f6",
+    "tests/_cases/audio/flac_reference_test.go": "b732fd85397b4038a522286c4373924d357c724a1f20eb331cf8b3bb1c5971ed",
+    "tests/_cases/audio/flac_test.go": "461b87e097611bf68eef54ceccfb701c5fa98cc61e67ffd70676f2483f11ae8c",
+    "tests/_cases/audio/fuzz_test.go": "2a43af78131f693016f96f10f752c6bdfb905febb00cd7f875fd28b199067e46",
+    "tests/_cases/audio/main_test.go": "30c2b3e3ce82cd2b8a0e3758c31d3e5a3e4471b3466efb79e9903c0266fdb7da",
+    "tests/_cases/audio/pcm_test.go": "8f0004121fef455de2dd95fba10ba77cd6fb15b30012160ea7084080c4f67dca",
+    "tests/_cases/audio/remix_sequence_bench_test.go": "006f2d5ce1d1cb1f53690ba312957eb31ce1b4a2d824a9cc473eacb42c8a69c8",
+    "tests/_cases/audio/remix_test.go": "b61dd89857672b4cc0fc2be38a9804f22f1a0f685b515cfdf64b6d564ad93fea",
+    "tests/_cases/audio/resample_test.go": "976386db6672d5afe2d2f2b8bb430601c1fda99bdedb07d94b59d577378d92ec",
+    "tests/_cases/audio/sequence_test.go": "2d0af6da208ac4aee1b56c545f1bedace5e618e0c078fb3500ee838e30e66526",
+    "tests/_cases/audio/wav_g711_test.go": "d85f57c47dc81979c95da3f3b8dfd4be0dbd96f9f68c993907a74f392844c43a",
+    "tests/_cases/audio/wav_ima_test.go": "8539055e2b839fad8fc336c566fa757a15822e3ce19fdd6eb580ee0fc6ccbffb",
+    "tests/_cases/audio/wav_ms_adpcm_test.go": "646514ed0249ade884e54a5516d30667f9adc1a2749a6a96e958d6a8da9f4b55",
+    "tests/_cases/audio/wav_test.go": "2e7f8710a0cbbdd3cdc3bfab3c0a034ae0d64e5309e4a4c99bdb10a1a3d172df"
+  },
+  "exclusions": [
+    "input encoding and file I/O",
+    "compilation",
+    "external decoders",
+    "process startup and one-time CRC table initialization"
+  ],
+  "host_caveat": "shared Apple M2 host; no machine isolation; all samples retained",
+  "runs": [
+    {
+      "round": 1,
+      "variant": "before",
+      "file": "interleaved-1-before.txt",
+      "sha256": "8187307da082d0919a061ce9ac5dc80d0fd38c1fa1976492df585d302a58efe2",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 683837,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 1394713,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 268719,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 257693,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 1037018,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 10144750,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 12110,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 7278169,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 10161441,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 1,
+      "variant": "after",
+      "file": "interleaved-1-after.txt",
+      "sha256": "1dea09d6e1df86aad712fbea1d0ea781925404f00a885e5da7f12806ac65fc3b",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 681186,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 574891,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 209148,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 60172,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 314009,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 4537160,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 4812,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 2919251,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 2359613,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 2,
+      "variant": "after",
+      "file": "interleaved-2-after.txt",
+      "sha256": "888f484bf957f9e16c46b1e015c9e7919a0d4784d2b8185ab80f85339e0063ba",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 459407,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 567563,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 200486,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 51012,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 298755,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 4387721,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 4870,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 3062963,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 2374597,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 2,
+      "variant": "before",
+      "file": "interleaved-2-before.txt",
+      "sha256": "18570006d6ac08a43ad9acd8ab97b26ac38331d27688a07fdecb5f62aaa312cc",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 691131,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 1368831,
+          "B": 450453,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 261713,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 260637,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 830546,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 8151452,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 9300,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 5434294,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 7872068,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 3,
+      "variant": "before",
+      "file": "interleaved-3-before.txt",
+      "sha256": "d4fb596088be8c77a90a7ea8f016231ab066d8ae44af54f345bb3038f40228e2",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 687294,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 1363151,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 256021,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 258154,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 833317,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 8207510,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 9393,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 5326216,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 7921408,
+          "B": 2887974,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 3,
+      "variant": "after",
+      "file": "interleaved-3-after.txt",
+      "sha256": "81aa5aa9a48c16c32366d93c4684337f877a834d821c7bfd07b05b166a4248f8",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 460621,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 581180,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 201902,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 50970,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 298291,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 4379668,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 4795,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 2957875,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 2458233,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 4,
+      "variant": "after",
+      "file": "interleaved-4-after.txt",
+      "sha256": "7321128109d590bdfc25ea3481e47f2accdc1ddeb928afff30e7d7d8126254e9",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 474842,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 637770,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 202444,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 51041,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 298471,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 4352014,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 4913,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 2947180,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 3172491,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 4,
+      "variant": "before",
+      "file": "interleaved-4-before.txt",
+      "sha256": "324fa7e48c2c68019794c4a3dff4e0fe53c6c6397582cfb981d2cd951383f84c",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 770742,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 1419510,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 264713,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 265299,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 859911,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 8251357,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 9227,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 5371866,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 7957669,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 5,
+      "variant": "before",
+      "file": "interleaved-5-before.txt",
+      "sha256": "76ab4e32d75f50bfdc615e92c404880244b2f9310dbcaf03a28952a2c627c4a4",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 816289,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 1427542,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 268587,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 269026,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 835083,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 8082539,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 9318,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 5376051,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 8010601,
+          "B": 2887974,
+          "allocs": 19
+        }
+      }
+    },
+    {
+      "round": 5,
+      "variant": "after",
+      "file": "interleaved-5-after.txt",
+      "sha256": "500177b0623d97734d2b0e038a45108dac2fc4f6676b433d2aa59246d5a7b619",
+      "measurements": {
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac": {
+          "ns": 470253,
+          "B": 449940,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac": {
+          "ns": 571638,
+          "B": 450452,
+          "allocs": 27
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac": {
+          "ns": 200655,
+          "B": 194900,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac": {
+          "ns": 51092,
+          "B": 43348,
+          "allocs": 21
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac": {
+          "ns": 300036,
+          "B": 201044,
+          "allocs": 24
+        },
+        "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac": {
+          "ns": 4363078,
+          "B": 2625880,
+          "allocs": 15
+        },
+        "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac": {
+          "ns": 4816,
+          "B": 6944,
+          "allocs": 13
+        },
+        "BenchmarkReadFLAC48kStereo/PCM16": {
+          "ns": 2965357,
+          "B": 2879783,
+          "allocs": 19
+        },
+        "BenchmarkReadFLAC48kStereo/PCM24": {
+          "ns": 2420801,
+          "B": 2887975,
+          "allocs": 19
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/libflac_pcm16_2ch_correlated_n8193_l8.flac",
+      "before_median_ns": 691131,
+      "after_median_ns": 470253,
+      "median_delta_percent": -31.95891951019416,
+      "paired_delta_percent": [
+        -0.3876654816864278,
+        -33.528231261511934,
+        -32.98050033901067,
+        -38.39157590996728,
+        -42.3913589427274
+      ],
+      "before_range_ns": [
+        683837,
+        816289
+      ],
+      "after_range_ns": [
+        459407,
+        681186
+      ],
+      "before_B_per_op": [
+        449940,
+        449940,
+        449940,
+        449940,
+        449940
+      ],
+      "after_B_per_op": [
+        449940,
+        449940,
+        449940,
+        449940,
+        449940
+      ],
+      "before_allocs_per_op": [
+        27,
+        27,
+        27,
+        27,
+        27
+      ],
+      "after_allocs_per_op": [
+        27,
+        27,
+        27,
+        27,
+        27
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/libflac_pcm24_2ch_sine_n8193_l8_lpc32.flac",
+      "before_median_ns": 1394713,
+      "after_median_ns": 574891,
+      "median_delta_percent": -58.78069538320787,
+      "paired_delta_percent": [
+        -58.78069538320787,
+        -58.53666376638168,
+        -57.36495810075333,
+        -55.071116089354774,
+        -59.95648464283363
+      ],
+      "before_range_ns": [
+        1363151,
+        1427542
+      ],
+      "after_range_ns": [
+        567563,
+        637770
+      ],
+      "before_B_per_op": [
+        450452,
+        450453,
+        450452,
+        450452,
+        450452
+      ],
+      "after_B_per_op": [
+        450452,
+        450452,
+        450452,
+        450452,
+        450452
+      ],
+      "before_allocs_per_op": [
+        27,
+        27,
+        27,
+        27,
+        27
+      ],
+      "after_allocs_per_op": [
+        27,
+        27,
+        27,
+        27,
+        27
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/pcm8_8ch_sine_n1025_b256.flac",
+      "before_median_ns": 264713,
+      "after_median_ns": 201902,
+      "median_delta_percent": -23.727961981466716,
+      "paired_delta_percent": [
+        -22.1685106002925,
+        -23.394711000217793,
+        -21.13850035739255,
+        -23.52321193141251,
+        -25.29236336829407
+      ],
+      "before_range_ns": [
+        256021,
+        268719
+      ],
+      "after_range_ns": [
+        200486,
+        209148
+      ],
+      "before_B_per_op": [
+        194900,
+        194900,
+        194900,
+        194900,
+        194900
+      ],
+      "after_B_per_op": [
+        194900,
+        194900,
+        194900,
+        194900,
+        194900
+      ],
+      "before_allocs_per_op": [
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "after_allocs_per_op": [
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/pcm24_8ch_random_n255_b256.flac",
+      "before_median_ns": 260637,
+      "after_median_ns": 51041,
+      "median_delta_percent": -80.41682493276089,
+      "paired_delta_percent": [
+        -76.64973437384795,
+        -80.427951518779,
+        -80.25597124197185,
+        -80.76095273634654,
+        -81.00852705686438
+      ],
+      "before_range_ns": [
+        257693,
+        269026
+      ],
+      "after_range_ns": [
+        50970,
+        60172
+      ],
+      "before_B_per_op": [
+        43348,
+        43348,
+        43348,
+        43348,
+        43348
+      ],
+      "after_B_per_op": [
+        43348,
+        43348,
+        43348,
+        43348,
+        43348
+      ],
+      "before_allocs_per_op": [
+        21,
+        21,
+        21,
+        21,
+        21
+      ],
+      "after_allocs_per_op": [
+        21,
+        21,
+        21,
+        21,
+        21
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/pcm32_8ch_sine_n1025_b256.flac",
+      "before_median_ns": 835083,
+      "after_median_ns": 298755,
+      "median_delta_percent": -64.22451420996475,
+      "paired_delta_percent": [
+        -69.72000486008922,
+        -64.02908448177465,
+        -64.20437840581675,
+        -65.29047773548658,
+        -64.0711162842496
+      ],
+      "before_range_ns": [
+        830546,
+        1037018
+      ],
+      "after_range_ns": [
+        298291,
+        314009
+      ],
+      "before_B_per_op": [
+        201044,
+        201044,
+        201044,
+        201044,
+        201044
+      ],
+      "after_B_per_op": [
+        201044,
+        201044,
+        201044,
+        201044,
+        201044
+      ],
+      "before_allocs_per_op": [
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "after_allocs_per_op": [
+        24,
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/pcm32_2ch_wasted_n65535_b65535.flac",
+      "before_median_ns": 8207510,
+      "after_median_ns": 4379668,
+      "median_delta_percent": -46.63828615499707,
+      "paired_delta_percent": [
+        -55.275783040488925,
+        -46.172522392329604,
+        -46.63828615499707,
+        -47.25699057742866,
+        -46.018472660633
+      ],
+      "before_range_ns": [
+        8082539,
+        10144750
+      ],
+      "after_range_ns": [
+        4352014,
+        4537160
+      ],
+      "before_B_per_op": [
+        2625880,
+        2625880,
+        2625880,
+        2625880,
+        2625880
+      ],
+      "after_B_per_op": [
+        2625880,
+        2625880,
+        2625880,
+        2625880,
+        2625880
+      ],
+      "before_allocs_per_op": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "after_allocs_per_op": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLACPerfFixtures/side33_LPC32_shift15.flac",
+      "before_median_ns": 9318,
+      "after_median_ns": 4816,
+      "median_delta_percent": -48.31508907490878,
+      "paired_delta_percent": [
+        -60.26424442609414,
+        -47.634408602150536,
+        -48.951346747577986,
+        -46.754091253928685,
+        -48.31508907490878
+      ],
+      "before_range_ns": [
+        9227,
+        12110
+      ],
+      "after_range_ns": [
+        4795,
+        4913
+      ],
+      "before_B_per_op": [
+        6944,
+        6944,
+        6944,
+        6944,
+        6944
+      ],
+      "after_B_per_op": [
+        6944,
+        6944,
+        6944,
+        6944,
+        6944
+      ],
+      "before_allocs_per_op": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "after_allocs_per_op": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLAC48kStereo/PCM16",
+      "before_median_ns": 5376051,
+      "after_median_ns": 2957875,
+      "median_delta_percent": -44.98052566837628,
+      "paired_delta_percent": [
+        -59.890310323929,
+        -43.63641348811823,
+        -44.46573327105021,
+        -45.13675508659375,
+        -44.841352881510986
+      ],
+      "before_range_ns": [
+        5326216,
+        7278169
+      ],
+      "after_range_ns": [
+        2919251,
+        3062963
+      ],
+      "before_B_per_op": [
+        2879783,
+        2879783,
+        2879783,
+        2879783,
+        2879783
+      ],
+      "after_B_per_op": [
+        2879783,
+        2879783,
+        2879783,
+        2879783,
+        2879783
+      ],
+      "before_allocs_per_op": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "after_allocs_per_op": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ]
+    },
+    {
+      "name": "BenchmarkReadFLAC48kStereo/PCM24",
+      "before_median_ns": 7957669,
+      "after_median_ns": 2420801,
+      "median_delta_percent": -69.57901867996772,
+      "paired_delta_percent": [
+        -76.77875608390582,
+        -69.83515640362863,
+        -68.96722148385741,
+        -60.132910780782666,
+        -69.78003273412318
+      ],
+      "before_range_ns": [
+        7872068,
+        10161441
+      ],
+      "after_range_ns": [
+        2359613,
+        3172491
+      ],
+      "before_B_per_op": [
+        2887975,
+        2887975,
+        2887974,
+        2887975,
+        2887974
+      ],
+      "after_B_per_op": [
+        2887975,
+        2887975,
+        2887975,
+        2887975,
+        2887975
+      ],
+      "before_allocs_per_op": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "after_allocs_per_op": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ]
+    }
+  ]
+}

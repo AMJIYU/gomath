@@ -1,0 +1,21 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkTimeline/Sample/ssaa1-8         	      52	   4570366 ns/op	 1404976 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8         	      60	   4465744 ns/op	 1404869 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8         	      61	   4557283 ns/op	 1404867 B/op	      25 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8    	      58	   4605435 ns/op	 1092239 B/op	      15 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8    	      60	   4579612 ns/op	 1092236 B/op	      15 allocs/op
+BenchmarkTimeline/DirectThree/ssaa1-8    	      60	   4462738 ns/op	 1092240 B/op	      15 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      24	  11754660 ns/op	 4476938 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      22	  11565481 ns/op	 4476939 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      24	  11751950 ns/op	 4477166 B/op	      27 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8    	      24	  12108154 ns/op	 4164303 B/op	      17 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8    	      22	  12220475 ns/op	 4164302 B/op	      17 allocs/op
+BenchmarkTimeline/DirectThree/ssaa2-8    	      24	  11694792 ns/op	 4164316 B/op	      17 allocs/op
+BenchmarkTimeline/Snapshot-8             	    2641	     91944 ns/op	  239073 B/op	      32 allocs/op
+BenchmarkTimeline/Snapshot-8             	    2659	     93552 ns/op	  239073 B/op	      32 allocs/op
+BenchmarkTimeline/Snapshot-8             	    2632	    103046 ns/op	  239073 B/op	      32 allocs/op
+PASS
+ok  	gomath/scene3d	4.145s

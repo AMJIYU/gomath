@@ -1,0 +1,32 @@
+{
+  "generator": "tests/reference/raster_supersampling.py",
+  "generator_sha256": "c0474b39983af163339456f4df22c2dc953410ef9fc181ce19d711d2d13f5a6c",
+  "python": "3.11.5",
+  "CairoSVG": "2.7.1",
+  "Cairo": "1.18.4",
+  "Pillow": "11.2.1",
+  "quality": "CairoSVG renders full vector scenes at scales 1/2/4/8; premultiplied RGBa Pillow BOX downsampling, output dimensions unchanged. PNGs store straight RGBA; tests convert back to premultiplied RGBA.",
+  "scope": "Frozen parent fractions .35 export shares scene construction; independent Cairo interpretation/rasterization only. Odd-size 95x63 handcrafted crossing/hole/duplicate/gradient/stroke/nested clip/bitmap scenes. Does not claim default signed-area AA fixed; native-size refs remain unchanged.",
+  "files_sha256": {
+    "crossing.svg": "a11dacd8f8d1329e09a2eba4cd863bc58e3841afe9b3c80b1220fde0d9d67bd1",
+    "fractions-035.svg": "5ffe25d2f8910a7d7934fc3832c70bb735dfbb0e234187994c8105b778c30f16",
+    "holes-duplicate.svg": "b8a667deb95efb6637d8b67cd9e535b189450230dfa173946dc2b1a6cbccecda",
+    "mixed.svg": "1180c6aeffd4ca77c4d948ec999eb90a753b76a844768c3260324f42e36be6b0",
+    "crossing-cairo-ss1.png": "d53d6f9bec9bf7c9ab9f541d326179aa483527774b4bed859a8126fc06866294",
+    "crossing-cairo-ss2.png": "0f454f6212594451f80a5e9477615b0b9d7ad813cf8e1121f9f676e154afa0ba",
+    "crossing-cairo-ss4.png": "181b3473932eb79e68b41f8883d9fb1d0e0a132c28fc6bb70411a05b79730bee",
+    "crossing-cairo-ss8.png": "9e92a66f3a9650301adb6ec6e5902ac5954b3bddf7a9af74f8e7232ee8c57963",
+    "fractions-035-cairo-ss1.png": "6afc74e2fe3f4e4e4100eb10f72b5d042108017c2fb954072284009e712ef5ef",
+    "fractions-035-cairo-ss2.png": "b739966c457d5bd7004e64cb125bea95da7cf202c9fbe89ba24b744a70498213",
+    "fractions-035-cairo-ss4.png": "e02d28d7171f9d341211d3308b37d369470434ef4abbedb5ff97c01ca99f2d72",
+    "fractions-035-cairo-ss8.png": "e3446bbe3f974d45be094d5471ae54291f836fd63801eaffaef5fcf88192d73b",
+    "holes-duplicate-cairo-ss1.png": "07f6518cee27df386c6c419c12b754b0102de2ae3107736b174dd330080028a1",
+    "holes-duplicate-cairo-ss2.png": "088309b64312c16576729a037e19fab1103fed1fdb82d7ced679cc8ce01700b0",
+    "holes-duplicate-cairo-ss4.png": "7ac857ab35208c6996afd0af3e1e12bf20e3dbc890bc7e801e9b492d49536565",
+    "holes-duplicate-cairo-ss8.png": "aa41ad93cee269e2c27afeaecf78a3af6679b28c2d57ea0f530bb4bcbe6bd7d1",
+    "mixed-cairo-ss1.png": "8d4f1d33a2b07f038128dbcbc5dde03129db051a3ed2e20eb9ea22ccb35d0b9f",
+    "mixed-cairo-ss2.png": "a7480421ca019a15d8d1baa020e3c5dcdcb6809b3d0799ddcdb6a306ce971b6e",
+    "mixed-cairo-ss4.png": "7c5071aed3601c40cf48213ed5d9bc1cb001ef84a37415761543486a29f6b18b",
+    "mixed-cairo-ss8.png": "f65edaedcc2a8048587931262c69859d9bcdd8a281aa2da3d85a843ffa9472bd"
+  }
+}

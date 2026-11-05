@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/mathtex
+cpu: Apple M2
+BenchmarkBraceLayout/short         	    4772	     33150 ns/op	   65840 B/op	     195 allocs/op
+BenchmarkBraceLayout/short         	    5590	     33098 ns/op	   65840 B/op	     195 allocs/op
+BenchmarkBraceLayout/short         	    5797	     32463 ns/op	   65840 B/op	     195 allocs/op
+BenchmarkBraceLayout/nested        	    1088	    162689 ns/op	  299776 B/op	     730 allocs/op
+BenchmarkBraceLayout/nested        	    1155	    159407 ns/op	  299777 B/op	     730 allocs/op
+BenchmarkBraceLayout/nested        	    1152	    161175 ns/op	  299777 B/op	     730 allocs/op
+PASS
+ok  	gomath/mathtex	1.086s

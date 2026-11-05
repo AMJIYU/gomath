@@ -1,0 +1,11 @@
+fuzz: elapsed: 0s, gathering baseline coverage: 0/12 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 12/12 completed, now fuzzing with 1 workers
+fuzz: elapsed: 3s, execs: 128531 (42829/sec), new interesting: 24 (total: 36)
+fuzz: elapsed: 6s, execs: 245138 (38869/sec), new interesting: 46 (total: 58)
+fuzz: elapsed: 9s, execs: 359168 (38010/sec), new interesting: 54 (total: 66)
+fuzz: elapsed: 12s, execs: 483410 (41414/sec), new interesting: 56 (total: 68)
+fuzz: elapsed: 15s, execs: 599364 (38651/sec), new interesting: 58 (total: 70)
+fuzz: elapsed: 18s, execs: 717550 (39395/sec), new interesting: 60 (total: 72)
+fuzz: elapsed: 20s, execs: 797240 (39383/sec), new interesting: 63 (total: 75)
+PASS
+ok  	gomath/audio	20.032s

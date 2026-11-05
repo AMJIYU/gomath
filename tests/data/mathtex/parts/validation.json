@@ -1,0 +1,595 @@
+{
+  "date": "2026-11-05",
+  "scope": "Explicit separately valid mathematical fragments; not full source mapping, cross-fragment TeX parsing or TransformMatchingTex",
+  "state": "promoted after explicit user release of wave8 hold; no commits",
+  "manim": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "role": "source identity/behavior review only; not a MathTex layout oracle"
+  },
+  "go": "go version go1.27.3 darwin/arm64",
+  "host": "macOS-15.7.1-arm64-arm-64bit",
+  "hardware": "Apple M2; shared host with concurrent workers",
+  "runtime": "Pure Go; cgo disabled/noasm; no new dependencies or native/process/Python runtime paths. Race instrumentation uses development-only CGO_ENABLED=1.",
+  "source_paths": [
+    "mathtex/parts.go",
+    "tests/_cases/mathtex/parts_test.go",
+    "tests/_cases/mathtex/parts_reference_test.go",
+    "tests/reference/mathtex_parts.py",
+    "docs/MATH_PARTS.md"
+  ],
+  "preexisting_mathtex_and_dependency_hashes_verified": {
+    "mathtex/LICENSE-STIX.txt": "57b93bf939274bf62481e40b5314be0de7573b4fb5cc31916b390d849ebb8750",
+    "mathtex/README.md": "393f2fd88f1ed6e98bef191d3fae21e71dcb827679ecf6443eb8e9867e2d5b56",
+    "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+    "mathtex/array.go": "2245c49c9032f412e0be73143e8453922e203bf5451ed108f6612fe184f16ae2",
+    "mathtex/colors.go": "54c4f61daef1a28872a5da15b14e2c278c19a22c41be60d9d6070aba59a8566d",
+    "mathtex/delimiters.go": "f876fa5b5532d9b45ddb257c961ba4dc97d3b46f06c000aa966b932e53a2dbf5",
+    "mathtex/environments.go": "9c35d8d9774ea1385ff2b6926590f4d1f076d42b372ec0d72388f9fa231d4ea3",
+    "mathtex/fractions.go": "2935ff17905563fe14d99391343dec11a02b99979663482f64e1d960790f24ef",
+    "mathtex/math_alphabets.go": "fe4bdc4ce55608c4473a487e091d7cd68da883c3fa2ccca4c6d405568a191e3b",
+    "mathtex/math_alphabets_data.go": "7946ca5cd94dc28fbd19bfe162d5783cf80a808280b490c9925161ab44b55d31",
+    "mathtex/mathtex.go": "4cced6a6615dbfabebf15bad88b28aa03f5126863766a8f7f9152a81ce30fef7",
+    "mathtex/multiline.go": "51288ed32c249f1aed95e31b82e52a11c08bc27c56c5090cc382d424a65c3e40",
+    "mathtex/named_operators.go": "3771d39dd91667b09e8a16bdab318576c92f6a212f2bdd4933ee33c64c66f511",
+    "mathtex/operators.go": "d265224b05bf77f5f5fcd1810810addc0704e4340c70f43e0ed44f8987b29ff6",
+    "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+    "mathtex/set_symbols.go": "b0ed62b8a83fdbc43a8258e71cf88baa56e298f40d5df7cab60281648fac1d9a",
+    "mathtex/set_symbols_data.go": "944fd1d67bcaaed6914ff449b6e434cb6f9ea53b41d16c1891bd4de6dff16534",
+    "mathtex/stacks.go": "bd1b7a9e0d9716151340dd122cd141c7ee4b2c6057b27880e82afc164f47aca6",
+    "mathtex/substack.go": "3b07f9635e4e42abdfe6445c72100cd10ffac79ce4427edadf7d42e020949948",
+    "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+    "go.sum": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b"
+  },
+  "new_production_only": [
+    "mathtex/parts.go"
+  ],
+  "other_authored_scope": "Only new central mathtex tests, tests/data/mathtex/parts, tests/reference/mathtex_parts.py and docs/MATH_PARTS.md. Existing mathtex, root, shared documentation, examples and dependencies were not edited by this task.",
+  "api": [
+    "NewParts",
+    "LayoutParts",
+    "Parts.Object/Len/Metrics/Info/Part/Keys/Select/Copy/Snapshot",
+    "PartSelection.Len/Objects/Copy",
+    "PartsSnapshot.Object/Len/Metrics/Info/Part/Keys/Select"
+  ],
+  "checks": [
+    {
+      "name": "staged-focused",
+      "command": "go test -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex -run ^TestParts -count=1 -v",
+      "CGO_ENABLED": "0",
+      "log": "staged-focused.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "2cbc60ee3f3d03c044868d95e9999ba729bda53b57093705d4added9710174c9"
+    },
+    {
+      "name": "staged-package",
+      "command": "go test -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex -count=1",
+      "CGO_ENABLED": "0",
+      "log": "staged-package.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "b35bc556ff39e4a6e94555778b4a1efb1b3cab02099b82b3d0b7f14c9ddc7fc5"
+    },
+    {
+      "name": "staged-vet",
+      "command": "go vet -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex",
+      "CGO_ENABLED": "0",
+      "log": "staged-vet.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "staged-focused-race",
+      "command": "go test -race -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex -run ^TestParts -count=1",
+      "CGO_ENABLED": "1",
+      "log": "staged-race.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "63b9d3969d4a8ac9702fd701758ba9573daa9803d39aa0d9f1fdd8322e26a45e"
+    },
+    {
+      "name": "promoted-focused-independent",
+      "command": "go run -tags noasm ./tests/cmd/run -pkg=mathtex -run ^TestParts -count=1 -v",
+      "CGO_ENABLED": "0",
+      "log": "independent-results.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "3bc97e328fcd967a1a2a799d7513aea89eda908a184474bc7e2de73d63c0230d"
+    },
+    {
+      "name": "promoted-entire-mathtex-race",
+      "command": "go test -race -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex -count=1",
+      "CGO_ENABLED": "1",
+      "log": "race-results.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "affb5b3cd1cb856da0137f3694c9f8d0f72945b5569ec2d82873666e009e9a47"
+    },
+    {
+      "name": "required-full-noasm",
+      "command": "go test -tags noasm -count=1 ./...",
+      "CGO_ENABLED": "0",
+      "log": "noasm-results.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "e62bce35edccda9fb1f9782bdadaabc7fcb72c1522fbbcc2e4cf322370024dac"
+    },
+    {
+      "name": "required-full-vet",
+      "command": "go vet -tags noasm ./...",
+      "CGO_ENABLED": "0",
+      "log": "vet-results.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "required-purecheck",
+      "command": "go run -tags noasm ./cmd/purecheck",
+      "CGO_ENABLED": "0",
+      "log": "purecheck-results.txt",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "37eaeffbb661a7493a0d69173f45d501da450fd1b1cf69b40605fd4edfb83014"
+    }
+  ],
+  "promoted_all_27_packages": {
+    "command": [
+      "go",
+      "run",
+      "-tags",
+      "noasm",
+      "./tests/cmd/run",
+      "-pkg=audio",
+      "-pkg=cmd/gomath",
+      "-pkg=code",
+      "-pkg=compat",
+      "-pkg=examples/scenes",
+      "-pkg=export",
+      "-pkg=field",
+      "-pkg=geom",
+      "-pkg=graph",
+      "-pkg=internal/grid",
+      "-pkg=internal/h264",
+      "-pkg=linalg",
+      "-pkg=mathtex",
+      "-pkg=matrix",
+      "-pkg=network",
+      "-pkg=number",
+      "-pkg=path",
+      "-pkg=rasterimage",
+      "-pkg=render",
+      "-pkg=root",
+      "-pkg=scene3d",
+      "-pkg=sparse",
+      "-pkg=subtitle",
+      "-pkg=svg",
+      "-pkg=table",
+      "-pkg=text",
+      "-pkg=three",
+      "-count=1"
+    ],
+    "CGO_ENABLED": "0",
+    "excluded_staged_packages": [
+      "svg/_wave9"
+    ],
+    "packages": [
+      "audio",
+      "cmd/gomath",
+      "code",
+      "compat",
+      "examples/scenes",
+      "export",
+      "field",
+      "geom",
+      "graph",
+      "internal/grid",
+      "internal/h264",
+      "linalg",
+      "mathtex",
+      "matrix",
+      "network",
+      "number",
+      "path",
+      "rasterimage",
+      "render",
+      "root",
+      "scene3d",
+      "sparse",
+      "subtitle",
+      "svg",
+      "table",
+      "text",
+      "three"
+    ],
+    "passed": true,
+    "returncode": 0,
+    "wall_seconds": 48.981
+  },
+  "prior_full_check": {
+    "passed": false,
+    "returncode": 1,
+    "log": "noasm-staged-svg-failure.txt",
+    "reason": "Concurrent unfinished svg/_wave9 tests were temporarily selected as a standalone package by the central harness. Its staging directories were subsequently removed by their owner; the final unfiltered full check passed."
+  },
+  "independent": {
+    "expressions": 9,
+    "interior_transform_frames": 4,
+    "times": [
+      0.35,
+      0.7
+    ],
+    "image_size": [
+      768,
+      768
+    ],
+    "frame_width": 6,
+    "ppem": 128,
+    "generator_versions": {
+      "Python": "3.11.5",
+      "fontTools": "4.45.1",
+      "CairoSVG": "2.7.1",
+      "Cairo": "1.18.4"
+    },
+    "oracle": "Original source-font quadratic geometry + manual finite fragment layout + Cairo pixels; no Go output consumed",
+    "metrics": [
+      {
+        "name": "baseline",
+        "mae": 0.0192260742,
+        "rms": 0.563234956,
+        "maximum_channel_error": 56,
+        "ink_iou": 0.995550485
+      },
+      {
+        "name": "repeated",
+        "mae": 0.00588819716,
+        "rms": 0.209117178,
+        "maximum_channel_error": 19,
+        "ink_iou": 0.999129773
+      },
+      {
+        "name": "zero-ink",
+        "mae": 0.00377909342,
+        "rms": 0.17438683,
+        "maximum_channel_error": 24,
+        "ink_iou": 0.99820981
+      },
+      {
+        "name": "color-scope",
+        "mae": 0.00903320312,
+        "rms": 0.355819138,
+        "maximum_channel_error": 56,
+        "ink_iou": 0.995550485
+      },
+      {
+        "name": "fractions",
+        "mae": 0.0155622694,
+        "rms": 0.427890418,
+        "maximum_channel_error": 33,
+        "ink_iou": 0.996669997
+      },
+      {
+        "name": "face-scope",
+        "mae": 0.019938151,
+        "rms": 0.564596907,
+        "maximum_channel_error": 56,
+        "ink_iou": 0.994568002
+      },
+      {
+        "name": "italic",
+        "mae": 0.0221625434,
+        "rms": 0.579890674,
+        "maximum_channel_error": 45,
+        "ink_iou": 0.993647192
+      },
+      {
+        "name": "bold-italic",
+        "mae": 0.0157029894,
+        "rms": 0.40566949,
+        "maximum_channel_error": 37,
+        "ink_iou": 0.998071764
+      },
+      {
+        "name": "hidden-fraction",
+        "mae": 0.00486077203,
+        "rms": 0.192642338,
+        "maximum_channel_error": 22,
+        "ink_iou": 0.998064932
+      },
+      {
+        "name": "transform-whole-035",
+        "mae": 0.0147637261,
+        "rms": 0.375691095,
+        "maximum_channel_error": 23,
+        "ink_iou": 0.996956573
+      },
+      {
+        "name": "transform-whole-070",
+        "mae": 0.0210283067,
+        "rms": 0.593708595,
+        "maximum_channel_error": 46,
+        "ink_iou": 0.994241607
+      },
+      {
+        "name": "transform-part-035",
+        "mae": 0.0192447238,
+        "rms": 0.563696824,
+        "maximum_channel_error": 56,
+        "ink_iou": 0.995750546
+      },
+      {
+        "name": "transform-part-070",
+        "mae": 0.0193193224,
+        "rms": 0.565621463,
+        "maximum_channel_error": 56,
+        "ink_iou": 0.995662368
+      }
+    ],
+    "worst_mae": 0.0221625434,
+    "worst_rms": 0.593708595,
+    "minimum_ink_iou": 0.993647192
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go test -tags noasm -overlay tests/data/mathtex/parts/overlay.json ./mathtex -run ^$ -bench ^BenchmarkPartsLayout$ -benchmem -count=3",
+    "workload": [
+      "\\mathbf{n}",
+      "=",
+      "\\frac{n}{g}",
+      "\\quad",
+      "\\phantom{W}",
+      "\\begin{array}{|c|}\\hline n\\\\g\\\\\\hline\\end{array}"
+    ],
+    "font_size": 0.55,
+    "fonts": "embedded Go regular/bold",
+    "images": 0,
+    "frames": 0,
+    "includes": "Parsing, glyph outlines, placement, checking and allocations for six fragments",
+    "excludes": "Rasterization, frame sampling, file I/O, Python/Cairo references; not a global speed or memory comparison",
+    "contention": "Both runs on a shared host, with other validation/workers active; variable timings are retained without an isolated performance claim.",
+    "runs": [
+      {
+        "log": "benchmark.txt",
+        "samples": [
+          {
+            "ns_per_op": 81463,
+            "bytes_per_op": 122360,
+            "allocs_per_op": 414
+          },
+          {
+            "ns_per_op": 157209,
+            "bytes_per_op": 122339,
+            "allocs_per_op": 414
+          },
+          {
+            "ns_per_op": 82039,
+            "bytes_per_op": 122341,
+            "allocs_per_op": 414
+          }
+        ]
+      },
+      {
+        "log": "benchmark-promoted.txt",
+        "samples": [
+          {
+            "ns_per_op": 295596,
+            "bytes_per_op": 122373,
+            "allocs_per_op": 414
+          },
+          {
+            "ns_per_op": 301105,
+            "bytes_per_op": 122324,
+            "allocs_per_op": 414
+          },
+          {
+            "ns_per_op": 276315,
+            "bytes_per_op": 122346,
+            "allocs_per_op": 414
+          }
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "No concatenated MathTex equivalence claim; zero implicit boundary gap and no cross-boundary kerning/declaration scope.",
+    "Only separately valid supported mathtex fragments; no TeX macro expansion across fragments.",
+    "Metrics/placements retain initial authoring values after transforms.",
+    "Live authoring requires exclusive access; captured immutable snapshots may be read concurrently.",
+    "Parent owns updates to shared parity/status documents."
+  ],
+  "files": {
+    "mathtex/parts.go": {
+      "sha256": "bd982e8999af84e95aa4f0f4f0b1b619139570992cce311a6fbcaa20aab2e412",
+      "bytes": 12773
+    },
+    "tests/_cases/mathtex/parts_test.go": {
+      "sha256": "be07bc609b20d18aa2e4ac6ab3783ea206a1defbdc3c5ffc97ef43dc1c365fd0",
+      "bytes": 14771
+    },
+    "tests/_cases/mathtex/parts_reference_test.go": {
+      "sha256": "0236ac30e9098f596b16dbfd4c523d23a80370d3740b0cdd7ca7654f429609ec",
+      "bytes": 6718
+    },
+    "tests/reference/mathtex_parts.py": {
+      "sha256": "a59ce9a925cb2455d80c6eb63916aeaf2f40f3d12b225bb3e4e8198061001020",
+      "bytes": 9298
+    },
+    "docs/MATH_PARTS.md": {
+      "sha256": "88c1c512a4dc8874450bba4e5e71441f3be8a855e31242bfe869a94fce898e81",
+      "bytes": 9800
+    },
+    "tests/data/mathtex/parts/baseline.png": {
+      "sha256": "c5cbc85caf79bdb971c5235105f1a4dca491d9877e543e621cff6cb2c3ff0fc8",
+      "bytes": 9165
+    },
+    "tests/data/mathtex/parts/baseline.svg": {
+      "sha256": "330876916514bf0f1511fb708987842402af68fb1a32bef975e8ca9a52a56861",
+      "bytes": 1061
+    },
+    "tests/data/mathtex/parts/benchmark-promoted.txt": {
+      "sha256": "1d48df510f49dd3909d8d0443c52f576d326209d966cf8e4389f764801695df9",
+      "bytes": 348
+    },
+    "tests/data/mathtex/parts/benchmark.txt": {
+      "sha256": "76f435b297c9ebb4d33ce39b27f114a9310a443919d07b9a112b9212b794fd01",
+      "bytes": 348
+    },
+    "tests/data/mathtex/parts/bold-italic.png": {
+      "sha256": "e4ad665fc30276ef39fbc7e062714abeddd3274c0323f3833a314e9aaebf770a",
+      "bytes": 9928
+    },
+    "tests/data/mathtex/parts/bold-italic.svg": {
+      "sha256": "803755f1ffaad737162f9275ff252ab900893f2b2a098fd06851cee80b6c8924",
+      "bytes": 1106
+    },
+    "tests/data/mathtex/parts/color-scope.png": {
+      "sha256": "874e5d21f02b5d7336e8c1949e06296161bade99a4b3ed0f97164edccbec89e0",
+      "bytes": 7963
+    },
+    "tests/data/mathtex/parts/color-scope.svg": {
+      "sha256": "5c37eb5b6837e0d2ebf7075b4391ede028f1a72044c3febfabfaf5c6bbc2d0e8",
+      "bytes": 1061
+    },
+    "tests/data/mathtex/parts/existing-package-sha256.json": {
+      "sha256": "172406545b381b6b1217d8041e8a92ed8ecb21c0dfe86ab63cde0fa170bb79d6",
+      "bytes": 1973
+    },
+    "tests/data/mathtex/parts/face-scope.png": {
+      "sha256": "d9753067006e7bbc34e2597cca3f3833fa9b968257b2038c2fd35e94dec2349e",
+      "bytes": 9568
+    },
+    "tests/data/mathtex/parts/face-scope.svg": {
+      "sha256": "a7d4c71effcf1f386540b1d6a8d52059905f1d3126dbd1069c34f97687703637",
+      "bytes": 1080
+    },
+    "tests/data/mathtex/parts/fractions.png": {
+      "sha256": "2185b7acedc969ac079cb7a4ee122108043e734da3d1aa3b0bc4e1cbf4a92f49",
+      "bytes": 8540
+    },
+    "tests/data/mathtex/parts/fractions.svg": {
+      "sha256": "40f70ac7719bda715ab9335730fc600029358aed7f06c5107482b08e064439d1",
+      "bytes": 1780
+    },
+    "tests/data/mathtex/parts/hidden-fraction.png": {
+      "sha256": "bc229a69e867b26707f6cc55e221eb7b14e1c47c9e7467ef286d66562f818201",
+      "bytes": 5257
+    },
+    "tests/data/mathtex/parts/hidden-fraction.svg": {
+      "sha256": "2de6a5b3a9bfb35a36c707bfefbc29b132b0b533d495dfdb9651b9e19e43c597",
+      "bytes": 906
+    },
+    "tests/data/mathtex/parts/independent-results.txt": {
+      "sha256": "3bc97e328fcd967a1a2a799d7513aea89eda908a184474bc7e2de73d63c0230d",
+      "bytes": 4125
+    },
+    "tests/data/mathtex/parts/italic.png": {
+      "sha256": "5c5129b340505acaa156bdcbef37f91ab56a69bf825c659831166a4f44cba76f",
+      "bytes": 10433
+    },
+    "tests/data/mathtex/parts/italic.svg": {
+      "sha256": "dca96631e8d3483ad399e4c27e146bb24559e02b9cc0ddbdb9cd85ca1720732a",
+      "bytes": 1116
+    },
+    "tests/data/mathtex/parts/noasm-results.txt": {
+      "sha256": "e62bce35edccda9fb1f9782bdadaabc7fcb72c1522fbbcc2e4cf322370024dac",
+      "bytes": 1111
+    },
+    "tests/data/mathtex/parts/noasm-staged-svg-failure.txt": {
+      "sha256": "af2fc0932d2420e2f4560973ab57179ed73022d21cc79867fb297c48ba13e80f",
+      "bytes": 3420
+    },
+    "tests/data/mathtex/parts/overlay.json": {
+      "sha256": "44ac3053905a60fcb0260fa3eb9005e86267c2e8b171114828ac7f0e56921323",
+      "bytes": 6731
+    },
+    "tests/data/mathtex/parts/promoted-packages-check.json": {
+      "sha256": "69ae9fb85cc22b4c6550596fb973379601161044c64260fdeda5d1c280a874eb",
+      "bytes": 1196
+    },
+    "tests/data/mathtex/parts/promoted-packages-results.txt": {
+      "sha256": "3abfdc5213769b57e306d8f60f0297853c3db7da15e0db09cf4d1d242a8ac1af",
+      "bytes": 720
+    },
+    "tests/data/mathtex/parts/purecheck-results.txt": {
+      "sha256": "37eaeffbb661a7493a0d69173f45d501da450fd1b1cf69b40605fd4edfb83014",
+      "bytes": 105
+    },
+    "tests/data/mathtex/parts/race-results.txt": {
+      "sha256": "affb5b3cd1cb856da0137f3694c9f8d0f72945b5569ec2d82873666e009e9a47",
+      "bytes": 28
+    },
+    "tests/data/mathtex/parts/reference.json": {
+      "sha256": "da94c003fa18ba6b2fb1e30937c7d99aa823e8aee4aab228e2418c722cc07702",
+      "bytes": 17051
+    },
+    "tests/data/mathtex/parts/repeated.png": {
+      "sha256": "278997531b3dcbce1c51b12cd4a8b4c1982c686be254e8dfa2032354437485c6",
+      "bytes": 6318
+    },
+    "tests/data/mathtex/parts/repeated.svg": {
+      "sha256": "f614b7b7764cee2ad79c8bcc7101bfcff061a2e7c44a64e1e2f9256ca5bb3473",
+      "bytes": 1424
+    },
+    "tests/data/mathtex/parts/staged-focused.txt": {
+      "sha256": "2cbc60ee3f3d03c044868d95e9999ba729bda53b57093705d4added9710174c9",
+      "bytes": 4125
+    },
+    "tests/data/mathtex/parts/staged-package.txt": {
+      "sha256": "b35bc556ff39e4a6e94555778b4a1efb1b3cab02099b82b3d0b7f14c9ddc7fc5",
+      "bytes": 27
+    },
+    "tests/data/mathtex/parts/staged-race.txt": {
+      "sha256": "63b9d3969d4a8ac9702fd701758ba9573daa9803d39aa0d9f1fdd8322e26a45e",
+      "bytes": 27
+    },
+    "tests/data/mathtex/parts/staged-vet.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests/data/mathtex/parts/transform-part-035.png": {
+      "sha256": "7bd75609301fac1f6e3ee4188b39855694368a76a1c23a796688d85c5248ab8e",
+      "bytes": 9158
+    },
+    "tests/data/mathtex/parts/transform-part-035.svg": {
+      "sha256": "b01a7420d8a5ab397a18f585f8b84632e2dac9b551225a300c9b126d74de2057",
+      "bytes": 1164
+    },
+    "tests/data/mathtex/parts/transform-part-070.png": {
+      "sha256": "098236a480c802f261bb6a5cc7e5182a862d06c8c9c4adb65f26d48d90b108ea",
+      "bytes": 9151
+    },
+    "tests/data/mathtex/parts/transform-part-070.svg": {
+      "sha256": "bcb75ff72f245afd815b7867db40ebfcdc5aa6d249ac8c256cb88a56e3416893",
+      "bytes": 1177
+    },
+    "tests/data/mathtex/parts/transform-whole-035.png": {
+      "sha256": "4bca603a4766a37089e8c568d45511ea50a2b7e0171e73583efc55d81632c72f",
+      "bytes": 9019
+    },
+    "tests/data/mathtex/parts/transform-whole-035.svg": {
+      "sha256": "6c9eee448eaa36711ac4f83feee6ba9950a3e99011f0f481832bea72cd22ecfb",
+      "bytes": 1164
+    },
+    "tests/data/mathtex/parts/transform-whole-070.png": {
+      "sha256": "6282af456ab6783c29b5d6f98088772c982725cddc032f693afec8bc656717e2",
+      "bytes": 8868
+    },
+    "tests/data/mathtex/parts/transform-whole-070.svg": {
+      "sha256": "cc6cac7e1908a702a5e3323e5cde85ec9b37f432404b3cc7b3119501349c986b",
+      "bytes": 1177
+    },
+    "tests/data/mathtex/parts/vet-results.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests/data/mathtex/parts/zero-ink.png": {
+      "sha256": "ff763047865b52f698f5a681d995db50ecde9fde39e848b9baf56aa8ff4f0c27",
+      "bytes": 4505
+    },
+    "tests/data/mathtex/parts/zero-ink.svg": {
+      "sha256": "7175654fc43667b338bffdc2c5ef2af928092cc960e1592152b9c2c80de60c3f",
+      "bytes": 759
+    }
+  }
+}

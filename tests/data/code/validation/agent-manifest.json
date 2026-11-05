@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "scope": "wave8 bounded Go Code candidate; stage paths are mapped to their eventual promotion paths",
+  "manim": {
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "path": "manim/mobject/text/code_mobject.py",
+    "sha256": "d88f13c596745ac55e303a9ad26e6618ae1cae61697084a9d8f1a0e564a28088"
+  },
+  "font": {
+    "path": "golang.org/x/image@v0.47.0/font/gofont/ttfs/Go-Mono.ttf",
+    "sha256": "8bc66a0154bbf69cd24e5bde41a12ec9495c8a242c5def2255e4a164900f1ed7"
+  },
+  "go": {
+    "version": "go version go1.27.3 darwin/arm64",
+    "scanner_sha256": "74c70571b540912e5e236fc1220752e92a1b94e15840f665a6b348cbc4bfaa90"
+  },
+  "files": {
+    "code/code.go": "fa17c6e3d23e51069d10eaa686763e9b06eb1fd8dc61892d7cb2dee89f869f80",
+    "code/lexer.go": "184862de69f1361350923d01e1f3eaa284fb2fc8372587b545575e9be132c6e3",
+    "code/options.go": "96f1f628ae4f90c0b0807966218c56a815bfe493e81df6497d0d43fd4adcca2a",
+    "code/ownership.go": "726a50ebeffc478cb0fde0f325cf2e9d01c85aebc8a88e35fd884ef04f5a0448",
+    "docs/CODE.md": "57455bf5adac207405c981d4799672c81228200ddf8a54ac7dddede3c74dda22",
+    "tests/_cases/code/code_test.go": "b008ceda2b6193c134f2ccbe364e8e03f4d8a9ffcbe1d60734f2620957eb656d",
+    "tests/_cases/code/manifest_test.go": "364a382ba450dd31a67a6d40dec4b93bd46a436cdaceef1ea94d47cfda1b92a6",
+    "tests/_cases/code/reference_test.go": "3be0994afea615043e36e74f06f87ef64fd9cb04364082d32f21c5950d326a70",
+    "tests/data/code/FONT_LICENSE.txt": "dc588a7ba9130043b67c2380cc03cc6644ed3557f6d5e8589b96acba1c64e343",
+    "tests/data/code/animation-source.png": "14862a3ff26cd25b016f7d40f4396858cefb4837590021e1ebfb87abfa3a7805",
+    "tests/data/code/animation-source.svg": "c33d3e10ca7fbc746863445042ff9e73accc36ab3a47fec4b6938fe04ee00f74",
+    "tests/data/code/animation-target.png": "b9ea5ca1c77a6b0ca1a15feeba03b5c66346747d2e3c18abaaa4fd2248d22277",
+    "tests/data/code/animation-target.svg": "48b63f9d3090a9c10f2db5aed26631fa332c44ef77888668ca9bf9c7703fdf86",
+    "tests/data/code/broken.ttf": "aebafd39d17eb5a3c76a5c50216a67162e0af3f98059767b8428066b3b5b28f9",
+    "tests/data/code/grid.png": "6c6809ebb02c3439bf9bfa389418f4fdb95097f1a58a19d546e1eb13b2cf8352",
+    "tests/data/code/grid.svg": "668a53a6d860f42f5ff987aba701e7ac84a3c9125d82e099c0048f50865b615c",
+    "tests/data/code/multiline.png": "c31dbfcfbef85785cb25fa0ff5f0ac5d4c2dae9d25ca37f4ef0103f761e4f2d7",
+    "tests/data/code/multiline.svg": "adb60500f42bc6f6783713d5091511bdddfa72342916fa43d7c538e7c07e8a98",
+    "tests/data/code/reference.json": "faeefaf572d8e733c9104561b0fe63fb63db96d349a2e15af4c9a22ef14d32b9",
+    "tests/data/code/tokens.png": "123f54ab7b91193d86726f939a6145eb38c722744a0aec61ba47b822c4561c04",
+    "tests/data/code/tokens.svg": "44a840cfbc0669f5bc7670f7e01f4e2f36d3c9dee8bd3347362636f045aac178",
+    "tests/data/code/transform-000.png": "e992e03e2d1725e22971d06c5623a02934fcf9cdbc3d2b41903af87d5709d5a2",
+    "tests/data/code/transform-000.svg": "640829506c10b36f6c26830db611e64a2c909e86dc44234bc0378b3b37e61ef1",
+    "tests/data/code/transform-025.png": "1bbcb170e27f283584356ddbb8e46474b38df9d9c48af4d19402340ebe5ae711",
+    "tests/data/code/transform-025.svg": "e894fc6a90e2acaf51b0a6b8802046d0f45e7394b2620cd599dca7397646a686",
+    "tests/data/code/transform-050.png": "c227c06ed09dbb4aec343dcd568be23db11a4709ea99dea5b940391ff1fca99c",
+    "tests/data/code/transform-050.svg": "ab442973eda49e129fe9ed1db8818fd1eb43d0392254a6ba2bf39566428ed2d6",
+    "tests/data/code/transform-075.png": "64979d3ccbf3a0205df2aa473bc36464cc12d2339cadd85de7815cd71710e8e1",
+    "tests/data/code/transform-075.svg": "8334bd6d51e5b73ff5db37339149ae12dce2cfa3ba780829085d33b9c0f6968a",
+    "tests/data/code/transform-100.png": "b9ea5ca1c77a6b0ca1a15feeba03b5c66346747d2e3c18abaaa4fd2248d22277",
+    "tests/data/code/transform-100.svg": "b98dae9d2602dc2386f221927f988a83a85b08b3525556b3cd5454f4f992b43e",
+    "tests/data/code/whitespace.png": "3d0dab8bcbee4c9dd13d0811e32b7f7a0d1a7867c43272f56fd60ec85bf5e3b3",
+    "tests/data/code/whitespace.svg": "77d085da10c2e199dab43dd748af00ab4321d1ba52f5e0b137bac8cfa94eef1e",
+    "tests/data/code/write-000.png": "7425d87d1160e8e63ce917b5b5412165294143a78cb1eda7d98d6f84e8176c71",
+    "tests/data/code/write-000.svg": "0c976b3a6f80bcf932c916b5e4f4d4f52e55af82fef490e4cd769bd158d24677",
+    "tests/data/code/write-025.png": "90df5608d09fb946eb6080eb78b9c7593a23d69c7b89a9b8cc1512ea181654cc",
+    "tests/data/code/write-025.svg": "bdef09763bc7a6ff58f99d2ee93d2cf877d709ee0102df2fc94a79e1a37bcd78",
+    "tests/data/code/write-050.png": "feb8774bf14b75e87833da28a41838b04183759908c2badd5ac91dc4090b4d77",
+    "tests/data/code/write-050.svg": "bd1f39ba5ea7a694183fc2dadcf48ce17e9d16b9d591ccb9f1a5ebd8bb6c9b6d",
+    "tests/data/code/write-075.png": "e17ee9b62c9170fbfbfd244f332b3adbb6f84de6d532640815aee35d19f8138b",
+    "tests/data/code/write-075.svg": "964370132e6b540d1b869b62033b80adf8c8f4116283b4b29f2c4e2670cd1236",
+    "tests/data/code/write-100.png": "14862a3ff26cd25b016f7d40f4396858cefb4837590021e1ebfb87abfa3a7805",
+    "tests/data/code/write-100.svg": "c33d3e10ca7fbc746863445042ff9e73accc36ab3a47fec4b6938fe04ee00f74",
+    "tests/reference/code_layout.py": "4c09684a2f9e8ad9c39e8511a91a34d7afbc7391745cd86343a46785831d176f"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+  "source": "manim/mobject/three_d/three_dimensions.py",
+  "sha256": "9343af8b6ae55bbe6d8f2fbd240ed0248a178544ee3829d628973839508553a6",
+  "classes": [
+    "Line3D",
+    "Arrow3D"
+  ],
+  "scope": "Read-only source semantics: thickness radius, shaft shortened by height, conical tip at end; no matching default styling/topology or Manim render claim. Expected geometry and pixels use independent Go parameter/ray formulas, with no Manim runtime."
+}

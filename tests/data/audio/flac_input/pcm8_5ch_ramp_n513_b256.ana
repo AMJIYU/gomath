@@ -1,0 +1,145 @@
+frame=0	offset=86	bits=6392	blocksize=256	sample_rate=48000	channels=5	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=LPC	order=1	qlp_coeff_precision=6	quantization_level=5	residual_type=RICE	partition_order=4
+		qlp_coeff[0]=30
+		warmup[0]=-31
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=1
+		parameter[3]=3
+		parameter[4]=0
+		parameter[5]=0
+		parameter[6]=1
+		parameter[7]=3
+		parameter[8]=0
+		parameter[9]=1
+		parameter[10]=2
+		parameter[11]=3
+		parameter[12]=0
+		parameter[13]=1
+		parameter[14]=2
+		parameter[15]=3
+	subframe=1	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=4
+		warmup[0]=-31
+		parameter[0]=1
+		parameter[1]=1
+		parameter[2]=3
+		parameter[3]=3
+		parameter[4]=1
+		parameter[5]=3
+		parameter[6]=1
+		parameter[7]=3
+		parameter[8]=1
+		parameter[9]=3
+		parameter[10]=1
+		parameter[11]=3
+		parameter[12]=1
+		parameter[13]=3
+		parameter[14]=1
+		parameter[15]=3
+	subframe=2	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=0
+		warmup[0]=-31
+		parameter[0]=3
+	subframe=3	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=0
+		warmup[0]=-31
+		parameter[0]=3
+	subframe=4	wasted_bits=0	type=LPC	order=12	qlp_coeff_precision=6	quantization_level=6	residual_type=RICE	partition_order=0
+		qlp_coeff[0]=7
+		qlp_coeff[1]=-15
+		qlp_coeff[2]=-14
+		qlp_coeff[3]=-14
+		qlp_coeff[4]=-14
+		qlp_coeff[5]=-15
+		qlp_coeff[6]=-14
+		qlp_coeff[7]=-14
+		qlp_coeff[8]=-14
+		qlp_coeff[9]=-14
+		qlp_coeff[10]=-14
+		qlp_coeff[11]=20
+		warmup[0]=-31
+		warmup[1]=-26
+		warmup[2]=-21
+		warmup[3]=-16
+		warmup[4]=-11
+		warmup[5]=-6
+		warmup[6]=-1
+		warmup[7]=4
+		warmup[8]=9
+		warmup[9]=14
+		warmup[10]=19
+		warmup[11]=24
+		parameter[0]=3
+frame=1	offset=885	bits=6416	blocksize=256	sample_rate=48000	channels=5	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=4
+		warmup[0]=-27
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=0
+		parameter[3]=3
+		parameter[4]=0
+		parameter[5]=0
+		parameter[6]=0
+		parameter[7]=3
+		parameter[8]=0
+		parameter[9]=0
+		parameter[10]=0
+		parameter[11]=3
+		parameter[12]=0
+		parameter[13]=0
+		parameter[14]=0
+		parameter[15]=3
+	subframe=1	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=4
+		warmup[0]=-23
+		parameter[0]=1
+		parameter[1]=3
+		parameter[2]=1
+		parameter[3]=3
+		parameter[4]=1
+		parameter[5]=3
+		parameter[6]=1
+		parameter[7]=3
+		parameter[8]=1
+		parameter[9]=3
+		parameter[10]=1
+		parameter[11]=3
+		parameter[12]=1
+		parameter[13]=3
+		parameter[14]=1
+		parameter[15]=3
+	subframe=2	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=0
+		warmup[0]=-19
+		parameter[0]=3
+	subframe=3	wasted_bits=0	type=FIXED	order=1	residual_type=RICE	partition_order=0
+		warmup[0]=-15
+		parameter[0]=3
+	subframe=4	wasted_bits=0	type=LPC	order=12	qlp_coeff_precision=6	quantization_level=6	residual_type=RICE	partition_order=0
+		qlp_coeff[0]=7
+		qlp_coeff[1]=-14
+		qlp_coeff[2]=-15
+		qlp_coeff[3]=-14
+		qlp_coeff[4]=-14
+		qlp_coeff[5]=-14
+		qlp_coeff[6]=-14
+		qlp_coeff[7]=-14
+		qlp_coeff[8]=-14
+		qlp_coeff[9]=-14
+		qlp_coeff[10]=-14
+		qlp_coeff[11]=21
+		warmup[0]=-11
+		warmup[1]=-6
+		warmup[2]=-1
+		warmup[3]=4
+		warmup[4]=9
+		warmup[5]=14
+		warmup[6]=19
+		warmup[7]=24
+		warmup[8]=29
+		warmup[9]=-29
+		warmup[10]=-24
+		warmup[11]=-19
+		parameter[0]=3
+frame=2	offset=1687	bits=152	blocksize=1	sample_rate=48000	channels=5	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM
+	subframe=1	wasted_bits=0	type=VERBATIM
+	subframe=2	wasted_bits=0	type=VERBATIM
+	subframe=3	wasted_bits=0	type=VERBATIM
+	subframe=4	wasted_bits=0	type=VERBATIM

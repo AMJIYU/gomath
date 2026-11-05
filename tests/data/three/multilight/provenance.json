@@ -1,0 +1,77 @@
+{
+  "task": "fourth-wave bounded multiple world-space point lights",
+  "frozen_utc": "2026-11-04T08:34:13.321139+00:00",
+  "api": {
+    "kind": "three.PointLightList",
+    "sources": "three.Config.PointLights []three.PointLightSource",
+    "source_fields": [
+      "Position geom.Vec3",
+      "RGB [3]float64",
+      "Diffuse float64",
+      "Attenuation float64"
+    ],
+    "max_sources": 16,
+    "evaluation_default": 67108864,
+    "evaluation_max": 268435456
+  },
+  "source_sha256": {
+    "three/light.go": "2dbf66e3dc7b103911586f24ce484d962e9b2b0db73e477a323546c0fb21e2ef",
+    "three/renderer.go": "1008ed65370f61fc6e2b8f8eab48e070e2a2807e6672541f59c1cafd99924cc0",
+    "three/world_renderer.go": "d2d6724cc59ce8f8b24ff0d3be3e8a9ec29800d863b366eb79f7bddb730b74d5",
+    "three/README.md": "a97df7693e93ce4463f5b75cff9ccdd7a7d0a0cf97d7686d7c628f8d4bd1fcdd",
+    "docs/SCENE3D.md": "45a4f3edc52132249802edc8503502c1abc568c65cfb7f21cb79e4601957d27c",
+    "tests/_cases/three/multilight_test.go": "49ae5f8953284a56d622733298b0309d8b6cea7cde0fb6996da879f2e4f3f399",
+    "tests/_cases/three/multilight_decimal_test.go": "88c75bb6a459c67a0716daa1860a4c84ba5e91511c313e05bf5d0f0670d50f79",
+    "tests/_cases/three/multilight_legacy_test.go": "24df0dcf29b66b5ee4025cffabb0c63eba3cd730374c732f2f2ab16c61853cd6",
+    "tests/_cases/three/multilight_artifacts_test.go": "2060b8f8b312703177b74ec3cc815077327afc340dafb9beb933ece3c6339f33",
+    "tests/_cases/three/point_light_reference_test.go": "8d55990c290e9e4f363c3a240e8decf4783bab9ad288179109619cd427e229b4",
+    "tests/_cases/three/shadow_test.go": "681c542301c01ce351db28c60663e55d4fcefaff2328534e235988faf385011a",
+    "tests/_cases/scene3d/multilight_test.go": "97b680a6fdca4dd2204a34dbc255a88d042c6fbcf611fd66003a7b4e72d1b259",
+    "tests/reference/three_multilight.py": "168ed1b234c4feafaab5b8a569854ca519ed4ddd64a9101ad5c6fb7f21751d23"
+  },
+  "evidence_sha256": {
+    "tests/data/three/multilight/benchmark.txt": "aa8e3d28c189c8268e5d9a5b5056219615743a9da931d2f7ea77b5c5940c3deb",
+    "tests/data/three/multilight/build.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/multilight/environment.txt": "09bd8cb495a8d158c3cdec402bd18af7a5e2ae91783e0bccd31e21fc737d48f5",
+    "tests/data/three/multilight/legacy-before.txt": "9f24cd8b52679b7ae1468810070e0db75c057d8365cf383d2750cf06729a269b",
+    "tests/data/three/multilight/multiple-point-lights.png": "27bc0b256ce2211dec91b875676a3c4ce9c4d4c5a81fd312f16d04746ffddb27",
+    "tests/data/three/multilight/native-dependencies.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/multilight/numerical.json": "e17d4fa90df9cdae00ac610e0c0999def84642e3c9b74d197ac8a2ce16d90048",
+    "tests/data/three/multilight/race.txt": "810c7fc43b972ded6f36c0820fe7d4d506f38370c84ee694343f9e97b761f7d9",
+    "tests/data/three/multilight/runtime-forbidden-imports.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/data/three/multilight/suite.txt": "922f75b9e730067384497a1e3c69b1d6277024645fe157dab1ae3e9c00314a8a",
+    "tests/data/three/multilight/targeted.txt": "b9ecf18f312b5163fb9ad657e4abb314d4a262eb56ef22cb959a045cf60ce1a5",
+    "tests/data/three/multilight/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "commands": {
+    "suite": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -pkg=scene3d -count=1",
+    "race": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -pkg=scene3d -race -count=1",
+    "build": "CGO_ENABLED=0 go build -tags noasm ./three ./scene3d",
+    "vet": "CGO_ENABLED=0 go vet -tags noasm ./three ./scene3d",
+    "benchmark": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=three -run '^$' -bench '^(BenchmarkRenderMultiLight|BenchmarkRenderPointLight|BenchmarkRenderSphere)$' -benchmem -benchtime=500ms -count=3 -p 1"
+  },
+  "results": {
+    "suite": "ok  \tgomath/scene3d\t4.413s\nok  \tgomath/three\t2.867s\n",
+    "race": "ok  \tgomath/scene3d\t29.916s\nok  \tgomath/three\t19.571s\n",
+    "build": "",
+    "vet": ""
+  },
+  "oracle": {
+    "decimal_cases": 70,
+    "decimal_digits": 90,
+    "relative_tolerance": 2e-14,
+    "ray_frame_comparisons": 288,
+    "channel_tolerance": 1,
+    "directional_legacy_hashes": 6,
+    "single_point_legacy_hashes": 9
+  },
+  "limits": [
+    "Only static point-source lists; no directional+point blend or light keys",
+    "Enabled directional shadows with PointLightList rejected",
+    "No point or translucent shadows; point clouds remain unlit",
+    "No context/deadline cancellation; quota bounds illumination evaluations, not triangle coverage",
+    "Opaque traversal/overdraw can affect quota success",
+    "Shared host external load uncontrolled; no performance speedup claim",
+    "No whole-repository or full Manim parity claim"
+  ]
+}

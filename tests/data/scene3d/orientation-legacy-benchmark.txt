@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/scene3d
+cpu: Apple M2
+BenchmarkTimeline/Sample/ssaa1-8         	      54	   4814833 ns/op	 1405068 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8         	      55	   4689090 ns/op	 1404866 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa1-8         	      57	   4705504 ns/op	 1404868 B/op	      25 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      22	  11922034 ns/op	 4476949 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      24	  12360462 ns/op	 4476932 B/op	      27 allocs/op
+BenchmarkTimeline/Sample/ssaa2-8         	      22	  11999436 ns/op	 4476928 B/op	      27 allocs/op
+PASS
+ok  	gomath/scene3d	1.665s

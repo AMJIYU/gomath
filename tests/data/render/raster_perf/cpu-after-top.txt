@@ -1,0 +1,72 @@
+File: after.test
+Type: cpu
+Time: 2026-11-05 10:09:39 CST
+Duration: 8.01s, Total samples = 6.48s (80.92%)
+Showing nodes accounting for 6.12s, 94.44% of 6.48s total
+Dropped 79 nodes (cum <= 0.03s)
+      flat  flat%   sum%        cum   cum%
+     0.88s 13.58% 13.58%      0.88s 13.58%  math.archMin
+     0.74s 11.42% 25.00%      0.74s 11.42%  math.archMax
+     0.56s  8.64% 33.64%      0.62s  9.57%  image/draw.drawRGBAMaskOver
+     0.53s  8.18% 41.82%      3.51s 54.17%  gomath/render.(*Rasterizer).compositeGradientMask
+     0.37s  5.71% 47.53%      0.37s  5.71%  runtime.kevent
+     0.36s  5.56% 53.09%      2.08s 32.10%  gomath.clamp
+     0.34s  5.25% 58.33%      0.45s  6.94%  golang.org/x/image/vector.(*Rasterizer).rasterizeDstRGBASrcUniformOpOver
+     0.31s  4.78% 63.12%      2.07s 31.94%  gomath.Color.NRGBA
+     0.22s  3.40% 66.51%      0.83s 12.81%  gomath.(*Gradient).ColorAt
+     0.20s  3.09% 69.60%      5.85s 90.28%  gomath/render.(*Rasterizer).paintClipped
+     0.20s  3.09% 72.69%      0.94s 14.51%  math.Max (inline)
+     0.18s  2.78% 75.46%      0.20s  3.09%  golang.org/x/image/vector.fixedAccumulateOpOver
+     0.17s  2.62% 78.09%      0.26s  4.01%  gomath/render.bilinear
+     0.15s  2.31% 80.40%      0.55s  8.49%  gomath/render.(*Rasterizer).paintBitmap
+     0.12s  1.85% 82.25%      0.12s  1.85%  internal/runtime/atomic.(*UnsafePointer).Load (inline)
+     0.11s  1.70% 83.95%      0.11s  1.70%  runtime.asyncPreempt
+     0.09s  1.39% 85.34%      0.09s  1.39%  gomath.(*Gradient).Validate
+     0.09s  1.39% 86.73%      0.09s  1.39%  image.(*RGBA).PixOffset (inline)
+     0.07s  1.08% 87.81%      0.95s 14.66%  math.Min (inline)
+     0.06s  0.93% 88.73%      0.12s  1.85%  gomath.gradientPoint
+     0.06s  0.93% 89.66%      0.06s  0.93%  math.IsInf (inline)
+     0.06s  0.93% 90.59%      0.06s  0.93%  sort.Search (inline)
+     0.05s  0.77% 91.36%      0.05s  0.77%  golang.org/x/image/vector.(*Rasterizer).fixedLineTo
+     0.05s  0.77% 92.13%      0.06s  0.93%  golang.org/x/image/vector.fixedAccumulateMask (inline)
+     0.05s  0.77% 92.90%      0.06s  0.93%  image.(*RGBA).RGBAAt
+     0.03s  0.46% 93.36%      0.17s  2.62%  gomath/path.flatten
+     0.03s  0.46% 93.83%      0.04s  0.62%  image.(*Alpha).PixOffset (inline)
+     0.01s  0.15% 93.98%      0.05s  0.77%  golang.org/x/image/vector.(*Rasterizer).Reset
+     0.01s  0.15% 94.14%      0.04s  0.62%  golang.org/x/image/vector.(*Rasterizer).setUseFloatingPointMath
+     0.01s  0.15% 94.29%      0.07s  1.08%  runtime.bgsweep
+     0.01s  0.15% 94.44%      0.08s  1.23%  runtime.findRunnable
+         0     0% 94.44%      0.65s 10.03%  golang.org/x/image/vector.(*Rasterizer).Draw
+         0     0% 94.44%      0.05s  0.77%  golang.org/x/image/vector.(*Rasterizer).LineTo
+         0     0% 94.44%      0.06s  0.93%  golang.org/x/image/vector.(*Rasterizer).accumulateMask
+         0     0% 94.44%      0.20s  3.09%  golang.org/x/image/vector.(*Rasterizer).rasterizeDstAlphaSrcOpaqueOpOver
+         0     0% 94.44%      0.06s  0.93%  gomath.(*Bitmap).RGBAAt (inline)
+         0     0% 94.44%      0.06s  0.93%  gomath/geom.Vec3.Finite
+         0     0% 94.44%      0.06s  0.93%  gomath/geom.finite (inline)
+         0     0% 94.44%      0.17s  2.62%  gomath/path.Path.Flatten
+         0     0% 94.44%      5.89s 90.90%  gomath/render.(*Rasterizer).Render
+         0     0% 94.44%      4.84s 74.69%  gomath/render.(*Rasterizer).paint
+         0     0% 94.44%      3.58s 55.25%  gomath/render.(*Rasterizer).paintGradient
+         0     0% 94.44%      5.89s 90.90%  gomath/render.(*Rasterizer).renderFrame
+         0     0% 94.44%      5.90s 91.05%  gomath/render.BenchmarkRasterPerfMixed.func1
+         0     0% 94.44%      0.64s  9.88%  image/draw.DrawMask
+         0     0% 94.44%      0.05s  0.77%  runtime.(*timers).check
+         0     0% 94.44%      0.23s  3.55%  runtime.gcMarkTermination.func3
+         0     0% 94.44%      0.13s  2.01%  runtime.gcStart.func4
+         0     0% 94.44%      0.13s  2.01%  runtime.gopreempt_m (inline)
+         0     0% 94.44%      0.13s  2.01%  runtime.goschedImpl
+         0     0% 94.44%      0.13s  2.01%  runtime.growslice
+         0     0% 94.44%      0.11s  1.70%  runtime.mProf_Malloc
+         0     0% 94.44%      0.15s  2.31%  runtime.mallocgc
+         0     0% 94.44%      0.12s  1.85%  runtime.mallocgcSmallNoscan
+         0     0% 94.44%      0.11s  1.70%  runtime.morestack
+         0     0% 94.44%      0.37s  5.71%  runtime.netpoll
+         0     0% 94.44%      0.13s  2.01%  runtime.newstack
+         0     0% 94.44%      0.11s  1.70%  runtime.profilealloc
+         0     0% 94.44%      0.12s  1.85%  runtime.schedule
+         0     0% 94.44%      0.37s  5.71%  runtime.startTheWorldWithSema
+         0     0% 94.44%      0.11s  1.70%  runtime.stkbucket
+         0     0% 94.44%      0.43s  6.64%  runtime.systemstack
+         0     0% 94.44%      5.85s 90.28%  testing.(*B).launch
+         0     0% 94.44%      0.05s  0.77%  testing.(*B).run1.func1
+         0     0% 94.44%      5.90s 91.05%  testing.(*B).runN

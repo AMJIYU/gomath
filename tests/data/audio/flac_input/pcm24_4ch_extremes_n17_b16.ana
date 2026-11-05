@@ -1,0 +1,74 @@
+frame=0	offset=86	bits=1176	blocksize=16	sample_rate=48000	channels=4	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=FIXED	order=0	residual_type=RICE2	partition_order=4
+		parameter[0]=23
+		parameter[1]=23
+		parameter[2]=0
+		parameter[3]=0
+		parameter[4]=0
+		parameter[5]=23
+		parameter[6]=23
+		parameter[7]=0
+		parameter[8]=0
+		parameter[9]=0
+		parameter[10]=23
+		parameter[11]=23
+		parameter[12]=0
+		parameter[13]=0
+		parameter[14]=0
+		parameter[15]=23
+	subframe=1	wasted_bits=0	type=FIXED	order=0	residual_type=RICE2	partition_order=4
+		parameter[0]=23
+		parameter[1]=0
+		parameter[2]=0
+		parameter[3]=0
+		parameter[4]=23
+		parameter[5]=23
+		parameter[6]=0
+		parameter[7]=0
+		parameter[8]=0
+		parameter[9]=23
+		parameter[10]=23
+		parameter[11]=0
+		parameter[12]=0
+		parameter[13]=0
+		parameter[14]=23
+		parameter[15]=23
+	subframe=2	wasted_bits=0	type=FIXED	order=0	residual_type=RICE2	partition_order=4
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=0
+		parameter[3]=23
+		parameter[4]=23
+		parameter[5]=0
+		parameter[6]=0
+		parameter[7]=0
+		parameter[8]=23
+		parameter[9]=23
+		parameter[10]=0
+		parameter[11]=0
+		parameter[12]=0
+		parameter[13]=23
+		parameter[14]=23
+		parameter[15]=0
+	subframe=3	wasted_bits=0	type=FIXED	order=0	residual_type=RICE2	partition_order=4
+		parameter[0]=0
+		parameter[1]=0
+		parameter[2]=23
+		parameter[3]=23
+		parameter[4]=0
+		parameter[5]=0
+		parameter[6]=0
+		parameter[7]=23
+		parameter[8]=23
+		parameter[9]=0
+		parameter[10]=0
+		parameter[11]=0
+		parameter[12]=23
+		parameter[13]=23
+		parameter[14]=0
+		parameter[15]=0
+frame=1	offset=233	bits=200	blocksize=1	sample_rate=48000	channels=4	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=0	type=VERBATIM
+	subframe=1	wasted_bits=0	type=VERBATIM
+	subframe=2	wasted_bits=0	type=VERBATIM
+	subframe=3	wasted_bits=0	type=VERBATIM

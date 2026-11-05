@@ -1,0 +1,26 @@
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-00.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-00.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-01.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-01.svg
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-02.png
+/Users/eleven/Documents/工作经历/cloudtorch/gomath/artifacts/curve-edit-wave9-svg-20261105/frame-02.svg
+[
+  {
+    "time": 0.5,
+    "RGBA_MAE": 0.08353515625,
+    "maximum_channel_delta": 23,
+    "fraction_pixels_any_channel_over_8": 0.0029470486111111112
+  },
+  {
+    "time": 1.7,
+    "RGBA_MAE": 0.08008897569444444,
+    "maximum_channel_delta": 21,
+    "fraction_pixels_any_channel_over_8": 0.0028819444444444444
+  },
+  {
+    "time": 3.3,
+    "RGBA_MAE": 0.08249674479166667,
+    "maximum_channel_delta": 54,
+    "fraction_pixels_any_channel_over_8": 0.0030251736111111113
+  }
+]

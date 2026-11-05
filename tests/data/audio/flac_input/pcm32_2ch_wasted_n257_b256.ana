@@ -1,0 +1,16 @@
+frame=0	offset=86	bits=2808	blocksize=256	sample_rate=48000	channels=2	channel_assignment=LEFT_SIDE
+	subframe=0	wasted_bits=7	type=FIXED	order=4	residual_type=RICE	partition_order=0
+		warmup[0]=0
+		warmup[1]=338006
+		warmup[2]=675688
+		warmup[3]=1012721
+		parameter[0]=3
+	subframe=1	wasted_bits=7	type=FIXED	order=4	residual_type=RICE	partition_order=0
+		warmup[0]=0
+		warmup[1]=-32699
+		warmup[2]=-65293
+		warmup[3]=-97680
+		parameter[0]=3
+frame=1	offset=437	bits=152	blocksize=1	sample_rate=48000	channels=2	channel_assignment=INDEPENDENT
+	subframe=0	wasted_bits=7	type=VERBATIM
+	subframe=1	wasted_bits=7	type=VERBATIM

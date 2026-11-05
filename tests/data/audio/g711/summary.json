@@ -1,0 +1,42 @@
+{
+  "API": "ReadWAV(io.Reader,WAVReadOptions) (*PCM,error); existing options/Limits unchanged",
+  "supported": "Direct tags6/7;8-bit;1..64 indexed channels;ChannelMask=0;1..768000Hz",
+  "fmt": "exact18bytes,cbSize0,blockAlign=channels,avgBytesPerSec=rate*channels",
+  "fact": "required exact4bytes;frame count equals dataBytes/channels;no tail trim or insertion even for empty input",
+  "pad": "all pads present,within RIFF and zero for G711;older PCM/IEEE/IMA pad policies unchanged",
+  "zeros": "alaw has no exactzero;mulaw0x7f and0xff map to positivefloat64zero",
+  "normalization": "signed16 interval midpoint /32768",
+  "unsupported": [
+    "16byte legacy fmt",
+    "unknown fmt extensions",
+    "extensible compression GUID/speaker layouts",
+    "unknown chunks/other compression",
+    "partial channel frames",
+    "fact mismatch or missingfact",
+    "nonzero/missing pad"
+  ],
+  "supportedIndependentStreams": 42,
+  "exactIndependentScalarSamples": 207898,
+  "independentDecoders": "FFmpeg8.0.1 and libsndfile1.2.2;complete PCM and lengths exact to independentITU midpoint oracle",
+  "arithmeticDisagreements": 0,
+  "explicitRejectionReferences": 16,
+  "externalAcceptsAllRejectedReferences": true,
+  "oldWAVIndependentRegression": "15complete streams,135scalar samples exact;oldIMA/AIFF/FLACfixtures unchanged and tested",
+  "fullAudioCoveragePercent": 95.8,
+  "g711SourceCoveredStatements": 38,
+  "g711SourceTotalStatements": 38,
+  "fullAudioTestLog": "ok  \tgomath/audio\t1.241s\tcoverage: 95.8% of statements",
+  "fullRaceLog": "ok  \tgomath/audio\t9.286s",
+  "fuzz": "20s PASS;797240executions",
+  "vet": "PASS CGO0/noasm ./audio",
+  "linux386": "PASS CGO0/noasm audio build",
+  "runtimeExternalDependencies": 0,
+  "allocation": "one exact output array+32KiB scratch per decode;shared4096B tables once per package",
+  "productionModified": [
+    "audio/wav.go",
+    "audio/README.md"
+  ],
+  "productionAdded": [
+    "audio/wav_g711.go"
+  ]
+}

@@ -1,0 +1,787 @@
+WORK=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654
+mkdir -p $WORK/b001/
+mkdir -p $WORK/b017/
+mkdir -p $WORK/b012/
+mkdir -p $WORK/b018/
+mkdir -p $WORK/b006/
+mkdir -p $WORK/b025/
+mkdir -p $WORK/b014/
+mkdir -p $WORK/b026/
+mkdir -p $WORK/b021/
+mkdir -p $WORK/b028/
+mkdir -p $WORK/b015/
+mkdir -p $WORK/b008/
+mkdir -p $WORK/b029/
+mkdir -p $WORK/b030/
+mkdir -p $WORK/b045/
+mkdir -p $WORK/b043/
+mkdir -p $WORK/b033/
+mkdir -p $WORK/b031/
+mkdir -p $WORK/b016/
+mkdir -p $WORK/b061/
+mkdir -p $WORK/b083/
+mkdir -p $WORK/b092/
+mkdir -p $WORK/b087/
+mkdir -p $WORK/b097/
+mkdir -p $WORK/b056/
+mkdir -p $WORK/b011/
+mkdir -p $WORK/b134/
+mkdir -p $WORK/b040/
+mkdir -p $WORK/b102/
+mkdir -p $WORK/b152/
+mkdir -p $WORK/b091/
+mkdir -p $WORK/b013/
+mkdir -p $WORK/b088/
+mkdir -p $WORK/b010/
+mkdir -p $WORK/b019/
+mkdir -p $WORK/b023/
+mkdir -p $WORK/b005/
+mkdir -p $WORK/b020/
+mkdir -p $WORK/b032/
+mkdir -p $WORK/b027/
+mkdir -p $WORK/b041/
+mkdir -p $WORK/b022/
+mkdir -p $WORK/b054/
+mkdir -p $WORK/b039/
+mkdir -p $WORK/b132/
+mkdir -p $WORK/b101/
+mkdir -p $WORK/b024/
+mkdir -p $WORK/b009/
+mkdir -p $WORK/b004/
+mkdir -p $WORK/b003/
+mkdir -p $WORK/b036/
+mkdir -p $WORK/b038/
+mkdir -p $WORK/b037/
+mkdir -p $WORK/b042/
+mkdir -p $WORK/b046/
+mkdir -p $WORK/b044/
+mkdir -p $WORK/b048/
+mkdir -p $WORK/b047/
+mkdir -p $WORK/b035/
+mkdir -p $WORK/b034/
+mkdir -p $WORK/b050/
+mkdir -p $WORK/b049/
+mkdir -p $WORK/b051/
+mkdir -p $WORK/b052/
+mkdir -p $WORK/b002/
+mkdir -p $WORK/b055/
+mkdir -p $WORK/b053/
+mkdir -p $WORK/b058/
+mkdir -p $WORK/b059/
+mkdir -p $WORK/b065/
+mkdir -p $WORK/b068/
+mkdir -p $WORK/b064/
+mkdir -p $WORK/b063/
+mkdir -p $WORK/b103/
+mkdir -p $WORK/b096/
+mkdir -p $WORK/b098/
+mkdir -p $WORK/b077/
+mkdir -p $WORK/b073/
+mkdir -p $WORK/b062/
+mkdir -p $WORK/b089/
+mkdir -p $WORK/b069/
+mkdir -p $WORK/b076/
+mkdir -p $WORK/b067/
+mkdir -p $WORK/b113/
+mkdir -p $WORK/b118/
+mkdir -p $WORK/b128/
+mkdir -p $WORK/b082/
+mkdir -p $WORK/b060/
+mkdir -p $WORK/b066/
+mkdir -p $WORK/b070/
+mkdir -p $WORK/b071/
+mkdir -p $WORK/b081/
+mkdir -p $WORK/b133/
+mkdir -p $WORK/b127/
+mkdir -p $WORK/b139/
+mkdir -p $WORK/b057/
+mkdir -p $WORK/b136/
+mkdir -p $WORK/b093/
+mkdir -p $WORK/b086/
+mkdir -p $WORK/b090/
+mkdir -p $WORK/b138/
+mkdir -p $WORK/b135/
+mkdir -p $WORK/b147/
+mkdir -p $WORK/b137/
+mkdir -p $WORK/b140/
+mkdir -p $WORK/b085/
+mkdir -p $WORK/b146/
+mkdir -p $WORK/b149/
+mkdir -p $WORK/b151/
+mkdir -p $WORK/b148/
+mkdir -p $WORK/b153/
+mkdir -p $WORK/b084/
+mkdir -p $WORK/b150/
+mkdir -p $WORK/b100/
+mkdir -p $WORK/b080/
+mkdir -p $WORK/b095/
+mkdir -p $WORK/b099/
+mkdir -p $WORK/b094/
+mkdir -p $WORK/b145/
+mkdir -p $WORK/b079/
+mkdir -p $WORK/b144/
+mkdir -p $WORK/b143/
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/importcfg << 'EOF' # internal
+# import config
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile gomath/audio=/Users/eleven/Library/Caches/go-build/ec/ecd6a5a093593fa5601fcb136187fee70c8d045fda1a812023beffeda89724b6-d
+packagefile gomath/geom=/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d
+packagefile gomath/path=/Users/eleven/Library/Caches/go-build/23/23b07f908ca3d474cc6778b24fef3f988ecef8ef38ad314cbe15a4f816d400fa-d
+packagefile gomath/subtitle=/Users/eleven/Library/Caches/go-build/e5/e5985f176f16cbd9307c60f928bb51b0fc4fc0da416b7d35937b1201a52362e8-d
+packagefile image=/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d
+packagefile image/color=/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d
+packagefile image/draw=/Users/eleven/Library/Caches/go-build/cf/cff0ec965ae7beeeba1634f23b91b927fdb854b4de9aa63994cc58c45eafbbc2-d
+packagefile math=/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d
+packagefile reflect=/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d
+packagefile sort=/Users/eleven/Library/Caches/go-build/1f/1fef4228cc0ad8cce08a196e5bf4e8d4dbdcdc21a119e50393f95a18289978e3-d
+packagefile strconv=/Users/eleven/Library/Caches/go-build/8b/8bc7def7258622c64abfc7956cb39f10f2c84ad2a135fbfa152979ba49849523-d
+packagefile strings=/Users/eleven/Library/Caches/go-build/58/58a30026031e0930455c41b7a50e2dacaa9e6a6e6e032a0b4f5d9484d3c4f54d-d
+packagefile sync/atomic=/Users/eleven/Library/Caches/go-build/28/283f309aece0b6a2dc50c5cfa46d32384da7f035ce53066e8e8ea4b5c3b6595f-d
+EOF
+mkdir -p $WORK/b078/
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath
+/usr/local/go/pkg/tool/darwin_arm64/compile -o $WORK/b143/_pkg_.a -trimpath "$WORK/b143=>" -p gomath -lang=go1.26 -complete -installsuffix race -buildid QYG5B229sQe4G_3Exrjk/QYG5B229sQe4G_3Exrjk -goversion go1.27.3 -c=8 -shared -race -nolocalimports -importcfg $WORK/b143/importcfg -pack ./animation.go ./bitmap.go ./camera.go ./caption.go ./clip.go ./color.go ./composition.go ./crossfade.go ./dash.go ./doc.go ./dynamic.go ./flash.go ./indication.go ./movement.go ./object.go ./primitives.go ./rate.go ./replay.go ./scene.go ./shapes.go ./sound.go ./succession.go ./tracker.go
+mkdir -p $WORK/b075/
+mkdir -p $WORK/b131/
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/importcfg << 'EOF' # internal
+# import config
+packagefile bytes=/Users/eleven/Library/Caches/go-build/94/94af215e8d465dae7c0762a02757eef0e5395dbd4451693a58560378664d504f-d
+packagefile cmp=/Users/eleven/Library/Caches/go-build/e7/e7935f8a4d649ae0a9579aeddf5933b655d5fe1c035fe708ba1f32addf9bc628-d
+packagefile crypto/sha256=/Users/eleven/Library/Caches/go-build/36/36739ffc4c9c614e2ab378c307a93d0a1d6e28456d159f9cded138d5c4e5dd93-d
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile gomath/geom=/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d
+packagefile image=/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d
+packagefile image/color=/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d
+packagefile image/draw=/Users/eleven/Library/Caches/go-build/cf/cff0ec965ae7beeeba1634f23b91b927fdb854b4de9aa63994cc58c45eafbbc2-d
+packagefile image/png=/Users/eleven/Library/Caches/go-build/fc/fca824d2eabfe063bf0e1cfffccac992d2beb0819c51e428ac8ba7870ab0dfcf-d
+packagefile math=/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d
+packagefile math/rand/v2=/Users/eleven/Library/Caches/go-build/07/07064ab142c2167e4038ecc800aa403a24f3b52dcd905eb714ee3357bc9e84a6-d
+packagefile os=/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d
+packagefile path/filepath=/Users/eleven/Library/Caches/go-build/4c/4cfacb4f2db9ef5bf2f79bd8612ab3dceb4eadbbc389113a62c3dc9bb7858682-d
+packagefile reflect=/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d
+packagefile slices=/Users/eleven/Library/Caches/go-build/df/df9c4862ddf8a9bca7ace5c8c58f6be22056e1e214443474d7aa527eb9739d0e-d
+packagefile strings=/Users/eleven/Library/Caches/go-build/58/58a30026031e0930455c41b7a50e2dacaa9e6a6e6e032a0b4f5d9484d3c4f54d-d
+packagefile sync=/Users/eleven/Library/Caches/go-build/e5/e593c780907c8e9ba161ed9454b7652ce70eb9eb9ca3a599f0ec78a77d3628e6-d
+packagefile testing=/Users/eleven/Library/Caches/go-build/61/6191f583dfafc789ec3599a3987374ba4fec2b417bcf19c6226a9ede5e76a7f8-d
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile gomath/geom=/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d
+packagefile image=/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d
+packagefile image/color=/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d
+packagefile math=/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d
+packagefile reflect=/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d
+packagefile slices=/Users/eleven/Library/Caches/go-build/df/df9c4862ddf8a9bca7ace5c8c58f6be22056e1e214443474d7aa527eb9739d0e-d
+packagefile sort=/Users/eleven/Library/Caches/go-build/1f/1fef4228cc0ad8cce08a196e5bf4e8d4dbdcdc21a119e50393f95a18289978e3-d
+EOF
+/usr/local/go/pkg/tool/darwin_arm64/compile -o $WORK/b131/_pkg_.a -trimpath "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/camera_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/camera_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/mesh_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/mesh_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_legacy_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_legacy_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_reference_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_reference_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_render_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_render_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/points_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/points_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitive_render_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/primitive_render_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitives_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/primitives_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/renderer_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/renderer_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/sampling_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/sampling_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_bounds_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_bounds_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_reference_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_reference_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/texture_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/texture_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/textured_renderer_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/textured_renderer_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/transparency_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/transparency_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/camera_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/camera_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/mesh_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/mesh_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_legacy_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_legacy_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_reference_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_reference_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_light_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_render_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/point_render_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/points_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/points_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitive_render_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/primitive_render_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitives_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/primitives_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/renderer_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/renderer_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/sampling_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/sampling_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_artifacts_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_artifacts_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_bounds_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_bounds_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_reference_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_reference_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/texture_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/texture_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/textured_renderer_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/textured_renderer_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/transparency_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/transparency_test.go;/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/example_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/example_test.go;$WORK/b131=>" -p gomath/three -lang=go1.26 -complete -installsuffix race -buildid 2c9mh4wmtV-Uy3L8LPXn/2c9mh4wmtV-Uy3L8LPXn -goversion go1.27.3 -c=8 -shared -race -nolocalimports -importcfg $WORK/b131/importcfg -pack ./three/camera.go ./three/light.go ./three/mesh.go ./three/points.go ./three/primitives.go ./three/renderer.go ./three/sampling.go ./three/shadow.go ./three/texture.go ./three/texture_fragments.go ./three/textured_renderer.go ./three/transparency.go ./three/world_renderer.go ./tests/_cases/three/camera_test.go ./tests/_cases/three/mesh_test.go ./tests/_cases/three/point_artifacts_test.go ./tests/_cases/three/point_light_artifacts_test.go ./tests/_cases/three/point_light_legacy_test.go ./tests/_cases/three/point_light_reference_test.go ./tests/_cases/three/point_light_test.go ./tests/_cases/three/point_render_test.go ./tests/_cases/three/points_test.go ./tests/_cases/three/primitive_render_test.go ./tests/_cases/three/primitives_test.go ./tests/_cases/three/renderer_test.go ./tests/_cases/three/sampling_test.go ./tests/_cases/three/shadow_artifacts_test.go ./tests/_cases/three/shadow_bounds_test.go ./tests/_cases/three/shadow_reference_test.go ./tests/_cases/three/shadow_test.go ./tests/_cases/three/texture_test.go ./tests/_cases/three/textured_renderer_test.go ./tests/_cases/three/transparency_test.go
+go tool buildid -w $WORK/b143/_pkg_.a # internal
+cp $WORK/b143/_pkg_.a /Users/eleven/Library/Caches/go-build/9a/9a9d1db6a1ad2ce459c1d40db54a58ef18dbfecb4baa200067bea1469453553e-d # internal
+mkdir -p $WORK/b142/
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/vet.cfg << 'EOF' # internal
+{
+	"ID": "gomath",
+	"Compiler": "gc",
+	"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+	"ImportPath": "gomath",
+	"GoFiles": [
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/animation.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/bitmap.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/camera.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/caption.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/clip.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/color.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/composition.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/crossfade.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/dash.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/doc.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/dynamic.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/flash.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/indication.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/movement.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/object.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/primitives.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/rate.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/replay.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/scene.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/shapes.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/sound.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/succession.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tracker.go"
+	],
+	"NonGoFiles": [],
+	"IgnoredFiles": [],
+	"Module": {
+		"Path": "gomath",
+		"Version": "",
+		"Replace": null,
+		"Time": null,
+		"Main": true,
+		"Indirect": false,
+		"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+		"GoMod": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/go.mod",
+		"GoVersion": "1.26.0",
+		"Error": null
+	},
+	"ImportMap": {
+		"fmt": "fmt",
+		"gomath/audio": "gomath/audio",
+		"gomath/geom": "gomath/geom",
+		"gomath/path": "gomath/path",
+		"gomath/subtitle": "gomath/subtitle",
+		"image": "image",
+		"image/color": "image/color",
+		"image/draw": "image/draw",
+		"math": "math",
+		"reflect": "reflect",
+		"sort": "sort",
+		"strconv": "strconv",
+		"strings": "strings",
+		"sync/atomic": "sync/atomic"
+	},
+	"PackageFile": {
+		"fmt": "/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d",
+		"gomath/audio": "/Users/eleven/Library/Caches/go-build/ec/ecd6a5a093593fa5601fcb136187fee70c8d045fda1a812023beffeda89724b6-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d",
+		"gomath/path": "/Users/eleven/Library/Caches/go-build/23/23b07f908ca3d474cc6778b24fef3f988ecef8ef38ad314cbe15a4f816d400fa-d",
+		"gomath/subtitle": "/Users/eleven/Library/Caches/go-build/e5/e5985f176f16cbd9307c60f928bb51b0fc4fc0da416b7d35937b1201a52362e8-d",
+		"image": "/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d",
+		"image/color": "/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d",
+		"image/draw": "/Users/eleven/Library/Caches/go-build/cf/cff0ec965ae7beeeba1634f23b91b927fdb854b4de9aa63994cc58c45eafbbc2-d",
+		"math": "/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d",
+		"reflect": "/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d",
+		"sort": "/Users/eleven/Library/Caches/go-build/1f/1fef4228cc0ad8cce08a196e5bf4e8d4dbdcdc21a119e50393f95a18289978e3-d",
+		"strconv": "/Users/eleven/Library/Caches/go-build/8b/8bc7def7258622c64abfc7956cb39f10f2c84ad2a135fbfa152979ba49849523-d",
+		"strings": "/Users/eleven/Library/Caches/go-build/58/58a30026031e0930455c41b7a50e2dacaa9e6a6e6e032a0b4f5d9484d3c4f54d-d",
+		"sync/atomic": "/Users/eleven/Library/Caches/go-build/28/283f309aece0b6a2dc50c5cfa46d32384da7f035ce53066e8e8ea4b5c3b6595f-d"
+	},
+	"Standard": {
+		"fmt": true,
+		"image": true,
+		"image/color": true,
+		"image/draw": true,
+		"math": true,
+		"reflect": true,
+		"sort": true,
+		"strconv": true,
+		"strings": true,
+		"sync/atomic": true
+	},
+	"PackageVetx": {
+		"fmt": "/Users/eleven/Library/Caches/go-build/e0/e01fa449e201ed8e1f2095518d563afee357f3e398cd6db38c4d05996a96d42d-d",
+		"gomath/audio": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"gomath/path": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"gomath/subtitle": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/color": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/draw": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"math": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"reflect": "/Users/eleven/Library/Caches/go-build/94/94570e8afccd6151378c95364329b32c09e595fbfb03323586c3b17c44217f20-d",
+		"sort": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"strconv": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"strings": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"sync/atomic": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d"
+	},
+	"VetxOnly": true,
+	"VetxOutput": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/vet.out",
+	"Stdout": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/vet.stdout",
+	"GoVersion": "go1.26.0",
+	"FixArchive": "",
+	"SucceedOnTypecheckFailure": false
+}
+EOF
+TERM='dumb' /usr/local/go/pkg/tool/darwin_arm64/vet -atomic -bools -buildtag -directive -errorsas -ifaceassert -nilfunc -printf -slog -stdversion -stringintconv -tests $WORK/b143/vet.cfg
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/importcfg << 'EOF' # internal
+# import config
+packagefile bytes=/Users/eleven/Library/Caches/go-build/94/94af215e8d465dae7c0762a02757eef0e5395dbd4451693a58560378664d504f-d
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile gomath=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/_pkg_.a
+packagefile image=/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d
+packagefile image/gif=/Users/eleven/Library/Caches/go-build/f7/f7ffcba9f100a8ba48376b520b418535f0e03af2b1e04b45c0947c06ac925045-d
+packagefile image/jpeg=/Users/eleven/Library/Caches/go-build/7d/7d9e35362020aeedfaba73fd9f58396c4e680c2c808e4ddcfcecd930007f629f-d
+packagefile image/png=/Users/eleven/Library/Caches/go-build/fc/fca824d2eabfe063bf0e1cfffccac992d2beb0819c51e428ac8ba7870ab0dfcf-d
+packagefile io=/Users/eleven/Library/Caches/go-build/cb/cb91a04a67581aaef13a8a6438cda7629453778c61ff72a0e9a50b3467bbb258-d
+packagefile os=/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d
+EOF
+/usr/local/go/pkg/tool/darwin_arm64/compile -o $WORK/b142/_pkg_.a -trimpath "$WORK/b142=>" -p gomath/rasterimage -lang=go1.26 -complete -installsuffix race -buildid l7FyhFC5766MnHLRUoWk/l7FyhFC5766MnHLRUoWk -goversion go1.27.3 -c=8 -shared -race -nolocalimports -importcfg $WORK/b142/importcfg -pack ./rasterimage/image.go
+go tool buildid -w $WORK/b142/_pkg_.a # internal
+cp $WORK/b142/_pkg_.a /Users/eleven/Library/Caches/go-build/1f/1f3ebc0d8dac9f085a4ce7b94d3ff73d33a87d42e546200d8d781ab3fd169a0c-d # internal
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/vet.cfg << 'EOF' # internal
+{
+	"ID": "gomath/rasterimage",
+	"Compiler": "gc",
+	"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/rasterimage",
+	"ImportPath": "gomath/rasterimage",
+	"GoFiles": [
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/rasterimage/image.go"
+	],
+	"NonGoFiles": [],
+	"IgnoredFiles": [],
+	"Module": {
+		"Path": "gomath",
+		"Version": "",
+		"Replace": null,
+		"Time": null,
+		"Main": true,
+		"Indirect": false,
+		"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+		"GoMod": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/go.mod",
+		"GoVersion": "1.26.0",
+		"Error": null
+	},
+	"ImportMap": {
+		"bytes": "bytes",
+		"fmt": "fmt",
+		"gomath": "gomath",
+		"image": "image",
+		"image/gif": "image/gif",
+		"image/jpeg": "image/jpeg",
+		"image/png": "image/png",
+		"io": "io",
+		"os": "os"
+	},
+	"PackageFile": {
+		"bytes": "/Users/eleven/Library/Caches/go-build/94/94af215e8d465dae7c0762a02757eef0e5395dbd4451693a58560378664d504f-d",
+		"fmt": "/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d",
+		"gomath": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/_pkg_.a",
+		"image": "/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d",
+		"image/gif": "/Users/eleven/Library/Caches/go-build/f7/f7ffcba9f100a8ba48376b520b418535f0e03af2b1e04b45c0947c06ac925045-d",
+		"image/jpeg": "/Users/eleven/Library/Caches/go-build/7d/7d9e35362020aeedfaba73fd9f58396c4e680c2c808e4ddcfcecd930007f629f-d",
+		"image/png": "/Users/eleven/Library/Caches/go-build/fc/fca824d2eabfe063bf0e1cfffccac992d2beb0819c51e428ac8ba7870ab0dfcf-d",
+		"io": "/Users/eleven/Library/Caches/go-build/cb/cb91a04a67581aaef13a8a6438cda7629453778c61ff72a0e9a50b3467bbb258-d",
+		"os": "/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d"
+	},
+	"Standard": {
+		"bytes": true,
+		"fmt": true,
+		"image": true,
+		"image/gif": true,
+		"image/jpeg": true,
+		"image/png": true,
+		"io": true,
+		"os": true
+	},
+	"PackageVetx": {
+		"bytes": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"fmt": "/Users/eleven/Library/Caches/go-build/e0/e01fa449e201ed8e1f2095518d563afee357f3e398cd6db38c4d05996a96d42d-d",
+		"gomath": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/vet.out",
+		"image": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/gif": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/jpeg": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/png": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"io": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"os": "/Users/eleven/Library/Caches/go-build/92/92b5279f9a1357737f059d4ad947d6b252491ee67aa08a2811c47e3f4b53f55b-d"
+	},
+	"VetxOnly": true,
+	"VetxOutput": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/vet.out",
+	"Stdout": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/vet.stdout",
+	"GoVersion": "go1.26.0",
+	"FixArchive": "",
+	"SucceedOnTypecheckFailure": false
+}
+EOF
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath/rasterimage
+TERM='dumb' /usr/local/go/pkg/tool/darwin_arm64/vet -atomic -bools -buildtag -directive -errorsas -ifaceassert -nilfunc -printf -slog -stdversion -stringintconv -tests $WORK/b142/vet.cfg
+go tool buildid -w $WORK/b131/_pkg_.a # internal
+cp $WORK/b131/_pkg_.a /Users/eleven/Library/Caches/go-build/54/54f771fd872b7fa78224e4051440793fdbe8d75237aea3d49b403ae8d6765dcf-d # internal
+mkdir -p $WORK/b141/
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/importcfg << 'EOF' # internal
+# import config
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile gomath/geom=/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d
+packagefile gomath/rasterimage=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/_pkg_.a
+packagefile image/color=/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d
+packagefile math=/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d
+packagefile gomath/three=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/_pkg_.a
+EOF
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/vet.cfg << 'EOF' # internal
+{
+	"ID": "gomath/three",
+	"Compiler": "gc",
+	"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/three",
+	"ImportPath": "gomath/three",
+	"GoFiles": [
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/camera.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/light.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/mesh.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/points.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/primitives.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/renderer.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/sampling.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/shadow.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/texture.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/texture_fragments.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/textured_renderer.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/transparency.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/world_renderer.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/camera_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/mesh_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_artifacts_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_artifacts_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_legacy_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_reference_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_light_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/point_render_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/points_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitive_render_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/primitives_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/renderer_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/sampling_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_artifacts_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_bounds_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_reference_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/shadow_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/texture_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/textured_renderer_test.go",
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/transparency_test.go"
+	],
+	"NonGoFiles": [],
+	"IgnoredFiles": [],
+	"Module": {
+		"Path": "gomath",
+		"Version": "",
+		"Replace": null,
+		"Time": null,
+		"Main": true,
+		"Indirect": false,
+		"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+		"GoMod": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/go.mod",
+		"GoVersion": "1.26.0",
+		"Error": null
+	},
+	"ImportMap": {
+		"bytes": "bytes",
+		"cmp": "cmp",
+		"crypto/sha256": "crypto/sha256",
+		"fmt": "fmt",
+		"gomath/geom": "gomath/geom",
+		"image": "image",
+		"image/color": "image/color",
+		"image/draw": "image/draw",
+		"image/png": "image/png",
+		"math": "math",
+		"math/rand/v2": "math/rand/v2",
+		"os": "os",
+		"path/filepath": "path/filepath",
+		"reflect": "reflect",
+		"slices": "slices",
+		"sort": "sort",
+		"strings": "strings",
+		"sync": "sync",
+		"testing": "testing",
+		"unsafe": "unsafe"
+	},
+	"PackageFile": {
+		"bytes": "/Users/eleven/Library/Caches/go-build/94/94af215e8d465dae7c0762a02757eef0e5395dbd4451693a58560378664d504f-d",
+		"cmp": "/Users/eleven/Library/Caches/go-build/e7/e7935f8a4d649ae0a9579aeddf5933b655d5fe1c035fe708ba1f32addf9bc628-d",
+		"crypto/sha256": "/Users/eleven/Library/Caches/go-build/36/36739ffc4c9c614e2ab378c307a93d0a1d6e28456d159f9cded138d5c4e5dd93-d",
+		"fmt": "/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d",
+		"image": "/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d",
+		"image/color": "/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d",
+		"image/draw": "/Users/eleven/Library/Caches/go-build/cf/cff0ec965ae7beeeba1634f23b91b927fdb854b4de9aa63994cc58c45eafbbc2-d",
+		"image/png": "/Users/eleven/Library/Caches/go-build/fc/fca824d2eabfe063bf0e1cfffccac992d2beb0819c51e428ac8ba7870ab0dfcf-d",
+		"math": "/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d",
+		"math/rand/v2": "/Users/eleven/Library/Caches/go-build/07/07064ab142c2167e4038ecc800aa403a24f3b52dcd905eb714ee3357bc9e84a6-d",
+		"os": "/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d",
+		"path/filepath": "/Users/eleven/Library/Caches/go-build/4c/4cfacb4f2db9ef5bf2f79bd8612ab3dceb4eadbbc389113a62c3dc9bb7858682-d",
+		"reflect": "/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d",
+		"slices": "/Users/eleven/Library/Caches/go-build/df/df9c4862ddf8a9bca7ace5c8c58f6be22056e1e214443474d7aa527eb9739d0e-d",
+		"sort": "/Users/eleven/Library/Caches/go-build/1f/1fef4228cc0ad8cce08a196e5bf4e8d4dbdcdc21a119e50393f95a18289978e3-d",
+		"strings": "/Users/eleven/Library/Caches/go-build/58/58a30026031e0930455c41b7a50e2dacaa9e6a6e6e032a0b4f5d9484d3c4f54d-d",
+		"sync": "/Users/eleven/Library/Caches/go-build/e5/e593c780907c8e9ba161ed9454b7652ce70eb9eb9ca3a599f0ec78a77d3628e6-d",
+		"testing": "/Users/eleven/Library/Caches/go-build/61/6191f583dfafc789ec3599a3987374ba4fec2b417bcf19c6226a9ede5e76a7f8-d"
+	},
+	"Standard": {
+		"bytes": true,
+		"cmp": true,
+		"crypto/sha256": true,
+		"fmt": true,
+		"image": true,
+		"image/color": true,
+		"image/draw": true,
+		"image/png": true,
+		"math": true,
+		"math/rand/v2": true,
+		"os": true,
+		"path/filepath": true,
+		"reflect": true,
+		"slices": true,
+		"sort": true,
+		"strings": true,
+		"sync": true,
+		"testing": true,
+		"unsafe": true
+	},
+	"PackageVetx": {
+		"bytes": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"cmp": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"crypto/sha256": "/Users/eleven/Library/Caches/go-build/87/879e941c6cff8537553a4bd74a1249ca03d45c9b709e3096b54edb62ddd5a584-d",
+		"fmt": "/Users/eleven/Library/Caches/go-build/e0/e01fa449e201ed8e1f2095518d563afee357f3e398cd6db38c4d05996a96d42d-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/color": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/draw": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"image/png": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"math": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"math/rand/v2": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"os": "/Users/eleven/Library/Caches/go-build/92/92b5279f9a1357737f059d4ad947d6b252491ee67aa08a2811c47e3f4b53f55b-d",
+		"path/filepath": "/Users/eleven/Library/Caches/go-build/3e/3ec66971eec66051e3912bbd69025bdc06c0875e4214253fb88b226e7197b665-d",
+		"reflect": "/Users/eleven/Library/Caches/go-build/94/94570e8afccd6151378c95364329b32c09e595fbfb03323586c3b17c44217f20-d",
+		"slices": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"sort": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"strings": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"sync": "/Users/eleven/Library/Caches/go-build/94/94570e8afccd6151378c95364329b32c09e595fbfb03323586c3b17c44217f20-d",
+		"testing": "/Users/eleven/Library/Caches/go-build/f0/f0b3bb2f452990ae5295ccf82cbf68a408e4379de1e2ba6f66637baed7f65db0-d"
+	},
+	"VetxOnly": false,
+	"VetxOutput": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/vet.out",
+	"Stdout": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/vet.stdout",
+	"GoVersion": "go1.26.0",
+	"FixArchive": "",
+	"SucceedOnTypecheckFailure": false
+}
+EOF
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath
+/usr/local/go/pkg/tool/darwin_arm64/compile -o $WORK/b141/_pkg_.a -trimpath "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/example_test.go=>/Users/eleven/Documents/工作经历/cloudtorch/gomath/three/example_test.go;$WORK/b141=>" -p gomath/three_test -lang=go1.26 -complete -installsuffix race -buildid AM1jscACmVdo8hzFU20N/AM1jscACmVdo8hzFU20N -goversion go1.27.3 -c=8 -shared -race -nolocalimports -importcfg $WORK/b141/importcfg -pack ./tests/_cases/three/example_test.go
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath/three
+TERM='dumb' /usr/local/go/pkg/tool/darwin_arm64/vet -atomic -bools -buildtag -directive -errorsas -ifaceassert -nilfunc -printf -slog -stdversion -stringintconv -tests $WORK/b131/vet.cfg
+go tool buildid -w $WORK/b141/_pkg_.a # internal
+cp $WORK/b141/_pkg_.a /Users/eleven/Library/Caches/go-build/fa/faa0da6ce591fd69f2ca9386be5380485aadccc5f37373dcee83d06f97b679e8-d # internal
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b001/importcfg << 'EOF' # internal
+# import config
+packagefile os=/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d
+packagefile reflect=/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d
+packagefile testing=/Users/eleven/Library/Caches/go-build/61/6191f583dfafc789ec3599a3987374ba4fec2b417bcf19c6226a9ede5e76a7f8-d
+packagefile testing/internal/testdeps=/Users/eleven/Library/Caches/go-build/fe/fea840d314b5e52dcf15aa355b3ff19c96e8fd688dd4594531e605e6817ac593-d
+packagefile runtime=/Users/eleven/Library/Caches/go-build/4d/4d2d3fe21ef50d308d822568f84f60ec810ac7c54cd5541e1b589393d6026c2d-d
+packagefile runtime/race=/Users/eleven/Library/Caches/go-build/1d/1de023a601b7cdd5e63e5949fe6158bf2a0106daf73e47dfecf87be65b2268da-d
+packagefile gomath/three=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/_pkg_.a
+packagefile gomath/three_test=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/_pkg_.a
+EOF
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath
+/usr/local/go/pkg/tool/darwin_arm64/compile -o $WORK/b001/_pkg_.a -trimpath "$WORK/b001=>" -p main -lang=go1.26 -complete -installsuffix race -buildid 57Flg2iYhSuTlxMaKAsm/57Flg2iYhSuTlxMaKAsm -dwarf=false -goversion go1.27.3 -c=8 -shared -race -nolocalimports -importcfg $WORK/b001/importcfg -pack $WORK/b001/_testmain.go
+go tool buildid -w $WORK/b001/_pkg_.a # internal
+cp $WORK/b001/_pkg_.a /Users/eleven/Library/Caches/go-build/dd/dd416eaa23fb4aa7a2d8a42b117710914a450932e4ee407bdd9c4a87fcdd67b7-d # internal
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b001/importcfg.link << 'EOF' # internal
+packagefile gomath/three.test=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b001/_pkg_.a
+packagefile os=/Users/eleven/Library/Caches/go-build/07/07e39f1fac49fc7b27da45b07643e80d74673d99361c0f214df1c48579e94985-d
+packagefile reflect=/Users/eleven/Library/Caches/go-build/0b/0b1fbb78c648d77e8f4f19fd9576ab7a702dc673648ac16ee884b3c0dacc6625-d
+packagefile testing=/Users/eleven/Library/Caches/go-build/61/6191f583dfafc789ec3599a3987374ba4fec2b417bcf19c6226a9ede5e76a7f8-d
+packagefile testing/internal/testdeps=/Users/eleven/Library/Caches/go-build/fe/fea840d314b5e52dcf15aa355b3ff19c96e8fd688dd4594531e605e6817ac593-d
+packagefile runtime=/Users/eleven/Library/Caches/go-build/4d/4d2d3fe21ef50d308d822568f84f60ec810ac7c54cd5541e1b589393d6026c2d-d
+packagefile runtime/race=/Users/eleven/Library/Caches/go-build/1d/1de023a601b7cdd5e63e5949fe6158bf2a0106daf73e47dfecf87be65b2268da-d
+packagefile gomath/three=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/_pkg_.a
+packagefile gomath/three_test=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/_pkg_.a
+packagefile errors=/Users/eleven/Library/Caches/go-build/d5/d5a1a2359cc09805280e570b773aeb695c7113ea631f6c4e49788739dde851cf-d
+packagefile internal/bytealg=/Users/eleven/Library/Caches/go-build/ae/ae2b607c22e2f0dbc84c0c064b986690d0172f636606fe3b28b4519851e87a18-d
+packagefile internal/filepathlite=/Users/eleven/Library/Caches/go-build/11/119b483aa795d1d8a34bf51a31f34411fc50d6f79373fc0133a75e9890f361fc-d
+packagefile internal/poll=/Users/eleven/Library/Caches/go-build/46/46cd0147214cae70f157046dd11b864f350cd7b0a937bce4dbcca4281ee817e5-d
+packagefile internal/strconv=/Users/eleven/Library/Caches/go-build/40/40cc0fb2e3065cfecd4b52b491e2319055d6d2821259d0a51b7dc1d656c15b36-d
+packagefile internal/stringslite=/Users/eleven/Library/Caches/go-build/19/19f87902e7b6a5bc825a5022be9190dbbcc5dfb20671e2b817ca7a8b138a6369-d
+packagefile internal/syscall/execenv=/Users/eleven/Library/Caches/go-build/56/569d17432fc4c6cc2801e4552a6270510b9ee7fad95d2d9838bcbc835fd82ec6-d
+packagefile internal/syscall/unix=/Users/eleven/Library/Caches/go-build/a6/a64683cd4277ae866ff99abd6c8313f576eefccb33c3586f5544d12cb09ad63c-d
+packagefile internal/testlog=/Users/eleven/Library/Caches/go-build/fe/fefba1a73591ae2e0b8ea92bda4b82f617bab83f1b6b644ecf8f74f1d20e96d9-d
+packagefile io=/Users/eleven/Library/Caches/go-build/cb/cb91a04a67581aaef13a8a6438cda7629453778c61ff72a0e9a50b3467bbb258-d
+packagefile io/fs=/Users/eleven/Library/Caches/go-build/c0/c05675dbc561c6ef8addbe6fc738e9aca44e62296a0984c3b006d6eb7ee76e1e-d
+packagefile slices=/Users/eleven/Library/Caches/go-build/df/df9c4862ddf8a9bca7ace5c8c58f6be22056e1e214443474d7aa527eb9739d0e-d
+packagefile sync=/Users/eleven/Library/Caches/go-build/e5/e593c780907c8e9ba161ed9454b7652ce70eb9eb9ca3a599f0ec78a77d3628e6-d
+packagefile sync/atomic=/Users/eleven/Library/Caches/go-build/28/283f309aece0b6a2dc50c5cfa46d32384da7f035ce53066e8e8ea4b5c3b6595f-d
+packagefile syscall=/Users/eleven/Library/Caches/go-build/78/782b41190070e654bef8eb6cf44736b2435e4b471d71b2ac52b9d6b3caf991b5-d
+packagefile time=/Users/eleven/Library/Caches/go-build/04/0492c25d6459edb515820a9d6cbdfd0320cb51d7e35af09d7b5753145e5ed4d8-d
+packagefile internal/abi=/Users/eleven/Library/Caches/go-build/fe/feddacec011048dd258161d5a1b38cb12b9c1b6a3281a283f660f801ce44084f-d
+packagefile internal/goarch=/Users/eleven/Library/Caches/go-build/83/836bf72f6defe57db9277b416a2e8287c00b796f6d62ec8377c7d5d6d7081419-d
+packagefile internal/goexperiment=/Users/eleven/Library/Caches/go-build/56/56f4261edb7219aa796ce4f995f3257c44986ff1d292fcd85e455ac7419c15eb-d
+packagefile internal/race=/Users/eleven/Library/Caches/go-build/13/139e0b77e2eee400708fc7bf2c456d7aececdf3eaf0d0c6d2c4199681570bf2f-d
+packagefile internal/runtime/maps=/Users/eleven/Library/Caches/go-build/10/1022afdc39660d458432d494983e6029dcbb3419a596864e77de6fef16daef72-d
+packagefile internal/runtime/sys=/Users/eleven/Library/Caches/go-build/f8/f8c89564c5f120602a32a4c53eca159e0f926301369750938fb5c40f21d0ef98-d
+packagefile internal/unsafeheader=/Users/eleven/Library/Caches/go-build/00/00258a2fe2ec9f2d94303ee42f792250e51128f7efcadf443652143e3feecf81-d
+packagefile iter=/Users/eleven/Library/Caches/go-build/25/2547b7af2753d782bb6897991173e9e9c90d462c16b86e641f9a0f078c5dbe3e-d
+packagefile math=/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d
+packagefile strconv=/Users/eleven/Library/Caches/go-build/8b/8bc7def7258622c64abfc7956cb39f10f2c84ad2a135fbfa152979ba49849523-d
+packagefile unicode=/Users/eleven/Library/Caches/go-build/bd/bd47f5c0ff01273dbd13fb196f80298a934a28bcf145fa6908072184689da006-d
+packagefile unicode/utf8=/Users/eleven/Library/Caches/go-build/51/51aa5fec8fd19a8f558ce9f5db54afc5fad250b84f4cdc0729d7ca2db9700e60-d
+packagefile bytes=/Users/eleven/Library/Caches/go-build/94/94af215e8d465dae7c0762a02757eef0e5395dbd4451693a58560378664d504f-d
+packagefile context=/Users/eleven/Library/Caches/go-build/1a/1a4712cde89fff9fe2a3e23bdfcecf40fe4b47227e9444cc5d078de138cb2b7a-d
+packagefile flag=/Users/eleven/Library/Caches/go-build/0a/0aec6c31d0c63a48adcf98cf6f9fe447387ff4fa230c3d02f9bdc93138510618-d
+packagefile fmt=/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d
+packagefile internal/sysinfo=/Users/eleven/Library/Caches/go-build/54/54cabf79e3b459dedc0c449b40d29f9a82749a3f86d7ef080ce5d69068d6093f-d
+packagefile math/rand=/Users/eleven/Library/Caches/go-build/ed/ed7ffb7b643bee31530f5adb0ee027772a85e746f5286b48bf4df7e9dec0aa11-d
+packagefile path/filepath=/Users/eleven/Library/Caches/go-build/4c/4cfacb4f2db9ef5bf2f79bd8612ab3dceb4eadbbc389113a62c3dc9bb7858682-d
+packagefile runtime/debug=/Users/eleven/Library/Caches/go-build/2a/2abcf6abb5e129268bdf58410d9867b8b8c43fcbcdddd0da5f300c179418fae0-d
+packagefile runtime/trace=/Users/eleven/Library/Caches/go-build/b2/b2fdd3264e9e3a29e3259ca9d9efcb53f8186f6a8c3e6b0450544282e5579cc4-d
+packagefile strings=/Users/eleven/Library/Caches/go-build/58/58a30026031e0930455c41b7a50e2dacaa9e6a6e6e032a0b4f5d9484d3c4f54d-d
+packagefile bufio=/Users/eleven/Library/Caches/go-build/7e/7ea9ce54ac4c7fe8461a8e0c24bf645b9d8bcbf1ce8d99155c0c009ae66a8caa-d
+packagefile internal/fuzz=/Users/eleven/Library/Caches/go-build/2c/2c6669ad69cd5abaf61a5340bb71e9058871e4cc3be33fec71ca552d9165e62a-d
+packagefile os/signal=/Users/eleven/Library/Caches/go-build/45/45be427c778c8224d2e9a0df7d946889ff559e1f8f28e8d22dfc986ff78caf8e-d
+packagefile regexp=/Users/eleven/Library/Caches/go-build/74/74b65fcd6454512a24f89f11a43fbef21036e49b4ec2bb54e93000f4d80903a1-d
+packagefile runtime/pprof=/Users/eleven/Library/Caches/go-build/ea/ead39cee566c3c9f3d99543b9805699b11aad0402325e08a0b9a7e336a3dcd61-d
+packagefile internal/byteorder=/Users/eleven/Library/Caches/go-build/9b/9ba286d07905f87dc154e5d7ec8edf8de62d1fdc1ff897d7f250cc794d221580-d
+packagefile internal/chacha8rand=/Users/eleven/Library/Caches/go-build/59/59092da413a19c5ddd30b78bdfab873a0853feeb0e86a4173a5b21431bcd097a-d
+packagefile internal/coverage/rtcov=/Users/eleven/Library/Caches/go-build/90/90032d2933b6c65a6477645b6b855777b5cf9f8f4b42863cbbf6e68f98478643-d
+packagefile internal/cpu=/Users/eleven/Library/Caches/go-build/af/afea42999bd4b94f43208090989227761765fa12fa30b2ad572652a21c18c4a7-d
+packagefile internal/godebugs=/Users/eleven/Library/Caches/go-build/91/912c73b5376d39e1321f7357fd5c612f82dda6973c92e2ceec98b6b771c80b2f-d
+packagefile internal/goos=/Users/eleven/Library/Caches/go-build/b0/b00765c610626a933159ccffa8df8ab0c62a51116882c982ddb16ec725122358-d
+packagefile internal/profilerecord=/Users/eleven/Library/Caches/go-build/e9/e966b4919601c0017d45d2fc909208cbbf192bf2183845ec0ae8ebe651881055-d
+packagefile internal/runtime/atomic=/Users/eleven/Library/Caches/go-build/22/220e31e7d1d7f20978c43f4493e904a4595a5660ac8c34acba381691f0ffefff-d
+packagefile internal/runtime/exithook=/Users/eleven/Library/Caches/go-build/a5/a507a5dbe4b7579b32f43d7d0cc83afa94c9cca7b5a2ade62219d98edfac2635-d
+packagefile internal/runtime/gc=/Users/eleven/Library/Caches/go-build/a3/a3f6709233611a1e23daa761b1c74381a01921a5758835757fd004668ac81255-d
+packagefile internal/runtime/gc/scan=/Users/eleven/Library/Caches/go-build/2d/2d5e6e88355ec3db4b0501cc13654bc6c65fe7a8a6de1124a540e1eb5137082f-d
+packagefile internal/runtime/math=/Users/eleven/Library/Caches/go-build/69/6946dffa461a92c12c3fa8ab8f27e37b92ba490db7d04d1aca2dd7a2aca57e97-d
+packagefile internal/runtime/pprof/label=/Users/eleven/Library/Caches/go-build/45/45f9222c2b7c6c3243f48b8c66f85ba7ecd749f6ae7bf41c5d0a2349d829e569-d
+packagefile internal/trace/tracev2=/Users/eleven/Library/Caches/go-build/ef/efd4231f07192e08036d7032198a840a1962860b1eff7dad931a8dba35ea934c-d
+packagefile math/bits=/Users/eleven/Library/Caches/go-build/ca/ca88b6f25f68370bc9e957d4b6cfda8dccf8d23a8eac7c4fb89b93b8db28ebe6-d
+packagefile cmp=/Users/eleven/Library/Caches/go-build/e7/e7935f8a4d649ae0a9579aeddf5933b655d5fe1c035fe708ba1f32addf9bc628-d
+packagefile crypto/sha256=/Users/eleven/Library/Caches/go-build/36/36739ffc4c9c614e2ab378c307a93d0a1d6e28456d159f9cded138d5c4e5dd93-d
+packagefile gomath/geom=/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d
+packagefile image=/Users/eleven/Library/Caches/go-build/5e/5eb76c26e3ba3b83d6676c462cc20654897252f97eb412d98f4f5f41db06888b-d
+packagefile image/color=/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d
+packagefile image/draw=/Users/eleven/Library/Caches/go-build/cf/cff0ec965ae7beeeba1634f23b91b927fdb854b4de9aa63994cc58c45eafbbc2-d
+packagefile image/png=/Users/eleven/Library/Caches/go-build/fc/fca824d2eabfe063bf0e1cfffccac992d2beb0819c51e428ac8ba7870ab0dfcf-d
+packagefile math/rand/v2=/Users/eleven/Library/Caches/go-build/07/07064ab142c2167e4038ecc800aa403a24f3b52dcd905eb714ee3357bc9e84a6-d
+packagefile sort=/Users/eleven/Library/Caches/go-build/1f/1fef4228cc0ad8cce08a196e5bf4e8d4dbdcdc21a119e50393f95a18289978e3-d
+packagefile gomath/rasterimage=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/_pkg_.a
+packagefile internal/reflectlite=/Users/eleven/Library/Caches/go-build/19/19051cd8bc960e3da928e5df7dbd1db7b409e7d84ff996e89b63c8fde7a665a1-d
+packagefile internal/oserror=/Users/eleven/Library/Caches/go-build/d2/d219106b26535bd09b16d66aeeafdac283d9e2f5032a3b7f210f22325284e5eb-d
+packagefile path=/Users/eleven/Library/Caches/go-build/6c/6c815aaeccfff5cf9889b39518156a0bc9365b5a284fd0478b1380fb8401689d-d
+packagefile internal/sync=/Users/eleven/Library/Caches/go-build/85/853b5cb3935d7c21dca65166f5918f9aafb05e0666b76ff86cf874afada9bbdb-d
+packagefile internal/synctest=/Users/eleven/Library/Caches/go-build/7f/7ff97555bed84ce6c7cc779eb9129465b35a22159b1d7cc527afa35693d8b3ec-d
+packagefile internal/asan=/Users/eleven/Library/Caches/go-build/a6/a6b521a366500a1cb08cdac9c90adb0261d073848ff083786cd92494f5eb8ee5-d
+packagefile internal/msan=/Users/eleven/Library/Caches/go-build/96/96e9310e65d44040c68ed72d755828add63fc644c71ee1301e355513ea08053c-d
+packagefile encoding=/Users/eleven/Library/Caches/go-build/d6/d6be04d46176465914e2845615d1ec96306f767f99af0d8eae367fcfd7578c41-d
+packagefile internal/fmtsort=/Users/eleven/Library/Caches/go-build/3a/3a1fe42d8d1ed1f75a0a857c49a492a98a086334b2d79b1b3d0b5ac0c0f90aeb-d
+packagefile internal/godebug=/Users/eleven/Library/Caches/go-build/50/500e7c17bda7f99bbbb93e5cfe11e58c50d91b43ebcac11192e09859569d9b01-d
+packagefile encoding/binary=/Users/eleven/Library/Caches/go-build/a1/a1f13f36147f77777cab3b0502358963317f7c8847154b523d89e4a8b91653aa-d
+packagefile encoding/json=/Users/eleven/Library/Caches/go-build/60/60d5dd934c8a8a9e92c3ada24afbeeab161b68d6df28a54b24832de019d429b9-d
+packagefile go/ast=/Users/eleven/Library/Caches/go-build/67/67155a85e8759e0a904fc1def513779c1d080f4128305f153b1ae41eaa07d828-d
+packagefile go/parser=/Users/eleven/Library/Caches/go-build/88/885333fc0603629563a1a819ef2a1fa373be73c525c95b33137af6a56c53e70e-d
+packagefile go/token=/Users/eleven/Library/Caches/go-build/72/72c8d0b6edcd3bd45a752e1731672b2f049f879b9b66e5a951b632590e637f7f-d
+packagefile os/exec=/Users/eleven/Library/Caches/go-build/71/7128b95b58cdf9e500d4575183f74bbf17004314e1bded13b0d791cc823d9106-d
+packagefile regexp/syntax=/Users/eleven/Library/Caches/go-build/ae/ae87a24fe6e4a79939af19e31312f9fc81ea0bf0e037df47438eec2cf4a250eb-d
+packagefile compress/gzip=/Users/eleven/Library/Caches/go-build/6b/6bd0eebbc9fdbf745725038cb17d765b5671056ae0f7a8eac4a7e0ffb4edbf23-d
+packagefile text/tabwriter=/Users/eleven/Library/Caches/go-build/c1/c10f04c497ff10d568a20be4d3f3e3541ea1d53a4fd729e7173f3b51f5eacb87-d
+packagefile crypto=/Users/eleven/Library/Caches/go-build/eb/eb98e9d079fb2e2ab34a276f46bdd72ffb04e9365a678f75a61e2f0743c232cf-d
+packagefile crypto/internal/boring=/Users/eleven/Library/Caches/go-build/7e/7edd492559916a4e6174bf7ecd72d3e831be50602f14fa544a81a7a907de546c-d
+packagefile crypto/internal/fips140/sha256=/Users/eleven/Library/Caches/go-build/f1/f15bfbd1d4acf1c76b1baaf78289655c172e6d532b8723652f6cede8668c9775-d
+packagefile hash=/Users/eleven/Library/Caches/go-build/be/be5efa8d6f41ee2a161111ac74d1a156021f41cb9b6d211ad645ff4fb7523383-d
+packagefile image/internal/imageutil=/Users/eleven/Library/Caches/go-build/87/8782f904090ea2dfcf221fe074df80977cb70794a28e7fca294deb84f1fa46ab-d
+packagefile compress/zlib=/Users/eleven/Library/Caches/go-build/9e/9ed3d6b866a9d49696c2bf17ea878d1538783b2dc7b923c2589a53e00c7e0a98-d
+packagefile hash/crc32=/Users/eleven/Library/Caches/go-build/4e/4eccec606c240a2c85461c7ff529fe16e6d25050ffdcdb341d77e8324f408eb6-d
+packagefile gomath=/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b143/_pkg_.a
+packagefile image/gif=/Users/eleven/Library/Caches/go-build/f7/f7ffcba9f100a8ba48376b520b418535f0e03af2b1e04b45c0947c06ac925045-d
+packagefile image/jpeg=/Users/eleven/Library/Caches/go-build/7d/7d9e35362020aeedfaba73fd9f58396c4e680c2c808e4ddcfcecd930007f629f-d
+packagefile internal/bisect=/Users/eleven/Library/Caches/go-build/b9/b91a6f0bccab5d6883b3396e78b8da4e412fa449aa914c0ac9862b09e55d4c6b-d
+packagefile encoding/json/internal=/Users/eleven/Library/Caches/go-build/e8/e889ff577505d985fee2cd47ae3429d9bbc1b8f1d3ede303569b982a667e5744-d
+packagefile encoding/json/internal/jsonflags=/Users/eleven/Library/Caches/go-build/93/9304a37f559910db9a62b891e1bd8acdb81810eb0a04d6eae77ae2c29bf343a8-d
+packagefile encoding/json/internal/jsonopts=/Users/eleven/Library/Caches/go-build/d9/d91df667c8d6b2590fb92282682f8f36e23f1907ac51a45e79d8cfa0278bcca4-d
+packagefile encoding/json/internal/jsonwire=/Users/eleven/Library/Caches/go-build/bb/bb2f7e80b0b2301c5d7349d0472337ce1092eaf920d692a12bdc2401b8f716ab-d
+packagefile encoding/json/jsontext=/Users/eleven/Library/Caches/go-build/48/48bc5d280b4c72c395d1177ee262079c339e7160bf098069ae78a348623e04a3-d
+packagefile encoding/json/v2=/Users/eleven/Library/Caches/go-build/12/12154ef4534341488b4f0bb30d395d710ea7901aa7d73fd1dfc51e4438d4a4e4-d
+packagefile go/scanner=/Users/eleven/Library/Caches/go-build/09/09fd4d7edcb6f702fbaab8af2bd864413d17a255162c2d8f90c308b97d59dfdb-d
+packagefile go/build/constraint=/Users/eleven/Library/Caches/go-build/5e/5e1a180485108ff1a10e84189ef89a5ac122ff978f3815ab90b94403f21eac64-d
+packagefile compress/flate=/Users/eleven/Library/Caches/go-build/7d/7d4f78d143958a528087beb71e069961b355bbf1ecb6242c9c0dcf900b923952-d
+packagefile crypto/cipher=/Users/eleven/Library/Caches/go-build/53/53cd6b865cbf09b630ca113b7d05ac585f0836c3031cda38f4c3095880086b68-d
+packagefile crypto/internal/boring/sig=/Users/eleven/Library/Caches/go-build/dc/dc78162417732114ddd101fe894f0bef81d62e7715162ee9272d683538fc8038-d
+packagefile crypto/internal/fips140=/Users/eleven/Library/Caches/go-build/8c/8c82828ca6d57df3a05725758db0fc7a99179b53aeb9b67baf1c55b76777cfd5-d
+packagefile crypto/internal/fips140deps/byteorder=/Users/eleven/Library/Caches/go-build/31/31134738abdc168eed58dded092693cef82f8debd61821037d849b6633ef783c-d
+packagefile crypto/internal/fips140deps/cpu=/Users/eleven/Library/Caches/go-build/01/011821a090e19ab3a8e2ec83aba45a193521fa547d3691d101edcbc1d497b729-d
+packagefile crypto/internal/impl=/Users/eleven/Library/Caches/go-build/60/602e8fccae32f8df3cdbc300775bb5b2f5bebb7dbe3bae28f528b622b1d00229-d
+packagefile hash/adler32=/Users/eleven/Library/Caches/go-build/57/576954969b2ddc13e2544a909c2575cec7021fe88f427648d9bfa3bd27c628fe-d
+packagefile gomath/audio=/Users/eleven/Library/Caches/go-build/ec/ecd6a5a093593fa5601fcb136187fee70c8d045fda1a812023beffeda89724b6-d
+packagefile gomath/path=/Users/eleven/Library/Caches/go-build/23/23b07f908ca3d474cc6778b24fef3f988ecef8ef38ad314cbe15a4f816d400fa-d
+packagefile gomath/subtitle=/Users/eleven/Library/Caches/go-build/e5/e5985f176f16cbd9307c60f928bb51b0fc4fc0da416b7d35937b1201a52362e8-d
+packagefile compress/lzw=/Users/eleven/Library/Caches/go-build/f2/f2c569236bd55bb6c0eb10b490879561a1cd2eb4e8347c4ea48131b42eae6744-d
+packagefile image/color/palette=/Users/eleven/Library/Caches/go-build/cd/cd1c4c71bfa3671eddb0562e3b65a85d19664522daa6cd3de3660367bf793e91-d
+packagefile unicode/utf16=/Users/eleven/Library/Caches/go-build/3a/3abf3778913517158a9ea1cf8134cf6895ccdd34031e2c5c600672cc449d96a4-d
+packagefile encoding/base32=/Users/eleven/Library/Caches/go-build/4c/4ca224df2ce0e06d23ebce1443d31acd00be9907f2850f5390f7cb864cb7776b-d
+packagefile encoding/base64=/Users/eleven/Library/Caches/go-build/5e/5e592ebb7a7f18749930b6c406c3133e8dc24feb0d8e4a66362c32f3f3029e8d-d
+packagefile encoding/hex=/Users/eleven/Library/Caches/go-build/8d/8dc201b534ca17799720e1e573baf6f169a2a559de443fd68f466718a9bc6a23-d
+packagefile crypto/internal/fips140/aes=/Users/eleven/Library/Caches/go-build/f4/f45edc6ba4f0ea7296745a74b91352c5ca728231a23493116ba213f05e973c42-d
+packagefile crypto/internal/fips140/aes/gcm=/Users/eleven/Library/Caches/go-build/83/8306db40d615989139fb948e86ab001b7656496beb0ae5379d66097db3495ab2-d
+packagefile crypto/internal/fips140/alias=/Users/eleven/Library/Caches/go-build/48/48a73211208fd72074d07d22afee11ebb2b20e13bbf29d0b35e2b1af59a61fa4-d
+packagefile crypto/internal/fips140only=/Users/eleven/Library/Caches/go-build/8d/8d3d24a938a771895fc18fc1d102b4efe7ddcfdefae31b8f2f2c7df8120aff9e-d
+packagefile crypto/subtle=/Users/eleven/Library/Caches/go-build/85/858279fbed3681dc5c7dcf2ab0aa7889a332d248e4cc74cbd1d9a00a40d41a24-d
+packagefile crypto/internal/fips140deps/godebug=/Users/eleven/Library/Caches/go-build/b0/b02bcae8984d75c1cd6226de0646b0690a746faaf9a5d01961a83e58b46dc0d7-d
+packagefile crypto/md5=/Users/eleven/Library/Caches/go-build/40/40538bdfe2f0bb73578a9c814fcfa99fe15e10e4d028292d720ced7a1fc8ec68-d
+packagefile mime=/Users/eleven/Library/Caches/go-build/41/413f13b08f01fb8df68baa8e253a08a8878113025317805b07f159fa478f9c25-d
+packagefile crypto/internal/fips140/check=/Users/eleven/Library/Caches/go-build/64/642f7ed7084db6b641f8ff74dca3e03953615ef33e8044bf1daf707640247c78-d
+packagefile crypto/internal/fips140/subtle=/Users/eleven/Library/Caches/go-build/95/955a3dacfc7e4080cc533623e2dd51b389b5458d25083351657e167f403d66a8-d
+packagefile crypto/internal/fips140/drbg=/Users/eleven/Library/Caches/go-build/c4/c4dd24b71a64521b8a0b07336c25d1f49826443014523644173574a60cede263-d
+packagefile crypto/fips140=/Users/eleven/Library/Caches/go-build/cf/cf7aaf7af99335bae8ab9d65ac220772d5cb095ebd040fb5f3ec038162bba8a2-d
+packagefile crypto/internal/fips140/sha3=/Users/eleven/Library/Caches/go-build/21/2198011a755b19ff9b0967b1df0df137fad1eb85b6e13d3b9b908ae3bfd98e09-d
+packagefile crypto/internal/fips140/sha512=/Users/eleven/Library/Caches/go-build/86/860622fd56eeb476ecaf745deb9b690d9e051dea92e14718b71fe12de0a9f5a7-d
+packagefile crypto/internal/constanttime=/Users/eleven/Library/Caches/go-build/df/dfca9a11e0fac5a509348a7aa1abe82cab591a9516c362b0cee58bbd1df6235e-d
+packagefile maps=/Users/eleven/Library/Caches/go-build/e8/e8d35cd733c41234ffc0082824a0174ba8f56a51641f429c8d99226854a5d997-d
+packagefile crypto/internal/fips140/hmac=/Users/eleven/Library/Caches/go-build/c3/c3366880d13d7aeac1fee082a38830ed48ba656e3153c7bd3903e6d32601b567-d
+packagefile crypto/internal/entropy/v1.0.0=/Users/eleven/Library/Caches/go-build/1b/1badf4cbb18ee2babb6e8428097548b2d0cf3b76a05b6de526539717a9fd97d8-d
+packagefile crypto/internal/sysrand=/Users/eleven/Library/Caches/go-build/ee/ee67c194c22e820bdbabdcdda0d834d0cc44aaab2560420cfa9f3a401daa38b8-d
+packagefile crypto/internal/fips140deps/time=/Users/eleven/Library/Caches/go-build/31/31dfc5d4b4a9395c6c4289af58d5d57a1b35eac4f731d3afab0f7f8c197f02de-d
+modinfo "0w\xaf\f\x92t\b\x02A\xe1\xc1\a\xe6\xd6\x18\xe6path\tgomath/three.test\nmod\tgomath\t(devel)\t\nbuild\t-buildmode=exe\nbuild\t-compiler=gc\nbuild\t-race=true\nbuild\t-tags=noasm\nbuild\tDefaultGODEBUG=tracebacklabels=0,x509sslcertoverrideplatform=0\nbuild\tCGO_ENABLED=0\nbuild\tGOARCH=arm64\nbuild\tGOOS=darwin\nbuild\tGOARM64=v8.0\n\xf92C1\x86\x18 r\x00\x82B\x10A\x16\xd8\xf2"
+EOF
+cd .
+GOROOT='/usr/local/go' /usr/local/go/pkg/tool/darwin_arm64/link -o $WORK/b001/three.test -importcfg $WORK/b001/importcfg.link -installsuffix race -s -w -X=runtime.godebugDefault=tracebacklabels=0,x509sslcertoverrideplatform=0 -buildmode=pie -buildid=Rgm4R90EFTwr-a0uthOi/57Flg2iYhSuTlxMaKAsm/RFB1jiyxAFxivQs3ui88/Rgm4R90EFTwr-a0uthOi -race -X testing.testBinary=1 -extld=clang $WORK/b001/_pkg_.a
+cat >/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/vet.cfg << 'EOF' # internal
+{
+	"ID": "gomath/three_test",
+	"Compiler": "gc",
+	"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/three",
+	"ImportPath": "gomath/three_test",
+	"GoFiles": [
+		"/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/_cases/three/example_test.go"
+	],
+	"NonGoFiles": [],
+	"IgnoredFiles": [],
+	"Module": {
+		"Path": "gomath",
+		"Version": "",
+		"Replace": null,
+		"Time": null,
+		"Main": true,
+		"Indirect": false,
+		"Dir": "/Users/eleven/Documents/工作经历/cloudtorch/gomath",
+		"GoMod": "/Users/eleven/Documents/工作经历/cloudtorch/gomath/go.mod",
+		"GoVersion": "1.26.0",
+		"Error": null
+	},
+	"ImportMap": {
+		"fmt": "fmt",
+		"gomath/geom": "gomath/geom",
+		"gomath/rasterimage": "gomath/rasterimage",
+		"gomath/three": "gomath/three",
+		"image/color": "image/color",
+		"math": "math"
+	},
+	"PackageFile": {
+		"fmt": "/Users/eleven/Library/Caches/go-build/5d/5d7fc53070490392cac4c0a3485a3b8dc864538c606697a196c98aded5a7b113-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/0f/0fd0cadb0549712628862dfcde78c03798b650de04a69a533d8da30cefb180f4-d",
+		"gomath/rasterimage": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/_pkg_.a",
+		"gomath/three": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/_pkg_.a",
+		"image/color": "/Users/eleven/Library/Caches/go-build/d2/d27f440d9b539ce42f95efd41c037978f41cb1d66f55ad55956be12c75d62440-d",
+		"math": "/Users/eleven/Library/Caches/go-build/fb/fba31fffa59a0a60ed6f2660dd250e3944bef12ebeb7fb04cd630661ac15ebfe-d"
+	},
+	"Standard": {
+		"fmt": true,
+		"image/color": true,
+		"math": true
+	},
+	"PackageVetx": {
+		"fmt": "/Users/eleven/Library/Caches/go-build/e0/e01fa449e201ed8e1f2095518d563afee357f3e398cd6db38c4d05996a96d42d-d",
+		"gomath/geom": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"gomath/rasterimage": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b142/vet.out",
+		"gomath/three": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b131/vet.out",
+		"image/color": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d",
+		"math": "/Users/eleven/Library/Caches/go-build/e3/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855-d"
+	},
+	"VetxOnly": false,
+	"VetxOutput": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/vet.out",
+	"Stdout": "/var/folders/d_/5ntf4q9n5qs623bxdhmqjmym0000gn/T/go-build976766654/b141/vet.stdout",
+	"GoVersion": "go1.26.0",
+	"FixArchive": "",
+	"SucceedOnTypecheckFailure": false
+}
+EOF
+cd /Users/eleven/Documents/工作经历/cloudtorch/gomath/three
+TERM='dumb' /usr/local/go/pkg/tool/darwin_arm64/vet -atomic -bools -buildtag -directive -errorsas -ifaceassert -nilfunc -printf -slog -stdversion -stringintconv -tests $WORK/b141/vet.cfg
+go tool buildid -w $WORK/b001/three.test # internal
+$WORK/b001/three.test -test.paniconexit0 -test.timeout=10m0s -test.run=^TestPointLightConcurrent -test.count=1
+rm -rf $WORK/b001/
+ok  	gomath/three	1.038s

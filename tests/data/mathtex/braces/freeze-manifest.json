@@ -1,0 +1,175 @@
+{
+  "format": "sha256",
+  "date": "2026-11-05",
+  "scope": "mathtex horizontal-braces slice; shared workspace snapshot, not a repository freeze",
+  "self_excluded": true,
+  "files": {
+    "mathtex/mathtex.go": {
+      "sha256": "59eac87206cae67eaef2615883c97dc96054d367b05640198b8954eb02b7f4be",
+      "bytes": 16991
+    },
+    "mathtex/braces.go": {
+      "sha256": "80d46ddff2c41592c9d765acd1daa2b55007558b688bb4a5b7af5f51c799f259",
+      "bytes": 5613
+    },
+    "tests/_cases/mathtex/braces_test.go": {
+      "sha256": "c5cc7570c64b3e206ec1a7b6dc15892d876bd651c35b0362203c6a3b8dbd5875",
+      "bytes": 12949
+    },
+    "tests/_cases/mathtex/braces_reference_test.go": {
+      "sha256": "a05f7641cab769491c5e92353134fe9a38f3acbad385c4a2d88ba43fcc92280e",
+      "bytes": 5436
+    },
+    "tests/reference/mathtex_braces.py": {
+      "sha256": "da9fcbcc86adeda8bbb75d9fd6882045720f93537d0d48cc3fc8943daee15cbf",
+      "bytes": 9672
+    },
+    "docs/MATH_BRACES.md": {
+      "sha256": "c20180f22244e59bd1998dd9f6b3ae43fc9df10b81b1353ed513e1738cb09dc1",
+      "bytes": 10806
+    },
+    "tests/data/mathtex/braces/benchmark.log": {
+      "sha256": "c131c56cd40bf2256287ecc09c1e3f2c25c0d7c035b92bd82a89824ae6f5af6b",
+      "bytes": 663
+    },
+    "tests/data/mathtex/braces/focused-initial.log": {
+      "sha256": "85c15b3f8e3e8a09dcd442459f8bedc070a1adcefc3c84e7bd96019995626bdb",
+      "bytes": 5870
+    },
+    "tests/data/mathtex/braces/focused-race.log": {
+      "sha256": "7ac1389b946be54c618de828b8ddf989e18ce2cf0339059e5035e378cfdf62e1",
+      "bytes": 6072
+    },
+    "tests/data/mathtex/braces/focused.log": {
+      "sha256": "45673faef2034447c28c1d1052fd86e3beeb7d01d204bf5de44d53c6b36f7a0e",
+      "bytes": 6072
+    },
+    "tests/data/mathtex/braces/labels-style-0.png": {
+      "sha256": "40a7dab6c0d46446aa7138c0f23e124d8883c8307a29d2c58a45609960b11088",
+      "bytes": 8099
+    },
+    "tests/data/mathtex/braces/labels-style-0.svg": {
+      "sha256": "493881014b74a2d12c7f5b21a9cb616127c7a7a64adaa628efa9b91ecee611d4",
+      "bytes": 2563
+    },
+    "tests/data/mathtex/braces/labels-style-1.png": {
+      "sha256": "d2151abdb886c559c5ea07c2d49ae78fc9474b3b772e6dd08f965331399d4bb5",
+      "bytes": 7820
+    },
+    "tests/data/mathtex/braces/labels-style-1.svg": {
+      "sha256": "5c7ef319f322976de451e67829f9773ec473b66fb031f71828431e2168d43a6a",
+      "bytes": 2596
+    },
+    "tests/data/mathtex/braces/labels-style-2.png": {
+      "sha256": "b8f8fea0d8d7517886f4e62a81eabf8126579af6328c9294215379c98736776d",
+      "bytes": 9475
+    },
+    "tests/data/mathtex/braces/labels-style-2.svg": {
+      "sha256": "a896c89c40728e974e14ce2a1a46410e1fffc0310e2aa6c19cdde491cbacc78a",
+      "bytes": 2693
+    },
+    "tests/data/mathtex/braces/labels-style-3.png": {
+      "sha256": "42481d47a891d51bcddb6eb46f450fcf90ae9935f00f01842c6556bc70f13b2e",
+      "bytes": 9445
+    },
+    "tests/data/mathtex/braces/labels-style-3.svg": {
+      "sha256": "3a3fa8132cd26336b000864e58e4215135544bbccd2d1f4a60eff33ca1c7f04e",
+      "bytes": 2683
+    },
+    "tests/data/mathtex/braces/mathtex-cgo0-noasm.log": {
+      "sha256": "459c1626fcf6acd035e2fce5a450af77eeb3399f7d030c2d0421158ffa28a0e0",
+      "bytes": 112693
+    },
+    "tests/data/mathtex/braces/mathtex-race-noasm.log": {
+      "sha256": "7cb76259234d4c17759269b779f12bade6dbe5dcfb873fcece513c4f951992e8",
+      "bytes": 112681
+    },
+    "tests/data/mathtex/braces/nested.png": {
+      "sha256": "1d7366385745b84312920008c2a771e01cc957d41fcc7ba18606567eea739422",
+      "bytes": 5823
+    },
+    "tests/data/mathtex/braces/nested.svg": {
+      "sha256": "53133b1f7cf6db44508db032e5f687388e973b42813e4130f2a4fe78314e8c05",
+      "bytes": 3209
+    },
+    "tests/data/mathtex/braces/phantom.png": {
+      "sha256": "ce92904411b9cbd8e04bb8f9efaf67342df40145bc6da098e944d1026b9ad4b6",
+      "bytes": 3050
+    },
+    "tests/data/mathtex/braces/phantom.svg": {
+      "sha256": "f13902a517134be0f6be92862528026f8d6f208af90673b53882fcfe0188fc4b",
+      "bytes": 1517
+    },
+    "tests/data/mathtex/braces/purecheck.log": {
+      "sha256": "37eaeffbb661a7493a0d69173f45d501da450fd1b1cf69b40605fd4edfb83014",
+      "bytes": 105
+    },
+    "tests/data/mathtex/braces/reference-generation.log": {
+      "sha256": "fd24118328392de05637058534f9142ce05b2eb5e7177ef130eba9536c00f697",
+      "bytes": 84
+    },
+    "tests/data/mathtex/braces/reference.json": {
+      "sha256": "193ed1edc3fc53ae090aa6135c9ff4fd6902aa9a9a7510c7fe0a9c4acb87600b",
+      "bytes": 9476
+    },
+    "tests/data/mathtex/braces/script-brace.png": {
+      "sha256": "5f2613c0054e8ec96a914436c9ce7843233b40aff4427b5cfbdcaabb46a3b844",
+      "bytes": 9012
+    },
+    "tests/data/mathtex/braces/script-brace.svg": {
+      "sha256": "be036f24dae8c28f5a5fdc4a4166cf9f509600b0496e9c111478162a5c70249e",
+      "bytes": 3225
+    },
+    "tests/data/mathtex/braces/transform-035.png": {
+      "sha256": "371fc80381de6a3f663db841120cbee097e80f4903fda480d9898946bcd2473e",
+      "bytes": 8048
+    },
+    "tests/data/mathtex/braces/transform-035.svg": {
+      "sha256": "bc72acb644ebb01a8fb929c40feda16208fe3c84f60c4cc7d17444ef4982dcff",
+      "bytes": 2666
+    },
+    "tests/data/mathtex/braces/transform-070.png": {
+      "sha256": "f20146d7ebfbcf6f3490b8d876334c4b53324ebeb622c01b6b15d8565f52597e",
+      "bytes": 7940
+    },
+    "tests/data/mathtex/braces/transform-070.svg": {
+      "sha256": "fb9f5f925bc90ffe8cbef03fb9882425817df8a988cfb011801fe999befaf085",
+      "bytes": 2679
+    },
+    "tests/data/mathtex/braces/validation.json": {
+      "sha256": "577ff2ac69a8ac089285dbd52994cd31dd0bff8f21d4d6ee6847896efbc5e9ef",
+      "bytes": 7533
+    },
+    "tests/data/mathtex/braces/vet-central.log": {
+      "sha256": "bf47111b097794ff8435e67b3dd2708319e5cbaca7b546a400b35707ca65823d",
+      "bytes": 45
+    },
+    "tests/data/mathtex/braces/vet-production.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests/data/mathtex/braces/zero.png": {
+      "sha256": "c8ca7ba6ed40238b54cecee0c18f4e9d7f0e6c0570e7210040d1f009695beb23",
+      "bytes": 5426
+    },
+    "tests/data/mathtex/braces/zero.svg": {
+      "sha256": "25e0cdd1962e3696f6f499b3ae962d9b611b09edb442b05aaf788d2b85f941a6",
+      "bytes": 1497
+    }
+  },
+  "readonly_dependency_snapshot": {
+    "mathtex/accents.go": "b574fc982759564100be709d74e2fcf90469f612086f193db652f26ab49e3d36",
+    "mathtex/operators.go": "d265224b05bf77f5f5fcd1810810addc0704e4340c70f43e0ed44f8987b29ff6",
+    "mathtex/radical_boxes.go": "00b6cac8e30e80c7a96c499ea72bf5cd852590cdaf942fa6c5e6cb36c42b31ad",
+    "mathtex/parts.go": "4765b1e7f5657fe384ea23fb82a152815a6ef4c139eeb8d158b896acd1d9314d",
+    "tests/_cases/mathtex/accents_test.go": "0c3c88a2c7fd107849143b6bbb472f63f496cf906e3a8f60c459c4d90b51e3c9",
+    "go.mod": "e6da038149a5f991f2b2e3ec589a7177a268a03ee4a5d10b91a3e51dbb536641",
+    "go.sum": "751670e44bc91847b11e45bdbe353924b932c15b5a793aea8ad04d8e40b1519b"
+  },
+  "manim": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "clean": true,
+    "executed": false
+  }
+}

@@ -1,0 +1,38 @@
+File: optimized_noise.test
+Type: alloc_space
+Time: 2026-11-04 11:48:12 CST
+Showing nodes accounting for 109.95MB, 100% of 109.95MB total
+      flat  flat%   sum%        cum   cum%
+   88.95MB 80.90% 80.90%    88.95MB 80.90%  image.NewRGBA
+   14.37MB 13.07% 93.97%    14.37MB 13.07%  gomath/internal/h264.nal (inline)
+    3.14MB  2.86% 96.83%     3.14MB  2.86%  gomath/internal/h264.newPicture420 (inline)
+    1.16MB  1.05% 97.88%     1.16MB  1.05%  runtime/pprof.StartCPUProfile
+    1.02MB  0.92% 98.81%     1.55MB  1.41%  gomath/internal/h264.(*PredictiveEncoder).residualWorkspace
+    0.67MB  0.61% 99.42%     0.67MB  0.61%  compress/flate.(*fastGen).addBlock
+    0.64MB  0.58%   100%     0.64MB  0.58%  compress/flate.NewWriter (inline)
+         0     0%   100%     0.67MB  0.61%  compress/flate.(*Writer).Close (inline)
+         0     0%   100%     0.67MB  0.61%  compress/flate.(*compressor).close
+         0     0%   100%     0.67MB  0.61%  compress/flate.(*compressor).deflateFast
+         0     0%   100%     0.67MB  0.61%  compress/flate.(*fastEncL1).encode
+         0     0%   100%     0.67MB  0.61%  compress/gzip.(*Writer).Close
+         0     0%   100%     0.64MB  0.58%  compress/gzip.(*Writer).Write
+         0     0%   100%     2.61MB  2.38%  gomath/internal/h264.(*IntraEncoder).encodeIDR
+         0     0%   100%    18.53MB 16.85%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0%   100%    15.92MB 14.48%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0%   100%    15.92MB 14.48%  gomath/internal/h264.(*PredictiveEncoder).encodePResidual
+         0     0%   100%   107.48MB 97.75%  gomath/internal/h264.BenchmarkInterResidual.func1
+         0     0%   100%    88.95MB 80.90%  gomath/internal/h264.interImage
+         0     0%   100%    88.95MB 80.90%  gomath/internal/h264.intraImage
+         0     0%   100%     1.57MB  1.43%  gomath/internal/h264.makePicture420
+         0     0%   100%     1.16MB  1.05%  main.main
+         0     0%   100%     1.16MB  1.05%  runtime.main
+         0     0%   100%     1.31MB  1.19%  runtime/pprof.(*profileBuilder).build
+         0     0%   100%     0.64MB  0.58%  runtime/pprof.(*profileBuilder).flush
+         0     0%   100%     0.64MB  0.58%  runtime/pprof.(*profileBuilder).pbSample
+         0     0%   100%     1.31MB  1.19%  runtime/pprof.profileWriter
+         0     0%   100%    73.30MB 66.67%  testing.(*B).launch
+         0     0%   100%    34.18MB 31.09%  testing.(*B).run1.func1
+         0     0%   100%   107.48MB 97.75%  testing.(*B).runN
+         0     0%   100%     1.16MB  1.05%  testing.(*M).Run
+         0     0%   100%     1.16MB  1.05%  testing.(*M).before
+         0     0%   100%     1.16MB  1.05%  testing/internal/testdeps.TestDeps.StartCPUProfile

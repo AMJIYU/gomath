@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-04",
+  "runtime": "Pure Go. SVG text reuses gomath/text.Layout, immutable sfnt fonts and editable vector paths. No runtime/test-time Python, Cairo, FreeType, system font lookup, native engine, browser, subprocess rendering or font-service fallback.",
+  "API": {
+    "new": "svg.Options.FontResolver svg.FontResolver",
+    "resolver": "type FontResolver func(family string, style text.FontStyle) (*text.Font, error)",
+    "default": "Only exact embedded Go family (case-insensitive), regular/bold/italic/bold-italic real outlines; default font-size 16 SVG user units. A non-nil resolver handles every request including Go. Errors/nil/uninitialized fonts abort Read, with no fallback.",
+    "ownership": "Fonts are immutable. Resolution is cached per import by exact family/style; glyphs, geometry, styles and IDs belong to each instance. Resolver concurrency safety is caller-owned."
+  },
+  "scope": {
+    "placement": "Horizontal text/tspan with one finite absolute x/y/dx/dy per element. Scalar applies to the first normalized addressable character of its subtree; innermost same-name scalar overrides an ancestor scalar. Empty spans do not consume positions. x/y start a new text chunk; dx/dy preserve font kerning. Baseline is reflected into SVG coordinates before existing affine/world transforms.",
+    "font_properties": "Absolute positive font-size at most 1e6; font-weight normal/400/bold/700; font-style normal/italic. Single exact font-family, optionally quoted; no comma/fallback list. Existing presentation/CSS/inline cascade, currentColor, inheritance/initial/inherit/unset, fill/stroke/opacity and defs/use shadow semantics are reused.",
+    "anchor": "start/middle/end uses advance extents, including preserved spaces, relative offsets and mixed font sizes. First character sets chunk anchor. A span anchor change takes effect on a new chunk with an absolute x/y. Positions are computed before anchoring. Backward relative offsets use advance extents rather than ink bounds.",
+    "whitespace": "SVG 1.1 subset: default removes XML newlines, maps tabs to ASCII spaces, collapses ASCII spaces across spans and trims whole-text edges. xml:space=preserve maps tabs/newlines to spaces and keeps all spaces; xml:space=default restores collapse. No automatic multiline layout. Comments/CDATA boundaries do not break kerning.",
+    "characters": "Non-combining Latin/Greek/Cyrillic and Common-script characters only, subject to actual font coverage. Precomposed accented letters and math symbols supported. Control/format/combining/variation/joiner/Unicode line/paragraph separators and other scripts explicitly rejected.",
+    "paint_and_transforms": "Existing fills/strokes/dashes, per-level opacity, display and visibility apply to real glyph outlines. Mixed-content draw order retained. Fill supports affine matrices; visible strokes retain uniform-transform restriction. Symbol clipping rejection is reused. Text and all use clones own fresh objects. tspan transform is explicitly unsupported.",
+    "text_rendering": "auto and geometricPrecision select the same unhinted outlines. Other rendering hints error.",
+    "validation_timing": "All text/tspan source attributes, characters, child types and nesting are checked, including unused defs. Font lookup, missing glyphs, output budgets and viewport clipping are checked when text is instantiated. display:none content does not enter layout; visibility:hidden retains advance and can be overridden in descendants.",
+    "rejected": [
+      "Complex shaping/bidi/other scripts including Han",
+      "combining marks and emoji joiner/variation sequences",
+      "font fallback or missing glyphs",
+      "unsupported weight/style, font features/ligatures/variation controls",
+      "relative/percentage font sizes or coordinates",
+      "position arrays",
+      "rotate",
+      "textLength/lengthAdjust",
+      "textPath",
+      "tspan transform",
+      "letter/word-spacing",
+      "baseline/writing-mode/decoration semantics",
+      "CSS white-space",
+      "unsupported visible CSS properties"
+    ],
+    "limits": {
+      "source_decoded_character_data_bytes": 262144,
+      "source_runes": 65536,
+      "expanded_raw_runes": 65536,
+      "outlined_glyphs": 32768,
+      "outline_segments_including_moves_and_closures": 1048576,
+      "text_tspan_nesting": 32,
+      "font_family_style_pairs": 32,
+      "layout_calls_including_boundary_kerning_metrics": 4096,
+      "existing_XML_expansion_depth": 128,
+      "existing_expanded_objects_including_glyphs_and_content_groups": 100000
+    },
+    "limit_behavior": "Per import, shared across text roots and use clones. Exceeding a budget aborts Read without partial objects. The underlying text API also bounds each layout. Stage budgets do not promise a fixed process peak heap.",
+    "exclusions": [
+      "No full SVG-text/Pango/browser shaping equivalence",
+      "No root Style/render/text-package/export changes",
+      "No main README/docs/examples changes",
+      "No font parsing or outline engine duplicated in svg"
+    ]
+  },
+  "references": {
+    "versions": {
+      "Python": "3.11.5",
+      "fontTools": "4.45.1",
+      "CairoSVG": "2.7.1",
+      "Cairo": "1.18.4",
+      "FreeType": "2.14.3"
+    },
+    "fonts": "Exact Go-Regular.ttf, Go-Bold.ttf, Go-Italic.ttf and Go-Bold-Italic.ttf from golang.org/x/image v0.47.0/font/gofont/ttfs, matching the embedded production byte arrays. SHA256 values are in text-fonttools.json. Source fonts were read-only.",
+    "fontTools": {
+      "method": "TTFont cmap/hmtx and BoundsPen on unhinted design outlines at size 24. Four static strings AV éΩЖ∑. Source Go fonts have no kern table. Compare per-glyph bounds with end anchor using independently computed total advance.",
+      "max_bounds_error_SVG_units": 0.000539537292823411,
+      "max_bounds_error_by_style": {
+        "normal": 0,
+        "bold": 0,
+        "italic": 0,
+        "bolditalic": 0.000539537292823411
+      },
+      "tolerance_SVG_units": 0.001,
+      "limitation": "sfnt 26.6 coordinates at 1024 ppem round composed bold-italic accent geometry slightly relative to fontTools design units; regular/bold/italic cases are exact.",
+      "regenerate_python": "from pathlib import Path\nimport hashlib,json\nfrom fontTools.ttLib import TTFont\nfrom fontTools.pens.boundsPen import BoundsPen\nfonts=Path('/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs')\nout=Path('tests/data/svg');cases=[];hashes={}\nfor style,name in [('normal','Go-Regular.ttf'),('bold','Go-Bold.ttf'),('italic','Go-Italic.ttf'),('bolditalic','Go-Bold-Italic.ttf')]:\n    f=TTFont(fonts/name);glyphset=f.getGlyphSet();cmap=f.getBestCmap();upem=f['head'].unitsPerEm\n    hashes[name]=hashlib.sha256((fonts/name).read_bytes()).hexdigest()\n    size=24;value='AV éΩЖ∑';x=0;glyphs=[]\n    assert 'kern' not in f\n    for ch in value:\n        glyphname=cmap[ord(ch)];pen=BoundsPen(glyphset);glyphset[glyphname].draw(pen)\n        if pen.bounds:\n            x0,y0,x1,y1=pen.bounds\n            glyphs.append({'rune':ch,'bounds':[x+x0*size/upem,y0*size/upem,x+x1*size/upem,y1*size/upem]})\n        x+=f['hmtx'][glyphname][0]*size/upem\n    cases.append({'style':style,'value':value,'size':size,'advance':x,'glyphs':glyphs})\n(out/'text-fonttools.json').write_text(json.dumps({'font_module':'golang.org/x/image v0.47.0','font_sha256':hashes,'method':'fontTools TTFont cmap/hmtx and BoundsPen on unhinted outlines; pinned fonts have no kern table','cases':cases},ensure_ascii=False,indent=2)+'\\n')\n"
+    },
+    "CairoSVG": {
+      "source": "text-outlines.svg",
+      "vector_intermediate": "text-cairo-outlines.svg",
+      "raster": "text-outlines.png",
+      "size": [
+        320,
+        200
+      ],
+      "frames": 1,
+      "font_matching": "macOS default Cairo toy font backend ignored the Fontconfig application registrations. Generation explicitly binds the four exact Go TTFs as Cairo FreeType font faces; every requested family/style is asserted and all four faces used. No system fallback.",
+      "method": "CairoSVG svg2svg converts the original unhinted geometricPrecision text to Cairo vector outlines. CairoSVG svg2png rasterizes that stored vector SVG to 320x200. The local FreeType show_text bitmap path produced invalid banded glyphs with hinting disabled; vector conversion avoids that development-backend defect. No input positioning, paint or path normalization. This is a CairoSVG vector-outline reference, not stock native text bitmap raster parity.",
+      "coverage": "Four real faces, Latin accents/Greek/Cyrillic/math, explicit scalar placements, tspan inheritance and paint, fill/stroke, defs/use, rotation. Individual absolute glyph positions isolate outline rasterization; advance/anchor/whitespace/span continuation have separate exact/independent geometry assertions.",
+      "comparison": "Full-frame premultiplied 8-bit RGBA; MAE in 0..255 channel units. Changed-pixel fraction counts any channel delta > 8.",
+      "measured": {
+        "RGBA_MAE": 0.09182421875,
+        "maximum_channel_delta": 29,
+        "fraction_pixels_any_channel_over_8": 0.003046875
+      },
+      "thresholds": {
+        "RGBA_MAE": 0.12,
+        "maximum_channel_delta": 40,
+        "fraction_pixels_any_channel_over_8": 0.005
+      },
+      "regenerate_python": "import ctypes\nfrom pathlib import Path\nimport cairocffi as cairo,cairosvg\nfonts=Path('/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs')\nft=ctypes.CDLL('/opt/homebrew/lib/libfreetype.dylib');cc=ctypes.CDLL('/opt/homebrew/lib/libcairo.dylib')\nft.FT_Init_FreeType.argtypes=[ctypes.POINTER(ctypes.c_void_p)]\nft.FT_New_Face.argtypes=[ctypes.c_void_p,ctypes.c_char_p,ctypes.c_long,ctypes.POINTER(ctypes.c_void_p)]\ncc.cairo_ft_font_face_create_for_ft_face.argtypes=[ctypes.c_void_p,ctypes.c_int];cc.cairo_ft_font_face_create_for_ft_face.restype=ctypes.c_void_p\nlibrary=ctypes.c_void_p();assert ft.FT_Init_FreeType(ctypes.byref(library))==0\nfaces={};rawfaces=[]\nfor slant,weight,name in [(0,0,'Go-Regular.ttf'),(0,1,'Go-Bold.ttf'),(1,0,'Go-Italic.ttf'),(1,1,'Go-Bold-Italic.ttf')]:\n    face=ctypes.c_void_p();assert ft.FT_New_Face(library,str(fonts/name).encode(),0,ctypes.byref(face))==0\n    ptr=cc.cairo_ft_font_face_create_for_ft_face(face,0)\n    faces[(slant,weight)]=cairo.FontFace._from_pointer(cairo.ffi.cast('cairo_font_face_t *',ptr),False);rawfaces.append(face)\nselected=set()\ndef exact_font(self,family,slant=0,weight=0):\n    assert family=='Go'\n    self.set_font_face(faces[(slant,weight)]);selected.add((slant,weight))\ncairo.Context.select_font_face=exact_font\np=Path('tests/data/svg')\n\n# Emit a vector reference before rasterization. This avoids the local Cairo\n# FreeType show_text bitmap defect and retains independent Cairo outlines.\nvector=cairosvg.svg2svg(bytestring=(p/'text-outlines.svg').read_bytes())\n(p/'text-cairo-outlines.svg').write_bytes(vector)\ncairosvg.svg2png(bytestring=vector,write_to=str(p/'text-outlines.png'),output_width=320,output_height=200)\nassert selected==set(faces)\n",
+      "environment": "Development only: PYTHONDONTWRITEBYTECODE=1, DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib, /usr/local/bin/python3.11. Adjust the module-cache and dylib paths on other hosts. Go tests only read fixtures."
+    },
+    "kerning": {
+      "file": "text-kern.ttf",
+      "origin": "Go-Regular.ttf with one added legacy kern pair A,V = -192 font units (-1.5 at size 16 / 2048 units per em). Saved deterministically with recalcTimestamp=False. Font geometry remains real original Go regular outlines.",
+      "license": "text-font-license.txt preserves the Bigelow & Holmes copyright and Go BSD license.",
+      "regenerate_python": "from pathlib import Path\nfrom fontTools.ttLib import TTFont,newTable\nfrom fontTools.ttLib.tables._k_e_r_n import KernTable_format_0\nfonts=Path('/Users/eleven/go/pkg/mod/golang.org/x/image@v0.47.0/font/gofont/ttfs')\np=Path('tests/data/svg');f=TTFont(fonts/'Go-Regular.ttf',recalcTimestamp=False)\nkern=newTable('kern');kern.version=0\nk=KernTable_format_0();k.version=0;k.coverage=1;k.kernTable={('A','V'):-192}\nkern.kernTables=[k];f['kern']=kern;f.save(p/'text-kern.ttf')\n(p/'text-font-license.txt').write_text((fonts/'README').read_text())\n",
+      "coverage": "Caller resolver, Parse-owned source bytes, one continuous font run across differently painted spans, dx=0 and dx=3/dy=2 preserve the real -1.5 kern. No synthetic outline placeholder."
+    },
+    "Manim": {
+      "source_tree": "/Users/eleven/Documents/工作经历/cloudtorch/manim",
+      "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+      "source": "manim/mobject/svg/svg_mobject.py:text_to_mobject",
+      "finding": "Pinned local SVG importer warns Unsupported element type and returns without implementing text. This is an added real SVG text subset validated against fonts/Cairo, not a verified Manim SVG-text or Pango parity claim.",
+      "source_tree_modified": false
+    }
+  },
+  "validation": {
+    "package_command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -pkg=text -count=1 -vet=all",
+    "package_result": "PASS",
+    "package_seconds": {
+      "svg": 0.56,
+      "text": 0.012
+    },
+    "additional_command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -run='^TestText(BackwardRelativeOffsetsUseAdvanceExtents|SpanKerningWithCallerFontAndRelativePositions)$' -count=1",
+    "additional_result": "PASS",
+    "vet_command": "CGO_ENABLED=0 go vet -tags noasm ./svg ./text",
+    "vet_result": "PASS",
+    "purecheck_command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+    "purecheck_result": "PASS: 40 non-standard packages; CGO_ENABLED=0; noasm; no native inputs or runtime process launch imports",
+    "coverage": [
+      "Real four-face outlines/baseline/Unicode",
+      "Whitespace across mixed content/CDATA/comments and XML overrides",
+      "Absolute/relative placement, nested/empty spans, anchors, mixed sizes and backwards offsets",
+      "CSS-wide keywords/currentColor/paint, defs/use shadow isolation and symbol transforms/clipping errors",
+      "Real affine fill geometry, stroke uniform restriction",
+      "Source and expanded budgets; aggregate glyph/outline/object/layout/font bounds",
+      "Resolver errors, cache, missing glyph/shaping errors and concurrent imports",
+      "Independent fontTools geometry, CairoSVG outline raster, draw order and multiplied-opacity analytical pixels"
+    ],
+    "not_run": "Whole-repository/race suites are coordinated by the parent; no new full-suite/race claim from this slice.",
+    "reference_reproducibility": "PASS: JSON regeneration code reproduces all 6 fixture SHA256 values, including Cairo vector/raster output and deterministic modified kern font."
+  },
+  "benchmark": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=svg -p=1 -run=^$ -bench=^BenchmarkReadTextInstances$ -benchtime=300ms -count=3",
+    "Go": "go1.27.3 darwin/arm64",
+    "CPU": "Apple M2",
+    "CGO_ENABLED": 0,
+    "tags": "noasm",
+    "viewport": [
+      640,
+      320
+    ],
+    "rendered_frames": 0,
+    "workload": "32 use instances of one text definition, font-size=12, regular Go plus bold Math plus regular space/Omega: 224 outlined glyphs, 256 addressable runes, 96 Layout runs. Shared immutable embedded fonts, fresh instance geometry/styles/IDs. Each op parses XML, resolves/reuses fonts, lays out glyphs and applies SVG/world transforms and validation.",
+    "includes": "Complete svg.Read and object allocation.",
+    "excluded": [
+      "Rasterization",
+      "PNG encoding",
+      "Reference generation",
+      "File I/O",
+      "Font asset setup outside existing default-font cache",
+      "Animation sampling"
+    ],
+    "iterations": [
+      243,
+      250,
+      249
+    ],
+    "ns_per_op": [
+      1438464,
+      1419164,
+      1446794
+    ],
+    "bytes_per_op": [
+      4351951,
+      4351929,
+      4351931
+    ],
+    "allocs_per_op": [
+      8986,
+      8986,
+      8986
+    ],
+    "interpretation": "Recorded workload only; no performance improvement claim."
+  },
+  "modified_files": {
+    "production": [
+      "svg/text.go",
+      "svg/svg.go",
+      "svg/document.go",
+      "svg/style.go",
+      "svg/css.go",
+      "svg/instance.go",
+      "svg/README.md"
+    ],
+    "tests": [
+      "tests/_cases/svg/text_test.go",
+      "tests/_cases/svg/text_limits_test.go",
+      "tests/_cases/svg/text_reference_test.go"
+    ],
+    "data": [
+      "tests/data/svg/text-outlines.svg",
+      "tests/data/svg/text-outlines.png",
+      "tests/data/svg/text-cairo-outlines.svg",
+      "tests/data/svg/text-fonttools.json",
+      "tests/data/svg/text-kern.ttf",
+      "tests/data/svg/text-font-license.txt",
+      "tests/data/svg/text-provenance.json"
+    ]
+  },
+  "sha256": {
+    "text-outlines.svg": "fb0be42cb02ae415fe14bf7becddb85e40ba2c691af608c564cf4115db7f6f02",
+    "text-outlines.png": "4e3fb3d1c092ca25fb6bc0fbd78ce4716fbf7032eab3b045cb2d247b528f464a",
+    "text-cairo-outlines.svg": "5fc40eb7d011a06630bb2901b14cc80d750f5f9e0cd9a17c5f7d9145b8c2c3ca",
+    "text-fonttools.json": "c2b0407ff8be8cbb5be5b04f088114fbe1593cbc931595f05e669ca7b5d242d8",
+    "text-kern.ttf": "0007d4c8cc89b6066049c0f72544c0b49465128764d37b3c99514180260e1add",
+    "text-font-license.txt": "dc588a7ba9130043b67c2380cc03cc6644ed3557f6d5e8589b96acba1c64e343"
+  }
+}

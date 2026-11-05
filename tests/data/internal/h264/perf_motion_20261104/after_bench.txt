@@ -1,0 +1,51 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/internal/h264
+cpu: Apple M2
+BenchmarkMotionSearch/pan/r0         	       2	 240226292 ns/op	   4003758 ns/frame	 2176192 B/op	      76 allocs/op
+BenchmarkMotionSearch/pan/r0         	       2	 244049708 ns/op	   4067492 ns/frame	 2176192 B/op	      76 allocs/op
+BenchmarkMotionSearch/pan/r0         	       2	 243140292 ns/op	   4052331 ns/frame	 2176192 B/op	      76 allocs/op
+BenchmarkMotionSearch/pan/r0         	       2	 243616417 ns/op	   4060266 ns/frame	 2176192 B/op	      76 allocs/op
+BenchmarkMotionSearch/pan/r0         	       2	 243776312 ns/op	   4062933 ns/frame	 2176192 B/op	      76 allocs/op
+BenchmarkMotionSearch/pan/r1         	       1	 959647459 ns/op	  15994110 ns/frame	 1383808 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r1         	       1	 959423416 ns/op	  15990380 ns/frame	 1383808 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r1         	       1	 959507917 ns/op	  15991755 ns/frame	 1383808 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r1         	       1	 957007875 ns/op	  15950112 ns/frame	 1383808 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r1         	       1	 964241916 ns/op	  16070674 ns/frame	 1383808 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r2         	       1	2403265250 ns/op	  40054383 ns/frame	 1267328 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r2         	       1	2411660625 ns/op	  40194312 ns/frame	 1267328 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r2         	       1	2426762042 ns/op	  40446026 ns/frame	 1267328 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r2         	       1	2407377875 ns/op	  40122933 ns/frame	 1267328 B/op	      83 allocs/op
+BenchmarkMotionSearch/pan/r2         	       1	2400550625 ns/op	  40009146 ns/frame	 1267328 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r0      	       2	 190945396 ns/op	   3182373 ns/frame	  387448 B/op	      76 allocs/op
+BenchmarkMotionSearch/static/r0      	       2	 174511271 ns/op	   2908476 ns/frame	  387448 B/op	      76 allocs/op
+BenchmarkMotionSearch/static/r0      	       2	 176011562 ns/op	   2933472 ns/frame	  387448 B/op	      76 allocs/op
+BenchmarkMotionSearch/static/r0      	       2	 174716500 ns/op	   2911939 ns/frame	  387448 B/op	      76 allocs/op
+BenchmarkMotionSearch/static/r0      	       2	 175521417 ns/op	   2925309 ns/frame	  387456 B/op	      76 allocs/op
+BenchmarkMotionSearch/static/r1      	       1	 981039209 ns/op	  16350574 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r1      	       1	 921264417 ns/op	  15354398 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r1      	       1	 916218083 ns/op	  15270256 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r1      	       1	 913225583 ns/op	  15220404 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r1      	       1	 913959500 ns/op	  15232641 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r2      	       1	2367261291 ns/op	  39454310 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r2      	       1	2375796917 ns/op	  39596598 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r2      	       1	2422622375 ns/op	  40377020 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r2      	       1	2456822792 ns/op	  40947031 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/static/r2      	       1	2380771833 ns/op	  39679507 ns/frame	  511552 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r0 	       2	 249598396 ns/op	   4159965 ns/frame	 2077888 B/op	      76 allocs/op
+BenchmarkMotionSearch/noisechange/r0 	       2	 233331979 ns/op	   3888857 ns/frame	 2077888 B/op	      76 allocs/op
+BenchmarkMotionSearch/noisechange/r0 	       2	 250128062 ns/op	   4168787 ns/frame	 2077888 B/op	      76 allocs/op
+BenchmarkMotionSearch/noisechange/r0 	       2	 234807270 ns/op	   3913448 ns/frame	 2077888 B/op	      76 allocs/op
+BenchmarkMotionSearch/noisechange/r0 	       2	 234078104 ns/op	   3901292 ns/frame	 2077888 B/op	      76 allocs/op
+BenchmarkMotionSearch/noisechange/r1 	       1	 948817625 ns/op	  15813610 ns/frame	 2201984 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r1 	       1	 941015625 ns/op	  15683562 ns/frame	 2201984 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r1 	       1	 939717041 ns/op	  15661932 ns/frame	 2201984 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r1 	       1	 948584083 ns/op	  15809694 ns/frame	 2201984 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r1 	       1	 948201791 ns/op	  15803349 ns/frame	 2201984 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r2 	       1	2389958709 ns/op	  39832617 ns/frame	 2120320 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r2 	       1	2413353625 ns/op	  40222542 ns/frame	 2120320 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r2 	       1	2460313250 ns/op	  41005201 ns/frame	 2120320 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r2 	       1	2410874708 ns/op	  40181204 ns/frame	 2120320 B/op	      83 allocs/op
+BenchmarkMotionSearch/noisechange/r2 	       1	2395909208 ns/op	  39931806 ns/frame	 2120320 B/op	      83 allocs/op
+PASS
+ok  	gomath/internal/h264	62.445s

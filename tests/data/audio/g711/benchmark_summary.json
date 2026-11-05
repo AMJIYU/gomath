@@ -1,0 +1,103 @@
+{
+  "go": "go version go1.27.3 darwin/arm64",
+  "platform": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.1\nBuildVersion:\t\t24G231",
+  "cpu": "Apple M2",
+  "CGO_ENABLED": 0,
+  "tags": [
+    "noasm"
+  ],
+  "GOMAXPROCS": 1,
+  "samples": 5,
+  "benchtime": "300ms",
+  "p": 1,
+  "workload": "48000Hz,48000 frames,1/2/6 indexed channels; tag6/7; code byte=(frame+37*channel)mod256",
+  "includes": "RIFF/fmt/fact/pad validation, input reads, PCM and32KiB scratch allocations, table lookups",
+  "excludes": "input construction, startup (including4096B shared table initialization), disk, external codecs",
+  "note": "B/op is allocation volume, not peak/RSS; shared development machine, no comparison/speedup claim",
+  "cases": {
+    "tag6_ch1": {
+      "raw_ns/op": [
+        40093,
+        40353,
+        41949,
+        39670,
+        39983
+      ],
+      "B/op": 418024,
+      "allocs/op": 14,
+      "median_ns/op": 40093,
+      "min_ns/op": 39670,
+      "max_ns/op": 41949
+    },
+    "tag6_ch2": {
+      "raw_ns/op": [
+        72991,
+        72155,
+        72364,
+        74506,
+        71400
+      ],
+      "B/op": 803048,
+      "allocs/op": 14,
+      "median_ns/op": 72364,
+      "min_ns/op": 71400,
+      "max_ns/op": 74506
+    },
+    "tag6_ch6": {
+      "raw_ns/op": [
+        196249,
+        191208,
+        193490,
+        192233,
+        187231
+      ],
+      "B/op": 2343144,
+      "allocs/op": 14,
+      "median_ns/op": 192233,
+      "min_ns/op": 187231,
+      "max_ns/op": 196249
+    },
+    "tag7_ch1": {
+      "raw_ns/op": [
+        37359,
+        39445,
+        40222,
+        56152,
+        38223
+      ],
+      "B/op": 418024,
+      "allocs/op": 14,
+      "median_ns/op": 39445,
+      "min_ns/op": 37359,
+      "max_ns/op": 56152
+    },
+    "tag7_ch2": {
+      "raw_ns/op": [
+        73420,
+        72120,
+        73907,
+        72519,
+        72985
+      ],
+      "B/op": 803048,
+      "allocs/op": 14,
+      "median_ns/op": 72985,
+      "min_ns/op": 72120,
+      "max_ns/op": 73907
+    },
+    "tag7_ch6": {
+      "raw_ns/op": [
+        188869,
+        191168,
+        190338,
+        198085,
+        192318
+      ],
+      "B/op": 2343144,
+      "allocs/op": 14,
+      "median_ns/op": 191168,
+      "min_ns/op": 188869,
+      "max_ns/op": 198085
+    }
+  }
+}

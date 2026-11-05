@@ -1,0 +1,36 @@
+goos: darwin
+goarch: arm64
+pkg: gomath/internal/h264
+cpu: Apple M2
+BenchmarkMotionSyntaxWriter/zero         	 5292154	        70.01 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5283352	        66.01 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5488446	        65.79 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5208681	        71.40 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/zero         	 5453656	        69.89 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  584458	       620.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  591031	       624.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  598101	       618.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  589546	       619.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/sparse       	  597187	       618.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   92912	      3913 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   92250	      3907 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   91668	      3903 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   91521	      3924 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxWriter/dense        	   92185	      3893 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/zero        	 8510478	        41.89 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/zero        	 8597527	        41.91 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/zero        	 8566788	        41.93 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/zero        	 8590492	        41.91 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/zero        	 8596287	        41.89 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/sparse      	 1000000	       342.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/sparse      	 1000000	       350.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/sparse      	  980302	       343.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/sparse      	 1000000	       342.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/sparse      	  914701	       349.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/dense       	  261108	      1375 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/dense       	  269440	      1358 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/dense       	  267848	      1342 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/dense       	  269673	      1342 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMotionSyntaxCounter/dense       	  268831	      1348 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	gomath/internal/h264	11.660s

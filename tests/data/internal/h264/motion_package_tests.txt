@@ -1,0 +1,2400 @@
+=== RUN   TestCAVLCResidualRoundTrip
+--- PASS: TestCAVLCResidualRoundTrip (0.02s)
+=== RUN   TestCAVLCNormativeTokens
+--- PASS: TestCAVLCNormativeTokens (0.00s)
+=== RUN   TestTransformAndQuantizationBounds
+--- PASS: TestTransformAndQuantizationBounds (0.57s)
+=== RUN   TestInterReferenceVectors
+=== RUN   TestInterReferenceVectors/static_34x38_q0_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q0_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q0_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q1_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q1_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q1_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q2_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q2_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q2_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q3_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q3_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q3_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q4_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q4_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q4_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q5_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q5_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q5_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q6_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q6_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q6_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q7_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q7_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q7_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q8_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q8_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q8_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q9_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q9_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q9_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q10_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q10_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q10_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q11_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q11_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q11_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q12_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q12_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q12_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q13_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q13_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q13_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q14_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q14_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q14_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q15_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q15_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q15_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q16_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q16_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q16_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q17_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q17_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q17_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q18_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q18_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q18_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q19_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q19_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q19_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q20_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q20_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q20_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q21_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q21_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q21_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q22_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q22_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q22_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q23_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q23_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q23_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q24_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q24_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q24_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q25_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q25_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q25_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q26_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q26_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q26_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q27_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q27_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q27_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q28_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q28_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q28_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q29_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q29_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q29_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q30_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q30_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q30_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q31_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q31_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q31_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q32_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q32_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q32_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q33_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q33_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q33_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q34_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q34_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q34_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q35_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q35_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q35_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q36_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q36_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q36_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q37_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q37_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q37_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q38_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q38_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q38_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q39_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q39_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q39_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q40_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q40_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q40_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q41_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q41_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q41_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q42_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q42_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q42_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q43_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q43_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q43_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q44_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q44_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q44_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q45_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q45_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q45_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q46_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q46_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q46_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q47_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q47_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q47_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q48_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q48_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q48_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q49_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q49_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q49_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q50_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q50_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q50_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q51_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/extreme_34x38_q51_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q51_g4_n9_sfalse
+=== RUN   TestInterReferenceVectors/local_2x2_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_2x2_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_2x2_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_2x2_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_2x2_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_2x2_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_2x2_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_2x2_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_2x2_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_2x2_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_2x2_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_2x2_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_18x22_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_18x22_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_18x22_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_18x22_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_18x22_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_18x22_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_18x22_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_18x22_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_18x22_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_18x22_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_18x22_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_18x22_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_50x34_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_50x34_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_50x34_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_50x34_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_50x34_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_50x34_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_50x34_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_50x34_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_50x34_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_50x34_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_50x34_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_50x34_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_320x180_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_320x180_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_320x180_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_320x180_q0_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_320x180_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_320x180_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_320x180_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_320x180_q24_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/local_320x180_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/drift_320x180_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/checker_320x180_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/chroma_320x180_q51_g17_n20_sfalse
+=== RUN   TestInterReferenceVectors/static_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/drift_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/chromaedge_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/noisechange_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/recovery_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/flat_50x34_q24_g60_n125_sfalse
+=== RUN   TestInterReferenceVectors/static_34x38_q0_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q0_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q0_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q1_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q1_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q1_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q2_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q2_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q2_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q3_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q3_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q3_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q4_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q4_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q4_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q5_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q5_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q5_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q6_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q6_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q6_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q7_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q7_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q7_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q8_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q8_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q8_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q9_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q9_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q9_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q10_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q10_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q10_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q11_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q11_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q11_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q12_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q12_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q12_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q13_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q13_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q13_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q14_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q14_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q14_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q15_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q15_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q15_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q16_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q16_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q16_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q17_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q17_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q17_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q18_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q18_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q18_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q19_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q19_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q19_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q20_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q20_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q20_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q21_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q21_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q21_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q22_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q22_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q22_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q23_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q23_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q23_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q24_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q24_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q24_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q25_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q25_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q25_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q26_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q26_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q26_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q27_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q27_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q27_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q28_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q28_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q28_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q29_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q29_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q29_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q30_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q30_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q30_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q31_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q31_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q31_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q32_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q32_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q32_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q33_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q33_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q33_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q34_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q34_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q34_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q35_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q35_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q35_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q36_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q36_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q36_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q37_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q37_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q37_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q38_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q38_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q38_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q39_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q39_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q39_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q40_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q40_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q40_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q41_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q41_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q41_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q42_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q42_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q42_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q43_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q43_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q43_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q44_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q44_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q44_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q45_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q45_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q45_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q46_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q46_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q46_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q47_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q47_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q47_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q48_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q48_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q48_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q49_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q49_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q49_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q50_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q50_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q50_g4_n9_strue
+=== RUN   TestInterReferenceVectors/static_34x38_q51_g4_n9_strue
+=== RUN   TestInterReferenceVectors/extreme_34x38_q51_g4_n9_strue
+=== RUN   TestInterReferenceVectors/chromaedge_34x38_q51_g4_n9_strue
+=== RUN   TestInterReferenceVectors/local_2x2_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_2x2_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_2x2_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_2x2_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_2x2_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_2x2_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_2x2_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_2x2_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_2x2_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_2x2_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_2x2_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_2x2_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_18x22_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_18x22_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_18x22_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_18x22_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_18x22_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_18x22_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_18x22_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_18x22_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_18x22_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_18x22_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_18x22_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_18x22_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_50x34_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_50x34_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_50x34_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_50x34_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_50x34_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_50x34_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_50x34_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_50x34_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_50x34_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_50x34_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_50x34_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_50x34_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_320x180_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_320x180_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_320x180_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_320x180_q0_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_320x180_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_320x180_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_320x180_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_320x180_q24_g17_n20_strue
+=== RUN   TestInterReferenceVectors/local_320x180_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/drift_320x180_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/checker_320x180_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/chroma_320x180_q51_g17_n20_strue
+=== RUN   TestInterReferenceVectors/static_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/drift_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/chromaedge_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/noisechange_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/recovery_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/flat_50x34_q24_g60_n125_strue
+=== RUN   TestInterReferenceVectors/static_320x180_q24_g60_n60_sfalse
+=== RUN   TestInterReferenceVectors/drift_320x180_q24_g60_n60_sfalse
+=== RUN   TestInterReferenceVectors/local_320x180_q24_g60_n60_sfalse
+=== RUN   TestInterReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse
+=== RUN   TestInterReferenceVectors/static_320x180_q24_g60_n60_strue
+=== RUN   TestInterReferenceVectors/drift_320x180_q24_g60_n60_strue
+=== RUN   TestInterReferenceVectors/local_320x180_q24_g60_n60_strue
+=== RUN   TestInterReferenceVectors/noisechange_320x180_q24_g60_n60_strue
+=== NAME  TestInterReferenceVectors
+    inter_test.go:275: inter=56911 intra=73409 non-exact-skips=52691 CBP=[0 1188 1324 2677 895 712 606 1646 1000 700 773 1476 2097 1611 1533 24500 1705 56 56 204 43 14 20 72 38 23 17 76 52 93 75 2370 1061 140 195 128 100 111 39 233 144 31 264 149 70 54 164 6376]
+--- PASS: TestInterReferenceVectors (6.77s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q0_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q0_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q0_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q1_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q1_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q1_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q2_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q2_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q2_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q3_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q3_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q3_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q4_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q4_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q4_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q5_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q5_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q5_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q6_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q6_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q6_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q7_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q7_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q7_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q8_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q8_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q8_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q9_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q9_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q9_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q10_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q10_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q10_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q11_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q11_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q11_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q12_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q12_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q12_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q13_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q13_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q13_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q14_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q14_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q14_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q15_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q15_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q15_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q16_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q16_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q16_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q17_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q17_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q17_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q18_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q18_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q18_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q19_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q19_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q19_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q20_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q20_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q20_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q21_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q21_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q21_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q22_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q22_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q22_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q23_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q23_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q23_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q24_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q24_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q24_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q25_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q25_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q25_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q26_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q26_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q26_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q27_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q27_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q27_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q28_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q28_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q28_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q29_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q29_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q29_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q30_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q30_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q30_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q31_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q31_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q31_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q32_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q32_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q32_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q33_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q33_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q33_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q34_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q34_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q34_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q35_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q35_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q35_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q36_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q36_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q36_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q37_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q37_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q37_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q38_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q38_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q38_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q39_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q39_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q39_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q40_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q40_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q40_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q41_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q41_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q41_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q42_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q42_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q42_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q43_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q43_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q43_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q44_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q44_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q44_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q45_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q45_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q45_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q46_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q46_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q46_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q47_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q47_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q47_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q48_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q48_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q48_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q49_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q49_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q49_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q50_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q50_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q50_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q51_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q51_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q51_g4_n9_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q0_g17_n20_sfalse (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q0_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q24_g17_n20_sfalse (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q24_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q51_g17_n20_sfalse (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q51_g17_n20_sfalse (0.00s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q0_g17_n20_sfalse (0.03s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q0_g17_n20_sfalse (0.15s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q0_g17_n20_sfalse (0.09s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q0_g17_n20_sfalse (0.03s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q24_g17_n20_sfalse (0.03s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q24_g17_n20_sfalse (0.12s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q24_g17_n20_sfalse (0.08s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q24_g17_n20_sfalse (0.04s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q51_g17_n20_sfalse (0.03s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q51_g17_n20_sfalse (0.11s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q51_g17_n20_sfalse (0.07s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q51_g17_n20_sfalse (0.03s)
+    --- PASS: TestInterReferenceVectors/static_50x34_q24_g60_n125_sfalse (0.04s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q24_g60_n125_sfalse (0.04s)
+    --- PASS: TestInterReferenceVectors/chromaedge_50x34_q24_g60_n125_sfalse (0.04s)
+    --- PASS: TestInterReferenceVectors/noisechange_50x34_q24_g60_n125_sfalse (0.06s)
+    --- PASS: TestInterReferenceVectors/recovery_50x34_q24_g60_n125_sfalse (0.01s)
+    --- PASS: TestInterReferenceVectors/flat_50x34_q24_g60_n125_sfalse (0.01s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q0_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q0_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q0_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q1_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q1_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q1_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q2_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q2_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q2_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q3_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q3_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q3_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q4_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q4_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q4_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q5_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q5_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q5_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q6_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q6_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q6_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q7_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q7_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q7_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q8_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q8_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q8_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q9_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q9_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q9_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q10_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q10_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q10_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q11_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q11_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q11_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q12_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q12_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q12_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q13_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q13_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q13_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q14_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q14_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q14_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q15_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q15_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q15_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q16_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q16_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q16_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q17_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q17_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q17_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q18_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q18_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q18_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q19_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q19_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q19_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q20_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q20_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q20_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q21_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q21_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q21_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q22_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q22_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q22_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q23_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q23_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q23_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q24_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q24_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q24_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q25_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q25_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q25_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q26_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q26_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q26_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q27_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q27_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q27_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q28_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q28_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q28_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q29_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q29_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q29_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q30_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q30_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q30_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q31_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q31_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q31_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q32_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q32_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q32_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q33_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q33_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q33_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q34_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q34_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q34_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q35_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q35_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q35_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q36_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q36_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q36_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q37_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q37_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q37_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q38_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q38_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q38_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q39_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q39_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q39_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q40_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q40_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q40_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q41_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q41_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q41_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q42_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q42_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q42_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q43_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q43_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q43_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q44_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q44_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q44_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q45_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q45_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q45_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q46_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q46_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q46_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q47_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q47_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q47_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q48_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q48_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q48_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q49_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q49_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q49_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q50_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q50_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q50_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/static_34x38_q51_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/extreme_34x38_q51_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chromaedge_34x38_q51_g4_n9_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_2x2_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_2x2_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_2x2_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_2x2_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_18x22_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_18x22_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/checker_18x22_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_18x22_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q0_g17_n20_strue (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q0_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q24_g17_n20_strue (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q24_g17_n20_strue (0.01s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q24_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_50x34_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q51_g17_n20_strue (0.01s)
+    --- PASS: TestInterReferenceVectors/checker_50x34_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/chroma_50x34_q51_g17_n20_strue (0.00s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q0_g17_n20_strue (0.03s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q0_g17_n20_strue (0.22s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q0_g17_n20_strue (0.11s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q0_g17_n20_strue (0.04s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q24_g17_n20_strue (0.04s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q24_g17_n20_strue (0.20s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q24_g17_n20_strue (0.13s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q24_g17_n20_strue (0.05s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q51_g17_n20_strue (0.05s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q51_g17_n20_strue (0.33s)
+    --- PASS: TestInterReferenceVectors/checker_320x180_q51_g17_n20_strue (0.10s)
+    --- PASS: TestInterReferenceVectors/chroma_320x180_q51_g17_n20_strue (0.04s)
+    --- PASS: TestInterReferenceVectors/static_50x34_q24_g60_n125_strue (0.06s)
+    --- PASS: TestInterReferenceVectors/drift_50x34_q24_g60_n125_strue (0.06s)
+    --- PASS: TestInterReferenceVectors/chromaedge_50x34_q24_g60_n125_strue (0.05s)
+    --- PASS: TestInterReferenceVectors/noisechange_50x34_q24_g60_n125_strue (0.08s)
+    --- PASS: TestInterReferenceVectors/recovery_50x34_q24_g60_n125_strue (0.02s)
+    --- PASS: TestInterReferenceVectors/flat_50x34_q24_g60_n125_strue (0.01s)
+    --- PASS: TestInterReferenceVectors/static_320x180_q24_g60_n60_sfalse (0.38s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q24_g60_n60_sfalse (0.37s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q24_g60_n60_sfalse (0.09s)
+    --- PASS: TestInterReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse (0.54s)
+    --- PASS: TestInterReferenceVectors/static_320x180_q24_g60_n60_strue (0.57s)
+    --- PASS: TestInterReferenceVectors/drift_320x180_q24_g60_n60_strue (0.56s)
+    --- PASS: TestInterReferenceVectors/local_320x180_q24_g60_n60_strue (0.09s)
+    --- PASS: TestInterReferenceVectors/noisechange_320x180_q24_g60_n60_strue (0.72s)
+=== RUN   TestInterResidualCBPAndContexts
+--- PASS: TestInterResidualCBPAndContexts (0.00s)
+=== RUN   TestInterStateAndParameterPolicy
+--- PASS: TestInterStateAndParameterPolicy (0.13s)
+=== RUN   TestInterConcurrentSerialization
+--- PASS: TestInterConcurrentSerialization (0.01s)
+=== RUN   TestInterMeasurements
+    inter_test.go:454: static search=false inter=false: 1698603B 40.605dB skipped=0 interMB=0
+    inter_test.go:454: static search=false inter=true: 29449B 40.722dB skipped=14033 interMB=127
+    inter_test.go:454: static search=true inter=false: 1588383B 40.742dB skipped=0 interMB=0
+    inter_test.go:454: static search=true inter=true: 27534B 40.844dB skipped=14053 interMB=107
+    inter_test.go:454: drift search=false inter=false: 1698051B 40.586dB skipped=0 interMB=0
+    inter_test.go:454: drift search=false inter=true: 111252B 40.709dB skipped=1164 interMB=12454
+    inter_test.go:454: drift search=true inter=false: 1588395B 40.721dB skipped=0 interMB=0
+    inter_test.go:454: drift search=true inter=true: 105322B 40.711dB skipped=1698 interMB=11863
+    inter_test.go:454: local search=false inter=false: 11024B 65.200dB skipped=14043 interMB=0
+    inter_test.go:454: local search=false inter=true: 10679B 65.147dB skipped=14043 interMB=59
+    inter_test.go:454: local search=true inter=false: 10828B 65.383dB skipped=14043 interMB=0
+    inter_test.go:454: local search=true inter=true: 10693B 65.213dB skipped=14043 interMB=50
+    inter_test.go:454: noisechange search=false inter=false: 1697861B 40.591dB skipped=0 interMB=0
+    inter_test.go:454: noisechange search=false inter=true: 1681135B 40.566dB skipped=0 interMB=1677
+    inter_test.go:454: noisechange search=true inter=false: 1580817B 40.734dB skipped=0 interMB=0
+    inter_test.go:454: noisechange search=true inter=true: 1579237B 40.731dB skipped=0 interMB=251
+--- PASS: TestInterMeasurements (6.56s)
+=== RUN   TestIntraReferenceVectors
+=== RUN   TestIntraReferenceVectors/2x2_qp0
+=== RUN   TestIntraReferenceVectors/2x2_qp12
+=== RUN   TestIntraReferenceVectors/2x2_qp24
+=== RUN   TestIntraReferenceVectors/2x2_qp36
+=== RUN   TestIntraReferenceVectors/2x2_qp51
+=== RUN   TestIntraReferenceVectors/18x22_qp0
+=== RUN   TestIntraReferenceVectors/18x22_qp12
+=== RUN   TestIntraReferenceVectors/18x22_qp24
+=== RUN   TestIntraReferenceVectors/18x22_qp36
+=== RUN   TestIntraReferenceVectors/18x22_qp51
+=== RUN   TestIntraReferenceVectors/48x34_qp0
+=== RUN   TestIntraReferenceVectors/48x34_qp12
+=== RUN   TestIntraReferenceVectors/48x34_qp24
+=== RUN   TestIntraReferenceVectors/48x34_qp36
+=== RUN   TestIntraReferenceVectors/48x34_qp51
+=== RUN   TestIntraReferenceVectors/160x96_qp0
+=== RUN   TestIntraReferenceVectors/160x96_qp12
+=== RUN   TestIntraReferenceVectors/160x96_qp24
+=== RUN   TestIntraReferenceVectors/160x96_qp36
+=== RUN   TestIntraReferenceVectors/160x96_qp51
+=== RUN   TestIntraReferenceVectors/320x180_qp0
+=== RUN   TestIntraReferenceVectors/320x180_qp12
+=== RUN   TestIntraReferenceVectors/320x180_qp24
+=== RUN   TestIntraReferenceVectors/320x180_qp36
+=== RUN   TestIntraReferenceVectors/320x180_qp51
+=== RUN   TestIntraReferenceVectors/extreme_qp0
+=== RUN   TestIntraReferenceVectors/extreme_qp1
+=== RUN   TestIntraReferenceVectors/extreme_qp2
+=== RUN   TestIntraReferenceVectors/extreme_qp3
+=== RUN   TestIntraReferenceVectors/extreme_qp4
+=== RUN   TestIntraReferenceVectors/extreme_qp5
+=== RUN   TestIntraReferenceVectors/extreme_qp6
+=== RUN   TestIntraReferenceVectors/extreme_qp7
+=== RUN   TestIntraReferenceVectors/extreme_qp8
+=== RUN   TestIntraReferenceVectors/extreme_qp9
+=== RUN   TestIntraReferenceVectors/extreme_qp10
+=== RUN   TestIntraReferenceVectors/extreme_qp11
+=== RUN   TestIntraReferenceVectors/extreme_qp12
+=== RUN   TestIntraReferenceVectors/extreme_qp13
+=== RUN   TestIntraReferenceVectors/extreme_qp14
+=== RUN   TestIntraReferenceVectors/extreme_qp15
+=== RUN   TestIntraReferenceVectors/extreme_qp16
+=== RUN   TestIntraReferenceVectors/extreme_qp17
+=== RUN   TestIntraReferenceVectors/extreme_qp18
+=== RUN   TestIntraReferenceVectors/extreme_qp19
+=== RUN   TestIntraReferenceVectors/extreme_qp20
+=== RUN   TestIntraReferenceVectors/extreme_qp21
+=== RUN   TestIntraReferenceVectors/extreme_qp22
+=== RUN   TestIntraReferenceVectors/extreme_qp23
+=== RUN   TestIntraReferenceVectors/extreme_qp24
+=== RUN   TestIntraReferenceVectors/extreme_qp25
+=== RUN   TestIntraReferenceVectors/extreme_qp26
+=== RUN   TestIntraReferenceVectors/extreme_qp27
+=== RUN   TestIntraReferenceVectors/extreme_qp28
+=== RUN   TestIntraReferenceVectors/extreme_qp29
+=== RUN   TestIntraReferenceVectors/extreme_qp30
+=== RUN   TestIntraReferenceVectors/extreme_qp31
+=== RUN   TestIntraReferenceVectors/extreme_qp32
+=== RUN   TestIntraReferenceVectors/extreme_qp33
+=== RUN   TestIntraReferenceVectors/extreme_qp34
+=== RUN   TestIntraReferenceVectors/extreme_qp35
+=== RUN   TestIntraReferenceVectors/extreme_qp36
+=== RUN   TestIntraReferenceVectors/extreme_qp37
+=== RUN   TestIntraReferenceVectors/extreme_qp38
+=== RUN   TestIntraReferenceVectors/extreme_qp39
+=== RUN   TestIntraReferenceVectors/extreme_qp40
+=== RUN   TestIntraReferenceVectors/extreme_qp41
+=== RUN   TestIntraReferenceVectors/extreme_qp42
+=== RUN   TestIntraReferenceVectors/extreme_qp43
+=== RUN   TestIntraReferenceVectors/extreme_qp44
+=== RUN   TestIntraReferenceVectors/extreme_qp45
+=== RUN   TestIntraReferenceVectors/extreme_qp46
+=== RUN   TestIntraReferenceVectors/extreme_qp47
+=== RUN   TestIntraReferenceVectors/extreme_qp48
+=== RUN   TestIntraReferenceVectors/extreme_qp49
+=== RUN   TestIntraReferenceVectors/extreme_qp50
+=== RUN   TestIntraReferenceVectors/extreme_qp51
+--- PASS: TestIntraReferenceVectors (0.09s)
+    --- PASS: TestIntraReferenceVectors/2x2_qp0 (0.00s)
+    --- PASS: TestIntraReferenceVectors/2x2_qp12 (0.00s)
+    --- PASS: TestIntraReferenceVectors/2x2_qp24 (0.00s)
+    --- PASS: TestIntraReferenceVectors/2x2_qp36 (0.00s)
+    --- PASS: TestIntraReferenceVectors/2x2_qp51 (0.00s)
+    --- PASS: TestIntraReferenceVectors/18x22_qp0 (0.00s)
+    --- PASS: TestIntraReferenceVectors/18x22_qp12 (0.00s)
+    --- PASS: TestIntraReferenceVectors/18x22_qp24 (0.00s)
+    --- PASS: TestIntraReferenceVectors/18x22_qp36 (0.00s)
+    --- PASS: TestIntraReferenceVectors/18x22_qp51 (0.00s)
+    --- PASS: TestIntraReferenceVectors/48x34_qp0 (0.00s)
+    --- PASS: TestIntraReferenceVectors/48x34_qp12 (0.00s)
+    --- PASS: TestIntraReferenceVectors/48x34_qp24 (0.00s)
+    --- PASS: TestIntraReferenceVectors/48x34_qp36 (0.00s)
+    --- PASS: TestIntraReferenceVectors/48x34_qp51 (0.00s)
+    --- PASS: TestIntraReferenceVectors/160x96_qp0 (0.00s)
+    --- PASS: TestIntraReferenceVectors/160x96_qp12 (0.00s)
+    --- PASS: TestIntraReferenceVectors/160x96_qp24 (0.00s)
+    --- PASS: TestIntraReferenceVectors/160x96_qp36 (0.00s)
+    --- PASS: TestIntraReferenceVectors/160x96_qp51 (0.00s)
+    --- PASS: TestIntraReferenceVectors/320x180_qp0 (0.01s)
+    --- PASS: TestIntraReferenceVectors/320x180_qp12 (0.01s)
+    --- PASS: TestIntraReferenceVectors/320x180_qp24 (0.01s)
+    --- PASS: TestIntraReferenceVectors/320x180_qp36 (0.01s)
+    --- PASS: TestIntraReferenceVectors/320x180_qp51 (0.01s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp0 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp1 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp2 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp3 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp4 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp5 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp6 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp7 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp8 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp9 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp10 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp11 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp12 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp13 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp14 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp15 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp16 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp17 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp18 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp19 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp20 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp21 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp22 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp23 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp24 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp25 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp26 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp27 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp28 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp29 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp30 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp31 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp32 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp33 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp34 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp35 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp36 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp37 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp38 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp39 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp40 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp41 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp42 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp43 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp44 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp45 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp46 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp47 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp48 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp49 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp50 (0.00s)
+    --- PASS: TestIntraReferenceVectors/extreme_qp51 (0.00s)
+=== RUN   TestIntraValidation
+--- PASS: TestIntraValidation (0.00s)
+=== RUN   TestIntraParameterSets
+--- PASS: TestIntraParameterSets (0.00s)
+=== RUN   TestIntraCompressionAndQuality
+    intra_test.go:287: QP=12 bytes=9734 PCM=92646 reduction=9.52x YUV-PSNR=52.28 dB
+    intra_test.go:287: QP=24 bytes=2848 PCM=92646 reduction=32.53x YUV-PSNR=44.75 dB
+    intra_test.go:287: QP=36 bytes=1801 PCM=92646 reduction=51.44x YUV-PSNR=36.95 dB
+    intra_test.go:287: QP=51 bytes=1513 PCM=92646 reduction=61.23x YUV-PSNR=22.45 dB
+--- PASS: TestIntraCompressionAndQuality (0.01s)
+=== RUN   TestIntraPixelsAndConcurrentCalls
+--- PASS: TestIntraPixelsAndConcurrentCalls (0.00s)
+=== RUN   TestIntraAlphaAndSubimage
+--- PASS: TestIntraAlphaAndSubimage (0.00s)
+=== RUN   TestMotionReferenceVectors
+=== RUN   TestMotionReferenceVectors/pan_34x38_q0_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q0_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q1_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q1_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q2_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q2_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q3_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q3_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q4_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q4_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q5_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q5_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q6_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q6_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q7_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q7_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q8_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q8_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q9_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q9_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q10_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q10_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q11_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q11_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q12_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q12_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q13_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q13_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q14_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q14_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q15_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q15_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q16_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q16_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q17_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q17_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q18_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q18_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q19_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q19_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q20_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q20_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q21_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q21_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q22_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q22_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q23_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q23_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q24_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q24_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q25_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q25_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q26_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q26_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q27_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q27_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q28_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q28_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q29_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q29_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q30_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q30_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q31_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q31_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q32_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q32_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q33_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q33_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q34_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q34_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q35_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q35_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q36_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q36_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q37_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q37_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q38_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q38_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q39_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q39_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q40_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q40_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q41_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q41_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q42_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q42_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q43_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q43_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q44_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q44_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q45_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q45_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q46_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q46_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q47_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q47_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q48_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q48_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q49_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q49_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q50_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q50_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q51_g4_n9_sfalse_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q51_g4_n9_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r4
+=== RUN   TestMotionReferenceVectors/pan_34x38_q24_g60_n125_sfalse_r2
+=== RUN   TestMotionReferenceVectors/tiles_34x38_q24_g60_n125_sfalse_r2
+=== RUN   TestMotionReferenceVectors/edge_34x38_q24_g60_n125_sfalse_r2
+=== RUN   TestMotionReferenceVectors/recovery_34x38_q24_g60_n125_sfalse_r2
+=== RUN   TestMotionReferenceVectors/static_34x38_q24_g60_n125_sfalse_r2
+=== RUN   TestMotionReferenceVectors/pan_18x22_q24_g1_n5_sfalse_r4
+=== RUN   TestMotionReferenceVectors/edge_2x2_q24_g65536_n35_sfalse_r4
+=== RUN   TestMotionReferenceVectors/pan_34x38_q0_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q0_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q1_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q1_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q2_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q2_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q3_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q3_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q4_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q4_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q5_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q5_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q6_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q6_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q7_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q7_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q8_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q8_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q9_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q9_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q10_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q10_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q11_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q11_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q12_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q12_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q13_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q13_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q14_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q14_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q15_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q15_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q16_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q16_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q17_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q17_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q18_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q18_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q19_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q19_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q20_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q20_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q21_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q21_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q22_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q22_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q23_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q23_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q24_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q24_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q25_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q25_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q26_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q26_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q27_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q27_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q28_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q28_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q29_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q29_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q30_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q30_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q31_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q31_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q32_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q32_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q33_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q33_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q34_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q34_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q35_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q35_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q36_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q36_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q37_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q37_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q38_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q38_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q39_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q39_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q40_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q40_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q41_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q41_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q42_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q42_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q43_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q43_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q44_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q44_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q45_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q45_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q46_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q46_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q47_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q47_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q48_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q48_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q49_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q49_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q50_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q50_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_34x38_q51_g4_n9_strue_r1
+=== RUN   TestMotionReferenceVectors/edge_34x38_q51_g4_n9_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r1
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r2
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r3
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r4
+=== RUN   TestMotionReferenceVectors/pan_34x38_q24_g60_n125_strue_r2
+=== RUN   TestMotionReferenceVectors/tiles_34x38_q24_g60_n125_strue_r2
+=== RUN   TestMotionReferenceVectors/edge_34x38_q24_g60_n125_strue_r2
+=== RUN   TestMotionReferenceVectors/recovery_34x38_q24_g60_n125_strue_r2
+=== RUN   TestMotionReferenceVectors/static_34x38_q24_g60_n125_strue_r2
+=== RUN   TestMotionReferenceVectors/pan_18x22_q24_g1_n5_strue_r4
+=== RUN   TestMotionReferenceVectors/edge_2x2_q24_g65536_n35_strue_r4
+=== RUN   TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r0
+=== RUN   TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r1
+=== RUN   TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r2
+=== RUN   TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r0
+=== RUN   TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r1
+=== RUN   TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r2
+=== RUN   TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r0
+=== RUN   TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r1
+=== RUN   TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r2
+=== NAME  TestMotionReferenceVectors
+    motion_test.go:286: inter=54375 intra=63564 moved=46862 odd-chroma=42497 nonzero-MVD=12959 moving-skip=3289
+--- PASS: TestMotionReferenceVectors (30.92s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q0_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q0_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q1_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q1_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q2_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q2_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q3_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q3_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q4_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q4_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q5_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q5_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q6_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q6_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q7_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q7_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q8_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q8_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q9_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q9_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q10_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q10_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q11_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q11_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q12_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q12_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q13_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q13_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q14_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q14_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q15_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q15_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q16_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q16_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q17_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q17_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q18_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q18_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q19_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q19_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q20_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q20_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q21_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q21_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q22_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q22_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q23_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q23_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q24_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q24_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q25_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q25_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q26_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q26_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q27_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q27_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q28_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q28_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q29_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q29_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q30_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q30_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q31_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q31_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q32_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q32_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q33_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q33_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q34_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q34_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q35_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q35_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q36_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q36_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q37_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q37_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q38_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q38_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q39_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q39_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q40_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q40_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q41_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q41_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q42_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q42_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q43_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q43_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q44_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q44_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q45_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q45_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q46_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q46_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q47_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q47_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q48_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q48_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q49_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q49_g4_n9_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q50_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q50_g4_n9_sfalse_r2 (0.01s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q51_g4_n9_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q51_g4_n9_sfalse_r2 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r1 (0.03s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r1 (0.03s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r1 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r2 (0.08s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r2 (0.07s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r2 (0.05s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r3 (0.04s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r3 (0.04s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r3 (0.03s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r3 (0.14s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r3 (0.14s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r3 (0.09s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_sfalse_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_sfalse_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_sfalse_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_sfalse_r4 (0.07s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_sfalse_r4 (0.06s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_sfalse_r4 (0.05s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_sfalse_r4 (0.23s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_sfalse_r4 (0.22s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_sfalse_r4 (0.15s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q24_g60_n125_sfalse_r2 (0.38s)
+    --- PASS: TestMotionReferenceVectors/tiles_34x38_q24_g60_n125_sfalse_r2 (0.38s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q24_g60_n125_sfalse_r2 (0.39s)
+    --- PASS: TestMotionReferenceVectors/recovery_34x38_q24_g60_n125_sfalse_r2 (0.37s)
+    --- PASS: TestMotionReferenceVectors/static_34x38_q24_g60_n125_sfalse_r2 (0.37s)
+    --- PASS: TestMotionReferenceVectors/pan_18x22_q24_g1_n5_sfalse_r4 (0.00s)
+    --- PASS: TestMotionReferenceVectors/edge_2x2_q24_g65536_n35_sfalse_r4 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q0_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q0_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q1_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q1_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q2_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q2_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q3_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q3_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q4_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q4_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q5_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q5_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q6_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q6_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q7_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q7_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q8_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q8_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q9_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q9_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q10_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q10_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q11_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q11_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q12_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q12_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q13_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q13_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q14_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q14_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q15_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q15_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q16_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q16_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q17_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q17_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q18_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q18_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q19_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q19_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q20_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q20_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q21_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q21_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q22_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q22_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q23_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q23_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q24_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q24_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q25_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q25_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q26_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q26_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q27_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q27_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q28_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q28_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q29_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q29_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q30_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q30_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q31_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q31_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q32_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q32_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q33_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q33_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q34_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q34_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q35_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q35_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q36_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q36_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q37_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q37_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q38_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q38_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q39_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q39_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q40_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q40_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q41_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q41_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q42_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q42_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q43_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q43_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q44_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q44_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q45_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q45_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q46_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q46_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q47_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q47_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q48_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q48_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q49_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q49_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q50_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q50_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q51_g4_n9_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q51_g4_n9_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r1 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r1 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r1 (0.04s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r1 (0.03s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r1 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r2 (0.00s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r2 (0.02s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r2 (0.08s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r2 (0.08s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r2 (0.05s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r3 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r3 (0.04s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r3 (0.04s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r3 (0.03s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r3 (0.15s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r3 (0.14s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r3 (0.09s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q0_g17_n20_strue_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q24_g17_n20_strue_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_2x2_q51_g17_n20_strue_r4 (0.01s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q0_g17_n20_strue_r4 (0.07s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q24_g17_n20_strue_r4 (0.06s)
+    --- PASS: TestMotionReferenceVectors/reverse_18x22_q51_g17_n20_strue_r4 (0.05s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q0_g17_n20_strue_r4 (0.23s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q24_g17_n20_strue_r4 (0.23s)
+    --- PASS: TestMotionReferenceVectors/reverse_50x34_q51_g17_n20_strue_r4 (0.15s)
+    --- PASS: TestMotionReferenceVectors/pan_34x38_q24_g60_n125_strue_r2 (0.39s)
+    --- PASS: TestMotionReferenceVectors/tiles_34x38_q24_g60_n125_strue_r2 (0.39s)
+    --- PASS: TestMotionReferenceVectors/edge_34x38_q24_g60_n125_strue_r2 (0.41s)
+    --- PASS: TestMotionReferenceVectors/recovery_34x38_q24_g60_n125_strue_r2 (0.38s)
+    --- PASS: TestMotionReferenceVectors/static_34x38_q24_g60_n125_strue_r2 (0.39s)
+    --- PASS: TestMotionReferenceVectors/pan_18x22_q24_g1_n5_strue_r4 (0.00s)
+    --- PASS: TestMotionReferenceVectors/edge_2x2_q24_g65536_n35_strue_r4 (0.02s)
+    --- PASS: TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r0 (0.59s)
+    --- PASS: TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r1 (1.96s)
+    --- PASS: TestMotionReferenceVectors/pan_320x180_q24_g60_n60_sfalse_r2 (4.80s)
+    --- PASS: TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r0 (0.30s)
+    --- PASS: TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r1 (1.62s)
+    --- PASS: TestMotionReferenceVectors/static_320x180_q24_g60_n60_sfalse_r2 (4.26s)
+    --- PASS: TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r0 (0.54s)
+    --- PASS: TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r1 (1.89s)
+    --- PASS: TestMotionReferenceVectors/noisechange_320x180_q24_g60_n60_sfalse_r2 (4.71s)
+=== RUN   TestMotionPredictorsAndSampling
+--- PASS: TestMotionPredictorsAndSampling (0.00s)
+=== RUN   TestMotionConcurrentAndNALOwnership
+--- PASS: TestMotionConcurrentAndNALOwnership (0.15s)
+=== RUN   TestMotionLimitsAndState
+--- PASS: TestMotionLimitsAndState (1.35s)
+=== RUN   TestMotionMeasurements
+    motion_test.go:525: pan/r0: bytes=1697133 PSNR=40.564473
+    motion_test.go:525: pan/r1: bytes=851798 PSNR=40.936842
+    motion_test.go:525: pan/r2: bytes=754948 PSNR=40.888852
+    motion_test.go:525: static/r0: bytes=29449 PSNR=40.721709
+    motion_test.go:525: static/r1: bytes=29463 PSNR=40.739302
+    motion_test.go:525: static/r2: bytes=29462 PSNR=40.738587
+    motion_test.go:525: noisechange/r0: bytes=1681135 PSNR=40.566387
+    motion_test.go:525: noisechange/r1: bytes=1666822 PSNR=40.580109
+    motion_test.go:525: noisechange/r2: bytes=1602981 PSNR=40.552949
+--- PASS: TestMotionMeasurements (19.23s)
+=== RUN   TestSPSCroppingAndDimensions
+--- PASS: TestSPSCroppingAndDimensions (0.00s)
+=== RUN   TestNALPreventionAndPixelPayload
+--- PASS: TestNALPreventionAndPixelPayload (0.00s)
+=== RUN   TestBitsBulkWrites
+--- PASS: TestBitsBulkWrites (0.00s)
+=== RUN   TestInterWorkspaceLifetime
+--- PASS: TestInterWorkspaceLifetime (0.01s)
+=== RUN   TestInterRetainedCapacity
+=== RUN   TestInterRetainedCapacity/searchfalse/interfalse
+    performance_test.go:131: retained dynamic byte capacity=92160
+=== RUN   TestInterRetainedCapacity/searchfalse/intertrue
+    performance_test.go:131: retained dynamic byte capacity=321152
+=== RUN   TestInterRetainedCapacity/searchtrue/interfalse
+    performance_test.go:131: retained dynamic byte capacity=92160
+=== RUN   TestInterRetainedCapacity/searchtrue/intertrue
+    performance_test.go:131: retained dynamic byte capacity=325120
+--- PASS: TestInterRetainedCapacity (1.15s)
+    --- PASS: TestInterRetainedCapacity/searchfalse/interfalse (0.15s)
+    --- PASS: TestInterRetainedCapacity/searchfalse/intertrue (0.23s)
+    --- PASS: TestInterRetainedCapacity/searchtrue/interfalse (0.34s)
+    --- PASS: TestInterRetainedCapacity/searchtrue/intertrue (0.43s)
+=== RUN   TestIntraModeSearchReferenceVectors
+=== RUN   TestIntraModeSearchReferenceVectors/2x2_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/2x2_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/2x2_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/2x2_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/2x2_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/18x22_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/18x22_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/18x22_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/18x22_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/18x22_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/48x34_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/48x34_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/48x34_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/48x34_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/48x34_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/160x96_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/160x96_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/160x96_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/160x96_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/160x96_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/320x180_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/320x180_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/320x180_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/320x180_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/320x180_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp1
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp2
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp3
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp4
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp5
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp6
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp7
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp8
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp9
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp10
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp11
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp13
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp14
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp15
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp16
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp17
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp18
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp19
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp20
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp21
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp22
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp23
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp25
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp26
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp27
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp28
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp29
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp30
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp31
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp32
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp33
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp34
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp35
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp37
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp38
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp39
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp40
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp41
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp42
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp43
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp44
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp45
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp46
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp47
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp48
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp49
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp50
+=== RUN   TestIntraModeSearchReferenceVectors/extreme_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/vertical_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/vertical_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/vertical_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/vertical_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/vertical_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/horizontal_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/horizontal_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/horizontal_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/horizontal_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/horizontal_qp51
+=== RUN   TestIntraModeSearchReferenceVectors/gradient_qp0
+=== RUN   TestIntraModeSearchReferenceVectors/gradient_qp12
+=== RUN   TestIntraModeSearchReferenceVectors/gradient_qp24
+=== RUN   TestIntraModeSearchReferenceVectors/gradient_qp36
+=== RUN   TestIntraModeSearchReferenceVectors/gradient_qp51
+--- PASS: TestIntraModeSearchReferenceVectors (0.37s)
+    --- PASS: TestIntraModeSearchReferenceVectors/2x2_qp0 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/2x2_qp12 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/2x2_qp24 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/2x2_qp36 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/2x2_qp51 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/18x22_qp0 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/18x22_qp12 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/18x22_qp24 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/18x22_qp36 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/18x22_qp51 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/48x34_qp0 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/48x34_qp12 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/48x34_qp24 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/48x34_qp36 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/48x34_qp51 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/160x96_qp0 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/160x96_qp12 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/160x96_qp24 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/160x96_qp36 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/160x96_qp51 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/320x180_qp0 (0.02s)
+    --- PASS: TestIntraModeSearchReferenceVectors/320x180_qp12 (0.02s)
+    --- PASS: TestIntraModeSearchReferenceVectors/320x180_qp24 (0.02s)
+    --- PASS: TestIntraModeSearchReferenceVectors/320x180_qp36 (0.02s)
+    --- PASS: TestIntraModeSearchReferenceVectors/320x180_qp51 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp0 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp1 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp2 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp3 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp4 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp5 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp6 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp7 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp8 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp9 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp10 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp11 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp12 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp13 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp14 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp15 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp16 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp17 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp18 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp19 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp20 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp21 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp22 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp23 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp24 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp25 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp26 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp27 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp28 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp29 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp30 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp31 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp32 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp33 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp34 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp35 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp36 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp37 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp38 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp39 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp40 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp41 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp42 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp43 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp44 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp45 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp46 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp47 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp48 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp49 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp50 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/extreme_qp51 (0.00s)
+    --- PASS: TestIntraModeSearchReferenceVectors/vertical_qp0 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/vertical_qp12 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/vertical_qp24 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/vertical_qp36 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/vertical_qp51 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/horizontal_qp0 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/horizontal_qp12 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/horizontal_qp24 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/horizontal_qp36 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/horizontal_qp51 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/gradient_qp0 (0.02s)
+    --- PASS: TestIntraModeSearchReferenceVectors/gradient_qp12 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/gradient_qp24 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/gradient_qp36 (0.01s)
+    --- PASS: TestIntraModeSearchReferenceVectors/gradient_qp51 (0.01s)
+=== RUN   TestIntraModePredictionAndSignaling
+--- PASS: TestIntraModePredictionAndSignaling (0.00s)
+=== RUN   TestIntraDirectionalChoices
+--- PASS: TestIntraDirectionalChoices (0.00s)
+=== RUN   TestIntraModeSearchSliceSyntax
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP0
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP3
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP12
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP24
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP36
+=== RUN   TestIntraModeSearchSliceSyntax/mixed/QP51
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP0
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP3
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP12
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP24
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP36
+=== RUN   TestIntraModeSearchSliceSyntax/vertical/QP51
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP0
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP3
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP12
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP24
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP36
+=== RUN   TestIntraModeSearchSliceSyntax/horizontal/QP51
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP0
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP3
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP12
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP24
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP36
+=== RUN   TestIntraModeSearchSliceSyntax/gradient/QP51
+--- PASS: TestIntraModeSearchSliceSyntax (0.01s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP0 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP3 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP12 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP24 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP36 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/mixed/QP51 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP0 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP3 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP12 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP24 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP36 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/vertical/QP51 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP0 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP3 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP12 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP24 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP36 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/horizontal/QP51 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP0 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP3 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP12 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP24 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP36 (0.00s)
+    --- PASS: TestIntraModeSearchSliceSyntax/gradient/QP51 (0.00s)
+=== RUN   TestIntraModeSearchConcurrentAndDefault
+--- PASS: TestIntraModeSearchConcurrentAndDefault (0.00s)
+=== RUN   TestIntraModeSearchComparison
+    prediction_test.go:290: mixed QP12 bytes=49327/44252 PSNR=52.017/52.401 dB (DC/search)
+    prediction_test.go:290: mixed QP24 bytes=28158/26321 PSNR=40.605/40.742 dB (DC/search)
+    prediction_test.go:290: mixed QP36 bytes=14667/14312 PSNR=29.100/29.240 dB (DC/search)
+    prediction_test.go:290: vertical QP12 bytes=45663/2442 PSNR=61.272/63.963 dB (DC/search)
+    prediction_test.go:290: vertical QP24 bytes=30752/2164 PSNR=45.050/45.770 dB (DC/search)
+    prediction_test.go:290: vertical QP36 bytes=13089/1731 PSNR=33.201/33.381 dB (DC/search)
+    prediction_test.go:290: horizontal QP12 bytes=42870/2028 PSNR=61.276/63.333 dB (DC/search)
+    prediction_test.go:290: horizontal QP24 bytes=28703/1868 PSNR=45.170/45.807 dB (DC/search)
+    prediction_test.go:290: horizontal QP36 bytes=12578/1629 PSNR=33.221/33.373 dB (DC/search)
+    prediction_test.go:290: gradient QP12 bytes=9734/7124 PSNR=52.276/52.506 dB (DC/search)
+    prediction_test.go:290: gradient QP24 bytes=2848/2432 PSNR=44.751/44.916 dB (DC/search)
+    prediction_test.go:290: gradient QP36 bytes=1801/1801 PSNR=36.950/36.950 dB (DC/search)
+--- PASS: TestIntraModeSearchComparison (0.09s)
+=== RUN   TestPredictiveReferenceVectors
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q0_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q24_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q51_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q0_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q24_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q51_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q0_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q51_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q0_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q24_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q51_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q0_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q24_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q51_g7_n23_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q0_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q1_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q2_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q3_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q4_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q5_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q6_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q7_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q8_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q9_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q10_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q11_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q12_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q13_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q14_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q15_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q16_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q17_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q18_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q19_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q20_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q21_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q22_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q23_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q24_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q25_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q26_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q27_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q28_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q29_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q30_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q31_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q32_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q33_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q34_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q35_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q36_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q37_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q38_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q39_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q40_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q41_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q42_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q43_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q44_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q45_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q46_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q47_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q48_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q49_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q50_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q51_g4_n7_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q0_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q24_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q51_g33_n40_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g1_n6_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_2x2_q24_g65536_n70_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q0_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q24_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q51_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q0_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q24_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_18x22_q51_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q0_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q51_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q0_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q24_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q51_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q0_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q24_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q51_g7_n23_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q0_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q1_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q2_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q3_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q4_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q5_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q6_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q7_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q8_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q9_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q10_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q11_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q12_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q13_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q14_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q15_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q16_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q17_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q18_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q19_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q20_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q21_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q22_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q23_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q24_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q25_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q26_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q27_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q28_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q29_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q30_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q31_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q32_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q33_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q34_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q35_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q36_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q37_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q38_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q39_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q40_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q41_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q42_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q43_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q44_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q45_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q46_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q47_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q48_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q49_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q50_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/extreme_34x38_q51_g4_n7_strue
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/flat_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/static_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/chroma_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/local_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/recovery_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q0_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q24_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/checker_50x34_q51_g33_n40_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g1_n6_strue
+=== RUN   TestPredictiveReferenceVectors/flat_2x2_q24_g65536_n70_strue
+=== RUN   TestPredictiveReferenceVectors/flat_2x2_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_2x2_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_34x38_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_34x38_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_320x180_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/mixed_320x180_q24_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q0_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/chroma_34x38_q0_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q51_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/chroma_34x38_q51_g60_n125_sfalse
+=== RUN   TestPredictiveReferenceVectors/flat_2x2_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/local_2x2_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_2x2_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/flat_34x38_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_34x38_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/flat_320x180_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/local_320x180_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/mixed_320x180_q24_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q0_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/chroma_34x38_q0_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/local_34x38_q51_g60_n125_strue
+=== RUN   TestPredictiveReferenceVectors/chroma_34x38_q51_g60_n125_strue
+--- PASS: TestPredictiveReferenceVectors (3.49s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q0_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q24_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q51_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q0_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q24_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q51_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q0_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q51_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q0_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q24_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q51_g7_n23_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q0_g7_n23_sfalse (0.04s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q24_g7_n23_sfalse (0.05s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q51_g7_n23_sfalse (0.04s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q0_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q1_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q2_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q3_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q4_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q5_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q6_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q7_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q8_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q9_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q10_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q11_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q12_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q13_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q14_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q15_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q16_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q17_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q18_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q19_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q20_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q21_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q22_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q23_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q24_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q25_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q26_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q27_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q28_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q29_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q30_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q31_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q32_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q33_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q34_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q35_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q36_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q37_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q38_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q39_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q40_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q41_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q42_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q43_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q44_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q45_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q46_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q47_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q48_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q49_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q50_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q51_g4_n7_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q0_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q24_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q51_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q0_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q24_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q51_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q0_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q24_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q51_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q0_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q24_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q51_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q0_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q24_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q51_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q0_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q24_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q51_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q0_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q24_g33_n40_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q51_g33_n40_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g1_n6_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_2x2_q24_g65536_n70_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q0_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q24_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q51_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q0_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q24_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_18x22_q51_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q0_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q51_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q0_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q24_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q51_g7_n23_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q0_g7_n23_strue (0.05s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q24_g7_n23_strue (0.05s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q51_g7_n23_strue (0.06s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q0_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q1_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q2_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q3_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q4_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q5_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q6_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q7_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q8_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q9_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q10_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q11_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q12_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q13_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q14_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q15_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q16_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q17_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q18_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q19_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q20_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q21_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q22_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q23_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q24_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q25_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q26_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q27_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q28_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q29_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q30_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q31_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q32_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q33_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q34_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q35_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q36_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q37_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q38_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q39_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q40_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q41_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q42_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q43_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q44_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q45_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q46_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q47_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q48_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q49_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q50_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/extreme_34x38_q51_g4_n7_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q0_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q24_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_50x34_q51_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q0_g33_n40_strue (0.02s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q24_g33_n40_strue (0.02s)
+    --- PASS: TestPredictiveReferenceVectors/static_50x34_q51_g33_n40_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q0_g33_n40_strue (0.02s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q24_g33_n40_strue (0.02s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_50x34_q51_g33_n40_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q0_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q24_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_50x34_q51_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q0_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q24_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_50x34_q51_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q0_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q24_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/recovery_50x34_q51_g33_n40_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q0_g33_n40_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q24_g33_n40_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/checker_50x34_q51_g33_n40_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g1_n6_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_2x2_q24_g65536_n70_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_2x2_q24_g60_n125_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q24_g60_n125_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_2x2_q24_g60_n125_sfalse (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_34x38_q24_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_34x38_q24_g60_n125_sfalse (0.03s)
+    --- PASS: TestPredictiveReferenceVectors/flat_320x180_q24_g60_n125_sfalse (0.17s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q24_g60_n125_sfalse (0.19s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_320x180_q24_g60_n125_sfalse (0.73s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q0_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_34x38_q0_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q51_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_34x38_q51_g60_n125_sfalse (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/flat_2x2_q24_g60_n125_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/local_2x2_q24_g60_n125_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_2x2_q24_g60_n125_strue (0.00s)
+    --- PASS: TestPredictiveReferenceVectors/flat_34x38_q24_g60_n125_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q24_g60_n125_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_34x38_q24_g60_n125_strue (0.05s)
+    --- PASS: TestPredictiveReferenceVectors/flat_320x180_q24_g60_n125_strue (0.17s)
+    --- PASS: TestPredictiveReferenceVectors/local_320x180_q24_g60_n125_strue (0.18s)
+    --- PASS: TestPredictiveReferenceVectors/mixed_320x180_q24_g60_n125_strue (1.12s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q0_g60_n125_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_34x38_q0_g60_n125_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/local_34x38_q51_g60_n125_strue (0.01s)
+    --- PASS: TestPredictiveReferenceVectors/chroma_34x38_q51_g60_n125_strue (0.01s)
+=== RUN   TestPredictiveValidationAndRecovery
+--- PASS: TestPredictiveValidationAndRecovery (0.00s)
+=== RUN   TestPredictiveGOP60ErrorBoundary
+--- PASS: TestPredictiveGOP60ErrorBoundary (0.02s)
+=== RUN   TestPredictiveConcurrentSerialization
+--- PASS: TestPredictiveConcurrentSerialization (0.00s)
+=== RUN   TestPredictiveSkipBoundaries
+--- PASS: TestPredictiveSkipBoundaries (0.01s)
+=== RUN   TestPredictiveMeasurements
+    predictive_test.go:572: flat search=false QP24 33frames: allIDR=47817B +InfdB predictive=1801B +InfdB skip=7680/7680
+    predictive_test.go:572: flat search=true QP24 33frames: allIDR=47817B +InfdB predictive=1801B +InfdB skip=7680/7680
+    predictive_test.go:572: local search=false QP24 33frames: allIDR=52809B 52.584dB predictive=6647B 65.277dB skip=7617/7680
+    predictive_test.go:572: local search=true QP24 33frames: allIDR=52322B 57.150dB predictive=6545B 65.422dB skip=7617/7680
+    predictive_test.go:572: static search=false QP24 33frames: allIDR=929379B 40.605dB predictive=934179B 40.605dB skip=0/7680
+    predictive_test.go:572: static search=true QP24 33frames: allIDR=868758B 40.742dB predictive=873558B 40.742dB skip=0/7680
+    predictive_test.go:572: mixed search=false QP24 33frames: allIDR=928666B 40.587dB predictive=933453B 40.587dB skip=0/7680
+    predictive_test.go:572: mixed search=true QP24 33frames: allIDR=864581B 40.730dB predictive=869373B 40.730dB skip=0/7680
+--- PASS: TestPredictiveMeasurements (1.91s)
+PASS
+coverage: 99.8% of statements
+ok  	gomath/internal/h264	72.885s	coverage: 99.8% of statements

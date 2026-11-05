@@ -1,0 +1,369 @@
+{
+  "date": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "state": "Implemented and promoted after explicit wave8 freeze clearance; path checks pass; whole-repository checks have concurrent integration failures recorded below.",
+  "api": [
+    "type AnchorMode string",
+    "const AnchorJagged AnchorMode = \"jagged\"",
+    "const AnchorSmooth AnchorMode = \"smooth\"",
+    "func (c Contour) WithCurveCount(total int) (Contour,error)",
+    "func FromAnchors(anchors []geom.Vec3, mode AnchorMode) (Contour,error)",
+    "func (p Path) WithAnchorMode(mode AnchorMode) (Path,error)"
+  ],
+  "source": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "sha256": {
+      "manim/utils/bezier.py": "a2c760c8d521ce6d6b20f2a16454e3cb8293284efbfd7c27affc5c94a424cd86",
+      "manim/utils/paths.py": "18842c2c5a4580af89768058056a6d932663aa11312a2c8a28b6116a8da89641",
+      "manim/mobject/types/vectorized_mobject.py": "d5b930f53d5e16d358400068919c97d914704fa8dab6ddae43e93af800bd8a99",
+      "manim/mobject/mobject.py": "76627cf88eb493fc300ae2d6aac74ee6dabfec8ceecc9262fc900ee77249c797",
+      "manim/animation/transform.py": "54f719428e4fb306c5b6252bca035d2197ab4e6a617223f5399849db92ea95bf",
+      "manim/animation/animation.py": "be310092d2bd6283faf4b3f2e36f661024964e558176312a5a0dfe2c974eca5f"
+    },
+    "generator_sha256": "06326dd04b1c04e32846cd5ef7691258c9688829fec92c170b906caa3ece10a6"
+  },
+  "reference_environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4"
+  },
+  "references": {
+    "anchors": 24,
+    "insertions": 18,
+    "transform_states": 20,
+    "interior_transform_states": 12,
+    "absolute_control_tolerance": 1e-10,
+    "fixture_sha256": "c67c1698aa8a931ca523bc441ff62e2e16579e58ec4d04798fcaf46e06093148",
+    "generation": "Actual installed pinned Manim functions, VMobjects and linear Transform.begin/interpolate. Six installed files matched Git blobs and checkout byte-for-byte. Exclusive reference.json output."
+  },
+  "limits": {
+    "max_curves": 65536,
+    "max_contours": 4096,
+    "max_work_units": 1048576,
+    "max_accounted_geometry_bytes": 12582912,
+    "max_abs_coordinate": 1000000000,
+    "join": "exact component equality",
+    "curve_count": "explicit contour cubics only; target >= existing; point-only extension; implicit closing edge preserved",
+    "smooth_closure": "per-component abs(end-start) <= 1e-8+1e-5*abs(start); closed metadata only exact endpoints on constructor",
+    "implicit_closure_conversion": "rejected",
+    "work": "insertion 4*input+8*output+1; construction anchors+(jagged4/smooth24)*curves; path 4*input+contours+(jagged4/smooth24)*curves",
+    "storage": "96*(input+output)+56*contours+40*(scratch+1); conservative borrowed-input and scratch accounting, not RSS/allocator/GC bound"
+  },
+  "scope": {
+    "unchanged_existing_path_files": 10,
+    "preexisting_hash_ledger": "preexisting-path.sha256",
+    "manim_checkout": "unchanged; clean git status before/after reference generation",
+    "production_files": [
+      "path/curve_edit.go",
+      "path/anchor_handles.go"
+    ],
+    "central_tests": "tests/_cases/path/curve_edit_test.go",
+    "promotion": "Developed in path/_wave9 and tests/_cases/path/_wave9 using explicit source overlay; promoted only after freeze clearance and staged focused/path/race/fuzz/bench checks. Temporary overlay and staging directories removed.",
+    "shared_docs_examples_root": "No edits by this task; parent owns Object wrappers, shared status/parity docs, examples and updater lifecycle.",
+    "dependencies": "No dependency changes. Runtime standard library plus existing geom/path only. Go tests do not invoke Python or native/reference tools.",
+    "commits": "none"
+  },
+  "checks": [
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm -overlay <temporary-staged-overlay> ./path -count=1",
+      "result": "PASS; existing path suite plus staged tests; overlay removed after promotion"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=path -count=1",
+      "result": "PASS",
+      "log": "path-suite.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=path -run '^TestCurveEdit' -count=1",
+      "result": "PASS after final test additions",
+      "log": "focused.txt"
+    },
+    {
+      "command": "CGO_ENABLED=1 go run ./tests/cmd/run -pkg=path -run '^TestCurveEdit' -race -count=1",
+      "result": "PASS; 24 workers each edit 12 times; varied open/cyclic systems and private output mutation",
+      "log": "race.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm -overlay <temporary-staged-overlay> ./path -run '^$' -fuzz '^FuzzCurveEditSubdivision$' -fuzztime=15s -parallel=4",
+      "result": "PASS; 592477 executions; production byte-identical to promoted files",
+      "log": "fuzz-staged.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run ./tests/cmd/run <27 selectors in active-selectors.json> -vet=all -count=1",
+      "result": "PASS; all 27 selected active packages at invocation time",
+      "log": "active-suite.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go vet -tags noasm ./...",
+      "result": "PASS",
+      "log": "vet.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go run -tags noasm ./cmd/purecheck",
+      "result": "PASS; 45 non-standard packages; no native inputs or runtime subprocess imports",
+      "log": "purecheck.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm ./...",
+      "result": "FAIL during concurrent integration; active path suite passed. Central harness discovered other owners' staged mathtex/_wave9 and svg/_wave9 tests as packages.",
+      "log": "full-suite.txt"
+    },
+    {
+      "command": "CGO_ENABLED=0 go test -tags noasm ./...",
+      "result": "FAIL on retry after staging disappeared; active path suite passed. Newly promoted TestSVGTextBBoxGradientsUseGroupAndExistingSymbolMapping failed at text_bbox_gradients_test.go:376 (existing symbol viewport mapping changed text local bbox). Outside assigned path scope; left to SVG owner.",
+      "log": "full-suite-retry.txt"
+    }
+  ],
+  "benchmarks": {
+    "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=path -run '^$' -bench '^BenchmarkCurveEdit$' -benchmem -benchtime=300ms -count=3",
+    "result": "PASS",
+    "log": "bench.txt",
+    "environment": {
+      "go": "go1.27.3",
+      "module_go": "1.26.0",
+      "GOOS": "darwin",
+      "GOARCH": "arm64",
+      "os": "macOS 15.7.1",
+      "cpu": "Apple M2",
+      "memory_bytes": 17179869184,
+      "GOMAXPROCS": 8,
+      "CGO_ENABLED": 0,
+      "tags": "noasm"
+    },
+    "workload": "Insertion from n to 2*n+1 cubics and open/cyclic smooth construction at n=64,1024,16384 anchors-derived cubics; cyclic inputs append initial anchor and therefore have n+1 curves. Input X=i/n, Y=sin(i*0.1), Z=(i%7)*0.01. Output allocation, validation and solver work included. No images or animation frames rendered; image size null, rendered frames/op 0. No Manim runtime benchmark or speedup comparison.",
+    "image_size": null,
+    "rendered_frames_per_op": 0,
+    "excluded": "Input generation, Python reference generation, I/O, rendering, Object wrappers, whole-scene alignment. Earlier staged 200ms samples overlapped fuzzing and are retained only as diagnostic bench-staged.txt; bench.txt is the reported run.",
+    "results": {
+      "Insert_64_to_129": {
+        "samples": [
+          {
+            "ns_op": 6868,
+            "bytes_op": 13568,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 6335,
+            "bytes_op": 13568,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 6450,
+            "bytes_op": 13568,
+            "allocs_op": 1
+          }
+        ],
+        "median_ns_op": 6450,
+        "median_bytes_op": 13568,
+        "allocs_op": 1
+      },
+      "SmoothOpen_64": {
+        "samples": [
+          {
+            "ns_op": 2930,
+            "bytes_op": 6656,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 3016,
+            "bytes_op": 6656,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 2905,
+            "bytes_op": 6656,
+            "allocs_op": 2
+          }
+        ],
+        "median_ns_op": 2930,
+        "median_bytes_op": 6656,
+        "allocs_op": 2
+      },
+      "SmoothClosed_65": {
+        "samples": [
+          {
+            "ns_op": 3502,
+            "bytes_op": 7616,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 5640,
+            "bytes_op": 7616,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 3438,
+            "bytes_op": 7616,
+            "allocs_op": 3
+          }
+        ],
+        "median_ns_op": 3502,
+        "median_bytes_op": 7616,
+        "allocs_op": 3
+      },
+      "Insert_1024_to_2049": {
+        "samples": [
+          {
+            "ns_op": 89082,
+            "bytes_op": 204800,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 90071,
+            "bytes_op": 204800,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 100894,
+            "bytes_op": 204802,
+            "allocs_op": 1
+          }
+        ],
+        "median_ns_op": 90071,
+        "median_bytes_op": 204800,
+        "allocs_op": 1
+      },
+      "SmoothOpen_1024": {
+        "samples": [
+          {
+            "ns_op": 49849,
+            "bytes_op": 106496,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 46783,
+            "bytes_op": 106496,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 44839,
+            "bytes_op": 106496,
+            "allocs_op": 2
+          }
+        ],
+        "median_ns_op": 46783,
+        "median_bytes_op": 106496,
+        "allocs_op": 2
+      },
+      "SmoothClosed_1025": {
+        "samples": [
+          {
+            "ns_op": 54004,
+            "bytes_op": 124160,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 54232,
+            "bytes_op": 124160,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 56315,
+            "bytes_op": 124160,
+            "allocs_op": 3
+          }
+        ],
+        "median_ns_op": 54232,
+        "median_bytes_op": 124160,
+        "allocs_op": 3
+      },
+      "Insert_16384_to_32769": {
+        "samples": [
+          {
+            "ns_op": 1383442,
+            "bytes_op": 3153923,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 1365836,
+            "bytes_op": 3153926,
+            "allocs_op": 1
+          },
+          {
+            "ns_op": 1306609,
+            "bytes_op": 3153924,
+            "allocs_op": 1
+          }
+        ],
+        "median_ns_op": 1365836,
+        "median_bytes_op": 3153924,
+        "allocs_op": 1
+      },
+      "SmoothOpen_16384": {
+        "samples": [
+          {
+            "ns_op": 738393,
+            "bytes_op": 1703941,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 762068,
+            "bytes_op": 1703939,
+            "allocs_op": 2
+          },
+          {
+            "ns_op": 787028,
+            "bytes_op": 1703939,
+            "allocs_op": 2
+          }
+        ],
+        "median_ns_op": 762068,
+        "median_bytes_op": 1703939,
+        "allocs_op": 2
+      },
+      "SmoothClosed_16385": {
+        "samples": [
+          {
+            "ns_op": 913893,
+            "bytes_op": 1851399,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 1013913,
+            "bytes_op": 1851408,
+            "allocs_op": 3
+          },
+          {
+            "ns_op": 1015250,
+            "bytes_op": 1851401,
+            "allocs_op": 3
+          }
+        ],
+        "median_ns_op": 1013913,
+        "median_bytes_op": 1851401,
+        "allocs_op": 3
+      }
+    }
+  },
+  "limitations": [
+    "Bounded path editing only; no comprehensive Manim parity claim.",
+    "Existing path.Align and automatic unequal-topology Transform alignment are unchanged. Transform reference explicitly prepares equal counts.",
+    "No removal or length-based resampling; no Object family recursion or automatic subpath discovery.",
+    "Point-only contour construction/metadata are a Go extension. Point insertion matches Manim point-list helper, not trailing-new-path-point wrapper representation.",
+    "Approximate closure retains actual endpoints and may leave a small gap; exact seam continuity asserted only for exact closure.",
+    "Int64 allocation follows intended floor rule; NumPy signed-int32 overflow at large count products is deliberately not reproduced; large-limit cases are Go contracts.",
+    "Storage accounting conservatively includes borrowed inputs; process RSS and Go allocator/GC effects are excluded.",
+    "Absolute numerical geometry comparison only; no raster parity or visual performance claim."
+  ],
+  "files_sha256": {
+    "docs/CURVE_EDIT.md": "349be86c3716005d4dda063524b4e1392113f5567c2221782c4a2d0350dbeabc",
+    "path/anchor_handles.go": "47ea1771341d5daf5d6c56fffbf50b680ed3b3eb2382846cce3fde0348d485a0",
+    "path/curve_edit.go": "94879933bb45e38821c0209038b5eab28531e9eb06e88aafa2c3d23c7104ba6a",
+    "tests/_cases/path/curve_edit_test.go": "4111d699a7eaf8c78c9153213311fbb44876f7c399f45eebfbcabb9e150e4323",
+    "tests/data/path/curve-edit/active-selectors.json": "9d8278bf8fad2db73134f0a08bfc5c400a0f8b3c1a80f7d43e30fd7731cac3ec",
+    "tests/data/path/curve-edit/active-suite.txt": "e048b49600746440021c262f04145b6586896949dd9d296da1479eb206119a8c",
+    "tests/data/path/curve-edit/bench-staged.txt": "2a107005ee80518baf015c5f47701f39489dee185772efba2f7ef9b336e0c113",
+    "tests/data/path/curve-edit/bench.txt": "3fe0680e83e820bace79efbedf0b48165606ed251207737565d2465e017ee3c4",
+    "tests/data/path/curve-edit/focused.txt": "36b7c9d855f25c19cb13584fcbd514f0d3c81e75d2df01b261e84fcd3a87c3e9",
+    "tests/data/path/curve-edit/full-suite-retry.txt": "17420d0da7a1234ae6e2f81a07f461c07c7f00f0184db7ad2fc35029bed4ab0a",
+    "tests/data/path/curve-edit/full-suite.txt": "a3ed23fe7d94c7c1633826c2e2b822d4828248e89e9db70c6d164212a0eaae62",
+    "tests/data/path/curve-edit/fuzz-staged.txt": "a2849b64b7185a32e9d6b13ea1c296375fcbc519a5a9aef060d8f7540f4ca6ea",
+    "tests/data/path/curve-edit/path-suite.txt": "2028912f0c7b85f7b3db58370a22942808b2185819f2878fac9cf5a27a43d5bb",
+    "tests/data/path/curve-edit/preexisting-path.sha256": "fae2ec274a6bec19142f6fe8345294a983fc5c414dd86eb78604a59bccb5ee68",
+    "tests/data/path/curve-edit/purecheck.txt": "37eaeffbb661a7493a0d69173f45d501da450fd1b1cf69b40605fd4edfb83014",
+    "tests/data/path/curve-edit/race.txt": "2fd559789d5dc31fa64861bdcef02d9eff0d8c4f93ab6a84be1392db3bbd32f6",
+    "tests/data/path/curve-edit/reference.json": "c67c1698aa8a931ca523bc441ff62e2e16579e58ec4d04798fcaf46e06093148",
+    "tests/data/path/curve-edit/vet.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/reference/curve_edit.py": "06326dd04b1c04e32846cd5ef7691258c9688829fec92c170b906caa3ece10a6"
+  }
+}

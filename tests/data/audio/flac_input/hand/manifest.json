@@ -1,0 +1,296 @@
+[
+  {
+    "Channels": 1,
+    "Depth": 8,
+    "File": "verbatim8_1ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 2,
+    "Depth": 8,
+    "File": "verbatim8_2ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 3,
+    "Depth": 8,
+    "File": "verbatim8_3ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 4,
+    "Depth": 8,
+    "File": "verbatim8_4ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 5,
+    "Depth": 8,
+    "File": "verbatim8_5ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 6,
+    "Depth": 8,
+    "File": "verbatim8_6ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 7,
+    "Depth": 8,
+    "File": "verbatim8_7ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 8,
+    "Depth": 8,
+    "File": "verbatim8_8ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 1,
+    "Depth": 16,
+    "File": "verbatim16_1ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 2,
+    "Depth": 16,
+    "File": "verbatim16_2ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 3,
+    "Depth": 16,
+    "File": "verbatim16_3ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 4,
+    "Depth": 16,
+    "File": "verbatim16_4ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 5,
+    "Depth": 16,
+    "File": "verbatim16_5ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 6,
+    "Depth": 16,
+    "File": "verbatim16_6ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 7,
+    "Depth": 16,
+    "File": "verbatim16_7ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 8,
+    "Depth": 16,
+    "File": "verbatim16_8ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 1,
+    "Depth": 24,
+    "File": "verbatim24_1ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 2,
+    "Depth": 24,
+    "File": "verbatim24_2ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 3,
+    "Depth": 24,
+    "File": "verbatim24_3ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 4,
+    "Depth": 24,
+    "File": "verbatim24_4ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 5,
+    "Depth": 24,
+    "File": "verbatim24_5ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 6,
+    "Depth": 24,
+    "File": "verbatim24_6ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 7,
+    "Depth": 24,
+    "File": "verbatim24_7ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 8,
+    "Depth": 24,
+    "File": "verbatim24_8ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 1,
+    "Depth": 32,
+    "File": "verbatim32_1ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "verbatim32_2ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 3,
+    "Depth": 32,
+    "File": "verbatim32_3ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 4,
+    "Depth": 32,
+    "File": "verbatim32_4ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 5,
+    "Depth": 32,
+    "File": "verbatim32_5ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 6,
+    "Depth": 32,
+    "File": "verbatim32_6ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 7,
+    "Depth": 32,
+    "File": "verbatim32_7ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 8,
+    "Depth": 32,
+    "File": "verbatim32_8ch.flac",
+    "Frames": 17
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_assignment8.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_assignment9.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_assignment10.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_wasted1.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_wasted16.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_wasted31.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_wasted32.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_fixed1.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_fixed2.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_fixed3.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_fixed4.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_LPC2_shift15.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_LPC12_shift15.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_LPC32_shift15.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 2,
+    "Depth": 32,
+    "File": "side33_LPC1_shift0.flac",
+    "Frames": 64
+  },
+  {
+    "Channels": 1,
+    "Depth": 32,
+    "File": "residual32_escapefalse.flac",
+    "Frames": 16
+  },
+  {
+    "Channels": 1,
+    "Depth": 32,
+    "File": "residual32_escapetrue.flac",
+    "Frames": 16
+  }
+]

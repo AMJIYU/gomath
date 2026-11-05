@@ -1,0 +1,30 @@
+File: before_pan.test
+Type: cpu
+Time: 2026-11-04 13:22:46 CST
+Duration: 3.60s, Total samples = 2.90s (80.48%)
+Showing nodes accounting for 2.78s, 95.86% of 2.90s total
+Dropped 31 nodes (cum <= 0.01s)
+Showing top 22 nodes out of 40
+      flat  flat%   sum%        cum   cum%
+     0.77s 26.55% 26.55%      0.78s 26.90%  gomath/internal/h264.(*bits).uint
+     0.68s 23.45% 50.00%      1.08s 37.24%  gomath/internal/h264.makeInterMB
+     0.31s 10.69% 60.69%      1.31s 45.17%  gomath/internal/h264.cavlc
+     0.24s  8.28% 68.97%      0.24s  8.28%  gomath/internal/h264.compensateMotion
+     0.16s  5.52% 74.48%      0.20s  6.90%  gomath/internal/h264.quant4
+     0.13s  4.48% 78.97%      0.13s  4.48%  gomath/internal/h264.(*bits).bit (inline)
+     0.10s  3.45% 82.41%      0.74s 25.52%  gomath/internal/h264.writeLevel
+     0.09s  3.10% 85.52%      0.11s  3.79%  gomath/internal/h264.dequant4 (inline)
+     0.07s  2.41% 87.93%      0.07s  2.41%  gomath/internal/h264.inverse4
+     0.05s  1.72% 89.66%      0.05s  1.72%  gomath/internal/h264.scaleClass (inline)
+     0.05s  1.72% 91.38%      1.32s 45.52%  gomath/internal/h264.writeInterMBDelta
+     0.04s  1.38% 92.76%      0.05s  1.72%  gomath/internal/h264.forward4
+     0.03s  1.03% 93.79%      0.03s  1.03%  image.(*RGBA).SetRGBA
+     0.03s  1.03% 94.83%      0.03s  1.03%  runtime.memclrNoHeapPointers
+     0.01s  0.34% 95.17%      2.64s 91.03%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion.func1
+     0.01s  0.34% 95.52%      0.03s  1.03%  runtime.(*timers).check
+     0.01s  0.34% 95.86%      0.06s  2.07%  runtime.newstack
+         0     0% 95.86%      0.08s  2.76%  gomath/internal/h264.(*IntraEncoder).writeIntraMB
+         0     0% 95.86%      2.80s 96.55%  gomath/internal/h264.(*PredictiveEncoder).Encode
+         0     0% 95.86%      2.80s 96.55%  gomath/internal/h264.(*PredictiveEncoder).encodeP
+         0     0% 95.86%      2.80s 96.55%  gomath/internal/h264.(*PredictiveEncoder).encodePMotion
+         0     0% 95.86%      0.26s  8.97%  gomath/internal/h264.(*bits).writeVLC (inline)

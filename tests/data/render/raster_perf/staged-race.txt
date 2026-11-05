@@ -1,0 +1,1 @@
+ok  	gomath/render	30.632s

@@ -1,0 +1,1 @@
+PASS: focused candidate plus 19 non-standard dependencies; CGO_ENABLED=0; noasm; no native inputs, runtime process launch or test imports

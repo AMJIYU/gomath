@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-05",
+  "scope": "Parent refinements after original agent validation; source-key cloning and pre-copy aggregate contours/children/curves budgets. Original agent manifest unchanged.",
+  "original_validation": "tests/data/mathtex/parts/validation.json",
+  "original_source_sha256": "bd982e8999af84e95aa4f0f4f0b1b619139570992cce311a6fbcaa20aab2e412",
+  "command": "CGO_ENABLED=0 go run ./tests/cmd/run -pkg=mathtex -run ^TestParts -count=1 -vet=all",
+  "result": "ok  \tgomath/mathtex\t1.422s\n",
+  "files": {
+    "mathtex/parts.go": {
+      "sha256": "4765b1e7f5657fe384ea23fb82a152815a6ef4c139eeb8d158b896acd1d9314d",
+      "bytes": 13278
+    },
+    "tests/_cases/mathtex/parts_test.go": {
+      "sha256": "51aa9d221b5e2cac2e2460b85690df762417e6a7fb78b354faf29be6c9a13fda",
+      "bytes": 15396
+    },
+    "docs/MATH_PARTS.md": {
+      "sha256": "26e99ada70de507bcc63a5b7b591d31f8bc2fc777e3cfde4109f9aa27c19794d",
+      "bytes": 10445
+    },
+    "tests/data/mathtex/parts/parent-focused.txt": {
+      "sha256": "4958e76592db841320b8fd4769dbc5bbb789882463eed097e18e712dd93e5e04",
+      "bytes": 27
+    }
+  }
+}

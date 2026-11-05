@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="160" viewBox="0 0 200 160">
+<path d="M16 20L60 20L60 60" fill="none" stroke="#d02040" stroke-width="8" stroke-dasharray="11 0 0 0" stroke-linecap="round" stroke-linejoin="miter"/>
+<path d="M100 20L176 20L176 60" fill="none" stroke="#20b040" stroke-width="8" stroke-dasharray="0 0 9" stroke-linecap="square" stroke-dashoffset="2"/>
+<path d="M16 92H76V140H16Z" fill="none" stroke="#3060e0" stroke-width="6" stroke-dasharray="35 13" stroke-dashoffset="5" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M100 100L140 100L140 140Z" fill="none" stroke="#a020b0" stroke-width="6" stroke-dasharray="200 10" stroke-linejoin="round"/>
+</svg>

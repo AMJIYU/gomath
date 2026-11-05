@@ -1,0 +1,12 @@
+{
+  "source": {
+    "version": "0.22.1",
+    "commit": "16ea443e2a5f1d79db0a721161411ce916d6e733",
+    "generator_sha256": "bba21f1ea3835367e01e6cc12715e9b0868726da08378a3e6f0e3147d9a91c39"
+  },
+  "png_sha256": "bbb38d8f7c708c74dd7f746750a828988e8ba7a5249aa158c2cec95295a2459b",
+  "width": 640,
+  "height": 360,
+  "frame_width": 10,
+  "limits": "Five static white filled shapes on black; no strokes or animation. Go uses four cubic arcs per full turn, Manim uses a different subdivision. Bounded raster comparison, not exact control-point or API parity."
+}

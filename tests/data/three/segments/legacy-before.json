@@ -1,0 +1,17 @@
+{
+  "three/camera.go": "e866efdbf37b9189ebeeadf50601e9084eb5e38da462e1f40ca77705c163d124",
+  "three/light.go": "2dbf66e3dc7b103911586f24ce484d962e9b2b0db73e477a323546c0fb21e2ef",
+  "three/mesh.go": "135c20784eb180ecee76878143a6567e09c87cfec9026d6a891bdbee3e9f6092",
+  "three/platonic.go": "7d48c96313e786f282bfa2fb12fff8c95106acc9904283df123d19279f1b384a",
+  "three/points.go": "163f08cb84c0bcf76037f16aaae9f49fd9f8eb105fbd2586d132ad58c1ba7cc1",
+  "three/polyhedron.go": "61500cee3881649b3c02d6247050279b9027e93230eab7863475a1e1e8898b3e",
+  "three/primitives.go": "a7d41ae0944e452cec185f7d68637b3ea685ea8e7f0ea9bbb20e668d7603116f",
+  "three/renderer.go": "1008ed65370f61fc6e2b8f8eab48e070e2a2807e6672541f59c1cafd99924cc0",
+  "three/sampling.go": "6755dda41d2bc213ee6fbfa0c2afd9c1898d39c20e5627e7bdaef39b8070d089",
+  "three/shadow.go": "4ae52bbb4134573d0dba9f2e82f17ba11afb2453a0f9aac2752a2e898a137242",
+  "three/texture.go": "315c826a8cbcb95a0a535a6a6845af5b0944f94870e1e2601494d436a72eac82",
+  "three/texture_fragments.go": "295f579d1a4228f4f39981c3593846cb88d1a3e0df551b323314d1d54b438a2c",
+  "three/textured_renderer.go": "aa243bd92de1cc4b4517c1d717746538557c1f8c1d27289612865746ba57ae56",
+  "three/transparency.go": "986cc46e44410eae60e08720ddb883f296e297be1bf0a299d12cf46777857376",
+  "three/world_renderer.go": "d2d6724cc59ce8f8b24ff0d3be3e8a9ec29800d863b366eb79f7bddb730b74d5"
+}

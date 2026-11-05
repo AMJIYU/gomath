@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/reference/raster_perf.py", line 122, in <module>
+    main()
+  File "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/reference/raster_perf.py", line 96, in main
+    parsed = parse(log.read_text())
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/eleven/Documents/工作经历/cloudtorch/gomath/tests/reference/raster_perf.py", line 58, in parse
+    raise RuntimeError(f'expected nine workloads, got {len(values)}')
+RuntimeError: expected nine workloads, got 6
